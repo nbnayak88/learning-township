@@ -1,0 +1,66 @@
+name: Separate Learning Township from Atlas
+on:
+  push:
+    paths:
+      - '.github/workflows/separate-learning-township.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: separate-learning-township
+  cancel-in-progress: false
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy and verify the original Township
+        env:
+          SOURCE_COMMIT: 520b89a2b860dbedaae662fb9bec5d9dcb0d2f0c
+        run: |
+          git clone --quiet --no-checkout https://github.com/nbnayak88/architecture-center-atlas.git "$RUNNER_TEMP/atlas-source"
+          git -C "$RUNNER_TEMP/atlas-source" checkout --quiet "$SOURCE_COMMIT"
+          python - <<'PY'
+          from pathlib import Path
+          import os, shutil
+          src = Path(os.environ["RUNNER_TEMP"]) / "atlas-source"
+          dst = Path(".")
+          original = src / "Learning Township"
+          files = [p for p in original.rglob("*") if p.is_file()]
+          assert len(files) == 38853, len(files)
+          for item in original.iterdir():
+              target = dst / item.name
+              if item.is_dir():
+                  shutil.copytree(item, target, dirs_exist_ok=True)
+              else:
+                  shutil.copy2(item, target)
+          for item in files:
+              assert (dst / item.relative_to(original)).read_bytes() == item.read_bytes(), str(item)
+          for name in ["township-source", "LICENSE", "NOTICE", "successlabs_township_31680_learning_pathways.csv"]:
+              item, target = src / name, dst / name
+              if item.is_dir():
+                  shutil.copytree(item, target, dirs_exist_ok=True)
+              else:
+                  shutil.copy2(item, target)
+          (dst / "scripts").mkdir(exist_ok=True)
+          script = (src / "scripts/generate_learning_township.py").read_text()
+          script = script.replace('ROOT = Path("Learning Township")', 'ROOT = Path(".")')
+          (dst / "scripts/generate_learning_township.py").write_text(script)
+          (dst / "migration-reference").mkdir(exist_ok=True)
+          shutil.copy2(src / ".github/workflows/publish-learning-township.yml", dst / "migration-reference/original-publish-learning-township.yml.txt")
+          readme = dst / "README.md"
+          text = readme.read_text()
+          text = text.replace('under `learning-journeys/`.', 'in [Architecture Center Atlas](https://github.com/nbnayak88/architecture-center-atlas/tree/main/learning-journeys).')
+          text += "\n## Independent repository\n\nLearning Township was separated from Architecture Center Atlas on 22 October 2026. All 38,853 original Township files were verified byte for byte before updating this index. Academy folders, AI architecture content, community resources, and catalogs now live at this repository root.\n\nSource snapshot: [520b89a2b860dbedaae662fb9bec5d9dcb0d2f0c](https://github.com/nbnayak88/architecture-center-atlas/tree/520b89a2b860dbedaae662fb9bec5d9dcb0d2f0c/Learning%20Township). Historical file versions remain accessible there.\n\nThe HUB catalog source is in `township-source/`. The generator in `scripts/generate_learning_township.py` targets this repository root. The old delete-and-regenerate workflow is preserved as an inactive reference in `migration-reference/` to protect manually authored content.\n"
+          readme.write_text(text)
+          print(f"Verified {len(files)} original Township files and copied supporting sources.")
+          PY
+      - name: Publish the independent content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit --quiet -m "Migrate all 38853 Learning Township files from Atlas"
+            git push origin HEAD:main
+          fi
