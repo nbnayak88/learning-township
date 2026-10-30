@@ -1,0 +1,50 @@
+# OmniForge Materials — HR Origin Stories
+
+**GICS02 · HR01–HR12 · IIL — Industry Immersion Lab · Reviewed 31 October 2026 IST**
+
+*SuccessLabs Academy — Architecting Experiences for a Better World.*
+
+Start with one theme. The learning pattern is **one learner promise · one persona-led story · one build card · three tabletop tests · 120 minutes**.
+
+## Open a theme
+
+**HR01 has the matching sprint in GitHub, Google Docs and the existing Notion page. HR02–HR12 are not published Origin Story editions:** their GitHub folders contain planning READMEs, their linked Notion pages are blank, and no matching Google Docs were located in the connected Drive searches. A page title or planning folder is not a supporting case body.
+
+| Theme | GitHub Origin Story sprint | Google Doc | Notion | Edition status |
+|---|---|---|---|---|
+| **HR01 — Workforce Foundations** | [Read sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/02-HR01-MAT-materials/0-The-Origin-Story/sprint/materials-workforce-foundations-evolution-sprint.md) | [Matching sprint tab](https://docs.google.com/document/d/14dv6HY-vLiGIq9EO8_kW9EdvrVPp4Zdofr73wxwq9wg/edit?tab=t.0) | [Matching sprint](https://app.notion.com/p/562c4dc0bf6c49148f3227d6779fd2b5) | Matching edition in all three; content read back |
+| **HR02 — Talent Acquisition, Recruiting & Onboarding** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/02-HR02-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [HR02a Recruiting — blank](https://app.notion.com/p/72dfb09bac6f41b89d45b04a3086ef3e) · [HR02b Onboarding — blank](https://app.notion.com/p/c13825cf27ef42539d22f604f788587f) | Not yet reviewed/authored; no matching companion sprint |
+| **HR03 — High-Performance Organizations** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/02-HR03-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/18645d06136b443c9f81c80f59867354) | Not yet reviewed/authored; no matching companion sprint |
+| **HR04 — Growth & Leadership** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR04-AGL4-Architecting-Growth-Leadership/02-HR04-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/f01918639d2643e386be24ad5c88ed76) | Not yet reviewed/authored; no matching companion sprint |
+| **HR05 — Rewards & Performance Excellence** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR05-ARP5-Architecting-Rewards-Performance-Excellence/02-HR05-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/386f53c20d9c4aa5bc2847f6d8b1e941) | Not yet reviewed/authored; no matching companion sprint |
+| **HR06 — Continuous Learning & Mobility** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR06-ALM6-Architecting-Continuous-Learning-Mobility/02-HR06-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/1c6e3212cabb4f119085e8b6c256066f) | Not yet reviewed/authored; no matching companion sprint |
+| **HR07 — Autonomous Payroll Enterprises** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR07-APE7-Architecting-Autonomous-Payroll-Enterprises/02-HR07-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/a188952438bd4e31a6325f93ce3efb0a) | Not yet reviewed/authored; no matching companion sprint |
+| **HR08 — Workforce Time & Operations** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR08-AWT8-Architecting-Workforce-Time-Operations/02-HR08-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/c4b5f6a385254866b260348419f296a8) | Not yet reviewed/authored; no matching companion sprint |
+| **HR09 — Workforce Intelligence** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR09-AWI9-Architecting-Workforce-Intelligence/02-HR09-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/a32eed170b91497cbd50b38fa576628d) | Not yet reviewed/authored; no matching companion sprint |
+| **HR10 — Digital Employee Experience** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR10-ADX0-Architecting-Digital-Employee-Experience/02-HR10-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/4cffd94f29534b00ae1a839a1949c152) | Not yet reviewed/authored; no matching companion sprint |
+| **HR11 — AI-Powered HR Enterprises** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR11-AAI1-Architecting-AI-Powered-HR-Enterprises/02-HR11-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/0537e3af44d5466caf2385c6382ec139) | Not yet reviewed/authored; no matching companion sprint |
+| **HR12 — Connected HR Enterprises** | [Planning placeholder](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR12-AIG2-Architecting-Connected-HR-Enterprises/02-HR12-MAT-materials/0-The-Origin-Story/sprint/README.md) | Missing — no matching Doc located | [Existing page — blank](https://app.notion.com/p/36b1f04717834d8682840a745cc0ec97) | Not yet reviewed/authored; no matching companion sprint |
+
+## Publication and review record
+
+- **HR01:** edition 2026-10-31 published following the user's instruction to create the missing Google Doc and tighten alignment to Energy HR01. GitHub source text was read back exactly; Google Doc readback matched all 63 non-table paragraphs and all six native tables; Notion readback contained the complete start-to-end sprint, traceability and three tests. Presentation differs by platform.
+- **Google Doc:** new native document, with a dedicated “Origin Story · 2-hour sprint” tab. No earlier Materials HR01 Doc was found or overwritten. Drive metadata reported not shared; public student access and copying were not tested.
+- **Notion:** HR01's previously blank page now contains this sprint. HR02a/HR02b and HR03–HR12 remain blank, as read on this review; their descriptive titles do not prove case content exists.
+- **GitHub planning files:** HR01 README now links the published sprint and fixes literal escaped-newline formatting while preserving HUB-ORIGIN-HR01-MAT-sprint. HR02–HR12 planning files remain unchanged pending theme review.
+- **HR02:** recruiting and onboarding retain their two existing source-page identities within one learning theme. No source-case body was available from either page. Do not replace them with a combined page or invent prior personas/requirements.
+- **Workflow:** review and publish one theme at a time. This index is navigation and status evidence, not approval to author/publish HR02–HR12. No unattended synchronization is established.
+
+## Supporting enterprise material — distinct from Origin Story editions
+
+- [Notion enterprise hub](https://app.notion.com/p/9e83f25576814c87998709be3338092b)
+- [GitHub enterprise case](https://github.com/nbnayak88/successlabs-case-studies/tree/main/02-materials/omniforge-materials-ltd)
+- [Workforce scope blueprint](https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/derived-streams/01-workforce.md)
+- [Existing fictional personas and stable IDs](https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md)
+- [Source and reconciliation register](https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/references/source-and-assumptions.md)
+- [Energy reference index](energy-origin-stories.md)
+
+## Open gaps retained for review
+
+Enterprise site counts may overlap; working-capital benefit classification and emissions metric boundaries remain unresolved in the existing source register. HR01 does not use these as achieved outcomes. Contractor numbers, device access, real plant/task selection, delegated approvals, shift/timezone semantics and site fallback procedures need discovery before any real implementation. New OMF-HR01 requirement, decision, experiment, measure and evidence IDs are educational design anchors, not previously approved client requirements. Tabletop tests and evidence slots remain unexecuted/unfilled until learners record observations.
+
+The 12 HR themes, 12 architecture streams and enterprise transformation streams remain separate classification axes. Standards alignment is educational; no certification or compliance is claimed.
