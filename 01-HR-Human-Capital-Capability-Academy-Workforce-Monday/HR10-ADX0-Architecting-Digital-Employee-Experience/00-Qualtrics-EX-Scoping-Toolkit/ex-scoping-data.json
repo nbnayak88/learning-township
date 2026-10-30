@@ -1,0 +1,4019 @@
+{
+ "meta": {
+  "title": "Qualtrics EX Scoping",
+  "context": "SAP SuccessFactors Employee Central and PMGM live; other modules upcoming; go-live in 3-4 months",
+  "projectStart": "2026-11-02"
+ },
+ "sections": [
+  {
+   "code": "CTX",
+   "name": "Project Context & Objectives",
+   "description": "Why the client is investing, who decides, and what the listening landscape looks like today."
+  },
+  {
+   "code": "USE",
+   "name": "Use-Case Selection & Prioritisation",
+   "description": "Which Employee Experience use cases go live first, for whom, how often, and who owns each."
+  },
+  {
+   "code": "COM",
+   "name": "Licensing, Commercials & Contracting",
+   "description": "Contract route, licensed products, tenant, data centre and procurement readiness."
+  },
+  {
+   "code": "ENG",
+   "name": "Employee Engagement Survey",
+   "description": "Annual or biannual census engagement programme, models, anonymity, reporting cuts and benchmarks."
+  },
+  {
+   "code": "PLS",
+   "name": "Pulse & Ad Hoc Listening",
+   "description": "Always-on, quarterly, topic-based and event-driven pulses, governance and fatigue control."
+  },
+  {
+   "code": "LCE",
+   "name": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "description": "Event-triggered surveys driven by Employee Central events (hire, transfer, leave, termination)."
+  },
+  {
+   "code": "360",
+   "name": "360 / Multi-Rater Feedback",
+   "description": "Subjects, evaluators, workflow, competencies, reports and the Qualtrics 360 vs PMGM decision."
+  },
+  {
+   "code": "MGR",
+   "name": "Manager Effectiveness & Action Planning",
+   "description": "Manager dashboards, expectations after results, and closing the loop with action plans."
+  },
+  {
+   "code": "ETX",
+   "name": "Employee Technology Experience",
+   "description": "Measuring the experience of tools and services, including SuccessFactors adoption itself."
+  },
+  {
+   "code": "SUR",
+   "name": "Survey Content, Scales & Languages",
+   "description": "Question libraries, rating scales, translations, branding, accessibility and consent text."
+  },
+  {
+   "code": "INT",
+   "name": "SuccessFactors Integration & Architecture",
+   "description": "How Employee Central data and events reach Qualtrics, authentication, environments and monitoring."
+  },
+  {
+   "code": "DAT",
+   "name": "Employee Data, Hierarchy & Attributes",
+   "description": "Which Employee Central fields drive reporting hierarchies, segmentation, triggers and eligibility."
+  },
+  {
+   "code": "RPT",
+   "name": "Reporting, Dashboards & Analytics (incl. AI)",
+   "description": "Audiences, dashboards, distribution, text analytics, and joining survey data with SF outcomes."
+  },
+  {
+   "code": "SEC",
+   "name": "Security, Privacy & Compliance",
+   "description": "Residency, anonymity, consultation, consent, retention, AI governance and vendor security review."
+  },
+  {
+   "code": "ROL",
+   "name": "Roles, Access & Governance",
+   "description": "Administrator model, role design by hierarchy, approvals, segregation of duties and support."
+  },
+  {
+   "code": "CMM",
+   "name": "Communications, Change & Adoption",
+   "description": "Invitations, sender, trust messaging, manager toolkits, training and closing the loop."
+  },
+  {
+   "code": "UPC",
+   "name": "Upcoming SuccessFactors Modules & Sequencing",
+   "description": "How other modules going live in the same window affect triggers, data, testing and calendars."
+  },
+  {
+   "code": "DEL",
+   "name": "Delivery, Timeline, Testing & Support",
+   "description": "Phases, team, environments, pilot, go-live approach, hypercare and acceptance."
+  },
+  {
+   "code": "SUC",
+   "name": "Success Measures & Operating Model",
+   "description": "KPIs, baselines, business case, run model and the roadmap after go-live."
+  }
+ ],
+ "questions": [
+  {
+   "id": "CTX-01",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "What are the top three business outcomes you expect from Qualtrics EX (for example lower regretted attrition, higher engagement, better onboarding, stronger managers, SuccessFactors adoption)? Please rank them.",
+   "why": "Outcomes decide which use cases go first and how success is judged.",
+   "kickoff": true,
+   "keyLabel": "Top 3 business outcomes expected from EX"
+  },
+  {
+   "id": "CTX-02",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Who is the executive sponsor, and what decision rights do they hold over scope, budget and the go-live date?",
+   "why": "Avoids stalled decisions in a 3-4 month window.",
+   "kickoff": true,
+   "keyLabel": "Executive sponsor and decision rights"
+  },
+  {
+   "id": "CTX-03",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which employee listening tools, vendors and programmes run today (engagement, pulse, onboarding, exit, 360)? Please share the last 24 months of results, response rates and survey instruments.",
+   "why": "Gives baselines and reusable content. Qualtrics itself advises gathering previous reports as a reference point.",
+   "kickoff": true,
+   "keyLabel": "Current listening tools, results and baselines"
+  },
+  {
+   "id": "CTX-04",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Which existing survey programmes must be replaced, kept, or run in parallel at go-live?",
+   "why": "Drives migration, trend continuity and communication.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CTX-05",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Workforce profile: headcount, countries, legal entities, worker types (employees, contingent, interns), share of shift or deskless staff, and languages spoken.",
+   "why": "Sizes licences, languages, delivery channels and test scope.",
+   "kickoff": true,
+   "keyLabel": "Population, countries, languages, worker types"
+  },
+  {
+   "id": "CTX-06",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Is the go-live date fixed? What drives it (contract start, board commitment, business event) and what is the cost of moving it by four weeks?",
+   "why": "Tells us whether to cut scope or move the date when trade-offs appear.",
+   "kickoff": true,
+   "keyLabel": "Is the go-live date fixed, and why?"
+  },
+  {
+   "id": "CTX-07",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which other programmes compete for the same HR, HRIS, IT and communications people over the next four months (other SF module go-lives, payroll cycles, M&A, restructuring)?",
+   "why": "Capacity clashes are a leading cause of slippage.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CTX-08",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who will own EX after go-live (HR, People Analytics, IT, Internal Comms) and how large is the run team?",
+   "why": "The design must match the team that will operate it.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CTX-09",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Is there an EX framework, employee value proposition or people strategy that survey content and dashboards should align to?",
+   "why": "Keeps content and reporting consistent with strategy.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CTX-10",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What has worked or failed in past listening efforts (low participation, survey fatigue, no visible action, trust issues)?",
+   "why": "Prevents repeating known failures.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CTX-11",
+   "section": "CTX",
+   "sectionName": "Project Context & Objectives",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Is Qualtrics already used elsewhere in the organisation (CX, brand, research)? If so, share tenant details, data centre and existing administrators.",
+   "why": "Lets us reuse existing tenant, SSO and security approvals.",
+   "kickoff": true,
+   "keyLabel": "Existing Qualtrics tenant and admins"
+  },
+  {
+   "id": "USE-01",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "For each use case on the Use Case Map tab, mark Wave 1 (go-live), Phase 2, or Out of scope.",
+   "why": "The core scoping decision; everything else follows from it.",
+   "kickoff": true,
+   "keyLabel": "Mark each use case Wave 1 / Phase 2 / Out"
+  },
+  {
+   "id": "USE-02",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "For each in-scope use case, who is the business owner, who is the audience, and what decision will the data drive?",
+   "why": "A use case without an owner and a decision becomes shelfware.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "USE-03",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "If only one or two use cases could be live in 3-4 months, which would they be and why?",
+   "why": "Forces a realistic minimum viable launch.",
+   "kickoff": true,
+   "keyLabel": "Minimum viable launch if time is tight"
+  },
+  {
+   "id": "USE-04",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ONB",
+    "EXT",
+    "CAN"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which use cases depend on SuccessFactors modules that are not yet live, and could they start with a file-based or manual trigger?",
+   "why": "Lets lifecycle use cases launch without waiting for every module.",
+   "kickoff": true,
+   "keyLabel": "Use cases blocked by modules not yet live"
+  },
+  {
+   "id": "USE-05",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Multi-select",
+   "question": "Beyond the standard list, are there other use cases (M&A integration, return-to-office, restructuring, safety culture, well-being, inclusion, SuccessFactors adoption)?",
+   "why": "Surfaces ad hoc needs early so the design stays flexible.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "USE-06",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which populations are in scope for each use case (all employees, countries, entities, job families, new joiners, leavers, contingent workers)?",
+   "why": "Determines the participant file, licences and legal review.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "USE-07",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "How often must each use case run (annual, quarterly, event-triggered, always-on), and what are the blackout periods (year-end, payroll, appraisal cycles, local holidays)?",
+   "why": "Builds the listening calendar and avoids fatigue and clashes.",
+   "kickoff": true,
+   "keyLabel": "Cadence and blackout periods"
+  },
+  {
+   "id": "USE-08",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Will one listening calendar govern engagement, pulse and lifecycle surveys, and who owns it?",
+   "why": "Caps total surveys per employee and avoids overlap.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "USE-09",
+   "section": "USE",
+   "sectionName": "Use-Case Selection & Prioritisation",
+   "useCases": [
+    "360",
+    "ENG",
+    "PLS"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which surveys should be tied to the SF PMGM cycle (for example 360 feedback inside the performance cycle, or a post-review pulse)?",
+   "why": "Aligns timing and avoids stacking requests on managers.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "COM-01",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Finance / Procurement",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "How is Qualtrics EX contracted: SAP Endorsed Apps agreement, directly with Qualtrics, or via a reseller? Which products or SKUs (Engagement, Pulse, Onboarding, Exit, 360, Lifecycle, Employee Technology Experience)?",
+   "why": "Licensed products set what can be configured and when. SAP and Qualtrics announced an Endorsed Apps route in January 2025.",
+   "kickoff": true,
+   "keyLabel": "Contract route and licensed products"
+  },
+  {
+   "id": "COM-02",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Finance / Procurement",
+   "neededBy": "Week 2",
+   "responseType": "Number",
+   "question": "What are the licensed participant counts per product, and the contract start date and term? Does the licence start before the build begins?",
+   "why": "A late licence start blocks tenant access and build.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "COM-03",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 2",
+   "responseType": "Yes / No",
+   "question": "Is the Qualtrics tenant (brand) already provisioned, and in which data centre region?",
+   "why": "Region drives data residency and is hard to change later.",
+   "kickoff": true,
+   "keyLabel": "Tenant provisioned? Which data centre?"
+  },
+  {
+   "id": "COM-04",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "RPT"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 4",
+   "responseType": "Yes / No",
+   "question": "Are AI features (Qualtrics Assist, text analytics, conversational feedback) licensed, and permitted under your internal AI policy?",
+   "why": "AI features may need separate approval.",
+   "kickoff": true,
+   "keyLabel": "AI features licensed and permitted"
+  },
+  {
+   "id": "COM-05",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Finance / Procurement",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What budget is approved for implementation, change management, translation and run costs (admin effort, partner support)?",
+   "why": "Sets realistic scope.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "COM-06",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Who is the implementation partner, and which SAP and Qualtrics contacts (account executives, solution architects) are engaged?",
+   "why": "Shows who can unblock licence, tenant and integration questions.",
+   "kickoff": true,
+   "keyLabel": "Implementation partner and SAP/Qualtrics contacts"
+  },
+  {
+   "id": "COM-07",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What is the status of procurement, vendor risk assessment and data processing agreements for Qualtrics, and how long do these normally take?",
+   "why": "Security and legal reviews can exceed eight weeks.",
+   "kickoff": true,
+   "keyLabel": "Procurement and vendor risk review status"
+  },
+  {
+   "id": "COM-08",
+   "section": "COM",
+   "sectionName": "Licensing, Commercials & Contracting",
+   "useCases": [
+    "INT"
+   ],
+   "priority": "P2",
+   "owner": "Finance / Procurement",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Are there other costs to plan for: integration middleware (SAP BTP / Integration Suite), SSO, premium support, benchmarks?",
+   "why": "Avoids late surprises.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ENG-01",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Is there an existing engagement model or index (composite index, eNPS, drivers)? Must trend continuity with historical results be preserved?",
+   "why": "Changing items breaks year-on-year comparison.",
+   "kickoff": true,
+   "keyLabel": "Existing model and trend continuity"
+  },
+  {
+   "id": "ENG-02",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Will you use the Qualtrics best-practice engagement library, a custom model, or a hybrid? Who approves final content?",
+   "why": "Decides build effort, translation scope and approval path.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ENG-03",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Census or sample? What participation target do you set, and what was achieved last time?",
+   "why": "Sets licence volume, reminder strategy and success KPI.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ENG-04",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P1",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which results cuts are required (org unit, location, job level, tenure, age band, gender, manager)? What is the minimum group size for reporting?",
+   "why": "Drives data attributes needed from EC and the anonymity threshold.",
+   "kickoff": true,
+   "keyLabel": "Reporting cuts and minimum group size"
+  },
+  {
+   "id": "ENG-05",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Will the survey be anonymous or confidential? Will SF attributes be attached to responses, and how will employees be told?",
+   "why": "The promise made to employees must match the technical design.",
+   "kickoff": true,
+   "keyLabel": "Anonymous vs confidential"
+  },
+  {
+   "id": "ENG-06",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Is benchmarking required (internal, industry, external)? Against which peer groups?",
+   "why": "Determines licensed benchmark content and comparisons.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ENG-07",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "List / table",
+   "question": "Who sees results (executives, HRBPs, all people managers), and when? What is the cascade process?",
+   "why": "Defines roles, dashboard design and release gates.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ENG-08",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How will open-text comments be handled: languages, redaction of names, and escalation of sensitive content (harassment, safety)?",
+   "why": "Duty-of-care and anonymity obligations.",
+   "kickoff": true,
+   "keyLabel": "Handling sensitive open-text comments"
+  },
+  {
+   "id": "ENG-09",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG",
+    "MGR"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What are managers expected to do with results (action plans, deadlines, tracking)? Should plans link to SF goals or development plans?",
+   "why": "Closing the loop is what makes engagement credible.",
+   "kickoff": true,
+   "keyLabel": "Manager action plans after results"
+  },
+  {
+   "id": "ENG-10",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P2",
+   "owner": "Internal Communications",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What survey window and reminder pattern are planned, and how will frontline or deskless staff take part (mobile, kiosk, QR code, personal links)?",
+   "why": "Participation fails when access is not designed in.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ENG-11",
+   "section": "ENG",
+   "sectionName": "Employee Engagement Survey",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Do you expect to link engagement to attrition, performance (PMGM ratings) or other HR outcomes, and is that permitted by policy and employee representatives?",
+   "why": "Joining survey and HR data is valuable but needs legal and trust safeguards.",
+   "kickoff": true,
+   "keyLabel": "Linking engagement to attrition or performance"
+  },
+  {
+   "id": "PLS-01",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which pulse programmes do you need (always-on, quarterly, topic-based, post-event, manager pulse)?",
+   "why": "Defines templates, licences and cadence.",
+   "kickoff": true,
+   "keyLabel": "Which pulse programmes are needed"
+  },
+  {
+   "id": "PLS-02",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who may launch a pulse (central HR only, or delegated to HRBPs and managers)? What caps prevent fatigue (maximum surveys per employee per quarter)?",
+   "why": "Governance prevents survey overload.",
+   "kickoff": true,
+   "keyLabel": "Who can launch a pulse, and fatigue limits"
+  },
+  {
+   "id": "PLS-03",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How will respondents be sampled (full population, random sample, rotating cohorts)?",
+   "why": "Affects participant lists and statistical validity.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "PLS-04",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Who curates the standard pulse question bank, and what is the target length (items and minutes)?",
+   "why": "Keeps pulses short and comparable.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "PLS-05",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P1",
+   "owner": "Internal Communications",
+   "neededBy": "Week 4",
+   "responseType": "Multi-select",
+   "question": "Which delivery channels are needed: email, SF home page or Engagement card, MS Teams, Slack, SMS, mobile, QR codes?",
+   "why": "Channels determine integration effort and response rates.",
+   "kickoff": true,
+   "keyLabel": "Delivery channels needed"
+  },
+  {
+   "id": "PLS-06",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS",
+    "ETX"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "For ad hoc, event-driven pulses (restructuring, policy change, SuccessFactors go-live), what approval workflow and turnaround time are expected?",
+   "why": "Speed versus control trade-off.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "PLS-07",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Should low scores trigger real-time alerts or cases to HRBPs or managers? Which case or ticketing system would receive them?",
+   "why": "Defines workflow and integration scope.",
+   "kickoff": true,
+   "keyLabel": "Real-time alerts and case routing"
+  },
+  {
+   "id": "PLS-08",
+   "section": "PLS",
+   "sectionName": "Pulse & Ad Hoc Listening",
+   "useCases": [
+    "PLS"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Who sees pulse results, at what minimum group size, and how quickly after close?",
+   "why": "Sets expectations and dashboard design.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-01",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT",
+    "CAN"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 2",
+   "responseType": "Multi-select",
+   "question": "Which lifecycle moments are in scope: candidate, pre-boarding, Day 1 / 30 / 90 / 180, probation end, promotion, transfer, return from leave, manager change, exit (voluntary or involuntary), alumni?",
+   "why": "Each moment needs a trigger, template and owner.",
+   "kickoff": true,
+   "keyLabel": "Which lifecycle moments are in scope"
+  },
+  {
+   "id": "LCE-02",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "For each moment, what is the EC trigger (hire date, position start, event reason, employment status, termination date)? Which event reasons apply?",
+   "why": "Triggers must be reliable and mapped to configured event reasons.",
+   "kickoff": true,
+   "keyLabel": "EC trigger and event reasons per moment"
+  },
+  {
+   "id": "LCE-03",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "Is SAP SuccessFactors Onboarding (or another tool) live at go-live? If not, what is the system of record for new-hire tasks and data?",
+   "why": "Determines whether onboarding surveys can use task or milestone data.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-04",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB"
+   ],
+   "priority": "P1",
+   "owner": "Talent Acquisition",
+   "neededBy": "Week 4",
+   "responseType": "Number",
+   "question": "What are the monthly hiring volumes by country, and what survey cadence is wanted (days since hire) for new hire, manager and buddy?",
+   "why": "Sizes the programme and tells us if results will reach reportable group sizes.",
+   "kickoff": true,
+   "keyLabel": "Onboarding cadence and hiring volumes"
+  },
+  {
+   "id": "LCE-05",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "EXT"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "How should exit surveys work: which exit types are included (resignation, retirement, dismissal, contract end), and should they be sent before or after the last day?",
+   "why": "Exit timing and exclusions are sensitive and legal-critical.",
+   "kickoff": true,
+   "keyLabel": "Exit survey timing and exclusions"
+  },
+  {
+   "id": "LCE-06",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "EXT"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "After offboarding, how will leavers be reached (personal email) and what are the policy and legal limits on holding that data and on alumni contact?",
+   "why": "Corporate email is often disabled at exit.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-07",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "EXT"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Will a self-service survey complement or replace HR-led exit interviews? Is manager input about the leaver required?",
+   "why": "Defines the exit experience and data model.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-08",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "CAN"
+   ],
+   "priority": "P2",
+   "owner": "Talent Acquisition",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Is Recruiting Management in scope and live? At which stages should candidate surveys trigger (applied, interviewed, offered, declined, hired), and what applicant-privacy limits apply?",
+   "why": "Candidate data often sits in a different system with different privacy rules.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-09",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "LCE"
+   ],
+   "priority": "P3",
+   "owner": "HR / People Leadership",
+   "neededBy": "Post go-live",
+   "responseType": "Multi-select",
+   "question": "Are surveys needed for internal moves, promotions, return from leave or manager change?",
+   "why": "Candidate Phase 2 moments.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-10",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "When a new hire or leaver raises a serious issue (harassment, safety, discrimination), who is notified, how fast, and what happens to anonymity?",
+   "why": "Duty-of-care protocol must exist before launch.",
+   "kickoff": true,
+   "keyLabel": "Escalation protocol for serious issues"
+  },
+  {
+   "id": "LCE-11",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT",
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Do managers see onboarding and exit results for their teams, and under what anonymity rules?",
+   "why": "Balances insight and confidentiality.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-12",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "How reliable are hire and termination dates, business email and manager assignment in EC today? Are back-dated, future-dated or mass-uploaded records common?",
+   "why": "Lifecycle triggers fire on this data; poor quality means missed or wrong surveys.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-13",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Number",
+   "question": "What annual volumes do you expect for each lifecycle type?",
+   "why": "Sizes testing and licences.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "LCE-14",
+   "section": "LCE",
+   "sectionName": "Lifecycle Moments: Onboarding, Exit & Candidate",
+   "useCases": [
+    "ONB",
+    "EXT"
+   ],
+   "priority": "P2",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which countries have specific rules for onboarding or exit surveys (consultation, consent, restricted data)?",
+   "why": "Avoids country-level blocks on go-live.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-01",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "Is 360 in scope for go-live? What is its purpose: development only, leadership assessment, talent-review input, or performance input?",
+   "why": "Purpose sets confidentiality, report design and legal review.",
+   "kickoff": true,
+   "keyLabel": "Purpose of 360: development vs evaluation"
+  },
+  {
+   "id": "360-02",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "SF PMGM is already live. Does it already run multi-rater or 360 feedback? Which tool will be the system of record for 360 (Qualtrics 360 or PMGM), and what drives the choice?",
+   "why": "Avoids two competing 360 processes and duplicated rater fatigue.",
+   "kickoff": true,
+   "keyLabel": "Qualtrics 360 vs PMGM multi-rater"
+  },
+  {
+   "id": "360-03",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Who are the subjects (all managers, senior leaders, high potentials)? How many, and how often (annual, cycle-aligned)?",
+   "why": "Sizes licences and workload.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-04",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Which workflow model applies: predefined subject-evaluator pairs, subject nominates from a predefined list, or open nomination? Is manager approval of raters required?",
+   "why": "These are the standard Qualtrics 360 workflows and each needs different data.",
+   "kickoff": true,
+   "keyLabel": "Rater workflow: predefined, nominated or open"
+  },
+  {
+   "id": "360-05",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which rater categories (manager, peers, direct reports, skip-level, customers, external) and what minimum raters per category before results show?",
+   "why": "Anonymity depends on minimums.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-06",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Should the project run in waves (nominations, evaluations, report release), and how long should each wave last?",
+   "why": "Qualtrics recommends waves for 360 projects; durations drive the calendar.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-07",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Is there a leadership competency model? How many competencies and items, which rating scale, which open-ended questions, which scoring categories, and which translations?",
+   "why": "Question set and scoring categories must be final before build.",
+   "kickoff": true,
+   "keyLabel": "Competency model, rating scale and languages"
+  },
+  {
+   "id": "360-08",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "How will subject and evaluator data be derived from EC: reporting lines, dotted-line or matrix managers, project teams?",
+   "why": "Rater lists are the main data dependency of 360.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-09",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "List / table",
+   "question": "What should subject reports contain, and who sees them (subject, manager, HRBP, coach)? Are norm groups or benchmarks needed?",
+   "why": "Drives report design and access rules.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-10",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How do 360 results flow to development plans (SF Succession & Development, Learning) or stay outside SF?",
+   "why": "Defines integration and confidentiality.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-11",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Who writes invitation and reminder messages, in which languages, and who coaches subjects on results?",
+   "why": "Messaging and coaching drive trust and quality.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-12",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Are external evaluators (customers, vendors) or contingent workers included, and how is their data handled?",
+   "why": "External participants have different data and access needs.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-13",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "May 360 results be used in talent, promotion or pay decisions? What do the legal team and employee representatives say?",
+   "why": "Use of results changes legal and consultation requirements.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "360-14",
+   "section": "360",
+   "sectionName": "360 / Multi-Rater Feedback",
+   "useCases": [
+    "360"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Which subjects will pilot, and when? What success criteria would let you scale?",
+   "why": "A small pilot lowers launch risk.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "MGR-01",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Yes / No",
+   "question": "Is manager effectiveness a named use case (upward feedback, manager pulse, manager scorecard)?",
+   "why": "Decides content and reporting scope.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "MGR-02",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What must managers do after results arrive: required action plans, deadlines, tracking and nudges?",
+   "why": "Defines the action-planning module scope.",
+   "kickoff": true,
+   "keyLabel": "Manager action-plan expectations"
+  },
+  {
+   "id": "MGR-03",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Do you have manager development content (internal or from Qualtrics) to recommend alongside results? Should it link to SF Learning?",
+   "why": "Turns insight into help.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "MGR-04",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P1",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "How is a manager defined for reporting (direct reports, full hierarchy roll-up, matrix)? What happens when a manager has fewer reports than the minimum group size?",
+   "why": "Small teams are the most common anonymity problem.",
+   "kickoff": true,
+   "keyLabel": "How a manager is defined; small teams"
+  },
+  {
+   "id": "MGR-05",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What follow-up applies to low-scoring teams (HRBP involvement, targeted support)?",
+   "why": "Defines escalation rules.",
+   "kickoff": true,
+   "keyLabel": "Follow-up for low-scoring teams"
+  },
+  {
+   "id": "MGR-06",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Who tracks action-plan completion, and how is it reported to executives?",
+   "why": "Accountability for outcomes.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "MGR-07",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Should action plans link to SF goals, PMGM or development plans?",
+   "why": "Decides the return integration to SF.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "MGR-08",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 4",
+   "responseType": "Number",
+   "question": "How many managers need access, and will they use dashboards (SSO) or receive PDFs or emails?",
+   "why": "Drives licence, role and SSO design.",
+   "kickoff": true,
+   "keyLabel": "Manager access: dashboard vs PDF"
+  },
+  {
+   "id": "MGR-09",
+   "section": "MGR",
+   "sectionName": "Manager Effectiveness & Action Planning",
+   "useCases": [
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "Talent & L&D",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Who will train managers to read results and run team discussions? Are conversation guides needed?",
+   "why": "Manager capability decides whether action happens.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ETX-01",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 4",
+   "responseType": "Yes / No",
+   "question": "Is Employee Technology Experience in scope? Which tools and services (laptops, VPN, collaboration, service desk, SuccessFactors itself)?",
+   "why": "Decides if IT-side stakeholders join discovery.",
+   "kickoff": true,
+   "keyLabel": "Is technology experience in scope?"
+  },
+  {
+   "id": "ETX-02",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who owns it (CIO, service desk, digital workplace) and is there sponsor and budget?",
+   "why": "Needs an owner outside HR.",
+   "kickoff": true,
+   "keyLabel": "Owner outside HR for technology experience"
+  },
+  {
+   "id": "ETX-03",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 8",
+   "responseType": "Single choice",
+   "question": "Which ITSM or ticketing tool is in use (ServiceNow, Jira, other)? Should low scores create tickets?",
+   "why": "Closing the loop on IT issues needs integration.",
+   "kickoff": true,
+   "keyLabel": "ITSM tool and ticket creation"
+  },
+  {
+   "id": "ETX-04",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What triggers these surveys: ticket closure, device refresh, a new SF release, or a periodic cycle?",
+   "why": "Defines event sources.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ETX-05",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX",
+    "PLS"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "Yes / No",
+   "question": "Do you want to measure employee and manager experience of SuccessFactors itself (EC self-service, PMGM, new modules) right after go-live?",
+   "why": "Fast win that also supports adoption.",
+   "kickoff": true,
+   "keyLabel": "Measure SuccessFactors experience itself"
+  },
+  {
+   "id": "ETX-06",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX"
+   ],
+   "priority": "P3",
+   "owner": "IT / Architecture",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Is device, location or application data beyond EC needed for segmentation?",
+   "why": "Adds data sources.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ETX-07",
+   "section": "ETX",
+   "sectionName": "Employee Technology Experience",
+   "useCases": [
+    "ETX"
+   ],
+   "priority": "P3",
+   "owner": "IT / Architecture",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Which technology KPIs are targeted (satisfaction, effort, time-to-resolve)?",
+   "why": "Aligns metrics.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUR-01",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which languages are required per use case? What is the source language, translation method (human, machine plus review) and who validates?",
+   "why": "Translation lead time can decide the go-live date.",
+   "kickoff": true,
+   "keyLabel": "Languages and translation process"
+  },
+  {
+   "id": "SUR-02",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Which rating scales and wording standards must be used (5, 7 or 10 point, agree/disagree, eNPS) to stay comparable with history?",
+   "why": "Standardising early avoids rework.",
+   "kickoff": true,
+   "keyLabel": "Rating scales to standardise"
+  },
+  {
+   "id": "SUR-03",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which demographic attributes come from SF (hidden metadata) and which are asked? Are any categories restricted in certain countries (gender, ethnicity, age, disability)?",
+   "why": "Legal and privacy constraints vary by country.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUR-04",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What privacy notice, consent text and mandatory statements must appear on each survey?",
+   "why": "Must be reviewed before build.",
+   "kickoff": true,
+   "keyLabel": "Mandatory consent and privacy text"
+  },
+  {
+   "id": "SUR-05",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Internal Communications",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What branding is required (logo, colours, tone) and which accessibility standard (for example WCAG) must surveys meet?",
+   "why": "Quick to define now and costly later.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUR-06",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What accessibility needs exist (screen readers, low bandwidth, shift workers, kiosks)?",
+   "why": "Ensures every employee can respond.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUR-07",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What survey length targets apply, and who signs off on content?",
+   "why": "Controls fatigue and approval time.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUR-08",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Will you use Qualtrics best-practice libraries (engagement, onboarding, exit, 360, well-being, candidate) as the baseline, and how much customisation is allowed?",
+   "why": "Libraries speed delivery; customisation adds testing and translation.",
+   "kickoff": true,
+   "keyLabel": "Qualtrics library vs custom content"
+  },
+  {
+   "id": "SUR-09",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P3",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Which scoring conventions apply (favourable %, mean, top-box)?",
+   "why": "Keeps analytics consistent.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUR-10",
+   "section": "SUR",
+   "sectionName": "Survey Content, Scales & Languages",
+   "useCases": [
+    "PLS",
+    "ENG"
+   ],
+   "priority": "P3",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Would you accept AI-assisted follow-up questions on vague comments (conversational feedback)?",
+   "why": "Needs policy approval.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-01",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Describe the SuccessFactors landscape: instances (test, preview, production), data centre, EC release status, identity provider and SSO.",
+   "why": "Foundation for integration and authentication design.",
+   "kickoff": true,
+   "keyLabel": "SF instances, data centre and identity provider"
+  },
+  {
+   "id": "INT-02",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "What is the preferred method for sending EC employee data to Qualtrics: pre-packaged SF extension, SFTP file, API or Integration Center, or SAP BTP Integration Suite? Any constraints?",
+   "why": "Selects the integration pattern and drives effort.",
+   "kickoff": true,
+   "keyLabel": "Preferred integration method for employee data"
+  },
+  {
+   "id": "INT-03",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Do you have SAP BTP / Integration Suite today? Who has the skills and capacity to build and run the integration?",
+   "why": "Capacity is the main schedule risk for integration.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-04",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "How often must data sync (daily full, daily delta, near real time)? Which fields need near-real-time updates (hire for onboarding, termination for exit)?",
+   "why": "Sync frequency decides architecture.",
+   "kickoff": true,
+   "keyLabel": "Sync frequency and real-time needs"
+  },
+  {
+   "id": "INT-05",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ONB",
+    "EXT"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "How will EC events (hire, transfer, termination) trigger surveys: SF Intelligent Services events, Integration Center, or scheduled delta files? Is Intelligent Services enabled?",
+   "why": "Event triggers are the heart of lifecycle surveys.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-06",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "PLS",
+    "ETX"
+   ],
+   "priority": "P2",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 8",
+   "responseType": "Yes / No",
+   "question": "Do surveys need to appear inside SF (home page tile, Engagement card, mobile app)? On which SF home page version?",
+   "why": "Embedded delivery improves response and adoption.",
+   "kickoff": true,
+   "keyLabel": "Embed surveys inside SF home or mobile"
+  },
+  {
+   "id": "INT-07",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "MGR",
+    "RPT"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Should results or action plans flow back to SF (development plans, goals, talent profile) or to a data warehouse (SAC, Datasphere, BW)?",
+   "why": "Return flows add scope and security review.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-08",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "Which identity standard will be used for employee access (SAML or OIDC, which IdP)? What is the fallback for employees without SSO?",
+   "why": "Access design affects frontline reach and security approval.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-09",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "How many Qualtrics sandbox and production environments are needed, how often is SF preview refreshed, and what is the policy on test data (anonymised or real)?",
+   "why": "Environments and test data decide test quality and compliance.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-10",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What API user, OAuth, IP allow-list and permission roles will the integration need, and who approves them?",
+   "why": "Integration security approvals take time.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-11",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Who monitors failed syncs, how will alerts be raised, and what SLA is expected?",
+   "why": "Operational readiness for run.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-12",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What architecture-board approvals and change-freeze windows apply in the next four months?",
+   "why": "Freeze windows can block deployment.",
+   "kickoff": true,
+   "keyLabel": "Architecture approvals and change freezes"
+  },
+  {
+   "id": "INT-13",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Is data needed from outside EC (Employee Central Payroll, time tracking, ITSM, other HR systems)?",
+   "why": "Extra sources lengthen the build.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-14",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Do firewalls or mail filters need allow-listing for Qualtrics survey links? How is email deliverability handled (sender domain, SPF, DKIM)?",
+   "why": "Invitations landing in spam is a frequent launch problem.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "INT-15",
+   "section": "INT",
+   "sectionName": "SuccessFactors Integration & Architecture",
+   "useCases": [
+    "RPT"
+   ],
+   "priority": "P3",
+   "owner": "People Analytics",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Do People Analytics or Workforce Analytics pipelines need to consume EX data?",
+   "why": "Plans downstream data flows.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-01",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which EC fields are needed in Qualtrics (person, employment, job, organisation: legal entity, business unit, division, department, location, cost centre, job family, level, manager, position)? Please complete the Data Inventory tab.",
+   "why": "The field list is the backbone of hierarchy, triggers and segmentation.",
+   "kickoff": true,
+   "keyLabel": "EC fields needed in Qualtrics"
+  },
+  {
+   "id": "DAT-02",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "How complete and trusted is EC data (manager, email, location, job level)? Which known gaps exist?",
+   "why": "Data quality problems surface as wrong survey populations.",
+   "kickoff": true,
+   "keyLabel": "EC data quality: manager, email, location"
+  },
+  {
+   "id": "DAT-03",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "People Analytics",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Which organisational structure drives reporting (reporting line or organisation units)? How many levels and units exist?",
+   "why": "Determines hierarchy build and dashboard roll-ups.",
+   "kickoff": true,
+   "keyLabel": "Hierarchy that drives reporting"
+  },
+  {
+   "id": "DAT-04",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "How are matrix, dotted-line, concurrent employment, global assignments and secondments handled? Which manager and organisation does each person report under?",
+   "why": "These cases create duplicates and wrong roll-ups.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-05",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which demographic attributes exist in EC and are approved for survey analysis (gender, age band, tenure, nationality, and so on)?",
+   "why": "Needs privacy and legal approval.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-06",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who is eligible to be surveyed: active, on leave, notice period, contingent, part-time, future hires? What are the exclusion rules?",
+   "why": "Eligibility rules define the participant file.",
+   "kickoff": true,
+   "keyLabel": "Who is eligible to be surveyed"
+  },
+  {
+   "id": "DAT-07",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "What contact data is available: business email coverage, personal email, mobile number for deskless staff, preferred language?",
+   "why": "Without contact data people cannot be invited.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-08",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Where should derived attributes (tenure band, age band, span of control) be calculated: EC, middleware or Qualtrics?",
+   "why": "Avoids inconsistent definitions.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-09",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ENG",
+    "PLS"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Is there historical survey data or historical organisation snapshots to load for trend reporting? Format, volume and quality?",
+   "why": "Historical loads need mapping effort.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-10",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What retention periods apply per use case? How are leavers' data deletion and erasure requests handled?",
+   "why": "Retention rules shape configuration.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-11",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Are reorganisations planned between now and go-live, and how will hierarchy changes during a survey window be handled (snapshot or live)?",
+   "why": "Mid-survey changes corrupt results.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-12",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Single choice",
+   "question": "Which unique identifier will be the key between EC and Qualtrics (person ID, user ID), and how will pseudonymisation be handled?",
+   "why": "Key design is hard to change after build.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DAT-13",
+   "section": "DAT",
+   "sectionName": "Employee Data, Hierarchy & Attributes",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Are there entities or populations not on EC (acquisitions, joint ventures, contractors)? Should they be included and from which source?",
+   "why": "Scope and data source gap.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-01",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which reporting audiences exist (executives, HRBPs, managers, employees, People Analytics) and what does each need to see?",
+   "why": "Defines roles and dashboard scope.",
+   "kickoff": true,
+   "keyLabel": "Reporting audiences and needs"
+  },
+  {
+   "id": "RPT-02",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Multi-select",
+   "question": "Which dashboard types are must-have: executive overview, manager dashboard, heat map, driver analysis, comparison, trend?",
+   "why": "Controls build effort.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-03",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Multi-select",
+   "question": "How will reports be distributed: dashboard login, scheduled email, PDF, embedded in SF?",
+   "why": "Affects access model and SSO.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-04",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Who needs live response-rate tracking and at what granularity (without identifying respondents)?",
+   "why": "Supports participation management.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-05",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which text analytics and AI summaries (Qualtrics Assist) are in scope, in which languages, and do Legal and employee representatives approve them?",
+   "why": "AI on employee comments needs explicit approval.",
+   "kickoff": true,
+   "keyLabel": "AI text analytics and summary approval"
+  },
+  {
+   "id": "RPT-06",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ENG",
+    "PLS",
+    "360"
+   ],
+   "priority": "P1",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Will survey data be combined with SF data (turnover, PMGM performance rating, promotion, tenure) for analysis? What safeguards apply?",
+   "why": "Joined data is powerful and sensitive.",
+   "kickoff": true,
+   "keyLabel": "Joining survey data with SF outcomes"
+  },
+  {
+   "id": "RPT-07",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ENG"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Which internal targets and external benchmarks apply?",
+   "why": "Defines reporting comparisons.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-08",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Do reports need local-language labels or corporate templates?",
+   "why": "Template effort.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-09",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Will raw data go to a data warehouse or People Analytics, how often, and who holds access?",
+   "why": "Extra export flows.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-10",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What accessibility and mobile support is needed for dashboards?",
+   "why": "Usability for all managers.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "RPT-11",
+   "section": "RPT",
+   "sectionName": "Reporting, Dashboards & Analytics (incl. AI)",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Which custom metrics (eNPS, engagement index composition, attrition-risk index) need agreed definitions and owners?",
+   "why": "Metric definitions must be fixed before dashboards.",
+   "kickoff": true,
+   "keyLabel": "Agreed definitions for custom metrics"
+  },
+  {
+   "id": "SEC-01",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Where must employee data be stored and processed? Are there restrictions on cross-border transfer (EU, India, China, Middle East, other)?",
+   "why": "Residency drives data-centre choice and legal basis.",
+   "kickoff": true,
+   "keyLabel": "Data residency and cross-border transfer"
+  },
+  {
+   "id": "SEC-02",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Has a DPIA or privacy impact assessment been done or required? Who is the DPO and when must they be consulted?",
+   "why": "Often a critical-path item.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-03",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which countries require works council, union or employee representative consultation, and what are the lead times?",
+   "why": "Consultation can delay go-live by weeks or months.",
+   "kickoff": true,
+   "keyLabel": "Works council and union consultation timelines"
+  },
+  {
+   "id": "SEC-04",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What anonymity commitments apply: minimum group size, suppression of small groups, comment redaction, and who approves exceptions?",
+   "why": "Anonymity breaches destroy trust.",
+   "kickoff": true,
+   "keyLabel": "Anonymity thresholds and exceptions"
+  },
+  {
+   "id": "SEC-05",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What is the legal basis (legitimate interest or consent) and the required privacy notice wording for each country?",
+   "why": "Needed before the first invitation.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-06",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which EC attributes are classified sensitive or restricted? Are any prohibited from leaving EC?",
+   "why": "Sets the data mapping scope.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-07",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What SSO, MFA, session, admin-access and IP-restriction policies apply?",
+   "why": "Security configuration to design up front.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-08",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What security evidence is required from the vendor (certifications, pen-test reports, sub-processor list)? Where does the review stand?",
+   "why": "Vendor review can gate access to real data.",
+   "kickoff": true,
+   "keyLabel": "Vendor security review status"
+  },
+  {
+   "id": "SEC-09",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How are data subject access requests involving survey data handled?",
+   "why": "Needs a process before go-live.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-10",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What is your protocol for sensitive disclosures in comments (harassment, safety, wellbeing risk): duty of care, escalation path, limits of anonymity?",
+   "why": "Legal duty may override anonymity.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-11",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What audit logging is required (who accessed which results) and how will logs be exported?",
+   "why": "Compliance evidence.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SEC-12",
+   "section": "SEC",
+   "sectionName": "Security, Privacy & Compliance",
+   "useCases": [
+    "RPT"
+   ],
+   "priority": "P1",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Has Legal assessed AI-based analysis of employee data (sentiment, attrition prediction) under internal AI policy and applicable regulation, including EU AI Act treatment of employment-related AI?",
+   "why": "AI governance rules for employee data are evolving.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ROL-01",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Who will be Brand Administrators and who will be EX project administrators? Brand Administrators have full platform access including the directory; Employee Insights Administrators can build projects but cannot access the directory or admin page.",
+   "why": "Admin separation is a core design choice in Qualtrics EX.",
+   "kickoff": true,
+   "keyLabel": "Brand admins vs project admins"
+  },
+  {
+   "id": "ROL-02",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "Define viewer roles (executives, HRBPs, managers, regional HR, employee representatives) and map each to hierarchy-based access.",
+   "why": "Hierarchy-based access is the basis of dashboards.",
+   "kickoff": true,
+   "keyLabel": "Viewer roles mapped to hierarchy"
+  },
+  {
+   "id": "ROL-03",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who can create and launch surveys, approve content and release results? What approval chain and SLA apply?",
+   "why": "Prevents bottlenecks and rogue surveys.",
+   "kickoff": true,
+   "keyLabel": "Who creates, approves and releases surveys"
+  },
+  {
+   "id": "ROL-04",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Security & Privacy",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who may see raw comments or respondent-level data? What segregation of duties applies between administrators, HRBPs and IT?",
+   "why": "Protects confidentiality.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ROL-05",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "IT / Architecture",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Will joiner-mover-leaver access be automated from SF roles or managed manually?",
+   "why": "Access hygiene at scale.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ROL-06",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Which governance body oversees EX (steering committee, content council, privacy officer)? How often does it meet?",
+   "why": "Someone must own decisions after go-live.",
+   "kickoff": true,
+   "keyLabel": "EX steering and governance body"
+  },
+  {
+   "id": "ROL-07",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What support model is expected (employee help, administrators, vendor) and in which languages and hours?",
+   "why": "Prepares for go-live volume.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "ROL-08",
+   "section": "ROL",
+   "sectionName": "Roles, Access & Governance",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Security & Privacy",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "How will changes to surveys and participant data after launch be documented and audited?",
+   "why": "Change control.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CMM-01",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Internal Communications",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Who sends invitations (executive, HR, manager), from which sender name and email domain, over which channels?",
+   "why": "Sender trust drives response rates.",
+   "kickoff": true,
+   "keyLabel": "Sender, domain and channels for invitations"
+  },
+  {
+   "id": "CMM-02",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Internal Communications",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Is Internal Communications engaged, and which channels exist (intranet, Teams, town halls, posters for frontline staff)?",
+   "why": "Comms lead times are long.",
+   "kickoff": true,
+   "keyLabel": "Internal Comms engaged; channels available"
+  },
+  {
+   "id": "CMM-03",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Internal Communications",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What employee-facing FAQ and privacy message will explain what happens to results?",
+   "why": "Trust drives honest answers.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CMM-04",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Internal Communications",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What reminder cadence and tone are planned, and will managers receive response-rate nudges?",
+   "why": "Participation levers.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CMM-05",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ENG",
+    "MGR"
+   ],
+   "priority": "P2",
+   "owner": "Internal Communications",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What toolkit will managers receive to explain the survey and discuss results?",
+   "why": "Manager confidence affects outcomes.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CMM-06",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Internal Communications",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How and when will you communicate what changed as a result (you said, we did), and who owns it?",
+   "why": "Without visible action, response rates decay.",
+   "kickoff": true,
+   "keyLabel": "You said, we did: closing-the-loop plan"
+  },
+  {
+   "id": "CMM-07",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What changes for HR, managers and employees, who might resist, and what training is needed?",
+   "why": "Shapes the change plan.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CMM-08",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "List / table",
+   "question": "What training is planned for administrators, HRBPs and managers (formats, lead times)?",
+   "why": "Training must complete before launch.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "CMM-09",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Internal Communications",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which other surveys, campaigns or SuccessFactors go-live communications run in the same period, and how will they be coordinated?",
+   "why": "Clashing campaigns reduce participation.",
+   "kickoff": true,
+   "keyLabel": "Clashing campaigns and SF go-live comms"
+  },
+  {
+   "id": "CMM-10",
+   "section": "CMM",
+   "sectionName": "Communications, Change & Adoption",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Internal Communications",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What local-language adaptation is needed for communications by country?",
+   "why": "Communication scope.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "UPC-01",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which SuccessFactors modules go live in the next 3-4 months (for example Recruiting, Onboarding, Learning, Succession & Development, Compensation, Time, Payroll) and what are their dates? Please complete the SF Module Readiness tab.",
+   "why": "Module dates drive trigger availability and test windows.",
+   "kickoff": true,
+   "keyLabel": "SF module go-live dates in the window"
+  },
+  {
+   "id": "UPC-02",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "For each module, does an EX use case need its data (onboarding task completion, course completion, requisition stages)? Is a manual or file-based interim acceptable?",
+   "why": "Separates hard dependencies from nice-to-haves.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "UPC-03",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Can EX requirements be fed into the design workshops of those other modules now (fields, event reasons, status codes)?",
+   "why": "Cheap now, expensive later.",
+   "kickoff": true,
+   "keyLabel": "EX needs fed into other module designs"
+  },
+  {
+   "id": "UPC-04",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Which EC configuration changes are planned (new fields, org restructure, position management, event reasons) that would affect the EX data feed?",
+   "why": "Mid-build data model changes break integrations.",
+   "kickoff": true,
+   "keyLabel": "Planned EC changes that affect the feed"
+  },
+  {
+   "id": "UPC-05",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How will SuccessFactors half-yearly releases be handled, and what test windows apply?",
+   "why": "Release regression is a known risk.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "UPC-06",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Project / PMO",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Is the same partner implementing the other modules and Qualtrics? Where does resource overlap?",
+   "why": "Shared people cause conflicts.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "UPC-07",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "When do other modules cut over and hold hypercare, and how does that collide with EX testing and pilot?",
+   "why": "Avoids testing during SF cutovers.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "UPC-08",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "RPT"
+   ],
+   "priority": "P3",
+   "owner": "People Analytics",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "Is Workforce Analytics or SAC planned and should it consume EX data?",
+   "why": "Plans downstream use.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "UPC-09",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "360",
+    "ENG",
+    "PLS"
+   ],
+   "priority": "P1",
+   "owner": "HRIS / SuccessFactors Lead",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "What is the PMGM cycle calendar (goals, reviews, calibration)? Which PMGM data (ratings, goals) may be used with survey data?",
+   "why": "Avoids collisions and clarifies permitted data use.",
+   "kickoff": true,
+   "keyLabel": "PMGM cycle calendar and collisions"
+  },
+  {
+   "id": "UPC-10",
+   "section": "UPC",
+   "sectionName": "Upcoming SuccessFactors Modules & Sequencing",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "Are further EC rollout waves planned (new countries or entities) that will expand the EX population?",
+   "why": "Scalability planning.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-01",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "What phases and milestones are expected (design, build, test, pilot, go-live, hypercare)? Review the proposed 16-week plan on the Timeline & Risks tab.",
+   "why": "Aligns on the critical path.",
+   "kickoff": true,
+   "keyLabel": "Milestones: design, build, test, pilot"
+  },
+  {
+   "id": "DEL-02",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Who is on the project team (business, HRIS, IT, security, comms) with what percentage allocation, and who is the day-to-day decision maker?",
+   "why": "Named capacity beats intentions.",
+   "kickoff": true,
+   "keyLabel": "Named team and allocation"
+  },
+  {
+   "id": "DEL-03",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What testing approach applies: UAT participants, test cases, test data and sign-off criteria?",
+   "why": "Defines quality gates.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-04",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "Which population and use case will pilot, at what size, and what success criteria would trigger full launch?",
+   "why": "A pilot lowers launch risk.",
+   "kickoff": true,
+   "keyLabel": "Pilot population and success criteria"
+  },
+  {
+   "id": "DEL-05",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 4",
+   "responseType": "Single choice",
+   "question": "Is go-live big-bang or phased (by use case or country)? What are the rollback criteria?",
+   "why": "Phasing is the best lever in a short window.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-06",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "How long is hypercare, and how will knowledge transfer to the run team work?",
+   "why": "Support continuity.",
+   "kickoff": true,
+   "keyLabel": "Hypercare and handover plan"
+  },
+  {
+   "id": "DEL-07",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which blackout dates and holidays (year-end, festivals, fiscal close) will remove key people over the next four months?",
+   "why": "Holiday periods can remove one to two weeks of capacity.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-08",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "Which assumptions and dependencies does the client already see (licences, access, security review)?",
+   "why": "Surfaces risks early.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-09",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What are the top risks the client perceives and what mitigation is already considered?",
+   "why": "Seeds the risk register.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-10",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Project / PMO",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What project governance applies (weekly cadence, steering committee, escalation path, RAID log tool)?",
+   "why": "Operating rhythm.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-11",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Project / PMO",
+   "neededBy": "Week 4",
+   "responseType": "Multi-select",
+   "question": "Which deliverables are expected (design document, integration specification, test results, admin guide, training)?",
+   "why": "Scope of documentation.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "DEL-12",
+   "section": "DEL",
+   "sectionName": "Delivery, Timeline, Testing & Support",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What are the acceptance criteria for go-live?",
+   "why": "Prevents scope disputes.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUC-01",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "List / table",
+   "question": "Which three to five KPIs define success at 6 and 12 months (participation, eNPS, onboarding satisfaction, regretted attrition, action-plan completion)?",
+   "why": "Success definition guides trade-offs.",
+   "kickoff": true,
+   "keyLabel": "KPIs at 6 and 12 months"
+  },
+  {
+   "id": "SUC-02",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "People Analytics",
+   "neededBy": "Week 4",
+   "responseType": "List / table",
+   "question": "What baselines exist today for those KPIs?",
+   "why": "Without baselines benefits cannot be shown.",
+   "kickoff": true,
+   "keyLabel": "Baselines for the chosen KPIs"
+  },
+  {
+   "id": "SUC-03",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P1",
+   "owner": "Executive Sponsor",
+   "neededBy": "Week 2",
+   "responseType": "Free text",
+   "question": "What business case or ROI has been promised internally, and who owns benefits tracking?",
+   "why": "Defines accountability.",
+   "kickoff": true,
+   "keyLabel": "Business case and benefits owner"
+  },
+  {
+   "id": "SUC-04",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Week 8",
+   "responseType": "Free text",
+   "question": "What will the operating model look like after go-live: run-team size, skills, annual programme calendar, centre of excellence?",
+   "why": "Sustainable operation.",
+   "kickoff": true,
+   "keyLabel": "Run team and annual survey calendar"
+  },
+  {
+   "id": "SUC-05",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "HR / People Leadership",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "How will content and adoption be reviewed quarterly, and who approves new use cases?",
+   "why": "Continuous improvement.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUC-06",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P3",
+   "owner": "HR / People Leadership",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "What scale-up is expected in 12-24 months (countries, subsidiaries, populations)?",
+   "why": "Informs design headroom.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUC-07",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P3",
+   "owner": "Executive Sponsor",
+   "neededBy": "Post go-live",
+   "responseType": "Free text",
+   "question": "What executive reporting cadence on EX outcomes is expected?",
+   "why": "Governance rhythm.",
+   "kickoff": false,
+   "keyLabel": null
+  },
+  {
+   "id": "SUC-08",
+   "section": "SUC",
+   "sectionName": "Success Measures & Operating Model",
+   "useCases": [
+    "ALL"
+   ],
+   "priority": "P2",
+   "owner": "Legal / DPO / Employee Relations",
+   "neededBy": "Week 4",
+   "responseType": "Free text",
+   "question": "What policy governs use of results in performance, promotion or pay decisions?",
+   "why": "Prevents misuse and mistrust.",
+   "kickoff": true,
+   "keyLabel": "Policy on using results in decisions"
+  }
+ ],
+ "useCases": [
+  {
+   "name": "Annual Engagement",
+   "covers": "Census survey of engagement, drivers and manager effectiveness with hierarchy-based reporting.",
+   "sfTrigger": "EC person, job and organisation data; reporting lines",
+   "dependsOn": "EC only (live)",
+   "fit": "High",
+   "fitReason": "Needs EC data only; the biggest effort is content, anonymity design and reporting roles."
+  },
+  {
+   "name": "Pulse & Ad Hoc",
+   "covers": "Short recurring or event-driven surveys, including a SuccessFactors adoption pulse.",
+   "sfTrigger": "EC participant file; optional SF home-page embed",
+   "dependsOn": "EC only (live)",
+   "fit": "High",
+   "fitReason": "Reuses the engagement foundation; quickest visible value."
+  },
+  {
+   "name": "Onboarding",
+   "covers": "Surveys at set days after hire for new hire, manager and buddy.",
+   "sfTrigger": "EC hire date, position start, manager, event reason",
+   "dependsOn": "EC hire events; richer if SF Onboarding is live",
+   "fit": "Medium-High",
+   "fitReason": "Trigger works from EC; check hiring volumes, event reasons and email availability before day one."
+  },
+  {
+   "name": "Exit",
+   "covers": "Leaver feedback and attrition drivers, before or after the last day.",
+   "sfTrigger": "EC termination event, termination date, reason, contact data",
+   "dependsOn": "EC termination events; offboarding process",
+   "fit": "Medium-High",
+   "fitReason": "Needs reliable termination data and a personal-contact policy; legal sensitivity is high."
+  },
+  {
+   "name": "Candidate Experience",
+   "covers": "Feedback from applicants across hiring stages.",
+   "sfTrigger": "Recruiting stages, requisition and applicant data",
+   "dependsOn": "SF Recruiting (planned)",
+   "fit": "Low-Medium",
+   "fitReason": "Depends on Recruiting being live and on applicant-privacy rules; usually a Phase 2 candidate."
+  },
+  {
+   "name": "360 / Multi-Rater",
+   "covers": "Subjects receive feedback from self and evaluators; workflows can be predefined, nominated or open.",
+   "sfTrigger": "EC reporting lines, subject and evaluator lists, competency model",
+   "dependsOn": "EC; PMGM overlap decision",
+   "fit": "Medium",
+   "fitReason": "Needs competency content, rater workflow and a decision against PMGM multi-rater; plan waves."
+  },
+  {
+   "name": "Manager Effectiveness & Action Planning",
+   "covers": "Manager dashboards, upward feedback and tracked action plans.",
+   "sfTrigger": "EC manager hierarchy; engagement results",
+   "dependsOn": "Engagement or pulse results",
+   "fit": "Medium-High",
+   "fitReason": "Builds on engagement; the key risks are small-team anonymity and manager capability."
+  },
+  {
+   "name": "Employee Technology Experience",
+   "covers": "Feedback on tools and services, including SuccessFactors itself.",
+   "sfTrigger": "EC participants; optional ITSM events",
+   "dependsOn": "Optional ITSM integration",
+   "fit": "Medium",
+   "fitReason": "SF-adoption pulse is a quick win; ITSM integration is Phase 2."
+  },
+  {
+   "name": "Internal Moves & Return from Leave",
+   "covers": "Surveys after promotion, transfer, leave return or manager change.",
+   "sfTrigger": "EC event reasons, status changes",
+   "dependsOn": "EC events; data quality",
+   "fit": "Low-Medium",
+   "fitReason": "Same mechanics as onboarding; usually follows once triggers are proven."
+  },
+  {
+   "name": "Well-Being & Inclusion",
+   "covers": "Targeted surveys on well-being, belonging and inclusion.",
+   "sfTrigger": "EC demographics where permitted",
+   "dependsOn": "Legal approval for sensitive data",
+   "fit": "Medium",
+   "fitReason": "Content and legal review dominate; the platform work is light."
+  },
+  {
+   "name": "Change & Project Pulses",
+   "covers": "Rapid feedback on restructuring, policy change or return-to-office.",
+   "sfTrigger": "EC participant selection",
+   "dependsOn": "EC only (live)",
+   "fit": "High",
+   "fitReason": "Easy once the foundation exists; needs governance to avoid fatigue."
+  }
+ ],
+ "sfModules": [
+  {
+   "module": "Employee Central (core HR)",
+   "status": "Live",
+   "exRelevance": "Primary data source for every EX use case",
+   "touchpoint": "Employee directory, hierarchy, lifecycle triggers",
+   "dataTrigger": "Person, employment, job, organisation, manager, events",
+   "confirmQuestion": "Which EC changes are planned before go-live?"
+  },
+  {
+   "module": "Performance & Goals (PMGM)",
+   "status": "Live",
+   "exRelevance": "360 overlap; post-review pulse; link to ratings",
+   "touchpoint": "360 decision, review-cycle calendar, optional rating joins",
+   "dataTrigger": "Cycle dates, form templates, multi-rater use, ratings",
+   "confirmQuestion": "Does PMGM already run multi-rater feedback, and which tool will own 360?"
+  },
+  {
+   "module": "Continuous Performance Management",
+   "status": "To confirm",
+   "exRelevance": "Check-in and feedback pulses",
+   "touchpoint": "Manager conversation pulses",
+   "dataTrigger": "Activity events",
+   "confirmQuestion": "Is CPM in use or planned?"
+  },
+  {
+   "module": "Recruiting Management",
+   "status": "Planned - confirm date",
+   "exRelevance": "Candidate experience",
+   "touchpoint": "Stage-triggered candidate surveys",
+   "dataTrigger": "Requisition, application stage, applicant contact",
+   "confirmQuestion": "Go-live date and applicant-privacy constraints?"
+  },
+  {
+   "module": "Recruiting Marketing / CRM",
+   "status": "To confirm",
+   "exRelevance": "Employer brand and candidate funnel",
+   "touchpoint": "Candidate pulse (optional)",
+   "dataTrigger": "Career site events",
+   "confirmQuestion": "In scope?"
+  },
+  {
+   "module": "Onboarding",
+   "status": "Planned - confirm date",
+   "exRelevance": "Onboarding experience",
+   "touchpoint": "Day-1 / 30 / 90 surveys, task-based triggers",
+   "dataTrigger": "Hire event, tasks, buddy, manager",
+   "confirmQuestion": "Go-live date; is a manual trigger acceptable at launch?"
+  },
+  {
+   "module": "Offboarding (EC)",
+   "status": "To confirm",
+   "exRelevance": "Exit experience",
+   "touchpoint": "Pre-exit and exit surveys",
+   "dataTrigger": "Termination event, last day, reason code",
+   "confirmQuestion": "Is offboarding configured and reliable?"
+  },
+  {
+   "module": "Learning",
+   "status": "Planned - confirm date",
+   "exRelevance": "Learning experience; manager development follow-up",
+   "touchpoint": "Course-completion pulse; link from action plans",
+   "dataTrigger": "Course completions",
+   "confirmQuestion": "Go-live date; integration expectations?"
+  },
+  {
+   "module": "Succession & Development",
+   "status": "Planned - confirm date",
+   "exRelevance": "360 results into development plans",
+   "touchpoint": "Development plan linkage",
+   "dataTrigger": "Talent profile, development goals",
+   "confirmQuestion": "Should 360 results flow here or stay confidential?"
+  },
+  {
+   "module": "Compensation",
+   "status": "Planned - confirm date",
+   "exRelevance": "Pay perception (survey content only)",
+   "touchpoint": "None required",
+   "dataTrigger": "None",
+   "confirmQuestion": "Any rule against linking pay data to survey data?"
+  },
+  {
+   "module": "Employee Central Payroll",
+   "status": "To confirm",
+   "exRelevance": "Pay-cycle blackout dates",
+   "touchpoint": "Calendar only",
+   "dataTrigger": "Payroll calendar",
+   "confirmQuestion": "Avoid surveys in payroll-close windows?"
+  },
+  {
+   "module": "Time Management / Time Tracking",
+   "status": "To confirm",
+   "exRelevance": "Work-pattern segmentation (optional)",
+   "touchpoint": "Optional attributes",
+   "dataTrigger": "Work schedule",
+   "confirmQuestion": "Needed for segmentation?"
+  },
+  {
+   "module": "Employee Central Service Center",
+   "status": "To confirm",
+   "exRelevance": "Case closure survey",
+   "touchpoint": "Post-case satisfaction survey",
+   "dataTrigger": "Case closure event",
+   "confirmQuestion": "In scope?"
+  },
+  {
+   "module": "Workforce Analytics / People Analytics",
+   "status": "To confirm",
+   "exRelevance": "Joint analysis of survey and HR data",
+   "touchpoint": "Data export or SAC integration",
+   "dataTrigger": "Turnover, headcount metrics",
+   "confirmQuestion": "Who consumes EX data?"
+  },
+  {
+   "module": "Home page / mobile app",
+   "status": "To confirm",
+   "exRelevance": "Embedded survey delivery",
+   "touchpoint": "Engagement card or tile",
+   "dataTrigger": "Home page version",
+   "confirmQuestion": "Which home page version and mobile app?"
+  },
+  {
+   "module": "SF Intelligent Services / Integration Center",
+   "status": "To confirm",
+   "exRelevance": "Event-driven triggers",
+   "touchpoint": "Lifecycle event feed",
+   "dataTrigger": "Hire, transfer and termination events",
+   "confirmQuestion": "Are these enabled and who maintains them?"
+  }
+ ],
+ "dataFields": [
+  {
+   "attribute": "Person ID / User ID",
+   "ecArea": "Person information",
+   "purpose": "Key / identifier",
+   "sensitivity": "Medium",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "First and last name",
+   "ecArea": "Personal information",
+   "purpose": "Contact / display",
+   "sensitivity": "Medium",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Business email",
+   "ecArea": "Email information",
+   "purpose": "Contact",
+   "sensitivity": "Medium",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Personal email",
+   "ecArea": "Email information",
+   "purpose": "Contact (leavers, deskless)",
+   "sensitivity": "High",
+   "neededFor": "Exit, Onboarding, Candidate"
+  },
+  {
+   "attribute": "Mobile number",
+   "ecArea": "Phone information",
+   "purpose": "Contact (SMS)",
+   "sensitivity": "High",
+   "neededFor": "Pulse, Deskless"
+  },
+  {
+   "attribute": "Preferred language",
+   "ecArea": "Personal information",
+   "purpose": "Survey language",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Hire date / original start date",
+   "ecArea": "Employment information",
+   "purpose": "Lifecycle trigger",
+   "sensitivity": "Low",
+   "neededFor": "Onboarding, Engagement tenure"
+  },
+  {
+   "attribute": "Termination date",
+   "ecArea": "Employment information",
+   "purpose": "Lifecycle trigger",
+   "sensitivity": "Medium",
+   "neededFor": "Exit"
+  },
+  {
+   "attribute": "Event / event reason",
+   "ecArea": "Job information",
+   "purpose": "Trigger and eligibility filter",
+   "sensitivity": "Low",
+   "neededFor": "Onboarding, Exit, Moves"
+  },
+  {
+   "attribute": "Employment status",
+   "ecArea": "Job information",
+   "purpose": "Eligibility",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Employee class / worker type",
+   "ecArea": "Job information",
+   "purpose": "Eligibility and segmentation",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Full-time / part-time, FTE",
+   "ecArea": "Job information",
+   "purpose": "Segmentation",
+   "sensitivity": "Low",
+   "neededFor": "Engagement"
+  },
+  {
+   "attribute": "Legal entity / company",
+   "ecArea": "Job information",
+   "purpose": "Hierarchy",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Business unit / division / department",
+   "ecArea": "Job information",
+   "purpose": "Hierarchy",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Cost centre",
+   "ecArea": "Job information",
+   "purpose": "Hierarchy (optional)",
+   "sensitivity": "Low",
+   "neededFor": "Engagement"
+  },
+  {
+   "attribute": "Location / country",
+   "ecArea": "Job information",
+   "purpose": "Hierarchy and legal rules",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Job code / title",
+   "ecArea": "Job information",
+   "purpose": "Segmentation",
+   "sensitivity": "Low",
+   "neededFor": "Engagement"
+  },
+  {
+   "attribute": "Job family / function",
+   "ecArea": "Job information",
+   "purpose": "Segmentation",
+   "sensitivity": "Low",
+   "neededFor": "Engagement"
+  },
+  {
+   "attribute": "Job level / grade",
+   "ecArea": "Job information",
+   "purpose": "Segmentation",
+   "sensitivity": "Low",
+   "neededFor": "Engagement, 360"
+  },
+  {
+   "attribute": "Position ID",
+   "ecArea": "Position management",
+   "purpose": "Hierarchy",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Manager ID",
+   "ecArea": "Job information",
+   "purpose": "Reporting hierarchy",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Dotted-line / matrix manager",
+   "ecArea": "Job relationships",
+   "purpose": "360 raters, matrix reporting",
+   "sensitivity": "Low",
+   "neededFor": "360, Engagement"
+  },
+  {
+   "attribute": "HR business partner",
+   "ecArea": "Job relationships",
+   "purpose": "Access roles",
+   "sensitivity": "Low",
+   "neededFor": "All"
+  },
+  {
+   "attribute": "Date of birth (age band only)",
+   "ecArea": "Personal information",
+   "purpose": "Demographic segmentation",
+   "sensitivity": "High",
+   "neededFor": "Engagement (if permitted)"
+  },
+  {
+   "attribute": "Gender",
+   "ecArea": "Personal information",
+   "purpose": "Demographic segmentation",
+   "sensitivity": "High",
+   "neededFor": "Engagement, Inclusion (if permitted)"
+  },
+  {
+   "attribute": "Nationality",
+   "ecArea": "Personal information",
+   "purpose": "Demographic segmentation",
+   "sensitivity": "High",
+   "neededFor": "Inclusion (if permitted)"
+  },
+  {
+   "attribute": "Work arrangement (remote / hybrid / on-site)",
+   "ecArea": "Job or custom field",
+   "purpose": "Segmentation",
+   "sensitivity": "Low",
+   "neededFor": "Engagement, Pulse"
+  },
+  {
+   "attribute": "Last promotion / transfer date",
+   "ecArea": "Job history",
+   "purpose": "Segmentation, moves trigger",
+   "sensitivity": "Low",
+   "neededFor": "Moves, Engagement"
+  },
+  {
+   "attribute": "Performance rating (PMGM)",
+   "ecArea": "Performance form",
+   "purpose": "Analysis only (restricted)",
+   "sensitivity": "High",
+   "neededFor": "Engagement analysis"
+  },
+  {
+   "attribute": "Leave start / return date",
+   "ecArea": "Time off or employment",
+   "purpose": "Return-from-leave trigger",
+   "sensitivity": "Medium",
+   "neededFor": "Moves"
+  }
+ ],
+ "plan": [
+  {
+   "phase": "Mobilise & discover",
+   "startWeek": 1,
+   "endWeek": 2,
+   "activities": "Kick-off, questionnaire issued and walked through, stakeholder interviews, licence and tenant confirmed, security and legal review started"
+  },
+  {
+   "phase": "Design",
+   "startWeek": 3,
+   "endWeek": 5,
+   "activities": "Use-case scope confirmed, hierarchy and data mapping, integration design, roles and anonymity rules, survey content and translations started"
+  },
+  {
+   "phase": "Build & integrate",
+   "startWeek": 5,
+   "endWeek": 10,
+   "activities": "Directory and integration build, project configuration, dashboards, roles, messages, translations loaded"
+  },
+  {
+   "phase": "Test & pilot",
+   "startWeek": 10,
+   "endWeek": 13,
+   "activities": "Integration test, UAT, privacy and accessibility checks, pilot with a small population"
+  },
+  {
+   "phase": "Go-live preparation",
+   "startWeek": 12,
+   "endWeek": 14,
+   "activities": "Communications, manager toolkit, training, support model, cutover plan"
+  },
+  {
+   "phase": "Go-live",
+   "startWeek": 14,
+   "endWeek": 15,
+   "activities": "Launch Wave 1 use cases; monitor syncs and participation"
+  },
+  {
+   "phase": "Hypercare & handover",
+   "startWeek": 15,
+   "endWeek": 16,
+   "activities": "Daily monitoring, fixes, knowledge transfer, Wave 2 planning"
+  }
+ ],
+ "risks": [
+  {
+   "risk": "Vendor security, privacy or DPIA review runs past the build start",
+   "likelihood": 4,
+   "impact": 5,
+   "mitigation": "Start reviews in week 1; share Qualtrics security pack early; build on test data in the meantime",
+   "owner": "Security & Privacy"
+  },
+  {
+   "risk": "Works council or union consultation required in one or more countries",
+   "likelihood": 3,
+   "impact": 5,
+   "mitigation": "Identify countries in week 2; launch in unaffected countries first; prepare consultation pack",
+   "owner": "Legal / Employee Relations"
+  },
+  {
+   "risk": "Other SF modules go live in the same window and consume the same people",
+   "likelihood": 4,
+   "impact": 4,
+   "mitigation": "Agree a single resource plan and change calendar; avoid EX testing during cutovers",
+   "owner": "PMO"
+  },
+  {
+   "risk": "EC data quality (manager, email, location) creates wrong survey populations",
+   "likelihood": 4,
+   "impact": 4,
+   "mitigation": "Run a data-quality profile in weeks 2-3; fix at source; add exception reports",
+   "owner": "HRIS"
+  },
+  {
+   "risk": "Integration capacity (BTP or API skills) is not available",
+   "likelihood": 3,
+   "impact": 4,
+   "mitigation": "Confirm the build owner in week 2; fall back to SFTP file feed for Wave 1",
+   "owner": "IT"
+  },
+  {
+   "risk": "Lifecycle triggers depend on modules that are not yet live",
+   "likelihood": 4,
+   "impact": 3,
+   "mitigation": "Use EC hire and termination events; manual or file triggers for the rest; defer candidate use case",
+   "owner": "HRIS"
+  },
+  {
+   "risk": "Translation and legal text approval delays survey content",
+   "likelihood": 3,
+   "impact": 4,
+   "mitigation": "Freeze source content by week 5; start translation by week 6; limit launch languages",
+   "owner": "HR"
+  },
+  {
+   "risk": "Anonymity thresholds not met for small teams",
+   "likelihood": 4,
+   "impact": 3,
+   "mitigation": "Agree minimum group size and roll-up rules in design; test with real hierarchy",
+   "owner": "People Analytics"
+  },
+  {
+   "risk": "Holiday and year-end periods remove key people for one to two weeks",
+   "likelihood": 4,
+   "impact": 3,
+   "mitigation": "Plan around regional calendars; book UAT and pilot slots early",
+   "owner": "PMO"
+  },
+  {
+   "risk": "360 overlaps with PMGM multi-rater and creates two processes",
+   "likelihood": 3,
+   "impact": 3,
+   "mitigation": "Decide the system of record in week 2; start with one population",
+   "owner": "Talent & L&D"
+  },
+  {
+   "risk": "Employee trust is low and participation falls short",
+   "likelihood": 3,
+   "impact": 4,
+   "mitigation": "Early comms, clear anonymity message, visible leader sponsorship, you-said-we-did plan",
+   "owner": "Internal Communications"
+  },
+  {
+   "risk": "Invitation emails blocked or filtered",
+   "likelihood": 3,
+   "impact": 3,
+   "mitigation": "Allow-list sender and domain; test deliverability in UAT; use multiple channels",
+   "owner": "IT"
+  },
+  {
+   "risk": "Scope grows beyond the minimum viable launch",
+   "likelihood": 4,
+   "impact": 3,
+   "mitigation": "Hold a Wave 1 / Phase 2 line; change control through the steering committee",
+   "owner": "Executive Sponsor"
+  },
+  {
+   "risk": "AI features not approved by Legal or employee representatives",
+   "likelihood": 2,
+   "impact": 3,
+   "mitigation": "Raise in week 2; go live without AI summaries if needed",
+   "owner": "Legal"
+  }
+ ],
+ "stakeholders": [
+  {
+   "role": "Executive Sponsor",
+   "why": "Owns scope, budget and date decisions",
+   "involvement": "Weeks 1-16"
+  },
+  {
+   "role": "CHRO / Head of People",
+   "why": "Business owner of EX outcomes",
+   "involvement": "Weeks 1-16"
+  },
+  {
+   "role": "HRIS / SuccessFactors Lead",
+   "why": "EC data, triggers, module calendar",
+   "involvement": "Weeks 1-16"
+  },
+  {
+   "role": "People Analytics Lead",
+   "why": "Hierarchy, anonymity, reporting design",
+   "involvement": "Weeks 2-16"
+  },
+  {
+   "role": "Talent & L&D Lead",
+   "why": "360, manager development, competencies",
+   "involvement": "Weeks 2-14"
+  },
+  {
+   "role": "Talent Acquisition Lead",
+   "why": "Onboarding and candidate experience",
+   "involvement": "Weeks 2-12"
+  },
+  {
+   "role": "IT / Integration Architect",
+   "why": "Integration, SSO, environments",
+   "involvement": "Weeks 1-16"
+  },
+  {
+   "role": "Information Security Lead",
+   "why": "Vendor review, access, API security",
+   "involvement": "Weeks 1-12"
+  },
+  {
+   "role": "Data Protection Officer / Legal",
+   "why": "DPIA, consent, retention, AI policy",
+   "involvement": "Weeks 1-12"
+  },
+  {
+   "role": "Employee Relations / Works Council liaison",
+   "why": "Consultation and country rules",
+   "involvement": "Weeks 1-10"
+  },
+  {
+   "role": "Internal Communications Lead",
+   "why": "Invitations, trust messaging, FAQ",
+   "involvement": "Weeks 4-16"
+  },
+  {
+   "role": "Procurement / Finance",
+   "why": "Contract, licences, budget",
+   "involvement": "Weeks 1-6"
+  },
+  {
+   "role": "SF Implementation Partner PM",
+   "why": "Cross-module sequencing",
+   "involvement": "Weeks 1-16"
+  },
+  {
+   "role": "SAP / Qualtrics Solution Architect",
+   "why": "Product and integration guidance",
+   "involvement": "Weeks 1-12"
+  },
+  {
+   "role": "HRBP Representatives",
+   "why": "Dashboard users, pilot",
+   "involvement": "Weeks 8-16"
+  },
+  {
+   "role": "Pilot Managers",
+   "why": "Pilot, feedback on toolkit",
+   "involvement": "Weeks 10-14"
+  }
+ ],
+ "owners": [
+  "Executive Sponsor",
+  "Finance / Procurement",
+  "HR / People Leadership",
+  "HRIS / SuccessFactors Lead",
+  "IT / Architecture",
+  "Internal Communications",
+  "Legal / DPO / Employee Relations",
+  "People Analytics",
+  "Project / PMO",
+  "Security & Privacy",
+  "Talent & L&D",
+  "Talent Acquisition"
+ ],
+ "tagToUseCase": {
+  "ENG": "Annual Engagement",
+  "PLS": "Pulse & Ad Hoc",
+  "ONB": "Onboarding",
+  "EXT": "Exit",
+  "CAN": "Candidate Experience",
+  "360": "360 / Multi-Rater",
+  "MGR": "Manager Effectiveness & Action Planning",
+  "ETX": "Employee Technology Experience",
+  "LCE": "Internal Moves & Return from Leave",
+  "ALL": null,
+  "RPT": null,
+  "INT": null
+ },
+ "tagNotes": "Tags mapped to null (ALL, RPT, INT) are cross-cutting: the question is always relevant."
+}
