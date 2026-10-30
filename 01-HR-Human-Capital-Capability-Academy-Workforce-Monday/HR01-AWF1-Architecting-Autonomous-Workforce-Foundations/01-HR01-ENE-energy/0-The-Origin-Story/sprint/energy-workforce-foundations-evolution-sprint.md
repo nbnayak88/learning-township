@@ -3,24 +3,17 @@
 
 **SuccessLabs Academy · HR01-AWF1 · Energy · Level 0 → Pre-Foundation**  
 **Platform:** SAP · **Domain:** Human Capital Management · **Architecture:** Applied Application Architecture (AA)  
-**Lab:** IIL — Implementation Intelligence Lab · **Intent:** Build  
+**Lab:** IIL — Industry Immersion Lab · **Intent:** Build  
 **Planning reference:** HUB-ORIGIN-HR01-ENE-sprint · Free — Community/Citizen Edition  
-**Version:** 2026-10-19 · Educational sprint, not an enrolled course or certification.
+**Version:** 2026-10-31 · Educational sprint, not an enrolled course or certification.
 
-> **The essential idea:** Workforce applications evolved from recording people, to executing transactions, to coordinating services, to assisting decisions. Each step increases the need for clear ownership, trustworthy history and accountable humans.
+> **Your promise:** In two hours, design and explain one trusted workforce change that protects pay, access and employee trust.
 
-## 1. What this sprint achieves
+## 1. One outcome
 
-In 120 minutes, you will:
-1. Explain five overlapping generations of workforce applications and the problem each tried to solve.
-2. Explain why energy operations need employment facts, competence evidence and work authorization to remain distinct.
-3. Assign six application responsibilities and defend a global core with justified local variants against alternatives.
-4. Build a paper prototype for one workforce change, with an effective date, approval and three acceptance tests.
-5. Explain where automation can help and when a human must stop or override a decision.
+Complete one Workforce Evolution Build Card: identify the change, assign its owners, record its approval and effective date, and test three failure conditions. The story and timeline help you explain why these controls matter.
 
-**Practical outcome:** one completed Workforce Evolution Build Card. This is implementation preparation using synthetic records; it does not imply live SAP configuration capability after two hours.
-
-**The 20% to master:** application ownership; person versus employment versus position; effective-dated history; approved lifecycle events; controlled automation. Deep configuration, API transport, infrastructure sizing and AI model design belong to later sprints.
+**Focus:** one story, one build card, three tests. Use synthetic records. Live configuration belongs to later learning.
 
 ## 2. Read the case accurately
 
@@ -28,29 +21,23 @@ OmniVerse Energy Ltd. is a **fictional** enterprise with 68,000 employees in 42 
 
 The enterprise case owns company facts. OVE-HR01 owns the workforce-foundation scenario. The proposed SAP landscape, incidents and all dialogue below are illustrative. No rollout or achieved improvement is claimed. The source's 18-month roadmap and numeric victory measures are learning assumptions/targets.
 
-### What the analysis reveals
+**Design question:** Should OmniVerse impose one template, let countries work independently, or govern a common core with justified local variants? Choose and defend one approach. HR01 owns employment facts; HR11 deepens AI governance; HR12 designs transport and recovery.
 
-- **Purpose:** a trusted workforce foundation supports safe staffing, correct pay, access control and reskilling.
-- **Actual design dilemma:** rapid uniform template, independent local deployments, or a federated global core with governed local extensions.
-- **Evolution tension:** copying a paper form into software improves storage; it does not resolve ownership or conflicting definitions.
-- **Application architecture task:** decide which application is responsible for each fact and decision. HR12 handles transport/recovery design; HR11 handles deeper AI governance.
-- **Evidence gap:** experiments are designed, not executed. Benefits and operational outcomes must be tested before being claimed.
+## 3. From 1970 to 2050: what problem survives?
 
-## 3. Evolution: five generations, five unfinished problems
+These overlapping periods are teaching lenses, not a universal adoption sequence. Paper, ERP and cloud can coexist. Before OmniVerse's fictional founding in 1978, the timeline describes the wider domain.
 
-These are teaching lenses with overlapping periods, not an official industrial classification. Adoption varies by country, enterprise and worker population. Paper, ERP and cloud may coexist today.
+| Lens | Application response | Unfinished problem |
+|---|---|---|
+| 1970s lens — record the worker | Paper-ledger and early computer records | A recorded name does not prove a current, unique identity |
+| 1980s–1990s lens — administer employment | Personnel systems and structured transactions | Employment, position and competence can still disagree |
+| 1990s–2000s lens — execute transactions | HRIS/ERP rules for payroll, time and changes | Correct processing still depends on correct source data and dates |
+| 2000s–2020s lens — coordinate services | Cloud HCM and self-service | More access and copies require clear ownership and permissions |
+| 2026–2050 design horizon — assist decisions | Explore bounded automation and skills-based deployment | Trust, fairness and authority still require evidence and accountable owners |
 
-| Generation | Broad context | Workforce application purpose | What improved | What remained unresolved | Energy implementation lesson |
-|---|---|---|---|---|---|
-| 1. Record the worker | Industrialization; paper ledgers | Record names, wages and attendance | A durable record | Duplicate names, delayed updates, little shared visibility | Identity must be stable; a row is not the whole person |
-| 2. Administer employment | Large utilities and oil-and-gas organizations; personnel offices | Standardize personnel files and procedures | Repeatable administration | Files disagree; qualifications and employment facts diverge | A personnel file cannot prove current work authorization |
-| 3. Execute transactions | Mainframe HRIS and ERP; late twentieth century onward | Process payroll, time and organizational changes | Structured rules and repeatability | Local customization, fragmented history and reconciliation | Preserve dates and identifiers when migrating; payroll remains a distinct responsibility |
-| 4. Coordinate services | Cloud HCM, self-service and mobile work; 2000s onward | Make approved workforce facts usable across services | Broader access and connected employee journeys | More copies, unclear authority, permission errors | Define an authoritative source per object and accountable application boundaries |
-| 5. Assist governed decisions | Current experimentation and future scenarios | Recommend actions and automate bounded, approved tasks | Potentially faster service and skills matching | Stale evidence, opaque recommendations, overreach | Recommendation ≠ approval; require evidence, owner, override and fallback |
+**Historical anchors retained from the source edition:** SAP R/3 began in 1992; SAP acquired SuccessFactors in February 2012. [R1–R2; checked in the 2026-10-19 source edition.]
 
-**Verified SAP landmarks:** SAP R/3 began in 1992; SAP acquired SuccessFactors in February 2012. These anchor product evolution, not mandatory migration dates for every customer. Cloud adoption does not automatically produce trusted data or safe autonomy. [R1–R2]
-
-**Future horizon:** skills-based deployment and AI-assisted services are possible directions. Scenes set in 2027 or 2035 are imagined design futures, not forecasts, product commitments or achieved OmniVerse states.
+**Future boundary:** 2027, 2035 and 2050 scenes are imagined design scenarios, not forecasts, product commitments or achieved OmniVerse states.
 
 ## 4. The story: Anika asks what the record must promise
 
@@ -109,6 +96,17 @@ In an imagined 2035 retrospective, Anika does not celebrate replacing HR. She de
 
 The ledger's promise has evolved: **the right fact, valid at the right time, used by the right application, under the right authority**.
 
+### Scene 7 — The promise in 2050
+Imagine OmniVerse in 2050. Energy technologies and job titles have changed. People move between established operations, renewable projects and roles that today's planners cannot yet fully describe.
+
+Anika's successor asks: “Can we explain who this person is, which employment applies, what evidence is current, and who authorized the work?”
+
+An assistant proposes a deployment. One qualification lacks verified evidence. The responsible manager pauses the assignment and offers a supervised development route.
+
+The foundation helps people carry trustworthy histories into new opportunities while preserving privacy, fair treatment and accountable decisions.
+
+**Pause:** What should remain under human authority even if autonomous deployment becomes possible?
+
 ## 5. Application ownership: the minimum useful map
 
 This is the proposed learning architecture, not a confirmed OmniVerse deployment.
@@ -130,9 +128,9 @@ This is the proposed learning architecture, not a confirmed OmniVerse deployment
 
 | Minutes | Activity | Evidence you produce |
 |---|---|---|
-| 0–10 | Read mission and five concepts. Explain why energy workforce facts matter. | Two-sentence purpose statement |
+| 0–10 | Read the promise and build card. Explain why energy workforce facts matter. | Two-sentence purpose statement |
 | 10–30 | Read generations 1–3 and story scenes 1–2; rebuild the evolution without looking. | Three-row “problem → application response → remaining gap” timeline |
-| 30–50 | Read generations 4–5 and scenes 3–6. Ask which old problem persists in the new medium. | Two further timeline rows; one future claim labeled as a hypothesis |
+| 30–50 | Read generations 4–5 and scenes 3–7. Ask which old problem persists in the new medium. | Two further timeline rows; one future claim labeled as a hypothesis |
 | 50–65 | Play Anika. Answer Farah, Mei and Samuel using their concerns; ask one discovery question each. | Three persona needs and unanswered questions |
 | 65–80 | Build the six-application ownership map. Challenge it with Michael's certificate scene. | Six owners; one explicit authorization boundary |
 | 80–100 | Complete the transfer prototype below. Choose a global core/local-variant approach and compare one alternative. | Workforce change design plus one short architecture decision |
@@ -168,11 +166,21 @@ This is the proposed learning architecture, not a confirmed OmniVerse deployment
 | T2: Assistant recommends the worker using expired evidence | Recommendation is rejected/held; restricted task is not authorized; accountable owner receives the exception |
 | T3: Required approval is missing or a receiving application has no confirmed outcome | Change is not reported as fully completed; exception and owner remain visible; applicable controlled fallback is invoked |
 
-**Optional test after this sprint:** rehire or concurrent employment. Do not assume every worker has only one employment.
-
-**Acceptance:** explain all five generations; map all six responsibilities; distinguish person/employment/position and date/reason; pass all three tabletop expectations after revisions; state what remains unverified. A safety-authorization bypass requires redesign.
+**Acceptance:** complete the one build card and explain your decision in 60 seconds. Include application ownership, identity and date semantics, and evidence from all three tabletop tests after revisions. A safety-authorization bypass requires redesign.
 
 **Learning evidence only:** record what your paper exercise actually did. Live configuration, real integration performance and operational outcomes remain untested.
+
+### Connect your card to the case
+
+| Decision | Stable case anchor | Evidence on your card |
+|---|---|---|
+| Identify the worker, change and effective date | OVE-HR01-REQ01 | Synthetic approved change record |
+| Assign application responsibilities | OVE-HR01-ADR01 | Owner map and decision rationale |
+| Keep missing approval or incomplete handoff visible | OVE-HR01-REQ02 | Exception status and accountable owner |
+| Run the three sprint tests | Supports OVE-HR01-EXP01 | Expected result, actual paper result and revision |
+| Check critical-record completeness | OVE-HR01-KPI01 | Population, required fields and calculation |
+
+T1–T3 are sprint tabletop tests; they do not complete the broader OVE-HR01-T01 portfolio. OVE-HR01-EV01 remains an evidence slot until a learner records observed results.
 
 ## 8. High-impact resources — read with a question
 
@@ -186,7 +194,7 @@ This is the proposed learning architecture, not a confirmed OmniVerse deployment
 
 Official SAP documentation establishes product behavior; the fictional case establishes the learning scenario. Access requirements can vary. Do not read entire courses in this sprint.
 
-**Existing student workspace:** [OmniVerse HR Student Resource Index](https://docs.google.com/document/d/1Jbrsu4PkFBR0dNJ7NELR13d5pk-2mCAeWopOH59kWKk/edit). It lists the existing HR resources. Its current instructions say student access is pending; copies are independent snapshots. This sprint does not alter Drive sharing or claim to refresh those files.
+**Existing student workspace:** [OmniVerse HR Student Resource Index](https://docs.google.com/document/d/1Jbrsu4PkFBR0dNJ7NELR13d5pk-2mCAeWopOH59kWKk/edit). It lists the existing HR resources. Its current instructions say student access is pending; copies are independent snapshots. The HR01 Google Doc includes this sprint edition; other resource packs remain separate snapshots.
 
 ## 9. Five-minute rapid review
 
@@ -200,7 +208,11 @@ Official SAP documentation establishes product behavior; the fictional case esta
 
 **Pass phrase:** “Automation may accelerate an approved task; it does not create missing authority or trustworthy evidence.”
 
-**Next experiment:** take one disputed local requirement into Pre-Foundation. Define its terms, owner, evidence, configuration option and acceptance test.
+**Reflect:** Who benefits from trustworthy workforce information? Who could incomplete information exclude? What evidence would change your design?
+
+**Next experiment:** take one unresolved requirement into Pre-Foundation. Define its business purpose, owner, application responsibility and acceptance test.
+
+**SuccessLabs mission:** Architecting Experiences for a Better World.
 
 ## 10. Source traceability and boundaries
 
@@ -218,4 +230,6 @@ Official SAP documentation establishes product behavior; the fictional case esta
 
 **Standards alignment:** TOGAF application responsibility and architecture decisions; BIZBOK capability/value distinction; BABOK need/requirement/acceptance trace; DAMA ownership and quality; COBIT accountable decisions and controls; ISO/IEC 27001 access-control principles. These are educational mappings, not claims of compliance, certification or reproduction of proprietary standards. NIST AI RMF supports the bounded-assistance discussion.
 
-**Publication:** this is a manually authored derivative in architecture-center-atlas. It does not change canonical case facts or establish unattended GitHub–Notion–Drive synchronization.
+**Publication:** the sprint source is maintained in learning-township. The matching edition is manually published to the existing HR01 Notion page and Google Doc. The enterprise case remains the authority for company facts. This publication does not establish unattended synchronization.
+
+**Companion editions:** [HR01 Notion](https://app.notion.com/p/358d96630bf44787b59ec0b1b389eb46) · [HR01 Google Doc](https://docs.google.com/document/d/1SoKv5M53sTQru3t4j9Wh63Nltl5p9Xm8oGEBvrRbuZQ/edit).
