@@ -21,6 +21,12 @@ One learner promise · One persona-led story · One build card · Three tabletop
 | HR11 — AI-Powered HR Enterprises | [Sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR11-AAI1-Architecting-AI-Powered-HR-Enterprises/03-HR11-IND-industrials/0-The-Origin-Story/sprint/industrials-hr11-origin-evolution-sprint.md) | [Native Doc](https://docs.google.com/document/d/1CnSQ_PTiI5oyiAPP5pYzNxxxyS9LluqJucI-Uk1Jl8w/edit?usp=drivesdk) | [Existing matching edition + preserved case](https://app.notion.com/p/f96a44996783418cadc7eaba3aa6d02d) | Matching sprint in all three; saved content read back |
 | HR12 — Connected HR Enterprises | [Sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR12-AIG2-Architecting-Connected-HR-Enterprises/03-HR12-IND-industrials/0-The-Origin-Story/sprint/industrials-hr12-origin-evolution-sprint.md) | [Native Doc](https://docs.google.com/document/d/1myoZV5AAHciV8PAWa1WTlA_GxwK02ODBkP361gjWja8/edit?usp=drivesdk) | [Existing matching edition + preserved case](https://app.notion.com/p/d921f5991d264e14af802077d41cd482) | Matching sprint in all three; saved content read back |
 
+## Continue the story through six levels
+
+[**What’s in it for me? — Six-Level Learning Story Dossier**](six-level-learning-story-dossier.md)
+
+Compare Origin Story, Pre-Foundation, Foundation, Essentials, Advanced and Ultimate: learner benefits, practice, portfolio evidence and the final Value Realization Council. The dossier defines the continuing story model; it does not claim the later-level editions are already complete.
+
 ## Read this accurately
 
 Published means saved educational content, not executed tabletop tests, live LMS enrollment, operational outcomes, verified public student access, copying or automatic synchronization. Unfilled evidence slots remain unfilled. HR02a Recruiting and HR02b Onboarding retain separate identities; one combined sprint covers both.
