@@ -11,7 +11,7 @@ One learner promise · one persona-led story · one build card · exactly three 
 | Theme | GitHub sprint | Native Google Doc | Existing Notion page | Publication status |
 |---|---|---|---|---|
 | HR01 — Workforce Foundations | [Matching sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/06-HR01-HC-health-care/0-The-Origin-Story/sprint/health-care-workforce-foundations-evolution-sprint.md) | [Matching sprint tab](https://docs.google.com/document/d/1eJZpDVmLV9YMaAFa63LA-FZwoQAc_Ui0oXTMEgywAxA/edit?usp=drivesdk) | [Matching edition](https://app.notion.com/p/3d0ce6de6089811b837cc974183f1315) | Matching edition in all three; saved content read back |
-| HR02 — Talent Acquisition, Recruiting & Onboarding | Not yet published | Not yet published | Existing source; sprint not yet published | Source reviewed; sprint not yet published |
+| HR02 — Talent Acquisition, Recruiting & Onboarding | [Matching sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/06-HR02-HC-health-care/0-The-Origin-Story/sprint/health-care-talent-acquisition-evolution-sprint.md) | [Matching sprint tab](https://docs.google.com/document/d/1-6WGw3mOGr-sW0n1yLpNS1n0S-12y_H7haLEZ-HsysI/edit?usp=drivesdk) | [HR02a — Recruiting, full combined sprint](https://app.notion.com/p/3d0ce6de60898142959fe454769102c4) · [HR02b — Onboarding, companion navigation](https://app.notion.com/p/3d0ce6de6089814ab1feee211b29ec4b) | Matching edition in all three; saved content read back |
 | HR03 — High-Performance Organizations | Not yet published | Not yet published | Existing source; sprint not yet published | Source reviewed; sprint not yet published |
 | HR04 — Growth & Leadership | Not yet published | Not yet published | Existing source; sprint not yet published | Source reviewed; sprint not yet published |
 | HR05 — Rewards & Performance Excellence | Not yet published | Not yet published | Existing source; sprint not yet published | Source reviewed; sprint not yet published |
@@ -49,6 +49,7 @@ One learner promise · one persona-led story · one build card · exactly three 
 ## Publication and evidence record
 
 - **HR01:** Matching edition in all three; saved content read back. GitHub source matched exactly; Google Doc tab text matched the authored learner content with native headings; Notion learner paragraphs and source links were checked after saving. Original Notion case material retained. New native Google Doc created after OmniHealth/GICS06/Healthcare/Health Care searches found no matching document.
+- **HR02:** Matching edition in all three; saved content read back. GitHub source matched exactly; Google Doc tab text matched the authored learner content with native headings; Notion learner paragraphs and source links were checked after saving. Original Notion case material retained. New native Google Doc created after OmniHealth/GICS06/Healthcare/Health Care searches found no matching document.
 
 ## Boundaries and unresolved evidence
 
