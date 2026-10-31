@@ -1,0 +1,46 @@
+# OmniDaily Consumer Staples — HR Origin Stories
+
+SuccessLabs Academy · GICS05 · IIL — Industry Immersion Lab · Edition 31 October 2026 IST
+
+Mission: Architecting Experiences for a Better World.
+
+One learner promise · One persona-led story · One build card · Three tabletop tests · 120 minutes per theme.
+
+## Open a theme
+
+| Theme | GitHub | Google Docs | Notion | Publication status |
+|---|---|---|---|---|
+| HR01 — Workforce Foundations | [Matching sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/05-HR01-CS-consumer-staples/0-The-Origin-Story/sprint/consumer-staples-hr01-origin-evolution-sprint.md) | [Matching native Doc](https://docs.google.com/document/d/1FOJ1YwOWX0IQH_Z1We0N9JY1S44cGDhexfsofjAK0gA/edit?usp=drivesdk) | [Matching edition](https://app.notion.com/p/3d0ce6de6089814789acdcd97750a638) | Published; saved content verified |
+| HR02 — Talent Acquisition — Recruiting & Onboarding | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de60898122912be3d12e47b322) | Pending; supporting case only |
+| HR03 — High-Performance Organizations | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de6089819a9d9bdef0108da732) | Pending; supporting case only |
+| HR04 — Growth & Leadership | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de608981ed99f3d64abfb5af02) | Pending; supporting case only |
+| HR05 — Rewards & Performance Excellence | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de608981e786e4d3aab23e24a7) | Pending; supporting case only |
+| HR06 — Continuous Learning & Mobility | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de608981c6b44ecff5c12c0ab4) | Pending; supporting case only |
+| HR07 — Autonomous Payroll Enterprises | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de60898195b942c81b7f9fee0c) | Pending; supporting case only |
+| HR08 — Workforce Time & Operations | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de608981719dd9d9a3c5bdaf58) | Pending; supporting case only |
+| HR09 — Workforce Intelligence | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de60898114b76cc7597a79d932) | Pending; supporting case only |
+| HR10 — Digital Employee Experience | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de60898140b833ceffb836b430) | Pending; supporting case only |
+| HR11 — AI-Powered HR Enterprises | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de60898198ad1acc7791ea145a) | Pending; supporting case only |
+| HR12 — Connected HR Enterprises | Pending | Missing matching companion after discovery | [Supporting case](https://app.notion.com/p/3d0ce6de608981dea3c0d53724530c8c) | Pending; supporting case only |
+
+## Scope and unresolved request wording
+
+This index targets GICS05 Consumer Staples / OmniDaily, supported by the existing enterprise hub. The request also says GICS04/Consumer Discretionary and Industrials; those conflicting routing labels are retained here. No GICS03/04 source is relabelled or overwritten. The supplied materials-origin-stories.md is GICS02; the actual industrials-origin-stories.md supplies a learning-pattern reference. These references do not supply OmniDaily enterprise facts.
+
+## Preserved supporting material
+
+[Enterprise hub](https://app.notion.com/p/28a329356ea6481dafbcc579c2463add) · [Enterprise GitHub case](https://github.com/nbnayak88/successlabs-case-studies/tree/main/05-consumer-staples/omnidaily-consumer-goods-ltd) · [Workforce blueprint](https://github.com/nbnayak88/successlabs-case-studies/blob/main/05-consumer-staples/omnidaily-consumer-goods-ltd/derived-streams/01-workforce.md) · [Personas](https://github.com/nbnayak88/successlabs-case-studies/blob/main/05-consumer-staples/omnidaily-consumer-goods-ltd/personas/persona-cards.md) · [Source gaps](https://github.com/nbnayak88/successlabs-case-studies/blob/main/05-consumer-staples/omnidaily-consumer-goods-ltd/references/source-and-assumptions.md)
+
+[HR02a Recruiting supporting source](https://app.notion.com/p/3d0ce6de60898122912be3d12e47b322) and [HR02b Onboarding supporting source](https://app.notion.com/p/3d0ce6de60898152a4a6fb5219749f17) retain separate page identities. The combined HR02 matching edition is on HR02a, with reciprocal source navigation from the combined edition and HR02b. One 120-minute theme covers both.
+
+All original HR case text and enterprise research remain preserved outside the added Origin Story edition. HR13 transformation blueprint remains supporting material and is outside the twelve-theme scope. Existing ODG-Mxx, ODG-Pxx and HUB-ORIGIN-HRxx-CS-sprint IDs are retained; ODG-TOS-HRxx IDs are explicitly new educational additions. Detailed case-level requirement/ADR/test registers were not found in the reviewed HR sources; the new cards trace to actual scope mandates and existing enterprise anchors without inventing earlier IDs.
+
+## Verification and evidence boundaries
+
+Discovery searched Drive for OmniDaily, GICS05, Staples and native HR01 companions; no matching OmniDaily documents were found. New native Google Docs contain a dedicated Origin Story tab; no existing detailed document was overwritten. Existing Notion page identities and case bodies are retained. GitHub planning references now link completed editions while preserving their stable IDs. Deeper Pre-Foundation and implementation material is not rewritten as an Origin Story sprint.
+
+HR01: GitHub full source matched exactly; native Google Doc text matched the complete authored text and its named Origin Story tab; Notion learner paragraphs and preserved original case text were read back with platform escaping normalized. Planning README readback matched.
+
+Each historical timeline uses closed 1970–1984, 1985–1994, 1995–2004, 2005–2014 and 2015–2025 windows; adoption overlaps. Separate Assist/Connect/Adapt 2026–2050 scenarios are not predictions, deployments, guaranteed capabilities or roadmaps. Source enterprise targets, financial ambiguities and vendor proposals remain unvalidated; no silent reconciliation is implied.
+
+Saved-content verification proves publication fidelity only. It does not prove automatic synchronization, public student access, successful copying, executed tabletop tests, compliance, certification or operational outcomes. Proposed tests and evidence slots remain unexecuted/unfilled.
