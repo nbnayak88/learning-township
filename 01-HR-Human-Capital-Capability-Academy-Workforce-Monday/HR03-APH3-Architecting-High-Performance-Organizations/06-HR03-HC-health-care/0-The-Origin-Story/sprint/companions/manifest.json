@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR03",
+  "title": "High-Performance Organizations",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/06-HR03-HC-health-care/0-The-Origin-Story/sprint/health-care-high-performance-organizations-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/06-HR03-HC-health-care/0-The-Origin-Story/sprint/health-care-high-performance-organizations-evolution-sprint.md",
+    "blob_sha": "85e510d365d91df89581dce237678b1005c36deb"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1ovmHhNyVLHc0sMtzLspu4ZQlfLf3UN-o47ygbm8xAgc/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.398r5t1dmkqw",
+    "google_slides": "https://docs.google.com/presentation/d/143u1GROzXkXLYl-cfuLgvgwnYDEMpoQffj85GZqRh84/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/18zme5hdDkTIVpRvN1P5mTdhFGJhvrsoT91TlyfedKpU/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de60898156b508d8e9f33a994c"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 65634,
+      "sha256": "55ac29f8150e546a8019b18626358c76e5fa4d02dd8cde107857642dc4ebf2e6",
+      "git_blob_sha": "24b2652487d02e6998765290f78b939d08b7feec",
+      "filename": "HR03-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17418,
+      "sha256": "a18b0c228a00d50768ea2d5fb8fa7bd18d710af74e66dd6d3407bfc94a209116",
+      "git_blob_sha": "5b9feb74baa24265aa0b933ec58f31c02afbb8d1",
+      "filename": "HR03-build-card.xlsx"
+    }
+  ]
+}

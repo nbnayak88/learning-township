@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR10",
+  "title": "Digital Employee Experience",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR10-ADX0-Architecting-Digital-Employee-Experience/06-HR10-HC-health-care/0-The-Origin-Story/sprint/health-care-digital-employee-experience-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR10-ADX0-Architecting-Digital-Employee-Experience/06-HR10-HC-health-care/0-The-Origin-Story/sprint/health-care-digital-employee-experience-evolution-sprint.md",
+    "blob_sha": "8eb096863c0f95b62cb1d1115f40f770fb752f1d"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1W4QLTNZs2IqfOo5Y1LpEKWlDEYjVXJzDRh2HBT9jbLU/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.vcga7wktg1ja",
+    "google_slides": "https://docs.google.com/presentation/d/1DqCRqmkczjeWNZCpg_zc_Gq_evQ5OKkOBnZRkg977FE/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/1PX9ZWh4i3d41fzjL3OHNf-ap1i_tAsnXlzj-2WYw3zo/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de608981eab482cf4d3f04eca6"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 66177,
+      "sha256": "f70d71c065babaec2ee43487b16a34a23f7c06ba77df4cf504ba5a190a7ff19d",
+      "git_blob_sha": "f83470939976ba87fddfab73e19090d96b18b4a0",
+      "filename": "HR10-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17511,
+      "sha256": "16d29ef19244f9d0b84eb5935c8d15a249ba44545d372734a12aef73d8f2637c",
+      "git_blob_sha": "7e31d8ba341d3cf851653f4e420a9b1e25d9f364",
+      "filename": "HR10-build-card.xlsx"
+    }
+  ]
+}

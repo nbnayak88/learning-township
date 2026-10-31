@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR06",
+  "title": "Continuous Learning & Mobility",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR06-ALM6-Architecting-Continuous-Learning-Mobility/06-HR06-HC-health-care/0-The-Origin-Story/sprint/health-care-learning-mobility-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR06-ALM6-Architecting-Continuous-Learning-Mobility/06-HR06-HC-health-care/0-The-Origin-Story/sprint/health-care-learning-mobility-evolution-sprint.md",
+    "blob_sha": "823315c0aacd863e8ad95a46486f736b887ac097"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1EjthcB8EeKfgD3NlO6dDyb4i7M8gK7nyeGI2PA8JqZ8/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.vuhm4gxspw7l",
+    "google_slides": "https://docs.google.com/presentation/d/1GyJhpGvj4bJ70pDQxHa3bFnFu1ZwOjZ-d76XWKlBKrM/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/13gSPMCtUNIfngDXCTwBNdvRP8akFL6smi1yNfUes97Q/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de60898149b272e841720ddc7a"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 65696,
+      "sha256": "bdc2d634622547c734ba61aafd37778083eb57f9e6dbf5727dd2a29f7c064720",
+      "git_blob_sha": "84bfdd7f6db0fb7c53b83ed60619d01829e18f5b",
+      "filename": "HR06-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17423,
+      "sha256": "100bbd5c2db2d5bcff1fe6d6251c68d4da70bc859389a5fbbbc86ae03e9ba348",
+      "git_blob_sha": "4f05ad862b6c551fe273beeba35b69b319e3059d",
+      "filename": "HR06-build-card.xlsx"
+    }
+  ]
+}

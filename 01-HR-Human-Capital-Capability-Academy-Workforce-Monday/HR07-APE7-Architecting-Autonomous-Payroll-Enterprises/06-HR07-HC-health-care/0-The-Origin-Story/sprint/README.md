@@ -12,3 +12,8 @@
 Explore the origins, purpose, evolution and architectural context through activities, simulations, reflection and evidence.
 
 [Read the matching Origin Story](health-care-payroll-evolution-sprint.md) · [Sector index](../../../../health-care-origin-stories.md)
+
+
+## Teaching companions
+
+[Google Slides](https://docs.google.com/presentation/d/1SPZR66MZaE_gIRMM_0CgsJVKQUXXRX_3Z8gJ2avBH4A/edit?usp=drivesdk) · [Google Sheets build card](https://docs.google.com/spreadsheets/d/1nHrRgWrqhOo0pcDgV_wEaXwwCrSSnDHp3vVNirhGr-s/edit?usp=drivesdk) · [Google Doc](https://docs.google.com/document/d/1VTJxNWqgsZDb7HEnLu4RrPbbzLtPYs5x0ZqX-E0CEkM/edit?usp=drivesdk) · [Repository snapshots and verification](companions/README.md)

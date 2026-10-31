@@ -12,3 +12,8 @@
 Explore the origins, purpose, evolution and architectural context through activities, simulations, reflection and evidence.
 
 [Read the matching Origin Story](health-care-growth-leadership-evolution-sprint.md) · [Sector index](../../../../health-care-origin-stories.md)
+
+
+## Teaching companions
+
+[Google Slides](https://docs.google.com/presentation/d/110_gpCBVSvOUOuu7qYsqyVWBIrk7vC96_5wmv_uQYcc/edit?usp=drivesdk) · [Google Sheets build card](https://docs.google.com/spreadsheets/d/1YeTc85OP7rS9qYNJe2dQOG41sRajBhvAkJUZMPRj01s/edit?usp=drivesdk) · [Google Doc](https://docs.google.com/document/d/1WEPq6XxuJ66Mp2O2vUWb8KexvAMBCRByCNCBB5bxPzY/edit?usp=drivesdk) · [Repository snapshots and verification](companions/README.md)

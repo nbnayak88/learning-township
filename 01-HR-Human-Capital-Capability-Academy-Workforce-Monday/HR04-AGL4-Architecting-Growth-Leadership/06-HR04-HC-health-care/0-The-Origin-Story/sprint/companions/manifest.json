@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR04",
+  "title": "Growth & Leadership",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR04-AGL4-Architecting-Growth-Leadership/06-HR04-HC-health-care/0-The-Origin-Story/sprint/health-care-growth-leadership-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR04-AGL4-Architecting-Growth-Leadership/06-HR04-HC-health-care/0-The-Origin-Story/sprint/health-care-growth-leadership-evolution-sprint.md",
+    "blob_sha": "a3e5361522af916a5093b36188e0f3eafc2c5ad3"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1WEPq6XxuJ66Mp2O2vUWb8KexvAMBCRByCNCBB5bxPzY/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.3q0nj1mcxnmm",
+    "google_slides": "https://docs.google.com/presentation/d/110_gpCBVSvOUOuu7qYsqyVWBIrk7vC96_5wmv_uQYcc/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/1YeTc85OP7rS9qYNJe2dQOG41sRajBhvAkJUZMPRj01s/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de60898157b314d3bd97b5f9b3"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 65620,
+      "sha256": "c949a7badc37ccdb1d426fa5ffd790ae447f1f4dae100656faa92db09c781dc4",
+      "git_blob_sha": "8edbb2f81e801cb1c608f173520fc8661864d17f",
+      "filename": "HR04-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17418,
+      "sha256": "677854c6f3f1ffe73bb0943a0976f1f433c82ac28f68144178e2f446203985d9",
+      "git_blob_sha": "253da08830bd15d13e28c7cbbf9cf3523f7d7550",
+      "filename": "HR04-build-card.xlsx"
+    }
+  ]
+}

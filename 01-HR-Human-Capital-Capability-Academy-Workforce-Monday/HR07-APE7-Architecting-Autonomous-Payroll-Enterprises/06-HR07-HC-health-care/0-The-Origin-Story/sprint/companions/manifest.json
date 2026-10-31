@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR07",
+  "title": "Autonomous Payroll Enterprises",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR07-APE7-Architecting-Autonomous-Payroll-Enterprises/06-HR07-HC-health-care/0-The-Origin-Story/sprint/health-care-payroll-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR07-APE7-Architecting-Autonomous-Payroll-Enterprises/06-HR07-HC-health-care/0-The-Origin-Story/sprint/health-care-payroll-evolution-sprint.md",
+    "blob_sha": "78105291f0b1d9316c974425c3aff4e50383c2dd"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1VTJxNWqgsZDb7HEnLu4RrPbbzLtPYs5x0ZqX-E0CEkM/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.b65e5v32bdk7",
+    "google_slides": "https://docs.google.com/presentation/d/1SPZR66MZaE_gIRMM_0CgsJVKQUXXRX_3Z8gJ2avBH4A/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/1nHrRgWrqhOo0pcDgV_wEaXwwCrSSnDHp3vVNirhGr-s/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de6089817a9f86d0c1f5196750"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 65827,
+      "sha256": "1eaea44de91c364e52f60bb117de5423e0d305626d3062f3bbb6211f16ea6f8d",
+      "git_blob_sha": "bebdab2b9a93a9c97aaeb365de341b45d67ce45b",
+      "filename": "HR07-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17490,
+      "sha256": "68ddeb9b3055d59287bf0ffebafe87149def8a6ea86f71bb6c294af3b6218022",
+      "git_blob_sha": "42173b3e38545b5947ced3691380f38adba56fe9",
+      "filename": "HR07-build-card.xlsx"
+    }
+  ]
+}

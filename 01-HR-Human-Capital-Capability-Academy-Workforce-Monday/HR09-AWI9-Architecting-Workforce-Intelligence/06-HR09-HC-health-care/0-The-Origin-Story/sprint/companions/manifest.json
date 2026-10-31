@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR09",
+  "title": "Workforce Intelligence",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR09-AWI9-Architecting-Workforce-Intelligence/06-HR09-HC-health-care/0-The-Origin-Story/sprint/health-care-workforce-intelligence-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR09-AWI9-Architecting-Workforce-Intelligence/06-HR09-HC-health-care/0-The-Origin-Story/sprint/health-care-workforce-intelligence-evolution-sprint.md",
+    "blob_sha": "0cd20f2320912062e0e79c5a4d9ec502e9ce51e9"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1dERjOLINcpDFTFwUWF7jI2gIE7bXmtf_N--wmi53Ofg/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.j90ffb8yzi16",
+    "google_slides": "https://docs.google.com/presentation/d/1OrEve505-sQNPJBjXvD6PMF5TL1PFpv4V-Lloya0-D4/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/1EXGP1z8mnGG4zDpAbx7w3mvE9XgKldavtmJwBeOxaf0/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de60898128a1bdd0d7684bc73e"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 66037,
+      "sha256": "5ff7c027bae8d29a3f84c2cfe3d654fd41dc85ed2e52c9ee02f1b5a158bb910b",
+      "git_blob_sha": "f767ce96a6a2919a7af3c4b1ccab819e66c36ac1",
+      "filename": "HR09-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17570,
+      "sha256": "c70a6f629efac11ce6fe64dcffb74b049d26fff9b648045720bfeb71c48325dc",
+      "git_blob_sha": "2705c4260f8e779f60afa5880094acd248e582ca",
+      "filename": "HR09-build-card.xlsx"
+    }
+  ]
+}

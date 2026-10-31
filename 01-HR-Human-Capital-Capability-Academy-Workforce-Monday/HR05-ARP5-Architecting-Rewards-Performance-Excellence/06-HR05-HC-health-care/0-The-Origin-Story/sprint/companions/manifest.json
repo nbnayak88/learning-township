@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR05",
+  "title": "Rewards & Performance Excellence",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR05-ARP5-Architecting-Rewards-Performance-Excellence/06-HR05-HC-health-care/0-The-Origin-Story/sprint/health-care-rewards-performance-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR05-ARP5-Architecting-Rewards-Performance-Excellence/06-HR05-HC-health-care/0-The-Origin-Story/sprint/health-care-rewards-performance-evolution-sprint.md",
+    "blob_sha": "ffd7d21186fcd9d9fa3c58bc031b8c89c6d782fc"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1JN_CmTVh1XAxZatDhzLYqtHsUSGgaADBR9NoQZlt4_Q/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.4b4x4dtmus8b",
+    "google_slides": "https://docs.google.com/presentation/d/1IIRWk9nsyRs7rts8PSsKlzTsxLD1S9uPoK9mg8cB8us/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/1AMTBPzvvNTfDSzK1IaUG_ZnPSeBSe5jtdqqr13-EYDM/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de608981a48467e5ffce2c5e47"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 65785,
+      "sha256": "1607fa0e3219e4be8d9be92122f5ba9ba55e6452218c793bb4f8ad0b28f55892",
+      "git_blob_sha": "e65933754dc793340d80da81d15814636019b09d",
+      "filename": "HR05-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17496,
+      "sha256": "0e4a33494899e8c15e3a583ce64e6ff6d0d1aa21ed7c3c63bb95264d9c285fa5",
+      "git_blob_sha": "5448dc97595232510e87419cb96196f7187d769c",
+      "filename": "HR05-build-card.xlsx"
+    }
+  ]
+}

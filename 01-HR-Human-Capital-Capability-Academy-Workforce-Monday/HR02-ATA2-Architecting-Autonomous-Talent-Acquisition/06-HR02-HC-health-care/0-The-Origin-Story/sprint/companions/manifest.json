@@ -1,0 +1,56 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR02",
+  "title": "Talent Acquisition, Recruiting & Onboarding",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/06-HR02-HC-health-care/0-The-Origin-Story/sprint/health-care-talent-acquisition-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/06-HR02-HC-health-care/0-The-Origin-Story/sprint/health-care-talent-acquisition-evolution-sprint.md",
+    "blob_sha": "4b52e17f4ec249a90c98c82ba5c292a45c8976a0"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1-6WGw3mOGr-sW0n1yLpNS1n0S-12y_H7haLEZ-HsysI/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.lb2l2gb3tu0c",
+    "google_slides": "https://docs.google.com/presentation/d/1_H1-lzHSTeQ5ZehnNBAkmamxzC1iXkefngNWeEx36tA/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/13uxufzI-ll907Lxj9YXkSMvUnVgD9xH3fAPsRjoy2Is/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de60898142959fe454769102c4",
+      "https://app.notion.com/p/3d0ce6de6089814ab1feee211b29ec4b"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 65966,
+      "sha256": "0a4aaf8e68f9b877d2733657392985c5b7255f330c7f7f545160dc8a89a5c53c",
+      "git_blob_sha": "1de2f951f8fe30fae36df03983c53b4a6cbf1b5f",
+      "filename": "HR02-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17489,
+      "sha256": "efecb88f18edf855324cd9796f0aff37cc04d9262bd3428d898cb55ca1556519",
+      "git_blob_sha": "24d9b5cfc4788df5806ab579a66d2c2b57d2c896",
+      "filename": "HR02-build-card.xlsx"
+    }
+  ]
+}

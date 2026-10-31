@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-31",
+  "enterprise": "OmniHealth Systems Ltd",
+  "sector": "GICS06 Health Care",
+  "theme": "HR12",
+  "title": "Connected HR Enterprises",
+  "mission": "Architecting Experiences for a Better World.",
+  "canonical": {
+    "path": "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR12-AIG2-Architecting-Connected-HR-Enterprises/06-HR12-HC-health-care/0-The-Origin-Story/sprint/health-care-connected-hr-evolution-sprint.md",
+    "url": "https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR12-AIG2-Architecting-Connected-HR-Enterprises/06-HR12-HC-health-care/0-The-Origin-Story/sprint/health-care-connected-hr-evolution-sprint.md",
+    "blob_sha": "fc20225796741c0c2d50dbaff7c3343dec7e9dd4"
+  },
+  "companions": {
+    "google_doc": "https://docs.google.com/document/d/1kd89AWkmUfhRhKz8dS_xuFpg_-CfHuJSOxcscpD_30o/edit?usp=drivesdk",
+    "google_doc_navigation_tab": "t.su2zmntb6ia1",
+    "google_slides": "https://docs.google.com/presentation/d/1Diy4-dHrUtqnj6gWQ3mza2pimI-CPs4kgOmi6Sb_JDQ/edit?usp=drivesdk",
+    "google_sheets": "https://docs.google.com/spreadsheets/d/1jBlUWYDx589N74VBRd2jyWsFBYHE2fZRUtyaSGfyZJQ/edit?usp=drivesdk",
+    "notion_sources": [
+      "https://app.notion.com/p/3d0ce6de6089819a80b0ce51f81b779a"
+    ]
+  },
+  "structure": {
+    "minutes": 120,
+    "slides": 10,
+    "workbook_tabs": [
+      "Build Card",
+      "Tabletop Tests"
+    ],
+    "tabletop_tests": 3
+  },
+  "evidence": {
+    "tabletop_execution": "Not executed by publication",
+    "learner_result_fields": "Blank",
+    "native_content_readback": true,
+    "visual_review": true,
+    "original_doc_tabs_preserved": true,
+    "automatic_synchronization": false
+  },
+  "snapshots": [
+    {
+      "extension": ".pptx",
+      "bytes": 66427,
+      "sha256": "0ba9a802595ddc8cc4b24b8b6d75b634d2b1244871c2a2127256c95a1e0a11dd",
+      "git_blob_sha": "73f69b8a7f5a9c453e35fb62bb94eece268132d7",
+      "filename": "HR12-origin-story.pptx"
+    },
+    {
+      "extension": ".xlsx",
+      "bytes": 17598,
+      "sha256": "eb40ecc8de66e54c3c27efa8ad4bcb5a1728fef8a112c31425c64bdde5b2d35d",
+      "git_blob_sha": "2a767ed6dd84102a3bdd8d459098db145802745d",
+      "filename": "HR12-build-card.xlsx"
+    }
+  ]
+}
