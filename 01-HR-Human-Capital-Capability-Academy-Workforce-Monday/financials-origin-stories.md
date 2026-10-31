@@ -6,6 +6,8 @@ GICS07 · IIL — Industry Immersion Lab · SuccessLabs Academy
 
 One learner promise · one persona-led story · one build card · exactly three tabletop tests · 120 minutes per Origin Story.
 
+**HR01–HR12 are published with matching GitHub, Notion and Google Doc editions, plus 12 native Google Slides decks and 12 native Google Sheets workspaces.** All saved content was read back. Original Notion case bodies and the existing EC business-case Doc were preserved; HR02 keeps both source-page identities.
+
 ## Matching editions and publication status
 
 | Theme | GitHub sprint | Google Doc | Notion edition | Google Slides | Google Sheets | Status |
@@ -45,3 +47,13 @@ Historical teaching windows: 1970–1984, 1985–1994, 1995–2004, 2005–2014,
 New OCF-HR01–OCF-HR12 IDs are educational anchors connected to existing OCF-M10/M11/M17/M18/M19. HR themes, the 12 architecture streams and enterprise transformation streams are separate axes. Standards alignment is educational, not certification or compliance.
 
 Publication and content readback do not prove public student access, automatic synchronization, successful learner copying, executed tabletop tests, system capability or realized operational outcomes. Test observations remain blank / Not run. Deeper Pre-Foundation through Ultimate editions are handoffs, not claimed published by this index.
+
+## Final verification record — 31 October 2026 IST
+
+- GitHub sprint text matched the authored edition exactly; all twelve planning READMEs retain HUB-ORIGIN-HRxx-FIN-sprint and link their matching edition.
+- Google Doc sprint paragraphs and table-cell content (presented as labeled prose rows) matched the authored edition; source links are clickable. HR01 retains the original business case in Tab 1 and adds a separate sprint tab. Other searches found no matching Docs, so fresh native Docs were created.
+- Notion readback preserved the original case material and matched the learner prose, ownership rows, tests, traceability, history and scenarios after native-link/Markdown normalization. HR02b retains its onboarding case and links the complete HR02 sprint on HR02a.
+- All twelve Google Slides decks have 12 slides each; text was read back and every slide visually inspected after native conversion. HR01/HR02 ownership-slide crowding was corrected before final status.
+- All twelve Google Sheets workspaces contain Build Card and Sprint tabs. The three tabletop rows were read back with blank observed/evidence cells and Not run status.
+- Drive metadata confirms 12 native Docs (one existing plus eleven new), 12 native Slides and 12 native Sheets. Metadata reports not shared; no public learner access was tested or enabled.
+- The Notion enterprise hub now links this common index. Saved-content verification is distinct from operational validation; no test, payroll, hiring, access, model or integration outcome was executed.
