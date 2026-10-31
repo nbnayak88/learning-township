@@ -25,7 +25,7 @@ One learner promise · One persona-led story · One build card · Three tabletop
 
 ## Scope and unresolved request wording
 
-This index targets GICS05 Consumer Staples / OmniDaily, supported by the existing enterprise hub. The request also says GICS04/Consumer Discretionary and Industrials; those conflicting routing labels are retained here. No GICS03/04 source is relabelled or overwritten. The supplied materials-origin-stories.md is GICS02; the actual industrials-origin-stories.md supplies a learning-pattern reference. These references do not supply OmniDaily enterprise facts.
+This index targets GICS05 Consumer Staples / OmniDaily, supported by the existing enterprise hub. Earlier edition routing notes recorded GICS04/Consumer Discretionary and Industrials wording. The current instruction explicitly confirms GICS05 Consumer Staples; Industrials is a reference context, not the target sector. Those earlier notes remain historical provenance, not unresolved sector identity. No GICS03/04 source is relabelled or overwritten. The supplied materials-origin-stories.md is GICS02; the actual industrials-origin-stories.md supplies a learning-pattern reference. These references do not supply OmniDaily enterprise facts.
 
 ## Preserved supporting material
 
@@ -70,3 +70,9 @@ Saved-content verification proves publication fidelity only. It does not prove a
 ## Final companion audit
 
 All twelve editions contain exactly three tabletop-test headings and all eight required historical/scenario windows. Each Notion edition contains its matching GitHub and native Google Doc links; all companion links appear in this index. Native Google Docs metadata confirmed all twelve document MIME types and the intended destination folder, with shared=false / not_shared. Student public access has therefore not been established and no permissions were changed. The enterprise Notion hub now links this index; its original research paragraphs were read back and preserved.
+
+## Current-request revalidation — 31 October 2026 IST
+
+The existing HR01–HR12 editions were discovered rather than duplicated, then read sequentially across GitHub, native Google Docs and the existing Notion pages. For all twelve, every non-link learner paragraph matched across the three platforms after heading/whitespace and Notion escaping normalization. Each GitHub edition has exactly three ODG-TOS tabletop-test headings and all five closed historical windows plus the three separate AI scenario windows. The preserved supporting-case section is present on every Notion edition. HR02b was separately fetched: its Onboarding content and navigation to the combined HR02 edition remain present. The enterprise hub links this common index.
+
+No learner-content discrepancy requiring a rewrite was identified by this readback. No duplicate sprint, Notion page or Google Doc was created. This is a saved-content revalidation, not a new execution of the proposed tabletop tests, proof of operational results, public access or automatic synchronization. Later-level Pre-Foundation through Ultimate editions are not claimed complete by this Origin Story audit.
