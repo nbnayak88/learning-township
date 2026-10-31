@@ -57,3 +57,11 @@ Publication and content readback do not prove public student access, automatic s
 - All twelve Google Sheets workspaces contain Build Card and Sprint tabs. The three tabletop rows were read back with blank observed/evidence cells and Not run status.
 - Drive metadata confirms 12 native Docs (one existing plus eleven new), 12 native Slides and 12 native Sheets. Metadata reports not shared; no public learner access was tested or enabled.
 - The Notion enterprise hub now links this common index. Saved-content verification is distinct from operational validation; no test, payroll, hiring, access, model or integration outcome was executed.
+
+## Continuation scope and fresh readback — 31 October 2026 IST
+
+The continuation request's title, enterprise hub and project identify GICS07 Financials / OmniCapital. Its references to Industrials, industrial plants and a final GICS06 Health Care instruction conflict with that scope; those template fragments were not applied to this Financials edition. GICS02 remains the format reference. This records the conflict rather than changing another sector's sources.
+
+A fresh connector readback located the existing completed ecosystem rather than creating duplicate artifacts. HR01 through HR12 were inspected sequentially across GitHub, Google Docs, Notion, Google Slides and Google Sheets. For every theme, all 30 substantive non-table prose chunks and all substantive table cells matched the Doc, Notion and Sheet after formatting normalization. All 12 facilitator decks contain 12 slides; each retains three separate tabletop slides. All 12 Sheets retain Not run status. HR02b was read separately and retains its source case plus navigation to the combined HR02 sprint on HR02a. This pass verified saved content; it did not rerun visual inspection or execute learner tests.
+
+The common table above is the navigation point for all companion links. Pre-Foundation, Foundation, Essentials, Advanced and Ultimate remain future handoffs; no deeper edition was authored or claimed complete by this continuation verification.
