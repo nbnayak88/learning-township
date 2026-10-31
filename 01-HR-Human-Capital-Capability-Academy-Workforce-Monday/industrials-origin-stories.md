@@ -9,7 +9,7 @@ One learner promise · One persona-led story · One build card · Three tabletop
 | Theme | GitHub matching sprint | Google Doc | Existing Notion source / matching edition | Status |
 |---|---|---|---|---|
 | HR01 — Workforce Foundations | [Sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/03-HR01-IND-industrials/0-The-Origin-Story/sprint/industrials-hr01-origin-evolution-sprint.md) | [Native Doc](https://docs.google.com/document/d/1g1VlexpUHLCsnlj-z3ItYQk8n7Zj2mxvin5IX2XT9ME/edit?usp=drivesdk) | [Existing matching edition + preserved case](https://app.notion.com/p/fb700484219a4727aa1fa0d3fa290a3d) | Matching sprint in all three; saved content read back |
-| HR02 — Talent Acquisition — Recruiting and Onboarding | Pending | Missing companion | [Existing supporting case](https://app.notion.com/p/ed422fd971674c4db545d30e2ef2e7ac) · [HR02b Onboarding source](https://app.notion.com/p/b0451e46f572478a9d04d2527b748d71) | Supporting source found; matching sprint pending |
+| HR02 — Talent Acquisition — Recruiting and Onboarding | [Sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/03-HR02-IND-industrials/0-The-Origin-Story/sprint/industrials-hr02-origin-evolution-sprint.md) | [Native Doc](https://docs.google.com/document/d/1avdUhazoxxw8O74SLs5Kts5nXVTwvlRZnRXDTsGVEb8/edit?usp=drivesdk) | [Existing matching edition + preserved case](https://app.notion.com/p/ed422fd971674c4db545d30e2ef2e7ac) · [HR02b Onboarding source](https://app.notion.com/p/b0451e46f572478a9d04d2527b748d71) | Matching sprint in all three; HR02a/HR02b preserved and linked |
 | HR03 — High-Performance Organizations | Pending | Missing companion | [Existing supporting case](https://app.notion.com/p/89963e0194c1404e84f776f9fbe6a1cd) | Supporting source found; matching sprint pending |
 | HR04 — Growth & Leadership | Pending | Missing companion | [Existing supporting case](https://app.notion.com/p/01d91219e4944115be18a4a559b1d548) | Supporting source found; matching sprint pending |
 | HR05 — Rewards & Performance Excellence | Pending | Missing companion | [Existing supporting case](https://app.notion.com/p/80350c86824c431aad91af24929bea4b) | Supporting source found; matching sprint pending |
@@ -38,4 +38,6 @@ OW-Q01–OW-Q06 remain open: alternate footprints; 95,000 installed assets versu
 ## Publication/readback record
 
 HR01: GitHub source matched exactly; native Doc text matched all authored paragraphs and saved tab; Notion matched all sprint paragraphs with platform escaping normalized, and previous case text was preserved. Tabletops remain unexecuted.
+
+HR02: GitHub source matched exactly; native Doc text matched all authored paragraphs and saved tab; Notion matched all sprint paragraphs with platform escaping normalized, and previous case text was preserved. Both source-page identities retained; HR02b cross-reference verified. Tabletops remain unexecuted.
 
