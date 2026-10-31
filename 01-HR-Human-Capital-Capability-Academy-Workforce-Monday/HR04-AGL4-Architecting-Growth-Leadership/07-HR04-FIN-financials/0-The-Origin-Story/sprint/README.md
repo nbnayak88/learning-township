@@ -1,1 +1,9 @@
-# The Origin Story — Architecting Growth & Leadership — Financials Sector — Sprint\n\n**Planning Reference (not an LMS ID):** \`HUB-ORIGIN-HR04-FIN-sprint\`  \n**Academy:** HR  \n**Series:** HR04  \n**Sector:** Financials (FIN)  \n**Level:** 0 — The Origin Story  \n**Format:** Sprint  \n**Access:** Free — Community/Citizen Edition  \n**Status:** Planned, not a live or enrolled course.\n\nExplore the origins, purpose, evolution and architectural context through activities, simulations, reflection and evidence.\n
+# The Origin Story — Growth & Leadership — Financials
+
+**Planning Reference (not an LMS ID):** `HUB-ORIGIN-HR04-FIN-sprint`
+
+IIL — Industry Immersion Lab · 120-minute Sprint · Community/Citizen Edition.
+
+[Published matching Origin Story](financials-growth-leadership-evolution-sprint.md) · [All companions and publication status](../../../../financials-origin-stories.md)
+
+Published educational content; no live course, enrollment or certification is implied. Detailed enterprise and case material remains separate.
