@@ -6,6 +6,8 @@ SuccessLabs Academy — Architecting Experiences for a Better World.
 
 One learner promise · one persona-led story · one build card · exactly three tabletop tests · 120 minutes per theme.
 
+**All twelve themes are published with saved-content readback across GitHub, Google Docs and Notion.** Twelve native Google Docs were created; the thirteen existing theme-source pages (including both HR02 cases) were preserved. Thirty-six tabletop tests are designed, not executed.
+
 ## Open a theme
 
 | Theme | GitHub sprint | Native Google Doc | Existing Notion page | Publication status |
@@ -71,3 +73,14 @@ One learner promise · one persona-led story · one build card · exactly three 
 - Health Care settings take precedence over copied Industrials wording in the request. No unsupported industrial plant facts were transplanted.
 - Saved-content verification proves neither public student access, successful copying, legal/clinical compliance, operational deployment nor automatic synchronization. No sharing permissions changed.
 - This delivery publishes Level 0 only, with a Pre-Foundation handoff and a prospective route to Ultimate. Deeper levels and HR13 are not newly authored here.
+
+## Traceability and preservation verification
+
+The existing enterprise master provides learning assignments and conceptual controls, rather than an approved theme-level requirements/ADR/test register. The new OHS-HRxx-REQ01, ADR01, EXP01, T01–T03, ME01–02 and EV01 identifiers explicitly extend those source anchors for education; they do not impersonate pre-existing approvals.
+
+- [OHS-M09–M12: capabilities, value streams, operating model and architecture](https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/master/theme-c-architecture.md)
+- [OHS-M13–M16: experiments, economics, dependencies and governance](https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/master/theme-d-transformation.md)
+- [OHS-M17–M19: controls, adoption and readiness experiments](https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/master/theme-e-execution.md)
+- [OHS-M20–M22: measures, evidence, retrospectives and value decisions](https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/master/theme-f-value.md)
+
+All original content paragraphs in the thirteen existing HR source pages were checked after the append operations and retained. Each new Google Doc has a named Origin Story tab with native headings and a separate navigation note; existing detailed Google Docs were not overwritten because none matched the scoped discovery searches. The OmniHealth enterprise hub links this common index. No changes to sharing permissions were requested or made.
