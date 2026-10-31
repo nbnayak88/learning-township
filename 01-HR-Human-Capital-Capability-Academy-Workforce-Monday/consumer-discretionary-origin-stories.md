@@ -6,6 +6,8 @@ SuccessLabs Academy — Architecting Experiences for a Better World.
 
 One learner promise · One persona-led story · One build card · Three tabletop tests · 120 minutes.
 
+**HR01–HR12 complete:** all twelve matching Origin Story editions are published on GitHub, existing Notion pages and native Google Docs, with saved-content readback. HR02a Recruiting and HR02b Onboarding retain separate source identities within one integrated sprint.
+
 Scope clarification: the request contains Industrials/GICS03 wording and a Materials reference URL. Existing GitHub and Notion records identify GICS04 as OmniVibe Consumer Ltd., Consumer Discretionary. These editions follow the explicit GICS04 publication destination and use completed GICS03 editions as design reference. No OmniWorks plant facts are imported into OmniVibe. The mixed consumer portfolio is retained as the source's educational categorization; independent company classification is not asserted.
 
 | Theme | GitHub matching sprint | Google Doc | Existing Notion source / matching edition | Publication status |
@@ -34,6 +36,8 @@ Discovery: the 13 OmniVibe Notion case bodies and enterprise hub were read, toge
 Open source gaps OVC-Q01–OVC-Q14 remain unresolved, including franchise accountability, customer definitions, unspecified investment/benefit baselines, label variants, maturity rubric and unverified product/localization claims. New OVC-TOS-HR01–HR12 requirement, decision, experiment, test, measure and evidence identifiers are educational additions. Test observations and evidence slots start empty. Proposed targets are not results.
 
 ## Saved-content verification record
+
+All twelve Google Docs have a verified “Origin Story · 120 minutes” tab and native title/heading hierarchy. The Notion enterprise hub links this sector index; its pre-existing narrative, original research and child-page references were preserved and read back.
 
 HR01: GitHub sprint matched authored source exactly; native Google Doc matched every authored nonempty paragraph and retained native heading structure; Notion matched the sprint content with platform link/escaping normalization and retained its original supporting case text. Tabletop tests remain unexecuted.
 
