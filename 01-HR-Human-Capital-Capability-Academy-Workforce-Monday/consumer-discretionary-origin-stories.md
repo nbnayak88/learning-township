@@ -1,0 +1,42 @@
+# OmniVibe Consumer Discretionary — TOS: The Origin Story and beyond
+
+GICS04 · IIL — Industry Immersion Lab · Edition 31 October 2026 IST
+
+SuccessLabs Academy — Architecting Experiences for a Better World.
+
+One learner promise · One persona-led story · One build card · Three tabletop tests · 120 minutes.
+
+Scope clarification: the request contains Industrials/GICS03 wording and a Materials reference URL. Existing GitHub and Notion records identify GICS04 as OmniVibe Consumer Ltd., Consumer Discretionary. These editions follow the explicit GICS04 publication destination and use completed GICS03 editions as design reference. No OmniWorks plant facts are imported into OmniVibe. The mixed consumer portfolio is retained as the source's educational categorization; independent company classification is not asserted.
+
+| Theme | GitHub matching sprint | Google Doc | Existing Notion source / matching edition | Publication status |
+|---|---|---|---|---|
+| HR01 — Workforce Foundations | [Sprint](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/04-HR01-CD-consumer-discretionary/0-The-Origin-Story/sprint/consumer-discretionary-hr01-origin-evolution-sprint.md) | [Native Doc](https://docs.google.com/document/d/1EredBJRzwtORQX69PixMIyT6aEc_EwP3hZO8ZbsnmWs/edit?usp=drivesdk) | [Matching sprint + preserved source](https://app.notion.com/p/3d0ce6de60898177bae5f7fcacddddb8?pvs=204) | Matching sprint saved and read back on all three platforms |
+| HR02 — Talent Acquisition — Recruiting & Onboarding | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de608981939fcac9f68bbb8ad7?pvs=204) · [HR02b Onboarding source](https://app.notion.com/p/3d0ce6de608981f4ab0ce813db2ac409?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR03 — High-Performance Organizations | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de6089811c8069d9182109f548?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR04 — Growth & Leadership | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de6089817988c6ccf769e12346?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR05 — Rewards & Performance Excellence | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de60898117b85ac6235309b6a5?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR06 — Continuous Learning & Mobility | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de6089810895e7f191ec3b1aab?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR07 — Autonomous Payroll Enterprises | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de6089819caf9bc61a48443d21?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR08 — Workforce Time & Operations | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de60898194888ad5a90ac9736c?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR09 — Workforce Intelligence | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de608981718731f2bc549062e0?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR10 — Digital Employee Experience | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de608981aca694f95833f0870f?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR11 — AI-Powered HR Enterprises | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de6089818c8dcdd3868fad2d17?pvs=204) | Pending; supporting case is not an Origin Story edition |
+| HR12 — Connected HR Enterprises | Not yet published | Missing companion; not yet created | [Supporting case; sprint not verified](https://app.notion.com/p/3d0ce6de608981da91b8daecec2b789f?pvs=204) | Pending; supporting case is not an Origin Story edition |
+
+## Supporting cases and source traceability
+
+[Enterprise hub](https://app.notion.com/p/5a1022d7db634a10a7c5d00318e0c809?pvs=204) · [Enterprise case](https://github.com/nbnayak88/successlabs-case-studies/tree/main/04-consumer-discretionary/omnivibe-consumer-ltd) · [Workforce blueprint](https://github.com/nbnayak88/successlabs-case-studies/blob/main/04-consumer-discretionary/omnivibe-consumer-ltd/derived-streams/01-workforce.md) · [Stable personas](https://github.com/nbnayak88/successlabs-case-studies/blob/main/04-consumer-discretionary/omnivibe-consumer-ltd/personas/persona-cards.md) · [Source and gaps](https://github.com/nbnayak88/successlabs-case-studies/blob/main/04-consumer-discretionary/omnivibe-consumer-ltd/references/source-and-assumptions.md).
+
+HR02a Recruiting and HR02b Onboarding preserve their existing page identities. The full HR02 sprint lives on HR02a; HR02b links to the same integrated 120-minute theme. They are two supporting cases, not two separate sprints. Detailed source text remains below a marked boundary on each edited Notion page. Source outcome statements remain intended designs, not achieved results.
+
+Discovery: the 13 OmniVibe Notion case bodies and enterprise hub were read, together with existing GitHub sector planning files, workforce blueprint, persona register, architecture/execution anchors and simulations. No matching Google Doc was found through OmniVibe title/keyword and Consumer native-document searches; fresh native Docs are created as each theme is published, with a dedicated Origin Story tab. Existing detailed source cases are preserved. Drive search coverage is the connected account's accessible files.
+
+Open source gaps OVC-Q01–OVC-Q14 remain unresolved, including franchise accountability, customer definitions, unspecified investment/benefit baselines, label variants, maturity rubric and unverified product/localization claims. New OVC-TOS-HR01–HR12 requirement, decision, experiment, test, measure and evidence identifiers are educational additions. Test observations and evidence slots start empty. Proposed targets are not results.
+
+## Saved-content verification record
+
+HR01: GitHub sprint matched authored source exactly; native Google Doc matched every authored nonempty paragraph and retained native heading structure; Notion matched the sprint content with platform link/escaping normalization and retained its original supporting case text. Tabletop tests remain unexecuted.
+
+Closed historical teaching windows: 1970–1984, 1985–1994, 1995–2004, 2005–2014, 2015–2025. Adoption overlaps and older practices may coexist today. Separate 2026–2030 Assist, 2031–2040 Connect and 2041–2050 Adapt explorations are scenarios, not predictions, deployments or product roadmaps; each includes a competing future and disconfirmation question.
+
+Saved-content verification does not establish automatic synchronization, public student access, successful copying, executed tabletop tests or operational outcomes. Twelve HR themes, twelve architecture streams and enterprise transformation streams remain separate classification axes. Standards alignment is educational; no certification or compliance is claimed.
