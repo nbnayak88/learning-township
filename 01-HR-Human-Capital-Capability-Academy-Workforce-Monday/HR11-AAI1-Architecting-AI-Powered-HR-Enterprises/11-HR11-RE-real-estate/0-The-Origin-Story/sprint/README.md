@@ -1,1 +1,9 @@
-# The Origin Story — Architecting AI-Powered HR Enterprises — Real Estate Sector — Sprint\n\n**Planning Reference (not an LMS ID):** \`HUB-ORIGIN-HR11-RE-sprint\`  \n**Academy:** HR  \n**Series:** HR11  \n**Sector:** Real Estate (RE)  \n**Level:** 0 — The Origin Story  \n**Format:** Sprint  \n**Access:** Free — Community/Citizen Edition  \n**Status:** Planned, not a live or enrolled course.\n\nExplore the origins, purpose, evolution and architectural context through activities, simulations, reflection and evidence.\n
+# HR11 — AI-Powered HR Enterprises — Real Estate Origin Story
+
+Planning reference: HUB-ORIGIN-HR11-RE-sprint (preserved; not an LMS ID).
+
+[Read the published 120-minute sprint](real-estate-ai-powered-hr-evolution-sprint.md) · [Sector index](https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/real-estate-origin-stories.md)
+
+One promise · One persona-led story · One build card · Three tabletop tests.
+
+Matching GitHub, Notion and Google Doc text read back. Native Google Slides and Google Sheets are companion workspaces. Publication is not enrollment, public companion access, executed tests or operational improvement.
