@@ -6,6 +6,8 @@ SuccessLabs Academy — Architecting Experiences for a Better World.
 
 Each theme uses one learner promise, one persona-led story, one Decision Build Card, exactly three tabletop tests and 120 minutes. Google Slides is the teaching companion; Google Sheets is the editable card, not another required deliverable.
 
+**All HR01–HR12 editions are published and saved content has been verified.** The companion folder contains 12 native Google Docs, 12 Google Slides decks (eight slides each), and 12 Google Sheets build cards. [Publication verification record](real-estate-publication-verification-2026-11-01.md).
+
 ## Open a matching edition
 
 | Theme | GitHub sprint | Google Doc | Notion matching edition | Google Slides | Google Sheets | Saved-content status |
