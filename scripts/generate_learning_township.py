@@ -158,6 +158,9 @@ def main():
         path=ROOT / ACADEMY_FOLDERS[r["Academy Code"]] / series_folder / f'{SECTOR_ORDER[r["Sector Code"]]:02d}-{series}-{r["Sector Code"]}-{slug(r["Sector Name"])}' / TIER_FOLDERS[tier_number] / slug(r["Learning Format"])
         origin_dir=path.parent.parent/"0-The-Origin-Story"
         origin_units[str(origin_dir)]=(r["Unit ID"],r["Unit Title"],r["Academy Code"],series,r["Sector Code"],r["Sector Name"])
+        # Pre-Foundation is webinar-only; preserve other tiers and the source catalog.
+        if tier_number == 1 and slug(r["Learning Format"]) != "webinar":
+            continue
         if path in seen: sys.exit(f"Duplicate target folder: {path}")
         seen.add(path)
         path.mkdir(parents=True,exist_ok=True)
