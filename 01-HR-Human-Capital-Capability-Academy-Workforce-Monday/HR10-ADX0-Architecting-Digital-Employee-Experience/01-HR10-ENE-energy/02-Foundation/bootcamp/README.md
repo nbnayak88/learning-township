@@ -27,6 +27,7 @@ A 21-day, 6-phase SAP Activate dashboard for implementing SAP Qualtrics Employee
 - [`SAP-Activate-Dashboard-Qualtrics-EX.md`](SAP-Activate-Dashboard-Qualtrics-EX.md): gates, phase summary, day-by-day tables, mapping to the 16-week scoping plan, assumptions
 - [`SAP-Activate-Dashboard-Qualtrics-EX.csv`](SAP-Activate-Dashboard-Qualtrics-EX.csv): 63 rows, importable into the matching Notion database
 - [`EX-AI-CodeX-Prompts.md`](EX-AI-CodeX-Prompts.md): 21 copy-ready prompts, one per day
+- [`Discovery-Meeting-Qualtrics-EX.md`](Discovery-Meeting-Qualtrics-EX.md): OmniVerse Energy discovery meeting pack — requirements-to-Qualtrics Fit-Gap view and 73 workshop questions for business requirement gathering
 
 ## Publication note
 This is a HUB catalog record, **not proof that a course is live or purchasable**. Township occupancy is not publication status. Allocated member names are intentionally excluded from the public repository for privacy.
