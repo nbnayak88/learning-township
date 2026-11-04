@@ -23,6 +23,7 @@ Teach sector and domain architecture through business outcomes, capabilities, va
 ## SAP Activate dashboard — Qualtrics Employee Experience
 A 21-day, 6-phase SAP Activate dashboard for implementing SAP Qualtrics Employee Experience alongside SAP SuccessFactors. It is a design template (all rows `Not Started`), not a delivery duration or a tenant result.
 
+- **Visual dashboard (GitHub Pages):** <https://nbnayak88.github.io/learning-township/> (source: `/docs/index.html`)
 - [`SAP-Activate-Dashboard-Qualtrics-EX.md`](SAP-Activate-Dashboard-Qualtrics-EX.md): gates, phase summary, day-by-day tables, mapping to the 16-week scoping plan, assumptions
 - [`SAP-Activate-Dashboard-Qualtrics-EX.csv`](SAP-Activate-Dashboard-Qualtrics-EX.csv): 63 rows, importable into the matching Notion database
 - [`EX-AI-CodeX-Prompts.md`](EX-AI-CodeX-Prompts.md): 21 copy-ready prompts, one per day
