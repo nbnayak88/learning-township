@@ -80,3 +80,8 @@ The original bootcamp catalog README has been preserved. Each linked folder cont
 
 ## Completion evidence
 Each country case must culminate in an executive one-pager, architecture pack, documented compliance sources, minimum 12 test cases, control matrix, country-localization decision, and a demo of the energy shift/overtime incident.
+
+
+## Country workbooks in multiple formats
+
+[Open the 62-country payroll workbook table](global-country-workbooks-2026-2027/README.md) for Excel downloads, native Google Sheets, Google Docs, Google Slides, Markdown, Notion and the original interactive HTML editions. This collection follows the requested country list; the MOLGA catalog above retains its existing scope.
