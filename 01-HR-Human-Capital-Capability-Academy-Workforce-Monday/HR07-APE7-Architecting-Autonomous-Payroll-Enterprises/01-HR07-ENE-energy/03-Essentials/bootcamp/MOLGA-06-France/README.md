@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — France Payroll Bootcamp
 
+[Open the live France workbook](https://nbnayak88.github.io/payroll/France.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `06` · **ISO:** `FR` · **Case ID:** `OV-ENE-HR07-06`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

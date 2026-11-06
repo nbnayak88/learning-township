@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Portugal Payroll Bootcamp
 
+[Open the live Portugal workbook](https://nbnayak88.github.io/payroll/Portugal.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `19` · **ISO:** `PT` · **Case ID:** `OV-ENE-HR07-19`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

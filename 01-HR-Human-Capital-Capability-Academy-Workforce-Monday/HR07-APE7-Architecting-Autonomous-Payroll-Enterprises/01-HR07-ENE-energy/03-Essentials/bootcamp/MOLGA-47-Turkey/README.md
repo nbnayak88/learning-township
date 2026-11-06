@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Turkey Payroll Bootcamp
 
+[Open the live Turkey workbook](https://nbnayak88.github.io/payroll/Turkey.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `47` · **ISO:** `TR` · **Case ID:** `OV-ENE-HR07-47`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

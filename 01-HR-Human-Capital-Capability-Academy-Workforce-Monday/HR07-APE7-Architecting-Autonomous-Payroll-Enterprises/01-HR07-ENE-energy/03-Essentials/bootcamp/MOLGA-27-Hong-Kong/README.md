@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Hong Kong Payroll Bootcamp
 
+[Open the live Hong Kong workbook](https://nbnayak88.github.io/payroll/Hong_Kong.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `27` · **ISO:** `HK` · **Case ID:** `OV-ENE-HR07-27`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

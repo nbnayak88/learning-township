@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Singapore Payroll Bootcamp
 
+[Open the live Singapore workbook](https://nbnayak88.github.io/payroll/Singapore.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `25` · **ISO:** `SG` · **Case ID:** `OV-ENE-HR07-25`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

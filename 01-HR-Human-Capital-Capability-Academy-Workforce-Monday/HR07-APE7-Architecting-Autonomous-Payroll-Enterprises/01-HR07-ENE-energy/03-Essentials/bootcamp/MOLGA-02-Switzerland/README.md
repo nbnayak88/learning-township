@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Switzerland Payroll Bootcamp
 
+[Open the live Switzerland workbook](https://nbnayak88.github.io/payroll/Switzerland.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `02` · **ISO:** `CH` · **Case ID:** `OV-ENE-HR07-02`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

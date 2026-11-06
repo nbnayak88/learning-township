@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Romania Payroll Bootcamp
 
+[Open the live Romania workbook](https://nbnayak88.github.io/payroll/Romania.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `61` · **ISO:** `RO` · **Case ID:** `OV-ENE-HR07-61`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

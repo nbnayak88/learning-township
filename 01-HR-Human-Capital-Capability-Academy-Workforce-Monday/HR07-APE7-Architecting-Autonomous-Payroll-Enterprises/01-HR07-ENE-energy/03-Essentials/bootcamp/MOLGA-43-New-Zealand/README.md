@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — New Zealand Payroll Bootcamp
 
+[Open the live New Zealand workbook](https://nbnayak88.github.io/payroll/New_Zealand.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `43` · **ISO:** `NZ` · **Case ID:** `OV-ENE-HR07-43`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

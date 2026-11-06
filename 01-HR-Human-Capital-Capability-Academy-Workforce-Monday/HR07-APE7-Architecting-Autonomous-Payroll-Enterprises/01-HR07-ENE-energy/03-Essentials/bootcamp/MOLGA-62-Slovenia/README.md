@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Slovenia Payroll Bootcamp
 
+[Open the live Slovenia workbook](https://nbnayak88.github.io/payroll/Slovenia.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `62` · **ISO:** `SI` · **Case ID:** `OV-ENE-HR07-62`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

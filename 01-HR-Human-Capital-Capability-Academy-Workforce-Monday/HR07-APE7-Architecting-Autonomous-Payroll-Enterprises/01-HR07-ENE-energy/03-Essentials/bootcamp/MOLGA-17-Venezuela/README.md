@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Venezuela Payroll Bootcamp
 
+[Open the live Venezuela workbook](https://nbnayak88.github.io/payroll/Venezuela.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `17` · **ISO:** `VE` · **Case ID:** `OV-ENE-HR07-17`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

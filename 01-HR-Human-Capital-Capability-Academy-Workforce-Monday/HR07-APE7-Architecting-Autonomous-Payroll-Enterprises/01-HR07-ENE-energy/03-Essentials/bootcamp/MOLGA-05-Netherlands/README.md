@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Netherlands Payroll Bootcamp
 
+[Open the live Netherlands workbook](https://nbnayak88.github.io/payroll/Netherlands.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `05` · **ISO:** `NL` · **Case ID:** `OV-ENE-HR07-05`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

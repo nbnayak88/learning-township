@@ -1,5 +1,7 @@
 # HR07 APE7 — Global Payroll MOLGA × GICS Link Registry
 
+[Open the country workbook website](https://nbnayak88.github.io/payroll/) · [62-country workbook index](https://github.com/nbnayak88/learning-township/tree/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR07-APE7-Architecting-Autonomous-Payroll-Enterprises/01-HR07-ENE-energy/03-Essentials/bootcamp/global-country-workbooks-2026-2027)
+
 **SuccessLabs Academy | HR only | 03-Essentials / bootcamp | 11 GICS sectors × 62 MOLGA groupings = 682 planned case links.**
 
 **Live status:** verified from GitHub `main` on 2026-11-05. **✓** links to a folder verified present. **○** is a planned relative path **not present on `main`**; do not treat it as published. MOLGA groupings are not proof of native SAP ECP payroll localization. Historical/generic groupings require special validation.

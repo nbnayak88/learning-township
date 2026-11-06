@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — China Payroll Bootcamp
 
+[Open the live China workbook](https://nbnayak88.github.io/payroll/China.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `28` · **ISO:** `CN` · **Case ID:** `OV-ENE-HR07-28`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

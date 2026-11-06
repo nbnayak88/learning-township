@@ -1,5 +1,7 @@
 # Austria Payroll Workbook
 
+[Open the live Austria workbook](https://nbnayak88.github.io/payroll/Austria.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy — Architecting Experiences for a Better World.**
 
 Employee Central Payroll learning edition. Horizon: 2026–2027 onward. Source evidence review: 6 November 2026. Configuration sections: 44.

@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Germany Payroll Bootcamp
 
+[Open the live Germany workbook](https://nbnayak88.github.io/payroll/Germany.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `01` · **ISO:** `DE` · **Case ID:** `OV-ENE-HR07-01`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

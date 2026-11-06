@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Taiwan Payroll Bootcamp
 
+[Open the live Taiwan workbook](https://nbnayak88.github.io/payroll/Taiwan.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `42` · **ISO:** `TW` · **Case ID:** `OV-ENE-HR07-42`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

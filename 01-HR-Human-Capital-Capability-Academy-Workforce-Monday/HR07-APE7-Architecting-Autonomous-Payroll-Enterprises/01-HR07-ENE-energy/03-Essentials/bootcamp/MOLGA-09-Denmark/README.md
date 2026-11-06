@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Denmark Payroll Bootcamp
 
+[Open the live Denmark workbook](https://nbnayak88.github.io/payroll/Denmark.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `09` · **ISO:** `DK` · **Case ID:** `OV-ENE-HR07-09`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Australia Payroll Bootcamp
 
+[Open the live Australia workbook](https://nbnayak88.github.io/payroll/Australia.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `13` · **ISO:** `AU` · **Case ID:** `OV-ENE-HR07-13`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

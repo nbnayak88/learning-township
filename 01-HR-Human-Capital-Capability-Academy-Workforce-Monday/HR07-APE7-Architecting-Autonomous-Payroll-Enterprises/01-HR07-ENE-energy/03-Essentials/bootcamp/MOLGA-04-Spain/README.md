@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Spain Payroll Bootcamp
 
+[Open the live Spain workbook](https://nbnayak88.github.io/payroll/Spain.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `04` · **ISO:** `ES` · **Case ID:** `OV-ENE-HR07-04`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

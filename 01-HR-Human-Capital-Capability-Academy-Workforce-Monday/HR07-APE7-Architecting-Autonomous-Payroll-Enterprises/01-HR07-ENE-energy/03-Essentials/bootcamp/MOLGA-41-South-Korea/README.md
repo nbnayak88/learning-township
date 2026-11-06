@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — South Korea Payroll Bootcamp
 
+[Open the live South Korea workbook](https://nbnayak88.github.io/payroll/South_Korea.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `41` · **ISO:** `KR` · **Case ID:** `OV-ENE-HR07-41`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

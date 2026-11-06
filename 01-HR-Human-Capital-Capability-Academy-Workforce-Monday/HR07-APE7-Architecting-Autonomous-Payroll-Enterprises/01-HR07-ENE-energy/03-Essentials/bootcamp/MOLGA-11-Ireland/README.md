@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Ireland Payroll Bootcamp
 
+[Open the live Ireland workbook](https://nbnayak88.github.io/payroll/Ireland.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `11` · **ISO:** `IE` · **Case ID:** `OV-ENE-HR07-11`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

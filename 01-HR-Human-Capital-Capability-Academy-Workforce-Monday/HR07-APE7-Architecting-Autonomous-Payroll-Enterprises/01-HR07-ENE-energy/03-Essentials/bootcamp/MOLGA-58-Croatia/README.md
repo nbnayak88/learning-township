@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Croatia Payroll Bootcamp
 
+[Open the live Croatia workbook](https://nbnayak88.github.io/payroll/Croatia.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `58` · **ISO:** `HR` · **Case ID:** `OV-ENE-HR07-58`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — India Payroll Bootcamp
 
+[Open the live India workbook](https://nbnayak88.github.io/payroll/India.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `40` · **ISO:** `IN` · **Case ID:** `OV-ENE-HR07-40`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

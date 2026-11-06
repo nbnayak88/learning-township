@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Thailand Payroll Bootcamp
 
+[Open the live Thailand workbook](https://nbnayak88.github.io/payroll/Thailand.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `26` · **ISO:** `TH` · **Case ID:** `OV-ENE-HR07-26`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

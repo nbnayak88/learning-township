@@ -1,5 +1,7 @@
 # OmniVerse Energy Ltd — Saudi Arabia Payroll Bootcamp
 
+[Open the live Saudi Arabia workbook](https://nbnayak88.github.io/payroll/Saudi_Arabia.html) · [Browse all 62 countries](https://nbnayak88.github.io/payroll/)
+
 **SuccessLabs Academy | HR07 APE7 | GICS01 Energy | Essentials | Applied case study**  
 **MOLGA:** `24` · **ISO:** `SA` · **Case ID:** `OV-ENE-HR07-24`  
 **Case status:** Fictional training scenario · statutory and SAP localization verification required

@@ -1,5 +1,7 @@
 # HR07 Essentials Bootcamp — Global Payroll Country Case Index
 
+[Open the country workbook website](https://nbnayak88.github.io/payroll/) · [62-country workbook index](https://github.com/nbnayak88/learning-township/tree/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR07-APE7-Architecting-Autonomous-Payroll-Enterprises/01-HR07-ENE-energy/03-Essentials/bootcamp/global-country-workbooks-2026-2027)
+
 **Enterprise:** OmniVerse Energy Ltd (fictional) · **Academy:** SuccessLabs Academy · **Domain:** Architecting Autonomous Payroll Enterprises · **GICS:** 01 Energy
 
 This index covers **62 country-grouping entries** from the working MOLGA reference list. They are **country-case learning tracks, not a claim that 62 SAP payroll localizations are supported**. All cases are illustrative and need current-country legal validation. Historical and international codes are explicitly identified.

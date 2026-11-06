@@ -1,5 +1,7 @@
 # Architecting Autonomous Payroll Enterprises — Energy Sector — Bootcamp
 
+[Open the country workbook website](https://nbnayak88.github.io/payroll/) · [62-country workbook index](https://github.com/nbnayak88/learning-township/tree/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR07-APE7-Architecting-Autonomous-Payroll-Enterprises/01-HR07-ENE-energy/03-Essentials/bootcamp/global-country-workbooks-2026-2027)
+
 **Pathway ID:** `PATH-HR07-ENE-Essentials-Bootcamp`  
 **Catalog Index:** 2660  
 **Unit ID:** HR07-ENE  
