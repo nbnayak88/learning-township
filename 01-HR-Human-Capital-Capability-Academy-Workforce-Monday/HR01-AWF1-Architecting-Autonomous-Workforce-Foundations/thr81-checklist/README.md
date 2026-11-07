@@ -1,11 +1,23 @@
-# THR81 · Employee Central Core exercise checklist
+# THR81 · Employee Central Core checklist
 
-[Open the live interactive checklist](https://nbnayak88.github.io/learning-township/thr81-checklist/)
+[Open the live checklist](https://nbnayak88.github.io/learning-township/thr81-checklist/)
 
-Covers all **26 exercises**, in source order, across eight units of SAP_LA_THR81_EN_2605_EX.pdf (2605). Exercise 26 is optional; Unit 9 has no exercises. The page contains 94 summarized task checkpoints, original exercise titles, PDF and printed page references, per-exercise notes, unit/search/progress filters, completion totals, JSON backup export/import and printing.
+All 26 exercises and 94 task checkpoints retain their original order and source page references. Exercise 26 is optional; Unit 9 has no exercises.
 
-Progress and notes are stored in localStorage for this browser and origin; no server account or cross-device sync is provided. Export a JSON backup before switching devices or clearing browser storage. A checked task is self-reported progress, not proof that SAP configuration passed validation.
+## Learning workspace
 
-Use the source workbook for exact field settings, tables and solutions. Exercises 1–2 prepare the training instance and baseline models. Exercise 14 can use the existing Parking object or the Garage object created in exercise 8.
+Official SuccessLabs logo at the right, exact tagline, Comfortaa typography, modern gradients, sticky header/footer and original daily topic quotes. Search, unit/status filters, task/exercise completion, core/overall totals, evidence notes, colored sticky notes, backup import/export and printing are included. Previously saved exercise progress keeps the same storage key.
 
-Canonical source: `index.html` in this directory. The same page is published at `thr81-checklist/index.html` on `gh-pages`; keep both copies aligned when making changes.
+## Admin editing
+
+Use username `admin` and the password supplied by the owner for this page. The browser-side editing lock is a convenience, **not secure authentication**. GitHub Pages serves public static files; this lock cannot protect secrets or authorize global publishing.
+
+The editor updates the page title, introduction, daily quotes and exercise/task wording. Save each edited section locally. Stable IDs, source pages and task counts stay fixed to preserve learner progress. To publish edits, select **Download edited HTML** and replace `thr81-checklist/index.html` on the `gh-pages` branch; also keep this directory's canonical source aligned. Downloading the file does not itself update the public website. Learner notes and progress are excluded from the exported public page.
+
+## Notes and audio
+
+Progress and notes stay in the current browser/device/origin. Export progress to back up or transfer them; backups include sticky notes and accept the original exercise-only format. Use the source workbook for exact field settings and solutions.
+
+Focus music is an original procedural sine-tone accompaniment generated locally with Web Audio. It uses no third-party recordings, samples or music services. Playback is opt-in, with pause and volume controls.
+
+Canonical source: `index.html` here. Published copy: `thr81-checklist/index.html` on `gh-pages`.
