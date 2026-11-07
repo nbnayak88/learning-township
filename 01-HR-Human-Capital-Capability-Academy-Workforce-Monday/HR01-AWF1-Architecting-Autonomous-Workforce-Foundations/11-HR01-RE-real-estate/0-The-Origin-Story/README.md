@@ -1,1 +1,5 @@
-# The Origin Story — Architecting Autonomous Workforce Foundations — Real Estate Sector\n\n**Unit ID:** HR01-RE\n\n**Level:** 0 — The Origin Story\n\n**Status:** Curriculum placeholder; not a published HUB pathway.\n\nExplore the origin, evolution, business context and architecture foundations of this unit.\n\nThe authoritative HUB CSV contains Levels 1–5 only. No Level 0 Pathway ID or content is invented.\n
+# OmniSpace HR01 — Origin Story
+
+Published educational narrative: [One transfer, three kinds of readiness](sprint/real-estate-workforce-foundations-evolution-sprint.md).
+
+[Canonical HR01 index](../README.md) and [controlled baseline](../01-Pre-Foundation/ec-case-baseline.md) govern the implementation continuation. Original three tabletop tests and planning ID are preserved. Publication is not an LMS enrollment or executed test.

@@ -2,7 +2,7 @@
 
 SuccessLabs Academy · HR01 — Workforce Foundations · GICS11 Real Estate · OmniSpace Real Estate Ltd.
 
-IIL — Industry Immersion Lab · Level 0 Origin Story · Sprint · Edition 2026-11-01
+IIL — Industry Immersion Lab · Level 0 Origin Story · Sprint · Edition 2026-11-07
 
 Mission: Architecting Experiences for a Better World.
 
@@ -20,7 +20,7 @@ Core HR source: fragmented HR, property operations, payroll, identity and contra
 
 OmniSpace is fictional. Original detailed research remains outside this Origin Story. Existing OSP persona and master IDs are retained. This incident, dialogue, worker records and proposed controls are new educational additions. They do not describe an actual event, configured deployment or achieved result.
 
-Unresolved source conflict: HR02a stipulates 19,000 employees, 24 countries, Dubai/New York HQ, $185B AUM and 1,150 assets. Several other HR pages use 5,000+ employees and seven regions; the enterprise register OSP-Q01 says scale/HQ were not supplied in its earlier parent-only review. Neither profile is promoted to a reconciled enterprise fact. Source financial figures, dates, error rates, roadmaps and benefit claims remain unvalidated fictional assumptions or proposals. No US-HQ/Hyderabad historical variant is silently merged.
+HR01 baseline resolution (2026-11-07): [Controlled case baseline](../../01-Pre-Foundation/ec-case-baseline.md) now governs this case: a synthetic 120-employee, two-property, same-employer India pilot. Earlier 19,000/24-country and 5,000+/seven-region profiles remain historical unvalidated variants, excluded from HR01 sizing. This resolves the HR01 teaching scope without claiming a reconciled global enterprise profile. Financial figures, achieved benefits and production configuration remain unvalidated.
 
 ## 3. Origins: the question survives the medium
 
@@ -192,3 +192,7 @@ Notion: https://app.notion.com/p/bd7f2d24c966478a92c7c06ec73a029a
 Sector index: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/real-estate-origin-stories.md
 
 Matching editions use deliberate publication and saved-content readback. Automatic synchronization, public student access, successful learner copying, executed tests and operational outcomes remain unverified.
+
+## Canonical implementation continuation
+
+[HR01 source of truth and gap-resolution index](../../README.md). Notion is a publication mirror; changes are incorporated in GitHub first. Companion Drive assets retain their earlier edition until explicitly republished.
