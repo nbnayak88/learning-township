@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The interface was successful; the ledger never received the transaction · FI12 · Architecting Connected Financial Enterprises</title><meta name="description" content="The interface was successful; the ledger never received the transaction">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">FI12 · Architecting Connected Financial Enterprises</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="energy.html">Energy</a></p><article><h1 id="the-interface-was-successful-the-ledger-never-received-the-transaction">The interface was successful; the ledger never received the transaction</h1>
+<h2 id="fi12-architecting-connected-financial-enterprises">FI12 — Architecting Connected Financial Enterprises</h2>
+<p><strong>SuccessLabs Academy · OmniVerse Energy Ltd. · IIL — Industry Immersion Lab</strong><br>
+<strong>Version:</strong> 1.0 · 31 October 2026 · <strong>Level:</strong> Origin Story → Pre-Foundation<br>
+<strong>Format:</strong> 120-minute sprint · Free — Community/Citizen Edition<br>
+<strong>Status:</strong> Published educational content, not an enrolled course or certification.</p>
+<blockquote>
+<p><strong>Your promise:</strong> In two hours, design one reconciled financial event exchange with safe replay and verified accounting outcome.</p>
+</blockquote>
+<p><strong>One story · One Decision Card · Three tabletop tests</strong></p>
+<h2 id="1-the-decision-behind-the-numbers">1. The decision behind the numbers</h2>
+<p>A payroll or procurement posting file is delivered to Finance, but a receiver rejects a cost-object mapping. The transport dashboard is green and an older replay risks posting the same obligation twice.</p>
+<p><strong>Workshop lead:</strong> Rajiv Kapoor — Chief Digital and Information Officer (OVE-P05).<br>
+<strong>Counterpart:</strong> Aditi Sen — Group Financial Controller (OVE-FI-OS-P01, new aspirational learning persona).</p>
+<p>Rajiv asks what the interface actually confirmed. Aditi asks which business reference, entity, currency and period identify the intended accounting effect.</p>
+<p>They define sender/receiver control totals, business acknowledgments, duplicate handling and a controlled repair/replay. A transport receipt becomes one checkpoint, not proof of a posted ledger entry.</p>
+<p><strong>Pause:</strong> Which fact would change your decision? Ask the counterpart one question before proposing a product.</p>
+<p>OmniVerse is a aspirational energy enterprise with 68,000 employees in 42 countries. Existing OVE-P identities come from the enterprise register. Aditi, Rohan and Amira are explicitly new aspirational operational personas with OVE-FI-OS-P identifiers. All new dialogue and incidents are learning designs. Country, entity, accounting basis and approved policy must be established rather than assumed.</p>
+<h2 id="2-origins-and-evolution-19702025">2. Origins and evolution, 1970–2025</h2>
+<p>These closed, non-overlapping periods are teaching lenses, not invention dates or universal adoption deadlines. Practices coexist. Before OmniVerse's aspirational 1978 founding, examples describe the wider domain.</p>
+<ul>
+<li><strong>1970–1989:</strong> Paper transfers and re-entry require manual comparison between departments.</li>
+<li><strong>1990–1999:</strong> Batch files automate exchange; missing records and timing gaps remain.</li>
+<li><strong>2000–2009:</strong> ERP interfaces connect subledgers and operations; technical success can hide business rejection.</li>
+<li><strong>2010–2019:</strong> APIs and events improve timeliness; ordering, identity and accounting reconciliation stay essential.</li>
+<li><strong>2020–2025:</strong> Assisted monitoring can propose recovery; safe replay still needs controlled business keys and policy.</li>
+</ul>
+<p><strong>Mindset:</strong> faster processing is useful when the evidence and decision remain trustworthy. Who bears the cost of an incorrect result: a supplier, worker, customer, investor or community?</p>
+<h2 id="3-ai-driven-horizon-20262050">3. AI-driven horizon, 2026–2050</h2>
+<p><strong>2026 starting experiment:</strong> let assistance prepare a low-risk draft, match suggestion or evidence summary. Test its limits before permitting consequential actions.</p>
+<p><strong>2030 checkpoint:</strong> compare the assisted process with a human-led baseline. Require source evidence, approved authority and a usable challenge route.</p>
+<p><strong>2035–2050 scenario:</strong> Imagine a 2050 financial ecosystem exchanging evidence among providers, banks and authorities. Shared semantics, authorization and final business acknowledgment remain necessary even when agents orchestrate transport.</p>
+<p><strong>Alternative:</strong> In a disconnected or fragmented ecosystem, durable queues and manual reconciliation must preserve accounting completeness without forced silent posting.</p>
+<p>These are possibilities and test questions, not forecasts, accounting interpretations or product commitments. Autonomy means bounded assistance under approved authority.</p>
+<h2 id="4-smallest-useful-architecture">4. Smallest useful architecture</h2>
+<p><strong>Capability — OVE-FI12-OS-CAP01:</strong> reconciled finance ecosystem integration.</p>
+<p><strong>Value stages — OVE-FI12-OS-VS01:</strong> Authorize source → transmit → validate → apply once → acknowledge → reconcile → repair/replay.</p>
+<p><strong>Objects:</strong> source business key, event ID, entity, ledger/period, currency, amount, mapping version and receiver acknowledgment.</p>
+<p><strong>Application responsibility:</strong> Source domains own business facts; Finance owns account determination and posting acceptance; integration owns delivery/observability/recovery; banks/authorities own their external outcomes.</p>
+<p><strong>Boundary:</strong> Delivery, validation, posting, clearing and settlement are distinct. FI12 does not choose tax policy, payment authority or asset treatment.</p>
+<p>The twelve FI themes are a curriculum axis, separate from the twelve architecture streams. SAP Finance is an optional demonstration context; edition, licensing and local requirements remain to validate. Live configuration, posting and payment execution are outside this paper sprint.</p>
+<h2 id="5-one-decision-card">5. One Decision Card</h2>
+<p>Use synthetic case <strong>OVE-FI12-OS-SYN001</strong>. Keep the response to one card or screen.</p>
+<ol>
+<li><strong>Need:</strong> one business decision, affected population and missing fact.</li>
+<li><strong>Evidence:</strong> source IDs, entity, period/effective date, currency or other relevant unit, and approved policy owner.</li>
+<li><strong>Ownership:</strong> source application, accountable decision maker and receiving owner.</li>
+<li><strong>Gate:</strong> prerequisite, authorized next state and failure/hold condition.</li>
+<li><strong>Alternative:</strong> Compare transport-only monitoring with business acknowledgments, control totals and a bounded repair/replay process.</li>
+<li><strong>Recovery:</strong> exception owner, escalation and safe correction/retry.</li>
+<li><strong>Proof:</strong> the three actual paper results, measure and stop/revise/proceed decision.</li>
+</ol>
+<p><strong>Requirement — OVE-FI12-OS-REQ01:</strong> trace each authorized source transaction to its receiver outcome and reconcile counts/amounts within an approved scope.</p>
+<p><strong>Decision — OVE-FI12-OS-ADR01:</strong> record your choice, trade-off and the evidence that would make you change it.</p>
+<h2 id="6-three-tabletop-tests">6. Three tabletop tests</h2>
+<h3 id="t01-receiver-rejects-mapping-after-delivery">T01 — Receiver rejects mapping after delivery</h3>
+<p><strong>Expected:</strong> Keep accounting outcome incomplete, preserve error evidence and assign the mapping owner.</p>
+<h3 id="t02-duplicate-or-reordered-event-arrives">T02 — Duplicate or reordered event arrives</h3>
+<p><strong>Expected:</strong> Prevent duplicate business effect and apply the agreed ordering/effective-time rule.</p>
+<h3 id="t03-repaired-batch-is-replayed">T03 — Repaired batch is replayed</h3>
+<p><strong>Expected:</strong> Reconcile already-applied and outstanding items by stable business key; demonstrate controlled completeness.</p>
+<p>Record <strong>input → expected → actual paper result → evidence note → revision → retest</strong>. Tests OVE-FI12-OS-T01/T02/T03 support REQ01; expected results are not observed tenant evidence.</p>
+<p><strong>Measure — OVE-FI12-OS-KPI01:</strong> in-scope source transactions reconciled to confirmed financial outcomes / transactions due, with unresolved aging. Name the accountable operational owner, baseline, exclusions and as-of date before setting a target.</p>
+<p><strong>Acceptance:</strong> your card preserves the boundary, names accountable owners, handles all three tests after revisions and supports a 60-second explanation. Unresolved facts remain visible; no achieved financial benefit is claimed.</p>
+<h2 id="7-your-120-minutes">7. Your 120 minutes</h2>
+<ul>
+<li><strong>0–20:</strong> explore the history and explain the enduring problem.</li>
+<li><strong>20–45:</strong> role-play the lead and counterpart; ask for evidence.</li>
+<li><strong>45–65:</strong> map responsibilities and consult one resource selectively.</li>
+<li><strong>65–100:</strong> complete the card and compare the alternative.</li>
+<li><strong>100–115:</strong> run the three tests and revise.</li>
+<li><strong>115–120:</strong> explain the decision and choose the next experiment.</li>
+</ul>
+<h2 id="8-resources-and-reflection">8. Resources and reflection</h2>
+<p><a href="https://learning.sap.com/learning-journeys/discovering-finance">SAP Discovering Finance</a> and <a href="https://learning.sap.com/learning-journeys/outlining-the-financial-accounting-overview">Financial Accounting Overview</a>: select the part relevant to financial integration and business reconciliation. Ask which application owns the fact and which person approves its interpretation. Read selectively within the sprint.</p>
+<p>Official resource pages checked 31 October 2026. Resources orient learning; current local authority guidance and qualified policy interpretation are still needed before production design, particularly for tax and reporting.</p>
+<p><strong>Reflect:</strong> What became clearer? Who could your design disadvantage? What evidence would overturn your choice?</p>
+<p><strong>Next Pre-Foundation experiment:</strong> write one event contract and reconcile a synthetic batch containing a reject and duplicate.</p>
+<p><strong>Mission:</strong> Architecting Experiences for a Better World.</p>
+<h2 id="traceability-and-scope">Traceability and scope</h2>
+<p>Inherited blueprint anchors: OVE-M02, OVE-M08, OVE-M14, OVE-M20. New namespace OVE-FI12-OS denotes this learning expansion, not previously approved enterprise requirements.</p>
+<p><strong>Trace:</strong> source → OVE-FI12-OS-CAP01 → VS01 → REQ01 → ADR01 → EXP01 (this experiment) → T01/T02/T03 → KPI01. All shortened IDs carry the same OVE-FI12-OS prefix. EV01 remains an empty evidence slot until a learner records results.</p>
+<p><strong>Educational alignment:</strong> TOGAF responsibility/options; BIZBOK capability/value; BABOK requirements/acceptance; DAMA ownership/quality; COBIT control accountability; ISO/IEC 27001 information protection. This is not a compliance certification.</p>
+<p><strong>Publication:</strong> matching manually published learning editions. Original enterprise research and financial hypotheses remain preserved.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and learn to architect decisions you can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>
