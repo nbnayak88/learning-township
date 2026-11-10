@@ -1,38 +1,70 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OmniTech — AI and GenAI Architecture on SAP BTP: Grounding, RAG, LLMs and Agents · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniTech — AI and GenAI Architecture on SAP BTP: Grounding, RAG, LLMs and Agents">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
-:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
 a{color:var(--accent)}
-header.top{border-bottom:1px solid var(--line);background:var(--card)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
-header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
 main{padding:24px 0 56px}
-article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
-h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
-h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
-h3{font-size:18px}
-blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
 blockquote p{margin:6px 0}
-.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
 table{border-collapse:collapse;width:100%;font-size:14px}
-th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{background:var(--chip);white-space:nowrap}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
 tr:last-child td{border-bottom:0}
-code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
-.meta{color:var(--muted);font-size:14px}
-.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
-.done{font-weight:600}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
 .na{color:var(--muted)}
-footer{color:var(--muted);font-size:13px;padding:0 0 32px}
-@media (max-width:600px){article{padding:14px}}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
 </style></head><body>
-<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div><p class="hq">An assistant is only as trustworthy as the context you let it hold.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
 <main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Information Technology</p><p class="chips"><a href="01-omnitech-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09 · AI governance, LLMOps</a><a href="10-migration-path-clean-core-readiness-sap.html">Demo 10 · Migration path, Clean Core readiness</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a><a href="12-resilience-failure-drills-sap.html">Demo 12 · Resilience, failure drills</a><a href="13-sustainability-green-it-sap.html">Demo 13 · Sustainability, green IT</a><a href="14-low-code-pro-code-vibe-code-citizen-development-sap.html">Demo 14 · Low-code, pro-code, vibe code</a><a href="15-industry-regulation-country-anchored-sap.html">Demo 15 · Regulation (case countries)</a></p><article><h1 id="omnitech-ai-and-genai-architecture-on-sap-btp-grounding-rag-llms-and-agents">OmniTech — AI and GenAI Architecture on SAP BTP: Grounding, RAG, LLMs and Agents</h1>
 <h2 id="demo-03-information-technology-it-btm11-ultimate-bootcamp">Demo 03 · Information Technology (IT) · BTM11 Ultimate Bootcamp</h2>
 <p><strong>SuccessLabs Academy · BTM11 · Information Technology (IT) · Ultimate (Level 5) · Bootcamp</strong>
@@ -497,5 +529,5 @@ footer{color:var(--muted);font-size:13px;padding:0 0 32px}
 </ul>
 <p><strong>Educational alignment:</strong> TOGAF for architecture views and decisions; BIZBOK for capability and value-stream distinctions; BABOK for needs and acceptance; DAMA for data ownership and quality; COBIT for accountable control. These mappings are educational and are not compliance certification or reproduction of proprietary standards.</p>
 <p><strong>Publication note:</strong> this is a demonstration file in the bootcamp folder. It is not proof that a course is live, purchasable or delivered.</p></article></div></main>
-<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/08-BTM11-IT-information-technology/05-Ultimate/bootcamp/03-ai-genai-rag-agents-sap-btp.md">View source on GitHub</a>.</div></footer>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/08-BTM11-IT-information-technology/05-Ultimate/bootcamp/03-ai-genai-rag-agents-sap-btp.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
 </body></html>
