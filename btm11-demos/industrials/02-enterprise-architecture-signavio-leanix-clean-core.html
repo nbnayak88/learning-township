@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OmniWorks Industrial Systems Ltd. — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniWorks Industrial Systems Ltd. — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core">
+<title>OmniWorks Industrial Systems Ltd. — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core · BTM11 Bootcamp Demos · The Northstar Architecture</title><meta name="description" content="OmniWorks Industrial Systems Ltd. — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -40,9 +40,35 @@ code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
 .done{font-weight:700}
 .na{color:var(--muted)}
 footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
 @media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
 </style></head><body>
-<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div><p class="hq">Clean architecture is the courage to say no to the shortcut that costs the future.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">BTM11 Bootcamp Demos · The Northstar Architecture</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">Clean architecture is the courage to say no to the shortcut that costs the future.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
 <style id="sla-reading-progress-style">
 :root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
 #sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
@@ -71,7 +97,7 @@ update();})();
 <strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 <strong>Series baseline:</strong> <a href="01-omniworks-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 AI/GenAI on SAP BTP</a> · <a href="../energy/02-enterprise-architecture-signavio-leanix-clean-core.html">Energy version of this demo</a></p>
 <blockquote>
-<p><strong>Evidence boundary:</strong> OmniWorks Industrial Systems Ltd. is a <strong>fictional educational case</strong>. This file is an architecture design and teaching demonstration. It is <strong>not</strong> a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains little or no SAP landscape detail, so application names, fact sheets, process codes and requirements below are <strong>synthetic placeholders</strong> (prefix <code>IND-SYN</code>) and are labelled as new design. Product names are learning examples, not confirmed OmniWorks implementations.</p>
+<p><strong>Evidence boundary:</strong> OmniWorks Industrial Systems Ltd. is an <strong>aspirational case study</strong>. This file is an architecture design and teaching demonstration. It is <strong>not</strong> a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains little or no SAP landscape detail, so application names, fact sheets, process codes and requirements below are <strong>synthetic placeholders</strong> (prefix <code>IND-SYN</code>) and are labelled as new design. Product names are learning examples, not confirmed OmniWorks implementations.</p>
 </blockquote>
 <hr>
 <h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
@@ -138,7 +164,7 @@ update();})();
 </tr>
 </tbody>
 </table></div>
-<p><strong>Source fictional stakeholder challenge (each M-section):</strong> <em>What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?</em></p>
+<p><strong>Source aspirational stakeholder challenge (each M-section):</strong> <em>What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?</em></p>
 <p><strong>Resolution categories (series vocabulary, not from this case):</strong> Configuration; Enhancement (BAdI / Key User Extensibility); Side-by-Side Extension (BTP); Custom Development (Private Edition only); Process Change; Third-Party Solution; Deferred. These seven categories come from the OmniVerse Energy source register (written in a SuccessFactors Employee Central gap-capture context). They were searched for in this case's source on 2026-11-10 and are <strong>not present there</strong>. This demo reuses them as a shared teaching vocabulary across the series and says so.</p>
 <h2 id="3-source-versus-new-design">3. Source versus new design</h2>
 <div class="tw"><table>
@@ -1024,7 +1050,7 @@ update();})();
 <tr>
 <td>P-05</td>
 <td>Prepare the one-page answer to "have you done this for a client?" using your real engagements, kept separate from this file</td>
-<td>Do not imply that fictional work is client work</td>
+<td>Do not imply that case-study work is client work</td>
 <td>Answer reviewed by you; no client names without permission</td>
 </tr>
 <tr>
@@ -1189,6 +1215,6 @@ update();})();
 <li>Series baseline: <a href="01-omniworks-case-baseline-sap-nextgen-architecture.html">Demo 01</a></li>
 </ul>
 <p><strong>Educational alignment:</strong> TOGAF for architecture views and decisions; BIZBOK for capability and value-stream distinctions; BABOK for needs and acceptance; DAMA for data ownership and quality; COBIT for accountable control. These mappings are educational and are not compliance certification or reproduction of proprietary standards.</p>
-<p><strong>Publication note:</strong> this is a demonstration file in the bootcamp folder. It is not proof that a course is live, purchasable or delivered.</p></article></div></main>
-<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/03-BTM11-IND-industrials/05-Ultimate/bootcamp/02-enterprise-architecture-signavio-leanix-clean-core.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+<p><strong>Publication note:</strong> this is a demonstration file in the bootcamp folder. It is not proof that a course is live, purchasable or delivered.</p></article><section class="close"><h2>Start with the target, then choose the path</h2><p>Join the free webinar and see how the Northstar architecture connects to the demos on this site.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/03-BTM11-IND-industrials/05-Ultimate/bootcamp/02-enterprise-architecture-signavio-leanix-clean-core.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
 </body></html>
