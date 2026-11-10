@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniTech — Sustainability and Green IT for Intelligent Operations · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniTech — Sustainability and Green IT for Intelligent Operations">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Information Technology</p><p class="chips"><a href="01-omnitech-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09 · AI governance, LLMOps</a><a href="10-migration-path-clean-core-readiness-sap.html">Demo 10 · Migration path, Clean Core readiness</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a><a href="12-resilience-failure-drills-sap.html">Demo 12 · Resilience, failure drills</a><a href="13-sustainability-green-it-sap.html">Demo 13 · Sustainability, green IT</a><a href="14-low-code-pro-code-vibe-code-citizen-development-sap.html">Demo 14 · Low-code, pro-code, vibe code</a><a href="15-industry-regulation-country-anchored-sap.html">Demo 15 · Regulation (case countries)</a></p><article><h1 id="omnitech-sustainability-and-green-it-for-intelligent-operations">OmniTech — Sustainability and Green IT for Intelligent Operations</h1>
+<h2 id="demo-13-of-the-btm11-information-technology-ultimate-bootcamp-demo-series">Demo 13 of the BTM11 Information Technology Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Information Technology (IT) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omnitech-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03</a> · <a href="04-knowledge-graph-context-engineering-sap.html">Demo 04</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a> · <a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07</a> · <a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08</a> · <a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09</a> · <a href="10-migration-path-clean-core-readiness-sap.html">Demo 10</a> · <a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11</a> · <a href="12-resilience-failure-drills-sap.html">Demo 12</a> · <a href="14-low-code-pro-code-vibe-code-citizen-development-sap.html">Demo 14</a> · <a href="15-industry-regulation-country-anchored-sap.html">Demo 15</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniTech is a <strong>fictional educational case</strong>. The case sources hold little sustainability data for the IT estate; the data products, levers and tests below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>IT-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>How does the architecture support sustainability reporting, and how does it keep the footprint of IT and AI itself visible?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> two separate topics for OmniTech: (1) data products that support sustainability reporting, and (2) the footprint of the IT and AI estate, with levers, an owner and an evidence rule.</p>
+<p><strong>What it does not show:</strong> an emissions figure, a footprint measurement or a reduction claim.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 39B technology provider; 98,000 employees; 41 countries; 11,500 clients</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Cloud and platform 31%; software 25%; cyber 18%; AI and data 16%; managed services 10%</td>
+</tr>
+<tr>
+<td>Source problem</td>
+<td>Fragmented lifecycle tooling, bespoke integrations, poor data and AI reuse, late security and observability</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Fund a bounded platform-to-client-outcome pilot with security, recovery and economic evidence before wider rollout.</p>
+<p><strong>Illustrative trigger (source):</strong> A client disputes an on-time delivery milestone; teams cannot reconcile release, incident and customer-success records (invented discovery context).</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, personas</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Sustainability data products, green IT levers, owners, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>SAP sustainability and cost tooling</td>
+<td>Not exercised here; verify product names and scope on SAP's pages before use</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Which sustainability data does OmniTech treat as governed data products, and who owns the footprint of its IT and AI estate?</p>
+<p><strong>Accountable owner (proposed):</strong> OTS-P09 Mei Lin for data and OTS-P13 Priya Shah for the footprint of operations.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OTS-P04</td>
+<td>Arjun Mehta, Chief Technology Officer</td>
+<td>Funds and prioritizes</td>
+</tr>
+<tr>
+<td>OTS-P12</td>
+<td>Daniel Weber, Director Enterprise Architecture</td>
+<td>Owns standards and review</td>
+</tr>
+<tr>
+<td>OTS-P10</td>
+<td>Omar Haddad, CISO and Supply-Chain Security Lead</td>
+<td>Security and boundary approval</td>
+</tr>
+<tr>
+<td>OTS-P09</td>
+<td>Mei Lin, Data Governance and Knowledge Lead</td>
+<td>Data and AI governance</td>
+</tr>
+<tr>
+<td>OTS-P05</td>
+<td>Elena Fischer, Chief Customer Success Officer</td>
+<td>Business owner (first scope)</td>
+</tr>
+<tr>
+<td>OTS-P08</td>
+<td>Marcus Okoro, SRE and Managed Services Director</td>
+<td>Business owner (second scope)</td>
+</tr>
+<tr>
+<td>OTS-P13</td>
+<td>Priya Shah, DevSecOps and Release Director</td>
+<td>Operational authority and veto</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-two-topics-kept-apart">6. Two topics, kept apart</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>What it covers</th>
+<th>Why separate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reporting data</td>
+<td>Business data used for sustainability reporting (energy, emissions, supplier evidence)</td>
+<td>Owned by business functions; follows reporting rules</td>
+</tr>
+<tr>
+<td>IT and AI footprint</td>
+<td>Energy and emissions from hosting, pipelines and model usage</td>
+<td>Owned by technology and operations; different data sources</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Sector emphasis:</strong> The sector's own footprint is the main lever: attribute compute to tenants and show cost and footprint together.</p>
+<h2 id="7-sustainability-data-products-new-design">7. Sustainability data products (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Data product</th>
+<th>Main source</th>
+<th>Main risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-tenant compute and energy view</td>
+<td>Hosting and billing data</td>
+<td>Attribution rules unstated</td>
+</tr>
+<tr>
+<td>Data centre and cloud footprint</td>
+<td>Provider reports</td>
+<td>Provider data not comparable</td>
+</tr>
+<tr>
+<td>Pipeline and AI compute</td>
+<td>Observability data</td>
+<td>Unmeasured assumptions</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each product follows the Demo 07 rule: one owner, a quality rule and a visible status. Every figure shown carries its basis (measured, allocated or estimated) and its period.</p>
+<h2 id="8-green-it-levers-new-design">8. Green IT levers (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Lever</th>
+<th>Idea</th>
+<th>Link to other demos</th>
+<th>Owner (proposed)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right-size non-production</td>
+<td>Switch off or shrink unused systems</td>
+<td>Demo 11 cost drivers</td>
+<td>OTS-P13 Priya Shah</td>
+</tr>
+<tr>
+<td>Retention rules</td>
+<td>Delete data nobody needs</td>
+<td>Demo 07 data products</td>
+<td>OTS-P09 Mei Lin</td>
+</tr>
+<tr>
+<td>AI cost per use</td>
+<td>Choose the smallest model that passes evaluation; cache repeated answers</td>
+<td>Demos 03 and 09</td>
+<td>OTS-P09 Mei Lin</td>
+</tr>
+<tr>
+<td>Event and batch volume</td>
+<td>Avoid chatty integrations; reduce redundant replays</td>
+<td>Demo 05</td>
+<td>OTS-P12 Daniel Weber</td>
+</tr>
+<tr>
+<td>Peak scheduling</td>
+<td>Move heavy jobs away from peaks where the business allows</td>
+<td>Demo 06 rhythm</td>
+<td>OTS-P13 Priya Shah</td>
+</tr>
+<tr>
+<td>Hosting choices</td>
+<td>Ask providers for footprint data; record the method</td>
+<td>Demo 10 paths</td>
+<td>OTS-P04 Arjun Mehta</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="9-measurement-approach-no-values-stated">9. Measurement approach (no values stated)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Design</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method</td>
+<td>Use a recognised accounting method (for example the Greenhouse Gas Protocol corporate standard) and record which scopes are in or out</td>
+<td>Method to be agreed</td>
+</tr>
+<tr>
+<td>Data centre efficiency</td>
+<td>Ask providers for facility efficiency data (ISO/IEC 30134 series is reading material; verify)</td>
+<td>Not collected</td>
+</tr>
+<tr>
+<td>Per-assistant footprint</td>
+<td>Estimate from usage and provider data; label as estimate</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Reporting basis</td>
+<td>measured, allocated or estimated, shown with each figure</td>
+<td>Rule</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10-hands-on-exercise-synthetic-data">10. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>Pick one data product and write its contract with the basis for each figure.</li>
+<li>List the footprint drivers of the Demo 03 assistant and mark which can be measured.</li>
+<li>Choose two levers and name the owner and the trade-off.</li>
+<li>Write the gate question for new assistants.</li>
+<li>Record open decisions in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Unattributed compute</td>
+<td>Compute cannot be tied to a tenant</td>
+<td>Gap shown; no tenant claim</td>
+</tr>
+<tr>
+<td>T2 Provider data mismatch</td>
+<td>Two providers report differently</td>
+<td>Method shown with each figure</td>
+</tr>
+<tr>
+<td>T3 AI compute ignored</td>
+<td>A new assistant skips footprint</td>
+<td>Gate asks for an estimate</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reported figures with basis and period shown</td>
+<td>Sample</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Data products with one owner and quality status</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Assistants with a footprint estimate before approval</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Levers with a named owner</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Two topics, kept apart</td>
+<td>Shared problem statement</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Data products and basis rule</td>
+<td>Two contracts</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Footprint drivers and levers</td>
+<td>Driver list, two levers</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Tabletop tests</td>
+<td>Three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://ghgprotocol.org/">Greenhouse Gas Protocol</a></li>
+<li><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 data foundation</a></li>
+<li>
+<p><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 operating model and FinOps</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/08-information-technology/omnitech-solutions-ltd">OmniTech case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/08-information-technology/omnitech-solutions-ltd/personas/persona-cards.md">OmniTech persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/08-BTM11-IT-information-technology/05-Ultimate/bootcamp/13-sustainability-green-it-sap.md">View source on GitHub</a>.</div></footer>
+</body></html>

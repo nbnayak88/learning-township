@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniSpace — Low-Code, Pro-Code, Vibe Coding and Citizen Development with Guardrails · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniSpace — Low-Code, Pro-Code, Vibe Coding and Citizen Development with Guardrails">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Real Estate</p><p class="chips"><a href="01-omnispace-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09 · AI governance, LLMOps</a><a href="10-migration-path-clean-core-readiness-sap.html">Demo 10 · Migration path, Clean Core readiness</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a><a href="12-resilience-failure-drills-sap.html">Demo 12 · Resilience, failure drills</a><a href="13-sustainability-green-it-sap.html">Demo 13 · Sustainability, green IT</a><a href="14-low-code-pro-code-vibe-code-citizen-development-sap.html">Demo 14 · Low-code, pro-code, vibe code</a><a href="15-industry-regulation-country-anchored-sap.html">Demo 15 · Regulation (case countries)</a></p><article><h1 id="omnispace-low-code-pro-code-vibe-coding-and-citizen-development-with-guardrails">OmniSpace — Low-Code, Pro-Code, Vibe Coding and Citizen Development with Guardrails</h1>
+<h2 id="demo-14-of-the-btm11-real-estate-ultimate-bootcamp-demo-series">Demo 14 of the BTM11 Real Estate Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Real Estate (RE) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omnispace-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03</a> · <a href="04-knowledge-graph-context-engineering-sap.html">Demo 04</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a> · <a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07</a> · <a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08</a> · <a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09</a> · <a href="10-migration-path-clean-core-readiness-sap.html">Demo 10</a> · <a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11</a> · <a href="12-resilience-failure-drills-sap.html">Demo 12</a> · <a href="13-sustainability-green-it-sap.html">Demo 13</a> · <a href="15-industry-regulation-country-anchored-sap.html">Demo 15</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniSpace is a <strong>fictional educational case</strong>. The case sources hold little on how applications get built; the build modes, candidate apps and guardrails below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>RE-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>Who may build what, with which tools, and what stops fast building from breaking the clean core, the data rules or security?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> four build modes, a placement rule, candidate citizen-built apps for OmniSpace, the areas reserved for pro-code, and the guardrails for AI-assisted ('vibe') coding.</p>
+<p><strong>What it does not show:</strong> a built app, a configured platform or a measured productivity gain.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>Not supplied in the case; no enterprise numerical profile, budget or quantified benefits</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Fictional global real-estate enterprise; property, tenant, ESG, recruiting, finance and procurement workstreams</td>
+</tr>
+<tr>
+<td>Source problem</td>
+<td>Fragmented architecture, processes, delivery evidence and adoption</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Select one capability or process pilot and prove its strategy-to-value traceability before scaling tools.</p>
+<p><strong>Illustrative trigger (source):</strong> A property-service workflow is declared live, but property teams still use spreadsheets, tenant requests remain unresolved, and test and adoption records cannot explain the claimed benefit (invented learning scenario).</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, personas</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Build modes, candidate apps, reserved areas, guardrails, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>SAP development tooling</td>
+<td>Not exercised here; verify product names and scope on SAP's pages before use</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Which build mode fits which kind of work at OmniSpace, and who approves a move from one mode to another?</p>
+<p><strong>Accountable owner (proposed):</strong> OSP-P10 Daniel Weber, with OSP-P09 Omar Haddad for security and OSP-P08 Mei Lin for data.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OSP-P05</td>
+<td>Sofia Tan, Chief Digital and Information Officer</td>
+<td>Funds and prioritizes</td>
+</tr>
+<tr>
+<td>OSP-P10</td>
+<td>Daniel Weber, Enterprise Architecture Director</td>
+<td>Owns standards and review</td>
+</tr>
+<tr>
+<td>OSP-P09</td>
+<td>Omar Haddad, CISO and Resilience Lead</td>
+<td>Security and boundary approval</td>
+</tr>
+<tr>
+<td>OSP-P08</td>
+<td>Mei Lin, Enterprise Data and ESG Lead</td>
+<td>Data and AI governance</td>
+</tr>
+<tr>
+<td>OSP-P03</td>
+<td>Maya Patel, Property Operations Director</td>
+<td>Business owner (first scope)</td>
+</tr>
+<tr>
+<td>OSP-P16</td>
+<td>Thomas van Dijk, Value Realization Office Lead</td>
+<td>Business owner (second scope)</td>
+</tr>
+<tr>
+<td>OSP-P14</td>
+<td>Ingrid Sørensen, Adoption and Change Lead</td>
+<td>Operational authority and veto</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-four-build-modes-new-design">6. Four build modes (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Who builds</th>
+<th>Typical work</th>
+<th>Data allowed</th>
+<th>Review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Citizen low-code</td>
+<td>Business staff trained and registered</td>
+<td>Forms, checklists, simple workflows</td>
+<td>Non-sensitive or pseudonymized, via governed data products</td>
+<td>Registry entry; owner; periodic review</td>
+</tr>
+<tr>
+<td>Professional low-code</td>
+<td>IT or analysts</td>
+<td>Apps and automations with integrations</td>
+<td>As entitled; read-only on governed data by default</td>
+<td>Design review; tests</td>
+</tr>
+<tr>
+<td>Pro-code</td>
+<td>Developers</td>
+<td>Extensions, services, integrations, anything touching the core or control data</td>
+<td>As entitled</td>
+<td>Admission rule (Demo 02), code review, security review, tests</td>
+</tr>
+<tr>
+<td>AI-assisted coding ('vibe coding')</td>
+<td>Anyone, inside one of the modes above</td>
+<td>Drafting code or flows with an AI tool</td>
+<td>Never real sensitive data in prompts</td>
+<td>Treated as untrusted code until reviewed; same review as the mode it lands in</td>
+</tr>
+</tbody>
+</table></div>
+<p>SAP names tools for low-code, process automation and pro-code development, and AI help for developers. Verify the current product names and scope on SAP's pages before any real design. This demo names modes, not products.</p>
+<h2 id="7-placement-rule">7. Placement rule</h2>
+<ol>
+<li>If it touches the core, a security boundary or regulated data: pro-code with review.</li>
+<li>If it reads governed data products and changes nothing outside its own tables: professional low-code.</li>
+<li>If it is a self-contained checklist or form with no sensitive data: citizen low-code.</li>
+<li>If it started as a citizen app and grows beyond these limits: it moves up a mode through review, with a named owner.</li>
+</ol>
+<h2 id="8-candidate-apps-and-reserved-areas-for-this-case">8. Candidate apps and reserved areas for this case</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Mode</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tenant request intake form</td>
+<td>Citizen build</td>
+<td>No lease decisions</td>
+</tr>
+<tr>
+<td>Building inspection checklist</td>
+<td>Citizen build</td>
+<td>No tenant personal data</td>
+</tr>
+<tr>
+<td>Service trend notebooks</td>
+<td>Analyst low-code on governed data</td>
+<td>Read-only</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Reserved for pro-code:</strong></p>
+<ul>
+<li>Anything touching tenant personal data</li>
+<li>Anything affecting lease or payment records</li>
+</ul>
+<h2 id="9-guardrails-for-ai-assisted-coding">9. Guardrails for AI-assisted coding</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Guardrail</th>
+<th>Design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompts</td>
+<td>No secrets, personal data or customer data in prompts; use synthetic samples</td>
+</tr>
+<tr>
+<td>Generated code</td>
+<td>Reviewed by a person; tests written or checked by a person</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>Record which tool produced which part and who reviewed it</td>
+</tr>
+<tr>
+<td>Dependencies and licences</td>
+<td>Check libraries and licences before adoption</td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td>Scan for credentials before any commit</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>Nothing reaches production outside the pipeline of Demo 10 and the change rules of Demo 06</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10-registry-and-lifecycle">10. Registry and lifecycle</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registry</td>
+<td>Every citizen and low-code app is registered with owner, purpose, data used and review date</td>
+</tr>
+<tr>
+<td>Ownership</td>
+<td>An app without an owner is retired or reassigned</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Periodic review of use, data and permissions</td>
+</tr>
+<tr>
+<td>Retirement</td>
+<td>Retire unused apps; delete their data per retention rules</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="11-hands-on-exercise-synthetic-data">11. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>Place the three candidate apps in a mode using the placement rule.</li>
+<li>Write one registry entry for the first app.</li>
+<li>Take one AI-generated snippet (synthetic) and review it against the guardrails.</li>
+<li>Decide what happens when a citizen app outgrows its mode.</li>
+<li>Record open decisions in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Tenant data in a citizen app</td>
+<td>An app stores tenant data</td>
+<td>Blocked</td>
+</tr>
+<tr>
+<td>T2 Spreadsheet macro as production</td>
+<td>A macro runs a live process</td>
+<td>Registry and owner or retirement</td>
+</tr>
+<tr>
+<td>T3 Orphan app</td>
+<td>An app loses its owner</td>
+<td>Registry flags it</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apps in the registry with owner and review date</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Apps placed in a mode with a recorded reason</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>AI-assisted changes with a recorded reviewer</td>
+<td>Sample</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Reserved areas with no citizen access</td>
+<td>Access review</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Why fast building needs guardrails</td>
+<td>Shared problem statement</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Modes and placement rule</td>
+<td>Three apps placed</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Guardrails and registry</td>
+<td>One entry, one review</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Tabletop tests</td>
+<td>Three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02: Clean Core admission rule</a></li>
+<li><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08: security and zero trust</a></li>
+<li>
+<p><a href="https://www.sap.com/products/technology-platform/build.html">SAP Build</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/11-real-estate/omnispace-real-estate-ltd">OmniSpace case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/11-real-estate/omnispace-real-estate-ltd/personas/persona-cards.md">OmniSpace persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/11-BTM11-RE-real-estate/05-Ultimate/bootcamp/14-low-code-pro-code-vibe-code-citizen-development-sap.md">View source on GitHub</a>.</div></footer>
+</body></html>
