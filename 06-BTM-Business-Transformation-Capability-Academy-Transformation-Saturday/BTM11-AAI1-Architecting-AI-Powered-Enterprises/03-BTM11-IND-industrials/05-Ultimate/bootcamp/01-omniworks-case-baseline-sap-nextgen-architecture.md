@@ -131,9 +131,9 @@ Recording, assessment and attendance tracking can be layered onto this pattern w
 | 01 | Case baseline (this file) | Written |
 | 02 | Enterprise architecture, process modeling, application portfolio and Clean Core | Written ([this sector](02-enterprise-architecture-signavio-leanix-clean-core.md)) |
 | 03 | AI and GenAI architecture on SAP BTP: grounding, RAG, agents | Written ([this sector](03-ai-genai-rag-agents-sap-btp.md)) |
-| 04 | Knowledge graph and context engineering | Planned |
-| 05 | Integration and event-driven architecture with an event mesh | Planned |
-| 06 | Basis modernization, AIOps and autonomous operations | Planned |
+| 04 | Knowledge graph and context engineering | Written ([this sector](04-knowledge-graph-context-engineering-sap.md)) |
+| 05 | Integration and event-driven architecture with an event mesh | Written ([this sector](05-integration-event-driven-advanced-event-mesh-sap.md)) |
+| 06 | Basis modernization, AIOps and autonomous operations | Written ([this sector](06-basis-modernization-aiops-autonomous-operations-sap.md)) |
 
 ## 10. Sources and traceability
 
