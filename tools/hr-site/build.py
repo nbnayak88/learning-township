@@ -77,14 +77,14 @@ def md2html(md):
 INTERNAL = re.compile(r"github\.com|githubusercontent|notion\.(com|so|site)|docs\.google\.com|drive\.google\.com|\.pptx|\.xlsx", re.I)
 
 
-PROSE = re.compile(r"Notion|Google (Doc|Slides|Sheets|Drive)|\bDrive\b|GitHub|\bgit\b|Drive refresh", re.I)
+PROSE = re.compile(r"Matching companions|synchroni|readback|Standing user approval|sector index|Planning reference|Notion|Google (Doc|Slides|Sheets|Drive)|\bDrive\b|GitHub|\bgit\b|Drive refresh", re.I)
 
 
 def sanitize(md):
     """Public pages carry no repo, Notion or Google Workspace references; official resources stay."""
     out, skip = [], False
     for line in md.splitlines():
-        if re.match(r"#{1,3}\s+Companion workspace", line):
+        if re.match(r"#{1,3}\s+(?:\d+\.\s+)?(Companion workspace|Source and (edition|companion) record|Matching companions)", line):
             skip = True
             continue
         if skip and re.match(r"#{1,3}\s", line):
@@ -198,9 +198,14 @@ def build_series(S, A, peers):
         nav = f'<p class="meta"><a href="../index.html">All sectors</a> · {html.escape(s["name"])}</p>'
         write(f"{out}/sectors/{s['slug']}.html", page(site, f"{s['ent']} · {site}", f"{code} pathway catalog for {s['name']}", "../", A["q_sector"], nav, body + cta_html, f"{GHT}{rel(S['path'])}/{s['dir']}"))
     cards = "".join(f'<div class="card"><span class="num">{html.escape(s["name"])}</span><h3>{html.escape(s["ent"])}</h3><p class="meta">{len(s["rows"])} pathway records</p><p>{("<a href=sectors/" + s["slug"] + "-origin-story.html>Origin lesson</a> · ") if s["lesson"] else ""}<a href="sectors/{s["slug"]}.html">Catalog</a></p></div>' for s in S["sectors"])
-    first = S["sectors"][0]; dur = {}
-    for r in first["rows"]:
-        dur.setdefault(r["level"], {})[r["fmt"]] = r["dur"]
+    import collections
+    cnt = collections.defaultdict(collections.Counter)
+    for s in S["sectors"]:
+        for r in s["rows"]:
+            cnt[(r["level"], r["fmt"])][r["dur"]] += 1
+    dur = {}
+    for (lv, fm), c in cnt.items():
+        dur.setdefault(lv, {})[fm] = c.most_common(1)[0][0]
     fmts = [FLABEL.get(f, f.capitalize()) for f in FORMATS]
     trs = "".join("<tr><td><strong>%s</strong></td>%s</tr>" % (lvl, "".join(f"<td>{html.escape(dur.get(lvl, {}).get(f, '—'))}</td>" for f in fmts)) for _, lvl in LEVELS)
     total = sum(len(s["rows"]) for s in S["sectors"])
