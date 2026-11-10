@@ -111,7 +111,10 @@ Recording, assessment and attendance tracking can be layered onto this pattern w
 | 06 | Basis modernization, AIOps and autonomous operations | Written (`06-basis-modernization-aiops-autonomous-operations-sap.md`) |
 | 07 | Data foundation for AI: data products, ownership, quality | Written (`07-data-foundation-data-products-sap-business-data-cloud.md`) |
 | 08 | Security and zero trust for AI assistants and agents | Written (`08-security-zero-trust-ai-agents-sap-btp.md`) |
+| 09 | AI governance, evaluation and LLMOps | Written (`09-ai-governance-evaluation-llmops-sap.md`) |
+| 10 | Migration path and Clean Core readiness | Written (`10-migration-path-clean-core-readiness-sap.md`) |
 | 11 | Operating model and FinOps for intelligent operations | Written (`11-operating-model-finops-intelligent-operations-sap.md`) |
+| 12 | Resilience and failure drills | Written (`12-resilience-failure-drills-sap.md`) |
 
 ## 9. Sources and traceability
 
