@@ -1,0 +1,149 @@
+# OmniWorks Industrial Systems Ltd. — Industry-Specific Regulation: Country-Anchored Design Questions
+
+## Demo 15 of the BTM11 Industrials Ultimate Bootcamp demo series
+
+**SuccessLabs Academy · BTM11 · Industrials (IND) · Ultimate (Level 5) · Bootcamp**
+**Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+**Series baseline:** [Demo 01 case baseline](01-omniworks-case-baseline-sap-nextgen-architecture.md) · **Related:** [Demo 02](02-enterprise-architecture-signavio-leanix-clean-core.md) · [Demo 03](03-ai-genai-rag-agents-sap-btp.md) · [Demo 04](04-knowledge-graph-context-engineering-sap.md) · [Demo 05](05-integration-event-driven-advanced-event-mesh-sap.md) · [Demo 06](06-basis-modernization-aiops-autonomous-operations-sap.md) · [Demo 07](07-data-foundation-data-products-sap-business-data-cloud.md) · [Demo 08](08-security-zero-trust-ai-agents-sap-btp.md) · [Demo 09](09-ai-governance-evaluation-llmops-sap.md) · [Demo 10](10-migration-path-clean-core-readiness-sap.md) · [Demo 11](11-operating-model-finops-intelligent-operations-sap.md) · [Demo 12](12-resilience-failure-drills-sap.md) · [Demo 13](13-sustainability-green-it-sap.md) · [Demo 14](14-low-code-pro-code-vibe-code-citizen-development-sap.md)
+
+> **Evidence boundary:** OmniWorks Industrial Systems Ltd. is a **fictional educational case**. The case sources name headquarters countries but almost no regulations; this file points to regimes to verify and does not state legal conclusions. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix `IND-SYN` and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.
+
+---
+
+## 1. The question this file answers
+
+> *Which regulatory regimes touch the architecture, in the countries this case names, and what evidence would each need?*
+
+**What this file shows:** the countries the case names, the regimes to verify for each, which design element each regime touches, and the evidence slot each would need.
+
+**What it does not show:** legal advice, a compliance assessment or a claim that any regime is met. Every instrument is a pointer to verify with counsel.
+
+## 2. Case anchor (source facts)
+
+| Attribute | Case baseline |
+|---|---|
+| Scale | USD 48B revenue; 74,000 employees; 36 countries; 61 plants and facilities; 320 service depots; 7,200 suppliers |
+| Business mix | Industrial automation 27%; aerospace and defence 23%; transport and mobility 19%; infrastructure 16%; aftermarket and lifecycle services 15% |
+| Burning platform | Recurring transport asset failures cannot be consistently traced across configuration, telemetry, supplier batches and maintenance history |
+
+**Countries named by the case:** Munich (Germany) and Pune (India), per the case profile.
+
+**Country rule for this series:** only countries named in the case are used. No other country is assumed.
+
+**Illustrative trigger (source):** Repeat customer asset failures expose fragmented engineering-to-service information, and the business wants to sell uptime rather than equipment (hero story).
+
+## 3. Source versus new design
+
+| Element | Status |
+|---|---|
+| Case facts, headquarters countries | **Source** |
+| Regime pointers, design touchpoints, evidence slots, tests | **New design (illustrative)** |
+| Legal status of any instrument | Public sources reviewed 2026-11-10 for two items only (see section 6); everything else is **verify with counsel** |
+
+## 4. Decision under discussion
+
+**Decision:** Which regimes does OmniWorks treat as design constraints from the start, who confirms them, and where does the evidence live?
+
+**Accountable owner (proposed):** OW-P06 Marcus Vogel and OW-P15 Dr. Leila Haddad, with legal counsel confirming each regime. Counsel is not a persona in the case and is shown here as an external role.
+
+## 5. Personas and proposed decision rights
+
+| Source ID | Persona | Proposed role in this demo |
+|---|---|---|
+| OW-P05 | Priya Nair, CIDO | Funds and prioritizes |
+| OW-P11 | Hannah Fischer, Director, Enterprise Architecture | Owns standards and review |
+| OW-P06 | Marcus Vogel, CISO | Security and boundary approval |
+| OW-P15 | Dr. Leila Haddad, Head of Data Governance & AI | Data and AI governance |
+| OW-P09 | Isabel Torres, Chief Customer & Service Officer | Business owner (first scope) |
+| OW-P10 | Ravi Deshpande, VP Manufacturing, Pune Operations | Business owner (second scope) |
+| OW-P12 | Daniel Okafor, Field Service Operations Manager | Operational authority and veto |
+
+Decision rights are **proposed** and need discovery validation.
+
+## 6. Regimes to verify
+
+| Area | Instrument or authority to verify | Touches this design | Evidence slot |
+|---|---|---|---|
+| Personal data (Germany, EU) | General Data Protection Regulation and the German federal data protection act (verify) | Workforce and customer data | Records of processing, transfer basis |
+| Personal data (India) | Digital Personal Data Protection Act 2023 and Rules 2025 (phased) | Workforce and customer data | Data map, consent and notice records |
+| Cybersecurity (Germany, EU) | NIS2 Directive and its German implementation (verify status) | Enterprise security and incident reporting | Risk measures and incident path |
+| AI (EU) | EU AI Act; machinery-embedded AI has special treatment (see section 6) | Assistants and any AI in products | Use-case class; product scope decision |
+| Products with digital elements (EU) | EU Machinery Regulation and Cyber Resilience Act (verify scope and dates) | Product configuration and service data | Product security evidence, owner |
+
+**India personal data law: phased commencement reported by a law-firm summary (verify).** The Digital Personal Data Protection Rules 2025 were notified in November 2025. The summary reports: institutional provisions from 13 November 2025; consent manager registration from 12 November 2026; and the remaining provisions, including notice and consent, obligations of data fiduciaries, cross-border transfer rules, breach notification, security safeguards and retention and erasure, from 12 May 2027. Source: [AZB & Partners summary](https://www.azbpartners.com/bank/indias-digital-personal-data-protection-act-phased-rollout-and-key-compliance-milestones/).
+
+**EU AI Act timing reported by a law-firm summary (verify the final text).** A provisional political agreement of 6 May 2026 (the 'digital omnibus') reportedly moves high-risk obligations for stand-alone systems from 2 August 2026 to 2 December 2027, and for AI in regulated products to 2 August 2028; transparency obligations otherwise stay on schedule for 2 August 2026. The summary said new dates take legal effect only on publication of the amending act, so confirm that it has been published. Source: [Gibson Dunn summary](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/).
+
+## 7. Design questions every regime raises
+
+| Question | Design element | Owner (proposed) |
+|---|---|---|
+| Where does each data set live and who may move it? | Data products and residency rules (Demo 07) | OW-P15 Dr. Leila Haddad |
+| What must be reported, to whom, and how fast? | Incident path (Demos 06 and 12) | OW-P06 Marcus Vogel |
+| Which AI uses fall under a rule? | Use-case class and change control (Demo 09) | OW-P15 Dr. Leila Haddad |
+| Which third parties are involved? | Dependency register (Demo 12) | OW-P11 Hannah Fischer |
+| What evidence will an authority ask for? | Evidence slots in each demo | OW-P12 Daniel Okafor |
+
+**Cross-border flows:** the case names more than one country, so every flow between them needs a recorded basis and an owner. Do not assume one country's rule covers another.
+
+## 8. Hands-on exercise (synthetic data)
+
+1. List the data flows between the named countries (synthetic) and mark the owner of each.
+2. For two regimes, write the evidence slot and who supplies it.
+3. Walk the first tabletop test and mark who is told and in what order.
+4. Mark every statement in the file that still needs counsel to confirm.
+5. Record open decisions in the run log.
+
+## Three tabletop tests
+
+A tabletop test is a paper walk-through, not a technical test of a running system.
+
+| Test | Setup | Expected finding |
+|---|---|---|
+| T1 Cross-border service data | Service data moves between Germany and India | Transfer basis and residency recorded |
+| T2 AI in product versus enterprise AI | A team treats both the same | Scope decision recorded; owner named |
+| T3 Product security evidence gap | A product has no security record | Evidence slot empty; no claim |
+
+## Acceptance (measures only; no baselines or targets asserted)
+
+| Measure | How it is observed | Value |
+|---|---|---|
+| Regimes with an owner and an evidence slot | Count | Not measured |
+| Cross-border flows with a recorded basis | Count | Not measured |
+| Statements confirmed by counsel | Count of confirmed items | Not measured |
+| Incident paths per named country | Count | Not measured |
+
+No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.
+
+## 2–3 hour session pattern
+
+| Time | Activity | Output |
+|---|---|---|
+| 0:00 to 0:20 | Why regulation shapes architecture | Shared problem statement |
+| 0:20 to 1:00 | Countries and regime pointers | Verified list with gaps marked |
+| 1:00 to 1:45 | Cross-border flows and evidence | Flow table and slots |
+| 1:45 to 2:15 | Tabletop tests | Three findings |
+| 2:15 to 2:30 | Decisions | Open items with owners |
+
+## Evidence status and run log
+
+| Item | Status |
+|---|---|
+| Design in this file | Written |
+| Walk-through with a live audience | Not yet run |
+| Hands-on run on a vendor-provided system | Not yet run |
+| Customer-confirmed requirements | Not applicable (fictional case) |
+
+| Date | Audience | Exercise run | Observed result | Changes made |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+## Resources
+
+- [Demo 07 data foundation](07-data-foundation-data-products-sap-business-data-cloud.md)
+- [Demo 09 AI governance](09-ai-governance-evaluation-llmops-sap.md)
+- [Demo 12 resilience](12-resilience-failure-drills-sap.md)
+
+- [OmniWorks Industrial Systems Ltd. case library](https://github.com/nbnayak88/successlabs-case-studies/tree/main/03-industrials/omniworks-industrial-systems)
+- [OmniWorks Industrial Systems Ltd. persona cards](https://github.com/nbnayak88/successlabs-case-studies/blob/main/03-industrials/omniworks-industrial-systems/personas/persona-cards.md)
+

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniCapital Financial Group — Industry-Specific Regulation: Country-Anchored Design Questions · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniCapital Financial Group — Industry-Specific Regulation: Country-Anchored Design Questions">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Financials</p><p class="chips"><a href="01-omnicapital-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09 · AI governance, LLMOps</a><a href="10-migration-path-clean-core-readiness-sap.html">Demo 10 · Migration path, Clean Core readiness</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a><a href="12-resilience-failure-drills-sap.html">Demo 12 · Resilience, failure drills</a><a href="13-sustainability-green-it-sap.html">Demo 13 · Sustainability, green IT</a><a href="14-low-code-pro-code-vibe-code-citizen-development-sap.html">Demo 14 · Low-code, pro-code, vibe code</a><a href="15-industry-regulation-country-anchored-sap.html">Demo 15 · Regulation (case countries)</a></p><article><h1 id="omnicapital-financial-group-industry-specific-regulation-country-anchored-design-questions">OmniCapital Financial Group — Industry-Specific Regulation: Country-Anchored Design Questions</h1>
+<h2 id="demo-15-of-the-btm11-financials-ultimate-bootcamp-demo-series">Demo 15 of the BTM11 Financials Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Financials (FIN) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omnicapital-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03</a> · <a href="04-knowledge-graph-context-engineering-sap.html">Demo 04</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a> · <a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07</a> · <a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08</a> · <a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09</a> · <a href="10-migration-path-clean-core-readiness-sap.html">Demo 10</a> · <a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11</a> · <a href="12-resilience-failure-drills-sap.html">Demo 12</a> · <a href="13-sustainability-green-it-sap.html">Demo 13</a> · <a href="14-low-code-pro-code-vibe-code-citizen-development-sap.html">Demo 14</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniCapital Financial Group is a <strong>fictional educational case</strong>. The case sources name headquarters countries but almost no regulations; this file points to regimes to verify and does not state legal conclusions. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>FIN-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>Which regulatory regimes touch the architecture, in the countries this case names, and what evidence would each need?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> the countries the case names, the regimes to verify for each, which design element each regime touches, and the evidence slot each would need.</p>
+<p><strong>What it does not show:</strong> legal advice, a compliance assessment or a claim that any regime is met. Every instrument is a pointer to verify with counsel.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 46B financial group; USD 1.4T AUM; 58M customers; 32 countries</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Retail 31%; commercial 24%; wealth 19%; insurance 16%; payments and markets 10%</td>
+</tr>
+<tr>
+<td>Source problem</td>
+<td>Fragmented customer, product, risk and transaction data; manual review; stronger fraud, cyber and model-risk control needs</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Countries named by the case:</strong> London (United Kingdom) and Mumbai (India), per the case profile.</p>
+<p><strong>Country rule for this series:</strong> only countries named in the case are used. No other country is assumed.</p>
+<p><strong>Illustrative trigger (source):</strong> An SME customer repeatedly submits the same document while customer service and verification teams show different exception status (invented discovery context, not an actual incident).</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, headquarters countries</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Regime pointers, design touchpoints, evidence slots, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>Legal status of any instrument</td>
+<td>Public sources reviewed 2026-11-10 for two items only (see section 6); everything else is <strong>verify with counsel</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Which regimes does OmniCapital treat as design constraints from the start, who confirms them, and where does the evidence live?</p>
+<p><strong>Accountable owner (proposed):</strong> OCF-P10 Omar Haddad and OCF-P09 Mei Tan, with legal counsel confirming each regime. Counsel is not a persona in the case and is shown here as an external role.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCF-P06</td>
+<td>Sofia Chen, Chief Digital and Information Officer</td>
+<td>Funds and prioritizes</td>
+</tr>
+<tr>
+<td>OCF-P12</td>
+<td>Daniel Weber, Director Enterprise Architecture</td>
+<td>Owns standards and review</td>
+</tr>
+<tr>
+<td>OCF-P10</td>
+<td>Omar Haddad, CISO and Resilience Lead</td>
+<td>Security and boundary approval</td>
+</tr>
+<tr>
+<td>OCF-P09</td>
+<td>Mei Tan, Customer Identity and Data Lead</td>
+<td>Data and AI governance</td>
+</tr>
+<tr>
+<td>OCF-P03</td>
+<td>Priya Rao, Chief Customer and Retail Officer</td>
+<td>Business owner (first scope)</td>
+</tr>
+<tr>
+<td>OCF-P08</td>
+<td>Marcus Okoro, Financial Crime Operations Director</td>
+<td>Business owner (second scope)</td>
+</tr>
+<tr>
+<td>OCF-P05</td>
+<td>Elena Fischer, Chief Compliance and Conduct Officer</td>
+<td>Operational authority and veto</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-regimes-to-verify">6. Regimes to verify</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Instrument or authority to verify</th>
+<th>Touches this design</th>
+<th>Evidence slot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personal data (United Kingdom)</td>
+<td>UK GDPR and Data Protection Act 2018 (verify)</td>
+<td>Customer and workforce data</td>
+<td>Records of processing, rights process</td>
+</tr>
+<tr>
+<td>Operational resilience (United Kingdom)</td>
+<td>Prudential and conduct regulator operational resilience rules (verify)</td>
+<td>Important business services and the drills in Demo 12</td>
+<td>Impact tolerances and test evidence</td>
+</tr>
+<tr>
+<td>Outsourcing and third parties (United Kingdom)</td>
+<td>Regulator expectations on outsourcing and critical third parties (verify)</td>
+<td>Cloud and SaaS dependencies</td>
+<td>Register and exit plans</td>
+</tr>
+<tr>
+<td>Personal data (India)</td>
+<td>Digital Personal Data Protection Act 2023 and Rules 2025 (phased)</td>
+<td>Customer and workforce data</td>
+<td>Data map, consent and notice records</td>
+</tr>
+<tr>
+<td>Financial sector IT and outsourcing (India)</td>
+<td>Reserve Bank of India directions on IT governance and outsourcing (verify)</td>
+<td>Core interfaces and partner gateways</td>
+<td>Control evidence</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>India personal data law: phased commencement reported by a law-firm summary (verify).</strong> The Digital Personal Data Protection Rules 2025 were notified in November 2025. The summary reports: institutional provisions from 13 November 2025; consent manager registration from 12 November 2026; and the remaining provisions, including notice and consent, obligations of data fiduciaries, cross-border transfer rules, breach notification, security safeguards and retention and erasure, from 12 May 2027. Source: <a href="https://www.azbpartners.com/bank/indias-digital-personal-data-protection-act-phased-rollout-and-key-compliance-milestones/">AZB &amp; Partners summary</a>.</p>
+<h2 id="7-design-questions-every-regime-raises">7. Design questions every regime raises</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Design element</th>
+<th>Owner (proposed)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where does each data set live and who may move it?</td>
+<td>Data products and residency rules (Demo 07)</td>
+<td>OCF-P09 Mei Tan</td>
+</tr>
+<tr>
+<td>What must be reported, to whom, and how fast?</td>
+<td>Incident path (Demos 06 and 12)</td>
+<td>OCF-P10 Omar Haddad</td>
+</tr>
+<tr>
+<td>Which AI uses fall under a rule?</td>
+<td>Use-case class and change control (Demo 09)</td>
+<td>OCF-P09 Mei Tan</td>
+</tr>
+<tr>
+<td>Which third parties are involved?</td>
+<td>Dependency register (Demo 12)</td>
+<td>OCF-P12 Daniel Weber</td>
+</tr>
+<tr>
+<td>What evidence will an authority ask for?</td>
+<td>Evidence slots in each demo</td>
+<td>OCF-P05 Elena Fischer</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Cross-border flows:</strong> the case names more than one country, so every flow between them needs a recorded basis and an owner. Do not assume one country's rule covers another.</p>
+<h2 id="8-hands-on-exercise-synthetic-data">8. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>List the data flows between the named countries (synthetic) and mark the owner of each.</li>
+<li>For two regimes, write the evidence slot and who supplies it.</li>
+<li>Walk the first tabletop test and mark who is told and in what order.</li>
+<li>Mark every statement in the file that still needs counsel to confirm.</li>
+<li>Record open decisions in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Two-regulator incident</td>
+<td>An outage touches UK and India services</td>
+<td>Both reporting paths and one owner</td>
+</tr>
+<tr>
+<td>T2 Third-party register gap</td>
+<td>A SaaS dependency is missing from the register</td>
+<td>Register updated; owner named</td>
+</tr>
+<tr>
+<td>T3 Unevidenced tolerance</td>
+<td>An impact tolerance has no test</td>
+<td>Evidence slot empty; no claim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regimes with an owner and an evidence slot</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Cross-border flows with a recorded basis</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Statements confirmed by counsel</td>
+<td>Count of confirmed items</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Incident paths per named country</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Why regulation shapes architecture</td>
+<td>Shared problem statement</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Countries and regime pointers</td>
+<td>Verified list with gaps marked</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Cross-border flows and evidence</td>
+<td>Flow table and slots</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Tabletop tests</td>
+<td>Three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 data foundation</a></li>
+<li><a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09 AI governance</a></li>
+<li>
+<p><a href="12-resilience-failure-drills-sap.html">Demo 12 resilience</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/07-financials/omnicapital-financial-group-ltd">OmniCapital Financial Group case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/07-financials/omnicapital-financial-group-ltd/personas/persona-cards.md">OmniCapital Financial Group persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/07-BTM11-FIN-financials/05-Ultimate/bootcamp/15-industry-regulation-country-anchored-sap.md">View source on GitHub</a>.</div></footer>
+</body></html>

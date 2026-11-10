@@ -144,6 +144,9 @@ Recording, assessment and attendance tracking can be layered onto this pattern w
 | 10 | Migration path and Clean Core readiness | Written ([this sector](10-migration-path-clean-core-readiness-sap.md)) |
 | 11 | Operating model and FinOps for intelligent operations | Written ([this sector](11-operating-model-finops-intelligent-operations-sap.md)) |
 | 12 | Resilience and failure drills | Written ([this sector](12-resilience-failure-drills-sap.md)) |
+| 13 | Sustainability and green IT | Written ([this sector](13-sustainability-green-it-sap.md)) |
+| 14 | Low-code, pro-code, vibe code and citizen development | Written ([this sector](14-low-code-pro-code-vibe-code-citizen-development-sap.md)) |
+| 15 | Industry-specific regulation (case countries only) | Written ([this sector](15-industry-regulation-country-anchored-sap.md)) |
 
 ## 10. Sources and traceability
 
