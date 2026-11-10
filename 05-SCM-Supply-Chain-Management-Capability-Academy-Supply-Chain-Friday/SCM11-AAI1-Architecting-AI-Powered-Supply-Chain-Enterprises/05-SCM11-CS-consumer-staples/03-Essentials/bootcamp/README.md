@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Bootcamp mode for Consumer Staples.
+Implement a governed AI-assisted supply-chain workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Bootcamp mode for Consumer Staples.
 
 ## Student output
-Multi-milestone production-grade capability build for SCM11
+Multi-milestone production-grade capability build for AI-assisted supply chain
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

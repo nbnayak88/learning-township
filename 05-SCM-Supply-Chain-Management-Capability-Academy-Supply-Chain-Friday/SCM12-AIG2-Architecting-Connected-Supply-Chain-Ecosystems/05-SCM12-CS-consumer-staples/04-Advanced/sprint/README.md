@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Consumer Staples.
+Orchestrate ecosystem integration architecture, access propagation and exception recovery across partners, including where agents and automation should and should not act. Applied via Sprint mode for Consumer Staples.
 
 ## Student output
-End-to-end focused problem solving deliverable for SCM12
+End-to-end focused problem solving deliverable for connected supply chains
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

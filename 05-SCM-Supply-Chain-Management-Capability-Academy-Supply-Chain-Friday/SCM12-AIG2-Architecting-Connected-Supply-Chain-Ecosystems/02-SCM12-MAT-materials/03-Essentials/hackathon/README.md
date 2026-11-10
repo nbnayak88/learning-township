@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Materials.
+Implement a cross-partner supply-chain event workflow with contracts, monitoring and error handling, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Materials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for SCM12
+Working prototype under competition constraints for connected supply chains
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

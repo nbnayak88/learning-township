@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Utilities.
+Orchestrate forecast governance, override rules and demand-data integrity across channels, including where agents and automation should and should not act. Applied via Bootcamp mode for Utilities.
 
 ## Student output
-Multi-milestone production-grade capability build for SCM02
+Multi-milestone production-grade capability build for demand planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

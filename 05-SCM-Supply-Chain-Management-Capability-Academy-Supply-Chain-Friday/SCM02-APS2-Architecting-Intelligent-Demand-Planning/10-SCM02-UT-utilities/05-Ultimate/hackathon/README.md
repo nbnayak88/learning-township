@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Hackathon mode for Utilities.
+Deliver a capstone demand-planning blueprint with forecast rules, consensus steps and accuracy measures, with a simulation or digital-twin view of the design where useful. Applied via Hackathon mode for Utilities.
 
 ## Student output
-Functional autonomous prototype under competition constraints for SCM02
+Working prototype under competition constraints for demand planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

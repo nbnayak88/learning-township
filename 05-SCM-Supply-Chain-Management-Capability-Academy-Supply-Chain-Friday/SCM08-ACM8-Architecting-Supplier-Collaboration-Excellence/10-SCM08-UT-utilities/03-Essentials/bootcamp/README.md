@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Bootcamp mode for Utilities.
+Implement a forecast-sharing, order-confirmation and shipment-notice workflow with suppliers and clear ownership, using automation or AI assistance only where it adds clear value. Applied via Bootcamp mode for Utilities.
 
 ## Student output
-Multi-milestone production-grade capability build for SCM08
+Multi-milestone production-grade capability build for supplier collaboration
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

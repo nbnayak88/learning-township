@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via MasterClass mode for Health Care.
+Deliver a capstone smart-manufacturing blueprint with production rules, data flows and measures, with a simulation or digital-twin view of the design where useful. Applied via MasterClass mode for Health Care.
 
 ## Student output
-Expert decision framework & architecture checklist for SCM04
+Expert decision framework & architecture checklist for smart manufacturing
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

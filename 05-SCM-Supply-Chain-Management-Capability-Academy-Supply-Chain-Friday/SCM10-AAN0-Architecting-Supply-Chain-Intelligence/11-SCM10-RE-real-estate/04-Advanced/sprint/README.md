@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Real Estate.
+Orchestrate metric governance, data-sharing controls and decision-ownership for supply-chain analytics, including where agents and automation should and should not act. Applied via Sprint mode for Real Estate.
 
 ## Student output
-End-to-end focused problem solving deliverable for SCM10
+End-to-end focused problem solving deliverable for supply chain analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

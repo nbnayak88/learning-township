@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via MasterClass mode for Communication Services.
+Orchestrate supplier-collaboration governance, data-sharing agreements and issue escalation, including where agents and automation should and should not act. Applied via MasterClass mode for Communication Services.
 
 ## Student output
-Expert decision framework & architecture checklist for SCM08
+Expert decision framework & architecture checklist for supplier collaboration
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

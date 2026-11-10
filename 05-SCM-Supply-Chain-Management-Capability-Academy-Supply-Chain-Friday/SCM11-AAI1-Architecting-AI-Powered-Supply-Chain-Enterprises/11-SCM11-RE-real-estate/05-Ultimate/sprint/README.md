@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Sprint mode for Real Estate.
+Deliver a capstone AI-in-supply-chain blueprint with decision rights, safeguards, test evidence and a value case, tested against a synthetic scenario. Applied via Sprint mode for Real Estate.
 
 ## Student output
-End-to-end focused problem solving deliverable for SCM11
+End-to-end focused problem solving deliverable for AI-assisted supply chain
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

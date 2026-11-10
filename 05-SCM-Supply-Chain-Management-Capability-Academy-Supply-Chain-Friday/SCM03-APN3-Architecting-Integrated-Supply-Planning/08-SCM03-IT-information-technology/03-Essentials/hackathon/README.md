@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Information Technology.
+Implement a supply-plan and sales-and-operations-planning workflow balancing demand, capacity and inventory, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Information Technology.
 
 ## Student output
-Functional autonomous prototype under competition constraints for SCM03
+Working prototype under competition constraints for integrated supply planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

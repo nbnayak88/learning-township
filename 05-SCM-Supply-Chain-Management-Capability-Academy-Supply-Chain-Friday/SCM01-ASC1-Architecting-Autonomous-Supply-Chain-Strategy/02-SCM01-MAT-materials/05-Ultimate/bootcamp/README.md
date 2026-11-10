@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Bootcamp mode for Materials.
+Deliver a capstone supply-chain-strategy blueprint with network choices, ownership and measures, with a simulation or digital-twin view of the design where useful. Applied via Bootcamp mode for Materials.
 
 ## Student output
-Multi-milestone production-grade capability build for SCM01
+Multi-milestone production-grade capability build for supply chain strategy
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

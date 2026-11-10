@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Workshop mode for Consumer Staples.
+Implement a supply-plan and sales-and-operations-planning workflow balancing demand, capacity and inventory, using automation or AI assistance only where it adds clear value. Applied via Workshop mode for Consumer Staples.
 
 ## Student output
-Live hands-on APQC artifact & template for SCM03
+Live hands-on APQC artifact & template for integrated supply planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

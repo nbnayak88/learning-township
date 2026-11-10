@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via MasterClass mode for Utilities.
+Implement a shipment-planning, execution and proof-of-delivery workflow with carrier rules and exception handling, using automation or AI assistance only where it adds clear value. Applied via MasterClass mode for Utilities.
 
 ## Student output
-Expert decision framework & architecture checklist for SCM05
+Expert decision framework & architecture checklist for logistics and transportation
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

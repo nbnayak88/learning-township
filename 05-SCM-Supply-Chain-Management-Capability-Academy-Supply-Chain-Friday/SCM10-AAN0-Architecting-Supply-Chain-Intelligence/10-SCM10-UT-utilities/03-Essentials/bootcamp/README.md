@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Bootcamp mode for Utilities.
+Implement a trusted supply-chain metrics and visibility workflow with definitions, lineage and refresh rules, using automation or AI assistance only where it adds clear value. Applied via Bootcamp mode for Utilities.
 
 ## Student output
-Multi-milestone production-grade capability build for SCM10
+Multi-milestone production-grade capability build for supply chain analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

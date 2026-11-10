@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Challenge (21-Day) mode for Utilities.
+Deliver a capstone sustainable-supply-chain blueprint with evidence rules, targets as hypotheses and measures, with a simulation or digital-twin view of the design where useful. Applied via Challenge (21-Day) mode for Utilities.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for SCM09
+Daily behavioral capability habit & portfolio artifact for sustainable supply chains
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

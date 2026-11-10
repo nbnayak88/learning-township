@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Workshop mode for Health Care.
+Orchestrate logistics governance, carrier-performance controls and cross-partner visibility, including where agents and automation should and should not act. Applied via Workshop mode for Health Care.
 
 ## Student output
-Live hands-on APQC artifact & template for SCM05
+Live hands-on APQC artifact & template for logistics and transportation
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Challenge (21-Day) mode for Energy.
+Master the core principles, APQC-aligned baseline processes and data contracts for supply chain analytics and control tower visibility. Applied via Challenge (21-Day) mode for Energy.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for SCM10
+Daily behavioral capability habit & portfolio artifact for supply chain analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

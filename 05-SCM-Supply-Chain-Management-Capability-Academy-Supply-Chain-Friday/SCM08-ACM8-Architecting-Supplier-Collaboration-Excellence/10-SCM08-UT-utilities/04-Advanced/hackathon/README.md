@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Utilities.
+Orchestrate supplier-collaboration governance, data-sharing agreements and issue escalation, including where agents and automation should and should not act. Applied via Hackathon mode for Utilities.
 
 ## Student output
-Functional autonomous prototype under competition constraints for SCM08
+Working prototype under competition constraints for supplier collaboration
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

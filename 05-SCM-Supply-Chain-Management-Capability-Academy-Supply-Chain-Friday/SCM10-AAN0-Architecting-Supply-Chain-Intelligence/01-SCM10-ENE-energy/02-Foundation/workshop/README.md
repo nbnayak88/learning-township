@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Workshop mode for Energy.
+Master the core principles, APQC-aligned baseline processes and data contracts for supply chain analytics and control tower visibility. Applied via Workshop mode for Energy.
 
 ## Student output
-Live hands-on APQC artifact & template for SCM10
+Live hands-on APQC artifact & template for supply chain analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

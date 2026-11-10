@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Health Care.
+Implement a forecast-sharing, order-confirmation and shipment-notice workflow with suppliers and clear ownership, using automation or AI assistance only where it adds clear value. Applied via Challenge (21-Day) mode for Health Care.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for SCM08
+Daily behavioral capability habit & portfolio artifact for supplier collaboration
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

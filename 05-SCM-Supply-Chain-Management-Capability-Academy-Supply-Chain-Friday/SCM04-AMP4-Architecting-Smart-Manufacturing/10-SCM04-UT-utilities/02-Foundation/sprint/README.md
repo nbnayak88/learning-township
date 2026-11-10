@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Sprint mode for Utilities.
+Master the core principles, APQC-aligned baseline processes and data contracts for smart manufacturing and production execution. Applied via Sprint mode for Utilities.
 
 ## Student output
-End-to-end focused problem solving deliverable for SCM04
+End-to-end focused problem solving deliverable for smart manufacturing
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

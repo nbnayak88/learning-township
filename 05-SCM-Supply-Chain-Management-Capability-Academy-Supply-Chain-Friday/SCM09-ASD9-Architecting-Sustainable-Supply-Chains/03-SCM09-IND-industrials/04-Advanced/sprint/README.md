@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Industrials.
+Orchestrate sustainability governance, evidence quality and supplier due diligence across tiers, including where agents and automation should and should not act. Applied via Sprint mode for Industrials.
 
 ## Student output
-End-to-end focused problem solving deliverable for SCM09
+End-to-end focused problem solving deliverable for sustainable supply chains
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

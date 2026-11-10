@@ -16,6 +16,8 @@ ACADEMIES = [
          q_hub="Twelve series, one question: what must the finance function be able to prove?", q_sector="Every sector closes, pays and reports differently, so listen before you automate."),
     dict(key="proc", dir="04-PROC-Procurement-Capability-Academy-Procurement-Thursday", prefix="PROC", name="Procurement", day="Procurement Thursday", hub="Procurement · Procurement Thursday Series", h1="Architect the procurement enterprise, series by series",
          q_hub="Twelve series, one question: what must procurement be able to prove?", q_sector="Every sector buys, contracts and depends on suppliers differently, so listen before you automate."),
+    dict(key="scm", dir="05-SCM-Supply-Chain-Management-Capability-Academy-Supply-Chain-Friday", prefix="SCM", name="Supply Chain", day="Supply Chain Friday", hub="Supply Chain · Supply Chain Friday Series", h1="Architect the supply chain enterprise, series by series",
+         q_hub="Twelve series, one question: what must the supply chain be able to promise?", q_sector="Every sector moves goods and information differently, so listen before you automate."),
     dict(key="crm", dir="02-CRM-Customer-Experience-Capability-Academy-Revenue-Tuesday", prefix="CRM", name="Customer Experience", day="Revenue Tuesday", hub="Customer Experience · Revenue Tuesday Series", h1="Architect the customer enterprise, series by series",
          q_hub="Twelve series, one question: what must the customer experience promise?", q_sector="Every sector earns customer trust differently, so listen before you automate."),
 ]
@@ -64,6 +66,18 @@ QUOTES = {
  "PROC10": "Spend data is useful when everyone agrees what a category means.",
  "PROC11": "Responsible procurement AI starts with a decision, an owner and evidence.",
  "PROC12": "Connected procurement is only as reliable as the weakest handoff to a supplier.",
+ "SCM01": "A supply chain is a set of promises, so design the network around the ones you can keep.",
+ "SCM02": "A forecast is useful when everyone can see the assumption behind the number.",
+ "SCM03": "A plan is balanced when demand, capacity and inventory agree on one version.",
+ "SCM04": "The factory floor tells the truth about the plan, so listen to it.",
+ "SCM05": "A shipment is delivered when the customer can prove it arrived as promised.",
+ "SCM06": "Inventory is a decision about risk, held in a warehouse.",
+ "SCM07": "Quality is a record you can trace, not a claim you can only make.",
+ "SCM08": "Suppliers respond best to signals they can see early.",
+ "SCM09": "A sustainability claim is only as strong as the evidence behind it.",
+ "SCM10": "Visibility matters when someone owns the decision it triggers.",
+ "SCM11": "Responsible supply chain AI starts with a decision, an owner and evidence.",
+ "SCM12": "A supply ecosystem is only as reliable as the weakest handoff between partners.",
  "CRM01": "A customer is one person, however many systems know a different version of them.",
  "CRM02": "Engagement earns its place when it is relevant, consented and easy to stop.",
  "CRM03": "Revenue is a promise kept in sequence, from first interest to final invoice.",
@@ -171,7 +185,7 @@ def load_series(sdir, A):
     b = os.path.basename(sdir)
     m = re.match(r"([A-Z]+\d\d)-([A-Z0-9]+)-(.+)$", b)
     code, short, title = m.group(1), m.group(2), m.group(3).replace("-", " ").replace(" And ", " and ")
-    title = title.replace("AI Powered", "AI-Powered").replace("Procure to Pay", "Procure-to-Pay").replace("Cost Profitability", "Cost & Profitability").replace("Governance Risk", "Governance & Risk").replace("Quality Performance", "Quality & Performance").replace("Risk Sustainable", "Risk & Sustainable").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
+    title = title.replace("AI Powered", "AI-Powered").replace("Procure to Pay", "Procure-to-Pay").replace("Logistics Transportation", "Logistics & Transportation").replace("Quality Compliance", "Quality & Compliance").replace("Cost Profitability", "Cost & Profitability").replace("Governance Risk", "Governance & Risk").replace("Quality Performance", "Quality & Performance").replace("Risk Sustainable", "Risk & Sustainable").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
     sectors = []
     for d in sorted(glob.glob(sdir + "/[0-9][0-9]-[A-Z]*-*")):
         sb = os.path.basename(d)

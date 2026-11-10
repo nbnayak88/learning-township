@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via SuperClass mode for Communication Services.
+Master the core principles, APQC-aligned baseline processes and data contracts for sustainable and responsible supply chains. Applied via SuperClass mode for Communication Services.
 
 ## Student output
-Holistic executive capability immersion for SCM09
+Holistic executive capability immersion for sustainable supply chains
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

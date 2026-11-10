@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via SuperClass mode for Consumer Discretionary.
+Implement a statistical forecast and consensus-planning workflow with clear assumption owners, using automation or AI assistance only where it adds clear value. Applied via SuperClass mode for Consumer Discretionary.
 
 ## Student output
-Holistic executive capability immersion for SCM02
+Holistic executive capability immersion for demand planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Materials.
+Orchestrate planning governance, constraint ownership and plan-versus-actual reconciliation, including where agents and automation should and should not act. Applied via Sprint mode for Materials.
 
 ## Student output
-End-to-end focused problem solving deliverable for SCM03
+End-to-end focused problem solving deliverable for integrated supply planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

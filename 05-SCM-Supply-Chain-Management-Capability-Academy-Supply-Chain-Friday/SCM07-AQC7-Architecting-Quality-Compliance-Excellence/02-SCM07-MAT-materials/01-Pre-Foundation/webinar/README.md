@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Establish conceptual taxonomy, mental models, and readiness diagnostics. Applied via Webinar mode for Materials.
+Establish the shared vocabulary, roles and readiness picture for quality management and regulatory compliance. Applied via Webinar mode for Materials.
 
 ## Student output
-Strategic orientation dossier & next steps for SCM07
+Strategic orientation dossier & next steps for quality and compliance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

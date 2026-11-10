@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Webinar mode for Materials.
+Implement a quality-event, inspection and corrective-action workflow with clear owners and evidence, using automation or AI assistance only where it adds clear value. Applied via Webinar mode for Materials.
 
 ## Student output
-Strategic orientation dossier & next steps for SCM07
+Strategic orientation dossier & next steps for quality and compliance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

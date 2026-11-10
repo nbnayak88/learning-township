@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Challenge (21-Day) mode for Consumer Staples.
+Orchestrate supplier-collaboration governance, data-sharing agreements and issue escalation, including where agents and automation should and should not act. Applied via Challenge (21-Day) mode for Consumer Staples.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for SCM08
+Daily behavioral capability habit & portfolio artifact for supplier collaboration
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via MasterClass mode for Health Care.
+Implement a supply-plan and sales-and-operations-planning workflow balancing demand, capacity and inventory, using automation or AI assistance only where it adds clear value. Applied via MasterClass mode for Health Care.
 
 ## Student output
-Expert decision framework & architecture checklist for SCM03
+Expert decision framework & architecture checklist for integrated supply planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.
