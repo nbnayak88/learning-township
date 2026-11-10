@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Industrials.
+Orchestrate service-knowledge governance, escalation rules and case-data controls, including where agents and automation should and should not act. Applied via Sprint mode for Industrials.
 
 ## Student output
-End-to-end focused problem solving deliverable for CRM05
+End-to-end focused problem solving deliverable for customer service
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

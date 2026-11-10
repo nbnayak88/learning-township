@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Challenge (21-Day) mode for Consumer Discretionary.
+Master the core principles, APQC-aligned baseline processes and data contracts for organization design and performance management. Applied via Challenge (21-Day) mode for Consumer Discretionary.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for HR03
+Daily behavioral capability habit & portfolio artifact for performance management
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

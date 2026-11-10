@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Webinar mode for Industrials.
+Deliver a capstone AI-in-HR blueprint with decision rights, safeguards, test evidence and a value case, tested against a synthetic scenario. Applied via Webinar mode for Industrials.
 
 ## Student output
-Strategic orientation dossier & next steps for HR11
+Strategic orientation dossier & next steps for AI-assisted HR
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

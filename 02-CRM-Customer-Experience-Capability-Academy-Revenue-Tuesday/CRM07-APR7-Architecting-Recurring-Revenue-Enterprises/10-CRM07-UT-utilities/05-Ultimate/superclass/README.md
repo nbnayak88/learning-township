@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Utilities.
+Deliver a capstone recurring-revenue blueprint with billing rules, renewal paths and measures, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Utilities.
 
 ## Student output
-Holistic executive capability immersion for CRM07
+Holistic executive capability immersion for recurring revenue
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

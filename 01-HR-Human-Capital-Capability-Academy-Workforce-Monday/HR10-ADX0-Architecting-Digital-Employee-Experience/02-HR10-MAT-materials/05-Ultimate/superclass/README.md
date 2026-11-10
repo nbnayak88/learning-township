@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Materials.
+Deliver a capstone employee-experience blueprint with journeys, feedback loops and measures, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Materials.
 
 ## Student output
-Holistic executive capability immersion for HR10
+Holistic executive capability immersion for employee experience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

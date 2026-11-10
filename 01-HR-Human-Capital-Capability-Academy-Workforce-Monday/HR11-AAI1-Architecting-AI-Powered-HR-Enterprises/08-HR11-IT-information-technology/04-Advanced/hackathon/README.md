@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Information Technology.
+Orchestrate AI governance for HR: agent identity, access limits, monitoring and recovery. Applied via Hackathon mode for Information Technology.
 
 ## Student output
-Functional autonomous prototype under competition constraints for HR11
+Working prototype under competition constraints for AI-assisted HR
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via MasterClass mode for Utilities.
+Deliver a capstone time-operations blueprint with rules, exception paths and a service-level view, with a simulation or digital-twin view of the design where useful. Applied via MasterClass mode for Utilities.
 
 ## Student output
-Expert decision framework & architecture checklist for HR08
+Expert decision framework & architecture checklist for time and attendance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

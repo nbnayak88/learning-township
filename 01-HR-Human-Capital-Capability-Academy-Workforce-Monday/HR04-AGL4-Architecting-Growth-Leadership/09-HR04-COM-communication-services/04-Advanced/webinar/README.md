@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Webinar mode for Communication Services.
+Orchestrate talent-data governance, succession-risk controls and leadership-pipeline scaling, including where agents and automation should and should not act. Applied via Webinar mode for Communication Services.
 
 ## Student output
-Strategic orientation dossier & next steps for HR04
+Strategic orientation dossier & next steps for leadership and succession
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

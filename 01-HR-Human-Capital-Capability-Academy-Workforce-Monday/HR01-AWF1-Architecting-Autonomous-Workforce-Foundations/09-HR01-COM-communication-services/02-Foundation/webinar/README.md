@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Webinar mode for Communication Services.
+Master the core principles, APQC-aligned baseline processes and data contracts for workforce foundations: employee records, organization and position data. Applied via Webinar mode for Communication Services.
 
 ## Student output
-Strategic orientation dossier & next steps for HR01
+Strategic orientation dossier & next steps for employee record and organization data
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

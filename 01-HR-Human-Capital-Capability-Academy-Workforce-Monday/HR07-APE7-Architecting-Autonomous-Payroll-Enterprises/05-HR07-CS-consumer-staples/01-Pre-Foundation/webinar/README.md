@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Establish conceptual taxonomy, mental models, and readiness diagnostics. Applied via Webinar mode for Consumer Staples.
+Establish the shared vocabulary, roles and readiness picture for payroll operations and compliance. Applied via Webinar mode for Consumer Staples.
 
 ## Student output
-Strategic orientation dossier & next steps for HR07
+Strategic orientation dossier & next steps for payroll operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

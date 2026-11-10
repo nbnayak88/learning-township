@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via SuperClass mode for Consumer Staples.
+Master the core principles, APQC-aligned baseline processes and data contracts for digital commerce: catalog, pricing, checkout and fulfilment. Applied via SuperClass mode for Consumer Staples.
 
 ## Student output
-Holistic executive capability immersion for CRM04
+Holistic executive capability immersion for digital commerce
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

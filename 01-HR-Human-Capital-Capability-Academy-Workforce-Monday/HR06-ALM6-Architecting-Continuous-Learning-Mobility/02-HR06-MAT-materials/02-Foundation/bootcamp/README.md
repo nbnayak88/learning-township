@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Bootcamp mode for Materials.
+Master the core principles, APQC-aligned baseline processes and data contracts for learning, skills and internal mobility. Applied via Bootcamp mode for Materials.
 
 ## Student output
-Multi-milestone production-grade capability build for HR06
+Multi-milestone production-grade capability build for learning and mobility
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

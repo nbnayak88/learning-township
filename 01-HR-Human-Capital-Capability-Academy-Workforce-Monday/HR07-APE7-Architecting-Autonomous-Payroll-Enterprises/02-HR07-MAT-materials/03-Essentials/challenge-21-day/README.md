@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Materials.
+Implement a payroll-run workflow with input checks, cut-offs, approvals and exception handling, using automation or AI assistance only where it adds clear value. Applied via Challenge (21-Day) mode for Materials.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for HR07
+Daily behavioral capability habit & portfolio artifact for payroll operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

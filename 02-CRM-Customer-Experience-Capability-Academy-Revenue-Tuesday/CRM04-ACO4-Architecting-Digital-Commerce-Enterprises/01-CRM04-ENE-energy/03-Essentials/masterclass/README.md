@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via MasterClass mode for Energy.
+Implement a browse-to-checkout-to-fulfilment workflow with price, stock and promise rules, using automation or AI assistance only where it adds clear value. Applied via MasterClass mode for Energy.
 
 ## Student output
-Expert decision framework & architecture checklist for CRM04
+Expert decision framework & architecture checklist for digital commerce
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

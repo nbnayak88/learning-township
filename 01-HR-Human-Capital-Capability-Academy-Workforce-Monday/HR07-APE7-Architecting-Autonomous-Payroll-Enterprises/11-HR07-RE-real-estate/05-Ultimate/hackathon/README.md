@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Hackathon mode for Real Estate.
+Deliver a capstone payroll-operations blueprint with control points, recovery paths and a cost and risk view, with a simulation or digital-twin view of the design where useful. Applied via Hackathon mode for Real Estate.
 
 ## Student output
-Functional autonomous prototype under competition constraints for HR07
+Working prototype under competition constraints for payroll operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

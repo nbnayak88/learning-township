@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Challenge (21-Day) mode for Consumer Discretionary.
+Orchestrate engagement governance, frequency and preference controls across channels, including where agents and automation should and should not act. Applied via Challenge (21-Day) mode for Consumer Discretionary.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for CRM02
+Daily behavioral capability habit & portfolio artifact for customer engagement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

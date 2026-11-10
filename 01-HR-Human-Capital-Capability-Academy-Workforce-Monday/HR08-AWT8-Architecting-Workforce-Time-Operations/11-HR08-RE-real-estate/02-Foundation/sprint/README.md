@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Sprint mode for Real Estate.
+Master the core principles, APQC-aligned baseline processes and data contracts for time, attendance and scheduling. Applied via Sprint mode for Real Estate.
 
 ## Student output
-End-to-end focused problem solving deliverable for HR08
+End-to-end focused problem solving deliverable for time and attendance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

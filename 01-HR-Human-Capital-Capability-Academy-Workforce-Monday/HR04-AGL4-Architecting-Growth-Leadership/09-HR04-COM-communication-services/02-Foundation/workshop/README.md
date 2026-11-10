@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Workshop mode for Communication Services.
+Master the core principles, APQC-aligned baseline processes and data contracts for leadership, succession and talent development. Applied via Workshop mode for Communication Services.
 
 ## Student output
-Live hands-on APQC artifact & template for HR04
+Live hands-on APQC artifact & template for leadership and succession
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

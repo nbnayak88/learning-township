@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via MasterClass mode for Information Technology.
+Deliver a capstone payroll-operations blueprint with control points, recovery paths and a cost and risk view, with a simulation or digital-twin view of the design where useful. Applied via MasterClass mode for Information Technology.
 
 ## Student output
-Expert decision framework & architecture checklist for HR07
+Expert decision framework & architecture checklist for payroll operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

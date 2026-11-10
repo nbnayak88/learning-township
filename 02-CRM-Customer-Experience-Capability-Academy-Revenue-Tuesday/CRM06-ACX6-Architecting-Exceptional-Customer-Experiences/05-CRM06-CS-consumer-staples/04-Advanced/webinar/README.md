@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Webinar mode for Consumer Staples.
+Orchestrate experience governance, feedback-to-action loops and cross-team accountability, including where agents and automation should and should not act. Applied via Webinar mode for Consumer Staples.
 
 ## Student output
-Strategic orientation dossier & next steps for CRM06
+Strategic orientation dossier & next steps for customer experience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

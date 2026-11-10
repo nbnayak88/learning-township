@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Consumer Discretionary.
+Implement a lead-to-opportunity-to-order workflow with stage rules and forecast ownership, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Consumer Discretionary.
 
 ## Student output
-Functional autonomous prototype under competition constraints for CRM03
+Working prototype under competition constraints for sales and revenue operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

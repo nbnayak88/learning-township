@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Health Care.
+Orchestrate data ownership, access control and cross-system integration for core workforce data, including where agents and automation should and should not act. Applied via Bootcamp mode for Health Care.
 
 ## Student output
-Multi-milestone production-grade capability build for HR01
+Multi-milestone production-grade capability build for employee record and organization data
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

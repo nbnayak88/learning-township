@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Challenge (21-Day) mode for Industrials.
+Orchestrate commerce governance, pricing integrity and order-orchestration integration, including where agents and automation should and should not act. Applied via Challenge (21-Day) mode for Industrials.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for CRM04
+Daily behavioral capability habit & portfolio artifact for digital commerce
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

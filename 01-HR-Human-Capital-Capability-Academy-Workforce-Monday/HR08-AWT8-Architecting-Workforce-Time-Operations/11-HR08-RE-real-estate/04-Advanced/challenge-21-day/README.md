@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Challenge (21-Day) mode for Real Estate.
+Orchestrate time-rule governance, labor-law variation and payroll-handoff integration, including where agents and automation should and should not act. Applied via Challenge (21-Day) mode for Real Estate.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for HR08
+Daily behavioral capability habit & portfolio artifact for time and attendance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

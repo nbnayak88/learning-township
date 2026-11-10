@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Materials.
+Implement a time-capture, absence and scheduling workflow with rule ownership, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Materials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for HR08
+Working prototype under competition constraints for time and attendance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Hackathon mode for Health Care.
+Master the core principles, APQC-aligned baseline processes and data contracts for learning, skills and internal mobility. Applied via Hackathon mode for Health Care.
 
 ## Student output
-Functional autonomous prototype under competition constraints for HR06
+Working prototype under competition constraints for learning and mobility
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

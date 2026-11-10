@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Communication Services.
+Orchestrate revenue-recognition handoffs, dunning controls and renewal-risk governance, including where agents and automation should and should not act. Applied via Bootcamp mode for Communication Services.
 
 ## Student output
-Multi-milestone production-grade capability build for CRM07
+Multi-milestone production-grade capability build for recurring revenue
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

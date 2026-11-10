@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Challenge (21-Day) mode for Utilities.
+Master the core principles, APQC-aligned baseline processes and data contracts for connected HR systems and integrations. Applied via Challenge (21-Day) mode for Utilities.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for HR12
+Daily behavioral capability habit & portfolio artifact for connected HR
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

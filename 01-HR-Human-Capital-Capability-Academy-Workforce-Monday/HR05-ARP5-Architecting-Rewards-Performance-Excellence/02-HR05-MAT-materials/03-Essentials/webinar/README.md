@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Webinar mode for Materials.
+Implement a compensation-cycle workflow with budgets, eligibility rules and approvals, using automation or AI assistance only where it adds clear value. Applied via Webinar mode for Materials.
 
 ## Student output
-Strategic orientation dossier & next steps for HR05
+Strategic orientation dossier & next steps for compensation and rewards
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

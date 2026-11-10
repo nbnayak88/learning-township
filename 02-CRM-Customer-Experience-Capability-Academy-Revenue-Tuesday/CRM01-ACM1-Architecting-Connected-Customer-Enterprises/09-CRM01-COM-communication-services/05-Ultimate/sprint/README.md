@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Sprint mode for Communication Services.
+Deliver a capstone connected-customer blueprint with data ownership, consent controls and a value case, with a simulation or digital-twin view of the design where useful. Applied via Sprint mode for Communication Services.
 
 ## Student output
-End-to-end focused problem solving deliverable for CRM01
+End-to-end focused problem solving deliverable for the connected customer view
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Communication Services.
+Orchestrate AI governance for HR: agent identity, access limits, monitoring and recovery. Applied via Bootcamp mode for Communication Services.
 
 ## Student output
-Multi-milestone production-grade capability build for HR11
+Multi-milestone production-grade capability build for AI-assisted HR
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

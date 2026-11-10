@@ -12,10 +12,10 @@
 **Township Occupancy:** Occupied
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via MasterClass mode for Consumer Discretionary.
+Deliver a capstone connected-customer blueprint with data ownership, consent controls and a value case, with a simulation or digital-twin view of the design where useful. Applied via MasterClass mode for Consumer Discretionary.
 
 ## Student output
-Expert decision framework & architecture checklist for CRM01
+Expert decision framework & architecture checklist for the connected customer view
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

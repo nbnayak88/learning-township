@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Industrials.
+Implement a customer-profile and consent workflow with identity rules and clear data owners, using automation or AI assistance only where it adds clear value. Applied via Challenge (21-Day) mode for Industrials.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for CRM01
+Daily behavioral capability habit & portfolio artifact for the connected customer view
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Occupied
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via MasterClass mode for Consumer Discretionary.
+Orchestrate customer-data governance, identity resolution and consent enforcement across systems, including where agents and automation should and should not act. Applied via MasterClass mode for Consumer Discretionary.
 
 ## Student output
-Expert decision framework & architecture checklist for CRM01
+Expert decision framework & architecture checklist for the connected customer view
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

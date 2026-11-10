@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Establish conceptual taxonomy, mental models, and readiness diagnostics. Applied via Webinar mode for Utilities.
+Establish the shared vocabulary, roles and readiness picture for customer operations and fulfilment handoffs. Applied via Webinar mode for Utilities.
 
 ## Student output
-Strategic orientation dossier & next steps for CRM08
+Strategic orientation dossier & next steps for customer operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

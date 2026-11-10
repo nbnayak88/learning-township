@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Communication Services.
+Implement a subscription, billing and renewal workflow with clear entitlement rules, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Communication Services.
 
 ## Student output
-Functional autonomous prototype under competition constraints for CRM07
+Working prototype under competition constraints for recurring revenue
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

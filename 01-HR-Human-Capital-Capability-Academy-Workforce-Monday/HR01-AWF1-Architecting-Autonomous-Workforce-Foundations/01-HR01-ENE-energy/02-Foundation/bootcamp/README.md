@@ -12,7 +12,7 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Bootcamp mode for Energy.
+Master the core principles, APQC-aligned baseline processes and data contracts for workforce foundations: employee records, organization and position data. Applied via Bootcamp mode for Energy.
 
 ## Student output
 One scoped, evidence-backed HR01 capability outcome; completion does not imply production readiness.

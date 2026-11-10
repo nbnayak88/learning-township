@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Sprint mode for Health Care.
+Deliver a capstone leadership-pipeline blueprint with succession coverage, development paths and measures, with a simulation or digital-twin view of the design where useful. Applied via Sprint mode for Health Care.
 
 ## Student output
-End-to-end focused problem solving deliverable for HR04
+End-to-end focused problem solving deliverable for leadership and succession
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

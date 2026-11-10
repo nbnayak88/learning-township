@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Energy.
+Deliver a capstone time-operations blueprint with rules, exception paths and a service-level view, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Energy.
 
 ## Student output
-Holistic executive capability immersion for HR08
+Holistic executive capability immersion for time and attendance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

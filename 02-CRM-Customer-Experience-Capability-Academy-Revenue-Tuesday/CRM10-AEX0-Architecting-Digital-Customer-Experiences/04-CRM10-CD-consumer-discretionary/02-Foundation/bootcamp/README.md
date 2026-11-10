@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Bootcamp mode for Consumer Discretionary.
+Master the core principles, APQC-aligned baseline processes and data contracts for digital customer channels and self-service. Applied via Bootcamp mode for Consumer Discretionary.
 
 ## Student output
-Multi-milestone production-grade capability build for CRM10
+Multi-milestone production-grade capability build for digital customer channels
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Hackathon mode for Consumer Discretionary.
+Master the core principles, APQC-aligned baseline processes and data contracts for customer service and case resolution. Applied via Hackathon mode for Consumer Discretionary.
 
 ## Student output
-Functional autonomous prototype under competition constraints for CRM05
+Working prototype under competition constraints for customer service
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

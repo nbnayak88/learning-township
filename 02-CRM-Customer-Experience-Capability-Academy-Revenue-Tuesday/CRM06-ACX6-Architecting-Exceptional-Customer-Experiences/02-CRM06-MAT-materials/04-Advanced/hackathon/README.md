@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Materials.
+Orchestrate experience governance, feedback-to-action loops and cross-team accountability, including where agents and automation should and should not act. Applied via Hackathon mode for Materials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for CRM06
+Working prototype under competition constraints for customer experience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

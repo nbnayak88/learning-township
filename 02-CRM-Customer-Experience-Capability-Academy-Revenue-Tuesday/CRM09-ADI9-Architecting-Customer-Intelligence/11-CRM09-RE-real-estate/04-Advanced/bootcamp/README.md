@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Real Estate.
+Orchestrate metric governance, privacy controls and decision-ownership for customer insight, including where agents and automation should and should not act. Applied via Bootcamp mode for Real Estate.
 
 ## Student output
-Multi-milestone production-grade capability build for CRM09
+Multi-milestone production-grade capability build for customer analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

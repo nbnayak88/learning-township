@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Workshop mode for Health Care.
+Orchestrate pipeline governance, territory and pricing controls and forecast integrity, including where agents and automation should and should not act. Applied via Workshop mode for Health Care.
 
 ## Student output
-Live hands-on APQC artifact & template for CRM03
+Live hands-on APQC artifact & template for sales and revenue operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

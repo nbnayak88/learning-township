@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Establish conceptual taxonomy, mental models, and readiness diagnostics. Applied via Webinar mode for Utilities.
+Establish the shared vocabulary, roles and readiness picture for end-to-end customer experience and journeys. Applied via Webinar mode for Utilities.
 
 ## Student output
-Strategic orientation dossier & next steps for CRM06
+Strategic orientation dossier & next steps for customer experience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

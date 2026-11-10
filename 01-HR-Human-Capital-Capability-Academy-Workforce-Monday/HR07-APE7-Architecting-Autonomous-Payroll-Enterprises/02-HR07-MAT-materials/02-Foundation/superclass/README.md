@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via SuperClass mode for Materials.
+Master the core principles, APQC-aligned baseline processes and data contracts for payroll operations and compliance. Applied via SuperClass mode for Materials.
 
 ## Student output
-Holistic executive capability immersion for HR07
+Holistic executive capability immersion for payroll operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

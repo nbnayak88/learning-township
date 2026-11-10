@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Energy.
+Implement a compensation-cycle workflow with budgets, eligibility rules and approvals, using automation or AI assistance only where it adds clear value. Applied via Challenge (21-Day) mode for Energy.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for HR05
+Daily behavioral capability habit & portfolio artifact for compensation and rewards
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

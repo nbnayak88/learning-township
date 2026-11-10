@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Sprint mode for Real Estate.
+Implement a governed AI-assisted customer workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Sprint mode for Real Estate.
 
 ## Student output
-End-to-end focused problem solving deliverable for CRM11
+End-to-end focused problem solving deliverable for AI-assisted customer services
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

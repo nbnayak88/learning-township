@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Sprint mode for Energy.
+Implement a skills-to-learning-to-mobility workflow with clear role and skill data, using automation or AI assistance only where it adds clear value. Applied via Sprint mode for Energy.
 
 ## Student output
-End-to-end focused problem solving deliverable for HR06
+End-to-end focused problem solving deliverable for learning and mobility
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

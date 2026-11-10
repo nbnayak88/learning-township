@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Bootcamp mode for Energy.
+Implement a cross-system HR event workflow with contracts, monitoring and error handling, using automation or AI assistance only where it adds clear value. Applied via Bootcamp mode for Energy.
 
 ## Student output
-Multi-milestone production-grade capability build for HR12
+Multi-milestone production-grade capability build for connected HR
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

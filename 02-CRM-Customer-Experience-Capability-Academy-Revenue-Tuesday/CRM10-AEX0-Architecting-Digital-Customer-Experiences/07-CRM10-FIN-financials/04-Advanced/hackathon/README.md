@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Financials.
+Orchestrate channel governance, accessibility, identity and session controls across digital touchpoints, including where agents and automation should and should not act. Applied via Hackathon mode for Financials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for CRM10
+Working prototype under competition constraints for digital customer channels
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.
