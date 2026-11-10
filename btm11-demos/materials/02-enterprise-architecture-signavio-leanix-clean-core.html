@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniForge Materials — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniForge Materials — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Materials</p><p class="chips"><a href="01-omniforge-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a></p><article><h1 id="omniforge-materials-enterprise-architecture-sap-signavio-sap-leanix-and-clean-core">OmniForge Materials — Enterprise Architecture, SAP Signavio, SAP LeanIX and Clean Core</h1>
+<h2 id="demo-02-of-the-btm11-materials-ultimate-bootcamp-demo-series">Demo 02 of the BTM11 Materials Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Materials (MAT) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omniforge-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 AI/GenAI on SAP BTP</a> · <a href="../energy/02-enterprise-architecture-signavio-leanix-clean-core.html">Energy version of this demo</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniForge Materials is a <strong>fictional educational case</strong>. This file is an architecture design and teaching demonstration. It is <strong>not</strong> a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains little or no SAP landscape detail, so application names, fact sheets, process codes and requirements below are <strong>synthetic placeholders</strong> (prefix <code>MAT-SYN</code>) and are labelled as new design. Product names are learning examples, not confirmed OmniForge implementations.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>Enterprise architecture experience across SAP Signavio, SAP LeanIX and Clean Core.</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> how the architect turns this sector's board-level case into (1) a capability and value-stream model, (2) a governed application and technology inventory, (3) a process model linked to that inventory, and (4) a Clean Core rule that decides how every requirement may extend SAP. It ends with a detailed action plan.</p>
+<p><strong>What it does not show:</strong> a delivered engagement. Real project experience is described separately by the presenter and should not be inferred from this file.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 42B materials group; 46,000 employees; 31 countries</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Steel and alloys 30%; cement and aggregates 22%; chemicals 20%; mining and minerals 16%; advanced materials 12%</td>
+</tr>
+<tr>
+<td>Burning platform</td>
+<td>Disconnected mining, production, logistics, quality, sales and recycling; 180+ applications; weak material genealogy; manual ESG reconciliation</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Select a bounded materials-traceability and reliability pilot before committing an enterprise rollout.</p>
+<p><strong>Illustrative trigger (source):</strong> A customer queries a shipped batch's certificate after a laboratory correction, while a kiln reliability alert and uncertain recycled-feedstock records expose the same trust gap (illustrative hero trigger in the case).</p>
+<p><strong>Sector constraint carried from the source:</strong> L4 does not authorize autonomous safety-critical control (source). Plant stop authority and commercial accountability stay local (source M11).</p>
+<p><strong>What the source gives for this demo (Theme C):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Content (source)</th>
+<th>Source deliverable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-M09 Business capability architecture</td>
+<td>Source maturity: asset management L2→L4, production optimization L2→L4, quality L2→L4, supply-chain planning L2→L4, sustainability reporting L1→L4. Scale definitions and evidence must be created; L4 does not authorize autonomous safety-critical control.</td>
+<td></td>
+</tr>
+<tr>
+<td>OMF-M10 Value streams and process architecture</td>
+<td>Source chain Explore→Extract→Process→Manufacture→Distribute→Recover→Reuse. Illustrative cross-enterprise streams: Feedstock-to-Qualified-Material, Asset-to-Reliability, Order-to-Trusted-Delivery, Recover-to-Reuse and Evidence-to-Carbon-Claim.</td>
+<td></td>
+</tr>
+<tr>
+<td>OMF-M11 Target operating model</td>
+<td>Source calls for a Chief Digital and Sustainability Officer, cross-functional steering and plant product teams. Central definitions and assurance coexist with local process ownership, plant stop authority and commercial accountability.</td>
+<td></td>
+</tr>
+<tr>
+<td>OMF-M12 Enterprise architecture and digital enablement</td>
+<td>Source architecture: Asset/Material/Product/Supplier/Customer 360, ERP/MES/EAM/LIMS/mine planning, APIs/events/B2 B and governed data products; edge for plant controls and hybrid cloud for enterprise workloads. Vendor names are source architecture proposals, not validated selections. Carbon and quality evidence require lineage.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Source fictional stakeholder challenge (each M-section):</strong> <em>What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?</em></p>
+<p><strong>Resolution categories (series vocabulary, not from this case):</strong> Configuration; Enhancement (BAdI / Key User Extensibility); Side-by-Side Extension (BTP); Custom Development (Private Edition only); Process Change; Third-Party Solution; Deferred. These seven categories come from the OmniVerse Energy source register (written in a SuccessFactors Employee Central gap-capture context). They were searched for in this case's source on 2026-11-10 and are <strong>not present there</strong>. This demo reuses them as a shared teaching vocabulary across the series and says so.</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capabilities, value-stream names, operating-model statements, M12 perspectives, personas</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Capability-to-owner register, process taxonomy codes, synthetic applications and fact sheets, LeanIX and Signavio data model, Clean Core admission rule, synthetic requirements, tests, action plan</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>Any SAP product behaviour</td>
+<td>Public SAP documentation reviewed 2026-11-10; <strong>not exercised here</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> What minimum common architecture model and extension rule does OmniForge need so that value-stream teams can deliver independently without creating disconnected pilots and brittle interfaces?</p>
+<p><strong>Scope of this demo:</strong> two source value streams, chosen because the source trigger points at them: <strong>Order-to-Trusted-Delivery</strong> and <strong>Asset-to-Reliability</strong>. The other streams reuse the same method.</p>
+<p><strong>Accountable decision owner (proposed):</strong> OMF-P04 Sofia de Vries, with architecture assurance from OMF-P13 Priya Nair. The sponsor (OMF-P01 Ananya Deshpande) will test every artefact against customer, employee or operational outcomes, not technology.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<p>IDs, names and roles come from the case persona cards. Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-P04</td>
+<td>Sofia de Vries, Chief Digital and Sustainability Officer</td>
+<td>Owns the minimum common platform decision; challenges disconnected pilots</td>
+</tr>
+<tr>
+<td>OMF-P13</td>
+<td>Priya Nair, Director Enterprise Architecture</td>
+<td>Owns standards, the Clean Core admission rule and architecture review</td>
+</tr>
+<tr>
+<td>OMF-P12</td>
+<td>Hassan Al-Farsi, CISO and OT Security Lead</td>
+<td>Security and trust-boundary approval for any extension or integration</td>
+</tr>
+<tr>
+<td>OMF-P14</td>
+<td>Diego Alvarez, Head of Data Governance and AI</td>
+<td>Owns data object definitions and stewardship in the inventory</td>
+</tr>
+<tr>
+<td>OMF-P08</td>
+<td>Rohan Kulkarni, Head of Quality and Laboratories</td>
+<td>Business owner for Order-to-Trusted-Delivery</td>
+</tr>
+<tr>
+<td>OMF-P07</td>
+<td>Elena Petrova, Cement Plant Director</td>
+<td>Business owner for Asset-to-Reliability</td>
+</tr>
+<tr>
+<td>OMF-P16</td>
+<td>Nikhil Sen, Shift Supervisor and Workforce Representative</td>
+<td>Operational or frontline authority; reality check on process models; veto where operations or safety are at risk</td>
+</tr>
+<tr>
+<td>OMF-P01</td>
+<td>Ananya Deshpande, Group CEO</td>
+<td>Sponsor; outcome test for every decision</td>
+</tr>
+<tr>
+<td>OMF-P10</td>
+<td>Li Wei, Chief Commercial and Customer Officer</td>
+<td>Customer communication impact of certificate decisions</td>
+</tr>
+</tbody>
+</table></div>
+<p>Shared first names across cases do not establish shared identity. Source: <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md">OmniForge Materials persona cards</a>.</p>
+<h2 id="6-how-the-toolchain-divides-the-work">6. How the toolchain divides the work</h2>
+<p>Tool roles are described from SAP's public documentation (reviewed 2026-11-10).</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Role in this design</th>
+<th>Source of truth for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAP LeanIX</td>
+<td>Enterprise architecture inventory: business capabilities, applications, IT components, data objects, organizations, lifecycle, ownership</td>
+<td>Applications, business capabilities, organizations, data objects (SAP documentation recommends LeanIX as source of truth for these)</td>
+</tr>
+<tr>
+<td>SAP Signavio</td>
+<td>Process modelling and process navigation; value chains, process diagrams, dictionary/glossary</td>
+<td>Process models and diagrams</td>
+</tr>
+<tr>
+<td>SAP Cloud ALM</td>
+<td>Implementation project, scope, requirements, tests, deployment tracking</td>
+<td>Delivery records and requirement trace</td>
+</tr>
+<tr>
+<td>Clean Core guardrail (this design)</td>
+<td>Admission rule for every extension</td>
+<td>The extension decision record</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Documented LeanIX to Signavio integration behaviour (verify before relying on it):</strong> processes sync from Signavio to LeanIX only (process diagrams, navigation maps and value chains become business-context fact sheets, with diagram links on the fact sheet). Applications, business capabilities and organizations sync <strong>in both directions</strong> against Signavio dictionary items, and you choose the source and target per mapping. The process hierarchy can be mapped top-down, bottom-up or by a list of Signavio directories. Fact sheets with matching names are linked; otherwise new ones are created. The setup needs a dedicated Signavio user with read and write permission (an API edition licence is recommended), the tenant ID, and a manual or scheduled sync run.</p>
+<p><strong>Consequence for design:</strong> agree one owner per object type <strong>before</strong> the first sync, otherwise two teams can rename the same capability in two tools (tabletop test T2).</p>
+<h2 id="7-capability-architecture">7. Capability architecture</h2>
+<p>Capability names come from the source; owners and evidence needs are proposed. The evidence column is the work to do, not a finding.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Capability (source)</th>
+<th>Source maturity statement</th>
+<th>Proposed business owner</th>
+<th>Evidence needed before scoring</th>
+<th>Stream touched</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset management</td>
+<td>L2 to L4</td>
+<td>OMF-P07 Elena Petrova</td>
+<td>Plant condition data quality sample</td>
+<td>Asset-to-Reliability</td>
+</tr>
+<tr>
+<td>Production optimization</td>
+<td>L2 to L4</td>
+<td>OMF-P07 Elena Petrova</td>
+<td>Definition of L2 and L4 on one page</td>
+<td>Asset-to-Reliability</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>L2 to L4</td>
+<td>OMF-P08 Rohan Kulkarni</td>
+<td>Certificate revision and correction record sample</td>
+<td>Order-to-Trusted-Delivery</td>
+</tr>
+<tr>
+<td>Supply-chain planning</td>
+<td>L2 to L4</td>
+<td>To be confirmed</td>
+<td>Supplier and material master ownership</td>
+<td>Feedstock-to-Qualified-Material</td>
+</tr>
+<tr>
+<td>Sustainability reporting</td>
+<td>L1 to L4</td>
+<td>To be confirmed</td>
+<td>Carbon and quality evidence lineage</td>
+<td>Evidence-to-Carbon-Claim</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Rule:</strong> a maturity level is not scored until the scale is written down and an evidence sample exists.</p>
+<h2 id="8-value-streams-and-process-taxonomy-new-design">8. Value streams and process taxonomy (new design)</h2>
+<p>Synthetic taxonomy for the two scoped streams. Codes are placeholders, not SAP Scope Item IDs, and must not be presented as such. The stream names are from the source; stages and processes are illustrative.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Order-to-Trusted-Delivery (<code>MAT-SYN-O2D</code>)</th>
+<th>Asset-to-Reliability (<code>MAT-SYN-A2R</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1 value stream</td>
+<td>Order-to-Trusted-Delivery</td>
+<td>Asset-to-Reliability</td>
+</tr>
+<tr>
+<td>L2 stages</td>
+<td>Order, Make, Test and certify, Ship, Support claim</td>
+<td>Detect condition, Assess risk, Plan work, Execute work, Verify and learn</td>
+</tr>
+<tr>
+<td>L3 processes (examples)</td>
+<td>Issue batch certificate; Record laboratory correction; Notify affected customers; Reconcile certificate with batch genealogy; Close customer query</td>
+<td>Raise kiln condition alert; Review alert with plant; Plan maintenance window; Issue and close work order; Record failure cause</td>
+</tr>
+<tr>
+<td>Control points</td>
+<td>Quality releases certificates; no compliance statement while a correction is open</td>
+<td>Plant stop authority; OT write access stays within plant safety boundaries</td>
+</tr>
+<tr>
+<td>Systems of record</td>
+<td>ERP, LIMS and certificate records (to be mapped)</td>
+<td>EAM, MES and condition sources (to be mapped)</td>
+</tr>
+<tr>
+<td>Business owner (proposed)</td>
+<td>OMF-P08 Rohan Kulkarni</td>
+<td>OMF-P07 Elena Petrova</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Deliverable pattern:</strong> one Signavio value chain per stream; process diagrams to L3 for the first two or three processes only; each diagram linked to a capability and an owner.</p>
+<h2 id="9-application-and-technology-portfolio-synthetic">9. Application and technology portfolio (synthetic)</h2>
+<p>Rows are <strong>roles</strong>, not products, so nobody mistakes them for a real inventory.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Fact sheet (synthetic)</th>
+<th>Type</th>
+<th>Supports capability</th>
+<th>Owner (proposed)</th>
+<th>Lifecycle</th>
+<th>Disposition (proposed)</th>
+<th>Evidence needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAT-SYN-APP-01 Enterprise resource planning application</td>
+<td>Application</td>
+<td>Quality; Supply-chain planning</td>
+<td>OMF-P08 Rohan Kulkarni</td>
+<td>Unknown</td>
+<td>To be decided</td>
+<td>Version, interfaces, certificate objects</td>
+</tr>
+<tr>
+<td>MAT-SYN-APP-02 Laboratory information management application</td>
+<td>Application</td>
+<td>Quality</td>
+<td>OMF-P08 Rohan Kulkarni</td>
+<td>Unknown</td>
+<td>To be decided</td>
+<td>Correction workflow and data owner</td>
+</tr>
+<tr>
+<td>MAT-SYN-APP-03 Plant maintenance and asset application</td>
+<td>Application</td>
+<td>Asset management</td>
+<td>OMF-P07 Elena Petrova</td>
+<td>Unknown</td>
+<td>To be decided</td>
+<td>OT boundary and data flow</td>
+</tr>
+<tr>
+<td>MAT-SYN-APP-04 Manufacturing execution application</td>
+<td>Application</td>
+<td>Production optimization</td>
+<td>OMF-P07 Elena Petrova</td>
+<td>Unknown</td>
+<td>To be decided</td>
+<td>Plant interfaces and criticality</td>
+</tr>
+<tr>
+<td>MAT-SYN-APP-05 Customer portal and certificate delivery</td>
+<td>Application</td>
+<td>Quality</td>
+<td>OMF-P08 Rohan Kulkarni</td>
+<td>Unknown</td>
+<td>To be decided</td>
+<td>Channels and access model</td>
+</tr>
+<tr>
+<td>MAT-SYN-APP-06 Integration and event layer</td>
+<td>IT component</td>
+<td>All</td>
+<td>OMF-P04 Sofia de Vries</td>
+<td>Unknown</td>
+<td>To be decided</td>
+<td>Existing integration catalogue</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Disposition values stay "to be decided"</strong> until lifecycle, cost and fit evidence exists. Do not present a disposition as a finding.</p>
+<p><strong>Fact sheet minimum attributes (new design):</strong> name; type; description; business owner; technical owner; lifecycle phase and dates; data classification; hosting; interfaces in and out; supported capabilities; supported processes; criticality; last review date; source of record. A fact sheet without an owner and a review date is not counted as governed.</p>
+<p><strong>Relations to model:</strong> capability to application; application to process (via Signavio link); application to data object; application to IT component; application to interface; organization to capability.</p>
+<h2 id="10-clean-core-admission-rule-new-design-on-a-verified-sap-concept">10. Clean Core admission rule (new design on a verified SAP concept)</h2>
+<p><strong>Verified concept (SAP News, August 2025; reviewed 2026-11-10):</strong> SAP describes a Clean Core level concept that sorts extensions into four levels by architectural integrity and upgrade safety.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>SAP description (summarised)</th>
+<th>Design use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Fully compliant: only publicly released, stable SAP interfaces, backed by stability contracts. Side-by-side on SAP BTP; on-stack through the ABAP Cloud model with released APIs</td>
+<td>Default admission</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Compliant: may use classic APIs that are documented and generally upgrade-stable</td>
+<td>Allowed with owner approval</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Partially compliant: accesses SAP internal objects; higher upgrade risk</td>
+<td>Exception only, with expiry and named owner</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Not recommended: modifications, writes to SAP tables, implicit enhancements; highest risk and technical debt</td>
+<td>Rejected by default; needs an architecture exception at decision-owner level</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Applicability warning:</strong> the level concept is described in the context of SAP S/4HANA. Confirm which levels, tooling and wording apply to the actual product and edition before using it with a real client. This case does not state that OmniForge runs S/4HANA.</p>
+<p><strong>Mapping the series resolution categories to levels (proposed):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Resolution category (series vocabulary)</th>
+<th>Typical Clean Core level</th>
+<th>Admission question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuration</td>
+<td>Not an extension</td>
+<td>Is the outcome achievable and documented in standard settings?</td>
+</tr>
+<tr>
+<td>Enhancement (key-user or released extension point)</td>
+<td>Level A if only released mechanisms are used</td>
+<td>Is the extension mechanism released for the actual product?</td>
+</tr>
+<tr>
+<td>Side-by-Side Extension (BTP)</td>
+<td>Level A if only released APIs and events are used</td>
+<td>Are APIs and events released, security and lifecycle owned, cost compared?</td>
+</tr>
+<tr>
+<td>Custom Development (Private Edition only)</td>
+<td>A, B, C or D depending on what it touches</td>
+<td>Which objects does it touch, and is a stricter alternative possible?</td>
+</tr>
+<tr>
+<td>Process Change</td>
+<td>Not an extension</td>
+<td>Has the business owner approved adoption and control equivalence?</td>
+</tr>
+<tr>
+<td>Third-Party Solution</td>
+<td>Assessed separately</td>
+<td>Support, privacy, integration, commercial and exit implications</td>
+</tr>
+<tr>
+<td>Deferred</td>
+<td>Not applicable</td>
+<td>Consequence, review trigger and owner recorded?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Admission order (decision tree):</strong> (1) configuration, (2) process change, (3) released in-app extension, (4) side-by-side on released APIs, (5) third-party, (6) classic API use with approval, (7) exception for internal object access, (8) deferred. Anything needing level D is returned to the requester with alternatives.</p>
+<p><strong>Extension Decision Record (one page per requirement):</strong> requirement ID; process and capability; source reference; resolution category; proposed Clean Core level and why; objects and APIs touched; alternatives considered; owner; decision authority and date; exception expiry (levels C and D); test links; evidence status.</p>
+<h2 id="11-hands-on-exercise-classify-eight-synthetic-requirements">11. Hands-on exercise: classify eight synthetic requirements</h2>
+<p>All requirements are synthetic. Participants fill the three blank columns without looking at the key. The key is a teaching answer to be debated, not an SAP certification of any item.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Synthetic requirement</th>
+<th>Participant: category</th>
+<th>Participant: level</th>
+<th>Participant: decision</th>
+<th>Proposed answer (teaching key)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAT-SYN-RQ-01</td>
+<td>Add a laboratory-correction reason field to the batch certificate screen</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enhancement; Level A if a released key-user mechanism covers it; else side-by-side</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-02</td>
+<td>Compute a certificate-status indicator from correction and genealogy records and show it to customer service</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Side-by-side on BTP; Level A only if released APIs and events suffice</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-03</td>
+<td>Read an SAP internal table directly for a legacy batch report</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Level C; reject unless no released alternative exists; exception with expiry</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-04</td>
+<td>Write directly to an SAP table to mark a certificate as re-issued</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Level D; reject; ask for the business outcome and offer a released API or process change</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-05</td>
+<td>Integrate laboratory results through a documented classic interface</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Level B; allowed with owner approval; plan migration to a released API</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-06</td>
+<td>Route customer certificate queries to the right quality desk by product family</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Configuration first; extension only if configuration cannot do it</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-07</td>
+<td>Replace carbon-claim evidence tracking with an external tool</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Third-party; assess support, lineage, integration, exit</td>
+</tr>
+<tr>
+<td>MAT-SYN-RQ-08</td>
+<td>Advanced yield analytics not needed this year</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Deferred with consequence, review date and owner</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Time:</strong> 25 minutes. <strong>Output:</strong> eight Extension Decision Records, at least two argued as exceptions.</p>
+<h2 id="12-three-tabletop-tests">12. Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through. It is not a technical test of a running tenant.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Scenario</th>
+<th>Expected result</th>
+<th>Actual paper result</th>
+<th>Correction</th>
+<th>Pass or revise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Level D request during a certificate dispute</td>
+<td>A user asks for a direct table write to re-issue a certificate after a lab correction</td>
+<td>Admission rule rejects level D; alternatives listed; Quality (OMF-P08) informed; decision record kept</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T2 Two tools, two names</td>
+<td>Quality renames a capability in the process tool while the architecture tool keeps the old name before a scheduled sync</td>
+<td>Object owner rule decides direction first; conflict reported, not overwritten; owner register updated</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T3 Stale inventory hides a dependency</td>
+<td>A retired certificate portal is still linked to three processes; an impact report omits a live dependency</td>
+<td>Review-date rule flags the fact sheet; report states freshness; owner re-certifies</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="13-detailed-action-plan">13. Detailed action plan</h2>
+<p>This is a <strong>proposed</strong> plan. Durations are working-day estimates for a first bounded pass on two value streams, not commitments. Owners are proposed personas. Every action has an artefact and an acceptance check so it can be inspected.</p>
+<h3 id="phase-0-frame-the-decision">Phase 0: Frame the decision</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Proposed owner</th>
+<th>Input</th>
+<th>Output artefact</th>
+<th>Acceptance check</th>
+<th>Est. days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-01</td>
+<td>Confirm the decision statement in Section 4 and the two scoped streams</td>
+<td>OMF-P04</td>
+<td>Case Theme C; sponsor view</td>
+<td>One-page decision brief</td>
+<td>OMF-P04 and OMF-P13 sign it; sponsor outcome question answered</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-02</td>
+<td>Name one owner per object type: capability, process, application, data object, organization</td>
+<td>OMF-P13</td>
+<td>Section 6</td>
+<td>Object ownership rule</td>
+<td>No object type has two owners</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-03</td>
+<td>Write the evidence-gap list: what is missing, who can authorize, constraints, how value is measured (source challenge)</td>
+<td>OMF-P13</td>
+<td>Section 2</td>
+<td>Evidence-gap register</td>
+<td>Every gap has an owner and a due date</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-04</td>
+<td>Agree the standing rule: nothing is scored or targeted without a baseline</td>
+<td>OMF-P04</td>
+<td>Source rule</td>
+<td>Governance note</td>
+<td>Rule appears in the review checklist</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="phase-1-capability-and-value-stream-model">Phase 1: Capability and value-stream model</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Proposed owner</th>
+<th>Input</th>
+<th>Output artefact</th>
+<th>Acceptance check</th>
+<th>Est. days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-05</td>
+<td>Write the capability maturity scale (what each level means, observably)</td>
+<td>OMF-P13 with business owners</td>
+<td>Source capability statements</td>
+<td>Scale definition page</td>
+<td>Each level has an observable test</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-06</td>
+<td>Build the capability map and owner register (Section 7)</td>
+<td>OMF-P13</td>
+<td>A-02, A-05</td>
+<td>Capability map; owner register</td>
+<td>Source capabilities present; owners confirmed or marked TBC</td>
+<td>3</td>
+</tr>
+<tr>
+<td>A-07</td>
+<td>Collect evidence samples for the capabilities touched by the two streams only</td>
+<td>OMF-P08, OMF-P07, OMF-P14</td>
+<td>A-05</td>
+<td>Evidence samples</td>
+<td>Sample method documented; no invented scores</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A-08</td>
+<td>Draw the two value streams and stage-capability matrices (Section 8)</td>
+<td>OMF-P08, OMF-P07</td>
+<td>Source stream names</td>
+<td>Value-stream maps</td>
+<td>Each stage maps to a capability and an owner</td>
+<td>3</td>
+</tr>
+<tr>
+<td>A-09</td>
+<td>Walk the maps with the operational authority to find what the diagram misses</td>
+<td>OMF-P16</td>
+<td>A-08</td>
+<td>Findings log</td>
+<td>At least one change or an explicit "no change" recorded</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="phase-2-process-model-signavio">Phase 2: Process model (Signavio)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Proposed owner</th>
+<th>Input</th>
+<th>Output artefact</th>
+<th>Acceptance check</th>
+<th>Est. days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-10</td>
+<td>Set the process taxonomy and naming rules (Section 8)</td>
+<td>OMF-P13</td>
+<td>A-08</td>
+<td>Naming and level standard</td>
+<td>Two reviewers apply it to the same process and get the same code</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-11</td>
+<td>Model two or three L3 processes per stream with owners and control points</td>
+<td>Process owners</td>
+<td>A-10</td>
+<td>Process diagrams</td>
+<td>Owner has read back and accepted each diagram</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A-12</td>
+<td>Record glossary or dictionary entries for capabilities, applications, organizations</td>
+<td>OMF-P14</td>
+<td>A-06</td>
+<td>Dictionary entries</td>
+<td>No duplicates; names match the owner register</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-13</td>
+<td>Mark every process step that touches operational authority, consent or a regulated control</td>
+<td>OMF-P16 and OMF-P08</td>
+<td>A-11</td>
+<td>Control-point overlay</td>
+<td>Each marked step names its approver</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="phase-3-inventory-leanix-and-integration">Phase 3: Inventory (LeanIX) and integration</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Proposed owner</th>
+<th>Input</th>
+<th>Output artefact</th>
+<th>Acceptance check</th>
+<th>Est. days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-14</td>
+<td>Define the fact sheet attributes and data-quality rules (Section 9)</td>
+<td>OMF-P13 and OMF-P14</td>
+<td>A-02</td>
+<td>Inventory standard</td>
+<td>Rules testable by a script or a checklist</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-15</td>
+<td>Load the scoped applications as fact sheets with owners, lifecycle and interfaces</td>
+<td>Technical owners</td>
+<td>A-14</td>
+<td>Inventory for scoped streams</td>
+<td>Every fact sheet has an owner and a review date</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A-16</td>
+<td>Decide sync direction per object type, mapping and schedule</td>
+<td>OMF-P13</td>
+<td>A-02, A-12</td>
+<td>Sync design note</td>
+<td>Matches the owner rule; one source of truth per type</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-17</td>
+<td>Obtain the dedicated integration user and confirm permissions and licensing</td>
+<td>OMF-P12 and OMF-P13</td>
+<td>A-16</td>
+<td>Access record</td>
+<td>Least privilege; credentials held in a managed secret store</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-18</td>
+<td>Run a first sync in a non-production or sandbox setting and review conflicts</td>
+<td>OMF-P13</td>
+<td>A-16, A-17</td>
+<td>Sync report</td>
+<td>Every conflict has a resolution; unexpected changes explained</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-19</td>
+<td>Produce one dependency view: process, application, data, interface</td>
+<td>OMF-P13</td>
+<td>A-15, A-18</td>
+<td>Impact view</td>
+<td>Freshness statement included; one known dependency verified by hand</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="phase-4-clean-core-guardrail-and-delivery-tracking">Phase 4: Clean Core guardrail and delivery tracking</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Proposed owner</th>
+<th>Input</th>
+<th>Output artefact</th>
+<th>Acceptance check</th>
+<th>Est. days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-20</td>
+<td>Confirm which Clean Core levels, tools and terms apply to the actual SAP products and editions in scope</td>
+<td>OMF-P13</td>
+<td>Current SAP documentation</td>
+<td>Applicability note</td>
+<td>Wording checked against SAP sources on a stated date</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-21</td>
+<td>Approve the admission rule and exception policy (Section 10)</td>
+<td>OMF-P04, OMF-P13, OMF-P12</td>
+<td>A-20</td>
+<td>Admission rule v1</td>
+<td>Level D default rejection and exception expiry written</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-22</td>
+<td>Create the Extension Decision Record template and the decision log</td>
+<td>OMF-P13</td>
+<td>A-21</td>
+<td>Template and log</td>
+<td>Template fits on one page; log fields match source attributes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-23</td>
+<td>Run the eight-requirement exercise with real reviewers and refine the rule</td>
+<td>OMF-P13</td>
+<td>Section 11</td>
+<td>Revised rule and key</td>
+<td>Reviewers agree on at least the A and D cases; disagreements logged</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-24</td>
+<td>Link requirements to processes and resolution categories in the delivery tool (validate tenant features first)</td>
+<td>Delivery lead</td>
+<td>A-21</td>
+<td>Traceable requirement set</td>
+<td>Every approved requirement has category, level, owner, tests</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="phase-5-prove-it-on-paper-then-decide">Phase 5: Prove it on paper, then decide</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Proposed owner</th>
+<th>Input</th>
+<th>Output artefact</th>
+<th>Acceptance check</th>
+<th>Est. days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-25</td>
+<td>Run tabletop tests T1 to T3 and revise</td>
+<td>OMF-P13 with OMF-P12</td>
+<td>Section 12</td>
+<td>Test sheet</td>
+<td>Each test has actual result and pass or revise</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A-26</td>
+<td>Define review cadence: monthly architecture review; quarterly inventory re-certification</td>
+<td>OMF-P13</td>
+<td>A-14</td>
+<td>Review calendar</td>
+<td>Dates set; owners named</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>A-27</td>
+<td>Select the measures and capture baselines before any target</td>
+<td>OMF-P04</td>
+<td>Section 14</td>
+<td>Baseline sheet</td>
+<td>Targets blank until baselines exist</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A-28</td>
+<td>Present the decision pack to the sponsor and finance: what was built, what is evidence, what is not</td>
+<td>OMF-P04</td>
+<td>All</td>
+<td>Decision pack</td>
+<td>Open questions and evidence gaps are visible, not hidden</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Critical path (proposed):</strong> A-02, A-05, A-08, A-10, A-14, A-16, A-18, A-21. Phases 2 and 3 can overlap once A-10 and A-14 are done.</p>
+<h3 id="presenter-action-items-for-the-technical-discussion">Presenter action items for the technical discussion</h3>
+<p>These are for the trainer preparing to show this demo to a corporate audience. They do not appear in the case.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Why</th>
+<th>Done when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-01</td>
+<td>Decide which parts you will show live and which on paper; label each as sandbox, vendor-provided or paper</td>
+<td>Honesty about what was actually exercised</td>
+<td>Slide or note states the status of every screen</td>
+</tr>
+<tr>
+<td>P-02</td>
+<td>Confirm access to a Signavio and a LeanIX environment, or prepare static screenshots from your own training sandbox</td>
+<td>The vendor is expected to provide demo systems</td>
+<td>Access confirmed in writing, or fallback ready</td>
+</tr>
+<tr>
+<td>P-03</td>
+<td>Load the synthetic fact sheets from Section 9 and one synthetic process for Order-to-Trusted-Delivery</td>
+<td>Gives a concrete walkthrough</td>
+<td>Records carry the <code>MAT-SYN</code> prefix</td>
+</tr>
+<tr>
+<td>P-04</td>
+<td>Rehearse the 25-minute classification exercise with a colleague</td>
+<td>Timing and disagreements</td>
+<td>Timing and key adjusted</td>
+</tr>
+<tr>
+<td>P-05</td>
+<td>Prepare the one-page answer to "have you done this for a client?" using your real engagements, kept separate from this file</td>
+<td>Do not imply that fictional work is client work</td>
+<td>Answer reviewed by you; no client names without permission</td>
+</tr>
+<tr>
+<td>P-06</td>
+<td>Re-check the SAP sources listed in Section 17 for changes the day before delivery</td>
+<td>Product guidance changes</td>
+<td>Review date updated</td>
+</tr>
+<tr>
+<td>P-07</td>
+<td>Record the session run log (Section 16)</td>
+<td>Evidence trail</td>
+<td>Log completed with what was actually run</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="14-acceptance-and-measures">14. Acceptance and measures</h2>
+<p><strong>The design is acceptable for a bounded first pass only if:</strong> one owner exists per object type; the two scoped streams have capability and process models read back by their owners; scoped applications have owners and review dates; the admission rule and exception policy are approved; tabletop tests are walked through; and the evidence status below is honest.</p>
+<p><strong>Candidate measures (no baseline, no target supplied):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Definition</th>
+<th>Baseline status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Governed fact sheet share</td>
+<td>Scoped fact sheets with owner, lifecycle and review date divided by scoped fact sheets</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Requirement traceability</td>
+<td>Approved requirements with category, level, owner and tests divided by approved requirements</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Exception count and age</td>
+<td>Open level C and D exceptions, with age against expiry</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Sync conflicts</td>
+<td>Conflicts found per sync run and time to resolve</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Inventory freshness</td>
+<td>Fact sheets reviewed within the review period</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Do not invent a baseline, benefit or target.</strong> Set a target only after measuring a baseline with the accountable owner.</p>
+<h2 id="15-fit-in-a-2-to-3-hour-session">15. Fit in a 2 to 3 hour session</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 to 20</td>
+<td>Case briefing; decision and personas (Sections 2 to 5)</td>
+<td>Decision statement and owner</td>
+</tr>
+<tr>
+<td>20 to 50</td>
+<td>Toolchain roles and ownership rule (Section 6); capability and value-stream view (Sections 7 and 8)</td>
+<td>Ownership rule; map sketch</td>
+</tr>
+<tr>
+<td>50 to 80</td>
+<td>Portfolio and fact sheet standard (Section 9)</td>
+<td>Fact sheet template filled for two rows</td>
+</tr>
+<tr>
+<td>80 to 125</td>
+<td>Clean Core levels, admission rule and the eight-requirement exercise (Sections 10 and 11)</td>
+<td>Eight decision records</td>
+</tr>
+<tr>
+<td>125 to 150</td>
+<td>Three tabletop tests (Section 12)</td>
+<td>Pass or revise decisions</td>
+</tr>
+<tr>
+<td>150 to 180</td>
+<td>Action plan walk-through (Section 13); recall check; assessment; attendance</td>
+<td>Assessment record</td>
+</tr>
+</tbody>
+</table></div>
+<p>This is a proposed teaching pattern, not a committed schedule.</p>
+<h2 id="16-evidence-status-and-limits">16. Evidence status and limits</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capability, value-stream and portfolio design</td>
+<td>Designed, not executed</td>
+</tr>
+<tr>
+<td>Fact sheets and requirements</td>
+<td>Synthetic placeholders</td>
+</tr>
+<tr>
+<td>Signavio and LeanIX sync</td>
+<td>Described from public documentation; not run here</td>
+</tr>
+<tr>
+<td>Clean Core classification of the eight requirements</td>
+<td>Teaching key; not an SAP classification</td>
+</tr>
+<tr>
+<td>Tabletop tests</td>
+<td>Template; paper results filled in session</td>
+</tr>
+<tr>
+<td>Real client delivery</td>
+<td>Not represented by this file</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Run log (fill only with what was actually run):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Environment</th>
+<th>Items run</th>
+<th>Result</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="17-resources-and-sources">17. Resources and sources</h2>
+<ul>
+<li>SAP News, <a href="https://news.sap.com/2025/08/extend-sap-s4hana-cloud-right-way-clean-clear/">Extend SAP S/4HANA Cloud the right way: clean and clear</a> (Clean Core level concept; reviewed 2026-11-10)</li>
+<li>SAP LeanIX documentation, <a href="https://docs-eam.leanix.net/docs/technical-signavio">SAP Signavio integration</a> (reviewed 2026-11-10)</li>
+<li>SAP Learning, <a href="https://learning.sap.com/courses/sap-signavio-process-management/integrating-sap-leanix-and-sap-signavio-3">Integrating SAP LeanIX and SAP Signavio</a></li>
+<li>Case: <a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/02-materials/omniforge-materials-ltd">OmniForge Materials</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/master/theme-c-architecture.md">Theme C architecture (OMF-M09 to M12)</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/references/source-and-assumptions.md">source and assumptions</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md">persona cards</a></li>
+<li>Series baseline: <a href="01-omniforge-case-baseline-sap-nextgen-architecture.html">Demo 01</a></li>
+</ul>
+<p><strong>Educational alignment:</strong> TOGAF for architecture views and decisions; BIZBOK for capability and value-stream distinctions; BABOK for needs and acceptance; DAMA for data ownership and quality; COBIT for accountable control. These mappings are educational and are not compliance certification or reproduction of proprietary standards.</p>
+<p><strong>Publication note:</strong> this is a demonstration file in the bootcamp folder. It is not proof that a course is live, purchasable or delivered.</p></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/02-BTM11-MAT-materials/05-Ultimate/bootcamp/02-enterprise-architecture-signavio-leanix-clean-core.md">View source on GitHub</a>.</div></footer>
+</body></html>
