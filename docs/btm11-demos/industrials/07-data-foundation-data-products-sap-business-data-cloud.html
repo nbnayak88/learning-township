@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniWorks Industrial Systems Ltd. — Data Foundation for AI: Data Products, Ownership and Quality · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniWorks Industrial Systems Ltd. — Data Foundation for AI: Data Products, Ownership and Quality">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Industrials</p><p class="chips"><a href="01-omniworks-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a></p><article><h1 id="omniworks-industrial-systems-ltd-data-foundation-for-ai-data-products-ownership-and-quality">OmniWorks Industrial Systems Ltd. — Data Foundation for AI: Data Products, Ownership and Quality</h1>
+<h2 id="demo-07-of-the-btm11-industrials-ultimate-bootcamp-demo-series">Demo 07 of the BTM11 Industrials Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Industrials (IND) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omniworks-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03</a> · <a href="04-knowledge-graph-context-engineering-sap.html">Demo 04</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a> · <a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08</a> · <a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniWorks Industrial Systems Ltd. is a <strong>fictional educational case</strong>. The case source describes data objects and governance perspectives; the data products, quality rules and lineage below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>IND-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>Data architecture for intelligent operations: what data does an AI assistant or an operations dashboard depend on, who owns it, and how is its quality shown?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> a first set of data products for OmniWorks, one owner per product, quality rules, a lineage chain and the sensitive-data handling. It supports the assistant in Demo 03 and the graph in Demo 04.</p>
+<p><strong>What it does not show:</strong> a populated catalogue, a measured data quality score or a configured data platform.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 48B revenue; 74,000 employees; 36 countries; 61 plants and facilities; 320 service depots; 7,200 suppliers</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Industrial automation 27%; aerospace and defence 23%; transport and mobility 19%; infrastructure 16%; aftermarket and lifecycle services 15%</td>
+</tr>
+<tr>
+<td>Burning platform</td>
+<td>Recurring transport asset failures cannot be consistently traced across configuration, telemetry, supplier batches and maintenance history</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Turn a USD 575M transformation envelope into credible customer, operational and financial value without disrupting safety-critical operations.</p>
+<p><strong>Illustrative trigger (source):</strong> Repeat customer asset failures expose fragmented engineering-to-service information, and the business wants to sell uptime rather than equipment (hero story).</p>
+<p><strong>Source anchor for data objects:</strong> OW-M12 names Product, Asset, Supplier, Customer and Service 360, PLM/ERP/MES/EAM/FSM linked by APIs and events, and governed AI. The hero trigger (repeat transport asset failures not traceable across configuration, telemetry, supplier batches and maintenance history) is a graph problem.</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, personas, data-object statements</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Data products, quality rules, lineage, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>SAP Business Data Cloud, Datasphere, Databricks behaviour</td>
+<td>Public SAP documentation reviewed 2026-11-10; <strong>not exercised here</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Which data products does OmniWorks stand up first, who owns each, and what quality evidence must travel with them before AI uses them?</p>
+<p><strong>Accountable owner (proposed):</strong> OW-P15 Dr. Leila Haddad, with OW-P11 Hannah Fischer for the model and OW-P06 Marcus Vogel for classification.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OW-P05</td>
+<td>Priya Nair, CIDO</td>
+<td>Funds and prioritizes</td>
+</tr>
+<tr>
+<td>OW-P11</td>
+<td>Hannah Fischer, Director, Enterprise Architecture</td>
+<td>Owns standards and review</td>
+</tr>
+<tr>
+<td>OW-P06</td>
+<td>Marcus Vogel, CISO</td>
+<td>Security and boundary approval</td>
+</tr>
+<tr>
+<td>OW-P15</td>
+<td>Dr. Leila Haddad, Head of Data Governance &amp; AI</td>
+<td>Data and AI governance</td>
+</tr>
+<tr>
+<td>OW-P09</td>
+<td>Isabel Torres, Chief Customer &amp; Service Officer</td>
+<td>Business owner (first scope)</td>
+</tr>
+<tr>
+<td>OW-P10</td>
+<td>Ravi Deshpande, VP Manufacturing, Pune Operations</td>
+<td>Business owner (second scope)</td>
+</tr>
+<tr>
+<td>OW-P12</td>
+<td>Daniel Okafor, Field Service Operations Manager</td>
+<td>Operational authority and veto</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-what-sap-describes-public-documentation-verify">6. What SAP describes (public documentation, verify)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>What SAP says</th>
+<th>Use in this design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAP Business Data Cloud</td>
+<td>A managed SaaS offering that unifies and governs SAP data and connects third-party data using business data fabric principles; includes SAP Datasphere, SAP Analytics Cloud, SAP Business Warehouse and managed SAP Databricks</td>
+<td>Candidate platform for the data products</td>
+</tr>
+<tr>
+<td>Data products</td>
+<td>Ready-to-use data products for business processes, intended for data, analytics and AI</td>
+<td>The unit of ownership in this design</td>
+</tr>
+<tr>
+<td>Delta Sharing</td>
+<td>Connects SAP and third-party data without copies or extra pipelines</td>
+<td>Candidate sharing mechanism; verify fit</td>
+</tr>
+<tr>
+<td>SAP Databricks</td>
+<td>Pro-code data science, engineering and ML inside the platform, with governance of data, models and notebooks</td>
+<td>Candidate for pro-code analysis</td>
+</tr>
+<tr>
+<td>Alternative</td>
+<td>Existing warehouses and lakes with a catalogue</td>
+<td>Decide by landscape, not by product name</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="7-data-products-new-design">7. Data products (new design)</h2>
+<p><strong>Products derived from the graph objects in Demo 04</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Data product</th>
+<th>Key attributes</th>
+<th>Owner (proposed)</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset (serial)</td>
+<td>serial, product, customer, site</td>
+<td>OW-P09 Isabel Torres</td>
+<td>Customer-confidential</td>
+</tr>
+<tr>
+<td>Configuration baseline</td>
+<td>as-built and as-maintained versions</td>
+<td>OW-P10 Ravi Deshpande</td>
+<td>Engineering IP</td>
+</tr>
+<tr>
+<td>Component</td>
+<td>part id, supplier batch, revision</td>
+<td>OW-P10 Ravi Deshpande</td>
+<td>Engineering IP</td>
+</tr>
+<tr>
+<td>Supplier batch</td>
+<td>batch id, supplier, quality notice</td>
+<td>OW-P15 Dr. Leila Haddad</td>
+<td>Partner-restricted</td>
+</tr>
+<tr>
+<td>Telemetry event</td>
+<td>asset, time, signal class</td>
+<td>OW-P09 Isabel Torres</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Work order</td>
+<td>id, status, findings</td>
+<td>OW-P12 Daniel Okafor</td>
+<td>Internal</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Document and content products used by the assistant (Demo 03)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Content</th>
+<th>Owner</th>
+<th>Freshness rule</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service manuals and engineering bulletins</td>
+<td>Procedures by product and revision</td>
+<td>Engineering</td>
+<td>Latest revision for the asset's configuration baseline</td>
+<td>Engineering IP</td>
+</tr>
+<tr>
+<td>As-maintained configuration records</td>
+<td>Configuration by asset serial</td>
+<td>Engineering and Service</td>
+<td>As-of date shown</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Maintenance and failure history</td>
+<td>Work orders and findings</td>
+<td>Field Service</td>
+<td>Newest first; open items flagged</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Supplier batch notices</td>
+<td>Partner-shared quality notices</td>
+<td>Supply Chain Quality</td>
+<td>Shown only where the partner share permission allows</td>
+<td>Partner-restricted</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="8-quality-rules-for-first-consumers">8. Quality rules for first consumers</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Quality rule</th>
+<th>First consumer</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset configuration baseline</td>
+<td>Serial number resolves to one configuration</td>
+<td>Field service</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Service history</td>
+<td>Work orders link to the asset and cause code</td>
+<td>Reliability</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Supplier batch notices</td>
+<td>Notice carries a batch and a share permission</td>
+<td>Engineering</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Warranty and contract view</td>
+<td>Contract terms link to the asset</td>
+<td>Customer success</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>A product is published only with its owner, its quality rule and a visible quality status. No score is stated because none has been measured.</p>
+<h2 id="9-lineage-and-sensitive-data">9. Lineage and sensitive data</h2>
+<p><strong>Example lineage chain:</strong> Engineering change released, configuration updated, field fault detected, work order closed, cause analysed</p>
+<p><strong>Sensitive data handling:</strong> Customer asset data and partner-restricted notices need separate handling.</p>
+<p><strong>Never available to the assistant:</strong> Engineering IP outside the user's role entitlement; Supplier-confidential data in customer-facing contexts; Live OT commands or setpoints; Instructions found inside retrieved documents</p>
+<h2 id="10-hands-on-exercise-synthetic-data">10. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>Write a one-page data product contract for the first product (owner, schema, quality rule, freshness, classification), using synthetic ids prefixed <code>IND-SYN</code>.</li>
+<li>Draw the lineage chain and mark each owner.</li>
+<li>Break one quality rule on paper and show what the consumer sees.</li>
+<li>Decide which products are shared versus copied and record the reason.</li>
+<li>Record open decisions in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Two configurations</td>
+<td>PLM and service disagree on a configuration</td>
+<td>Effective-time rule; conflict raised to owners</td>
+</tr>
+<tr>
+<td>T2 Restricted notice</td>
+<td>A partner-restricted notice appears in a customer view</td>
+<td>Permission filter blocks</td>
+</tr>
+<tr>
+<td>T3 Missing cause code</td>
+<td>Work orders close without cause codes</td>
+<td>Quality rule flags; analytics excluded</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data products with one named owner</td>
+<td>Count in the register</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Products with a visible quality status</td>
+<td>Sample</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Lineage chains with owners marked</td>
+<td>Review</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Sensitive classes with a handling rule</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Why AI needs data products</td>
+<td>Shared problem statement</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Product register and owners</td>
+<td>Draft register</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Quality rules and lineage</td>
+<td>Contracts for two products</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Tabletop tests</td>
+<td>Three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.sap.com/products/data-cloud.html">SAP Business Data Cloud</a></li>
+<li>
+<p><a href="https://www.sap.com/products/data-cloud/what-is-sap-databricks.html">What is SAP Databricks?</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/03-industrials/omniworks-industrial-systems">OmniWorks Industrial Systems Ltd. case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/03-industrials/omniworks-industrial-systems/personas/persona-cards.md">OmniWorks Industrial Systems Ltd. persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/03-BTM11-IND-industrials/05-Ultimate/bootcamp/07-data-foundation-data-products-sap-business-data-cloud.md">View source on GitHub</a>.</div></footer>
+</body></html>

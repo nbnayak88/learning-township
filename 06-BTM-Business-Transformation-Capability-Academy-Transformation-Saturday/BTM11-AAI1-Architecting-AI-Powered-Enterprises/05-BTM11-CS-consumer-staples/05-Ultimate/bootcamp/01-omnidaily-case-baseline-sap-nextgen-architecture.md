@@ -137,6 +137,9 @@ Recording, assessment and attendance tracking can be layered onto this pattern w
 | 04 | Knowledge graph and context engineering | Written ([this sector](04-knowledge-graph-context-engineering-sap.md)) |
 | 05 | Integration and event-driven architecture with an event mesh | Written ([this sector](05-integration-event-driven-advanced-event-mesh-sap.md)) |
 | 06 | Basis modernization, AIOps and autonomous operations | Written ([this sector](06-basis-modernization-aiops-autonomous-operations-sap.md)) |
+| 07 | Data foundation for AI: data products, ownership, quality | Written ([this sector](07-data-foundation-data-products-sap-business-data-cloud.md)) |
+| 08 | Security and zero trust for AI assistants and agents | Written ([this sector](08-security-zero-trust-ai-agents-sap-btp.md)) |
+| 11 | Operating model and FinOps for intelligent operations | Written ([this sector](11-operating-model-finops-intelligent-operations-sap.md)) |
 
 ## 10. Sources and traceability
 
