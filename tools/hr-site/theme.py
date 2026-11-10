@@ -94,7 +94,7 @@ TEMPLATE = """<!doctype html>
 <header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="{root}index.html">{site}</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="{webinar}" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">{quote}</p><div class="hr"><a href="{root}index.html"><img src="{root}assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
 {progress}
 <main><div class="wrap">{nav}{content}</div></main>
-<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="{gh}">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
 </body></html>"""
 
 CTA_BOX = f'''<section class="close"><h2>Start with the target, then choose the path</h2><p>Join the free webinar and see how the Northstar architecture connects to the demos on this site.</p><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section>'''

@@ -58,6 +58,42 @@ def md2html(md):
     return h.replace("<table>", '<div class="tw"><table>').replace("</table>", "</table></div>")
 
 
+INTERNAL = re.compile(r"github\.com|githubusercontent|notion\.(com|so|site)|docs\.google\.com|drive\.google\.com|\.pptx|\.xlsx", re.I)
+
+
+PROSE = re.compile(r"Notion|Google (Doc|Slides|Sheets|Drive)|\bDrive\b|GitHub|\bgit\b|Drive refresh", re.I)
+
+
+def sanitize(md):
+    """Public pages carry no repo, Notion or Google Workspace references; official resources stay."""
+    out, skip = [], False
+    for line in md.splitlines():
+        if re.match(r"#{1,3}\s+Companion workspace", line):
+            skip = True
+            continue
+        if skip and re.match(r"#{1,3}\s", line):
+            skip = False
+        if skip:
+            continue
+        s = line.strip()
+        if INTERNAL.search(s) and not re.match(r"R\d+\b", s):
+            continue
+        if re.match(r"S\d+b?\s+[—-]", s) or s.startswith(("Reviewed ", "Matching editions")):
+            continue
+        line = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: m.group(0) if m.group(2).startswith("http") and not INTERNAL.search(m.group(2)) else m.group(1), line)
+        if not s.startswith("#") and PROSE.search(s):
+            if s.startswith("|"):
+                continue
+            kept = [x for x in re.split(r"(?<=[.;])\s+", line) if not PROSE.search(x)]
+            if not kept:
+                continue
+            line = " ".join(kept)
+        if re.match(r"R\d+\b", s):
+            line = re.sub(r"(https?://\S+)", r"[\1](\1)", line)
+        out.append(line)
+    return "\n".join(out)
+
+
 def relink(md, srcfile):
     d = os.path.dirname(srcfile)
     def sub(m):
@@ -125,15 +161,12 @@ def build_series(S):
     cta_html = cta(S["title"])
     for s in S["sectors"]:
         if s["lesson"]:
-            md = clean(relink(open(s["lesson"], encoding="utf-8").read(), s["lesson"]))
+            md = clean(sanitize(open(s["lesson"], encoding="utf-8").read()))
             title = md.splitlines()[0].lstrip("# ").strip()
             nav = f'<p class="meta"><a href="../index.html">All sectors</a> · <a href="{s["slug"]}.html">{html.escape(s["name"])}</a></p>'
             write(f"{out}/sectors/{s['slug']}-origin-story.html", page(site, title + " · " + site, title, "../", Q_LESSON, nav, f"<article>{md2html(md)}</article>" + cta_html, GHB + rel(s["lesson"])))
         comp_html = ""
-        if s["comp"]:
-            links = "".join(f'<li><a href="{GHB}{rel(c)}" target="_blank" rel="noopener">{html.escape(os.path.basename(c))}</a></li>' for c in s["comp"])
-            comp_html = f'<section class="blk"><h2>Companion files</h2><p>Files published alongside the lesson on GitHub.</p><ul>{links}</ul></section>'
-        trs = "".join(f"<tr><td>{r['level']}</td><td>{r['fmt']}</td><td><code>{html.escape(r['pid'])}</code></td><td>{html.escape(r['idx'])}</td><td>{html.escape(r['dur'])}</td><td>{html.escape(r['obj'])}</td><td>{html.escape(r['out'])}</td><td><a href=\"{GHB}{r['path']}\" target=\"_blank\" rel=\"noopener\">Record</a></td></tr>" for r in s["rows"])
+        trs = "".join(f"<tr><td>{r['level']}</td><td>{r['fmt']}</td><td><code>{html.escape(r['pid'])}</code></td><td>{html.escape(r['idx'])}</td><td>{html.escape(r['dur'])}</td><td>{html.escape(r['obj'])}</td><td>{html.escape(r['out'])}</td></tr>" for r in s["rows"])
         lesson_card = f'<div class="card"><span class="num">LEVEL 0 · THE ORIGIN STORY</span><h3>Two-hour Origin Story sprint</h3><p>A free community lesson with the origins, the general story, future perspectives, a persona-led case and a small build experiment.</p><a class="cta" href="{s["slug"]}-origin-story.html">Open the lesson</a></div>' if s["lesson"] else ""
         body = f"""
 <section class="hero"><span class="pre">{html.escape(s['name'])} · {code}</span>
@@ -143,8 +176,8 @@ def build_series(S):
 <section class="blk"><div class="grid">{lesson_card}<div class="card"><span class="num">LEVELS 1 TO 5</span><h3>{len(s['rows'])} pathway records</h3><p>Pre-Foundation to Ultimate, across webinar, workshop, sprint, bootcamp, masterclass, superclass, hackathon and 21-day challenge formats.</p></div></div></section>
 {comp_html}
 <section class="blk" id="catalog"><h2>Pathway catalog</h2>
-<blockquote><p><strong>Publication note:</strong> these are catalog records from the GitHub repository. They are <strong>not proof that a course is live or purchasable</strong>. Each record links to its source file.</p></blockquote>
-<div class="tw"><table><thead><tr><th>Level</th><th>Format</th><th>Pathway ID</th><th>Index</th><th>Duration</th><th>Learning objective</th><th>Student output</th><th>Source</th></tr></thead><tbody>{trs}</tbody></table></div></section>
+<blockquote><p><strong>Publication note:</strong> these are catalog records. They are <strong>not proof that a course is live or purchasable</strong>.</p></blockquote>
+<div class="tw"><table><thead><tr><th>Level</th><th>Format</th><th>Pathway ID</th><th>Index</th><th>Duration</th><th>Learning objective</th><th>Student output</th></tr></thead><tbody>{trs}</tbody></table></div></section>
 """
         nav = f'<p class="meta"><a href="../index.html">All sectors</a> · {html.escape(s["name"])}</p>'
         write(f"{out}/sectors/{s['slug']}.html", page(site, f"{s['ent']} · {site}", f"{code} pathway catalog for {s['name']}", "../", Q_SECTOR, nav, body + cta_html, f"{GHT}{rel(S['path'])}/{s['dir']}"))
@@ -164,18 +197,17 @@ def build_series(S):
 <section class="hero"><span class="pre">Free live webinar · 11 sectors · Workforce Monday</span>
 <h1>{html.escape(S['title'])}</h1>
 <p class="sub">{code}: eleven aspirational case studies, a free Origin Story lesson for each, and the full pathway catalog.</p>
-<ul class="ticks"><li>Read the free Origin Story lesson for your sector</li><li>See every pathway across five levels and eight formats</li><li>Follow each record back to its source on GitHub</li></ul>
+<ul class="ticks"><li>Read the free Origin Story lesson for your sector</li><li>See every pathway across five levels and eight formats</li><li>Plan your route from Pre-Foundation to Ultimate</li></ul>
 <div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#sectors">Explore the sectors</a></div>
 <p class="note">Free webinar · opens the registration page · aspirational case studies, no client work implied</p></section>
 <section class="blk" id="sectors"><h2>Explore by sector</h2><p>Each card is one aspirational case study with its own Origin Story lesson and pathway records.</p><div class="grid">{cards}</div></section>
 <section class="blk"><h2>The learning path</h2><p>Every sector has the same five levels and eight formats, plus the Level 0 Origin Story. Durations come from the catalog records.</p><div class="tw"><table><thead><tr><th>Level</th>{"".join(f"<th>{f}</th>" for f in fmts)}</tr></thead><tbody>{trs}</tbody></table></div>
-<p class="meta">{total} pathway records across {len(S['sectors'])} sectors. Source: <a href="{ghdir}">GitHub</a>.</p></section>
-{ex}
+<p class="meta">{total} pathway records across {len(S['sectors'])} sectors.</p></section>
 <section class="blk"><h2>Questions</h2>
 <details><summary>Are these real companies?</summary><p>No. Each enterprise is an aspirational case study built to teach architecture. No client is named or implied.</p></details>
 <details><summary>Are all pathways live courses?</summary><p>No. The catalog records are not proof that a course is live or purchasable. Check each record and its source file.</p></details>
 <details><summary>Is the webinar free?</summary><p>The button opens a registration page for a free webinar. Check the page for the session details.</p></details>
-<details><summary>Does this page update itself?</summary><p>Yes. It is rebuilt from the GitHub repository whenever the repository changes.</p></details>
+<details><summary>Does this page update itself?</summary><p>Yes. It is rebuilt automatically whenever the source content changes.</p></details>
 <p class="meta">Other HR series: {others} · <a href="../hr/index.html">All HR series</a></p></section>
 """ + cta_html
     write(f"{out}/index.html", page(site, site, f"{code}: {S['title']} across 11 aspirational case studies", "", QUOTES.get(code, QUOTES["HR11"]), "", idx, ghdir))
@@ -189,7 +221,7 @@ def build_hub(all_s):
     cards = "".join(f'<div class="card"><span class="num">{S["code"]}</span><h3>{html.escape(S["title"])}</h3><p class="meta">{len(S["sectors"])} sectors · {sum(len(s["rows"]) for s in S["sectors"])} pathway records</p><p><a href="../{S["code"].lower()}/index.html">Open {S["code"]}</a></p></div>' for S in all_s)
     body = f"""<section class="hero"><span class="pre">Free live webinar · 12 series · Workforce Monday</span>
 <h1>Architect the HR enterprise, series by series</h1>
-<p class="sub">Twelve HR series, eleven sectors each. Every page is rebuilt from the GitHub repository automatically.</p>
+<p class="sub">Twelve HR series, eleven sectors each. Every page updates automatically when the source content changes.</p>
 <div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#series">Explore the series</a></div></section>
 <section class="blk" id="series"><h2>Choose a series</h2><div class="grid">{cards}</div></section>""" + cta("HR architecture")
     write(f"{OUT}/hr/index.html", page(site, site, "All HR series", "../hr/", "Twelve series, one question: what must the HR system promise?", "", body, GHT + "01-HR-Human-Capital-Capability-Academy-Workforce-Monday"))
