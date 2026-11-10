@@ -1,1 +1,23 @@
-# Architecting an Intentional Life — Workshop\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT05-MAT-L4-workshop\`  \n**MDM Code:** LIT05  \n**Wisdom Code:** IDT5  \n**GICS Sector:** Materials (MAT)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** Workshop  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting an Intentional Life — Materials Sector — Workshop
+
+**Pathway ID:** `PATH-LIT05-MAT-Advanced-Workshop`  
+**Unit ID:** LIT05-MAT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT05  
+**GICS Sector:** Materials (MAT)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** Workshop  
+**Duration:** 2-3 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in helping others set intentions and review them without pressure. Applied via Workshop mode for Materials.
+
+## Student output
+Leadership practice guide for an intentional life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

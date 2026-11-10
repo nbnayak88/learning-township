@@ -1,1 +1,23 @@
-# Architecting a Better World — Webinar\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT12-HC-L5-webinar\`  \n**MDM Code:** LIT12  \n**Wisdom Code:** IDT12  \n**GICS Sector:** Health Care (HC)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** Webinar  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Better World — Health Care Sector — Webinar
+
+**Pathway ID:** `PATH-LIT12-HC-Ultimate-Webinar`  
+**Unit ID:** LIT12-HC  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT12  
+**GICS Sector:** Health Care (HC)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** Webinar  
+**Duration:** 45-60 mins  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone contribution portfolio with a project, partners and reflections, reflecting on what changed and what did not. Applied via Webinar mode for Health Care.
+
+## Student output
+Capstone portfolio for contribution to a better world
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

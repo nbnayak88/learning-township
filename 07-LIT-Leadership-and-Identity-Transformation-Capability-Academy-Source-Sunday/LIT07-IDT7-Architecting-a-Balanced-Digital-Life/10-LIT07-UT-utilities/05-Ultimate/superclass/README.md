@@ -1,1 +1,23 @@
-# Architecting a Balanced Digital Life — SuperClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT07-UT-L5-superclass\`  \n**MDM Code:** LIT07  \n**Wisdom Code:** IDT7  \n**GICS Sector:** Utilities (UT)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** SuperClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Balanced Digital Life — Utilities Sector — SuperClass
+
+**Pathway ID:** `PATH-LIT07-UT-Ultimate-SuperClass`  
+**Unit ID:** LIT07-UT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT07  
+**GICS Sector:** Utilities (UT)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** SuperClass  
+**Duration:** 1-2 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone digital-balance portfolio with habits, boundaries and reviews, reflecting on what changed and what did not. Applied via SuperClass mode for Utilities.
+
+## Student output
+Capstone portfolio for a balanced digital life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

@@ -1,1 +1,23 @@
-# Architecting Continuous Learning — MasterClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT06-HC-L2-masterclass\`  \n**MDM Code:** LIT06  \n**Wisdom Code:** IDT6  \n**GICS Sector:** Health Care (HC)  \n**Curriculum Tier:** Foundation (Level 2)  \n**Learning Format:** MasterClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Continuous Learning — Health Care Sector — MasterClass
+
+**Pathway ID:** `PATH-LIT06-HC-Foundation-MasterClass`  
+**Unit ID:** LIT06-HC  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT06  
+**GICS Sector:** Health Care (HC)  
+**Curriculum Tier:** Foundation (Level 2)  
+**Learning Format:** MasterClass  
+**Duration:** 2-4 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Learn the core principles and practices for continuous learning, and test them against one real decision. Applied via MasterClass mode for Health Care.
+
+## Student output
+Principles-and-practices summary for continuous learning
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

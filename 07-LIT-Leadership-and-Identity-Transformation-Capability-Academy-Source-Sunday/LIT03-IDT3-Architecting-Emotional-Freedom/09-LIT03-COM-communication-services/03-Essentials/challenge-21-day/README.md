@@ -1,1 +1,23 @@
-# Architecting Emotional Freedom — Challenge (21-Day)\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT03-COM-L3-challenge-21-day\`  \n**MDM Code:** LIT03  \n**Wisdom Code:** IDT3  \n**GICS Sector:** Communication Services (COM)  \n**Curriculum Tier:** Essentials (Level 3)  \n**Learning Format:** Challenge (21-Day)  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Emotional Freedom — Communication Services Sector — 21-Day Challenge
+
+**Pathway ID:** `PATH-LIT03-COM-Essentials-21DayChallenge`  
+**Unit ID:** LIT03-COM  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT03  
+**GICS Sector:** Communication Services (COM)  
+**Curriculum Tier:** Essentials (Level 3)  
+**Learning Format:** 21-Day Challenge  
+**Duration:** 21 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Work through a daily practice for noticing, naming and responding to emotions, gathering evidence across your spiritual, social, academic, professional and personal goals. Applied via 21-Day Challenge mode for Communication Services.
+
+## Student output
+Practice log with evidence for emotional freedom
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

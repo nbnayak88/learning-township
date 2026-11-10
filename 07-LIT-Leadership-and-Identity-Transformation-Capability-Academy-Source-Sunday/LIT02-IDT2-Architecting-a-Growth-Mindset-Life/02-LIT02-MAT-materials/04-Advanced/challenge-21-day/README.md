@@ -1,1 +1,23 @@
-# Architecting a Growth Mindset Life — Challenge (21-Day)\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT02-MAT-L4-challenge-21-day\`  \n**MDM Code:** LIT02  \n**Wisdom Code:** IDT2  \n**GICS Sector:** Materials (MAT)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** Challenge (21-Day)  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Growth Mindset Life — Materials Sector — 21-Day Challenge
+
+**Pathway ID:** `PATH-LIT02-MAT-Advanced-21DayChallenge`  
+**Unit ID:** LIT02-MAT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT02  
+**GICS Sector:** Materials (MAT)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** 21-Day Challenge  
+**Duration:** 21 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in building a culture where feedback and mistakes are used for learning. Applied via 21-Day Challenge mode for Materials.
+
+## Student output
+Leadership practice guide for growth mindset
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

@@ -1,1 +1,23 @@
-# Architecting a Fulfilling Life — Challenge (21-Day)\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT10-UT-L5-challenge-21-day\`  \n**MDM Code:** LIT10  \n**Wisdom Code:** IDT10  \n**GICS Sector:** Utilities (UT)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** Challenge (21-Day)  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Fulfilling Life — Utilities Sector — 21-Day Challenge
+
+**Pathway ID:** `PATH-LIT10-UT-Ultimate-21DayChallenge`  
+**Unit ID:** LIT10-UT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT10  
+**GICS Sector:** Utilities (UT)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** 21-Day Challenge  
+**Duration:** 21 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone fulfilment portfolio with a life-area review, commitments and evidence, reflecting on what changed and what did not. Applied via 21-Day Challenge mode for Utilities.
+
+## Student output
+Capstone portfolio for a fulfilling life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

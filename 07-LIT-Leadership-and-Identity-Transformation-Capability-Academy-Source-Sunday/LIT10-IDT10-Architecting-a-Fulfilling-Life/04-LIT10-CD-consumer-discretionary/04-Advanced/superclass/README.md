@@ -1,1 +1,23 @@
-# Architecting a Fulfilling Life — SuperClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT10-CD-L4-superclass\`  \n**MDM Code:** LIT10  \n**Wisdom Code:** IDT10  \n**GICS Sector:** Consumer Discretionary (CD)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** SuperClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Fulfilling Life — Consumer Discretionary Sector — SuperClass
+
+**Pathway ID:** `PATH-LIT10-CD-Advanced-SuperClass`  
+**Unit ID:** LIT10-CD  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT10  
+**GICS Sector:** Consumer Discretionary (CD)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** SuperClass  
+**Duration:** 1-2 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in helping others define fulfilment on their own terms. Applied via SuperClass mode for Consumer Discretionary.
+
+## Student output
+Leadership practice guide for a fulfilling life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

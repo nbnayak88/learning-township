@@ -1,1 +1,23 @@
-# Architecting Emotional Freedom — Hackathon\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT03-MAT-L2-hackathon\`  \n**MDM Code:** LIT03  \n**Wisdom Code:** IDT3  \n**GICS Sector:** Materials (MAT)  \n**Curriculum Tier:** Foundation (Level 2)  \n**Learning Format:** Hackathon  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Emotional Freedom — Materials Sector — Hackathon
+
+**Pathway ID:** `PATH-LIT03-MAT-Foundation-Hackathon`  
+**Unit ID:** LIT03-MAT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT03  
+**GICS Sector:** Materials (MAT)  
+**Curriculum Tier:** Foundation (Level 2)  
+**Learning Format:** Hackathon  
+**Duration:** 48-72 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Learn the core principles and practices for emotional awareness and freedom, and test them against one real decision. Applied via Hackathon mode for Materials.
+
+## Student output
+Principles-and-practices summary for emotional freedom
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

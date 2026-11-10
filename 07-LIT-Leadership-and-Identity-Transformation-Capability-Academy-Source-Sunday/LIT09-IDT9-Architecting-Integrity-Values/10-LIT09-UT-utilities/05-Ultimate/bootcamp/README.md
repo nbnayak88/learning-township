@@ -1,1 +1,23 @@
-# Architecting Integrity & Values — Bootcamp\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT09-UT-L5-bootcamp\`  \n**MDM Code:** LIT09  \n**Wisdom Code:** IDT9  \n**GICS Sector:** Utilities (UT)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** Bootcamp  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Integrity & Values — Utilities Sector — Bootcamp
+
+**Pathway ID:** `PATH-LIT09-UT-Ultimate-Bootcamp`  
+**Unit ID:** LIT09-UT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT09  
+**GICS Sector:** Utilities (UT)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** Bootcamp  
+**Duration:** 4-6 weeks  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone integrity portfolio with decisions, reasons and reflections, reflecting on what changed and what did not. Applied via Bootcamp mode for Utilities.
+
+## Student output
+Capstone portfolio for integrity and values
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

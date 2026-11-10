@@ -1,1 +1,23 @@
-# Architecting an Intentional Life — MasterClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT05-FIN-L3-masterclass\`  \n**MDM Code:** LIT05  \n**Wisdom Code:** IDT5  \n**GICS Sector:** Financials (FIN)  \n**Curriculum Tier:** Essentials (Level 3)  \n**Learning Format:** MasterClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting an Intentional Life — Financials Sector — MasterClass
+
+**Pathway ID:** `PATH-LIT05-FIN-Essentials-MasterClass`  
+**Unit ID:** LIT05-FIN  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT05  
+**GICS Sector:** Financials (FIN)  
+**Curriculum Tier:** Essentials (Level 3)  
+**Learning Format:** MasterClass  
+**Duration:** 2-4 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Work through a weekly planning and review rhythm linked to what matters most, gathering evidence across your spiritual, social, academic, professional and personal goals. Applied via MasterClass mode for Financials.
+
+## Student output
+Practice log with evidence for an intentional life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

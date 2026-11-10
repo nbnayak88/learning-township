@@ -1,1 +1,23 @@
-# Architecting an Intentional Life — SuperClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT05-HC-L4-superclass\`  \n**MDM Code:** LIT05  \n**Wisdom Code:** IDT5  \n**GICS Sector:** Health Care (HC)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** SuperClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting an Intentional Life — Health Care Sector — SuperClass
+
+**Pathway ID:** `PATH-LIT05-HC-Advanced-SuperClass`  
+**Unit ID:** LIT05-HC  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT05  
+**GICS Sector:** Health Care (HC)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** SuperClass  
+**Duration:** 1-2 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in helping others set intentions and review them without pressure. Applied via SuperClass mode for Health Care.
+
+## Student output
+Leadership practice guide for an intentional life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

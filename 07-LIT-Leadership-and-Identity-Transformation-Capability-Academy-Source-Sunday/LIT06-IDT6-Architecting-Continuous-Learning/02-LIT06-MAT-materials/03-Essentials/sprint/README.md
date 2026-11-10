@@ -1,1 +1,23 @@
-# Architecting Continuous Learning — Sprint\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT06-MAT-L3-sprint\`  \n**MDM Code:** LIT06  \n**Wisdom Code:** IDT6  \n**GICS Sector:** Materials (MAT)  \n**Curriculum Tier:** Essentials (Level 3)  \n**Learning Format:** Sprint  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Continuous Learning — Materials Sector — Sprint
+
+**Pathway ID:** `PATH-LIT06-MAT-Essentials-Sprint`  
+**Unit ID:** LIT06-MAT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT06  
+**GICS Sector:** Materials (MAT)  
+**Curriculum Tier:** Essentials (Level 3)  
+**Learning Format:** Sprint  
+**Duration:** 1-2 weeks  
+**Access:** Premium/Paid
+
+## Learning objective
+Work through a learning plan with goals, resources, practice and review, gathering evidence across your spiritual, social, academic, professional and personal goals. Applied via Sprint mode for Materials.
+
+## Student output
+Practice log with evidence for continuous learning
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

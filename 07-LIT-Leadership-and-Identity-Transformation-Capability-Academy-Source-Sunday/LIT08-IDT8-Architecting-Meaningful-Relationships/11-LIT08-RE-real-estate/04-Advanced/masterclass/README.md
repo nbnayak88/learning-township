@@ -1,1 +1,23 @@
-# Architecting Meaningful Relationships — MasterClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT08-RE-L4-masterclass\`  \n**MDM Code:** LIT08  \n**Wisdom Code:** IDT8  \n**GICS Sector:** Real Estate (RE)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** MasterClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Meaningful Relationships — Real Estate Sector — MasterClass
+
+**Pathway ID:** `PATH-LIT08-RE-Advanced-MasterClass`  
+**Unit ID:** LIT08-RE  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT08  
+**GICS Sector:** Real Estate (RE)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** MasterClass  
+**Duration:** 2-4 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in building trust and handling conflict across teams and communities. Applied via MasterClass mode for Real Estate.
+
+## Student output
+Leadership practice guide for meaningful relationships
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

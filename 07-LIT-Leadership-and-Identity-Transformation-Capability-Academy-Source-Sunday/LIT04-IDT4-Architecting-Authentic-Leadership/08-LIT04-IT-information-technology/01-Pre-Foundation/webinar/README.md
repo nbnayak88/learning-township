@@ -1,1 +1,23 @@
-# Architecting Authentic Leadership — Webinar\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT04-IT-L1-webinar\`  \n**MDM Code:** LIT04  \n**Wisdom Code:** IDT4  \n**GICS Sector:** Information Technology (IT)  \n**Curriculum Tier:** PreFoundation (Level 1)  \n**Learning Format:** Webinar  \n**Access:** Paid — Bronze/Fast Track  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Authentic Leadership — Information Technology Sector — Webinar
+
+**Pathway ID:** `PATH-LIT04-IT-Pre-Foundation-Webinar`  
+**Unit ID:** LIT04-IT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT04  
+**GICS Sector:** Information Technology (IT)  
+**Curriculum Tier:** Pre-Foundation (Level 1)  
+**Learning Format:** Webinar  
+**Duration:** 45-60 mins  
+**Access:** Premium/Paid
+
+## Learning objective
+Build the shared vocabulary and a first honest self-picture for authentic leadership. Applied via Webinar mode for Information Technology.
+
+## Student output
+Personal baseline note for authentic leadership
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

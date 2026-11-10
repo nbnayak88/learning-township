@@ -1,1 +1,23 @@
-# Architecting Integrity & Values — Workshop\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT09-ENE-L2-workshop\`  \n**MDM Code:** LIT09  \n**Wisdom Code:** IDT9  \n**GICS Sector:** Energy (ENE)  \n**Curriculum Tier:** Foundation (Level 2)  \n**Learning Format:** Workshop  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Integrity & Values — Energy Sector — Workshop
+
+**Pathway ID:** `PATH-LIT09-ENE-Foundation-Workshop`  
+**Unit ID:** LIT09-ENE  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT09  
+**GICS Sector:** Energy (ENE)  
+**Curriculum Tier:** Foundation (Level 2)  
+**Learning Format:** Workshop  
+**Duration:** 2-3 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Learn the core principles and practices for integrity and values, and test them against one real decision. Applied via Workshop mode for Energy.
+
+## Student output
+Principles-and-practices summary for integrity and values
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

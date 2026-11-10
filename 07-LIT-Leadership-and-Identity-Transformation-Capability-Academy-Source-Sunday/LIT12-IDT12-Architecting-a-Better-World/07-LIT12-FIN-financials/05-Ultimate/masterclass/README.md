@@ -1,1 +1,23 @@
-# Architecting a Better World — MasterClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT12-FIN-L5-masterclass\`  \n**MDM Code:** LIT12  \n**Wisdom Code:** IDT12  \n**GICS Sector:** Financials (FIN)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** MasterClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Better World — Financials Sector — MasterClass
+
+**Pathway ID:** `PATH-LIT12-FIN-Ultimate-MasterClass`  
+**Unit ID:** LIT12-FIN  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT12  
+**GICS Sector:** Financials (FIN)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** MasterClass  
+**Duration:** 2-4 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone contribution portfolio with a project, partners and reflections, reflecting on what changed and what did not. Applied via MasterClass mode for Financials.
+
+## Student output
+Capstone portfolio for contribution to a better world
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

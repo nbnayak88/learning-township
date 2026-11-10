@@ -22,6 +22,8 @@ ACADEMIES = [
          q_hub="Twelve series, one question: what must the enterprise be able to prove it changed?", q_sector="Every sector transforms differently, so listen before you automate."),
     dict(key="crm", dir="02-CRM-Customer-Experience-Capability-Academy-Revenue-Tuesday", prefix="CRM", name="Customer Experience", day="Revenue Tuesday", hub="Customer Experience · Revenue Tuesday Series", h1="Architect the customer enterprise, series by series",
          q_hub="Twelve series, one question: what must the customer experience promise?", q_sector="Every sector earns customer trust differently, so listen before you automate."),
+    dict(key="lit", dir="07-LIT-Leadership-and-Identity-Transformation-Capability-Academy-Source-Sunday", prefix="LIT", name="Leadership and Identity", day="Source Sunday", hub="Leadership and Identity · Source Sunday Series", h1="Architect your leadership and identity, series by series",
+         q_hub="Twelve series, one question: who are you becoming, and what will you do about it?", q_sector="Every sector shapes leaders and identity differently, so listen before you decide."),
 ]
 OUT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(REPO, "docs"))
 DEMOS = os.path.join(REPO, "docs", "btm11-demos")
@@ -47,6 +49,18 @@ LEVELS = [("01-Pre-Foundation", "Level 1 · Pre-Foundation"), ("02-Foundation", 
 FORMATS = ["webinar", "workshop", "sprint", "bootcamp", "masterclass", "superclass", "hackathon", "challenge-21-day"]
 FLABEL = {"challenge-21-day": "21-day challenge"}
 QUOTES = {
+ "LIT01": "Purpose is not found once; it is practiced in the choices you repeat.",
+ "LIT02": "A setback is data for the next experiment, not a verdict on the person.",
+ "LIT03": "Naming a feeling is the first small step towards choosing a response.",
+ "LIT04": "Authentic leaders make their words and actions say the same thing.",
+ "LIT05": "An intentional life is built one reviewed week at a time.",
+ "LIT06": "Learning continues when practice and reflection keep company.",
+ "LIT07": "Technology serves you best when you decide where attention goes.",
+ "LIT08": "Relationships deepen through listening, repair and honest boundaries.",
+ "LIT09": "Integrity is tested in the choices nobody would notice.",
+ "LIT10": "Fulfilment is defined by you, and reviewed across every area of life.",
+ "LIT11": "Insight matters when it becomes one small, repeatable change.",
+ "LIT12": "A better world starts with one act of service you actually finish.",
  "HR01": "A workforce record is a promise someone will rely on later.",
  "HR02": "Hiring is a decision about a person, not a match between two documents.",
  "HR03": "Performance is designed into the system long before it appears on a scorecard.",
@@ -336,7 +350,7 @@ if __name__ == "__main__":
         build_hub(all_s, A)
 
     # Academies landing page (Monday to Saturday)
-    order = ["hr", "crm", "fi", "proc", "scm", "btm"]
+    order = ["hr", "crm", "fi", "proc", "scm", "btm", "lit"]
     byk = {A["key"]: A for A in ACADEMIES}
     cards = ""
     for k in order:
@@ -344,11 +358,11 @@ if __name__ == "__main__":
         cards += (f'<div class="card"><span class="num">{A["day"]}</span><h3>{html.escape(A["name"])} Academy</h3>'
                   f'<p class="meta">12 series · 11 sectors each</p><p>{html.escape(A["q_hub"])}</p>'
                   f'<p><a href="../{k}/index.html">Open the {html.escape(A["name"])} series</a></p></div>')
-    body = f"""<section class="hero"><span class="pre">Free live webinar · Six capability academies</span>
+    body = f"""<section class="hero"><span class="pre">Free live webinar · Seven capability academies</span>
 <h1>Architect the enterprise, one capability at a time</h1>
-<p class="sub">Six academies, twelve series each, eleven sectors per series. Every page updates automatically when the source content changes.</p>
+<p class="sub">Seven academies, twelve series each, eleven sectors per series. Every page updates automatically when the source content changes.</p>
 <div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#academies">Choose an academy</a></div></section>
 <section class="blk" id="academies"><h2>Choose an academy</h2><div class="grid">{cards}</div></section>""" + cta("")
-    write(f"{OUT}/academies/index.html", page("Capability Academies", "Capability Academies", "SuccessLabs Academy capability academies", "../academies/", "Six academies, one question: what must the enterprise be able to prove?", "", body, ""))
+    write(f"{OUT}/academies/index.html", page("Capability Academies", "Capability Academies", "SuccessLabs Academy capability academies", "../academies/", "Seven academies, one question: what must the enterprise be able to prove?", "", body, ""))
     os.makedirs(OUT + "/academies/assets", exist_ok=True)
     shutil.copy(HERE + "/assets/successlabs-academy-logo.png", OUT + "/academies/assets/successlabs-academy-logo.png")

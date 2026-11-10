@@ -1,1 +1,23 @@
-# Architecting Authentic Leadership — MasterClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT04-CS-L5-masterclass\`  \n**MDM Code:** LIT04  \n**Wisdom Code:** IDT4  \n**GICS Sector:** Consumer Staples (CS)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** MasterClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Authentic Leadership — Consumer Staples Sector — MasterClass
+
+**Pathway ID:** `PATH-LIT04-CS-Ultimate-MasterClass`  
+**Unit ID:** LIT04-CS  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT04  
+**GICS Sector:** Consumer Staples (CS)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** MasterClass  
+**Duration:** 2-4 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone authentic-leadership portfolio with commitments, feedback and evidence, reflecting on what changed and what did not. Applied via MasterClass mode for Consumer Staples.
+
+## Student output
+Capstone portfolio for authentic leadership
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

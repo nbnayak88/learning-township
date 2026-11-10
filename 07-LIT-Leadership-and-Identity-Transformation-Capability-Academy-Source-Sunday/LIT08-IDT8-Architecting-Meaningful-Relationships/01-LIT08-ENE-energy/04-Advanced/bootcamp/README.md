@@ -1,1 +1,23 @@
-# Architecting Meaningful Relationships — Bootcamp\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT08-ENE-L4-bootcamp\`  \n**MDM Code:** LIT08  \n**Wisdom Code:** IDT8  \n**GICS Sector:** Energy (ENE)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** Bootcamp  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Meaningful Relationships — Energy Sector — Bootcamp
+
+**Pathway ID:** `PATH-LIT08-ENE-Advanced-Bootcamp`  
+**Unit ID:** LIT08-ENE  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT08  
+**GICS Sector:** Energy (ENE)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** Bootcamp  
+**Duration:** 4-6 weeks  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in building trust and handling conflict across teams and communities. Applied via Bootcamp mode for Energy.
+
+## Student output
+Leadership practice guide for meaningful relationships
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

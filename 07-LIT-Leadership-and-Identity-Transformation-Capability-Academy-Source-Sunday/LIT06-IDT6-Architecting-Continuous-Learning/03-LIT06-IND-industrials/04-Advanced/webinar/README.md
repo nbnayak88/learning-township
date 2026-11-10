@@ -1,1 +1,23 @@
-# Architecting Continuous Learning — Webinar\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT06-IND-L4-webinar\`  \n**MDM Code:** LIT06  \n**Wisdom Code:** IDT6  \n**GICS Sector:** Industrials (IND)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** Webinar  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Continuous Learning — Industrials Sector — Webinar
+
+**Pathway ID:** `PATH-LIT06-IND-Advanced-Webinar`  
+**Unit ID:** LIT06-IND  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT06  
+**GICS Sector:** Industrials (IND)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** Webinar  
+**Duration:** 45-60 mins  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in building learning habits and knowledge-sharing in a team or community. Applied via Webinar mode for Industrials.
+
+## Student output
+Leadership practice guide for continuous learning
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

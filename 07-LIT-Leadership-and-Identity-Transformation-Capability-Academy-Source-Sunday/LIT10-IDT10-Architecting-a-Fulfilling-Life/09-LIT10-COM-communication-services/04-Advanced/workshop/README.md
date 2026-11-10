@@ -1,1 +1,23 @@
-# Architecting a Fulfilling Life — Workshop\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT10-COM-L4-workshop\`  \n**MDM Code:** LIT10  \n**Wisdom Code:** IDT10  \n**GICS Sector:** Communication Services (COM)  \n**Curriculum Tier:** Advanced (Level 4)  \n**Learning Format:** Workshop  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Fulfilling Life — Communication Services Sector — Workshop
+
+**Pathway ID:** `PATH-LIT10-COM-Advanced-Workshop`  
+**Unit ID:** LIT10-COM  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT10  
+**GICS Sector:** Communication Services (COM)  
+**Curriculum Tier:** Advanced (Level 4)  
+**Learning Format:** Workshop  
+**Duration:** 2-3 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Lead others in helping others define fulfilment on their own terms. Applied via Workshop mode for Communication Services.
+
+## Student output
+Leadership practice guide for a fulfilling life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

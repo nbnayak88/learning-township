@@ -1,1 +1,23 @@
-# Architecting Integrity & Values — Bootcamp\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT09-MAT-L3-bootcamp\`  \n**MDM Code:** LIT09  \n**Wisdom Code:** IDT9  \n**GICS Sector:** Materials (MAT)  \n**Curriculum Tier:** Essentials (Level 3)  \n**Learning Format:** Bootcamp  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Integrity & Values — Materials Sector — Bootcamp
+
+**Pathway ID:** `PATH-LIT09-MAT-Essentials-Bootcamp`  
+**Unit ID:** LIT09-MAT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT09  
+**GICS Sector:** Materials (MAT)  
+**Curriculum Tier:** Essentials (Level 3)  
+**Learning Format:** Bootcamp  
+**Duration:** 4-6 weeks  
+**Access:** Premium/Paid
+
+## Learning objective
+Work through a values-in-action practice for hard choices, with a record of decisions, gathering evidence across your spiritual, social, academic, professional and personal goals. Applied via Bootcamp mode for Materials.
+
+## Student output
+Practice log with evidence for integrity and values
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

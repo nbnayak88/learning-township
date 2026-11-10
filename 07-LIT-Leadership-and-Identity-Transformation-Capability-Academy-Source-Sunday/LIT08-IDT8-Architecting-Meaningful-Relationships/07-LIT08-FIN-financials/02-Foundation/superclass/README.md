@@ -1,1 +1,23 @@
-# Architecting Meaningful Relationships — SuperClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT08-FIN-L2-superclass\`  \n**MDM Code:** LIT08  \n**Wisdom Code:** IDT8  \n**GICS Sector:** Financials (FIN)  \n**Curriculum Tier:** Foundation (Level 2)  \n**Learning Format:** SuperClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Meaningful Relationships — Financials Sector — SuperClass
+
+**Pathway ID:** `PATH-LIT08-FIN-Foundation-SuperClass`  
+**Unit ID:** LIT08-FIN  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT08  
+**GICS Sector:** Financials (FIN)  
+**Curriculum Tier:** Foundation (Level 2)  
+**Learning Format:** SuperClass  
+**Duration:** 1-2 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Learn the core principles and practices for meaningful relationships, and test them against one real decision. Applied via SuperClass mode for Financials.
+
+## Student output
+Principles-and-practices summary for meaningful relationships
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

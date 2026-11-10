@@ -1,1 +1,23 @@
-# Architecting Integrity & Values — Webinar\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT09-HC-L3-webinar\`  \n**MDM Code:** LIT09  \n**Wisdom Code:** IDT9  \n**GICS Sector:** Health Care (HC)  \n**Curriculum Tier:** Essentials (Level 3)  \n**Learning Format:** Webinar  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Integrity & Values — Health Care Sector — Webinar
+
+**Pathway ID:** `PATH-LIT09-HC-Essentials-Webinar`  
+**Unit ID:** LIT09-HC  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT09  
+**GICS Sector:** Health Care (HC)  
+**Curriculum Tier:** Essentials (Level 3)  
+**Learning Format:** Webinar  
+**Duration:** 45-60 mins  
+**Access:** Premium/Paid
+
+## Learning objective
+Work through a values-in-action practice for hard choices, with a record of decisions, gathering evidence across your spiritual, social, academic, professional and personal goals. Applied via Webinar mode for Health Care.
+
+## Student output
+Practice log with evidence for integrity and values
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

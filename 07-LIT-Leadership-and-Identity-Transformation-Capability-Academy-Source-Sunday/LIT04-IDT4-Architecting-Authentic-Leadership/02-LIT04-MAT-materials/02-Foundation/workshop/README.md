@@ -1,1 +1,23 @@
-# Architecting Authentic Leadership — Workshop\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT04-MAT-L2-workshop\`  \n**MDM Code:** LIT04  \n**Wisdom Code:** IDT4  \n**GICS Sector:** Materials (MAT)  \n**Curriculum Tier:** Foundation (Level 2)  \n**Learning Format:** Workshop  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting Authentic Leadership — Materials Sector — Workshop
+
+**Pathway ID:** `PATH-LIT04-MAT-Foundation-Workshop`  
+**Unit ID:** LIT04-MAT  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT04  
+**GICS Sector:** Materials (MAT)  
+**Curriculum Tier:** Foundation (Level 2)  
+**Learning Format:** Workshop  
+**Duration:** 2-3 hours  
+**Access:** Premium/Paid
+
+## Learning objective
+Learn the core principles and practices for authentic leadership, and test them against one real decision. Applied via Workshop mode for Materials.
+
+## Student output
+Principles-and-practices summary for authentic leadership
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

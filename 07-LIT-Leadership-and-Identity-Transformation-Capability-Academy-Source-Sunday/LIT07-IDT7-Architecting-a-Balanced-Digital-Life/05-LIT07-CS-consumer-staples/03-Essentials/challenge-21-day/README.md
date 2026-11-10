@@ -1,1 +1,23 @@
-# Architecting a Balanced Digital Life — Challenge (21-Day)\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT07-CS-L3-challenge-21-day\`  \n**MDM Code:** LIT07  \n**Wisdom Code:** IDT7  \n**GICS Sector:** Consumer Staples (CS)  \n**Curriculum Tier:** Essentials (Level 3)  \n**Learning Format:** Challenge (21-Day)  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Balanced Digital Life — Consumer Staples Sector — 21-Day Challenge
+
+**Pathway ID:** `PATH-LIT07-CS-Essentials-21DayChallenge`  
+**Unit ID:** LIT07-CS  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT07  
+**GICS Sector:** Consumer Staples (CS)  
+**Curriculum Tier:** Essentials (Level 3)  
+**Learning Format:** 21-Day Challenge  
+**Duration:** 21 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Work through digital habits and boundaries that protect attention, sleep and relationships, gathering evidence across your spiritual, social, academic, professional and personal goals. Applied via 21-Day Challenge mode for Consumer Staples.
+
+## Student output
+Practice log with evidence for a balanced digital life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

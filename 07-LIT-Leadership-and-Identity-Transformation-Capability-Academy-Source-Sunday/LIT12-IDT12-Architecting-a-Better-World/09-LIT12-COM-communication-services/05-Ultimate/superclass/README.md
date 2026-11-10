@@ -1,1 +1,23 @@
-# Architecting a Better World — SuperClass\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT12-COM-L5-superclass\`  \n**MDM Code:** LIT12  \n**Wisdom Code:** IDT12  \n**GICS Sector:** Communication Services (COM)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** SuperClass  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Better World — Communication Services Sector — SuperClass
+
+**Pathway ID:** `PATH-LIT12-COM-Ultimate-SuperClass`  
+**Unit ID:** LIT12-COM  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT12  
+**GICS Sector:** Communication Services (COM)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** SuperClass  
+**Duration:** 1-2 days  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone contribution portfolio with a project, partners and reflections, reflecting on what changed and what did not. Applied via SuperClass mode for Communication Services.
+
+## Student output
+Capstone portfolio for contribution to a better world
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.

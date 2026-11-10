@@ -1,1 +1,23 @@
-# Architecting a Fulfilling Life — Sprint\n\n**Planning Reference (not an LMS ID):** \`LIT-LIT10-ENE-L5-sprint\`  \n**MDM Code:** LIT10  \n**Wisdom Code:** IDT10  \n**GICS Sector:** Energy (ENE)  \n**Curriculum Tier:** Ultimate (Level 5)  \n**Learning Format:** Sprint  \n**Access:** Premium/Paid  \n**Status:** Planned; no live course or enrollment implied.\n\n## Activity-first learning\nExplore an authentic sector-based leadership or identity challenge. Complete a decision simulation, reflect on choices and consequences, and produce evidence across spiritual, social, academic, professional, and personal life goals. These are curriculum design intentions, not completed lesson plans.\n
+# Architecting a Fulfilling Life — Energy Sector — Sprint
+
+**Pathway ID:** `PATH-LIT10-ENE-Ultimate-Sprint`  
+**Unit ID:** LIT10-ENE  
+**Academy:** Leadership and Identity Transformation Academy (LIT)  
+**Series:** LIT10  
+**GICS Sector:** Energy (ENE)  
+**Curriculum Tier:** Ultimate (Level 5)  
+**Learning Format:** Sprint  
+**Duration:** 1-2 weeks  
+**Access:** Premium/Paid
+
+## Learning objective
+Complete a capstone fulfilment portfolio with a life-area review, commitments and evidence, reflecting on what changed and what did not. Applied via Sprint mode for Energy.
+
+## Student output
+Capstone portfolio for a fulfilling life
+
+## Activity-first learning principle
+Explore an authentic leadership or identity challenge from this sector. Complete a decision simulation, reflect on choices and consequences, and keep evidence across spiritual, social, academic, professional and personal life goals. Reflection is voluntary and personal; this is not therapy, counselling or a promise of any outcome.
+
+## Publication note
+This is a catalog record, **not proof that a course is live or purchasable**. Allocated member names are intentionally excluded from the public repository for privacy.
