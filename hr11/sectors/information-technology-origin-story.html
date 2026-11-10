@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A fluent answer crosses the boundary · HR11 · Architecting AI-Powered HR Enterprises</title><meta name="description" content="A fluent answer crosses the boundary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR11 · Architecting AI-Powered HR Enterprises</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">An assistant is only as trustworthy as the policy it answers from.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="information-technology.html">Information Technology</a></p><article><h1 id="a-fluent-answer-crosses-the-boundary">A fluent answer crosses the boundary</h1>
+<p>SuccessLabs Academy · GICS08 Information Technology · OmniTech Solutions Ltd. · HR11 AI-Powered HR Enterprises
+IIL — Industry Immersion Lab · The Origin Story · 120-minute Sprint · Edition 1 November 2026 IST
+Mission: Architecting Experiences for a Better World.
+Planning reference: HUB-ORIGIN-HR11-IT-sprint (not an LMS ID).</p>
+<h2 id="one-learner-promise">One learner promise</h2>
+<p>In 120 minutes: Design one HR assistant boundary that uses permitted evidence and protects human decisions.
+One persona-led story, one Decision Build Card and exactly three tabletop tests. Use synthetic records. All choices, observations and revisions stay on this one card.</p>
+<h2 id="read-the-case-accurately">Read the case accurately</h2>
+<p>OmniTech is a aspirational multinational IT enterprise. Its source profile stipulates 98,000 employees, 41 countries and cloud/platform, enterprise software, cybersecurity, AI/data and managed-service businesses. These are aspirational baselines, not independently measured facts. Existing source targets and roadmaps are proposals, not achieved outcomes. Corporate founding is 1998; the earlier teaching windows below do not describe its biography.
+Original research stays outside this sprint. The incident, dialogue, worker records, test conditions and OTS-HR educational IDs below are newly introduced teaching additions. Existing OTS persona and master IDs retain their meaning. No approved deployment or product capability is inferred.</p>
+<h2 id="origins-the-question-that-survives-each-era">Origins: the question that survives each era</h2>
+<p>These closed windows group process evolution for teaching; they are not universal invention or adoption dates. Adoption overlaps. Paper, spreadsheets and older systems can coexist through the present.
+1970–1984 — HR specialists answer policy questions manually
+1985–1994 — Knowledge databases structure standard answers
+1995–2004 — Rules automate routing and routine validation
+2005–2014 — Search and workflow connect approved content to services
+2015–2025 — Machine learning and language models add grounding, permission and evaluation risks
+A citation can point to the wrong policy; fluency and retrieval success do not prove permission or correctness.</p>
+<h2 id="one-story-choose-reveal-revise">One story: choose, reveal, revise</h2>
+<p>Grace Menon (OTS-P11), AI Product and Model Governance Lead, reviews a synthetic HR assistant answering a mobility question. Mei Lin (OTS-P09), Data Governance and Knowledge Lead, asks which policy and client context the answer used. Nadia Fernandes (OTS-P07), Group CHRO, wants convenience without delegating employment authority.
+Choose before reading on: Trust the fluent answer, disable all HR services, or contain the affected path and verify evidence/permissions before a controlled release?
+Evidence reveal: The answer used an obsolete policy and retrieved a restricted client's staffing note. Grace stops the affected response path, contains access, preserves a minimized incident trace and routes the employee to a human specialist. A revised prompt alone cannot fix an authorization failure; permissions, source scope and release evaluation need review.
+Write what changed your decision and what remains unknown. An accessible explanation and a human challenge route must be available to the affected worker. An uncertain record cannot silently become an authorization.</p>
+<h2 id="application-responsibility-and-human-authority">Application responsibility and human authority</h2>
+<p>Policy / HR knowledge — HR policy owner maintains approved scope and validity. Policy expert handles disputed interpretation.
+Retrieval / identity — Data owner governs corpus; security owns authorization. Access authority approves retrieval boundaries.
+AI service / evaluation — AI owner records permitted evaluations and incident response. Release authority approves tested change and rollback.
+HR transaction — HR owns the employment decision workflow. Delegated human authority approves any actual move.
+Business owners remain accountable; applications store and process the records. Discover the actual delegated approvers before implementation. Restrict client, candidate, pay and health information to its purpose and permitted viewers. Minimize replicated data and unnecessary compute rather than assuming automation is sustainable.
+SAP examples in the preserved source are discussion options, not a technology selection or a claim that configuration has been validated. Start with the business need. AI may summarize permitted evidence or draft a reminder; it cannot approve a consequential people decision, grant privilege or declare a payment complete.</p>
+<h2 id="your-120-minute-sprint">Your 120-minute sprint</h2>
+<p>0–10: Read the promise and frame the people/business need.
+10–30: Reconstruct the five teaching windows and one enduring question.
+30–45: Choose, reveal evidence and revise the decision.
+45–60: Assign application responsibilities, data owners and human decision rights.
+60–90: Complete the one build card; compare an alternative and a justified local variant.
+90–110: Walk through exactly three tabletop tests and record observations on the same card.
+110–120: Give a 60-second explanation, reflect and name the Pre-Foundation question.
+Selective resource reading fits within this time. No additional deliverable is required.</p>
+<h2 id="one-build-experiment-decision-build-card">One build experiment: Decision Build Card</h2>
+<p>Synthetic inputs: Question AIQ-1100; synthetic policy V1 expired and V2 approved; restricted client note CLIENT-X; employee IT-P1100 lacks access; assistant has no authority to approve mobility.
+Complete these fields once:
+1. People and business need: who benefits, what could go wrong and why this matters in IT services or engineering.
+2. Initial choice and reason: compare the choices before seeing the reveal.
+3. Evidence reveal and revised choice: state what changed, and one counterexample.
+4. Identity, date and source owner: identify authoritative records, effective time, provenance and uncertain facts.
+5. Application responsibility: separate record keeping, orchestration, calculation, analytics and access enforcement.
+6. Human approval and protected action: name the decision role, limits and worker challenge route.
+7. Minimum data and permitted viewers: state purpose, retention question, client isolation and accessible communication.
+8. Alternative and local variant: defend a common core with a justified regional/client variant, or explain a different design.
+9. Exception owner and recovery: define hold, escalation, retry/reconciliation and confirmation conditions.
+10. Measure and missing evidence: Proposed responses with permitted current sources and preserved human authority / evaluated prompts; no leakage tolerated in design acceptance.
+11. Pre-Foundation question: Define user intent, permitted source, authorized action, evaluation and escalation; write one refusal condition.
+For each test below record input → expected → observed paper result → evidence → revision. Blank observations remain blank. A complete card can still contain a poor decision.</p>
+<h2 id="exactly-three-tabletop-tests">Exactly three tabletop tests</h2>
+<p>OTS-HR11-T01 — Outdated policy cited
+Expected proposed behavior: Reject unsupported guidance, show source validity gap and route to a human expert.
+Evidence to record: Record version, expected refusal and correction route.
+Observed result / evidence / revision: initially unfilled; learner completes during the exercise.</p>
+<p>OTS-HR11-T02 — Restricted note or prompt injection
+Expected proposed behavior: Deny unauthorized retrieval/action and avoid revealing restricted content; contain and escalate.
+Evidence to record: Record minimized incident, access scope and accountable response.
+Observed result / evidence / revision: initially unfilled; learner completes during the exercise.</p>
+<p>OTS-HR11-T03 — Regression after model change
+Expected proposed behavior: Keep release held until relevant evaluation and rollback evidence are reviewed; compare the prior baseline.
+Evidence to record: Record evaluation design, release owner and stop condition.
+Observed result / evidence / revision: initially unfilled; learner completes during the exercise.
+Acceptance: one complete card, three recorded tabletop observations after any revisions, and an explanation of source ownership and human authority. A breached authority or privacy boundary requires redesign. Publishing these tests does not execute them.</p>
+<h2 id="traceability-and-evidence">Traceability and evidence</h2>
+<p>Existing source anchors: OTS-M13, OTS-M16, OTS-M17, OTS-M18, OTS-M19. Locate these in the enterprise master and source register. No theme-specific approved requirement, ADR or executed experiment was discovered in the reviewed source pages.
+The following are NEW EDUCATIONAL design anchors, not previously approved client IDs:
+OTS-HR11-REQ01 — Design one HR assistant boundary that uses permitted evidence and protects human decisions. Linked to the existing anchors above and evaluated by T01–T03.
+OTS-HR11-ADR01 — Separate authoritative records, workflow assistance and protected human decisions. Record an alternative and trade-off; this decision is open to learner challenge.
+OTS-HR11-EXP01 — The synthetic experiment on the one card. Planned classroom exercise only.
+OTS-HR11-M01 — Proposed responses with permitted current sources and preserved human authority / evaluated prompts; no leakage tolerated in design acceptance. Define denominator and missing-data treatment before scoring.
+OTS-HR11-EV01 — Initially empty evidence slot for the three observations, revisions and reviewer questions. No achieved benefits or test passes are recorded by this publication.</p>
+<h2 id="20262050-explore-and-challenge">2026–2050: explore and challenge</h2>
+<p>2026–2030 — Assist: Draft answers from approved sources with visible limits.
+2031–2040 — Connect: Connect governed knowledge and human service workflows.
+2041–2050 — Adapt: Adapt assistance under monitored boundaries and a tested stop route.
+These are scenarios, not predictions, guaranteed capabilities, deployments or product roadmaps. Competing future: restrictive client contracts, unreliable data and fragmented regional systems favor smaller human-led workflows. Disproof question: would the proposed assistance still improve this decision if the trusted source is unavailable, stale or contested? Define evidence that would make you reject the hypothesis; preserve worker agency and an accountable stop route.</p>
+<h2 id="reflection-and-the-next-chapter">Reflection and the next chapter</h2>
+<p>Which evidence changed your first choice? Which record could be digitally available yet wrong? How can the affected worker challenge it? What would make your chosen alternative better?
+Pre-Foundation handoff: Define user intent, permitted source, authorized action, evaluation and escalation; write one refusal condition.
+Continue the same semi-aspirational thread: Pre-Foundation defines the language and boundaries; Foundation models the process and data; Essentials connects the end-to-end flow; Advanced investigates exceptions and recovery; Ultimate concludes with measured value, costs, ROI assumptions, troubleshooting and lessons learned. These are handoff directions, not newly published deeper-level curricula. Ultimate must distinguish observed benefits from targets and unvalidated ROI.</p>
+<h2 id="educational-architecture-alignment">Educational architecture alignment</h2>
+<p>TOGAF: business need, options, architecture decisions and transition evidence. BIZBOK: capabilities and value streams. BABOK: requirements, alternatives and acceptance criteria. DAMA-DMBOK: authoritative ownership, quality, lineage and definitions. COBIT: accountability, controls and monitoring. Relevant ISO/IEC security and quality principles: least privilege, controlled change, assurance evidence and continual improvement. This is educational alignment, not certification, compliance or a conformance assessment.
+Classification axes are separate: HR theme = HR11 AI-Powered HR Enterprises; enterprise transformation stream = Workforce; architecture views = Enterprise, Business, Data, Application, Technology, AI, Security, UI/UX, Infrastructure, Integration, Domain and Industry as relevant. Cross-references do not make these interchangeable.</p>
+<h2 id="a-few-official-resources">A few official resources</h2>
+<p>NIST AI Risk Management Framework — what evidence and authority bound assistance? https://www.nist.gov/itl/ai-risk-management-framework
+IIBA Business Analysis Standard — what need and acceptance evidence justify the decision? https://www.iiba.org/knowledgehub/the-business-analysis-standard/
+ISO/IEC 27001 overview — what information risk and ownership should the design address? https://www.iso.org/standard/27001
+Use these selectively. Extensive vendor comparisons belong in supporting material.</p>
+<h2 id="source-and-edition-record">Source and edition record</h2>
+<p>Existing Notion source case: https://app.notion.com/p/3d0ce6de60898137871df7a14e54ed96
+Enterprise hub: https://app.notion.com/p/3f57a051ff8740d3bc46b102e2e7f211
+Persona cards: https://github.com/nbnayak88/successlabs-case-studies/blob/main/08-information-technology/omnitech-solutions-ltd/personas/persona-cards.md
+Master: https://github.com/nbnayak88/successlabs-case-studies/tree/main/08-information-technology/omnitech-solutions-ltd/master
+Unresolved facts: https://github.com/nbnayak88/successlabs-case-studies/blob/main/08-information-technology/omnitech-solutions-ltd/references/source-and-assumptions.md
+GICS02 reference: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/materials-origin-stories.md
+Source review: 1 November 2026 IST. Preserve OTS-Q04 reuse targets (50% versus 40%) and OTS-Q01–Q03 investment/value/ROI gaps. Do not silently reconcile. No HR08 second source case was found in the OmniTech hub/register or targeted discovery; its companion remains missing rather than borrowing another sector's page.
+Saved-content publication does not establish automatic synchronization, public student access, successful copying, executed tabletop tests or operational outcomes.</p></article><section class="close"><h2>Build the decision before the model</h2><p>Join the free webinar and see how HR teams design AI they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR11-AAI1-Architecting-AI-Powered-HR-Enterprises/08-HR11-IT-information-technology/0-The-Origin-Story/sprint/information-technology-hr11-origin-story.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>
