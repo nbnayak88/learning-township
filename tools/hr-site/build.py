@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the HR01-HR12 public sites straight from the repo content.
+"""Builds the HR01-HR12 and CRM01-CRM12 public sites straight from the repo content.
 Run by .github/workflows/hr-site.yml on every push; no manual steps.
 Usage: python3 tools/hr-site/build.py <output_dir>"""
 import os, re, glob, html, shutil, sys
@@ -9,7 +9,12 @@ from theme import CSS, TEMPLATE, PROGRESS, WEBINAR
 import markdown
 
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-HRDIR = os.path.join(REPO, "01-HR-Human-Capital-Capability-Academy-Workforce-Monday")
+ACADEMIES = [
+    dict(key="hr", dir="01-HR-Human-Capital-Capability-Academy-Workforce-Monday", prefix="HR", name="HR", day="Workforce Monday", hub="HR · Workforce Monday Series", h1="Architect the HR enterprise, series by series",
+         q_hub="Twelve series, one question: what must the HR system promise?", q_sector="Every sector hires, develops and protects people differently, so listen before you automate."),
+    dict(key="crm", dir="02-CRM-Customer-Experience-Capability-Academy-Revenue-Tuesday", prefix="CRM", name="Customer Experience", day="Revenue Tuesday", hub="Customer Experience · Revenue Tuesday Series", h1="Architect the customer enterprise, series by series",
+         q_hub="Twelve series, one question: what must the customer experience promise?", q_sector="Every sector earns customer trust differently, so listen before you automate."),
+]
 OUT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(REPO, "docs"))
 GH = "https://github.com/nbnayak88/learning-township/"
 GHB, GHT = GH + "blob/main/", GH + "tree/main/"
@@ -31,8 +36,19 @@ QUOTES = {
  "HR10": "Experience is what the employee feels after the process has finished.",
  "HR11": "Responsible workforce AI starts with a decision, an owner and evidence.",
  "HR12": "A message that arrives is not the same as access that is right.",
+ "CRM01": "A customer is one person, however many systems know a different version of them.",
+ "CRM02": "Engagement earns its place when it is relevant, consented and easy to stop.",
+ "CRM03": "Revenue is a promise kept in sequence, from first interest to final invoice.",
+ "CRM04": "A basket is only as trustworthy as the price, stock and promise behind it.",
+ "CRM05": "A fast answer is only service when the customer's problem is actually solved.",
+ "CRM06": "Customers remember how the whole journey felt, not which team handled which step.",
+ "CRM07": "Recurring revenue is renewed trust, earned again every cycle.",
+ "CRM08": "Good operations make the right thing the easy thing at every handoff.",
+ "CRM09": "Customer insight is useful only when someone owns the decision it changes.",
+ "CRM10": "A digital experience is a promise the customer can test in seconds.",
+ "CRM11": "Responsible customer AI starts with a decision, an owner and evidence.",
+ "CRM12": "An ecosystem is only as strong as the weakest handoff between its partners.",
 }
-Q_SECTOR = "Every sector hires, develops and protects people differently, so listen before you automate."
 Q_LESSON = "A story earns its place when it changes the decision you make next."
 SUBS = [(r"is a \*\*fictional educational case\*\*", "is an **aspirational case study**"), (r"\bfictional educational cases\b", "aspirational case studies"), (r"\bfictional educational case\b", "aspirational case study"), (r"\bfictional cases\b", "aspirational case studies"), (r"\bfictional case\b", "aspirational case study"), (r"\bfictional\b", "aspirational"), (r"\bFictional\b", "Aspirational")]
 
@@ -119,19 +135,19 @@ def page(site, title, desc, root, quote, nav, content, gh):
     return TEMPLATE.format(title=html.escape(title), desc=html.escape(desc), css=CSS, root=root, site=site, quote=quote, progress=PROGRESS, nav=nav, content=content, webinar=WEBINAR, gh=gh, body="")
 
 
-def cta(series_title):
-    return f'<section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design {html.escape(series_title)} they can explain, govern and recover.</p><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section>'
+def cta(series_title, A=None):
+    return f'<section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and learn to architect decisions you can explain, govern and recover.</p><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section>'
 
 
-def load_series(sdir):
+def load_series(sdir, A):
     b = os.path.basename(sdir)
-    m = re.match(r"(HR\d\d)-([A-Z0-9]+)-(.+)$", b)
+    m = re.match(r"([A-Z]+\d\d)-([A-Z0-9]+)-(.+)$", b)
     code, short, title = m.group(1), m.group(2), m.group(3).replace("-", " ").replace(" And ", " and ")
     title = title.replace("AI Powered", "AI-Powered").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
     sectors = []
-    for d in sorted(glob.glob(sdir + "/[0-9][0-9]-HR*-*")):
+    for d in sorted(glob.glob(sdir + "/[0-9][0-9]-[A-Z]*-*")):
         sb = os.path.basename(d)
-        mm = re.match(r"\d\d-HR\d\d-([A-Z]+)-(.+)$", sb)
+        mm = re.match(r"\d\d-[A-Z]+\d\d-([A-Z]+)-(.+)$", sb)
         if not mm:
             continue
         sc, slug = mm.group(1), mm.group(2)
@@ -148,13 +164,13 @@ def load_series(sdir):
     extras = []
     for p in sorted(glob.glob(sdir + "/*")):
         n = os.path.basename(p)
-        if re.match(r"\d\d-HR\d\d-", n):
+        if re.match(r"\d\d-[A-Z]+\d\d-", n):
             continue
         extras.append((n, p, os.path.isdir(p)))
     return dict(code=code, short=short, title=title, dir=b, path=sdir, sectors=sectors, extras=extras)
 
 
-def build_series(S):
+def build_series(S, A, peers):
     code = S["code"]; out = f"{OUT}/{code.lower()}"
     site = f"{code} · {S['title']}"
     ghdir = GHT + rel(S["path"])
@@ -167,7 +183,7 @@ def build_series(S):
             write(f"{out}/sectors/{s['slug']}-origin-story.html", page(site, title + " · " + site, title, "../", Q_LESSON, nav, f"<article>{md2html(md)}</article>" + cta_html, GHB + rel(s["lesson"])))
         comp_html = ""
         trs = "".join(f"<tr><td>{r['level']}</td><td>{r['fmt']}</td><td><code>{html.escape(r['pid'])}</code></td><td>{html.escape(r['idx'])}</td><td>{html.escape(r['dur'])}</td><td>{html.escape(r['obj'])}</td><td>{html.escape(r['out'])}</td></tr>" for r in s["rows"])
-        lesson_card = f'<div class="card"><span class="num">LEVEL 0 · THE ORIGIN STORY</span><h3>Two-hour Origin Story sprint</h3><p>A free community lesson with the origins, the general story, future perspectives, a persona-led case and a small build experiment.</p><a class="cta" href="{s["slug"]}-origin-story.html">Open the lesson</a></div>' if s["lesson"] else ""
+        lesson_card = f'<div class="card"><span class="num">LEVEL 0 · THE ORIGIN STORY</span><h3>Two-hour Origin Story sprint</h3><p>A free community lesson with the origins, the general story, future perspectives, a persona-led case and a small build experiment.</p><a class="cta" href="{s["slug"]}-origin-story.html">Open the lesson</a></div>' if s["lesson"] else '<div class="card"><span class="num">LEVEL 0 · THE ORIGIN STORY</span><h3>Lesson in preparation</h3><p>The Origin Story lesson for this sector is not published yet. It appears here automatically once it is added.</p></div>'
         body = f"""
 <section class="hero"><span class="pre">{html.escape(s['name'])} · {code}</span>
 <h1>{html.escape(s['ent'])}: {html.escape(S['title'])}</h1>
@@ -180,7 +196,7 @@ def build_series(S):
 <div class="tw"><table><thead><tr><th>Level</th><th>Format</th><th>Pathway ID</th><th>Index</th><th>Duration</th><th>Learning objective</th><th>Student output</th></tr></thead><tbody>{trs}</tbody></table></div></section>
 """
         nav = f'<p class="meta"><a href="../index.html">All sectors</a> · {html.escape(s["name"])}</p>'
-        write(f"{out}/sectors/{s['slug']}.html", page(site, f"{s['ent']} · {site}", f"{code} pathway catalog for {s['name']}", "../", Q_SECTOR, nav, body + cta_html, f"{GHT}{rel(S['path'])}/{s['dir']}"))
+        write(f"{out}/sectors/{s['slug']}.html", page(site, f"{s['ent']} · {site}", f"{code} pathway catalog for {s['name']}", "../", A["q_sector"], nav, body + cta_html, f"{GHT}{rel(S['path'])}/{s['dir']}"))
     cards = "".join(f'<div class="card"><span class="num">{html.escape(s["name"])}</span><h3>{html.escape(s["ent"])}</h3><p class="meta">{len(s["rows"])} pathway records</p><p>{("<a href=sectors/" + s["slug"] + "-origin-story.html>Origin lesson</a> · ") if s["lesson"] else ""}<a href="sectors/{s["slug"]}.html">Catalog</a></p></div>' for s in S["sectors"])
     first = S["sectors"][0]; dur = {}
     for r in first["rows"]:
@@ -192,9 +208,9 @@ def build_series(S):
     if S["extras"]:
         items = "".join(f'<li><a href="{(GHT if d else GHB) + rel(p)}" target="_blank" rel="noopener">{html.escape(n)}{"/" if d else ""}</a></li>' for n, p, d in S["extras"])
         ex = f'<section class="blk"><h2>More from this series</h2><p>Supporting files and toolkits kept alongside the sector folders on GitHub.</p><ul>{items}</ul></section>'
-    others = " · ".join(f'<a href="../{c.lower()}/index.html">{c}</a>' if c != code else f"<strong>{c}</strong>" for c in sorted(QUOTES))
+    others = " · ".join(f'<a href="../{c.lower()}/index.html">{c}</a>' if c != code else f"<strong>{c}</strong>" for c in peers)
     idx = f"""
-<section class="hero"><span class="pre">Free live webinar · 11 sectors · Workforce Monday</span>
+<section class="hero"><span class="pre">Free live webinar · 11 sectors · {A["day"]}</span>
 <h1>{html.escape(S['title'])}</h1>
 <p class="sub">{code}: eleven aspirational case studies, a free Origin Story lesson for each, and the full pathway catalog.</p>
 <ul class="ticks"><li>Read the free Origin Story lesson for your sector</li><li>See every pathway across five levels and eight formats</li><li>Plan your route from Pre-Foundation to Ultimate</li></ul>
@@ -208,7 +224,7 @@ def build_series(S):
 <details><summary>Are all pathways live courses?</summary><p>No. The catalog records are not proof that a course is live or purchasable. Check each record and its source file.</p></details>
 <details><summary>Is the webinar free?</summary><p>The button opens a registration page for a free webinar. Check the page for the session details.</p></details>
 <details><summary>Does this page update itself?</summary><p>Yes. It is rebuilt automatically whenever the source content changes.</p></details>
-<p class="meta">Other HR series: {others} · <a href="../hr/index.html">All HR series</a></p></section>
+<p class="meta">Other series: {others} · <a href="../{A["key"]}/index.html">All {A["name"]} series</a></p></section>
 """ + cta_html
     write(f"{out}/index.html", page(site, site, f"{code}: {S['title']} across 11 aspirational case studies", "", QUOTES.get(code, QUOTES["HR11"]), "", idx, ghdir))
     os.makedirs(out + "/assets", exist_ok=True)
@@ -216,22 +232,27 @@ def build_series(S):
     return total
 
 
-def build_hub(all_s):
-    site = "HR · Workforce Monday Series"
+def build_hub(all_s, A):
+    site = A["hub"]
     cards = "".join(f'<div class="card"><span class="num">{S["code"]}</span><h3>{html.escape(S["title"])}</h3><p class="meta">{len(S["sectors"])} sectors · {sum(len(s["rows"]) for s in S["sectors"])} pathway records</p><p><a href="../{S["code"].lower()}/index.html">Open {S["code"]}</a></p></div>' for S in all_s)
-    body = f"""<section class="hero"><span class="pre">Free live webinar · 12 series · Workforce Monday</span>
-<h1>Architect the HR enterprise, series by series</h1>
-<p class="sub">Twelve HR series, eleven sectors each. Every page updates automatically when the source content changes.</p>
+    body = f"""<section class="hero"><span class="pre">Free live webinar · 12 series · {A["day"]}</span>
+<h1>{A["h1"]}</h1>
+<p class="sub">Twelve series, eleven sectors each. Every page updates automatically when the source content changes.</p>
 <div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#series">Explore the series</a></div></section>
-<section class="blk" id="series"><h2>Choose a series</h2><div class="grid">{cards}</div></section>""" + cta("HR architecture")
-    write(f"{OUT}/hr/index.html", page(site, site, "All HR series", "../hr/", "Twelve series, one question: what must the HR system promise?", "", body, GHT + "01-HR-Human-Capital-Capability-Academy-Workforce-Monday"))
-    os.makedirs(OUT + "/hr/assets", exist_ok=True)
-    shutil.copy(HERE + "/assets/successlabs-academy-logo.png", OUT + "/hr/assets/successlabs-academy-logo.png")
+<section class="blk" id="series"><h2>Choose a series</h2><div class="grid">{cards}</div></section>""" + cta("")
+    write(f"{OUT}/{A['key']}/index.html", page(site, site, f"All {A['name']} series", f"../{A['key']}/", A["q_hub"], "", body, ""))
+    os.makedirs(OUT + f"/{A['key']}/assets", exist_ok=True)
+    shutil.copy(HERE + "/assets/successlabs-academy-logo.png", OUT + f"/{A['key']}/assets/successlabs-academy-logo.png")
 
 
 if __name__ == "__main__":
-    all_s = [load_series(d) for d in sorted(glob.glob(HRDIR + "/HR[0-9][0-9]-*")) if os.path.isdir(d)]
-    for S in all_s:
-        n = build_series(S)
-        print(S["code"], S["title"], len(S["sectors"]), "sectors", n, "records")
-    build_hub(all_s)
+    for A in ACADEMIES:
+        root = os.path.join(REPO, A["dir"])
+        if not os.path.isdir(root):
+            continue
+        all_s = [load_series(d, A) for d in sorted(glob.glob(root + "/" + A["prefix"] + "[0-9][0-9]-*")) if os.path.isdir(d)]
+        peers = [S["code"] for S in all_s]
+        for S in all_s:
+            n = build_series(S, A, peers)
+            print(S["code"], S["title"], len(S["sectors"]), "sectors", n, "records")
+        build_hub(all_s, A)
