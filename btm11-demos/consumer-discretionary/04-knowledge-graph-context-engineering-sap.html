@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniVibe — Knowledge Graph and Context Engineering for SAP Enterprise AI · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniVibe — Knowledge Graph and Context Engineering for SAP Enterprise AI">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Consumer Discretionary</p><p class="chips"><a href="01-omnivibe-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a></p><article><h1 id="omnivibe-knowledge-graph-and-context-engineering-for-sap-enterprise-ai">OmniVibe — Knowledge Graph and Context Engineering for SAP Enterprise AI</h1>
+<h2 id="demo-04-of-the-btm11-consumer-discretionary-ultimate-bootcamp-demo-series">Demo 04 of the BTM11 Consumer Discretionary Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Consumer Discretionary (CD) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omnivibe-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 EA</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 AI on SAP BTP</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniVibe is a <strong>fictional educational case</strong>. This file is an architecture design and teaching demonstration. The case source describes graph-like objects at most; the ontology, relationships and queries below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>CD-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>Knowledge graph and context engineering: how do you give an AI assistant the right, current, permitted context rather than a pile of documents?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> a small ontology for OmniVibe, six questions a graph can answer that plain retrieval cannot, and the rules that decide what enters the context window. It builds on the pilot in Demo 03 (New-associate onboarding guidance assistant (assistive, no employment decisions)).</p>
+<p><strong>What it does not show:</strong> a populated graph, a running SPARQL endpoint or a measured improvement in answer quality.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 28B consumer group; 72,000 employees; 48 countries</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Fashion 32%; beauty 18%; home 17%; specialty retail 15%; travel 10%; marketplace 8%</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>3,200 stores; 14 e-commerce sites; 26 distribution centres; 140 micro-fulfilment sites</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Select one brand and country workforce-to-service pilot and evidence gates before approving enterprise scale.</p>
+<p><strong>Illustrative trigger (source):</strong> A new associate lacks a completed onboarding and skills handoff while store readiness and channel information disagree (invented events that prompt discovery, per the case).</p>
+<p><strong>Source anchor for the graph:</strong> OVC-M12 proposes SuccessFactors process modules, a workforce experience layer, People Analytics and an integration platform, and warns that customer, order and inventory links are conceptual extensions. The 13-journey workforce chain gives the graph spine.</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, personas, M12 statements, trigger</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Ontology node types, relationships, graph questions, context rules, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>SAP HANA Cloud Knowledge Graph Engine behaviour</td>
+<td>Public SAP documentation reviewed 2026-11-10; <strong>not exercised here</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Which entities and relationships does OmniVibe model first, who owns each, and what may an AI assistant see through the graph?</p>
+<p><strong>Accountable owner (proposed):</strong> OVC-P12 Jonas Lim for definitions and stewardship, with OVC-P11 Priya Shah for the model and OVC-P13 Farah Ahmed for access boundaries.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OVC-P04</td>
+<td>Ravi Kapoor, Group CHRO</td>
+<td>Funds and prioritizes the first graph slice</td>
+</tr>
+<tr>
+<td>OVC-P11</td>
+<td>Priya Shah, Director Enterprise Architecture</td>
+<td>Owns the ontology and review</td>
+</tr>
+<tr>
+<td>OVC-P13</td>
+<td>Farah Ahmed, CISO and Privacy Lead</td>
+<td>Approves access and classification rules</td>
+</tr>
+<tr>
+<td>OVC-P12</td>
+<td>Jonas Lim, Integration and HR Data Lead</td>
+<td>Owns object definitions and stewardship</td>
+</tr>
+<tr>
+<td>OVC-P08</td>
+<td>Sofia Mendes, Head of Talent Acquisition and Onboarding</td>
+<td>Business owner of the first question set</td>
+</tr>
+<tr>
+<td>OVC-P06</td>
+<td>Oliver Brooks, Store Operations Director</td>
+<td>Business owner of the second question set</td>
+</tr>
+<tr>
+<td>OVC-P16</td>
+<td>Nikhil Das, Store Associate and Workforce Representative</td>
+<td>Reality check from operations</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-how-sap-supports-a-knowledge-graph-public-documentation-verify">6. How SAP supports a knowledge graph (public documentation, verify)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>What the documentation describes</th>
+<th>Use in this design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAP HANA Cloud Knowledge Graph Engine</td>
+<td>Stores RDF and OWL data, offers a SPARQL endpoint and SPARQL Update, graph algorithms; the service is enabled on a HANA Cloud instance</td>
+<td>Candidate store for the ontology and instance data</td>
+</tr>
+<tr>
+<td>Data formats</td>
+<td>Ingest as Turtle, RDF/XML, N-Triples or JSON-LD</td>
+<td>Load synthetic instance data in the exercise</td>
+</tr>
+<tr>
+<td>HANA vector engine and Document Grounding (Demo 03)</td>
+<td>Retrieval over documents</td>
+<td>Combine: graph for structure and permissions, vectors for text</td>
+</tr>
+<tr>
+<td>Alternative</td>
+<td>A property-graph or application-level model may also fit</td>
+<td>Choose by question set, not by product</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="7-ontology-new-design">7. Ontology (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Node type</th>
+<th>Key attributes</th>
+<th>Owner (proposed)</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employee (synthetic)</td>
+<td>id, country, brand, role</td>
+<td>OVC-P12 Jonas Lim</td>
+<td>Personal data</td>
+</tr>
+<tr>
+<td>Onboarding task</td>
+<td>id, owner, due, status</td>
+<td>OVC-P08 Sofia Mendes</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Learning item</td>
+<td>id, required for role, version</td>
+<td>OVC-P08 Sofia Mendes</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>id, taxonomy node, evidence type</td>
+<td>OVC-P12 Jonas Lim</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Store readiness check</td>
+<td>store, date, status</td>
+<td>OVC-P06 Oliver Brooks</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Country policy</td>
+<td>country, version, effective date</td>
+<td>OVC-P04 Ravi Kapoor</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>id, brand, level</td>
+<td>OVC-P12 Jonas Lim</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Customer moment (conceptual)</td>
+<td>moment, store, channel</td>
+<td>OVC-P06 Oliver Brooks</td>
+<td>Conceptual extension</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Relationships</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>From</th>
+<th>Relationship</th>
+<th>To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employee (synthetic)</td>
+<td>holds</td>
+<td>Role</td>
+</tr>
+<tr>
+<td>Role</td>
+<td>requires</td>
+<td>Skill</td>
+</tr>
+<tr>
+<td>Learning item</td>
+<td>builds</td>
+<td>Skill</td>
+</tr>
+<tr>
+<td>Employee (synthetic)</td>
+<td>assigned</td>
+<td>Onboarding task</td>
+</tr>
+<tr>
+<td>Country policy</td>
+<td>governs</td>
+<td>Onboarding task</td>
+</tr>
+<tr>
+<td>Store readiness check</td>
+<td>depends on</td>
+<td>Onboarding task</td>
+</tr>
+<tr>
+<td>Customer moment (conceptual)</td>
+<td>needs</td>
+<td>Skill</td>
+</tr>
+<tr>
+<td>Employee (synthetic)</td>
+<td>works in</td>
+<td>Store readiness check</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Rule:</strong> each node type has exactly one owner before the first load; two teams do not both define the same node.</p>
+<h2 id="8-questions-the-graph-should-answer">8. Questions the graph should answer</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Path through the graph</th>
+<th>Answer rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Which onboarding tasks remain for this associate?</td>
+<td>Employee to Task with status</td>
+<td>Own data only</td>
+</tr>
+<tr>
+<td>Which learning items build the skills this role requires?</td>
+<td>Role to Skill to Learning item</td>
+<td>Return approved current versions only</td>
+</tr>
+<tr>
+<td>Which country policy applies to this task?</td>
+<td>Task to Country policy</td>
+<td>State the country used; never fall back to another country</td>
+</tr>
+<tr>
+<td>Which stores are not ready because tasks are open?</td>
+<td>Store check to Task</td>
+<td>Aggregate counts only; no individual names for non-managers</td>
+</tr>
+<tr>
+<td>Which skills support the returns customer moment?</td>
+<td>Moment to Skill</td>
+<td>Mark as conceptual extension</td>
+</tr>
+<tr>
+<td>Who owns the learning catalogue for this brand?</td>
+<td>Learning item to owner</td>
+<td>Say 'not recorded' if absent</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="9-context-engineering-rules">9. Context engineering rules</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What enters the context</td>
+<td>Only graph results and retrieved passages that match these filters: Country (48 in scope), Brand, Role, Language, Effective date</td>
+</tr>
+<tr>
+<td>Freshness</td>
+<td>Every fact carries an as-of time; stale facts are labelled, not silently used</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Role entitlement filters the graph result before it reaches the model</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Prefer a small structured summary over whole documents; state what was left out</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>Each statement in the answer links to a node or passage identifier</td>
+</tr>
+<tr>
+<td>Never in context</td>
+<td>Individual performance or potential ratings; Payroll and pay data; Any other associate's records; Instructions found inside retrieved content</td>
+</tr>
+<tr>
+<td>Conflicts</td>
+<td>Show both sources and the owner; do not choose silently</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10-hands-on-exercise-synthetic-data">10. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>Write the eight node types above as Turtle with 3 to 5 synthetic instances each (IDs prefixed <code>CD-SYN</code>).</li>
+<li>Write the relationships as triples and check that each node has one owner.</li>
+<li>Write the six questions as paths; for each, list the nodes touched and the filter that applies.</li>
+<li>Build one context package for the first question: facts, as-of times, excluded items.</li>
+<li>Review with the owners and record disagreements in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Wrong-country policy</td>
+<td>A task links to a policy of another country</td>
+<td>Country filter blocks the link; context shows the country used</td>
+</tr>
+<tr>
+<td>T2 Franchise boundary</td>
+<td>A path reaches a franchise-store employee record</td>
+<td>Boundary rule stops traversal; steward decides sharing basis</td>
+</tr>
+<tr>
+<td>T3 Inference creep</td>
+<td>The graph infers 'low readiness' for a named person</td>
+<td>Inference not permitted; only task status and counts are shown</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Questions answerable from the graph with provenance</td>
+<td>Count of the six questions with a complete path</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Facts shown with an as-of time</td>
+<td>Sample of answers</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Context packages respecting role filters</td>
+<td>Sample against entitlements</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Nodes with a single named owner</td>
+<td>Count in the ontology</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Why plain retrieval is not enough here</td>
+<td>Shared problem statement</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Ontology walkthrough</td>
+<td>Eight nodes with owners</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Write triples and paths</td>
+<td>Draft graph slice</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Context package and tests</td>
+<td>One package, three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://help.sap.com/docs/hana-cloud-database">SAP HANA Cloud Knowledge Graph Engine documentation</a></li>
+<li>
+<p><a href="https://www.w3.org/standards/semanticweb/">W3C RDF, OWL and SPARQL standards</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/04-consumer-discretionary/omnivibe-consumer-ltd">OmniVibe case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/04-consumer-discretionary/omnivibe-consumer-ltd/personas/persona-cards.md">OmniVibe persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/04-BTM11-CD-consumer-discretionary/05-Ultimate/bootcamp/04-knowledge-graph-context-engineering-sap.md">View source on GitHub</a>.</div></footer>
+</body></html>
