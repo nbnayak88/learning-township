@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An active employee is not yet a ready care-team member · HR01 · Architecting Autonomous Workforce Foundations</title><meta name="description" content="An active employee is not yet a ready care-team member">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR01 · Architecting Autonomous Workforce Foundations</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="health-care.html">Health Care</a></p><article><h1 id="an-active-employee-is-not-yet-a-ready-care-team-member">An active employee is not yet a ready care-team member</h1>
+<p>SuccessLabs Academy · HR01 — Workforce Foundations · GICS06 Health Care · OmniHealth Systems Ltd.
+IIL — Industry Immersion Lab · Level 0 — The Origin Story · Format: Sprint · 120 minutes · Edition 2026-10-31
+Mission: Architecting Experiences for a Better World.
+Planning reference: HUB-ORIGIN-HR01-HC-sprint (not an LMS ID). Community/Citizen Edition. Published lesson content does not establish live enrolment, certification or public companion access.</p>
+<h2 id="1-one-learner-promise">1. One learner promise</h2>
+<p>In 120 minutes, design one facility transfer that preserves workforce identity while keeping clinical readiness and access decisions explicit.</p>
+<p>One persona-led story, one Workforce Transfer Build Card, exactly three tabletop tests. Use synthetic data and one card throughout; no tenant is required.</p>
+<h2 id="2-read-omnihealth-accurately">2. Read OmniHealth accurately</h2>
+<p>The aspirational enterprise source stipulates 126,000 staff across 19 countries, 86 hospitals, 440 clinics and 670 diagnostic centres. It spans pharmacy, digital health, research and corporate functions. These figures are source stipulations, not independently measured facts. Workforce burden, fragmented information and manual handoffs motivate this lesson.</p>
+<p>The source proposes USD620M investment over three years and USD250M annual value; neither is an achieved result or an approved HR budget. OHS-Q01–Q11 retain missing cost, baseline, attribution, privacy and interoperability evidence. OHS-Q12 retains the source's 13-journey versus 14-reference discrepancy. The requested scope is twelve HR themes; Recruiting and Onboarding remain separate source cases within HR02. HR13 remains outside this edition.</p>
+<p>Existing persona names, designations and IDs are preserved. The incident, dialogue, synthetic records, proposed controls and all OHS-HR01-prefixed IDs below are newly introduced educational additions, not existing approved enterprise requirements or deployed capabilities. Source “outcomes” describe aspirations. No patient information or real employee data is needed.</p>
+<h2 id="3-origins-the-problem-survives-the-medium">3. Origins: the problem survives the medium</h2>
+<p>These closed historical teaching windows are educational groupings, not universal invention dates or OmniHealth's corporate biography. Adoption overlaps; paper and older systems can coexist through the present.</p>
+<p>1970–1984 — Personnel files and local duty lists record who belongs to a facility; identity is difficult to reconcile.</p>
+<p>1985–1994 — Personnel databases and payroll link employment to pay; a paid worker is not necessarily ready for every role.</p>
+<p>1995–2004 — Integrated HR and position structures coordinate transfers; effective dates and delegated approval matter.</p>
+<p>2005–2014 — Self-service and connected learning improve visibility; credential and access owners still differ.</p>
+<p>2015–2025 — Cloud workforce records and assisted checks reveal missing evidence; a green HR status still cannot grant clinical privilege.</p>
+<p>Counterexample: digitizing a staff list makes it easier to find, but does not make its facility assignment current.</p>
+<h2 id="4-one-story-one-consequential-choice">4. One story, one consequential choice</h2>
+<p>Nina Fernandes (OHS-P06), Group CHRO, reviews a synthetic same-employer transfer from a clinic to a hospital care-coordination unit. Dr. Amina Okafor (OHS-P07), Nursing and Care Coordination Director, sees the worker on tomorrow's list and asks who will receive the follow-up tasks. The HR transfer is approved, but the receiving facility's role-readiness record has no accountable reviewer. Nina wants mobility without turning an employment transaction into clinical permission.</p>
+<p>Pause before the reveal. Choose a blanket transfer hold, automatic release of every entitlement, or an approved employment change with separate readiness gates. State who benefits, who bears the risk and what evidence you need.</p>
+<p>Evidence reveal: the same legal employer is assumed for this exercise; the transfer takes effect on 1 November 2026. A course is completed, but no receiving-facility readiness decision is recorded. The employment history is intact.</p>
+<p>Revised decision: Nina retains the approved workforce change and marks clinical/task readiness as unresolved. Amina seeks the designated facility authority's review and an authorized alternative duty. Neither substitutes for a professional credentialing decision. A learner may defend a different option if the card names its authority, evidence, trade-off and conditions for stopping. Missing evidence remains unknown; an urgent request does not manufacture approval.</p>
+<h2 id="5-applications-serve-accountable-people">5. Applications serve accountable people</h2>
+<p>Proposed responsibilities, subject to local discovery:</p>
+<ul>
+<li>Core HR stores person, employment, organization and position facts; delegated HR approvers own the employment change under CHRO-sponsored governance.</li>
+<li>Credential/readiness services hold verified professional and facility evidence; designated credentialing and clinical authorities decide permitted work.</li>
+<li>Learning stores course and assessment evidence under the learning owner; completion is one input, not clinical authorization.</li>
+<li>IAM provisions policy-approved entitlements; security owns access evidence. Scheduling owns the roster; the receiving unit confirms actual readiness.</li>
+</ul>
+<p>Across these boundaries, HR owns employment facts; designated clinical governance owns clinical privilege decisions; IAM administers approved access. Employment, learning completion, account access and permission for clinical work are distinct states. Share only the data needed for the declared purpose; keep patient records and detailed health information out of general HR learning cards. Omar Haddad (OHS-P10), CISO and Privacy Lead, governs privacy/access assurance; jurisdiction-specific applicability remains unresolved.</p>
+<p>SAP examples illustrate responsibilities rather than prescribe a purchase: Employee Central for workforce master data, Learning for learning evidence, and an integration layer for bounded handoffs. No feature availability, license entitlement, configuration, legal compliance or clinical conformance is established here. AI may draft a reminder or summarize permitted evidence; it cannot grant clinical privilege, make a high-impact employment decision or attest to payment or delivery.</p>
+<h2 id="6-the-exact-120-minute-sprint">6. The exact 120-minute sprint</h2>
+<ul>
+<li>0–10 minutes: understand the learner promise and people problem.</li>
+<li>10–30 minutes: compare the five historical windows and identify the enduring question.</li>
+<li>30–45 minutes: choose, reveal evidence and revise the story decision.</li>
+<li>45–60 minutes: map application responsibility, data ownership and human decision rights.</li>
+<li>60–90 minutes: complete the single build card, comparing one alternative and one local variant.</li>
+<li>90–110 minutes: discuss the three tabletop tests and record observed paper decisions and revisions.</li>
+<li>110–120 minutes: explain the design in 60 seconds, reflect and name the Pre-Foundation discovery question.</li>
+</ul>
+<p>Selective resource reading fits within these activities. The single card holds all notes; no extra deliverable is required.</p>
+<h2 id="7-one-synthetic-build-experiment">7. One synthetic build experiment</h2>
+<p>Synthetic HC-P100 / HC-E100; clinic CL-A → hospital HP-A; same employer assumed; entry 31 October 2026, effective 1 November 2026. Course complete, receiving readiness unknown. Labels are educational, not prescribed SAP fields.</p>
+<p>Complete one Workforce Transfer Build Card with these six fields:</p>
+<ol>
+<li>Need and scope: Enable a transparent transfer into coordinated care without losing employment history or implying readiness. Explain the capability and value-stream step before naming a tool.</li>
+<li>Facts and time: preserve identifiers, source, effective/as-of time, unknowns and approved policy version. Distinguish a source fact from your assumption.</li>
+<li>Decision and ownership: Separate person, employment, position assignment, course completion, clinical readiness and system access; identify the delegated approver for each. Record one alternative, its trade-off and the evidence that could favour it.</li>
+<li>Handoff and recovery: Track HR approval and receiving-system confirmation separately. If the facility feed is unavailable, escalate to its designated owner and hold affected permissions under the approved local procedure. Name the accountable exception role, accessible human route and condition for reconciliation.</li>
+<li>Local variant and data: choose one facility/language/role variation; justify minimum fields, purpose, owner, retention decision and viewers. Retain a non-digital route.</li>
+<li>Evidence and learning: record T01–T03 input → expected → observed paper result → revision → reviewer question on this same card. Leave results unfilled until observed.</li>
+</ol>
+<h2 id="8-exactly-three-tabletop-tests">8. Exactly three tabletop tests</h2>
+<h3 id="ohs-hr01-t01-before-and-on-the-date">OHS-HR01-T01 — Before and on the date</h3>
+<p>Input/reveal: Compare 31 October and 1 November views.</p>
+<p>Expected in the proposed design: The old assignment precedes the effective change; person/employment identity and history remain. Readiness is separate.</p>
+<p>Record: Two dated views and approval reference. Observed result and pass/revise remain unfilled until learners perform the tabletop.</p>
+<h3 id="ohs-hr01-t02-completion-without-readiness">OHS-HR01-T02 — Completion without readiness</h3>
+<p>Input/reveal: Learning is complete; facility review is missing.</p>
+<p>Expected in the proposed design: No clinical privilege or task release follows automatically; an authorized role resolves the exception.</p>
+<p>Record: Hold, authority, alternative-duty decision and worker notice. Observed result and pass/revise remain unfilled until learners perform the tabletop.</p>
+<h3 id="ohs-hr01-t03-receiving-system-outage">OHS-HR01-T03 — Receiving-system outage</h3>
+<p>Input/reveal: HR records the change but the roster service gives no acknowledgement.</p>
+<p>Expected in the proposed design: Downstream state stays unconfirmed; no full-completion claim or access expansion; reconcile with the facility owner.</p>
+<p>Record: Per-system state, fallback gap and reconciliation condition. Observed result and pass/revise remain unfilled until learners perform the tabletop.</p>
+<p>Acceptance is a defensible completed card and an explanation of all three decisions after revision. A paper discussion proves neither a working system nor a safe clinical service. Publishing this lesson executes no tests.</p>
+<h2 id="9-traceability-without-invented-evidence">9. Traceability without invented evidence</h2>
+<p>Existing enterprise anchors: OHS-M17 — risk/security; OHS-M18 — workforce/adoption; OHS-M19 — readiness/execution; OHS-M20 — measures. The Workforce derived scope also references OHS-M03 and OHS-M11. Theme source page(s), enterprise master and persona cards remain supporting material outside the sprint.</p>
+<p>New educational anchors:
+- OHS-HR01-REQ01: Preserve workforce identity and dated history while separating readiness from employment status. Link to the theme source and OHS-M18/M19; assess using T01–T03.
+- OHS-HR01-ADR01: Use a governed shared workforce core with separately owned local readiness gates. A proposed decision, open to revision; store alternative, owner and reason on card field 3.
+- OHS-HR01-EXP01: this synthetic experiment, linked to REQ01 and ADR01; tests T01–T03 are planned.
+- OHS-HR01-ME01: learning completeness = completed card fields / 6 × 100. No observed score exists; completeness alone does not prove correctness.
+- OHS-HR01-ME02: Track unresolved readiness handoffs / transfer handoffs, alongside worker delay and inappropriate-permission exceptions. Proposed observation only; define denominator and balancing measure before a pilot.
+- OHS-HR01-EV01: initially unfilled evidence slot for observed paper results, revisions and reviewer questions. No achieved benefit, ROI or system result is claimed.</p>
+<h2 id="10-ai-driven-exploration-three-scenarios">10. AI-driven exploration: three scenarios</h2>
+<p>Scenarios, not predictions, guaranteed capabilities, deployments or product roadmaps:
+- 2026–2030 — Assist: An assistant flags missing receiving-facility evidence.
+- 2031–2040 — Connect: Governed services exchange current readiness evidence across facilities.
+- 2041–2050 — Adapt: A bounded planner proposes alternative assignments under accountable human approval.</p>
+<p>Competing future: facilities retain locally governed workflows and modest deterministic tools because evidence quality, cost or worker trust makes broader automation unsuitable.</p>
+<p>Falsification question: Would assisted transfers create more unresolved permissions or worker delays than a simple reviewed checklist? State what observation would make you reduce, redesign or stop assistance. Human accountability does not disappear in any scenario.</p>
+<h2 id="11-reflect-and-continue-the-story">11. Reflect and continue the story</h2>
+<p>What changed your first decision? Which record could be accurate yet insufficient? Whose voice or access route is missing?</p>
+<p>Pre-Foundation handoff: Define person, employment, position, facility and readiness relationships; discover the actual same-employer rule and delegated authorities before configuration. Carry the same card forward. Beyond this edition, Foundation can map the capability and workflow; Essentials can build a bounded prototype; Advanced can explore exceptions and recovery; Ultimate can conclude with evidenced value, ROI assumptions, troubleshooting and lessons learned. Those later-stage activities and outcomes are not delivered or achieved by this Origin Story.</p>
+<h2 id="12-a-few-official-resources">12. A few official resources</h2>
+<ul>
+<li>WHO health workforce: https://www.who.int/teams/health-workforce — Which workforce need and equity question should shape the experiment?</li>
+<li>NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework — What evidence, oversight and stopping condition should bound assistance?</li>
+<li>SAP Employee Central Core Academy: https://learning.sap.com/courses/sap-successfactors-employee-central-core-academy — Use selectively to understand the shared workforce foundation; it does not establish clinical authority or teach all twelve themes.</li>
+</ul>
+<p>Educational alignment: TOGAF — problem, options and architecture decision; BIZBOK — capability and value stream; BABOK — stakeholder need and acceptance; DAMA-DMBOK — ownership, quality and lineage; COBIT — accountability, control and assurance; relevant ISO/IEC security and service principles — least privilege, controlled change and recovery evidence. This is conceptual educational alignment, not certification or compliance assessment.</p>
+<p>Keep classification axes separate: HR theme = HR01 Workforce Foundations; architecture streams = applicable views across Enterprise, Business, Data, Application, Technology, AI, Security, UI/UX, Infrastructure, Integration, Domain and Industry, each with its own question; enterprise transformation stream = Workforce. Cross-links do not make the three axes interchangeable.</p>
+<h2 id="source-and-edition-record">Source and edition record</h2>
+<ul>
+<li>Enterprise hub: https://app.notion.com/p/48ae8460518643559ed65381fb89b3fe</li>
+<li>Theme source(s): https://app.notion.com/p/3d0ce6de6089811b837cc974183f1315</li>
+<li>Workforce scope: https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/derived-streams/01-workforce.md</li>
+<li>Existing personas: https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/personas/persona-cards.md</li>
+<li>Source/assumptions register: https://github.com/nbnayak88/successlabs-case-studies/blob/main/06-health-care/omnihealth-systems-ltd/references/source-and-assumptions.md</li>
+<li>GICS02 structural reference: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/materials-origin-stories.md</li>
+<li>Standing user approval covers authoring and publication of HR01–HR12. Edition 2026-10-31 IST; future substantive revisions need their own dated record. Companion readback is tracked in the sector index; it is not automatic synchronization.</li>
+</ul></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting Autonomous Workforce Foundations they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/06-HR01-HC-health-care/0-The-Origin-Story/sprint/health-care-workforce-foundations-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>

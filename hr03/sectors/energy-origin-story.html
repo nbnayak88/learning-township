@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>When high output is not high performance · HR03 · Architecting High Performance Organizations</title><meta name="description" content="When high output is not high performance">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR03 · Architecting High Performance Organizations</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="energy.html">Energy</a></p><article><h1 id="when-high-output-is-not-high-performance">When high output is not high performance</h1>
+<h2 id="a-two-hour-origin-story-sprint-architecting-high-performance-organizations">A two-hour Origin Story sprint: Architecting High-Performance Organizations</h2>
+<p><strong>SuccessLabs Academy · HR03-APH3 · Energy · Level 0 → Pre-Foundation</strong><br>
+<strong>Platform:</strong> SAP · <strong>Domain:</strong> Human Capital Management · <strong>Architecture:</strong> Applied Application Architecture (AA)<br>
+<strong>Lab:</strong> IIL — Implementation Intelligence Lab · <strong>Intent:</strong> Build<br>
+<strong>Planning reference:</strong> HUB-ORIGIN-HR03-ENE-sprint · Free — Community/Citizen Edition<br>
+<strong>Version:</strong> 2026-10-19 · Published learning content; not an enrolled course or certification.</p>
+<blockquote>
+<p><strong>Essential idea:</strong> Performance management evolved from judging yesterday's employee to enabling tomorrow's contribution. In energy, output alone cannot define success: how safely, responsibly and sustainably results are achieved matters.</p>
+</blockquote>
+<h2 id="1-what-this-sprint-achieves">1. What this sprint achieves</h2>
+<p>In 120 minutes, you will:
+1. Explain performance management's general purpose and its evolution over 1975–2026.
+2. Compare possible futures through 2050 without treating scenarios as predictions.
+3. Distinguish goals, measures, evidence, feedback, ratings, calibration and development.
+4. Map application responsibility across performance, operating evidence, workforce facts, learning and rewards.
+5. Build and test two role scorecards and a review/appeal design using synthetic evidence.</p>
+<p><strong>Output:</strong> one Performance Evolution Build Card: timeline, two role scorecards, application ownership, a short architecture decision and three tabletop tests.</p>
+<p><strong>The 20% to master:</strong> balanced contribution; role/context relevance; trustworthy evidence; useful coaching; accountable review and appeal.</p>
+<p><strong>Practical outcome:</strong> implementation preparation and a paper prototype, not production SAP configuration proficiency in two hours.</p>
+<h2 id="2-performance-management-in-general-origins-and-purpose">2. Performance management in general — origins and purpose</h2>
+<p>Organizations have long evaluated work to allocate responsibility, pay, promotion and development. Formal appraisal made these judgments more repeatable, but also concentrated attention on periodic ratings. Management by objectives, scorecards, feedback and continuous conversations brought different answers to a persistent question: how can people contribute to organizational outcomes while improving their ability to do the work?</p>
+<p>Performance appraisal is an evaluation activity. Performance management is the wider cycle of agreeing expectations, enabling work, reviewing evidence, discussing contribution and acting on development needs. A high-performance organization also depends on work design, leadership, resources, team coordination and trust. Installing a review application cannot create all of these.</p>
+<p><strong>Purpose:</strong> agree what valuable contribution means, support it during the period, evaluate it fairly and decide what to improve next.</p>
+<p><strong>Boundary:</strong> a performance rating is not a salary calculation, verified safety authorization, medical judgment or measure of a person's worth.</p>
+<h3 id="five-generations-as-a-mental-model">Five generations as a mental model</h3>
+<p><strong>Judge → align → digitize → coach → assist.</strong> These are overlapping teaching lenses, not an official maturity model. Annual reviews can coexist with effective continuous coaching. More frequent feedback is not automatically better feedback.</p>
+<h3 id="evolution-over-the-last-50-years">Evolution over the last 50 years</h3>
+<p>Dates below describe broad patterns, not invention dates or universal adoption. Earlier practices remain in use.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Era</th>
+<th>How the process worked / changed</th>
+<th>What improved</th>
+<th>Unresolved problem</th>
+<th>Illustrative energy translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1975–1984: annual appraisal and objectives</strong></td>
+<td>Managers record annual judgments, discuss results and sometimes link objectives to pay or promotion</td>
+<td>Explicit expectations and a documented review moment</td>
+<td>Recency effects, subjective judgments and limited employee voice</td>
+<td>Refinery output targets can dominate if safe work and quality are not explicit</td>
+</tr>
+<tr>
+<td><strong>1985–1994: competencies and broader scorecards</strong></td>
+<td>Organizations increasingly combine outcomes with capabilities/behaviours and multiple business dimensions</td>
+<td>A wider definition of contribution</td>
+<td>Generic competency language and too many measures can obscure actual work</td>
+<td>Recognize collaboration and prevention alongside throughput</td>
+</tr>
+<tr>
+<td><strong>1995–2004: electronic appraisal and multi-source feedback</strong></td>
+<td>Forms move into HR systems; some organizations expand 360-degree feedback and goal cascades</td>
+<td>Easier administration and broader perspectives</td>
+<td>Digitized forms can reproduce weak criteria; feedback may be mistaken for objective fact</td>
+<td>Engineers receive peer input, but a survey cannot replace validated operating evidence</td>
+</tr>
+<tr>
+<td><strong>2005–2014: connected talent processes</strong></td>
+<td>Performance records increasingly inform learning, succession and rewards in integrated suites</td>
+<td>Reuse and visible development/reward connections</td>
+<td>One review may be overloaded with incompatible purposes; downstream effects amplify poor evidence</td>
+<td>A questionable rating can influence both a development opportunity and a bonus</td>
+</tr>
+<tr>
+<td><strong>2015–2019: stronger emphasis on continuous conversations</strong></td>
+<td>Some employers supplement/redesign annual appraisals with check-ins, feedback and shorter goal cycles</td>
+<td>Earlier course correction and more opportunity for coaching</td>
+<td>Check-in counts can reward ritual rather than useful support; structured review still has a role</td>
+<td>Discuss changing project priorities before year-end, with an auditable goal revision</td>
+</tr>
+<tr>
+<td><strong>2020–2022: distributed and disrupted work</strong></td>
+<td>Remote/hybrid work where feasible increases focus on outcomes, manager support and changing circumstances</td>
+<td>Greater attention to work context and enabling conditions</td>
+<td>Visibility bias and inappropriate comparisons; plant work cannot simply become remote</td>
+<td>Compare a field technician's contribution with weather/access constraints, not office presence</td>
+</tr>
+<tr>
+<td><strong>2023–2026: assistance and evidence quality</strong></td>
+<td>Products increasingly offer AI drafting, summaries and conversation support; organizations examine skills and team contribution</td>
+<td>Potentially less administration and better-prepared conversations</td>
+<td>Invented summaries, hidden surveillance, biased inputs and unsupported ratings</td>
+<td>A fluent draft must not turn disputed HSE facts into an approved “top performer” narrative</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Evidence anchor:</strong> CIPD's performance-management resources describe movement toward regular supportive conversations while retaining a role for structured reviews. Its evidence review cautions against assuming fashionable process changes necessarily improve results. The dated table above is a broad educational synthesis, not a universal empirical chronology. [R1–R2]</p>
+<p><strong>Current product anchor:</strong> SAP documentation covers goals, continuous coaching/feedback, reviews, calibration and 360 reviews; SAP's 2H 2025 announcement describes assistance for preparing performance conversations. This does not prove that a particular tenant has licensed/enabled those features or that an assistant should decide ratings. [R3–R4]</p>
+<h2 id="3-futures-through-2050-explore-alternatives">3. Futures through 2050 — explore alternatives</h2>
+<p>All future rows are <strong>illustrative scenarios</strong>, not SAP roadmaps, guaranteed outcomes or forecasts of employment practice.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Horizon</th>
+<th>Possible process</th>
+<th>Energy application</th>
+<th>Design obligation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2030: assisted preparation</strong></td>
+<td>Approved goals + permitted evidence → assisted draft → employee/manager discussion → reviewed decision</td>
+<td>Maya prepares conversations across refinery and wind-service teams</td>
+<td>Cite evidence, show uncertainty, allow correction; humans own decisions</td>
+</tr>
+<tr>
+<td><strong>2035: contextual contribution</strong></td>
+<td>Review individual and team contribution alongside operating constraints and skills development</td>
+<td>Jin's weather-related delays are distinguished from preventable failures</td>
+<td>Validate context; do not infer individual blame from asset-level outcomes</td>
+</tr>
+<tr>
+<td><strong>2040: learning and performance loops</strong></td>
+<td>Agree challenge → test improvement → gather evidence → reflect → revise work and skills</td>
+<td>Teams learn from maintenance and transition-project experiments</td>
+<td>Separate experimentation/learning from punitive surveillance; retain approved review policy</td>
+</tr>
+<tr>
+<td><strong>2050: a possible adaptive organization</strong></td>
+<td>Continuously revisit capabilities, team contribution and worker development, with periodic accountable decisions</td>
+<td>People move between energy technologies as needs change</td>
+<td>Keep employee voice, privacy, accessible human discussion and durable decision history; no “autonomy percentage” determines success</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Alternative 2050 world</th>
+<th>Risk</th>
+<th>Useful choice now</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trusted coaching ecosystem</strong> — assistance supports reflection and fair contribution</td>
+<td>People without rich digital records may be overlooked</td>
+<td>Accept multiple evidence types and employee corrections</td>
+</tr>
+<tr>
+<td><strong>Metric-dominated workplace</strong> — everything visible is scored</td>
+<td>Gaming, surveillance and suppression of safety reporting</td>
+<td>Minimize data, avoid activity-as-performance proxies, reward safe reporting and learning</td>
+</tr>
+<tr>
+<td><strong>Fragmented operating models</strong> — sites have incompatible goals and tools</td>
+<td>Inconsistent review meaning and inequitable comparisons</td>
+<td>Common definitions and decision principles with justified role variants</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What may endure from 1975 to 2050:</strong> relevant expectations, fair evidence, a useful conversation, accountable judgment and a next development step.</p>
+<p><strong>Future experiment:</strong> would a draft assistant still be useful if ratings were removed? If so, identify the coaching outcome; if not, question whether the application is optimizing a form rather than contribution.</p>
+<h2 id="4-omniverse-energy-case-and-personas">4. OmniVerse Energy — case and personas</h2>
+<p><strong>Aspirational baselines:</strong> 68,000 employees, 42 countries. “OmniEnergy” is an alias preserved in original research. The HR03 case proposes a pilot across refinery, renewable-project and customer-operations populations. No system deployment, improvement or funded rollout is asserted.</p>
+<p><strong>Mission:</strong> create high-performance energy teams without trading away safety, quality, ethics, sustainability or trust.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona and role</th>
+<th>Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OVE-HR03-P01</strong></td>
+<td>Maya Krishnan — VP, Performance and Organization Effectiveness</td>
+<td>Philosophy, architecture, fairness, adoption and value</td>
+</tr>
+<tr>
+<td><strong>OVE-HR03-P02</strong></td>
+<td>Victor Hayes — Refinery General Manager</td>
+<td>Throughput and margin should dominate decisions</td>
+</tr>
+<tr>
+<td><strong>OVE-HR03-P03</strong></td>
+<td>Amara Ndlovu — Environmental and Quality Engineer</td>
+<td>Prevention, collaboration and environmental outcomes deserve recognition</td>
+</tr>
+<tr>
+<td><strong>OVE-HR03-P04</strong></td>
+<td>Jin Seo — Wind-Farm Service Technician</td>
+<td>Goals must reflect uptime, weather, teamwork, travel and safety</td>
+</tr>
+<tr>
+<td><strong>OVE-HR03-P05</strong></td>
+<td>Fatima Rahim — Employee Relations and Fairness Lead</td>
+<td>Rating inconsistency and weak appeal routes</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Design dilemma:</strong> one enterprise model, independent business models, or common principles with governed role variants? Compare options; do not assume a federated design is approved.</p>
+<h2 id="5-the-story-maya-asks-what-excellent-means">5. The story — Maya asks what “excellent” means</h2>
+<p>All dialogue is newly written fiction using source personas. Historical scenes are teaching comparisons, not their biographies.</p>
+<h3 id="scene-1-the-annual-envelope">Scene 1 — The annual envelope</h3>
+<p>Maya shows an imagined 1970s paper appraisal. Victor says the manager knows who delivered. Amara asks where the form records the person who prevented a failure that never appeared in output figures.</p>
+<p><strong>Lesson:</strong> a rating form makes judgment visible; it does not guarantee a balanced definition of success.<br>
+<strong>Pause:</strong> What would be invisible if output were the only criterion?</p>
+<h3 id="scene-2-the-digital-copy">Scene 2 — The digital copy</h3>
+<p>The workshop compares a paper form with its electronic equivalent. Both contain the same vague instruction: “show initiative.”</p>
+<p>Maya asks for an observable example and relevant evidence. The team sees that digitization changes administration before it changes judgment.</p>
+<p><strong>Lesson:</strong> define meaning and evidence before configuring fields.<br>
+<strong>Pause:</strong> Rewrite one vague criterion into a role-relevant expectation.</p>
+<h3 id="scene-3-unsafe-success">Scene 3 — Unsafe success</h3>
+<p>Victor recommends top ratings because throughput is high. Amara presents rising near misses and emissions deviations. Fatima asks whether facts are validated, how policy treats them and whether affected employees can respond.</p>
+<p>Maya does not mechanically equate reported near misses with poor individual performance: more reporting can reflect better safety culture. She asks HSE to distinguish reporting activity, exposure and substantiated behaviour before making a decision.</p>
+<p><strong>Lesson:</strong> do not reward unsafe success or punish honest reporting.<br>
+<strong>Pause:</strong> What must be checked before any rating changes?</p>
+<h3 id="scene-4-one-form-different-work">Scene 4 — One form, different work</h3>
+<p>Jin's service tasks are delayed by weather restrictions. A corporate form compares his completion count with work performed under very different conditions.</p>
+<p>Maya keeps shared principles but asks for role-specific measures and approved context. She does not retrospectively lower targets merely to produce a preferred rating.</p>
+<p><strong>Lesson:</strong> comparability requires relevant context, not identical targets.<br>
+<strong>Pause:</strong> Which factor is within Jin's influence, and what reliable record proves the external constraint?</p>
+<h3 id="scene-5-the-rating-without-a-conversation">Scene 5 — The rating without a conversation</h3>
+<p>Jin receives a rating but no actionable development plan. Fatima finds unexplained differences across managers.</p>
+<p>Maya proposes an evidence-led calibration conversation, an appeal route and one agreed development action with an owner and follow-up date.</p>
+<p><strong>Lesson:</strong> calibration examines evidence and consistency; it is not an automatic forced distribution.<br>
+<strong>Pause:</strong> What would make the review useful even if no rating changed?</p>
+<h3 id="scene-6-an-imagined-2050-review">Scene 6 — An imagined 2050 review</h3>
+<p>In a future design workshop, Maya asks the group to imagine a team working across storage, wind and conventional assets. An assistant summarizes contribution, but attributes a team outage to one worker and omits a corrected maintenance record.</p>
+<p>The imagined worker challenges the draft. The team retrieves sources, corrects the summary and records the authorized decision. The assistant saves preparation time only if the evidence remains inspectable.</p>
+<p><strong>Lesson:</strong> more advanced assistance increases the importance of provenance and challenge.<br>
+<strong>Pause:</strong> What can you prototype today to test this 2050 idea?</p>
+<h2 id="6-concepts-and-application-ownership">6. Concepts and application ownership</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Plain meaning</th>
+<th>Mistake to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Goal</td>
+<td>Agreed contribution or outcome</td>
+<td>Treating a list of activities as the outcome</td>
+</tr>
+<tr>
+<td>Measure / target</td>
+<td>How progress is assessed / intended level</td>
+<td>Ignoring denominator, period, context or quality</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Information supporting a judgment</td>
+<td>Treating an assertion or AI summary as a validated operating fact</td>
+</tr>
+<tr>
+<td>Feedback / coaching</td>
+<td>Observations and support for improvement</td>
+<td>Equating message frequency with quality</td>
+</tr>
+<tr>
+<td>Review / rating</td>
+<td>Structured evaluation / coded conclusion under policy</td>
+<td>Assuming the score tells the complete story</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Authorized comparison of evidence and interpretation</td>
+<td>Forcing a curve or negotiating scores without reasons</td>
+</tr>
+<tr>
+<td>Appeal</td>
+<td>A governed way to challenge a decision</td>
+<td>Treating finalization as removal of employee voice</td>
+</tr>
+<tr>
+<td>Development action</td>
+<td>Agreed learning/practice/support step</td>
+<td>Giving a rating without enabling improvement</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Application / accountable area</th>
+<th>Owns or provides</th>
+<th>Does not decide alone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Performance &amp; Goals / Continuous Performance Management</strong></td>
+<td>Goals, review workflow and permitted performance evidence, feedback and decision records</td>
+<td>Validity of every imported operating fact</td>
+</tr>
+<tr>
+<td><strong>HSE / environmental / quality systems</strong></td>
+<td>Validated operating facts within their domain and investigation status</td>
+<td>Individual performance ratings</td>
+</tr>
+<tr>
+<td><strong>Asset/work management</strong></td>
+<td>Maintenance/work-order and asset context</td>
+<td>Causal attribution of all team results to one person</td>
+</tr>
+<tr>
+<td><strong>Employee Central — HR01</strong></td>
+<td>Approved employment, manager and organizational context</td>
+<td>Performance contribution or final pay outcomes</td>
+</tr>
+<tr>
+<td><strong>Learning / development — HR06 and HR04</strong></td>
+<td>Learning evidence and agreed development pathways within scope</td>
+<td>A guaranteed rating improvement or promotion</td>
+</tr>
+<tr>
+<td><strong>Rewards — HR05</strong></td>
+<td>Compensation policy/planning consuming approved results</td>
+<td>Raw manager assertions as automatically approved pay decisions</td>
+</tr>
+<tr>
+<td><strong>Analytics/AI — HR09/HR11; integration — HR12</strong></td>
+<td>Governed measures/assistance and controlled exchanges</td>
+<td>Replacement of source owners or accountable reviewers</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>AA scope:</strong> define responsibility, objects and acceptance. Detailed transport belongs to HR12, AI design to HR11, security design to the security view and reward calculations to HR05. Reference those concerns without duplicating their implementations.</p>
+<p><strong>Review objects:</strong> employee/employment reference, role, goal/version, evidence period/source, check-in, draft review, calibrated decision, appeal and development action. Record timestamps and version history; do not assume all these objects use EC-style effective dating.</p>
+<h2 id="7-exact-120-minute-sprint">7. Exact 120-minute sprint</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0–10</strong></td>
+<td>Read purpose; distinguish performance from appraisal and output from contribution</td>
+<td>Two-sentence purpose/boundary</td>
+</tr>
+<tr>
+<td><strong>10–30</strong></td>
+<td>Rebuild 1975–2026 evolution; identify a recurring weakness</td>
+<td>Seven-row process/improvement/gap timeline</td>
+</tr>
+<tr>
+<td><strong>30–50</strong></td>
+<td>Compare 2030–2050 futures and Energy case</td>
+<td>One future hypothesis, alternative and validation question</td>
+</tr>
+<tr>
+<td><strong>50–65</strong></td>
+<td>Play Maya in unsafe-success and weather-context scenes</td>
+<td>Five persona needs; three discovery questions</td>
+</tr>
+<tr>
+<td><strong>65–80</strong></td>
+<td>Map application owners and review objects</td>
+<td>Ownership map; operating-fact versus rating distinction</td>
+</tr>
+<tr>
+<td><strong>80–100</strong></td>
+<td>Build two role scorecards and review/appeal gates</td>
+<td>Completed Build Card and short option decision</td>
+</tr>
+<tr>
+<td><strong>100–115</strong></td>
+<td>Run three tabletop tests; revise; give Victor a 60-second explanation</td>
+<td>Expected/actual paper results and pass/revise</td>
+</tr>
+<tr>
+<td><strong>115–120</strong></td>
+<td>Rapid review without looking</td>
+<td>Five-minute recall and next experiment</td>
+</tr>
+</tbody>
+</table></div>
+<p>Resource scans are included within these slots. No extra courses are required to complete the sprint.</p>
+<h2 id="8-build-experiment-high-throughput-missing-context">8. Build experiment — high throughput, missing context</h2>
+<p><strong>Synthetic examples:</strong> review RV-001 for a refinery team member; RV-002 for a wind-service technician. These are teaching records, not named employees' actual results. A refinery reports strong throughput with disputed safety/environmental evidence. The wind-service review shows missed work during a documented weather restriction.</p>
+<h3 id="draft-two-role-scorecards">Draft two role scorecards</h3>
+<p>No weights or automatic rating formulas are prescribed. Policy owners must decide aggregation and how substantiated critical breaches affect review/reward eligibility. A favourable average must not conceal a substantiated critical issue.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Refinery example</th>
+<th>Wind-service example</th>
+<th>Evidence owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outcome</td>
+<td>Reliable production meeting approved quality requirements</td>
+<td>Service contribution to reliable asset operation</td>
+<td>Operations / asset owner</td>
+</tr>
+<tr>
+<td>Safe and responsible work</td>
+<td>Compliance with approved work practices and transparent reporting</td>
+<td>Safe work within access/weather limits</td>
+<td>HSE / authorized operations</td>
+</tr>
+<tr>
+<td>Quality/environment</td>
+<td>Relevant validated quality and emissions measures</td>
+<td>Quality of repairs; applicable environmental practices</td>
+<td>Quality / environmental owner</td>
+</tr>
+<tr>
+<td>Team contribution</td>
+<td>Handover quality and constructive improvement</td>
+<td>Crew collaboration and travel/coordination contribution</td>
+<td>Relevant manager/peers, with evidence</td>
+</tr>
+<tr>
+<td>Development</td>
+<td>Agreed practice to address a role-relevant gap</td>
+<td>Relevant competence/development action</td>
+<td>Employee/manager; learning evidence where relevant</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Avoid a harmful metric:</strong> “zero reported near misses” can discourage reporting. Separate reporting culture from substantiated unsafe behaviour and exposure. Likewise, do not use continuous activity monitoring as a proxy for contribution.</p>
+<h3 id="complete-the-performance-evolution-build-card">Complete the Performance Evolution Build Card</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Your response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose and population</td>
+<td>Who benefits and what contribution matters?</td>
+</tr>
+<tr>
+<td>Goal architecture</td>
+<td>One business goal → team contribution → role goal; explain the distinction</td>
+</tr>
+<tr>
+<td>Measures</td>
+<td>Definition, target if agreed, denominator, period, source and limits</td>
+</tr>
+<tr>
+<td>Role variants</td>
+<td>Refinery versus wind-service differences; shared principles</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Owner, validation status, source reference and correction route</td>
+</tr>
+<tr>
+<td>Review gates</td>
+<td>Draft → discussion → evidence review/calibration → approval → downstream release</td>
+</tr>
+<tr>
+<td>Appeal</td>
+<td>Who receives challenge, reviews independently where applicable, records decision and controls release?</td>
+</tr>
+<tr>
+<td>Coaching</td>
+<td>One action, support/resource owner, due date and follow-up</td>
+</tr>
+<tr>
+<td>AI permission</td>
+<td>Draft/summarize permitted evidence; no unsupported facts or unreviewed final judgment</td>
+</tr>
+<tr>
+<td>Architecture decision</td>
+<td>Compare one uniform form, local independence and common principles/variants</td>
+</tr>
+<tr>
+<td>Test evidence</td>
+<td>Input → expected → actual paper result → revision → pass/revise</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="three-tabletop-tests">Three tabletop tests</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Challenge</th>
+<th>Expected result in the proposed design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T1 — Unsafe success / disputed evidence</strong></td>
+<td>High output; safety/environmental concerns not yet resolved</td>
+<td>No automatic top rating or simplistic penalty; validate domain facts and apply approved policy; unresolved critical evidence remains visible with an owner</td>
+</tr>
+<tr>
+<td><strong>T2 — Context and late goal change</strong></td>
+<td>Weather restriction affects results; manager changes goal retrospectively</td>
+<td>Preserve agreed goal/version; validate context; require justified authorized revision, employee visibility and review of comparability</td>
+</tr>
+<tr>
+<td><strong>T3 — Contested AI draft / downstream result</strong></td>
+<td>Draft invents a negative claim; employee appeals; rewards asks for results</td>
+<td>Correct from sources; human decision/appeal route applies; only approved results release under explicit policy, with disputes/status visible and no silent overwriting</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Actual result means your paper result.</strong> Record if the initial design failed and what changed. No executed tenant tests or operational success is claimed.</p>
+<p><strong>Acceptance:</strong> explain the historical evolution and a competing 2050 scenario; distinguish key concepts; map source ownership; satisfy all three tabletop expectations after revision; give Jin a useful development action. A safety-reporting penalty, fabricated evidence or unreviewed consequential decision requires redesign.</p>
+<p><strong>Measure:</strong> OVE-HR03-KPI01 = reviews with agreed evidence and check-ins / reviews due. Define “agreed evidence,” check-in quality, denominator/exclusions and as-of date. Pair coverage with appeal outcomes and role fairness. Review completion alone does not prove better performance; correlation with operating results is not proof of causation.</p>
+<h2 id="9-high-impact-resources-concepts-and-modern-solutions">9. High-impact resources — concepts and modern solutions</h2>
+<p><strong>Reviewed 19 October 2026.</strong> Representative learning resources, not an exhaustive market ranking or a procurement recommendation. Official product pages establish advertised scope, not independently proven results. Features, licenses and tenant availability require validation.</p>
+<h3 id="concepts-and-source-evidence">Concepts and source evidence</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Official / professional resource</th>
+<th>Selective question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>R1 <a href="https://www.cipd.org/uk/knowledge/factsheets/performance-factsheet/">CIPD — Performance management</a></strong></td>
+<td>What makes regular discussion supportive and useful?</td>
+</tr>
+<tr>
+<td><strong>R2 <a href="https://www.cipd.org/uk/knowledge/factsheets/appraisals-factsheet/">CIPD — Performance reviews</a></strong></td>
+<td>Why can structured review coexist with continuous conversations?</td>
+</tr>
+<tr>
+<td><strong><a href="https://prod.cipd.org/uk/knowledge/evidence-reviews/what-works-in-performance-management/">CIPD — Evidence review</a></strong></td>
+<td>What evidence supports a proposed process change? Some content may require membership</td>
+</tr>
+<tr>
+<td><strong>R3 <a href="https://help.sap.com/docs/SAP_SUCCESSFACTORS_PERFORMANCE_AND_GOALS">SAP — Performance &amp; Goals documentation</a></strong></td>
+<td>How do goals, continuous performance, reviews, calibration and 360 processes relate?</td>
+</tr>
+<tr>
+<td><strong>R4 <a href="https://news.sap.com/2025/10/sap-successfactors-2h-2025-release-ai-skills-people-insights/">SAP — 2H 2025 release announcement</a></strong></td>
+<td>What does conversation assistance do, and which decisions remain human? Announcement is not tenant enablement</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="current-performance-management-solution-landscape">Current performance-management solution landscape</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Solution / official resource</th>
+<th>Learning focus</th>
+<th>Energy implementation question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.sap.com/products/hcm/performance-goals.html">SAP SuccessFactors Performance &amp; Goals</a></strong> / <a href="https://www.sap.com/products/hcm/performance-goals/features.html">features</a></td>
+<td>Goals, continuous performance and review processes; study calibration and 360 in documentation</td>
+<td>Can Maya implement common principles with role-specific evidence?</td>
+</tr>
+<tr>
+<td><strong><a href="https://doc.workday.com/admin-guide/en-us/workday-feature-descriptions/workday-human-capital-management/reference--performance-enablement-capabilities.html">Workday — Performance enablement</a></strong> / <a href="https://doc.workday.com/admin-guide/en-us/human-capital-management/talent/employee-reviews/performance-reviews/ham1552329509919.html">review setup</a></td>
+<td>Goal/review workflows and HCM context</td>
+<td>How are review ownership, corrections and approved downstream use represented?</td>
+</tr>
+<tr>
+<td><strong><a href="https://community-content.workday.com/content/workday-community/en-us/public/learn/resources/get-to-know-workday-ai/workday-s-ai-agents/agents-for-everyone/performance-review.html">Workday — Review agent resource</a></strong></td>
+<td>Evidence-grounded editable review drafting</td>
+<td>Can an employee/manager trace and correct the draft before approval?</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.lattice.com/">Lattice</a></strong></td>
+<td>Performance, goals/OKRs, feedback and development</td>
+<td>Do frequent updates improve coaching or only increase activity counts?</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.15five.com/">15Five</a></strong></td>
+<td>Continuous performance and manager effectiveness</td>
+<td>Is a useful development conversation feasible for shift-based managers?</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.cultureamp.com/">Culture Amp</a></strong></td>
+<td>Employee experience and performance offerings</td>
+<td>How are engagement insights kept distinct from an individual's performance judgment?</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.betterworks.com/">Betterworks</a></strong></td>
+<td>Goals, ongoing performance and talent insights</td>
+<td>Can strategic alignment coexist with frontline controllability and safety?</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.leapsome.com/">Leapsome</a></strong></td>
+<td>Reviews, goals, feedback and development-oriented people processes</td>
+<td>Which module owns each object and how is the HRIS relationship governed?</td>
+</tr>
+</tbody>
+</table></div>
+<p>SAP EC, Learning, development and Compensation are adjacent responsibilities; they are not substitutes for the performance process. SmartRecruiters and recruiting products from HR02 are not performance-management substitutes and are not repeated here merely because they belong to an HCM ecosystem.</p>
+<p><strong>16-minute selective route within the sprint:</strong> 4 minutes CIPD concepts; 5 minutes SAP documentation; 4 minutes one cross-vendor alternative; 3 minutes inspect a review-assistance resource. Choose these instead of reading every link.</p>
+<p><strong>Comparison row to add to the Build Card:</strong> solution/module → goal/evidence/review owner → role variants → permissions → appeal/version history → approved downstream result → AI limits → fit/gap. Demonstrate the same three synthetic tests in any later product evaluation. Do not select a platform by a feature checklist alone.</p>
+<h2 id="10-five-minute-rapid-review">10. Five-minute rapid review</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minute</th>
+<th>Recall without looking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Trace annual appraisal → broader scorecards → digital reviews → continuous coaching → assistance across 1975–2026</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Explain goal, measure, evidence, rating, calibration and development; why is throughput insufficient?</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Name the owners of operating facts, review decisions, employment context, learning and reward decisions</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Explain all three tests; why can zero reported near misses be a harmful target?</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Give Victor a 60-second answer: what could improve by 2050, which alternative future concerns you, and what must remain accountable?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Pass phrase:</strong> “Performance is valuable contribution achieved responsibly, supported by evidence and improved through learning.”</p>
+<p><strong>Next Pre-Foundation experiment:</strong> define one role's goal plan, one review section, permissions, evidence rubric, calibration/appeal route and development action. Validate with Maya, the relevant operating owner and the employee perspective.</p>
+<h2 id="11-traceability-assumptions-and-standards-boundaries">11. Traceability, assumptions and standards boundaries</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What is retained / status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/01-energy/omniverse-energy-ltd">Enterprise case</a></td>
+<td>Aspirational enterprise identity and scale</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/derived-streams/hr/hr03-performance-goals.md">OVE-HR03 canonical case</a></td>
+<td>Mission, five personas and IDs, four source decision scenes, application boundaries, KPI and pilot intent</td>
+</tr>
+<tr>
+<td><a href="https://app.notion.com/p/c7728c1978db4175b6043d1912df2d32">Original Notion research lineage</a></td>
+<td>Read through preserved GitHub snapshot; Notion is not edited by this publication</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/references/source-and-assumptions.md">Case source register</a></td>
+<td>Baselines, assumptions, targets and evidence distinctions</td>
+</tr>
+<tr>
+<td>New sprint</td>
+<td>Dated teaching timeline, dialogue, synthetic examples, proposed controls, tests and future scenarios; not historical testimony or observed outcomes</td>
+</tr>
+<tr>
+<td>Official/professional resources above</td>
+<td>Product scope and performance-management concepts; not proof of an OmniVerse deployment</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Trace:</strong> OVE-HR03-CAP01 goal alignment/coaching/calibration/appeals → OVE-HR03-VS01 strategy/agree/coach/evidence/calibrate/develop → OVE-HR03-REQ01/02 → OVE-HR03-ADR01 → this tabletop derivative of OVE-HR03-EXP01/T01 → OVE-HR03-KPI01. Publication does not populate OVE-HR03-EV01 with observed operational evidence.</p>
+<p><strong>Educational alignment:</strong> TOGAF for application responsibility/options; BIZBOK for capabilities versus value stages; BABOK for needs and acceptance; DAMA for ownership/provenance; COBIT for decision accountability; ISO/IEC 27001 principles for access and information protection. These mappings do not claim compliance or reproduce proprietary standards.</p>
+<p><strong>Publication:</strong> manually authored HR03 derivative. Only the Origin Story sprint format is used. No achieved KPI, production implementation, enrollment, Notion/Drive refresh or unattended synchronization is asserted.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting High Performance Organizations they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/01-HR03-ENE-energy/0-The-Origin-Story/sprint/energy-high-performance-organizations-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>

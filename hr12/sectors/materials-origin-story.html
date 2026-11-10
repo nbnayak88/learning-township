@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The transfer arrived. Why does the quarry badge still work? · HR12 · Architecting Connected HR Enterprises</title><meta name="description" content="The transfer arrived. Why does the quarry badge still work?">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR12 · Architecting Connected HR Enterprises</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="materials.html">Materials</a></p><article><h1 id="the-transfer-arrived-why-does-the-quarry-badge-still-work">The transfer arrived. Why does the quarry badge still work?</h1>
+<p>SuccessLabs Academy · GICS02 Materials · OmniForge Materials Ltd. · HR12 — Connected HR Enterprises · Level 0 → Pre-Foundation</p>
+<p>IIL — Industry Immersion Lab · Sprint · 120 minutes · Edition 2026-10-31 · Planning reference: HUB-ORIGIN-HR12-MAT-sprint</p>
+<p>Mission: Architecting Experiences for a Better World. Aspirational educational case; published learning content is not enrollment, certification or a deployed integration.</p>
+<h2 id="1-one-learner-promise">1. One learner promise</h2>
+<p>Design one traceable HR-to-site handoff that distinguishes message delivery from the intended access outcome and makes failure recoverable.</p>
+<p>One deliverable: a Connected Workforce Handoff Build Card. Master five distinctions: person versus employment/assignment; effective time versus processing time; retry versus repeated business effect; transport receipt versus application acceptance; source fact versus local access authority.</p>
+<p>Business problem first: after a quarry assignment ends, how will the enterprise confirm the intended site-access change while protecting other valid assignments and requiring separate authorization at the destination?</p>
+<h2 id="2-origins-and-process-evolution-19702025">2. Origins and process evolution — 1970–2025</h2>
+<p>HR integration grew from paper handoffs and file exchange into connected applications and monitored services. It reduces repeated entry, but each receiving application has its own purpose, permissions and business rules. A delivered message cannot prove that the receiving system changed the intended record.</p>
+<p>These closed windows organize teaching, not invention dates or a universal chronology. Adoption overlaps: paper, files, batch interfaces, APIs and events coexist through the present. This is a general process history, not OmniForge's corporate biography.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Teaching window</th>
+<th>Process change</th>
+<th>Materials example and remaining gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1970–1984</td>
+<td>Paper personnel handoffs and early file exchange.</td>
+<td>A quarry transfer is recorded in HR but the local gate register changes later.</td>
+</tr>
+<tr>
+<td>1985–1994</td>
+<td>Scheduled batch interfaces make exchanges repeatable.</td>
+<td>A late shift change misses the batch; ownership of exceptions remains unclear.</td>
+</tr>
+<tr>
+<td>1995–2004</td>
+<td>ERP interfaces and shared conventions connect more domains.</td>
+<td>Worker, employment and contractor identifiers can mean different things across sites.</td>
+</tr>
+<tr>
+<td>2005–2014</td>
+<td>Middleware and service contracts centralize routing and controls.</td>
+<td>Transport success can hide a rejected badge update or an incorrect mapping.</td>
+</tr>
+<tr>
+<td>2015–2025</td>
+<td>Cloud APIs, events, managed integration and observability expand.</td>
+<td>Duplicates, reordered events and outage recovery require business-level reconciliation; a faster interface still needs accountable owners.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reconstruct problem → response → remaining gap for each window. Which paper-era check remains useful during an outage? When would a controlled batch meet the need better than an event-driven design?</p>
+<h2 id="3-ai-driven-exploration-20262050-scenarios">3. AI-driven exploration — 2026–2050 scenarios</h2>
+<p>These are scenarios, not predictions, product roadmaps, guaranteed capabilities or OmniForge deployments. Historical teaching windows end in 2025; this separate AI-driven exploration begins in 2026. The current handoff must work without AI.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Scenario period</th>
+<th>Possible assistance</th>
+<th>Counterexample and experiment question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026–2030 · Assist</td>
+<td>Explain failed mappings and propose recovery steps from approved runbooks.</td>
+<td>An assistant confuses employment end with assignment end. Can the owner inspect and reject the proposed repair?</td>
+</tr>
+<tr>
+<td>2031–2040 · Connect</td>
+<td>Compare versioned contracts and identify cross-system semantic conflicts.</td>
+<td>An inferred identity match selects the wrong contractor. Does ambiguity block execution?</td>
+</tr>
+<tr>
+<td>2041–2050 · Adapt</td>
+<td>Prepare bounded recovery actions across composable workforce services.</td>
+<td>A self-repair broadens access during an outage. Can authorization, plant authority and reconciliation prevent it?</td>
+</tr>
+</tbody>
+</table></div>
+<p>Competing future: fragmented local systems and intermittent connectivity persist. Stable identity, explicit contracts, local fallback and outcome evidence help in both futures. Choose one hypothesis and an observation that would make you revise it.</p>
+<h2 id="4-persona-led-story-connected-systems-unresolved-responsibility">4. Persona-led story — connected systems, unresolved responsibility</h2>
+<p>Source baseline: OmniForge has 46,000 employees plus contractors; contractor count and device access are unknown. Production-site, quarry and cement-plant counts may overlap and must not be summed. This incident, identifiers and access contract are new educational fiction.</p>
+<p>Priya Nair (OMF-P13), Director Enterprise Architecture, reviews a proposed quarry-to-cement handoff. HR approved the end of a worker's quarry assignment. The integration monitor is green, but the quarry badge entitlement is still active. The worker is still employed; ending one assignment must not disable every valid enterprise entitlement.</p>
+<p>Arjun Mehta (OMF-P05), Group CHRO, asks which approved workforce fact is authoritative. Hassan Al-Farsi (OMF-P12), CISO and OT Security Lead, challenges an ambiguous identity mapping. Elena Petrova (OMF-P07), Cement Plant Director, asks who owns the safe local fallback when the destination system is unavailable.</p>
+<p>Priya owns architecture standards and exceptions; Arjun sponsors workforce adoption and skills; Hassan owns cyber assurance/remote-access concerns; Elena retains local operational release/rollback authority. Stable IDs and designations are preserved. Their titles do not establish every HR, IAM or physical-access approval delegation.</p>
+<p>First choice: treat a delivery receipt as complete, replace all interfaces immediately, or agree the source fact, target outcome and responsible exception owner. Pause and record your decision before the reveal.</p>
+<p>Evidence reveal: the site target accepted the connection but rejected the assignment identifier. A retry carries a new transport ID. Later, an old grant message arrives after the assignment-end event. Blind replay could restore access or repeat a business effect without resolving the worker's actual state.</p>
+<p>Revise the design: distinguish receipt, application acceptance and verified entitlement state. HR owns the approved assignment fact; site security owns the applicable physical-access action. The integration team carries and reconciles the contract. New cement-site task access requires separate current evidence and delegated approval; the transfer event does not grant it.</p>
+<p>The interface cannot control a kiln or bypass site procedures. A critical access exception invokes the approved security/operations fallback, including designated human action and verification. The workshop does not invent a universal time limit, site emergency procedure or authority.</p>
+<h2 id="5-application-responsibilities-and-data-ownership">5. Application responsibilities and data ownership</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Area / application</th>
+<th>Accountable responsibility</th>
+<th>Boundary to preserve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HR source / HR data owner</td>
+<td>Approved person, employment and assignment facts, effective dates and source revisions.</td>
+<td>Ending one assignment is not ending employment; a correction must originate with the authoritative owner.</td>
+</tr>
+<tr>
+<td>Contractor source / contractor data owner</td>
+<td>Validated contractor identity, sponsor and assignment validity where applicable.</td>
+<td>Do not assume every worker is represented by an employee-only API or the same entitlement rules.</td>
+</tr>
+<tr>
+<td>Integration service / integration owner</td>
+<td>Validate, map, route, correlate and reconcile delivery/application outcomes.</td>
+<td>Transport status and generated mappings do not become business authority.</td>
+</tr>
+<tr>
+<td>IAM / identity owner</td>
+<td>Logical account and entitlement actions within approved scope.</td>
+<td>Person-wide account disablement must not be inferred from one site-assignment end.</td>
+</tr>
+<tr>
+<td>Site access / delegated site security owner</td>
+<td>Apply local physical-access decisions and confirm actual target entitlement state.</td>
+<td>HR transfer does not grant destination task access; site approval and evidence remain separate.</td>
+</tr>
+<tr>
+<td>Operations and business owners</td>
+<td>Own exception priority, safe local fallback, acceptance and controlled recovery.</td>
+<td>Cloud recovery cannot silently override plant authority or reopen a blocked entitlement.</td>
+</tr>
+</tbody>
+</table></div>
+<p>For the prototype, Priya sponsors the contract decision, Arjun validates workforce meaning, Hassan reviews identity/security boundaries, and Elena reviews destination readiness/fallback. Delegated HR approver, IAM operator, source-quarry security owner and integration support owner remain discovery roles, not invented canonical personas or established enterprise delegations.</p>
+<p>Source objects: person ID, employment ID, assignment ID, target entitlement ID, event ID, correlation ID, source revision, effective timestamp, source commit timestamp, receipt/apply timestamps, schema version and business acknowledgment. Record owner, purpose, access, retention and quality rule for each used object.</p>
+<p>Share only the fields required for the handoff. A site-access system does not need a payroll amount, health narrative or confidential HR case. Maintain controlled identifier crosswalks and quarantine uncertain matches; never guess by name alone.</p>
+<p>Value stream: approve change → emit/extract → validate → route → apply or reject → verify outcome → reconcile/recover. Connected workforce management is a capability; this value stream describes progress toward a trustworthy handoff, not a list of interfaces.</p>
+<h2 id="6-exact-120-minute-flow">6. Exact 120-minute flow</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity</th>
+<th>Add to the same card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td>Frame the worker/access outcome and initial choice.</td>
+<td>Need, scope and completion criterion.</td>
+</tr>
+<tr>
+<td>10–30</td>
+<td>Reconstruct five historical windows.</td>
+<td>One change and remaining gap per window.</td>
+</tr>
+<tr>
+<td>30–45</td>
+<td>Compare AI-driven scenarios and a fragmented alternative.</td>
+<td>One hypothesis and disconfirming observation.</td>
+</tr>
+<tr>
+<td>45–60</td>
+<td>Replay the story and evidence reveal.</td>
+<td>Persona needs and revised decision.</td>
+</tr>
+<tr>
+<td>60–75</td>
+<td>Assign source, target and human owners.</td>
+<td>Identity, authority and exception map.</td>
+</tr>
+<tr>
+<td>75–100</td>
+<td>Build the synthetic handoff and compare delivery options.</td>
+<td>One contract, state flow and recovery rule.</td>
+</tr>
+<tr>
+<td>100–115</td>
+<td>Run three tabletop tests; revise and rerun affected steps.</td>
+<td>Expected/actual observations and evidence notes.</td>
+</tr>
+<tr>
+<td>115–120</td>
+<td>Reflect and choose the Pre-Foundation investigation.</td>
+<td>Question, owner and next evidence.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Selective resource scans fit within these activities. There is one card; no live integration, separate platform build or additional Origin Story format is required.</p>
+<h2 id="7-one-build-card-connected-workforce-handoff">7. One build card — Connected Workforce Handoff</h2>
+<p>Use paper or a simple table. No real employee records, gate controls, credentials or live endpoints are needed. The fixture states are teaching labels, not prescribed SAP object names.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Card field</th>
+<th>Write or simulate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose and identity</td>
+<td>One employee person MAT-P1201, employment MAT-E1201, quarry assignment MAT-AQ1201 and separate cement assignment MAT-AC1201. Scope only the quarry entitlement MAT-QENT1201; inventory other valid entitlements separately.</td>
+</tr>
+<tr>
+<td>Variant A · MAT-HR12-SYN01</td>
+<td>Approved assignment-end event MAT-EVT1201, source revision 41, schema v1. Effective 1 November 2026 06:00 Asia/Kolkata; source committed 31 October 18:00. UTC equivalents: effective 1 November 00:30Z; committed 31 October 12:30Z. Preserve both business and processing times. Target receipt occurs later; application result initially unknown.</td>
+</tr>
+<tr>
+<td>Variant B · MAT-HR12-SYN02</td>
+<td>Older grant event MAT-EVT1200, source revision 40, same quarry-assignment/entitlement scope, arrives after revision 41. Duplicate deliveries of MAT-EVT1201 may have different transport IDs but retain the same business event ID.</td>
+</tr>
+<tr>
+<td>Business contract</td>
+<td>HR provides approved assignment end. Site owner validates applicable action; target confirms MAT-QENT1201 inactive at/after effective time. Do not apply prematurely, terminate employment, disable unrelated assignments or grant destination task access.</td>
+</tr>
+<tr>
+<td>Lifecycle and evidence</td>
+<td>Approved → received → validated → accepted/scheduled → applied → target-state verified → reconciled; rejected, unknown and quarantined remain visible exceptions. A receipt or scheduled action cannot be labelled applied. Record actual target state and time.</td>
+</tr>
+<tr>
+<td>Duplicates and ordering</td>
+<td>Receiver records event identity and business effect together where possible. Repeated delivery of the same event has no additional effect; ordering is scoped to the relevant source/assignment contract. An older grant must not overwrite the authoritative newer end. Genuine later corrections require source review, not blanket rejection of all late arrivals.</td>
+</tr>
+<tr>
+<td>Decision ADR01</td>
+<td>Compare point-to-point file, reusable batch/API service and events. Propose a reusable contract with delivery frequency/pattern chosen from validated risk and latency needs; no event-only default. Retain a source-to-target reconciliation independent of the transport monitor.</td>
+</tr>
+<tr>
+<td>Outage and replay</td>
+<td>Expose unknown/rejected outcome; invoke approved local security fallback with owner. Quarantine bad identity/schema without guessing. Repair via approved mapping/schema version, preserve lineage and replay the original business event safely. Reconcile actual state before retry after an ambiguous timeout.</td>
+</tr>
+<tr>
+<td>Evidence and measure</td>
+<td>Log T01–T03 input → expected → actual paper observation → revision/rerun → reviewer. M01 = tests satisfying expected behavior / 3. Leave actual values and EV01 empty until learners record observations.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A platform duplicate check alone cannot guarantee exactly one business effect, especially when a target applied an action but its acknowledgment was lost. Design receiver-side deduplication, outcome queries and reconciliation; document remaining uncertainty and fallback rather than claiming universal exactly-once delivery.</p>
+<p>Proposed enterprise measure after discovery: verified intended target outcomes / approved handoffs due by a defined review cutoff. Keep pending/not-yet-effective items separate; classify overdue, rejected, unknown and manually completed outcomes. Report due-time-to-verified-outcome latency and critical exceptions alongside the ratio. Owners define time boundaries, population, exclusions and acceptable delay before targets; no baseline or achieved performance is asserted.</p>
+<h2 id="8-three-tabletop-tests">8. Three tabletop tests</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Inject</th>
+<th>Expected behavior — planned, not executed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR12-T01 · Receipt without outcome</td>
+<td>Run A before effective time, then after it with an unavailable target or rejected identifier. Show a successful transport receipt.</td>
+<td>Do not apply early or declare completion from transport. At the due time expose the unresolved business outcome, identify the exception owner and invoke approved local fallback. Later verify only the intended quarry entitlement state; retain employment and unrelated valid access.</td>
+</tr>
+<tr>
+<td>OMF-HR12-T02 · Duplicate and old grant</td>
+<td>Apply revision 41 once; replay it under a new transport ID, then deliver revision 40.</td>
+<td>Keep one business effect for MAT-EVT1201 and retain evidence of duplicate receipt. Do not restore quarry access from stale revision 40. Scope ordering/deduplication to the relevant assignment/target, preserving other valid employment/assignment records.</td>
+</tr>
+<tr>
+<td>OMF-HR12-T03 · Bad schema and ambiguous replay</td>
+<td>Change A to an unsupported schema or ambiguous target ID. After approved repair, simulate a timeout after target application but before acknowledgment.</td>
+<td>Quarantine with owner and reason; no guessed identity or silent field drop. Preserve original event and repair lineage. Query/reconcile target state before controlled retry; confirm one intended outcome and close only with business evidence. Do not grant destination task access as compensation.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Run all three manually, record actual behavior and revise the same card when evidence changes. Acceptance requires clear semantics, scoped actions, visible exceptions and reconciled outcomes. Publication verifies saved lesson content; it does not execute these tests, prove target recovery or populate OMF-HR12-EV01.</p>
+<h2 id="9-reflection-and-pre-foundation-handoff">9. Reflection and Pre-Foundation handoff</h2>
+<p>What did a green monitor actually prove? Which identifier defines the action's scope? When should a late event be treated as stale versus a genuine correction? Who confirms the business outcome? What would justify batch instead of events?</p>
+<p>Pre-Foundation: validate this one source-to-site contract with HR, IAM, integration and site owners. Agree object meanings, identifiers, effective dates, schema, permissions, source corrections, acknowledgment, due time, fallback and replay acceptance before selecting interfaces or configuring transport.</p>
+<p>This closes the Origin Story theme set, not the learning journey. HR01–HR06 establish workforce facts and development needs; HR07–HR09 examine pay, time and measures; HR10 makes help accessible; HR11 bounds AI authority. HR12 connects their evidence without transferring source ownership. Choose the weakest handoff and carry it into Pre-Foundation.</p>
+<h2 id="10-resources-traceability-and-architectural-discipline">10. Resources, traceability and architectural discipline</h2>
+<p>[R1] Official SAP Integration Center: scan simple integration scope, scheduling and monitoring. Confirm whether its supported interface and operations fit this contract; do not assume it is a general orchestration platform. https://help.sap.com/docs/successfactors-platform/using-integration-center</p>
+<p>[R2] Official SAP Cloud Integration Idempotent Process Call: inspect duplicate handling and its timeout/receiver caveats. Middleware checks do not by themselves prove the final business effect. https://help.sap.com/docs/cloud-integration/sap-cloud-integration/define-idempotent-process-call</p>
+<p>[R3] Official SAP CompoundEmployee API: learn employee extraction and supported fields/modes; this is not an arbitrary write API or proof of complete contractor coverage. Resources reviewed 31 October 2026; verify product release, permission, licensing and fit before implementation. https://help.sap.com/docs/successfactors-employee-central/employee-central-compound-employee-api/using-compoundemployee-api</p>
+<p>Vendor comparisons are optional outside the sprint. Compare manual/file, SAP examples and other candidates against the same identity, time, acknowledgment, authorization and recovery cases. Technical API availability is not evidence of end-to-end operational success.</p>
+<p>Enterprise source: OMF-M11 central definitions/local ownership; OMF-M12 APIs/events, trust boundaries and hybrid/edge responsibilities. https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/master/theme-c-architecture.md</p>
+<p>Execution source: OMF-M17 controlled access, OMF-M18 workforce inclusion and OMF-M19 bounded testing/fallback and plant approval. https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/master/theme-e-execution.md</p>
+<p>Canonical personas: OMF-P05 Arjun Mehta, OMF-P07 Elena Petrova, OMF-P12 Hassan Al-Farsi and OMF-P13 Priya Nair; source titles and authority limits preserved. https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md</p>
+<p>Supporting workforce blueprint is distinct from an authored HR12 sprint; the existing Notion page was blank at review. https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/derived-streams/01-workforce.md</p>
+<p>Optional deeper Drive comparison: the Vajra Cement Work Zone case remains a separate modeled enterprise with its own facts, IDs and integration aspirations; it is not OmniForge operational evidence. https://drive.google.com/file/d/1vw9m8bNDmQ2a6sB0P1FN9RzXGNZCYNk4/view</p>
+<p>Source/reconciliation register: site-count overlap, benefit classification and emissions boundaries remain unresolved; no interface resolves them automatically. https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/references/source-and-assumptions.md</p>
+<p>Energy HR12 supplies the learning pattern; Materials uses its own source personas and quarry-assignment-to-cement transfer with scoped site access. https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR12-AIG2-Architecting-Connected-HR-Enterprises/01-HR12-ENE-energy/0-The-Origin-Story/sprint/energy-hr12-origin-evolution-sprint.md</p>
+<p>Trace: OMF-M11/M12/M17/M18/M19 → OMF-HR12-REQ01 (authoritative scoped handoff) / REQ02 (verified outcome and recovery) → OMF-HR12-ADR01 → OMF-HR12-EXP01 (this card) → OMF-HR12-T01–T03 → OMF-HR12-M01 / EV01. OMF-HR12 anchors, incidents and fixtures are new educational additions, not previously approved client requirements or observed operational evidence.</p>
+<p>Educational alignment: TOGAF—application responsibilities/alternatives; BIZBOK—capability/value stream; BABOK—needs and acceptance; DAMA-DMBOK—source ownership, quality and lineage; COBIT—accountability and assurance; ISO/IEC 27001 principles—purposeful access and information protection. No certification, conformity assessment or compliance is claimed.</p>
+<p>Classification: HR12 is one of 12 HR themes. Applied Application Architecture is the primary learning lens within the separate architecture-stream axis; Integration Architecture covers deeper transport/platform implementation. Enterprise workforce/change streams form a third axis; numbering is not interchangeable.</p>
+<p>Origin Story remains Sprint only. Detailed sources and implementation learning stay outside it. Matching editions are manually published; automatic synchronization, public student access and successful copying are not implied.</p>
+<p>Matching Google Doc sprint tab: https://docs.google.com/document/d/1AO6SRIg-vaqGK_p5KA9TGpZiHhxO1Zy47Auz12YGqL0/edit?tab=t.0</p>
+<p>Matching Notion edition: https://app.notion.com/p/36b1f04717834d8682840a745cc0ec97</p>
+<p>Common Materials HR01–HR12 index: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/materials-origin-stories.md</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting Connected HR Enterprises they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR12-AIG2-Architecting-Connected-HR-Enterprises/02-HR12-MAT-materials/0-The-Origin-Story/sprint/materials-connected-hr-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>

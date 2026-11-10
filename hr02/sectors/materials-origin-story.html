@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>An accepted offer is only the beginning · HR02 · Architecting Autonomous Talent Acquisition</title><meta name="description" content="An accepted offer is only the beginning">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR02 · Architecting Autonomous Talent Acquisition</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="materials.html">Materials</a></p><article><h1 id="an-accepted-offer-is-only-the-beginning">An accepted offer is only the beginning</h1>
+<p>HR02 — Talent Acquisition, Recruiting and Onboarding · HR02-ATA2 · GICS02 Materials · OmniForge Materials Ltd.</p>
+<p>IIL — Industry Immersion Lab · SuccessLabs Academy — Architecting Experiences for a Better World.</p>
+<p>Level 0 → Pre-Foundation · Sprint · 120 minutes · Edition 2026-10-31 · Planning reference: HUB-ORIGIN-HR02-MAT-sprint (not an LMS ID).</p>
+<p>Community/Citizen Edition. Approved educational sprint; publication does not establish a live LMS course, student access, enrollment, certification or achieved enterprise results.</p>
+<h2 id="1-one-learner-promise">1. One learner promise</h2>
+<p>In 120 minutes, design and defend one evidence-backed hiring-to-readiness handoff that gives the candidate a clear, trustworthy next step.</p>
+<p>One learner promise · One persona-led story · One Hiring-to-Readiness Build Card · Three tabletop tests. All notes, decisions and test evidence belong on the same card; no extra deliverable or tenant configuration is required.</p>
+<p>Read HR02a Recruiting and HR02b Onboarding as connected responsibilities within one theme. The two existing Notion source-page identities remain separate. Before this edition, both bodies were blank; the new incident, candidate and design anchors below are illustrative learning additions, not recovered source research.</p>
+<h2 id="2-one-persona-led-story">2. One persona-led story</h2>
+<p>Arjun Mehta, Group CHRO — OMF-P05, receives an urgent request to recruit a technician for recovered-feedstock operations at a cement plant.</p>
+<p>Elena Petrova, Cement Plant Director — OMF-P07, needs the person before the next operating cycle. Nikhil Sen, Shift Supervisor and Workforce Representative — OMF-P16, needs to know what the newcomer can actually do on arrival.</p>
+<p>A synthetic candidate, MAT-C201, has relevant maintenance experience but lacks the exact job-title keywords used in the screening template. An automated recommendation ranks the application poorly.</p>
+<p>Arjun asks: “Are we assessing the work—or matching words?”</p>
+<p>An authorized reviewer examines a practical assessment against the approved role criteria. The candidate progresses, receives an approved offer and accepts it.</p>
+<p>Then the onboarding dashboard shows “initiated.” Someone proposes sending: “You are ready to start plant operations.” Nikhil challenges the message. The receiving team has not acknowledged the handoff, and task-specific readiness remains unconfirmed.</p>
+<p>Your choice: send the message, delay every activity, or communicate the confirmed hiring status while clearly identifying outstanding readiness steps. Record your first answer.</p>
+<p>New evidence: the candidate has no personal smartphone. Revise the journey so that completing onboarding does not depend on owning one.</p>
+<p>These incidents and dialogue are new teaching fiction. Existing persona names, designations and IDs are preserved. No candidate assessment, hire or operational deployment has actually been executed.</p>
+<h2 id="3-origins-and-evolution-1970present">3. Origins and evolution: 1970–present</h2>
+<p>The periods overlap; they describe teaching lenses, not a universal adoption sequence or OmniForge corporate history. Older and newer practices can coexist.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Process response</th>
+<th>Problem that survives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1970s–1990s</td>
+<td>Referrals, personnel offices, paper applications and joining packs</td>
+<td>Availability does not prove suitability.</td>
+</tr>
+<tr>
+<td>1980s–2000s</td>
+<td>Personnel databases and structured selection records</td>
+<td>Consistent forms can still contain weak criteria.</td>
+</tr>
+<tr>
+<td>1990s–2010s</td>
+<td>Online advertisements and applicant tracking</td>
+<td>More applicants do not guarantee better evidence.</td>
+</tr>
+<tr>
+<td>2000s–present</td>
+<td>Connected recruiting, offers and onboarding services</td>
+<td>An accepted offer can still reach an unprepared receiving team.</td>
+</tr>
+<tr>
+<td>2020s–present</td>
+<td>Assisted scheduling, screening and communications</td>
+<td>A recommendation or generated message can overstate what is known.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Counterexample: a faster offer process can produce a worse experience if the candidate arrives without clear instructions, accessible support or an accountable receiving owner.</p>
+<h2 id="4-application-responsibilities-and-human-decisions">4. Application responsibilities and human decisions</h2>
+<p>This is a proposed learning architecture, not a verified OmniForge deployment. Delegated approval roles, real task criteria and receiving owners must be established before implementation.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Responsibility</th>
+<th>Authoritative facts and owner</th>
+<th>Decision boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demand and position planning</td>
+<td>Business owner and Finance: approved need, role context and funding</td>
+<td>Advertising does not establish approval.</td>
+</tr>
+<tr>
+<td>HR02a — Recruiting</td>
+<td>Talent Acquisition: requisition, application, assessment references and offer versions</td>
+<td>Authorized people approve criteria, selection and offers.</td>
+</tr>
+<tr>
+<td>HR02b — Onboarding</td>
+<td>Onboarding process owner: joining tasks, responsible participants and acknowledged handoffs</td>
+<td>Initiated onboarding does not mean ready for every task.</td>
+</tr>
+<tr>
+<td>HR01 — Core HR</td>
+<td>HR data owner: approved person and employment records</td>
+<td>Candidate ID is not automatically an employee/person ID.</td>
+</tr>
+<tr>
+<td>Learning and site authorization</td>
+<td>Learning/assessors own competence evidence; designated site authorities own task permission</td>
+<td>Course completion does not grant restricted-work authority.</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Security: approved account and access provisioning</td>
+<td>A working account or badge does not establish competence.</td>
+</tr>
+</tbody>
+</table></div>
+<p>SAP Recruiting and Onboarding can illustrate the handoff; actual statuses, mappings and initiation rules require configuration-specific validation. Initiating onboarding is distinct from completing subsequent activities. [R1–R2]</p>
+<p>Automation may assist scheduling or draft a status message within approved permissions. Authorized reviewers retain hiring decisions; an assistant must not invent assessment evidence, authorize restricted work or declare unconfirmed completion. HR11 deepens AI governance; HR12 deepens transport/retry design.</p>
+<h2 id="5-one-build-card-hiring-to-readiness">5. One build card: Hiring-to-Readiness</h2>
+<p>Use one synthetic requisition MAT-R201, candidate MAT-C201, application MAT-A201 and approved offer version MAT-O201-v1. These are teaching identifiers. Requisition, application, offer, onboarding and employment retain their own states; do not flatten them into one universal status.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Card field</th>
+<th>What the learner records</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Need</td>
+<td>Required capability, business reason and demand approvers.</td>
+</tr>
+<tr>
+<td>Assessment</td>
+<td>Approved criteria, relevant evidence and accountable reviewer.</td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>Candidate/application links and controlled handoff into HR01.</td>
+</tr>
+<tr>
+<td>Offer</td>
+<td>Approved version, acceptance and agreed start date.</td>
+</tr>
+<tr>
+<td>Readiness</td>
+<td>Required joining activities, receiving owner and outstanding conditions.</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>Confirmed status, next step, accessible channel and correction route.</td>
+</tr>
+<tr>
+<td>Decision</td>
+<td>Chosen approach, one alternative and the evidence that changed it.</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Three tabletop results, revisions and unresolved questions.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Collect only necessary candidate information. Record who controls access and retention decisions; keep sensitive supporting records outside the general learning card. Explain how the candidate can question an error through a human-assisted route.</p>
+<h2 id="6-three-tabletop-tests">6. Three tabletop tests</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Challenge</th>
+<th>Expected behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR02-T01 — Relevant skills, weak keyword match</td>
+<td>The automated recommendation conflicts with a practical assessment.</td>
+<td>Authorized review uses approved criteria, records its rationale and preserves a challenge route.</td>
+</tr>
+<tr>
+<td>OMF-HR02-T02 — Accepted offer, incomplete readiness</td>
+<td>Onboarding is initiated but the receiving owner has not acknowledged the handoff.</td>
+<td>Communicate confirmed progress and outstanding steps; do not claim operational readiness.</td>
+</tr>
+<tr>
+<td>OMF-HR02-T03 — Changed start date and duplicate handoff</td>
+<td>An approved date correction is sent twice; the candidate lacks a smartphone.</td>
+<td>Reconcile the current date, prevent duplicate creation and provide an accessible human-assisted route.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Record input → expected → observed paper result → revision. These are planned tabletop tests, not executed system evidence. A proposed expectation is not an observed result.</p>
+<p>Acceptance: complete the one card, record all three actual tabletop outcomes and revisions, and explain your decision in 60 seconds. An unauthorized hiring decision, false readiness message or restricted-work bypass requires redesign.</p>
+<h2 id="7-exact-120-minute-sprint">7. Exact 120-minute sprint</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td>Understand the promise and staffing dilemma.</td>
+</tr>
+<tr>
+<td>10–30</td>
+<td>Explore evolution and its persistent problems.</td>
+</tr>
+<tr>
+<td>30–45</td>
+<td>Make an initial decision; revise after new evidence.</td>
+</tr>
+<tr>
+<td>45–60</td>
+<td>Assign application ownership and human authority.</td>
+</tr>
+<tr>
+<td>60–90</td>
+<td>Complete the single build card.</td>
+</tr>
+<tr>
+<td>90–110</td>
+<td>Run three tabletop tests and revise.</td>
+</tr>
+<tr>
+<td>110–120</td>
+<td>Explain the decision in 60 seconds and reflect.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Short resource lookups fit within these activities. Extensive vendor comparisons and deeper implementation learning remain outside this Origin Story.</p>
+<h2 id="8-future-exploration-through-2050">8. Future exploration through 2050</h2>
+<p>Scenarios, not predictions: in 2035, verified skills evidence might help experienced workers enter circular-materials roles despite unfamiliar job titles. In 2050, portable credentials might reduce repeated assessments—or incompatible systems might increase exclusion.</p>
+<p>What should OmniForge accept as alternative evidence? Which decisions should remain with accountable people? Better circularity does not automatically establish better working conditions; skills, inclusion and decent work require explicit attention. [R3]</p>
+<h2 id="9-traceability-and-pre-foundation-handoff">9. Traceability and Pre-Foundation handoff</h2>
+<p>Connect the card to existing OMF-M18 — workforce/adoption, OMF-M17 — risk/security and OMF-M19 — delivery readiness. The following HR02 IDs are newly established educational design anchors in this sprint, not previously approved enterprise requirements.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Learning anchor</th>
+<th>Source connection and card evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR02-REQ01</td>
+<td>OMF-M18: evidence-backed selection with approved criteria, reviewer rationale and candidate next step; tested by T01.</td>
+</tr>
+<tr>
+<td>OMF-HR02-REQ02</td>
+<td>OMF-M17/OMF-M19: explicit receiving/readiness status, current handoff data and accessible support; tested by T02–T03.</td>
+</tr>
+<tr>
+<td>OMF-HR02-ADR01</td>
+<td>Choose a governed handoff with separate recruiting/onboarding owners; compare one alternative and justify the trade-off.</td>
+</tr>
+<tr>
+<td>OMF-HR02-EXP01</td>
+<td>One synthetic Hiring-to-Readiness card; planned T01–T03 tabletop exercise.</td>
+</tr>
+<tr>
+<td>OMF-HR02-EV01</td>
+<td>Unfilled evidence slot until learners record observed paper results, revisions and reviewer questions.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Keep HR02a selection/offer evidence distinct from HR02b receiving/readiness evidence. Measure whether the three tests meet their stated expectations and whether candidate messages match confirmed states. Record no achieved hiring or safety improvements; no numerical enterprise target is asserted.</p>
+<p>Reflection: What evidence changed your answer? Where could the candidate become invisible between teams?</p>
+<p>Carry the same card into Pre-Foundation to define requisition, candidate, application, offer and onboarding relationships before configuration.</p>
+<p>Educational alignment follows HR01: TOGAF for responsibilities and options; BIZBOK for capabilities/value; BABOK for needs and acceptance; DAMA-DMBOK for ownership/quality; COBIT for accountability; relevant ISO/IEC principles for controlled access, change and evidence. No certification or compliance claim is made.</p>
+<p>Classification axes remain separate: HR theme = HR02 Talent Acquisition including Recruiting and Onboarding; architecture streams = applicable Business, Data, Application, AI, Security, Integration and other views; enterprise transformation stream = Workforce.</p>
+<h2 id="10-official-resources-and-source-traceability">10. Official resources and source traceability</h2>
+<p>R1 — SAP: Initiating Onboarding from SAP SuccessFactors Recruiting. Ask where recruiting hands over and who receives it. https://learning.sap.com/courses/sap-successfactors-onboarding-academy/initiating-onboarding-from-sap-successfactors-recruiting_a0d2d038-488d-4795-b7ef-be9521faf2e9</p>
+<p>R2 — SAP: Onboarding Process Overview. Ask which activities remain after initiation. https://help.sap.com/docs/successfactors-onboarding/implementing-onboarding/onboarding-process-overview</p>
+<p>R3 — ILO: New guidelines on decent work throughout recycling chains. Ask how skills, inclusion and working conditions shape this hiring journey. https://www.ilo.org/resource/news/new-ilo-guidelines-chart-path-decent-work-throughout-recycling-chains</p>
+<p>S01 — Workforce scope blueprint: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/derived-streams/01-workforce.md</p>
+<p>S02 — Existing aspirational personas OMF-P05, OMF-P07 and OMF-P16: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md</p>
+<p>S03 — Existing master anchors OMF-M17/18/19: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/master/theme-e-execution.md</p>
+<p>S04 — Source and reconciliation register: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/references/source-and-assumptions.md</p>
+<p>S05 — Energy reference, used for learning structure only: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/01-HR02-ENE-energy/0-The-Origin-Story/sprint/energy-talent-acquisition-evolution-sprint.md</p>
+<p>Source boundary: enterprise facts and personas remain owned by the existing Materials case. Energy's hiring numbers, personas, earlier IIL expansion and repository footer are not copied. The Materials scenario and HR02 anchors are new learning designs. Original enterprise reconciliation issues remain open; no achieved result is inferred.</p>
+<h2 id="companion-workspace">Companion workspace</h2>
+<p>GitHub sprint: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/02-HR02-MAT-materials/0-The-Origin-Story/sprint/materials-talent-acquisition-evolution-sprint.md</p>
+<p>Google Doc: https://docs.google.com/document/d/1xrEOWYCS7_wotzS1AVfGBIOhTz9edYs3sH5N4voLNjg/edit?usp=drivesdk</p>
+<p>Notion HR02a Recruiting — start here: https://app.notion.com/p/72dfb09bac6f41b89d45b04a3086ef3e</p>
+<p>Notion HR02b Onboarding — continue here: https://app.notion.com/p/c13825cf27ef42539d22f604f788587f</p>
+<p>Common Materials HR01–HR12 index: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/materials-origin-stories.md</p>
+<p>Notion presents this one sprint across two linked parts: sections 1–4 in HR02a and sections 5–10 in HR02b. GitHub and Google Docs contain the complete unified edition. Publication is explicit and verified; no automatic synchronization, public student access or successful copying is claimed.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting Autonomous Talent Acquisition they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/02-HR02-MAT-materials/0-The-Origin-Story/sprint/materials-talent-acquisition-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>

@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The ledger becomes a promise · HR01 · Architecting Autonomous Workforce Foundations</title><meta name="description" content="The ledger becomes a promise">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR01 · Architecting Autonomous Workforce Foundations</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="energy.html">Energy</a></p><article><h1 id="the-ledger-becomes-a-promise">The ledger becomes a promise</h1>
+<h2 id="a-two-hour-origin-story-sprint-architecting-autonomous-workforce-foundations">A two-hour Origin Story sprint: Architecting Autonomous Workforce Foundations</h2>
+<p><strong>SuccessLabs Academy · HR01-AWF1 · Energy · Level 0 → Pre-Foundation</strong><br>
+<strong>Platform:</strong> SAP · <strong>Domain:</strong> Human Capital Management · <strong>Architecture:</strong> Applied Application Architecture (AA)<br>
+<strong>Lab:</strong> IIL — Industry Immersion Lab · <strong>Intent:</strong> Build<br>
+<strong>Planning reference:</strong> HUB-ORIGIN-HR01-ENE-sprint · Free — Community/Citizen Edition<br>
+<strong>Version:</strong> 2026-10-31 · Educational sprint, not an enrolled course or certification.</p>
+<blockquote>
+<p><strong>Your promise:</strong> In two hours, design and explain one trusted workforce change that protects pay, access and employee trust.</p>
+</blockquote>
+<h2 id="1-one-outcome">1. One outcome</h2>
+<p>Complete one Workforce Evolution Build Card: identify the change, assign its owners, record its approval and effective date, and test three failure conditions. The story and timeline help you explain why these controls matter.</p>
+<p><strong>Focus:</strong> one story, one build card, three tests. Use synthetic records. Live configuration belongs to later learning.</p>
+<h2 id="2-read-the-case-accurately">2. Read the case accurately</h2>
+<p>OmniVerse Energy Ltd. is a <strong>aspirational</strong> enterprise with 68,000 employees in 42 countries, founded in 1978, with Mumbai/Houston headquarters. Earlier historical scenes explain the wider evolution of workforce administration; they are not OmniVerse corporate history. “OmniEnergy” is an alias retained in original HR research.</p>
+<p>The enterprise case owns company facts. OVE-HR01 owns the workforce-foundation scenario. The proposed SAP landscape, incidents and all dialogue below are illustrative. No rollout or achieved improvement is claimed. The source's 18-month roadmap and numeric victory measures are learning assumptions/targets.</p>
+<p><strong>Design question:</strong> Should OmniVerse impose one template, let countries work independently, or govern a common core with justified local variants? Choose and defend one approach. HR01 owns employment facts; HR11 deepens AI governance; HR12 designs transport and recovery.</p>
+<h2 id="3-from-1970-to-2050-what-problem-survives">3. From 1970 to 2050: what problem survives?</h2>
+<p>These overlapping periods are teaching lenses, not a universal adoption sequence. Paper, ERP and cloud can coexist. Before OmniVerse's aspirational founding in 1978, the timeline describes the wider domain.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Lens</th>
+<th>Application response</th>
+<th>Unfinished problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1970s lens — record the worker</td>
+<td>Paper-ledger and early computer records</td>
+<td>A recorded name does not prove a current, unique identity</td>
+</tr>
+<tr>
+<td>1980s–1990s lens — administer employment</td>
+<td>Personnel systems and structured transactions</td>
+<td>Employment, position and competence can still disagree</td>
+</tr>
+<tr>
+<td>1990s–2000s lens — execute transactions</td>
+<td>HRIS/ERP rules for payroll, time and changes</td>
+<td>Correct processing still depends on correct source data and dates</td>
+</tr>
+<tr>
+<td>2000s–2020s lens — coordinate services</td>
+<td>Cloud HCM and self-service</td>
+<td>More access and copies require clear ownership and permissions</td>
+</tr>
+<tr>
+<td>2026–2050 design horizon — assist decisions</td>
+<td>Explore bounded automation and skills-based deployment</td>
+<td>Trust, fairness and authority still require evidence and accountable owners</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Historical anchors retained from the source edition:</strong> SAP R/3 began in 1992; SAP acquired SuccessFactors in February 2012. [R1–R2; checked in the 2026-10-19 source edition.]</p>
+<p><strong>Future boundary:</strong> 2027, 2035 and 2050 scenes are imagined design scenarios, not forecasts, product commitments or achieved OmniVerse states.</p>
+<h2 id="4-the-story-anika-asks-what-the-record-must-promise">4. The story: Anika asks what the record must promise</h2>
+<p>All scenes and dialogue are newly written fiction using the source personas and their stable identities.</p>
+<h3 id="scene-1-the-old-ledger">Scene 1 — The old ledger</h3>
+<p>Anika Sharma (OVE-HR01-P01), Global EC Transformation Director, opens a workshop with an imagined industrial-era ledger. One column lists a worker; another records attendance.</p>
+<p>“The ledger answers who was written down,” she says. “Does it tell us who this person is, whether the employment is active, or whether the person can perform today's task?”</p>
+<p>The room sees the origin of the foundation: <strong>recordkeeping serves a decision</strong>. Digitizing the ledger improves retrieval, but does not prove accuracy.</p>
+<p><strong>Pause:</strong> Name one decision that would be unsafe if a ledger were one week out of date.</p>
+<h3 id="scene-2-the-payroll-machine">Scene 2 — The payroll machine</h3>
+<p>Mei Wong (OVE-HR01-P05), Global Payroll Control Head, places two synthetic records beside each other: the same person, two unexplained employments.</p>
+<p>“A computer will process both perfectly,” she says. “Perfect execution of the wrong population still gives the wrong outcome.”</p>
+<p>Anika separates the person from the employment relationship and the position being occupied. Mei asks when each change became valid. The lesson shifts from storing data to <strong>preserving identity and time</strong>.</p>
+<p><strong>Pause:</strong> A worker moves to a renewable project next month. Why must today's record remain available?</p>
+<h3 id="scene-3-the-global-template">Scene 3 — The global template</h3>
+<p>Farah Al-Mansoori (OVE-HR01-P03), Middle East HR Country Lead, brings the source scenario's 31 local-field requests and nine approval variants.</p>
+<p>Rajiv Kapoor (OVE-P05), CDIO, asks for the minimum common platform. Anika resists approving every request or deleting them all. For each one she asks: what decision needs it, what evidence justifies it, who owns it, and can a standard configuration meet the need?</p>
+<p>The common core becomes a <strong>shared meaning</strong>, with local differences justified and reviewed.</p>
+<p><strong>Pause:</strong> Classify one request as mandatory, configurable or obsolete. State what evidence you still need; a country label alone is not proof.</p>
+<h3 id="scene-4-the-certificate-that-did-not-authorize-work">Scene 4 — The certificate that did not authorize work</h3>
+<p>Michael Torres (OVE-HR01-P02), Texas Refinery Director, asks whether a completed learning course can release a worker to a restricted task.</p>
+<p>Samuel Okoro (OVE-HR01-P04), Identity and OT Security Lead, shows three different claims:
+- EC: an approved employment is active.
+- Learning: a course or certification record exists.
+- Site safety/HSE: an authorized person has accepted the task-specific work conditions.</p>
+<p>An account or badge is a further access mechanism. None of these facts substitutes for all the others. Exact HSE approvals and emergency procedures must be agreed for the site.</p>
+<p><strong>Pause:</strong> Which application owns the authorization decision? What happens if its evidence is missing?</p>
+<h3 id="scene-5-the-helpful-assistant">Scene 5 — The helpful assistant</h3>
+<p>In an imagined 2027 pilot, an assistant recommends a worker for a renewable assignment. It cites an active employment and a certificate—but the certificate is expired.</p>
+<p>Nina Kohli (OVE-P01), CHRO, asks whether speed has improved trust. Anika rejects the recommendation and records why. Samuel checks that no recommendation has granted access.</p>
+<p><strong>The next evolutionary step is bounded assistance:</strong> the application can propose; accountable owners decide within approved policy. Anika asks what evidence would justify enabling a low-risk task, such as drafting a reminder, before expanding automation.</p>
+<p><strong>Pause:</strong> Choose one task to automate and one decision to retain with an authorized human. Explain the boundary.</p>
+<h3 id="scene-6-a-different-promise">Scene 6 — A different promise</h3>
+<p>In an imagined 2035 retrospective, Anika does not celebrate replacing HR. She describes a foundation that helps people change roles without losing their history, pay accuracy or dignity.</p>
+<p>The ledger's promise has evolved: <strong>the right fact, valid at the right time, used by the right application, under the right authority</strong>.</p>
+<h3 id="scene-7-the-promise-in-2050">Scene 7 — The promise in 2050</h3>
+<p>Imagine OmniVerse in 2050. Energy technologies and job titles have changed. People move between established operations, renewable projects and roles that today's planners cannot yet fully describe.</p>
+<p>Anika's successor asks: “Can we explain who this person is, which employment applies, what evidence is current, and who authorized the work?”</p>
+<p>An assistant proposes a deployment. One qualification lacks verified evidence. The responsible manager pauses the assignment and offers a supervised development route.</p>
+<p>The foundation helps people carry trustworthy histories into new opportunities while preserving privacy, fair treatment and accountable decisions.</p>
+<p><strong>Pause:</strong> What should remain under human authority even if autonomous deployment becomes possible?</p>
+<h2 id="5-application-ownership-the-minimum-useful-map">5. Application ownership: the minimum useful map</h2>
+<p>This is the proposed learning architecture, not a confirmed OmniVerse deployment.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Application responsibility</th>
+<th>Owns / provides</th>
+<th>Does not establish by itself</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAP SuccessFactors Employee Central</td>
+<td>Approved person/employment/job facts and relevant organization/position structures</td>
+<td>Current competence or restricted-work authorization</td>
+</tr>
+<tr>
+<td>Learning application</td>
+<td>Learning completions and competence/certification evidence, with validity where applicable</td>
+<td>Permission to perform every site task</td>
+</tr>
+<tr>
+<td>Site safety / HSE</td>
+<td>Restricted-work authorization under site policy, including required conditions and approvals</td>
+<td>Employment or payroll master record</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Digital identities/accounts and access provisioning under approved access policy</td>
+<td>Professional competence or HSE work permission</td>
+</tr>
+<tr>
+<td>Payroll — HR07</td>
+<td>Payroll calculation and pay outcomes from approved inputs</td>
+<td>Ownership of all upstream workforce facts</td>
+</tr>
+<tr>
+<td>Time &amp; Absence — HR08</td>
+<td>Approved time and absence records/inputs</td>
+<td>Final pay outcomes or site authorization</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Important SAP detail:</strong> person, employment and assignment identifiers have different roles; do not map them by name alone. Job Information is effective-dated, while Employment Information is not an effective-dated entity. Define identifier mappings and date semantics per entity. “Date every change” is a governance principle, not a claim that every EC object is technically effective-dated. [R3–R4]</p>
+<p><strong>Event reason:</strong> explains why a job/compensation transaction occurred. It is not the effective date, approval or evidence that downstream applications received the change. [R5]</p>
+<h2 id="6-your-exact-120-minute-sprint">6. Your exact 120-minute sprint</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity</th>
+<th>Evidence you produce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td>Read the promise and build card. Explain why energy workforce facts matter.</td>
+<td>Two-sentence purpose statement</td>
+</tr>
+<tr>
+<td>10–30</td>
+<td>Read generations 1–3 and story scenes 1–2; rebuild the evolution without looking.</td>
+<td>Three-row “problem → application response → remaining gap” timeline</td>
+</tr>
+<tr>
+<td>30–50</td>
+<td>Read generations 4–5 and scenes 3–7. Ask which old problem persists in the new medium.</td>
+<td>Two further timeline rows; one future claim labeled as a hypothesis</td>
+</tr>
+<tr>
+<td>50–65</td>
+<td>Play Anika. Answer Farah, Mei and Samuel using their concerns; ask one discovery question each.</td>
+<td>Three persona needs and unanswered questions</td>
+</tr>
+<tr>
+<td>65–80</td>
+<td>Build the six-application ownership map. Challenge it with Michael's certificate scene.</td>
+<td>Six owners; one explicit authorization boundary</td>
+</tr>
+<tr>
+<td>80–100</td>
+<td>Complete the transfer prototype below. Choose a global core/local-variant approach and compare one alternative.</td>
+<td>Workforce change design plus one short architecture decision</td>
+</tr>
+<tr>
+<td>100–115</td>
+<td>Run three tabletop tests; record expected result, your observed paper result and any revision. Give a 60-second explanation to Nina.</td>
+<td>Test evidence and an honest pass/revise decision</td>
+</tr>
+<tr>
+<td>115–120</td>
+<td>Run the rapid review checklist.</td>
+<td>Five-minute recall and next experiment</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Evolution emphasis:</strong> the first 50 minutes establish origin and evolution; every later exercise tests whether the next generation actually solved the previous generation's problem. Resource reading is selective within these activities, not extra homework.</p>
+<h2 id="7-build-experiment-a-transfer-with-an-expired-certificate">7. Build experiment: a transfer with an expired certificate</h2>
+<p><strong>Synthetic scenario:</strong> worker W-100 has person reference P-100 and employment reference E-100. A transfer from refining to a renewable-project role is proposed for <strong>1 November 2026</strong>. Training evidence for a required restricted task expired on <strong>18 October 2026</strong>. Identifiers are teaching labels, not prescribed SAP field mappings.</p>
+<h3 id="complete-your-workforce-evolution-build-card">Complete your Workforce Evolution Build Card</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Your response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Which employee and operational outcome must this change support?</td>
+</tr>
+<tr>
+<td>Employment change</td>
+<td>Current and proposed legal entity, position, location; identify missing facts instead of inventing them</td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>Is the person the same? Is this a job transfer, new employment, global assignment or concurrent employment? What evidence decides?</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Proposed effective date, approval timing, as-of view; distinguish entry date from business validity</td>
+</tr>
+<tr>
+<td>Application owners</td>
+<td>EC / Learning / HSE / IAM / Payroll / Time</td>
+</tr>
+<tr>
+<td>Approval</td>
+<td>Who approves the employment change? Who separately authorizes restricted work?</td>
+</tr>
+<tr>
+<td>Local variant</td>
+<td>One requested field or approval; classify and justify it, or hold for evidence</td>
+</tr>
+<tr>
+<td>Automation</td>
+<td>One low-risk task permitted; one protected decision; human owner and fallback</td>
+</tr>
+<tr>
+<td>Architecture decision</td>
+<td>Option, alternative, trade-off and evidence needed before implementation</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>Input → expected → actual tabletop result → evidence note → pass/revise</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Reference reasoning:</strong> do not create a new person merely because a position changes. Establish the correct employment transaction before configuring it. An employment transfer may proceed under approved policy while a restricted task remains blocked; certificate expiry does not automatically terminate employment. Learning renewal alone must not bypass HSE authorization.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Expected result in this proposed design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1: View records before and on the approved future transfer date</td>
+<td>Correct as-of job state; no premature transfer; identity/employment treatment matches the agreed transaction</td>
+</tr>
+<tr>
+<td>T2: Assistant recommends the worker using expired evidence</td>
+<td>Recommendation is rejected/held; restricted task is not authorized; accountable owner receives the exception</td>
+</tr>
+<tr>
+<td>T3: Required approval is missing or a receiving application has no confirmed outcome</td>
+<td>Change is not reported as fully completed; exception and owner remain visible; applicable controlled fallback is invoked</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Acceptance:</strong> complete the one build card and explain your decision in 60 seconds. Include application ownership, identity and date semantics, and evidence from all three tabletop tests after revisions. A safety-authorization bypass requires redesign.</p>
+<p><strong>Learning evidence only:</strong> record what your paper exercise actually did. Live configuration, real integration performance and operational outcomes remain untested.</p>
+<h3 id="connect-your-card-to-the-case">Connect your card to the case</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Stable case anchor</th>
+<th>Evidence on your card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identify the worker, change and effective date</td>
+<td>OVE-HR01-REQ01</td>
+<td>Synthetic approved change record</td>
+</tr>
+<tr>
+<td>Assign application responsibilities</td>
+<td>OVE-HR01-ADR01</td>
+<td>Owner map and decision rationale</td>
+</tr>
+<tr>
+<td>Keep missing approval or incomplete handoff visible</td>
+<td>OVE-HR01-REQ02</td>
+<td>Exception status and accountable owner</td>
+</tr>
+<tr>
+<td>Run the three sprint tests</td>
+<td>Supports OVE-HR01-EXP01</td>
+<td>Expected result, actual paper result and revision</td>
+</tr>
+<tr>
+<td>Check critical-record completeness</td>
+<td>OVE-HR01-KPI01</td>
+<td>Population, required fields and calculation</td>
+</tr>
+</tbody>
+</table></div>
+<p>T1–T3 are sprint tabletop tests; they do not complete the broader OVE-HR01-T01 portfolio. OVE-HR01-EV01 remains an evidence slot until a learner records observed results.</p>
+<h2 id="8-high-impact-resources-read-with-a-question">8. High-impact resources — read with a question</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Use in the sprint</th>
+<th>Question to answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.sap.com/uk/about/company/history.html">R1 SAP history</a> and <a href="https://learning.sap.com/courses/sap-successfactors-platform-introduction-academy/summarizing-the-sap-successfactors-history-and-modules_e11f8449-433a-4934-84f3-b6333a765e57">R2 SuccessFactors history lesson</a></td>
+<td>5-minute selective scan during evolution</td>
+<td>What changed from ERP transactions to cloud HCM services?</td>
+</tr>
+<tr>
+<td><a href="https://learning.sap.com/courses/sap-successfactors-employee-central-core-academy/using-special-hr-transactions-for-hires-and-terminations_e8c3ec4e-0435-4920-89ce-29ded46e87bf">R3 Person and employment objects</a></td>
+<td>5-minute scan during ownership/build</td>
+<td>Why must a person and an employment be distinguishable?</td>
+</tr>
+<tr>
+<td><a href="https://help.sap.com/docs/SAP_SUCCESSFACTORS_PLATFORM/d599f15995d348a1b45ba5603e2aba9b/95fbd901727d4f25b740a0c69f01b1be.html?locale=en-US">R4 Effective dating</a> and <a href="https://help.sap.com/docs/successfactors-platform/sap-successfactors-api-reference-guide-odata-v2/empemployment">Employment entity</a></td>
+<td>4-minute lookup during build</td>
+<td>Which object preserves history, and which is not effective-dated?</td>
+</tr>
+<tr>
+<td><a href="https://learning.sap.com/courses/sap-successfactors-employee-central-core-administration/managing-events-and-event-reasons">R5 Events and event reasons</a></td>
+<td>3-minute lookup during build</td>
+<td>Why did the change occur, and when should it apply?</td>
+</tr>
+<tr>
+<td><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">R6 NIST AI RMF Core</a></td>
+<td>3-minute scan during future scene</td>
+<td>Who governs, what risk is mapped, what evidence is measured, and how is risk managed?</td>
+</tr>
+</tbody>
+</table></div>
+<p>Official SAP documentation establishes product behavior; the aspirational case study establishes the learning scenario. Access requirements can vary. Do not read entire courses in this sprint.</p>
+<p><strong>Existing student workspace:</strong> <a href="https://docs.google.com/document/d/1Jbrsu4PkFBR0dNJ7NELR13d5pk-2mCAeWopOH59kWKk/edit">OmniVerse HR Student Resource Index</a>. It lists the existing HR resources. Its current instructions say student access is pending; copies are independent snapshots. The HR01 Google Doc includes this sprint edition; other resource packs remain separate snapshots.</p>
+<h2 id="9-five-minute-rapid-review">9. Five-minute rapid review</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minute</th>
+<th>Recall without looking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Name the five generations: record → administer → execute → coordinate → assist. What unresolved problem passes to the next?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Explain person, employment and position. Explain effective date versus event reason. Are all EC entities effective-dated?</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Name the owners of employment facts, learning evidence, site authorization, accounts, pay and time. Why is a badge insufficient?</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Explain the future transfer and expired-certificate tests. Who can stop the restricted task?</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Give Nina a 60-second answer: why this foundation, what will you build first, what evidence will permit the next step?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Pass phrase:</strong> “Automation may accelerate an approved task; it does not create missing authority or trustworthy evidence.”</p>
+<p><strong>Reflect:</strong> Who benefits from trustworthy workforce information? Who could incomplete information exclude? What evidence would change your design?</p>
+<p><strong>Next experiment:</strong> take one unresolved requirement into Pre-Foundation. Define its business purpose, owner, application responsibility and acceptance test.</p>
+<p><strong>SuccessLabs mission:</strong> Architecting Experiences for a Better World.</p>
+<h2 id="10-source-traceability-and-boundaries">10. Source traceability and boundaries</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What is reused</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/01-energy/omniverse-energy-ltd">Enterprise case</a></td>
+<td>Company identity, 68,000 employees, 42 countries, founding/HQ</td>
+<td>Aspirational baselines preserved</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/derived-streams/hr/hr01-workforce-foundation.md">OVE-HR01</a></td>
+<td>Five domain personas, design dilemma, 31 fields/nine variants, duplicate records, safety/access scenes</td>
+<td>Stable IDs preserved; new dialogue is illustrative</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/personas/persona-cards.md">Enterprise personas</a></td>
+<td>OVE-P01 Nina; OVE-P05 Rajiv</td>
+<td>Same roles and IDs; no invented biographical history</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/references/source-and-assumptions.md">Source register</a></td>
+<td>Aspirational/assumption/target distinctions</td>
+<td>No achieved benefit or forecast asserted</td>
+</tr>
+<tr>
+<td><a href="https://app.notion.com/p/377ce6de608980daae89e74da8236287">Notion enterprise KM hub</a> / <a href="https://app.notion.com/p/358d96630bf44787b59ec0b1b389eb46">HR01 original research</a></td>
+<td>Research lineage; enterprise hub read alongside GitHub; HR01 details read from preserved GitHub snapshot</td>
+<td>Original research left intact</td>
+</tr>
+<tr>
+<td>R1–R6 above</td>
+<td>SAP history, entity/date/event concepts, AI risk functions</td>
+<td>Official references checked 2026-10-19</td>
+</tr>
+<tr>
+<td>New sprint material</td>
+<td>Five-generation teaching model, story dialogue, future scenes, synthetic transfer and tabletop expectations</td>
+<td>Educational synthesis and illustrative design, not historical testimony</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Identity caution:</strong> Michael Torres differs from enterprise CFO Michael Reed; Farah Al-Mansoori differs from COO Farah Al-Hassan. Use stable IDs, not first-name matching.</p>
+<p><strong>Standards alignment:</strong> TOGAF application responsibility and architecture decisions; BIZBOK capability/value distinction; BABOK need/requirement/acceptance trace; DAMA ownership and quality; COBIT accountable decisions and controls; ISO/IEC 27001 access-control principles. These are educational mappings, not claims of compliance, certification or reproduction of proprietary standards. NIST AI RMF supports the bounded-assistance discussion.</p>
+<p><strong>Publication:</strong> the sprint source is maintained in learning-township. The matching edition is manually published to the existing HR01 Notion page and Google Doc. The enterprise case remains the authority for company facts. This publication does not establish unattended synchronization.</p>
+<p><strong>Companion editions:</strong> <a href="https://app.notion.com/p/358d96630bf44787b59ec0b1b389eb46">HR01 Notion</a> · <a href="https://docs.google.com/document/d/1SoKv5M53sTQru3t4j9Wh63Nltl5p9Xm8oGEBvrRbuZQ/edit">HR01 Google Doc</a>.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting Autonomous Workforce Foundations they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/01-HR01-ENE-energy/0-The-Origin-Story/sprint/energy-workforce-foundations-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>

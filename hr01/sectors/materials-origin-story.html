@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A transfer is more than a new location · HR01 · Architecting Autonomous Workforce Foundations</title><meta name="description" content="A transfer is more than a new location">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR01 · Architecting Autonomous Workforce Foundations</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="materials.html">Materials</a></p><article><h1 id="a-transfer-is-more-than-a-new-location">A transfer is more than a new location</h1>
+<p>A two-hour Origin Story sprint: Architecting Autonomous Workforce Foundations</p>
+<p>SuccessLabs Academy · HR01-AWF1 · GICS02 Materials · OmniForge Materials Ltd. · Level 0 → Pre-Foundation</p>
+<p>IIL — Industry Immersion Lab · Format: Sprint · Edition: 2026-10-31</p>
+<p>Mission: Architecting Experiences for a Better World.</p>
+<p>Planning reference: HUB-ORIGIN-HR01-MAT-sprint (not an LMS ID). Community/Citizen Edition. Published learning content; no live course, enrollment, certification or public companion access is implied.</p>
+<h2 id="1-one-promise">1. One promise</h2>
+<p>In 120 minutes, design and explain one trusted workforce transfer that preserves employment history and keeps restricted-work authorization explicit.</p>
+<p>One persona-led story · One Workforce Evolution Build Card · Three tabletop tests. Use synthetic records; no tenant configuration is required. All notes and test evidence belong on the same card.</p>
+<h2 id="2-read-the-case-accurately">2. Read the case accurately</h2>
+<p>OmniForge is aspirational. Its enterprise case stipulates 46,000 employees plus contractors across materials operations. Contractor numbers, device access and comparable site populations remain unconfirmed. The source counts for production sites, mines/quarries and cement plants may overlap; do not add them.</p>
+<p>The enterprise case owns company facts. Existing persona IDs are preserved. The transfer incident, worker identifiers, dialogue and design controls below are new illustrative learning material, not historical events or an approved deployed architecture. Financial, operational and sustainability figures in the deeper case remain aspirational baselines, proposals or targets.</p>
+<h2 id="3-from-1970-to-the-present-why-the-foundation-exists">3. From 1970 to the present: why the foundation exists</h2>
+<p>These overlapping periods are teaching lenses, not universal adoption dates or OmniForge corporate history. Paper, spreadsheets, ERP and cloud can coexist. Each new medium carries forward an old question.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Period / lens</th>
+<th>Application response</th>
+<th>Unfinished question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1970s–1990s: record the worker</td>
+<td>Personnel files, wage registers, local rosters and early computing</td>
+<td>Who is this person, and is the assignment current?</td>
+</tr>
+<tr>
+<td>1980s–2000s: administer employment</td>
+<td>Personnel databases and computerized payroll</td>
+<td>Do separate records describe the same person and employment?</td>
+</tr>
+<tr>
+<td>1990s–2010s: coordinate transactions</td>
+<td>HRIS/ERP, position structures and workflow</td>
+<td>When does a change become valid, and who approved it?</td>
+</tr>
+<tr>
+<td>2000s–present: connect services</td>
+<td>Cloud HCM, self-service, learning and access services</td>
+<td>Which source owns each fact, and who may use it?</td>
+</tr>
+<tr>
+<td>2020s–present: assist decisions</td>
+<td>Rules and AI-supported checks</td>
+<td>Is the evidence current, and is the action authorized?</td>
+</tr>
+</tbody>
+</table></div>
+<p>Counterexample: replacing a paper roster with an app improves availability, but does not prove the roster is correct. Ask which decision each record exists to support.</p>
+<h2 id="4-one-story-nikhils-night-shift-question">4. One story: Nikhil's night-shift question</h2>
+<p>Nikhil Sen (OMF-P16), Shift Supervisor and Workforce Representative, receives a future roster for a synthetic quarry-to-cement-plant transfer. The employee will support a team working with recovered feedstock. The same legal employer is assumed solely for this experiment; a real case must verify it.</p>
+<p>The core HR record shows active employment. A learning record shows a course completion. The receiving site's restricted-task authorization is missing. Nikhil asks: “Which record tells me what this person can do on the receiving shift?”</p>
+<p>Elena Petrova (OMF-P07), Cement Plant Director, needs reliable staffing while protecting kiln stability. Arjun Mehta (OMF-P05), Group CHRO, wants development opportunities that preserve workforce history and remain usable for people without personal devices.</p>
+<p>Choose first: hold the whole transfer, release everything, or separate the employment change from restricted-work permission. Write your reason before reading the new evidence.</p>
+<p>New evidence: the HR transfer is approved, the employee has not changed legal employer, and restricted-task authorization is still absent. Under the proposed policy, the employment change may take effect on its approved date while the restricted task remains held. Nikhil revises his initial blanket hold and requests a safe alternative assignment through the designated site authority.</p>
+<p>He does not invent authorization, assume that a badge proves competence, or change pay because a course record is incomplete. An accessible notification and a human escalation route help the worker understand and challenge errors. Operational need cannot silently turn missing evidence into permission.</p>
+<p>Materials connection: circular production changes feedstock, roles and skill needs. A successful personnel transfer alone proves neither safe operation nor lower emissions; those require their own evidence.</p>
+<h2 id="5-application-responsibility-data-ownership-and-decision-rights">5. Application responsibility, data ownership and decision rights</h2>
+<p>This is the proposed learning architecture. The accountable business owner defines the authoritative record and access policy; the application stores or processes it. Names of delegated HR approvers and site safety authorities must be established before real use.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Application responsibility</th>
+<th>Accountable data / process owner</th>
+<th>Human authority and boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core HR; Employee Central as an example</td>
+<td>HR owns person/employment/job facts and organization/position structures</td>
+<td>Delegated HR/management approvers authorize the employment transaction; the CHRO sponsors the model, not every transaction.</td>
+</tr>
+<tr>
+<td>Learning and competence evidence</td>
+<td>Learning owner and designated assessors own relevant completion, assessment and validity evidence</td>
+<td>Course completion alone does not authorize restricted work.</td>
+</tr>
+<tr>
+<td>Site safety / work authorization</td>
+<td>Designated site safety and operational owners own task-specific authorization and conditions</td>
+<td>Authorized site personnel grant or withhold restricted work. Plant leadership cannot bypass required specialist approval.</td>
+</tr>
+<tr>
+<td>IAM and physical access</td>
+<td>Security owns identity/access records and provisioning under approved policy</td>
+<td>Access is granted within policy; an account or badge is not competence or work authorization.</td>
+</tr>
+<tr>
+<td>Payroll — HR07; Time — HR08</td>
+<td>Payroll owns pay processing/reconciliation; Time owns approved time/absence inputs</td>
+<td>Downstream owners confirm business outcomes; an HR screen does not prove receipt or correct payment.</td>
+</tr>
+</tbody>
+</table></div>
+<p>SAP precision: person, employment and assignment identifiers serve different purposes. Job Information is effective-dated; Employment Information is not an effective-dated entity. Define date semantics per object rather than assuming every EC object keeps effective-dated history. An event reason explains why a transaction occurred; it is not an approval, effective date or receiving-system acknowledgment. Consult R1–R2.</p>
+<p>Automation boundary: allow an authorized assistant to flag missing evidence or draft a reminder. It cannot approve this transfer, authorize restricted work, grant access or declare downstream completion. HR11 deepens AI controls; HR12 deepens event delivery and recovery.</p>
+<h2 id="6-your-exact-120-minute-sprint">6. Your exact 120-minute sprint</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity on the same card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td>Read the promise and story setup; state the people and operational need.</td>
+</tr>
+<tr>
+<td>10–30</td>
+<td>Reconstruct the evolution lenses; identify one problem that survives digitization.</td>
+</tr>
+<tr>
+<td>30–45</td>
+<td>Choose an initial response, reveal the new evidence and revise your decision.</td>
+</tr>
+<tr>
+<td>45–60</td>
+<td>Assign application responsibilities, data owners and human decision rights.</td>
+</tr>
+<tr>
+<td>60–90</td>
+<td>Complete the transfer build card; compare one alternative and one local variant.</td>
+</tr>
+<tr>
+<td>90–110</td>
+<td>Run the three tabletop tests; record observed paper results and revisions.</td>
+</tr>
+<tr>
+<td>110–120</td>
+<td>Give a 60-second explanation; reflect and identify the Pre-Foundation question.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Resource lookups are selective within these activities, not additional homework. Use one card throughout; no extra deliverable is required.</p>
+<h2 id="7-one-build-experiment-a-future-dated-transfer">7. One build experiment: a future-dated transfer</h2>
+<p>Synthetic inputs: person MAT-P100; employment MAT-E100; worker label MAT-W100; positions QUARRY-OP and PLANT-OP; locations QUARRY-A and CEMENT-A. These are teaching labels, not prescribed SAP field mappings. The approved same-employer transfer is effective 1 November 2026; the entry date is 31 October 2026. Site restricted-task authorization is absent. Real plant, task, timezone, shift boundary and delegated authority remain to be defined.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Workforce Evolution Build Card</th>
+<th>Complete once</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose and history</td>
+<td>State the employee opportunity, operational need and one enduring lesson from the timeline.</td>
+</tr>
+<tr>
+<td>Identity and transaction</td>
+<td>Preserve MAT-P100/MAT-E100 under the stated same-employer assumption; identify evidence that would require another transaction.</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Record entry, approval and effective dates; show the 31 October and 1 November job views. Do not infer retroactive pay treatment.</td>
+</tr>
+<tr>
+<td>Owners and authority</td>
+<td>Map HR, Learning, Site safety, IAM, Payroll and Time. Name the roles that can approve each decision; flag unfilled delegations.</td>
+</tr>
+<tr>
+<td>Decision and alternative</td>
+<td>Explain what proceeds, what remains held and why. Compare one alternative. Choose a common core with justified local variants, or defend another approach.</td>
+</tr>
+<tr>
+<td>Local variant and privacy</td>
+<td>Choose one site-specific readiness field; state its purpose, owner, minimum data, permitted viewers and evidence needed. Keep detailed health information out of the general card.</td>
+</tr>
+<tr>
+<td>Exception and recovery</td>
+<td>Record missing authorization or downstream confirmation, an accountable exception role, accessible notice and site-approved fallback. Connectivity failure grants no extra authority.</td>
+</tr>
+<tr>
+<td>Automation</td>
+<td>One permitted low-risk task, one protected human decision and the escalation route.</td>
+</tr>
+<tr>
+<td>Tests, measures and evidence</td>
+<td>For T01–T03 record input → expected → observed tabletop result → evidence note → pass/revise. Measure completeness and state uncertainty.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="8-three-tabletop-tests">8. Three tabletop tests</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Expected result in this proposed design</th>
+<th>Evidence to record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR01-T01 — Before/on effective date</td>
+<td>31 October retains the quarry job view; 1 November shows the approved plant job. Person/employment identity and prior history remain intact. Restricted-task status stays separate.</td>
+<td>Both dated views; approval reference; observed result and any revision.</td>
+</tr>
+<tr>
+<td>OMF-HR01-T02 — Completion without authorization</td>
+<td>A completed course does not release the restricted task. No assistant or badge overrides the hold. Request the designated site authority's decision and an authorized alternative assignment.</td>
+<td>Missing authorization, exception owner, worker notice and observed paper decision.</td>
+</tr>
+<tr>
+<td>OMF-HR01-T03 — Receiving-site outage</td>
+<td>The approved HR transaction and unconfirmed downstream outcomes remain separately visible. Do not declare full completion or grant new work/access authority. Invoke the site's approved reconciliation/fallback route; if none exists, escalate and keep the affected action held.</td>
+<td>Per-system status, escalation, fallback gap, reconciliation condition and observed result.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Acceptance: one complete card, all three tabletop results after revisions, and a 60-second explanation covering identity, dates, ownership and decision rights. A restricted-work bypass requires redesign. No tests have been executed by publishing this lesson; learner evidence remains empty until observed.</p>
+<h2 id="9-traceability-extend-the-case-without-inventing-results">9. Traceability: extend the case without inventing results</h2>
+<p>Existing anchors OMF-M17 (risk/security), OMF-M18 (workforce/adoption) and OMF-M19 (readiness/execution) come from the enterprise master. The following HR01 IDs are newly established educational design anchors in this sprint, not pre-existing approved enterprise requirements.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Learning anchor</th>
+<th>Source connection</th>
+<th>Card evidence / status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR01-REQ01 — Preserve identity and time</td>
+<td>OMF-M18; workforce blueprint</td>
+<td>Approved change and dated views; assessed by T01.</td>
+</tr>
+<tr>
+<td>OMF-HR01-REQ02 — Separate authorization and completion</td>
+<td>OMF-M17 / OMF-M19</td>
+<td>Readiness hold and receiving-system exceptions; assessed by T02–T03.</td>
+</tr>
+<tr>
+<td>OMF-HR01-ADR01 — Govern a common core with justified local variants</td>
+<td>OMF-M18 / OMF-M19; illustrative design choice</td>
+<td>Option, alternative, trade-off, owner and missing evidence. Learner may reject with reasons.</td>
+</tr>
+<tr>
+<td>OMF-HR01-EXP01 — Synthetic transfer experiment</td>
+<td>OMF-M19; new HR01 application</td>
+<td>One card and T01–T03. Planned tabletop exercise; no tenant or live operational validation.</td>
+</tr>
+<tr>
+<td>OMF-HR01-M01 — Card completeness</td>
+<td>OMF-M18; learning measure only</td>
+<td>Completed mandatory card sections / 9 × 100; blank results remain blank, not zero or success. A complete card can still be wrong.</td>
+</tr>
+<tr>
+<td>OMF-HR01-M02 — Authorization boundary</td>
+<td>OMF-M17; learning acceptance criterion</td>
+<td>Record whether T02 preserved the hold and why. A paper result is not a measured plant safety outcome.</td>
+</tr>
+<tr>
+<td>OMF-HR01-EV01 — Evidence slot</td>
+<td>OMF-HR01-EXP01</td>
+<td>Initially unfilled. Store observed tabletop results, revisions and reviewer questions; no achieved benefits claimed.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10-future-curiosity-2035-and-2050">10. Future curiosity: 2035 and 2050</h2>
+<p>Scenarios, not predictions: in 2035 an assistant might flag missing readiness evidence before a transfer. In 2050 portable skills records might support movement across materials enterprises. Neither scene is a product promise or an achieved OmniForge state.</p>
+<p>Counterexample: a portable certificate can be authentic yet irrelevant to the receiving plant's current task conditions. Choose one future capability worth experimenting with and one human decision right to retain. State what new evidence would make you revise the choice.</p>
+<h2 id="11-official-resources-read-with-a-question">11. Official resources: read with a question</h2>
+<p>R1 — SAP: Managing events and event reasons. Why did the transaction occur, and what separate evidence proves approval? https://learning.sap.com/courses/sap-successfactors-employee-central-core-administration/managing-events-and-event-reasons</p>
+<p>R2 — SAP: Introducing Person and Employment Objects. Distinguish person/employment identifiers and effective-dated from non-effective-dated objects. https://learning.sap.com/courses/sap-successfactors-employee-central-core-academy/using-special-hr-transactions-for-hires-and-terminations_e8c3ec4e-0435-4920-89ce-29ded46e87bf</p>
+<p>R3 — ILO: Safety and Health in Mines Convention, 1995 (No. 176). What should worker information, training and participation change in your design? Use as an educational reference; applicability must be determined for a real jurisdiction. https://wwwex.ilo.org/dyn/f?p=NORMLEXPUB%3A12100%3A0%3A%3ANO%3A%3AP12100_INSTRUMENT_ID%3A312321</p>
+<p>R4 — NIST AI Risk Management Framework. What evidence and authority should bound assistance? https://www.nist.gov/itl/ai-risk-management-framework</p>
+<h2 id="12-reflection-and-pre-foundation-handoff">12. Reflection and Pre-Foundation handoff</h2>
+<p>What evidence changed your first answer? Which digitized record could still be wrong? How can a worker challenge it without a personal device?</p>
+<p>Carry the same card into Pre-Foundation: define person, employment, organization, position and location relationships; confirm the transaction and data dictionary before configuration. Ask what you need to discover next rather than adding more technology.</p>
+<p>Educational alignment: TOGAF — options and architecture decisions; BIZBOK — capabilities and value; BABOK — needs, requirements and acceptance criteria; DAMA-DMBOK — ownership, quality and lineage; COBIT — accountability and controls; relevant ISO/IEC principles — least privilege, controlled change and evidence. This is conceptual alignment, not certification, conformance assessment or compliance assurance.</p>
+<p>Classification axes remain separate: HR theme = HR01 Workforce Foundations; architecture streams = cross-cutting Business, Data, Application, Security, Integration and other applicable views; enterprise transformation stream = Workforce. Their relationships are intentional; they are not interchangeable labels.</p>
+<h2 id="source-and-edition-record">Source and edition record</h2>
+<p>S01 — Enterprise hub: https://app.notion.com/p/9e83f25576814c87998709be3338092b</p>
+<p>S02 — Existing workforce blueprint: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/derived-streams/01-workforce.md</p>
+<p>S03 — Existing persona cards: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md</p>
+<p>S04 — Master risk, workforce and readiness anchors: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/master/theme-e-execution.md</p>
+<p>S05 — Source/reconciliation register: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/references/source-and-assumptions.md</p>
+<p>S06 — Energy reference pattern: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/01-HR01-ENE-energy/0-The-Origin-Story/sprint/energy-workforce-foundations-evolution-sprint.md</p>
+<p>Source snapshot: S02 blob a6d67c22756b243b76cf18536412a8a5f7b0bf45; S03 blob 864f5490b08a7102597a31b9212624ecacb11e75; S04 blob 33ff7a8a127eb95c97029847747c68324bf54e02; S05 blob 79872e6816fb8d2f03df94ffd846f2764e6fc743. Source and persona facts were reviewed on 31 October 2026 IST. The Notion HR01 body was blank before this edition.</p>
+<p>Open enterprise issues remain in S05: overlapping site counts, benefit classifications, emissions boundaries and unvalidated target definitions. This sprint avoids using them as achieved results. Deeper research remains outside the Origin Story.</p>
+<h2 id="companion-workspace">Companion workspace</h2>
+<p>GitHub sprint: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/02-HR01-MAT-materials/0-The-Origin-Story/sprint/materials-workforce-foundations-evolution-sprint.md</p>
+<p>Google Doc: https://docs.google.com/document/d/14dv6HY-vLiGIq9EO8_kW9EdvrVPp4Zdofr73wxwq9wg/edit</p>
+<p>Existing Notion HR01: https://app.notion.com/p/562c4dc0bf6c49148f3227d6779fd2b5</p>
+<p>Materials HR01–HR12 index: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/materials-origin-stories.md</p>
+<p>Matching edition content is maintained through explicit publication and verification. No automatic synchronization, public student access or successful learner copying is claimed.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting Autonomous Workforce Foundations they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR01-AWF1-Architecting-Autonomous-Workforce-Foundations/02-HR01-MAT-materials/0-The-Origin-Story/sprint/materials-workforce-foundations-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>

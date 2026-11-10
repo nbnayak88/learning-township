@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>When protecting quality looks like missing the target · HR03 · Architecting High Performance Organizations</title><meta name="description" content="When protecting quality looks like missing the target">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">HR03 · Architecting High Performance Organizations</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="materials.html">Materials</a></p><article><h1 id="when-protecting-quality-looks-like-missing-the-target">When protecting quality looks like missing the target</h1>
+<p>HR03 — High-Performance Organizations · HR03-APH3 · GICS02 Materials · OmniForge Materials Ltd.</p>
+<p>IIL — Industry Immersion Lab · SuccessLabs Academy — Architecting Experiences for a Better World.</p>
+<p>Level 0 → Pre-Foundation · Sprint · 120 minutes · Edition 2026-10-31 · Planning reference: HUB-ORIGIN-HR03-MAT-sprint (not an LMS ID).</p>
+<p>Community/Citizen Edition. Educational sprint content; no live course, enrollment, certification, public companion access or achieved business result is implied.</p>
+<h2 id="1-one-learner-promise">1. One learner promise</h2>
+<p>In 120 minutes, design and defend one fair performance review that balances contribution, operating context and trustworthy evidence.</p>
+<p>One persona-led story · One Performance Decision Build Card · Three tabletop tests. Keep the timeline notes, owner map, decision and tests on the same card. Use synthetic data; live configuration and extensive vendor comparisons belong outside this sprint.</p>
+<h2 id="2-read-the-case-accurately">2. Read the case accurately</h2>
+<p>The existing enterprise case owns OmniForge company facts. The Materials HR03 Notion page had a title but no case body before this edition. Existing personas and stable IDs are preserved; the review incident, numbers, dialogue, decision rules and HR03 learning anchors below are new teaching fiction, not recovered research or approved enterprise policy.</p>
+<p>Performance management means agreeing expectations, supporting work, reviewing evidence and enabling development. Appraisal is an evaluation activity within it. A high-performance organization also needs sound work design, resources, leadership and team coordination; installing a review application cannot establish those conditions by itself.</p>
+<p>Boundary: a performance rating is not an assessment of a person's worth, a payroll instruction, laboratory certification or authorization for restricted work.</p>
+<h2 id="3-origins-and-evolution-1970present">3. Origins and evolution: 1970–present</h2>
+<p>These overlapping periods are teaching lenses, not invention dates, a universal maturity model or OmniForge corporate history. Annual reviews and continuous coaching can coexist.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Period / lens</th>
+<th>Process response</th>
+<th>Question that remains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1970s–1990s: judge and align</td>
+<td>Periodic appraisal, objectives and supervisor observations</td>
+<td>Were expectations clear, and is recent memory crowding out the full period?</td>
+</tr>
+<tr>
+<td>1980s–2000s: broaden contribution</td>
+<td>Competency frameworks, team perspectives and balanced measures</td>
+<td>Are criteria relevant to the actual role and conditions?</td>
+</tr>
+<tr>
+<td>1990s–2010s: digitize and connect</td>
+<td>Electronic reviews, goal alignment and linked talent processes</td>
+<td>Have weak judgments simply become easier to distribute?</td>
+</tr>
+<tr>
+<td>2000s–present: coach and adapt</td>
+<td>Check-ins, ongoing feedback and development conversations</td>
+<td>Does feedback improve work, or only increase reporting?</td>
+</tr>
+<tr>
+<td>2020s–present: assist</td>
+<td>Evidence summaries and suggested review drafts</td>
+<td>Can people trace, correct and challenge the judgment?</td>
+</tr>
+</tbody>
+</table></div>
+<p>Counterexample: completing every review form on time proves administrative coverage, not fair judgment or better plant performance. More frequent feedback is not automatically more useful feedback.</p>
+<h2 id="4-one-story-nikhil-asks-what-the-target-rewards">4. One story: Nikhil asks what the target rewards</h2>
+<p>Nikhil Sen (OMF-P16), Shift Supervisor and Workforce Representative, sees a draft review describing his shift as below expectations. Its planned accepted output was 100 tonnes during an eight-hour shift; its recorded accepted output was 82 tonnes. These figures are synthetic, not OmniForge baselines or targets.</p>
+<p>Elena Petrova (OMF-P07), Cement Plant Director, asks why the target was missed. A two-hour hold affected the shift after a concern about recovered feedstock. The interruption may have protected the process and material quality—but its cause and the response still need evidence.</p>
+<p>Rohan Kulkarni (OMF-P08), Head of Quality and Laboratories, confirms that the hold was authorized. The laboratory disposition remains under review. Nikhil offers the hold record and handover notes.</p>
+<p>Choose first: rate only the tonnes, automatically reward the stop, or review output alongside validated context and contribution. Write your choice before revealing more evidence.</p>
+<p>New evidence: an assistant's draft says Nikhil ignored procedure, but it cites no source. Elena removes the unsupported claim and asks the relevant owners to validate the facts. An authorized hold is not evidence of misconduct; neither is it proof that every individual contribution was strong.</p>
+<p>Arjun Mehta (OMF-P05), Group CHRO, asks for a useful next step: “What should Nikhil keep doing, what needs support, and how can he challenge an error?” The proposed review records confirmed facts, unresolved evidence, a named reviewer and a follow-up point. It does not fabricate a final rating.</p>
+<p>Nikhil's source role does not make him his own appeal reviewer. Elena's reviewer role and the proposed delegated review/appeal policy are illustrative additions; real delegations require confirmation. A review must not penalize raising a concern merely to improve reported output.</p>
+<p>Materials connection: changing feedstock and circular production introduce operating variability and skill needs. Lower output alone cannot establish poor individual contribution; higher output alone cannot establish safe, quality-assured or sustainable performance.</p>
+<h2 id="5-application-responsibilities-and-human-decisions">5. Application responsibilities and human decisions</h2>
+<p>This is a proposed learning architecture, not a confirmed installed landscape. Separate source facts, contextual explanation, individual attribution and the resulting review judgment.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Application responsibility</th>
+<th>Accountable owner / authoritative record</th>
+<th>Decision boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core HR — HR01</td>
+<td>HR data owner: employment, manager, role and organizational context</td>
+<td>Does not establish performance contribution or final pay.</td>
+</tr>
+<tr>
+<td>Performance and Goals; SAP as an example</td>
+<td>HR performance process owner: goal/version, check-in, review workflow and decision record</td>
+<td>Authorized reviewers judge under agreed policy; the system does not validate every imported fact.</td>
+</tr>
+<tr>
+<td>MES / production and asset systems</td>
+<td>Operations/asset owners: production period, accepted-output references, stoppage and work-order context</td>
+<td>Plant/team outcomes are not automatically attributable to one person.</td>
+</tr>
+<tr>
+<td>Quality / LIMS and relevant HSE systems</td>
+<td>Quality and safety owners: validated domain facts, investigation/disposition status and corrections</td>
+<td>An alert or allegation is not a substantiated breach; domain owners do not assign the individual rating alone.</td>
+</tr>
+<tr>
+<td>Review, calibration and appeal</td>
+<td>Delegated reviewers and an appropriately independent appeal role</td>
+<td>Compare evidence and interpretation, record reasons and preserve employee voice; no forced curve is prescribed.</td>
+</tr>
+<tr>
+<td>Development — HR04/HR06; Rewards — HR05</td>
+<td>Development owners act on agreed support needs; Rewards consumes approved results under policy</td>
+<td>No guaranteed promotion or pay change; disputed drafts are not approved reward inputs.</td>
+</tr>
+</tbody>
+</table></div>
+<p>AI may summarize permitted, attributable evidence for human correction. It cannot invent facts, finalize consequential judgments or release unapproved results. Detailed AI, analytics and transport design belong to HR11, HR09 and HR12 respectively.</p>
+<p>SAP Performance &amp; Goals is an example for goals, feedback, coaching and reviews (R2), not a substitute for production, laboratory or safety systems. Goal versions and review timestamps need explicit definitions; do not assume every object follows EC-style effective dating.</p>
+<h2 id="6-one-build-card-a-contextual-performance-decision">6. One build card: a contextual performance decision</h2>
+<p>Synthetic review MAT-RV301 concerns Nikhil's contribution in a defined teaching review period. Treat the eight-hour shift as one evidence item, not the entire review period. Goal MAT-G301-v1 expects 100 tonnes of accepted output for that shift; actual accepted output is 82 tonnes, with a two-hour authorized hold. The period, role expectations and full evidence population must be agreed before a real rating.</p>
+<p>Do not mechanically reduce the denominator to six hours, rewrite the target after the event, or infer a better rate. Record the interruption, validate attribution and apply an agreed policy. No weights, automatic rating formula or plant safety conclusion are prescribed.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Performance Decision Build Card</th>
+<th>Record once</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose, role and period</td>
+<td>Whose contribution is reviewed, for what period and under which agreed role expectations?</td>
+</tr>
+<tr>
+<td>Goal and version</td>
+<td>Business goal → team contribution → role expectation; preserve original goal/version and authorized changes.</td>
+</tr>
+<tr>
+<td>Balanced evidence</td>
+<td>Accepted output; quality/safe-work evidence; handover/team contribution; one development need or unanswered question. No unsubstantiated score.</td>
+</tr>
+<tr>
+<td>Measure and context</td>
+<td>Definition, period, numerator/denominator where relevant, source, hold context, attribution limits and validation status.</td>
+</tr>
+<tr>
+<td>Application and human owners</td>
+<td>Source owner for each fact; review approver; correction/appeal owner; permitted viewers.</td>
+</tr>
+<tr>
+<td>Decision and alternative</td>
+<td>Explain the evidence-backed judgment or time-bounded hold; compare an alternative and state what evidence would change your view.</td>
+</tr>
+<tr>
+<td>Coaching and voice</td>
+<td>One useful practice/support action, accountable support role, agreed follow-up point and accessible challenge route.</td>
+</tr>
+<tr>
+<td>Tests and release</td>
+<td>Expected → observed tabletop result → revision for T01–T03. Record approved/disputed status and any downstream release boundary.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Proposed gates: draft → employee discussion → source validation/calibration → authorized decision → controlled downstream release. An appeal follows its own policy and status; do not imply that it automatically stays every decision. For this experiment, disputed overall results are held from Rewards until the delegated review owner resolves or authorizes handling under an explicit policy.</p>
+<p>Minimize personal data. Use reference IDs/status rather than copying sensitive investigation or medical details into the card. “Zero reported concerns” is not a safe proxy for good performance; distinguish reporting from substantiated conduct.</p>
+<h2 id="7-three-tabletop-tests">7. Three tabletop tests</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Challenge</th>
+<th>Expected behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR03-T01 — Output without resolved context</td>
+<td>82/100 tonnes; authorized hold confirmed; laboratory disposition still pending</td>
+<td>Preserve the output fact, separate confirmed/pending evidence, investigate attribution and keep the affected judgment open with an owner and follow-up point. No automatic top rating or penalty.</td>
+</tr>
+<tr>
+<td>OMF-HR03-T02 — Retrospective goal change</td>
+<td>Manager proposes changing MAT-G301-v1 after seeing the outcome</td>
+<td>Preserve the original goal and dated evidence. Require an authorized, justified, visible revision under policy; do not silently erase the missed target or the employee's explanation.</td>
+</tr>
+<tr>
+<td>OMF-HR03-T03 — Unsupported AI claim and appeal</td>
+<td>Draft invents misconduct; Nikhil challenges it; Rewards requests the result</td>
+<td>Remove unsupported claims, preserve correction history, route the challenge to a delegated reviewer and release only approved/authorized results under the explicit dispute policy.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Record actual paper behavior, including an initial failure and revision. All three tests remain planned until a learner runs them; OMF-HR03-EV01 is initially unfilled. A published expectation is not executed system evidence.</p>
+<p>Acceptance: one completed card, three recorded tabletop outcomes after revision, one concrete coaching/support action and a 60-second explanation of the decision and its limits. A reporting penalty, invented evidence or unreviewed consequential judgment requires redesign.</p>
+<h2 id="8-exact-120-minute-sprint">8. Exact 120-minute sprint</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity on the same card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td>Read the promise and distinguish output, appraisal and contribution.</td>
+</tr>
+<tr>
+<td>10–30</td>
+<td>Explore the overlapping evolution lenses and one persistent weakness.</td>
+</tr>
+<tr>
+<td>30–45</td>
+<td>Play Nikhil's dilemma; choose, reveal evidence and revise.</td>
+</tr>
+<tr>
+<td>45–60</td>
+<td>Map application owners and human review/appeal rights.</td>
+</tr>
+<tr>
+<td>60–90</td>
+<td>Build the contextual performance decision and coaching action.</td>
+</tr>
+<tr>
+<td>90–110</td>
+<td>Run the three tabletop tests; record results and revise.</td>
+</tr>
+<tr>
+<td>110–120</td>
+<td>Explain the decision in 60 seconds; reflect and hand off.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Selective resource scans fit inside these slots. Keep deeper scorecard design, configuration and vendor comparisons outside the Origin Story.</p>
+<h2 id="9-future-curiosity-scenarios-through-2050">9. Future curiosity: scenarios through 2050</h2>
+<p>2035 scenario: an assistant assembles traceable review evidence from approved sources, but a plant outage leaves gaps. Should it draft a provisional summary or postpone? Record the uncertainty rather than filling it with assumptions.</p>
+<p>2050 scenarios: portable contribution records might support mobility between materials roles; alternatively, pervasive monitoring might reward visible activity and discourage speaking up. Neither is a forecast, approved OmniForge state or promised SAP feature.</p>
+<p>Choose one capability worth experimenting with and one human decision right to retain. Would a quieter worker or a worker without a personal device be treated fairly? What evidence would make you abandon the design?</p>
+<h2 id="10-traceability-and-pre-foundation-handoff">10. Traceability and Pre-Foundation handoff</h2>
+<p>Existing anchors: OMF-M17 risk/security, OMF-M18 workforce/adoption and OMF-M19 delivery readiness. New OMF-HR03 identifiers below are educational design anchors created in this sprint, not pre-existing approved enterprise requirements.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Learning anchor</th>
+<th>Card evidence / source connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMF-HR03-REQ01</td>
+<td>Role/period-specific, versioned evidence and operating context; OMF-M18; tested by T01–T02.</td>
+</tr>
+<tr>
+<td>OMF-HR03-REQ02</td>
+<td>Correctable human-reviewed judgment, worker voice and controlled release; OMF-M17/19; tested by T03.</td>
+</tr>
+<tr>
+<td>OMF-HR03-ADR01</td>
+<td>Choose a common evidence/decision framework with role-specific context; compare one uniform output score and justify the trade-off.</td>
+</tr>
+<tr>
+<td>OMF-HR03-EXP01 / EV01</td>
+<td>One synthetic review card and planned T01–T03. Evidence slot remains unfilled until observed results/revisions exist.</td>
+</tr>
+<tr>
+<td>OMF-HR03-M01</td>
+<td>Learning measure: tests meeting their expected behavior / 3, with failed criteria and revisions recorded. A tabletop pass does not establish enterprise fairness, productivity or safety improvement.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reflection: What changed your first judgment? Which evidence belongs to the plant, team or individual? What support should follow the review?</p>
+<p>Carry the same card into Pre-Foundation to define goal, measure, evidence, check-in, review, calibration, appeal and development-action relationships before choosing configuration.</p>
+<p>Educational alignment: TOGAF for responsibilities/options; BIZBOK for capabilities/value; BABOK for requirements/acceptance; DAMA-DMBOK for ownership/quality/lineage; COBIT for delegated accountability; relevant ISO/IEC principles for controlled access, change and evidence. No certification, compliance or conformance claim is made.</p>
+<p>Keep classification axes separate: HR theme = HR03 High-Performance Organizations; architecture streams = applicable Business, Data, Application, AI, Security, Integration and other views; enterprise transformation stream = Workforce.</p>
+<h2 id="official-resources-ask-one-question">Official resources — ask one question</h2>
+<p>R1 — CIPD Performance Management: how do objectives, review, feedback and development fit together? https://www.cipd.org/en/knowledge/factsheets/performance-factsheet/</p>
+<p>R2 — SAP Performance &amp; Goals Management: which application responsibilities cover goals, coaching and reviews? https://help.sap.com/docs/SAP_SUCCESSFACTORS_PERFORMANCE_AND_GOALS/fb61f3925d1446aabd50747b9ce3f6a8/performance-goals-management-in-sap-successfactors?locale=en-us</p>
+<p>R3 — ILO workers' reporting guide: how should a design preserve reporting and worker voice? Educational reference only; determine actual jurisdiction/policy separately. https://vzf.ilo.org/wp-content/uploads/2021/08/ENG_Workers_Guide.pdf</p>
+<h2 id="sources-and-companion-workspace">Sources and companion workspace</h2>
+<p>S01 — Existing aspirational personas and stable IDs: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/personas/persona-cards.md</p>
+<p>S02 — Master OMF-M17/18/19 anchors: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/master/theme-e-execution.md</p>
+<p>S03 — Workforce scope blueprint: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/derived-streams/01-workforce.md</p>
+<p>S04 — Source/reconciliation register: https://github.com/nbnayak88/successlabs-case-studies/blob/main/02-materials/omniforge-materials-ltd/references/source-and-assumptions.md</p>
+<p>S05 — Energy HR03 learning reference: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/01-HR03-ENE-energy/0-The-Origin-Story/sprint/energy-high-performance-organizations-evolution-sprint.md</p>
+<p>Source boundary: use Energy's structure and review discipline, not its personas, figures, earlier IIL expansion or old repository footer. Enterprise metric/financial reconciliation issues remain in S04; this sprint neither resolves them nor presents targets as achieved results.</p>
+<p>GitHub sprint: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/02-HR03-MAT-materials/0-The-Origin-Story/sprint/materials-high-performance-organizations-evolution-sprint.md</p>
+<p>Google Doc: https://docs.google.com/document/d/1FacBC2BBrAF8lxe-jELTFYq-oDX4Ogal3KWPle8jOck/edit?usp=drivesdk</p>
+<p>Existing Notion HR03: https://app.notion.com/p/18645d06136b443c9f81c80f59867354</p>
+<p>Materials HR01–HR12 index: https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/materials-origin-stories.md</p>
+<p>One explicitly published edition across three platforms. No automatic synchronization, public student access or successful learner copying is claimed.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and see how HR teams design Architecting High Performance Organizations they can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR03-APH3-Architecting-High-Performance-Organizations/02-HR03-MAT-materials/0-The-Origin-Story/sprint/materials-high-performance-organizations-evolution-sprint.md">View source on GitHub</a>. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>
