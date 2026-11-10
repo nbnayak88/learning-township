@@ -12,10 +12,10 @@
 **Township Occupancy:** Occupied
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Financials.
+Orchestrate close governance, journal controls and cross-system reconciliation across entities, including where agents and automation should and should not act. Applied via Sprint mode for Financials.
 
 ## Student output
-End-to-end focused problem solving deliverable for FI01
+End-to-end focused problem solving deliverable for financial close
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

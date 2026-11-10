@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Industrials.
+Implement a governed AI-assisted finance workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Hackathon mode for Industrials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI11
+Working prototype under competition constraints for AI-assisted finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

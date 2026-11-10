@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Workshop mode for Energy.
+Implement an order-to-cash workflow with billing rules, collections follow-up and recognition handoffs, using automation or AI assistance only where it adds clear value. Applied via Workshop mode for Energy.
 
 ## Student output
-Live hands-on APQC artifact & template for FI03
+Live hands-on APQC artifact & template for revenue operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

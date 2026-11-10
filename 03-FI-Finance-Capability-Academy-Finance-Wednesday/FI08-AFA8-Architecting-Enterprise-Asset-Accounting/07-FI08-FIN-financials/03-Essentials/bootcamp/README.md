@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Bootcamp mode for Financials.
+Implement an asset-lifecycle workflow covering capitalization, depreciation and retirement with clear ownership, using automation or AI assistance only where it adds clear value. Applied via Bootcamp mode for Financials.
 
 ## Student output
-Multi-milestone production-grade capability build for FI08
+Multi-milestone production-grade capability build for asset accounting
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

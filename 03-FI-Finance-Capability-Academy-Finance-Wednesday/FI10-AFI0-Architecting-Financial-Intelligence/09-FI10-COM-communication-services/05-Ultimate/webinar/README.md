@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Webinar mode for Communication Services.
+Deliver a capstone financial-intelligence blueprint with metric definitions, lineage and decision use, with a simulation or digital-twin view of the design where useful. Applied via Webinar mode for Communication Services.
 
 ## Student output
-Strategic orientation dossier & next steps for FI10
+Strategic orientation dossier & next steps for financial reporting and analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Bootcamp mode for Health Care.
+Deliver a capstone connected-finance blueprint with event contracts, ownership and recovery design, with a simulation or digital-twin view of the design where useful. Applied via Bootcamp mode for Health Care.
 
 ## Student output
-Multi-milestone production-grade capability build for FI12
+Multi-milestone production-grade capability build for connected finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

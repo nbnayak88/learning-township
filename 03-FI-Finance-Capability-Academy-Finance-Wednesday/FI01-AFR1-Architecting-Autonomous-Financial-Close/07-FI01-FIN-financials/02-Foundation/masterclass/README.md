@@ -12,10 +12,10 @@
 **Township Occupancy:** Occupied
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via MasterClass mode for Financials.
+Master the core principles, APQC-aligned baseline processes and data contracts for financial close and consolidation. Applied via MasterClass mode for Financials.
 
 ## Student output
-Expert decision framework & architecture checklist for FI01
+Expert decision framework & architecture checklist for financial close
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via MasterClass mode for Information Technology.
+Orchestrate treasury governance, payment-security controls and counterparty-risk oversight, including where agents and automation should and should not act. Applied via MasterClass mode for Information Technology.
 
 ## Student output
-Expert decision framework & architecture checklist for FI05
+Expert decision framework & architecture checklist for treasury operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

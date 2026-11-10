@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Consumer Staples.
+Implement a period-end close workflow with task dependencies, cut-offs, reconciliations and sign-offs, using automation or AI assistance only where it adds clear value. Applied via Challenge (21-Day) mode for Consumer Staples.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for FI01
+Daily behavioral capability habit & portfolio artifact for financial close
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Communication Services.
+Deliver a capstone governance-and-risk blueprint with control library, ownership and assurance measures, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Communication Services.
 
 ## Student output
-Holistic executive capability immersion for FI09
+Holistic executive capability immersion for financial governance and risk
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

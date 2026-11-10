@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Hackathon mode for Consumer Discretionary.
+Deliver a capstone AI-in-finance blueprint with decision rights, safeguards, test evidence and a value case, tested against a synthetic scenario. Applied via Hackathon mode for Consumer Discretionary.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI11
+Working prototype under competition constraints for AI-assisted finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

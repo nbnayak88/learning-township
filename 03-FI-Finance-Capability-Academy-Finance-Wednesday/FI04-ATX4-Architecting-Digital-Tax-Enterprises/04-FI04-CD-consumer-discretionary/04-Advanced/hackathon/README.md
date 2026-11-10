@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Consumer Discretionary.
+Orchestrate tax-rule governance, jurisdiction change management and audit-ready evidence, including where agents and automation should and should not act. Applied via Hackathon mode for Consumer Discretionary.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI04
+Working prototype under competition constraints for tax management
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

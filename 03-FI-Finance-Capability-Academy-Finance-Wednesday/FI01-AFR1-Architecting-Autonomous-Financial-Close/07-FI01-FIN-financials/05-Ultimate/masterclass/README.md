@@ -12,10 +12,10 @@
 **Township Occupancy:** Occupied
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via MasterClass mode for Financials.
+Deliver a capstone financial-close blueprint with control points, recovery paths and a cycle-time view, with a simulation or digital-twin view of the design where useful. Applied via MasterClass mode for Financials.
 
 ## Student output
-Expert decision framework & architecture checklist for FI01
+Expert decision framework & architecture checklist for financial close
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

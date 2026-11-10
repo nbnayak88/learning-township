@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Communication Services.
+Orchestrate revenue controls, credit-risk governance and cross-system revenue reconciliation, including where agents and automation should and should not act. Applied via Sprint mode for Communication Services.
 
 ## Student output
-End-to-end focused problem solving deliverable for FI03
+End-to-end focused problem solving deliverable for revenue operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

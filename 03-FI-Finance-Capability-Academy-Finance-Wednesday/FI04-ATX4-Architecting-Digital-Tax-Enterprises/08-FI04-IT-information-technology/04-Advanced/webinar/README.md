@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Webinar mode for Information Technology.
+Orchestrate tax-rule governance, jurisdiction change management and audit-ready evidence, including where agents and automation should and should not act. Applied via Webinar mode for Information Technology.
 
 ## Student output
-Strategic orientation dossier & next steps for FI04
+Strategic orientation dossier & next steps for tax management
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

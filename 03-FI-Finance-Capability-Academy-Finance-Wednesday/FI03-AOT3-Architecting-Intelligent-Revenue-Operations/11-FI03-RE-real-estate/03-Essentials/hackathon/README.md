@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Real Estate.
+Implement an order-to-cash workflow with billing rules, collections follow-up and recognition handoffs, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Real Estate.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI03
+Working prototype under competition constraints for revenue operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

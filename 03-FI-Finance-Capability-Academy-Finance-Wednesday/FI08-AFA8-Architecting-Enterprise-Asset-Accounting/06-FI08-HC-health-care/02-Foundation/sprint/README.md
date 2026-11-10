@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Sprint mode for Health Care.
+Master the core principles, APQC-aligned baseline processes and data contracts for fixed-asset and enterprise asset accounting. Applied via Sprint mode for Health Care.
 
 ## Student output
-End-to-end focused problem solving deliverable for FI08
+End-to-end focused problem solving deliverable for asset accounting
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

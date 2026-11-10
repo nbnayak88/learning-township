@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Challenge (21-Day) mode for Health Care.
+Orchestrate payables controls, duplicate-payment and fraud safeguards and supplier-data governance, including where agents and automation should and should not act. Applied via Challenge (21-Day) mode for Health Care.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for FI02
+Daily behavioral capability habit & portfolio artifact for accounts payable
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Webinar mode for Communication Services.
+Orchestrate cost-model governance, allocation transparency and profitability-data controls, including where agents and automation should and should not act. Applied via Webinar mode for Communication Services.
 
 ## Student output
-Strategic orientation dossier & next steps for FI07
+Strategic orientation dossier & next steps for cost and profitability
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Hackathon mode for Financials.
+Master the core principles, APQC-aligned baseline processes and data contracts for financial planning, budgeting and forecasting. Applied via Hackathon mode for Financials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI06
+Working prototype under competition constraints for financial planning
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

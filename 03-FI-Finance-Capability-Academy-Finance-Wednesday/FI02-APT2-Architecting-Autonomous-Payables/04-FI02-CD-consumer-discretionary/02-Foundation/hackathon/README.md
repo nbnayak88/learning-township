@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Hackathon mode for Consumer Discretionary.
+Master the core principles, APQC-aligned baseline processes and data contracts for accounts payable and procure-to-pay. Applied via Hackathon mode for Consumer Discretionary.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI02
+Working prototype under competition constraints for accounts payable
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

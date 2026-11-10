@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via SuperClass mode for Information Technology.
+Orchestrate integration architecture, access propagation and exception recovery across finance platforms, including where agents and automation should and should not act. Applied via SuperClass mode for Information Technology.
 
 ## Student output
-Holistic executive capability immersion for FI12
+Holistic executive capability immersion for connected finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

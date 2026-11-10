@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Bootcamp mode for Consumer Discretionary.
+Deliver a capstone treasury blueprint with cash visibility, controls and a risk view, with a simulation or digital-twin view of the design where useful. Applied via Bootcamp mode for Consumer Discretionary.
 
 ## Student output
-Multi-milestone production-grade capability build for FI05
+Multi-milestone production-grade capability build for treasury operations
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

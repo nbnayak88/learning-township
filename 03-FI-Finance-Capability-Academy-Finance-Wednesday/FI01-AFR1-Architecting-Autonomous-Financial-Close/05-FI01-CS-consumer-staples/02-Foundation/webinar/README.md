@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Webinar mode for Consumer Staples.
+Master the core principles, APQC-aligned baseline processes and data contracts for financial close and consolidation. Applied via Webinar mode for Consumer Staples.
 
 ## Student output
-Strategic orientation dossier & next steps for FI01
+Strategic orientation dossier & next steps for financial close
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

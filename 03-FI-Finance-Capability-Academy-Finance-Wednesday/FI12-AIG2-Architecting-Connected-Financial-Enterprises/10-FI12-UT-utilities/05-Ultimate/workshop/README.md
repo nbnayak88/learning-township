@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Workshop mode for Utilities.
+Deliver a capstone connected-finance blueprint with event contracts, ownership and recovery design, with a simulation or digital-twin view of the design where useful. Applied via Workshop mode for Utilities.
 
 ## Student output
-Live hands-on APQC artifact & template for FI12
+Live hands-on APQC artifact & template for connected finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

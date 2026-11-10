@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Challenge (21-Day) mode for Communication Services.
+Deliver a capstone AI-in-finance blueprint with decision rights, safeguards, test evidence and a value case, tested against a synthetic scenario. Applied via Challenge (21-Day) mode for Communication Services.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for FI11
+Daily behavioral capability habit & portfolio artifact for AI-assisted finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

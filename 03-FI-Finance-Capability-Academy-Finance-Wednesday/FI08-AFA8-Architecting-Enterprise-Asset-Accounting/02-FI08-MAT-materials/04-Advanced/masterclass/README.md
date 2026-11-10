@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via MasterClass mode for Materials.
+Orchestrate asset-register governance, valuation controls and cross-system reconciliation, including where agents and automation should and should not act. Applied via MasterClass mode for Materials.
 
 ## Student output
-Expert decision framework & architecture checklist for FI08
+Expert decision framework & architecture checklist for asset accounting
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

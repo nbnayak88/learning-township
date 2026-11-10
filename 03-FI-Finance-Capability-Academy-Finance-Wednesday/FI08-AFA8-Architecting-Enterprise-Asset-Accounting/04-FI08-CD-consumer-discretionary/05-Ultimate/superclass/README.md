@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Consumer Discretionary.
+Deliver a capstone asset-accounting blueprint with lifecycle rules, controls and measures, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Consumer Discretionary.
 
 ## Student output
-Holistic executive capability immersion for FI08
+Holistic executive capability immersion for asset accounting
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

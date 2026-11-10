@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Hackathon mode for Information Technology.
+Deliver a capstone governance-and-risk blueprint with control library, ownership and assurance measures, with a simulation or digital-twin view of the design where useful. Applied via Hackathon mode for Information Technology.
 
 ## Student output
-Functional autonomous prototype under competition constraints for FI09
+Working prototype under competition constraints for financial governance and risk
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

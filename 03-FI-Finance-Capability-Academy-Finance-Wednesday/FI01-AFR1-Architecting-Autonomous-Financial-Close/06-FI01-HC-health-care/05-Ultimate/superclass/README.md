@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Health Care.
+Deliver a capstone financial-close blueprint with control points, recovery paths and a cycle-time view, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Health Care.
 
 ## Student output
-Holistic executive capability immersion for FI01
+Holistic executive capability immersion for financial close
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -1,12 +1,13 @@
-name: Publish HR and CX sites
+name: Publish HR, CX and Finance sites
 
-# Rebuilds the HR01-HR12 and CRM01-CRM12 GitHub Pages sites from the repo content on every push.
+# Rebuilds the HR, CRM and FI GitHub Pages sites from the repo content on every push.
 on:
   push:
     branches: [main]
     paths:
       - "01-HR-Human-Capital-Capability-Academy-Workforce-Monday/**"
       - "02-CRM-Customer-Experience-Capability-Academy-Revenue-Tuesday/**"
+      - "03-FI-Finance-Capability-Academy-Finance-Wednesday/**"
       - "tools/hr-site/**"
       - ".github/workflows/hr-site.yml"
   workflow_dispatch:
@@ -41,8 +42,8 @@ jobs:
       - name: Publish to gh-pages (only HR folders are touched)
         run: |
           cd pages
-          rm -rf hr hr[0-9][0-9] crm crm[0-9][0-9]
-          cp -r ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] .
+          rm -rf hr hr[0-9][0-9] crm crm[0-9][0-9] fi fi[0-9][0-9]
+          cp -r ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] ../_site/fi ../_site/fi[0-9][0-9] .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A

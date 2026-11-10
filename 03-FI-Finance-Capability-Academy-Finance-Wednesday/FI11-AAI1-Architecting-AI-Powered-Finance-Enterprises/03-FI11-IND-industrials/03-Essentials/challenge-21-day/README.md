@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Industrials.
+Implement a governed AI-assisted finance workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Challenge (21-Day) mode for Industrials.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for FI11
+Daily behavioral capability habit & portfolio artifact for AI-assisted finance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.
