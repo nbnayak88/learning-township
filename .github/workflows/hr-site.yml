@@ -1,4 +1,4 @@
-name: Publish HR, CX, Finance, Procurement and Supply Chain sites
+name: Publish HR, CX, Finance, Procurement and Supply Chain and Business Transformation sites
 
 # Rebuilds the HR, CRM and FI GitHub Pages sites from the repo content on every push.
 on:
@@ -10,6 +10,8 @@ on:
       - "03-FI-Finance-Capability-Academy-Finance-Wednesday/**"
       - "04-PROC-Procurement-Capability-Academy-Procurement-Thursday/**"
       - "05-SCM-Supply-Chain-Management-Capability-Academy-Supply-Chain-Friday/**"
+      - "06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/**"
+      - "docs/btm11-demos/**"
       - "tools/hr-site/**"
       - ".github/workflows/hr-site.yml"
   workflow_dispatch:
@@ -44,8 +46,8 @@ jobs:
       - name: Publish to gh-pages (only HR folders are touched)
         run: |
           cd pages
-          rm -rf hr hr[0-9][0-9] crm crm[0-9][0-9] fi fi[0-9][0-9] proc proc[0-9][0-9] scm scm[0-9][0-9]
-          cp -r ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] ../_site/fi ../_site/fi[0-9][0-9] ../_site/proc ../_site/proc[0-9][0-9] ../_site/scm ../_site/scm[0-9][0-9] .
+          rm -rf hr hr[0-9][0-9] crm crm[0-9][0-9] fi fi[0-9][0-9] proc proc[0-9][0-9] scm scm[0-9][0-9] btm btm[0-9][0-9]
+          cp -r ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] ../_site/fi ../_site/fi[0-9][0-9] ../_site/proc ../_site/proc[0-9][0-9] ../_site/scm ../_site/scm[0-9][0-9] ../_site/btm ../_site/btm[0-9][0-9] .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Hackathon mode for Real Estate.
+Deliver a capstone connected-ecosystem blueprint with integration contracts, ownership and recovery design, with a simulation or digital-twin view of the design where useful. Applied via Hackathon mode for Real Estate.
 
 ## Student output
-Functional autonomous prototype under competition constraints for BTM08
+Working prototype under competition constraints for enterprise ecosystems
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

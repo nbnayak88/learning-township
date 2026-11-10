@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Real Estate.
+Orchestrate ecosystem integration architecture, partner access controls and exception recovery, including where agents and automation should and should not act. Applied via Sprint mode for Real Estate.
 
 ## Student output
-End-to-end focused problem solving deliverable for BTM08
+End-to-end focused problem solving deliverable for enterprise ecosystems
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Hackathon mode for Financials.
+Implement a change-impact, communication and adoption workflow with named change owners, using automation or AI assistance only where it adds clear value. Applied via Hackathon mode for Financials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for BTM04
+Working prototype under competition constraints for organizational change
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

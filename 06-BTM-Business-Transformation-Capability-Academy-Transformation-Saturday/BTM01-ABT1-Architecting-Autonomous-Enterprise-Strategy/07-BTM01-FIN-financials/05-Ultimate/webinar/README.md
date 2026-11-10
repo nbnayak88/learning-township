@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Webinar mode for Financials.
+Deliver a capstone enterprise-strategy blueprint with objectives, ownership and measures, with a simulation or digital-twin view of the design where useful. Applied via Webinar mode for Financials.
 
 ## Student output
-Strategic orientation dossier & next steps for BTM01
+Strategic orientation dossier & next steps for enterprise strategy
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

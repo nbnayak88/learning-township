@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Webinar mode for Financials.
+Implement a governed AI-assisted enterprise workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Webinar mode for Financials.
 
 ## Student output
-Strategic orientation dossier & next steps for BTM11
+Strategic orientation dossier & next steps for AI-powered enterprises
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

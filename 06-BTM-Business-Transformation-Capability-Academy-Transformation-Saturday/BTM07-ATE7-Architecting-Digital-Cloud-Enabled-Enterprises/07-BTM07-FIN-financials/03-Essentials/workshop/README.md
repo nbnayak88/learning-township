@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Workshop mode for Financials.
+Implement a cloud-adoption and workload-placement workflow with clear ownership and guardrails, using automation or AI assistance only where it adds clear value. Applied via Workshop mode for Financials.
 
 ## Student output
-Live hands-on APQC artifact & template for BTM07
+Live hands-on APQC artifact & template for digital and cloud enablement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

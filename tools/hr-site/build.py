@@ -18,10 +18,27 @@ ACADEMIES = [
          q_hub="Twelve series, one question: what must procurement be able to prove?", q_sector="Every sector buys, contracts and depends on suppliers differently, so listen before you automate."),
     dict(key="scm", dir="05-SCM-Supply-Chain-Management-Capability-Academy-Supply-Chain-Friday", prefix="SCM", name="Supply Chain", day="Supply Chain Friday", hub="Supply Chain · Supply Chain Friday Series", h1="Architect the supply chain enterprise, series by series",
          q_hub="Twelve series, one question: what must the supply chain be able to promise?", q_sector="Every sector moves goods and information differently, so listen before you automate."),
+    dict(key="btm", dir="06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday", prefix="BTM", name="Business Transformation", day="Transformation Saturday", hub="Business Transformation · Transformation Saturday Series", h1="Architect the transformed enterprise, series by series",
+         q_hub="Twelve series, one question: what must the enterprise be able to prove it changed?", q_sector="Every sector transforms differently, so listen before you automate."),
     dict(key="crm", dir="02-CRM-Customer-Experience-Capability-Academy-Revenue-Tuesday", prefix="CRM", name="Customer Experience", day="Revenue Tuesday", hub="Customer Experience · Revenue Tuesday Series", h1="Architect the customer enterprise, series by series",
          q_hub="Twelve series, one question: what must the customer experience promise?", q_sector="Every sector earns customer trust differently, so listen before you automate."),
 ]
 OUT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(REPO, "docs"))
+DEMOS = os.path.join(REPO, "docs", "btm11-demos")
+from theme import DEMO_LABEL
+
+
+def demo_list(slug, prefix):
+    d = os.path.join(DEMOS, slug)
+    if not os.path.isdir(d):
+        return ""
+    items = ""
+    for f in sorted(glob.glob(d + "/[0-9][0-9]-*.html")):
+        n = os.path.basename(f)[:2]
+        items += f'<li><a href="{prefix}btm11-demos/{slug}/{os.path.basename(f)}">{html.escape(DEMO_LABEL.get(n, n))}</a></li>'
+    return f'<section class="blk" id="demos"><h2>Bootcamp demos</h2><p>Hands-on teaching demos for this sector, from the case baseline to industry regulation.</p><ul>{items}</ul></section>' if items else ""
+
+
 GH = "https://github.com/nbnayak88/learning-township/"
 GHB, GHT = GH + "blob/main/", GH + "tree/main/"
 ENT = {"ENE": "OmniVerse Energy", "MAT": "OmniForge Materials", "IND": "OmniWorks Industrial Systems", "CD": "OmniVibe", "CS": "OmniDaily", "HC": "OmniHealth Systems", "FIN": "OmniCapital Financial Group", "IT": "OmniTech", "COM": "OmniConnect", "UT": "OmniGrid", "RE": "OmniSpace"}
@@ -78,6 +95,18 @@ QUOTES = {
  "SCM10": "Visibility matters when someone owns the decision it triggers.",
  "SCM11": "Responsible supply chain AI starts with a decision, an owner and evidence.",
  "SCM12": "A supply ecosystem is only as reliable as the weakest handoff between partners.",
+ "BTM01": "Strategy is a set of choices that someone is accountable for making.",
+ "BTM02": "An architecture is a decision record, not a diagram.",
+ "BTM03": "A process works when its owner can show where it breaks.",
+ "BTM04": "Change lands when people can see what is different for them on Monday.",
+ "BTM05": "Value is real when someone can show where it appears in the numbers.",
+ "BTM06": "Data is trusted when its owner, definition and lineage travel with it.",
+ "BTM07": "The cloud is a set of guardrails before it is a set of services.",
+ "BTM08": "An ecosystem is only as reliable as its weakest handoff.",
+ "BTM09": "Trust is built before the incident and tested during it.",
+ "BTM10": "A transformation dashboard is honest when it shows what is not yet measured.",
+ "BTM11": "Responsible enterprise AI starts with a decision, an owner and evidence.",
+ "BTM12": "Future-ready means the next question has somewhere to land.",
  "CRM01": "A customer is one person, however many systems know a different version of them.",
  "CRM02": "Engagement earns its place when it is relevant, consented and easy to stop.",
  "CRM03": "Revenue is a promise kept in sequence, from first interest to final invoice.",
@@ -185,7 +214,7 @@ def load_series(sdir, A):
     b = os.path.basename(sdir)
     m = re.match(r"([A-Z]+\d\d)-([A-Z0-9]+)-(.+)$", b)
     code, short, title = m.group(1), m.group(2), m.group(3).replace("-", " ").replace(" And ", " and ")
-    title = title.replace("AI Powered", "AI-Powered").replace("Procure to Pay", "Procure-to-Pay").replace("Logistics Transportation", "Logistics & Transportation").replace("Quality Compliance", "Quality & Compliance").replace("Cost Profitability", "Cost & Profitability").replace("Governance Risk", "Governance & Risk").replace("Quality Performance", "Quality & Performance").replace("Risk Sustainable", "Risk & Sustainable").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
+    title = title.replace("AI Powered", "AI-Powered").replace("Procure to Pay", "Procure-to-Pay").replace("Process Driven High Performance", "Process-Driven, High-Performance").replace("Change Ready Adaptive", "Change-Ready, Adaptive").replace("Value Driven", "Value-Driven").replace("Data Driven", "Data-Driven").replace("Digital Cloud Enabled", "Digital, Cloud-Enabled").replace("Trust Risk Resilient", "Trust and Risk-Resilient").replace("Sustainable Future Ready", "Sustainable, Future-Ready").replace("Future Ready", "Future-Ready").replace("Logistics Transportation", "Logistics & Transportation").replace("Quality Compliance", "Quality & Compliance").replace("Cost Profitability", "Cost & Profitability").replace("Governance Risk", "Governance & Risk").replace("Quality Performance", "Quality & Performance").replace("Risk Sustainable", "Risk & Sustainable").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
     sectors = []
     for d in sorted(glob.glob(sdir + "/[0-9][0-9]-[A-Z]*-*")):
         sb = os.path.basename(d)
@@ -226,13 +255,14 @@ def build_series(S, A, peers):
         comp_html = ""
         trs = "".join(f"<tr><td>{r['level']}</td><td>{r['fmt']}</td><td><code>{html.escape(r['pid'])}</code></td><td>{html.escape(r['idx'])}</td><td>{html.escape(r['dur'])}</td><td>{html.escape(r['obj'])}</td><td>{html.escape(r['out'])}</td></tr>" for r in s["rows"])
         lesson_card = f'<div class="card"><span class="num">LEVEL 0 · THE ORIGIN STORY</span><h3>Two-hour Origin Story sprint</h3><p>A free community lesson with the origins, the general story, future perspectives, a persona-led case and a small build experiment.</p><a class="cta" href="{s["slug"]}-origin-story.html">Open the lesson</a></div>' if s["lesson"] else '<div class="card"><span class="num">LEVEL 0 · THE ORIGIN STORY</span><h3>Lesson in preparation</h3><p>The Origin Story lesson for this sector is not published yet. It appears here automatically once it is added.</p></div>'
+        demos_html = demo_list(s["slug"], "../../") if code == "BTM11" else ""
         body = f"""
 <section class="hero"><span class="pre">{html.escape(s['name'])} · {code}</span>
 <h1>{html.escape(s['ent'])}: {html.escape(S['title'])}</h1>
 <p class="sub">An aspirational case study for the {html.escape(s['name'])} sector. Start with the Origin Story lesson, then see every pathway record in the catalog.</p>
 <div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#catalog">See the pathway catalog</a></div></section>
 <section class="blk"><div class="grid">{lesson_card}<div class="card"><span class="num">LEVELS 1 TO 5</span><h3>{len(s['rows'])} pathway records</h3><p>Pre-Foundation to Ultimate, across webinar, workshop, sprint, bootcamp, masterclass, superclass, hackathon and 21-day challenge formats.</p></div></div></section>
-{comp_html}
+{demos_html}
 <section class="blk" id="catalog"><h2>Pathway catalog</h2>
 <blockquote><p><strong>Publication note:</strong> these are catalog records. They are <strong>not proof that a course is live or purchasable</strong>.</p></blockquote>
 <div class="tw"><table><thead><tr><th>Level</th><th>Format</th><th>Pathway ID</th><th>Index</th><th>Duration</th><th>Learning objective</th><th>Student output</th></tr></thead><tbody>{trs}</tbody></table></div></section>
@@ -252,6 +282,7 @@ def build_series(S, A, peers):
     trs = "".join("<tr><td><strong>%s</strong></td>%s</tr>" % (lvl, "".join(f"<td>{html.escape(dur.get(lvl, {}).get(f, '—'))}</td>" for f in fmts)) for _, lvl in LEVELS)
     total = sum(len(s["rows"]) for s in S["sectors"])
     ex = ""
+    demos_card = '<section class="blk"><div class="card"><span class="num">BOOTCAMP DEMOS</span><h3>15 hands-on demos for each sector</h3><p>The BTM11 bootcamp demo library, from the case baseline to industry regulation.</p><a class="cta" href="../btm11-demos/index.html">Open the demos</a></div></section>' if code == "BTM11" and os.path.isdir(DEMOS) else ""
     if S["extras"]:
         items = "".join(f'<li><a href="{(GHT if d else GHB) + rel(p)}" target="_blank" rel="noopener">{html.escape(n)}{"/" if d else ""}</a></li>' for n, p, d in S["extras"])
         ex = f'<section class="blk"><h2>More from this series</h2><p>Supporting files and toolkits kept alongside the sector folders on GitHub.</p><ul>{items}</ul></section>'
@@ -263,7 +294,7 @@ def build_series(S, A, peers):
 <ul class="ticks"><li>Read the free Origin Story lesson for your sector</li><li>See every pathway across five levels and eight formats</li><li>Plan your route from Pre-Foundation to Ultimate</li></ul>
 <div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#sectors">Explore the sectors</a></div>
 <p class="note">Free webinar · opens the registration page · aspirational case studies, no client work implied</p></section>
-<section class="blk" id="sectors"><h2>Explore by sector</h2><p>Each card is one aspirational case study with its own Origin Story lesson and pathway records.</p><div class="grid">{cards}</div></section>
+{demos_card}<section class="blk" id="sectors"><h2>Explore by sector</h2><p>Each card is one aspirational case study with its own Origin Story lesson and pathway records.</p><div class="grid">{cards}</div></section>
 <section class="blk"><h2>The learning path</h2><p>Every sector has the same five levels and eight formats, plus the Level 0 Origin Story. Durations come from the catalog records.</p><div class="tw"><table><thead><tr><th>Level</th>{"".join(f"<th>{f}</th>" for f in fmts)}</tr></thead><tbody>{trs}</tbody></table></div>
 <p class="meta">{total} pathway records across {len(S['sectors'])} sectors.</p></section>
 <section class="blk"><h2>Questions</h2>

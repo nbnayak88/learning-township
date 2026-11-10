@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Information Technology.
+Orchestrate data governance, access controls and cross-domain data-contract management, including where agents and automation should and should not act. Applied via Sprint mode for Information Technology.
 
 ## Student output
-End-to-end focused problem solving deliverable for BTM06
+End-to-end focused problem solving deliverable for enterprise data
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

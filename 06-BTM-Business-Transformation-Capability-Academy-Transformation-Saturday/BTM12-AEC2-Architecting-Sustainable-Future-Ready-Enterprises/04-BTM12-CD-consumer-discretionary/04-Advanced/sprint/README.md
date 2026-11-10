@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Consumer Discretionary.
+Orchestrate sustainability governance, evidence quality and long-horizon scenario planning, including where agents and automation should and should not act. Applied via Sprint mode for Consumer Discretionary.
 
 ## Student output
-End-to-end focused problem solving deliverable for BTM12
+End-to-end focused problem solving deliverable for sustainable, future-ready enterprises
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

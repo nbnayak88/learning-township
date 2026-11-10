@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Challenge (21-Day) mode for Health Care.
+Master the core principles, APQC-aligned baseline processes and data contracts for transformation value, benefits and portfolio management. Applied via Challenge (21-Day) mode for Health Care.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for BTM05
+Daily behavioral capability habit & portfolio artifact for transformation value
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

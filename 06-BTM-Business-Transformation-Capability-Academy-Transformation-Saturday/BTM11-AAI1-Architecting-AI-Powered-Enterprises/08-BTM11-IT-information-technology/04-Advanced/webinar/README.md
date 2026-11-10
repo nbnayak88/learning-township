@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Webinar mode for Information Technology.
+Orchestrate AI governance for the enterprise: agent identity, access limits, monitoring and recovery. Applied via Webinar mode for Information Technology.
 
 ## Student output
-Strategic orientation dossier & next steps for BTM11
+Strategic orientation dossier & next steps for AI-powered enterprises
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

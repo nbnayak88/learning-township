@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Establish conceptual taxonomy, mental models, and readiness diagnostics. Applied via Webinar mode for Consumer Discretionary.
+Establish the shared vocabulary, roles and readiness picture for organizational change and adoption. Applied via Webinar mode for Consumer Discretionary.
 
 ## Student output
-Strategic orientation dossier & next steps for BTM04
+Strategic orientation dossier & next steps for organizational change
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

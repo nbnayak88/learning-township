@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Sprint mode for Materials.
+Deliver a capstone trust-and-resilience blueprint with control library, recovery paths and measures, with a simulation or digital-twin view of the design where useful. Applied via Sprint mode for Materials.
 
 ## Student output
-End-to-end focused problem solving deliverable for BTM09
+End-to-end focused problem solving deliverable for enterprise risk and resilience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

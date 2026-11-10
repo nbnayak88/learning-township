@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Materials.
+Orchestrate change governance, resistance and readiness management and adoption evidence across units, including where agents and automation should and should not act. Applied via Hackathon mode for Materials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for BTM04
+Working prototype under competition constraints for organizational change
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

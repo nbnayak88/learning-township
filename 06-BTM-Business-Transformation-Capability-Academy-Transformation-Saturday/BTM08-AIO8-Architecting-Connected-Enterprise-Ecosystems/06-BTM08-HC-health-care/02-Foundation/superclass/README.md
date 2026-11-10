@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via SuperClass mode for Health Care.
+Master the core principles, APQC-aligned baseline processes and data contracts for enterprise ecosystems, platforms and integration. Applied via SuperClass mode for Health Care.
 
 ## Student output
-Holistic executive capability immersion for BTM08
+Holistic executive capability immersion for enterprise ecosystems
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

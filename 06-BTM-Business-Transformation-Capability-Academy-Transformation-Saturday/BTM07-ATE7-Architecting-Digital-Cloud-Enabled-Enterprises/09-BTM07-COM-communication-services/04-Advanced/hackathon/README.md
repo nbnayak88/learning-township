@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Communication Services.
+Orchestrate cloud governance, security guardrails and cost accountability across platforms, including where agents and automation should and should not act. Applied via Hackathon mode for Communication Services.
 
 ## Student output
-Functional autonomous prototype under competition constraints for BTM07
+Working prototype under competition constraints for digital and cloud enablement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

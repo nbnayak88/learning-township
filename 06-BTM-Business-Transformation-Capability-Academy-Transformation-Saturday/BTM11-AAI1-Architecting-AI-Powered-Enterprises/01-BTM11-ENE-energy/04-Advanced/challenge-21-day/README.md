@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Challenge (21-Day) mode for Energy.
+Orchestrate AI governance for the enterprise: agent identity, access limits, monitoring and recovery. Applied via Challenge (21-Day) mode for Energy.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for BTM11
+Daily behavioral capability habit & portfolio artifact for AI-powered enterprises
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

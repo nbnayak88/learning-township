@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Industrials.
+Orchestrate risk governance, control assurance and resilience testing across the enterprise, including where agents and automation should and should not act. Applied via Bootcamp mode for Industrials.
 
 ## Student output
-Multi-milestone production-grade capability build for BTM09
+Multi-milestone production-grade capability build for enterprise risk and resilience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

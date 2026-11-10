@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Consumer Staples.
+Orchestrate value governance, benefit-attribution rules and portfolio decision rights, including where agents and automation should and should not act. Applied via Bootcamp mode for Consumer Staples.
 
 ## Student output
-Multi-milestone production-grade capability build for BTM05
+Multi-milestone production-grade capability build for transformation value
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

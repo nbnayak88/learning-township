@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Webinar mode for Real Estate.
+Deliver a capstone change-readiness blueprint with impact assessment, adoption evidence and measures, with a simulation or digital-twin view of the design where useful. Applied via Webinar mode for Real Estate.
 
 ## Student output
-Strategic orientation dossier & next steps for BTM04
+Strategic orientation dossier & next steps for organizational change
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via SuperClass mode for Information Technology.
+Implement a capability-model and architecture-decision workflow with clear owners and review rules, using automation or AI assistance only where it adds clear value. Applied via SuperClass mode for Information Technology.
 
 ## Student output
-Holistic executive capability immersion for BTM02
+Holistic executive capability immersion for enterprise architecture
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

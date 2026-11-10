@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Sprint mode for Industrials.
+Orchestrate AI governance for the enterprise: agent identity, access limits, monitoring and recovery. Applied via Sprint mode for Industrials.
 
 ## Student output
-End-to-end focused problem solving deliverable for BTM11
+End-to-end focused problem solving deliverable for AI-powered enterprises
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.
