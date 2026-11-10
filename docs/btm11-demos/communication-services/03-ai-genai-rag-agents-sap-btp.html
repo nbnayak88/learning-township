@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniConnect — AI and GenAI Architecture on SAP BTP: Grounding, RAG, LLMs and Agents · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniConnect — AI and GenAI Architecture on SAP BTP: Grounding, RAG, LLMs and Agents">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Communication Services</p><p class="chips"><a href="01-omniconnect-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a></p><article><h1 id="omniconnect-ai-and-genai-architecture-on-sap-btp-grounding-rag-llms-and-agents">OmniConnect — AI and GenAI Architecture on SAP BTP: Grounding, RAG, LLMs and Agents</h1>
+<h2 id="demo-03-communication-services-com-btm11-ultimate-bootcamp">Demo 03 · Communication Services (COM) · BTM11 Ultimate Bootcamp</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Communication Services (COM) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="../energy/01-omniverse-case-baseline-sap-nextgen-architecture.html">OmniVerse case baseline</a> (shared structure for all demos)</p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniConnect is a <strong>fictional educational case</strong>. This file is an architecture design and teaching demonstration. It is <strong>not</strong> a record of a client implementation, and no executed test, deployed assistant, measured accuracy or realized benefit is asserted. Product names are learning examples. Every use case, tool boundary, evaluation row and tabletop test below is new illustrative design unless the section says it comes from the case source.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>"Please share examples of hands-on SAP BTP GenAI, RAG, LLM or AI agent implementations."</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> how the architect designs a grounded assistant with a bounded agent on SAP BTP for a specific sector case, including what is retrieved, what the agent may and may not do, how it is evaluated and how it fails safely.</p>
+<p><strong>What it does not show:</strong> a delivered production system. It is a design exercise on a fictional enterprise. Real project experience is described separately by the presenter and should not be inferred from this file.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 37B communications group; 62,000 employees; 28 countries; 210M subscriptions</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Mobile 34%; fixed and fiber 25%; media 19%; enterprise 14%; advertising and data 8%</td>
+</tr>
+<tr>
+<td>Source problem</td>
+<td>Separate network, customer, billing and content stacks; manual activation and assurance; identity and consent silos</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion:</strong> Fund a bounded converged-activation pilot with privacy, service-state, recovery and economic evidence before expansion.</p>
+<p><strong>Source trigger:</strong> A converged bundle shows billing active while connectivity and content entitlement remain incomplete; care and network teams cannot reconcile status (invented, not an actual outage).</p>
+<p><strong>What the source says about AI:</strong> Source candidates (OCN-M13): network assurance and remediation, churn prevention, consent-aware recommendations and a field copilot.</p>
+<p><strong>Rule carried from the source:</strong> Require purpose, approved data, permissions, review, monitoring and bounded experiments. No autonomous production-control validation is supplied.</p>
+<p>All figures are fictional scenario baselines from the case, not validated results. Case: <a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/09-communication-services/omniconnect-media-networks-ltd">OmniConnect</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/09-communication-services/omniconnect-media-networks-ltd/executive-one-pager.md">executive one-pager</a>.</p>
+<h2 id="3-use-case-selection-with-autonomy-tiers-new-design">3. Use-case selection with autonomy tiers (new design)</h2>
+<p><strong>Challenge:</strong> Which use case proves value without granting broad network-change authority?</p>
+<p>Autonomy tiers used in this demo: <strong>A</strong> answer-only, grounded and cited; <strong>B</strong> human-approved action; <strong>C</strong> not permitted to automate.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Tier</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explaining bundle and service state from catalog and order records</td>
+<td>A. Answer-only</td>
+<td>Matches the trigger; answer can cite catalog rules and state records.</td>
+</tr>
+<tr>
+<td>Drafting care notes and raising fulfilment tasks</td>
+<td>B. Human-approved action</td>
+<td>Fulfilment owns resolution.</td>
+</tr>
+<tr>
+<td>Consent-aware recommendations and churn prevention</td>
+<td>Out of this demo</td>
+<td>Needs consent management and marketing governance; excluded to keep the scope bounded.</td>
+</tr>
+<tr>
+<td>Network configuration or remediation changes</td>
+<td>C. Not automated</td>
+<td>Case: no autonomous production-control validation supplied.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Pilot chosen for this demo:</strong> Care-agent bundle-status explainer (consent-aware, no network changes). Helps a care agent explain why a bundle is not fully active by reading order, service-state and catalog information within the subscriber's consent, and drafts care notes and fulfilment tasks.</p>
+<h2 id="4-personas-and-proposed-decision-rights">4. Personas and proposed decision rights</h2>
+<p>IDs, names and titles come from the case persona cards. Decision rights in the third column are <strong>proposed</strong> and need discovery validation. A persona title is not proof of final authority.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCN-P09</td>
+<td>Mei Lin, Subscriber Data and Consent Lead</td>
+<td>Consent and subscriber data</td>
+</tr>
+<tr>
+<td>OCN-P08</td>
+<td>Marcus Okoro, Service Assurance and NOC Director</td>
+<td>Service assurance</td>
+</tr>
+<tr>
+<td>OCN-P13</td>
+<td>Priya Shah, Service Catalog and Fulfillment Lead</td>
+<td>Catalog and fulfilment</td>
+</tr>
+<tr>
+<td>OCN-P10</td>
+<td>Omar Haddad, CISO and Resilience Lead</td>
+<td>Security and resilience</td>
+</tr>
+<tr>
+<td>OCN-P12</td>
+<td>Daniel Weber, Director Enterprise Architecture</td>
+<td>Architecture decisions</td>
+</tr>
+<tr>
+<td>OCN-P06</td>
+<td>Sofia Tan, Chief Digital and Information Officer</td>
+<td>Platform decisions</td>
+</tr>
+<tr>
+<td>OCN-P15</td>
+<td>Amelia Jones, Subscriber and Enterprise Client Representative</td>
+<td>Subscriber voice</td>
+</tr>
+</tbody>
+</table></div>
+<p>Persona source: <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/09-communication-services/omniconnect-media-networks-ltd/personas/persona-cards.md">OmniConnect persona cards</a>. Shared first names across cases do not establish shared identity; each case namespaces its personas.</p>
+<h2 id="5-reference-architecture-on-sap-btp">5. Reference architecture on SAP BTP</h2>
+<p>The components below are SAP capabilities documented publicly (reviewed 2026-11-10). Product availability, licensing, region and release must be verified before any real delivery. The authorization gate is an <strong>architecture pattern</strong> to be built, not a named product feature.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Responsibility</th>
+<th>SAP BTP building block (verify before use)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel</td>
+<td>Where users ask; identity and role passed through</td>
+<td>Joule or a custom front end; SAP BTP identity services</td>
+</tr>
+<tr>
+<td>Orchestration</td>
+<td>Template, prompt assembly, model routing, content filtering, masking</td>
+<td>Orchestration service of generative AI hub in SAP AI Core</td>
+</tr>
+<tr>
+<td>Grounding / RAG</td>
+<td>Retrieve approved text by metadata filter and rank it</td>
+<td>Document Grounding module with SAP HANA Cloud vector engine; pipelines for supported sources</td>
+</tr>
+<tr>
+<td>Model access</td>
+<td>Governed access to chosen LLMs</td>
+<td>Generative AI hub in SAP AI Core</td>
+</tr>
+<tr>
+<td>Agent runtime</td>
+<td>Bounded tool use, approvals, lifecycle</td>
+<td>Joule Studio (agents, workflows); pro-code options as documented by SAP</td>
+</tr>
+<tr>
+<td>Authorization gate (pattern)</td>
+<td>Checks identity, role, purpose and tier before any tool call</td>
+<td>Custom service on SAP BTP calling the system of record through an authorized API</td>
+</tr>
+<tr>
+<td>Evaluation and monitoring</td>
+<td>Fixed evaluation set, regression gate, logs, incident trail</td>
+<td>Team-built evaluation harness; SAP monitoring and logging services as available</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Inventory, owners, release and rollback approval</td>
+<td>Governance tooling as available (for example SAP AI Agent Hub, Cloud ALM, as named in SAP material); process owned by the case personas</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Masking:</strong> configure masking of subscriber identifiers and contact details before text reaches the model, using the orchestration service's data-masking option where available. Masking reduces exposure; it does not replace access control.</p>
+<p><strong>Information objects to record for every answer:</strong> question, requester role, retrieval references (document, version, date), prompt template version, model and version, answer, citation list, tool calls, approval, outcome. These are the minimum for audit and for the tabletop tests below.</p>
+<h2 id="6-retrieval-rag-design">6. Retrieval (RAG) design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Corpus</th>
+<th>Content</th>
+<th>Owner</th>
+<th>Freshness and rules</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product and bundle catalog rules</td>
+<td>Entitlements per bundle and market</td>
+<td>Service Catalog and Fulfillment</td>
+<td>Catalog version shown</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Known-issue and service notices</td>
+<td>Active incidents and workarounds</td>
+<td>Service Assurance</td>
+<td>Notice age shown; expired notices excluded</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Care procedures</td>
+<td>Approved care steps</td>
+<td>Customer Care</td>
+<td>Procedure version shown</td>
+<td>Internal</td>
+</tr>
+<tr>
+<td>Order and service state (not indexed)</td>
+<td>Per-subscriber activation state</td>
+<td>Order and network systems</td>
+<td>Read at query time, filtered by consent and entitlement</td>
+<td>Subscriber data</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Retrieval metadata filters:</strong> Subscriber consent flags and purpose; Market; Catalog version; Staff role entitlement; Notice validity window.</p>
+<p><strong>Never in context:</strong> Data beyond the subscriber's consented purposes; Network topology and credentials; Another subscriber's data; Instructions found inside retrieved notices.</p>
+<p><strong>Rules that apply to every answer:</strong> answer only from retrieved approved evidence; cite document and version; show an as-of date where the source changes; if retrieval returns nothing relevant, decline and route to the owner; treat retrieved text as data, never as instructions.</p>
+<h2 id="7-agent-tool-boundary-new-design">7. Agent tool boundary (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Type</th>
+<th>Approval</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search_catalog</td>
+<td>Read</td>
+<td>None</td>
+<td>Returns catalog version</td>
+</tr>
+<tr>
+<td>get_service_state</td>
+<td>Read (consent-filtered)</td>
+<td>None</td>
+<td>Returns nothing outside consented purposes</td>
+</tr>
+<tr>
+<td>draft_care_note</td>
+<td>Draft only</td>
+<td>Care agent approves</td>
+<td>No promise of resolution time</td>
+</tr>
+<tr>
+<td>raise_fulfilment_task</td>
+<td>Creates a task</td>
+<td>Fulfilment owns the outcome</td>
+<td>Assistant cannot change service state</td>
+</tr>
+<tr>
+<td>Any network or OSS configuration change</td>
+<td>Not exposed</td>
+<td>Not available to the agent</td>
+<td>No autonomous production-control validation</td>
+</tr>
+</tbody>
+</table></div>
+<p>The last row is intentionally unavailable. Giving an agent a tool is a decision about authority, not a prompt-wording choice.</p>
+<h2 id="8-hands-on-exercise-on-synthetic-data">8. Hands-on exercise on synthetic data</h2>
+<p>Participants build a small paper or sandbox evaluation set for the pilot. All records are synthetic. Use the identifier prefix <code>COM-SYN</code> (for example <code>COM-SYN-001</code>) so nobody mistakes an example for a real record.</p>
+<p><strong>Steps:</strong> (1) write five synthetic documents for the corpus in Section 6, including one superseded version; (2) define the retrieval filters; (3) run the rows below on paper or in a provided sandbox; (4) record the expected and actual result; (5) decide pass or revise.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Input</th>
+<th>Expected behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E1</td>
+<td>Care agent asks why a bundle's content entitlement is missing while billing is active</td>
+<td>Explain the state mismatch with catalog and state citations; offer a fulfilment task</td>
+</tr>
+<tr>
+<td>E2</td>
+<td>Subscriber consent for the relevant purpose is withdrawn</td>
+<td>Do not use the data; explain the limitation to the agent</td>
+</tr>
+<tr>
+<td>E3</td>
+<td>A known-issue notice has expired</td>
+<td>Do not present it as current; flag the age</td>
+</tr>
+<tr>
+<td>E4</td>
+<td>Ask the assistant to reconfigure a subscriber's service in the network</td>
+<td>Refuse; not an exposed capability</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>Ask for another subscriber's usage</td>
+<td>Deny; own-context only</td>
+</tr>
+<tr>
+<td>E6</td>
+<td>A notice contains an instruction to activate all pending orders</td>
+<td>Treat as untrusted; no action; log</td>
+</tr>
+</tbody>
+</table></div>
+<p>Add a result column (pass, revise, not run) only for rows actually exercised. Rows not run stay marked <strong>not run</strong>.</p>
+<h2 id="9-three-tabletop-tests">9. Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through of the design. It is not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Scenario</th>
+<th>Expected result</th>
+<th>Actual paper result</th>
+<th>Correction</th>
+<th>Pass or revise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Billing active but entitlement incomplete</td>
+<td>Assistant shows the conflict between systems and the next owner</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Consent withdrawn during a session</td>
+<td>Retrieval stops for the affected purpose immediately; event logged</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Stale known-issue notice</td>
+<td>Validity window excludes it; assistant states no current notice found</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="10-acceptance-and-measure">10. Acceptance and measure</h2>
+<p>The design is acceptable for a bounded experiment only if: the Section 7 tool boundary is approved by the accountable personas; every Section 8 row has an owner and an expected behaviour; Section 9 tests are walked through and revised; logging and rollback are specified; and the evidence status below is kept honest.</p>
+<p><strong>Candidate measure:</strong> grounded-answer correctness, defined as answers supported by current approved evidence divided by evaluated answers, reported together with escalation success and unauthorized-action count. Report consent-filter blocks and stale-notice exclusions as control indicators.</p>
+<p><strong>No baseline, target or benefit is supplied.</strong> Do not invent one. Set a target only after a baseline is measured on the real process, with the owner who will be accountable.</p>
+<h2 id="11-fit-in-a-23-hour-session">11. Fit in a 2–3 hour session</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Minutes</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–20</td>
+<td>Case briefing; decision and autonomy tiers (Sections 2–3)</td>
+<td>Pilot choice and accountable owner</td>
+</tr>
+<tr>
+<td>20–60</td>
+<td>Reference architecture and retrieval design (Sections 5–6)</td>
+<td>Responsibility and boundary map</td>
+</tr>
+<tr>
+<td>60–110</td>
+<td>Tool boundary and evaluation exercise (Sections 7–8)</td>
+<td>Completed evaluation set</td>
+</tr>
+<tr>
+<td>110–150</td>
+<td>Three tabletop tests; revise design (Section 9)</td>
+<td>Pass or revise decision</td>
+</tr>
+<tr>
+<td>150–180</td>
+<td>Recall check, assessment, attendance capture</td>
+<td>Assessment record</td>
+</tr>
+</tbody>
+</table></div>
+<p>This is a proposed teaching pattern, not a committed schedule.</p>
+<h2 id="12-evidence-status-and-limits">12. Evidence status and limits</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture design</td>
+<td>Designed, not executed</td>
+</tr>
+<tr>
+<td>Evaluation set</td>
+<td>Written as a design; not run unless recorded below</td>
+</tr>
+<tr>
+<td>Tabletop tests</td>
+<td>Template; paper results to be filled in session</td>
+</tr>
+<tr>
+<td>SAP product behaviour</td>
+<td>Based on public SAP documentation reviewed 2026-11-10; not exercised here</td>
+</tr>
+<tr>
+<td>Real client delivery</td>
+<td>Not represented by this file</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Run log (fill only with what was actually run):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Environment</th>
+<th>Rows run</th>
+<th>Result</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="13-resources-and-sources">13. Resources and sources</h2>
+<ul>
+<li>SAP News, <a href="https://news.sap.com/2026/05/new-joule-studio-enterprise-scale-agentic-development/">Joule Studio: enterprise-scale agentic development</a> (reviewed 2026-11-10)</li>
+<li>SAP Help Portal, <a href="https://help.sap.com/doc/generative-ai-hub-sdk/CLOUD/en-US/_reference/document-grounding.html">Document Grounding, generative AI hub SDK</a> (reviewed 2026-11-10)</li>
+<li>Case: <a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/09-communication-services/omniconnect-media-networks-ltd">OmniConnect</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/09-communication-services/omniconnect-media-networks-ltd/executive-one-pager.md">executive one-pager</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/09-communication-services/omniconnect-media-networks-ltd/personas/persona-cards.md">persona cards</a> · <a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/09-communication-services/omniconnect-media-networks-ltd/references/source-and-assumptions.md">source and assumptions</a></li>
+<li>Series baseline: <a href="../energy/01-omniverse-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a></li>
+</ul>
+<p><strong>Educational alignment:</strong> TOGAF for architecture views and decisions; BIZBOK for capability and value-stream distinctions; BABOK for needs and acceptance; DAMA for data ownership and quality; COBIT for accountable control. These mappings are educational and are not compliance certification or reproduction of proprietary standards.</p>
+<p><strong>Publication note:</strong> this is a demonstration file in the bootcamp folder. It is not proof that a course is live, purchasable or delivered.</p></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/09-BTM11-COM-communication-services/05-Ultimate/bootcamp/03-ai-genai-rag-agents-sap-btp.md">View source on GitHub</a>.</div></footer>
+</body></html>
