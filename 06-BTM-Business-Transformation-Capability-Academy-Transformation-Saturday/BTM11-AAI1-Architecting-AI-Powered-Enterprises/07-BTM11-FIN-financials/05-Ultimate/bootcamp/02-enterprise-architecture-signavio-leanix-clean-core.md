@@ -6,7 +6,7 @@
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 **Series baseline:** [Demo 01 case baseline](01-omnicapital-case-baseline-sap-nextgen-architecture.md) · **Related:** [Demo 03 AI/GenAI on SAP BTP](03-ai-genai-rag-agents-sap-btp.md) · [Energy version of this demo](../../../01-BTM11-ENE-energy/05-Ultimate/bootcamp/02-enterprise-architecture-signavio-leanix-clean-core.md)
 
-> **Evidence boundary:** OmniCapital Financial Group is a **fictional educational case**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains little or no SAP landscape detail, so application names, fact sheets, process codes and requirements below are **synthetic placeholders** (prefix `FIN-SYN`) and are labelled as new design. Product names are learning examples, not confirmed OmniCapital implementations.
+> **Evidence boundary:** OmniCapital Financial Group is an **aspirational case study**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains little or no SAP landscape detail, so application names, fact sheets, process codes and requirements below are **synthetic placeholders** (prefix `FIN-SYN`) and are labelled as new design. Product names are learning examples, not confirmed OmniCapital implementations.
 
 ---
 
@@ -41,7 +41,7 @@
 | OCF-M11 Target operating model | Source governed financial model links customer fairness, controls, data, digital journeys, resilience, model governance and value. Illustrative TOM: journey owners with common guardrails, accountable risk/control functions and legal-entity execution. |  |
 | OCF-M12 Enterprise architecture and digital enablement | Source Customer/Account/Transaction/Risk/Product360; core banking, policy administration, CRM, lending, payments and risk engines; open APIs/events/partner gateway; lakehouse, ledger data, feature store and regulatory platform. Hybrid/resilience proposals are not tested implementation evidence. |  |
 
-**Source fictional stakeholder challenge (each M-section):** *What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?*
+**Source aspirational stakeholder challenge (each M-section):** *What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?*
 
 **Resolution categories (series vocabulary, not from this case):** Configuration; Enhancement (BAdI / Key User Extensibility); Side-by-Side Extension (BTP); Custom Development (Private Edition only); Process Change; Third-Party Solution; Deferred. These seven categories come from the OmniVerse Energy source register (written in a SuccessFactors Employee Central gap-capture context). They were searched for in this case's source on 2026-11-10 and are **not present there**. This demo reuses them as a shared teaching vocabulary across the series and says so.
 
@@ -273,7 +273,7 @@ These are for the trainer preparing to show this demo to a corporate audience. T
 | P-02 | Confirm access to a Signavio and a LeanIX environment, or prepare static screenshots from your own training sandbox | The vendor is expected to provide demo systems | Access confirmed in writing, or fallback ready |
 | P-03 | Load the synthetic fact sheets from Section 9 and one synthetic process for Identity-to-Accountable-Onboarding | Gives a concrete walkthrough | Records carry the `FIN-SYN` prefix |
 | P-04 | Rehearse the 25-minute classification exercise with a colleague | Timing and disagreements | Timing and key adjusted |
-| P-05 | Prepare the one-page answer to "have you done this for a client?" using your real engagements, kept separate from this file | Do not imply that fictional work is client work | Answer reviewed by you; no client names without permission |
+| P-05 | Prepare the one-page answer to "have you done this for a client?" using your real engagements, kept separate from this file | Do not imply that case-study work is client work | Answer reviewed by you; no client names without permission |
 | P-06 | Re-check the SAP sources listed in Section 17 for changes the day before delivery | Product guidance changes | Review date updated |
 | P-07 | Record the session run log (Section 16) | Evidence trail | Log completed with what was actually run |
 

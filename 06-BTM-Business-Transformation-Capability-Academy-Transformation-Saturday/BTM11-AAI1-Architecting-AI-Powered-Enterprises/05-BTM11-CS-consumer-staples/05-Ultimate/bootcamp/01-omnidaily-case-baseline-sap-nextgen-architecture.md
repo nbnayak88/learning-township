@@ -1,4 +1,4 @@
-# OmniDaily — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniDaily — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Consumer Staples Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-CS-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniDaily is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniDaily implementations.
+> **Evidence boundary:** OmniDaily is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniDaily implementations.
 
 ---
 
@@ -20,7 +20,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniDaily (fictional) |
+| Enterprise | OmniDaily (aspirational) |
 | Scale | USD 51B staples group; 84,000 employees; 57 countries; 420M households served |
 | Business mix | Foods 30%; beverages 23%; home care 19%; personal care 18%; wellness 10% |
 | Burning platform | Demand, promotion, planning, product and ingredient data, quality and route-to-market execution fragmented across 160+ applications |
@@ -33,7 +33,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** 
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

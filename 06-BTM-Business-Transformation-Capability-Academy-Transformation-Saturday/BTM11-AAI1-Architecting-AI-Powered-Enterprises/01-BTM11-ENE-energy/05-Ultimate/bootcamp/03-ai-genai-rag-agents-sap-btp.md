@@ -6,7 +6,7 @@
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 **Series baseline:** [OmniVerse case baseline](01-omniverse-case-baseline-sap-nextgen-architecture.md) (shared structure for all demos)
 
-> **Evidence boundary:** OmniVerse Energy Ltd. is a **fictional educational case**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation, and no executed test, deployed assistant, measured accuracy or realized benefit is asserted. Product names are learning examples. Every use case, tool boundary, evaluation row and tabletop test below is new illustrative design unless the section says it comes from the case source.
+> **Evidence boundary:** OmniVerse Energy Ltd. is an **aspirational case study**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation, and no executed test, deployed assistant, measured accuracy or realized benefit is asserted. Product names are learning examples. Every use case, tool boundary, evaluation row and tabletop test below is new illustrative design unless the section says it comes from the case source.
 
 ---
 
@@ -16,7 +16,7 @@
 
 **What this file shows:** how the architect designs a grounded assistant with a bounded agent on SAP BTP for a specific sector case, including what is retrieved, what the agent may and may not do, how it is evaluated and how it fails safely.
 
-**What it does not show:** a delivered production system. It is a design exercise on a fictional enterprise. Real project experience is described separately by the presenter and should not be inferred from this file.
+**What it does not show:** a delivered production system. It is a design exercise on an aspirational enterprise. Real project experience is described separately by the presenter and should not be inferred from this file.
 
 ## 2. Case anchor (source facts)
 
@@ -34,7 +34,7 @@
 
 **Rule carried from the source:** OVE-HR11 application responsibility: AI drafts and assists; accountable humans approve consequential employment decisions; least-privilege tools execute only authorized actions. The OVE-HR11-T01 portfolio (hallucinated policy, stale grounding, prompt injection, unauthorized correction, sensitive inference, rollback failure) is designed, not executed.
 
-All figures are fictional scenario baselines from the case, not validated results. Case: [OmniVerse Energy Ltd.](https://github.com/nbnayak88/successlabs-case-studies/tree/main/01-energy/omniverse-energy-ltd) · [executive one-pager](https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/executive-one-pager.md).
+All figures are aspirational scenario baselines from the case, not validated results. Case: [OmniVerse Energy Ltd.](https://github.com/nbnayak88/successlabs-case-studies/tree/main/01-energy/omniverse-energy-ltd) · [executive one-pager](https://github.com/nbnayak88/successlabs-case-studies/blob/main/01-energy/omniverse-energy-ltd/executive-one-pager.md).
 
 ## 3. Use-case selection with autonomy tiers (new design)
 

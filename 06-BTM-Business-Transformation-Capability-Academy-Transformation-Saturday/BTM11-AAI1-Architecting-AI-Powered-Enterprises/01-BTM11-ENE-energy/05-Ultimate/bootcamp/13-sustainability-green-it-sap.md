@@ -6,7 +6,7 @@
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 **Series baseline:** [Demo 01 case baseline](01-omniverse-case-baseline-sap-nextgen-architecture.md) · **Related:** [Demo 02](02-enterprise-architecture-signavio-leanix-clean-core.md) · [Demo 03](03-ai-genai-rag-agents-sap-btp.md) · [Demo 04](04-knowledge-graph-context-engineering-sap.md) · [Demo 05](05-integration-event-driven-advanced-event-mesh-sap.md) · [Demo 06](06-basis-modernization-aiops-autonomous-operations-sap.md) · [Demo 07](07-data-foundation-data-products-sap-business-data-cloud.md) · [Demo 08](08-security-zero-trust-ai-agents-sap-btp.md) · [Demo 09](09-ai-governance-evaluation-llmops-sap.md) · [Demo 10](10-migration-path-clean-core-readiness-sap.md) · [Demo 11](11-operating-model-finops-intelligent-operations-sap.md) · [Demo 12](12-resilience-failure-drills-sap.md) · [Demo 14](14-low-code-pro-code-vibe-code-citizen-development-sap.md) · [Demo 15](15-industry-regulation-country-anchored-sap.md)
 
-> **Evidence boundary:** OmniVerse Energy Ltd. is a **fictional educational case**. The case sources hold little sustainability data for the IT estate; the data products, levers and tests below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix `ENE-SYN` and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.
+> **Evidence boundary:** OmniVerse Energy Ltd. is an **aspirational case study**. The case sources hold little sustainability data for the IT estate; the data products, levers and tests below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix `ENE-SYN` and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.
 
 ---
 
@@ -124,7 +124,7 @@ A tabletop test is a paper walk-through, not a technical test of a running syste
 | Assistants with a footprint estimate before approval | Count | Not measured |
 | Levers with a named owner | Count | Not measured |
 
-No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.
+No baseline, target or benefit is stated because none exists for this aspirational case study. Targets are agreed in discovery.
 
 ## 2–3 hour session pattern
 
@@ -143,7 +143,7 @@ No baseline, target or benefit is stated because none exists for this fictional 
 | Design in this file | Written |
 | Walk-through with a live audience | Not yet run |
 | Hands-on run on a vendor-provided system | Not yet run |
-| Customer-confirmed requirements | Not applicable (fictional case) |
+| Customer-confirmed requirements | Not applicable (aspirational case study) |
 
 | Date | Audience | Exercise run | Observed result | Changes made |
 |---|---|---|---|---|

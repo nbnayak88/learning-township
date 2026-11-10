@@ -1,4 +1,4 @@
-# OmniConnect — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniConnect — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Communication Services Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-COM-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniConnect is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniConnect implementations.
+> **Evidence boundary:** OmniConnect is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniConnect implementations.
 
 ---
 
@@ -20,7 +20,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniConnect (fictional) |
+| Enterprise | OmniConnect (aspirational) |
 | Scale | USD 37B communications group; 62,000 employees; 28 countries; 210M subscriptions |
 | Business mix | Mobile 34%; fixed and fiber 25%; media 19%; enterprise 14%; advertising and data 8% |
 | Source problem | Separate network, customer, billing and content stacks; manual activation and assurance; identity and consent silos |
@@ -33,7 +33,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** Local domain pilots; central platform/network first; federated service pilots with common identity, catalog, telemetry, privacy and resilience. Third option provisional.
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

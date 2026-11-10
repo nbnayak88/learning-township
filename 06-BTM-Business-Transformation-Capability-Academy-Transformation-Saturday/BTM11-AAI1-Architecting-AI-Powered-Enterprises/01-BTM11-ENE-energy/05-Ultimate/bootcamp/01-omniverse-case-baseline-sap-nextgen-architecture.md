@@ -1,4 +1,4 @@
-# OmniVerse Energy — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniVerse Energy — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Energy Ultimate Bootcamp demo series
 
@@ -7,7 +7,7 @@
 **Demo series label:** BTM11-ENE-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniVerse Energy Ltd. is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniVerse implementations.
+> **Evidence boundary:** OmniVerse Energy Ltd. is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniVerse implementations.
 
 ---
 
@@ -30,7 +30,7 @@ This is the anchor for a series of short architecture demos. Each later demo reu
 **Transformation thesis (source):** from siloed energy assets to a connected, resilient, customer-centric energy enterprise.
 **Burning platform (source):** disconnected operational data, reactive maintenance, inconsistent customer journeys, fragmented ESG reporting and technology silos.
 
-All figures above are fictional scenario baselines from the source case, not validated results.
+All figures above are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

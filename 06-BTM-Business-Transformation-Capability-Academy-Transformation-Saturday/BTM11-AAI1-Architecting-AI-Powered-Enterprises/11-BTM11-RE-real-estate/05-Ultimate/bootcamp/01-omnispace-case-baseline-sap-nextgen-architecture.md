@@ -1,4 +1,4 @@
-# OmniSpace — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniSpace — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Real Estate Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-RE-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniSpace is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniSpace implementations.
+> **Evidence boundary:** OmniSpace is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniSpace implementations.
 
 ---
 
@@ -20,9 +20,9 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniSpace (fictional) |
+| Enterprise | OmniSpace (aspirational) |
 | Scale | Not supplied in the case; no enterprise numerical profile, budget or quantified benefits |
-| Scope | Fictional global real-estate enterprise; property, tenant, ESG, recruiting, finance and procurement workstreams |
+| Scope | Aspirational global real-estate enterprise; property, tenant, ESG, recruiting, finance and procurement workstreams |
 | Source problem | Fragmented architecture, processes, delivery evidence and adoption |
 
 **Decision under discussion (source):** Select one capability or process pilot and prove its strategy-to-value traceability before scaling tools.
@@ -31,7 +31,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** Independent tool/workstream pilots; central suite first; capability-led pilots joined by the source digital thread. Third option provisional.
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

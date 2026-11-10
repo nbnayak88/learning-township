@@ -1,4 +1,4 @@
-# OmniCapital Financial Group — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniCapital Financial Group — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Financials Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-FIN-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniCapital Financial Group is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniCapital implementations.
+> **Evidence boundary:** OmniCapital Financial Group is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniCapital implementations.
 
 ---
 
@@ -20,7 +20,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniCapital Financial Group (fictional) |
+| Enterprise | OmniCapital Financial Group (aspirational) |
 | Scale | USD 46B financial group; USD 1.4T AUM; 58M customers; 32 countries |
 | Business mix | Retail 31%; commercial 24%; wealth 19%; insurance 16%; payments and markets 10% |
 | Source problem | Fragmented customer, product, risk and transaction data; manual review; stronger fraud, cyber and model-risk control needs |
@@ -33,7 +33,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** Local product pilots; core/platform first; federated journey experiments with common identity, data, control and resilience standards. Third option is provisional.
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

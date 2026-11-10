@@ -1,4 +1,4 @@
-# OmniTech — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniTech — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Information Technology Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-IT-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniTech is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniTech implementations.
+> **Evidence boundary:** OmniTech is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniTech implementations.
 
 ---
 
@@ -20,7 +20,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniTech (fictional) |
+| Enterprise | OmniTech (aspirational) |
 | Scale | USD 39B technology provider; 98,000 employees; 41 countries; 11,500 clients |
 | Business mix | Cloud and platform 31%; software 25%; cyber 18%; AI and data 16%; managed services 10% |
 | Source problem | Fragmented lifecycle tooling, bespoke integrations, poor data and AI reuse, late security and observability |
@@ -33,7 +33,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** Local engagement improvements; enterprise platform first; federated product/service pilots on shared engineering, data, security and telemetry standards. Third option provisional.
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

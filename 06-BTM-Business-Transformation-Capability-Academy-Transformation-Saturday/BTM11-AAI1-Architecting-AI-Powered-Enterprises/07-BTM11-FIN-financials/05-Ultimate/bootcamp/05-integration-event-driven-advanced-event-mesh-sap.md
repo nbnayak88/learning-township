@@ -6,7 +6,7 @@
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 **Series baseline:** [Demo 01 case baseline](01-omnicapital-case-baseline-sap-nextgen-architecture.md) · **Related:** [Demo 02 EA](02-enterprise-architecture-signavio-leanix-clean-core.md) · [Demo 03 AI on SAP BTP](03-ai-genai-rag-agents-sap-btp.md) · [Demo 04](04-knowledge-graph-context-engineering-sap.md) · [Demo 06](06-basis-modernization-aiops-autonomous-operations-sap.md)
 
-> **Evidence boundary:** OmniCapital Financial Group is a **fictional educational case**. This file is an architecture design and teaching demonstration. The source gives integration statements only; topics, events and rules are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix `FIN-SYN` and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.
+> **Evidence boundary:** OmniCapital Financial Group is an **aspirational case study**. This file is an architecture design and teaching demonstration. The source gives integration statements only; topics, events and rules are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix `FIN-SYN` and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.
 
 ---
 
@@ -143,7 +143,7 @@ A tabletop test is a paper walk-through, not a technical test of a running syste
 | Events with idempotency and sequence fields | Payload review | Not measured |
 | Open broker settings with a named decider | Count of decisions to make | Not measured |
 
-No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.
+No baseline, target or benefit is stated because none exists for this aspirational case study. Targets are agreed in discovery.
 
 ## 2–3 hour session pattern
 
@@ -162,7 +162,7 @@ No baseline, target or benefit is stated because none exists for this fictional 
 | Design in this file | Written |
 | Walk-through with a live audience | Not yet run |
 | Hands-on run on a vendor-provided system | Not yet run |
-| Customer-confirmed requirements | Not applicable (fictional case) |
+| Customer-confirmed requirements | Not applicable (aspirational case study) |
 
 | Date | Audience | Exercise run | Observed result | Changes made |
 |---|---|---|---|---|

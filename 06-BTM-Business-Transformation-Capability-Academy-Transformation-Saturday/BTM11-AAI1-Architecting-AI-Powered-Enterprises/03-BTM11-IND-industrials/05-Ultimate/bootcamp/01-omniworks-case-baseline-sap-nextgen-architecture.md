@@ -1,4 +1,4 @@
-# OmniWorks Industrial Systems Ltd. — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniWorks Industrial Systems Ltd. — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Industrials Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-IND-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniWorks Industrial Systems Ltd. is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniWorks implementations.
+> **Evidence boundary:** OmniWorks Industrial Systems Ltd. is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniWorks implementations.
 
 ---
 
@@ -20,7 +20,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniWorks Industrial Systems Ltd. (fictional) |
+| Enterprise | OmniWorks Industrial Systems Ltd. (aspirational) |
 | Scale | USD 48B revenue; 74,000 employees; 36 countries; 61 plants and facilities; 320 service depots; 7,200 suppliers |
 | Business mix | Industrial automation 27%; aerospace and defence 23%; transport and mobility 19%; infrastructure 16%; aftermarket and lifecycle services 15% |
 | Burning platform | Recurring transport asset failures cannot be consistently traced across configuration, telemetry, supplier batches and maintenance history |
@@ -31,7 +31,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** 
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

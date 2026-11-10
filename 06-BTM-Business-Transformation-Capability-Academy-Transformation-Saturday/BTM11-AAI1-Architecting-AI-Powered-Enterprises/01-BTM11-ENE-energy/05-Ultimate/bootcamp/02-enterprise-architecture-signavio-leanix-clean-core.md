@@ -6,7 +6,7 @@
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 **Series baseline:** [Demo 01 case baseline](01-omniverse-case-baseline-sap-nextgen-architecture.md) · **Next in series (written for all 11 sectors):** [Demo 03 AI/GenAI on SAP BTP](03-ai-genai-rag-agents-sap-btp.md)
 
-> **Evidence boundary:** OmniVerse Energy Ltd. is a **fictional educational case**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains almost no SAP landscape detail, so application names, fact sheets, process codes and requirements below are **synthetic placeholders** (prefix `ENE-SYN`) and are labelled as new design. Product names are learning examples, not confirmed OmniVerse implementations.
+> **Evidence boundary:** OmniVerse Energy Ltd. is an **aspirational case study**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation. No executed Signavio model, LeanIX inventory, sync run, Clean Core check or realized benefit is asserted. The case source contains almost no SAP landscape detail, so application names, fact sheets, process codes and requirements below are **synthetic placeholders** (prefix `ENE-SYN`) and are labelled as new design. Product names are learning examples, not confirmed OmniVerse implementations.
 
 ---
 
@@ -22,7 +22,7 @@
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniVerse Energy Ltd., fictional; USD 85B revenue; 68,000 employees; 42 countries |
+| Enterprise | OmniVerse Energy Ltd., aspirational case study; USD 85B revenue; 68,000 employees; 42 countries |
 | Business mix | Upstream 35%; refining and petrochemicals 28%; retail and marketing 18%; power 12%; renewables 7% |
 | Assets | 8 refineries; 25,000 km pipelines; 12,500 retail sites; 15 GW generation; 5 GW operating renewables |
 | Burning platform | Disconnected operational data, reactive maintenance, inconsistent customer journeys, fragmented ESG reporting, technology silos |
@@ -38,7 +38,7 @@
 | OVE-M11 Target operating model | Cross-functional squads (customer experience, asset performance, energy trading, sustainability); central guardrails, federated delivery, explicit plant authority | TOM, decision rights, RACI, product ownership |
 | OVE-M12 Enterprise architecture and digital enablement | TOGAF-aligned vision and data, application, technology views; Customer, Asset, Product, Supplier 360; stewardship; event/API integration; hybrid cloud; edge OT; zero trust; governed AI. Vendor names in source are examples, not selected products | Conceptual target architecture, information map, application portfolio, trust boundaries |
 
-**Source fictional stakeholder challenge (each M-section):** *What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?*
+**Source aspirational stakeholder challenge (each M-section):** *What evidence is missing, which persona can authorize the decision, what constraints apply, and how will value be measured?*
 
 **Source resolution categories** (from the enterprise source register, Cloud ALM gap-capture section): Configuration; Enhancement (BAdI / Key User Extensibility); Side-by-Side Extension (BTP); Custom Development (Private Edition only); Process Change; Third-Party Solution; Deferred. Note that the source table was written in a SuccessFactors Employee Central implementation context. This demo **extends** it to a broader architecture and says so.
 
@@ -268,7 +268,7 @@ These are for the trainer preparing to show this demo to a corporate audience. T
 | P-02 | Confirm access to a Signavio and a LeanIX environment, or prepare static screenshots from your own training sandbox | The vendor is expected to provide demo systems | Access confirmed in writing, or fallback ready |
 | P-03 | Load the synthetic fact sheets from Section 9 and one synthetic process | Gives a concrete walkthrough | Records carry the `ENE-SYN` prefix |
 | P-04 | Rehearse the 25-minute classification exercise with a colleague | Timing and disagreements | Timing and key adjusted |
-| P-05 | Prepare the one-page answer to "have you done this for a client?" using your real engagements, kept separate from this file | Do not imply that fictional work is client work | Answer reviewed by you; no client names without permission |
+| P-05 | Prepare the one-page answer to "have you done this for a client?" using your real engagements, kept separate from this file | Do not imply that case-study work is client work | Answer reviewed by you; no client names without permission |
 | P-06 | Re-check the SAP sources listed in Section 17 for changes the day before delivery | Product guidance changes | Review date updated |
 | P-07 | Record the session run log (Section 16) | Evidence trail | Log completed with what was actually run |
 

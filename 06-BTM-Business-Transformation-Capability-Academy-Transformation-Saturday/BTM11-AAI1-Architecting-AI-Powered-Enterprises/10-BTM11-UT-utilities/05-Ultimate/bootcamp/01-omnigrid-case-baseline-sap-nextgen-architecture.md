@@ -1,4 +1,4 @@
-# OmniGrid — Case Baseline for SAP NextGen Architecture & Intelligent Operations Demos
+# OmniGrid — Case Baseline for the Northstar Architecture & Intelligent Operations Demos
 
 ## Demo 01 of the BTM11 Utilities Ultimate Bootcamp demo series
 
@@ -6,7 +6,7 @@
 **Demo series label:** BTM11-UT-Bootcamp-Demo-01 (planning label, not an LMS ID)
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 
-> **Evidence boundary:** OmniGrid is a **fictional educational case**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniGrid implementations.
+> **Evidence boundary:** OmniGrid is an **aspirational case study**. Everything in this series is architecture design and teaching demonstration built on that case. No real client, tenant, employee or operational outcome is represented, and no executed test or realized benefit is asserted. Product names are learning examples, not confirmed OmniGrid implementations.
 
 ---
 
@@ -20,7 +20,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 | Attribute | Case baseline |
 |---|---|
-| Enterprise | OmniGrid (fictional) |
+| Enterprise | OmniGrid (aspirational) |
 | Scale | USD 31B utility; 38,000 staff; 17 countries; 21M electricity, gas and water accounts |
 | Business mix | Renewables 28%; networks 27%; retail 18%; conventional and flexible 15%; water and environment 12% |
 | Source problem | Fragmented OT, field, customer and market data; variable generation; manual restoration; growing meter and sensor security demands |
@@ -33,7 +33,7 @@ This is the anchor for a series of short architecture demos for this sector. Eac
 
 **Strategic options (source):** Local asset/region pilots; central platform/grid first; federated coordination pilots with shared data, safety, OT-security and evidence standards. Third option provisional.
 
-All figures are fictional scenario baselines from the source case, not validated results.
+All figures are aspirational scenario baselines from the source case, not validated results.
 
 ## 3. Case-to-topic map
 

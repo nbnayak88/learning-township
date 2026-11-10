@@ -6,7 +6,7 @@
 **Version:** 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
 **Series baseline:** [OmniVerse case baseline](../../../01-BTM11-ENE-energy/05-Ultimate/bootcamp/01-omniverse-case-baseline-sap-nextgen-architecture.md) (shared structure for all demos)
 
-> **Evidence boundary:** OmniSpace is a **fictional educational case**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation, and no executed test, deployed assistant, measured accuracy or realized benefit is asserted. Product names are learning examples. Every use case, tool boundary, evaluation row and tabletop test below is new illustrative design unless the section says it comes from the case source.
+> **Evidence boundary:** OmniSpace is an **aspirational case study**. This file is an architecture design and teaching demonstration. It is **not** a record of a client implementation, and no executed test, deployed assistant, measured accuracy or realized benefit is asserted. Product names are learning examples. Every use case, tool boundary, evaluation row and tabletop test below is new illustrative design unless the section says it comes from the case source.
 
 ---
 
@@ -16,14 +16,14 @@
 
 **What this file shows:** how the architect designs a grounded assistant with a bounded agent on SAP BTP for a specific sector case, including what is retrieved, what the agent may and may not do, how it is evaluated and how it fails safely.
 
-**What it does not show:** a delivered production system. It is a design exercise on a fictional enterprise. Real project experience is described separately by the presenter and should not be inferred from this file.
+**What it does not show:** a delivered production system. It is a design exercise on an aspirational enterprise. Real project experience is described separately by the presenter and should not be inferred from this file.
 
 ## 2. Case anchor (source facts)
 
 | Attribute | Case baseline |
 |---|---|
 | Scale | Not supplied in the case; no enterprise numerical profile, budget or quantified benefits |
-| Scope | Fictional global real-estate enterprise; property, tenant, ESG, recruiting, finance and procurement workstreams |
+| Scope | Aspirational global real-estate enterprise; property, tenant, ESG, recruiting, finance and procurement workstreams |
 | Source problem | Fragmented architecture, processes, delivery evidence and adoption |
 
 **Decision under discussion:** Select one capability or process pilot and prove its strategy-to-value traceability before scaling tools.
@@ -34,7 +34,7 @@
 
 **Rule carried from the source:** Prioritize by capability, value, risk, data quality and learning readiness (OSP-M13). Product identity, licensing and configured integration in the source are unverified.
 
-All figures are fictional scenario baselines from the case, not validated results. Case: [OmniSpace](https://github.com/nbnayak88/successlabs-case-studies/tree/main/11-real-estate/omnispace-real-estate-ltd) · [executive one-pager](https://github.com/nbnayak88/successlabs-case-studies/blob/main/11-real-estate/omnispace-real-estate-ltd/executive-one-pager.md).
+All figures are aspirational scenario baselines from the case, not validated results. Case: [OmniSpace](https://github.com/nbnayak88/successlabs-case-studies/tree/main/11-real-estate/omnispace-real-estate-ltd) · [executive one-pager](https://github.com/nbnayak88/successlabs-case-studies/blob/main/11-real-estate/omnispace-real-estate-ltd/executive-one-pager.md).
 
 ## 3. Use-case selection with autonomy tiers (new design)
 
