@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniGrid — Migration Path to NextGen Architecture: Waves, Custom Code and Clean Core Readiness · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniGrid — Migration Path to NextGen Architecture: Waves, Custom Code and Clean Core Readiness">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Utilities</p><p class="chips"><a href="01-omnigrid-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09 · AI governance, LLMOps</a><a href="10-migration-path-clean-core-readiness-sap.html">Demo 10 · Migration path, Clean Core readiness</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a><a href="12-resilience-failure-drills-sap.html">Demo 12 · Resilience, failure drills</a></p><article><h1 id="omnigrid-migration-path-to-nextgen-architecture-waves-custom-code-and-clean-core-readiness">OmniGrid — Migration Path to NextGen Architecture: Waves, Custom Code and Clean Core Readiness</h1>
+<h2 id="demo-10-of-the-btm11-utilities-ultimate-bootcamp-demo-series">Demo 10 of the BTM11 Utilities Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Utilities (UT) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omnigrid-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03</a> · <a href="04-knowledge-graph-context-engineering-sap.html">Demo 04</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a> · <a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07</a> · <a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08</a> · <a href="09-ai-governance-evaluation-llmops-sap.html">Demo 09</a> · <a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11</a> · <a href="12-resilience-failure-drills-sap.html">Demo 12</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniGrid is a <strong>fictional educational case</strong>. The case sources describe a target and a trigger but no current SAP estate; the options, waves and readiness questions below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>UT-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>How does an enterprise get from its current landscape to a clean-core, event-aware, AI-ready architecture without stopping the business?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> the path options, a sequence of waves for OmniGrid, the custom-code questions to ask before any wave, readiness gates and a rule for exceptions.</p>
+<p><strong>What it does not show:</strong> an inventory of a real estate, a migration estimate or a go-live plan. No durations or costs are stated.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 31B utility; 38,000 staff; 17 countries; 21M electricity, gas and water accounts</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Renewables 28%; networks 27%; retail 18%; conventional and flexible 15%; water and environment 12%</td>
+</tr>
+<tr>
+<td>Source problem</td>
+<td>Fragmented OT, field, customer and market data; variable generation; manual restoration; growing meter and sensor security demands</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Fund bounded outage, work-order and customer coordination evidence before wider modernization.</p>
+<p><strong>Illustrative trigger (source):</strong> A storm scenario generates conflicting outage, asset and work-order status; field and customer teams cannot reconcile ownership (invented learning context, not an actual incident).</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, personas, capabilities and value streams</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Path leaning, waves, readiness gates, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>SAP migration tooling and programmes</td>
+<td>Public SAP documentation not reviewed in depth for this demo; <strong>verify before use</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Which path and which first wave does OmniGrid choose, and what must be true before each wave starts?</p>
+<p><strong>Accountable owner (proposed):</strong> OGU-P06 Sofia Tan, with OGU-P12 Daniel Weber for architecture and OGU-P04 Arjun Mehta for operational readiness.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OGU-P06</td>
+<td>Sofia Tan, Chief Digital and Information Officer</td>
+<td>Funds and prioritizes</td>
+</tr>
+<tr>
+<td>OGU-P12</td>
+<td>Daniel Weber, Director Enterprise Architecture</td>
+<td>Owns standards and review</td>
+</tr>
+<tr>
+<td>OGU-P10</td>
+<td>Omar Haddad, CISO and OT Resilience Lead</td>
+<td>Security and boundary approval</td>
+</tr>
+<tr>
+<td>OGU-P09</td>
+<td>Mei Lin, Asset and Grid Data Lead</td>
+<td>Data and AI governance</td>
+</tr>
+<tr>
+<td>OGU-P13</td>
+<td>Priya Shah, Asset Management and Work Planning Lead</td>
+<td>Business owner (first scope)</td>
+</tr>
+<tr>
+<td>OGU-P08</td>
+<td>Marcus Okoro, Outage and Field Services Director</td>
+<td>Business owner (second scope)</td>
+</tr>
+<tr>
+<td>OGU-P04</td>
+<td>Arjun Mehta, Chief Operations and Grid Officer</td>
+<td>Operational authority and veto</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-path-options-new-design-generic">6. Path options (new design, generic)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Idea</th>
+<th>Favoured when</th>
+<th>Main risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Greenfield</td>
+<td>Start a new system and move selected data</td>
+<td>The current estate is hard to fix and the business can accept redesign</td>
+<td>Loss of useful history; long parallel running</td>
+</tr>
+<tr>
+<td>Brownfield (system conversion)</td>
+<td>Convert the existing system in place</td>
+<td>Processes are stable and custom code can be remediated</td>
+<td>Carries old customisation forward</td>
+</tr>
+<tr>
+<td>Selective or bluefield</td>
+<td>Move chosen processes or data, redesign others</td>
+<td>Some areas need change and others do not</td>
+<td>Needs clear scope rules and data ownership</td>
+</tr>
+<tr>
+<td>Side-by-side first</td>
+<td>Build new capability on BTP and leave the core alone</td>
+<td>The business need is new and the core is stable</td>
+<td>Integration sprawl without the admission rule</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Leaning for this case:</strong> Selective path outside storm season; outage and work-order links first. This is a hypothesis for discovery, not a recommendation.</p>
+<h2 id="7-waves-new-design">7. Waves (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Wave</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wave 1</td>
+<td>outage and work-order coordination</td>
+</tr>
+<tr>
+<td>Wave 2</td>
+<td>customer communications</td>
+</tr>
+<tr>
+<td>Wave 3</td>
+<td>remaining processes</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Wave entry gates:</strong> inventory complete for the wave; owners named; Clean Core admission rule applied to every extension; rollback path written; freeze calendar checked; evidence slots for tests prepared.</p>
+<h2 id="8-custom-code-and-extension-readiness">8. Custom code and extension readiness</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Why it matters</th>
+<th>Evidence needed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Which custom objects touch this wave?</td>
+<td>Hidden dependencies stop a wave</td>
+<td>Usage and owner for each</td>
+<td>Not collected</td>
+</tr>
+<tr>
+<td>Which are still used?</td>
+<td>Unused code is retired, not migrated</td>
+<td>Usage evidence</td>
+<td>Not collected</td>
+</tr>
+<tr>
+<td>Which extensions fit the Clean Core levels?</td>
+<td>Decides migrate, rebuild or retire (Demo 02)</td>
+<td>Level assessment</td>
+<td>Not collected</td>
+</tr>
+<tr>
+<td>Which interfaces must stay unchanged?</td>
+<td>Protects partners and operations</td>
+<td>Interface list with owners</td>
+<td>Not collected</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Sector readiness questions:</strong></p>
+<ul>
+<li>Which systems link to control systems?</li>
+<li>What is the storm calendar?</li>
+<li>Which custom outage code exists?</li>
+<li>Which regulators receive reports?</li>
+</ul>
+<h2 id="9-exceptions">9. Exceptions</h2>
+<p>An exception to a gate needs a named approver, an expiry date, a rollback plan and a note in the decision record. Exceptions that repeat become a design review item.</p>
+<h2 id="10-hands-on-exercise-synthetic-data">10. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>List ten synthetic custom objects (prefix <code>UT-SYN</code>) and place each in migrate, rebuild or retire with a reason.</li>
+<li>Order the three waves and write the entry gate for the first.</li>
+<li>Mark the freeze calendar and test the first wave date against it.</li>
+<li>Write one exception and its expiry.</li>
+<li>Record open decisions in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Storm clash</td>
+<td>A wave meets storm season</td>
+<td>Calendar rule</td>
+</tr>
+<tr>
+<td>T2 Control link</td>
+<td>A wave touches a control link</td>
+<td>Out of scope; owner decides</td>
+</tr>
+<tr>
+<td>T3 Custom outage code</td>
+<td>Custom code in outage management</td>
+<td>Admission rule</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Waves with all entry gates met on paper</td>
+<td>Review of the gate list</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Custom objects with owner and usage evidence</td>
+<td>Count against the inventory</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Exceptions with approver and expiry</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Rollback paths written per wave</td>
+<td>Count</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Path options and why not one answer</td>
+<td>Shared options</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Waves and gates</td>
+<td>Wave plan without dates</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Custom code triage</td>
+<td>Ten objects placed</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Tabletop tests</td>
+<td>Three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">SAP Clean Core guidance: see Demo 02</a></li>
+<li>
+<p>SAP Activate methodology (verify the current SAP page before citing)</p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/10-utilities/omnigrid-utilities-ltd">OmniGrid case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/10-utilities/omnigrid-utilities-ltd/personas/persona-cards.md">OmniGrid persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/10-BTM11-UT-utilities/05-Ultimate/bootcamp/10-migration-path-clean-core-readiness-sap.md">View source on GitHub</a>.</div></footer>
+</body></html>
