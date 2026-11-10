@@ -133,7 +133,7 @@ Recording, assessment and attendance tracking can be layered onto this pattern w
 | Demo | Topic | Status |
 |---|---|---|
 | 01 | Case baseline (this file) | Written |
-| 02 | Enterprise architecture, process modeling, application portfolio and Clean Core | Planned (the Energy version is written: [Demo 02 Energy](../../../01-BTM11-ENE-energy/05-Ultimate/bootcamp/02-enterprise-architecture-signavio-leanix-clean-core.md)) |
+| 02 | Enterprise architecture, process modeling, application portfolio and Clean Core | Written ([this sector](02-enterprise-architecture-signavio-leanix-clean-core.md)) |
 | 03 | AI and GenAI architecture on SAP BTP: grounding, RAG, agents | Written ([this sector](03-ai-genai-rag-agents-sap-btp.md)) |
 | 04 | Knowledge graph and context engineering | Planned |
 | 05 | Integration and event-driven architecture with an event mesh | Planned |
