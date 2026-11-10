@@ -105,7 +105,7 @@ Recording, assessment and attendance tracking can be layered onto this pattern w
 |---|---|---|
 | 01 | Case baseline (this file) | Written |
 | 02 | Enterprise architecture, process modeling, application portfolio and Clean Core | Planned |
-| 03 | AI and GenAI architecture on SAP BTP: grounding, RAG, agents | Planned |
+| 03 | AI and GenAI architecture on SAP BTP: grounding, RAG, agents | Written for all 11 sectors (`03-ai-genai-rag-agents-sap-btp.md` in each sector's bootcamp folder) |
 | 04 | Knowledge graph and context engineering | Planned |
 | 05 | Integration and event-driven architecture with an event mesh | Planned |
 | 06 | Basis modernization, AIOps and autonomous operations | Planned |
