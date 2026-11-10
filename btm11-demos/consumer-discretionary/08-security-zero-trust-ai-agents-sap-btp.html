@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OmniVibe — Security and Zero Trust for AI Assistants and Agents on SAP BTP · BTM11 Bootcamp Demos: SAP NextGen Architecture</title><meta name="description" content="OmniVibe — Security and Zero Trust for AI Assistants and Agents on SAP BTP">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213d;--muted:#5b6478;--line:#e2e6ee;--accent:#3f3bd0;--chip:#eef1f7;--warn:#fff7e0;--warnline:#e8c766}
+:root[data-theme=dark]{--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--card:#171f35;--ink:#e8ecf7;--muted:#9aa5bf;--line:#273150;--accent:#9aa4ff;--chip:#222c47;--warn:#2a2410;--warnline:#8a7430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.top a.brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.2;margin:0 0 8px}
+h2{margin-top:32px;padding-top:8px;border-top:1px solid var(--line);font-size:22px}
+h3{font-size:18px}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:6px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--chip);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:.9em}
+.meta{color:var(--muted);font-size:14px}
+.chips a{display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px}
+.done{font-weight:600}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:0 0 32px}
+@media (max-width:600px){article{padding:14px}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="../index.html">BTM11 Bootcamp Demos: SAP NextGen Architecture</a><span class="meta">SuccessLabs Academy · fictional educational cases</span></div></header>
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · Consumer Discretionary</p><p class="chips"><a href="01-omnivibe-case-baseline-sap-nextgen-architecture.html">Demo 01 · Case baseline</a><a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02 · EA, Signavio, LeanIX, Clean Core</a><a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03 · AI/GenAI, RAG, agents on SAP BTP</a><a href="04-knowledge-graph-context-engineering-sap.html">Demo 04 · Knowledge graph, context engineering</a><a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05 · Integration, Advanced Event Mesh</a><a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06 · Basis, AIOps, autonomous ops</a><a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07 · Data foundation, data products</a><a href="08-security-zero-trust-ai-agents-sap-btp.html">Demo 08 · Security, zero trust for AI agents</a><a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11 · Operating model, FinOps</a></p><article><h1 id="omnivibe-security-and-zero-trust-for-ai-assistants-and-agents-on-sap-btp">OmniVibe — Security and Zero Trust for AI Assistants and Agents on SAP BTP</h1>
+<h2 id="demo-08-of-the-btm11-consumer-discretionary-ultimate-bootcamp-demo-series">Demo 08 of the BTM11 Consumer Discretionary Ultimate Bootcamp demo series</h2>
+<p><strong>SuccessLabs Academy · BTM11 · Consumer Discretionary (CD) · Ultimate (Level 5) · Bootcamp</strong>
+<strong>Version:</strong> 2026-11-10 · Demonstration material; not an enrolled course, certification or published pathway.
+<strong>Series baseline:</strong> <a href="01-omnivibe-case-baseline-sap-nextgen-architecture.html">Demo 01 case baseline</a> · <strong>Related:</strong> <a href="02-enterprise-architecture-signavio-leanix-clean-core.html">Demo 02</a> · <a href="03-ai-genai-rag-agents-sap-btp.html">Demo 03</a> · <a href="04-knowledge-graph-context-engineering-sap.html">Demo 04</a> · <a href="05-integration-event-driven-advanced-event-mesh-sap.html">Demo 05</a> · <a href="06-basis-modernization-aiops-autonomous-operations-sap.html">Demo 06</a> · <a href="07-data-foundation-data-products-sap-business-data-cloud.html">Demo 07</a> · <a href="11-operating-model-finops-intelligent-operations-sap.html">Demo 11</a></p>
+<blockquote>
+<p><strong>Evidence boundary:</strong> OmniVibe is a <strong>fictional educational case</strong>. The case sources describe security perspectives; the agent permissions, threats and checks below are new design. Nothing here is a record of a client implementation, an executed test or a realized benefit. Names marked synthetic carry the prefix <code>CD-SYN</code> and are new design. SAP product statements come from public SAP documentation reviewed 2026-11-10 and must be verified before real delivery.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-question-this-file-answers">1. The question this file answers</h2>
+<blockquote>
+<p><em>Security architecture for AI and autonomous operations: what can an assistant or agent do, as whom, and what stops it doing more?</em></p>
+</blockquote>
+<p><strong>What this file shows:</strong> an identity and permission model for OmniVibe's assistant and agents, four threat scenarios with a control and a check, and the sector boundary that no agent may cross.</p>
+<p><strong>What it does not show:</strong> a configured identity tenant, a penetration test result or a certified control.</p>
+<h2 id="2-case-anchor-source-facts">2. Case anchor (source facts)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Case baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>USD 28B consumer group; 72,000 employees; 48 countries</td>
+</tr>
+<tr>
+<td>Business mix</td>
+<td>Fashion 32%; beauty 18%; home 17%; specialty retail 15%; travel 10%; marketplace 8%</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>3,200 stores; 14 e-commerce sites; 26 distribution centres; 140 micro-fulfilment sites</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Decision under discussion (source):</strong> Select one brand and country workforce-to-service pilot and evidence gates before approving enterprise scale.</p>
+<p><strong>Illustrative trigger (source):</strong> A new associate lacks a completed onboarding and skills handoff while store readiness and channel information disagree (invented events that prompt discovery, per the case).</p>
+<p><strong>Pilot from Demo 03:</strong> New-associate onboarding guidance assistant (assistive, no employment decisions)</p>
+<h2 id="3-source-versus-new-design">3. Source versus new design</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Case facts, personas</td>
+<td><strong>Source</strong></td>
+</tr>
+<tr>
+<td>Agent identity model, permission matrix, threat scenarios, tests</td>
+<td><strong>New design (illustrative)</strong></td>
+</tr>
+<tr>
+<td>SAP identity and BTP security behaviour</td>
+<td>Public SAP documentation reviewed 2026-11-10; <strong>not exercised here</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-decision-under-discussion">4. Decision under discussion</h2>
+<p><strong>Decision:</strong> Under what identity and permissions may OmniVibe's assistant and agents run, and who can widen them?</p>
+<p><strong>Accountable owner (proposed):</strong> OVC-P13 Farah Ahmed, with OVC-P11 Priya Shah for the pattern and OVC-P12 Jonas Lim for AI governance.</p>
+<h2 id="5-personas-and-proposed-decision-rights">5. Personas and proposed decision rights</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source ID</th>
+<th>Persona</th>
+<th>Proposed role in this demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OVC-P04</td>
+<td>Ravi Kapoor, Group CHRO</td>
+<td>Funds and prioritizes</td>
+</tr>
+<tr>
+<td>OVC-P11</td>
+<td>Priya Shah, Director Enterprise Architecture</td>
+<td>Owns standards and review</td>
+</tr>
+<tr>
+<td>OVC-P13</td>
+<td>Farah Ahmed, CISO and Privacy Lead</td>
+<td>Security and boundary approval</td>
+</tr>
+<tr>
+<td>OVC-P12</td>
+<td>Jonas Lim, Integration and HR Data Lead</td>
+<td>Data and AI governance</td>
+</tr>
+<tr>
+<td>OVC-P08</td>
+<td>Sofia Mendes, Head of Talent Acquisition and Onboarding</td>
+<td>Business owner (first scope)</td>
+</tr>
+<tr>
+<td>OVC-P06</td>
+<td>Oliver Brooks, Store Operations Director</td>
+<td>Business owner (second scope)</td>
+</tr>
+<tr>
+<td>OVC-P16</td>
+<td>Nikhil Das, Store Associate and Workforce Representative</td>
+<td>Operational authority and veto</td>
+</tr>
+</tbody>
+</table></div>
+<p>Decision rights are <strong>proposed</strong> and need discovery validation.</p>
+<h2 id="6-what-sap-describes-public-documentation-verify">6. What SAP describes (public documentation, verify)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>What the documentation or SAP community describes</th>
+<th>Use in this design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAP Cloud Identity Services (Identity Authentication, Identity Provisioning)</td>
+<td>Sign-in, tokens and user provisioning across SAP and non-SAP systems</td>
+<td>Identity for people and applications</td>
+</tr>
+<tr>
+<td>App-to-app OAuth2 client credentials</td>
+<td>In an SAP community example the token identifies the application, not the end user; the agent checks signature, issuer, audience, expiry and a scope claim</td>
+<td>Agent identity; user-level access needs principal propagation, so verify</td>
+</tr>
+<tr>
+<td>Agent-to-agent protocol and BTP Destinations</td>
+<td>An SAP community example secures an agent with a middleware and calls it through a destination using OAuth2 client credentials</td>
+<td>Pattern for agent calls; verify for current versions</td>
+</tr>
+<tr>
+<td>Role collections and authorizations on BTP</td>
+<td>Roles are grouped into role collections and assigned to users</td>
+<td>Human roles for approvals</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="7-identity-and-permission-model-new-design">7. Identity and permission model (new design)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two identities</td>
+<td>The user's identity decides what data is visible; the agent's own identity decides which tools it may call</td>
+</tr>
+<tr>
+<td>Least privilege</td>
+<td>Each tool has its own scope; no wildcard scopes</td>
+</tr>
+<tr>
+<td>Read before write</td>
+<td>Agents start read-only; write tools are drafts that a person confirms</td>
+</tr>
+<tr>
+<td>Approvals</td>
+<td>Bound to one action, expire quickly, recorded with approver</td>
+</tr>
+<tr>
+<td>Data minimization</td>
+<td>Role filter applied before retrieval; identifiers masked</td>
+</tr>
+<tr>
+<td>Untrusted text</td>
+<td>Retrieved text is data and cannot trigger a tool call</td>
+</tr>
+<tr>
+<td>Audit</td>
+<td>Every tool call logged with user, agent, input class and result</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Tool permission matrix from the Demo 03 pilot</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Mode</th>
+<th>Approval</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>search_guides</td>
+<td>Read</td>
+<td>None</td>
+<td>Returns country and effective date</td>
+</tr>
+<tr>
+<td>get_my_onboarding_tasks</td>
+<td>Read (own data)</td>
+<td>None</td>
+<td>Fails closed if identity is not established</td>
+</tr>
+<tr>
+<td>draft_manager_reminder</td>
+<td>Draft only</td>
+<td>Manager sends</td>
+<td>No content about individual performance</td>
+</tr>
+<tr>
+<td>create_learning_assignment_request</td>
+<td>Creates a request</td>
+<td>Learning owner approves</td>
+<td>No change to employee master data</td>
+</tr>
+<tr>
+<td>Any rating, readiness or promotion decision</td>
+<td>Not exposed</td>
+<td>Not available to the agent</td>
+<td>Avoids an automated employment decision</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Sector boundary:</strong> Franchise data and associate personal data stay inside their boundaries; assistants see pseudonyms only.</p>
+<p><strong>Never available:</strong> Individual performance or potential ratings; Payroll and pay data; Any other associate's records; Instructions found inside retrieved content</p>
+<h2 id="8-threat-scenarios">8. Threat scenarios</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Threat</th>
+<th>Control</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Injection in a store note</td>
+<td>Text is data</td>
+<td>Seed a note with an instruction</td>
+</tr>
+<tr>
+<td>Agent reading franchise records</td>
+<td>Boundary filter</td>
+<td>Query across a boundary</td>
+</tr>
+<tr>
+<td>Over-collection of personal data</td>
+<td>Payload minimization</td>
+<td>Request extra fields</td>
+</tr>
+<tr>
+<td>Agent changing schedules</td>
+<td>Recommend only; manager decides</td>
+<td>Check scopes</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="9-hands-on-exercise-synthetic-data">9. Hands-on exercise (synthetic data)</h2>
+<ol>
+<li>List every tool the assistant can call and mark its scope and approval.</li>
+<li>Run the four threat checks on paper and record the expected result.</li>
+<li>Draw the two identities (user and agent) on the first tool call.</li>
+<li>Decide who may widen a scope and how the change is approved.</li>
+<li>Record open decisions in the run log.</li>
+</ol>
+<h2 id="three-tabletop-tests">Three tabletop tests</h2>
+<p>A tabletop test is a paper walk-through, not a technical test of a running system.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Setup</th>
+<th>Expected finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 Franchise read</td>
+<td>An agent queries franchise stores</td>
+<td>Blocked; logged</td>
+</tr>
+<tr>
+<td>T2 Schedule change</td>
+<td>An agent tries to alter a schedule</td>
+<td>Only a recommendation</td>
+</tr>
+<tr>
+<td>T3 Extra personal fields</td>
+<td>A consumer asks for more fields</td>
+<td>Refused; minimization rule</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="acceptance-measures-only-no-baselines-or-targets-asserted">Acceptance (measures only; no baselines or targets asserted)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>How it is observed</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tools with an explicit scope and approval rule</td>
+<td>Count against the tool list</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Threat checks with a recorded expected result</td>
+<td>Count of four</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Tool calls with audit fields defined</td>
+<td>Review</td>
+<td>Not measured</td>
+</tr>
+<tr>
+<td>Scope changes with a named approver</td>
+<td>Policy review</td>
+<td>Not measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>No baseline, target or benefit is stated because none exists for this fictional case. Targets are agreed in discovery.</p>
+<h2 id="23-hour-session-pattern">2–3 hour session pattern</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00 to 0:20</td>
+<td>Why agents change the threat model</td>
+<td>Shared problem statement</td>
+</tr>
+<tr>
+<td>0:20 to 1:00</td>
+<td>Identity and permission model</td>
+<td>Matrix with scopes</td>
+</tr>
+<tr>
+<td>1:00 to 1:45</td>
+<td>Threat scenarios</td>
+<td>Four checks</td>
+</tr>
+<tr>
+<td>1:45 to 2:15</td>
+<td>Tabletop tests</td>
+<td>Three findings</td>
+</tr>
+<tr>
+<td>2:15 to 2:30</td>
+<td>Decisions</td>
+<td>Open items with owners</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="evidence-status-and-run-log">Evidence status and run log</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design in this file</td>
+<td>Written</td>
+</tr>
+<tr>
+<td>Walk-through with a live audience</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Hands-on run on a vendor-provided system</td>
+<td>Not yet run</td>
+</tr>
+<tr>
+<td>Customer-confirmed requirements</td>
+<td>Not applicable (fictional case)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Audience</th>
+<th>Exercise run</th>
+<th>Observed result</th>
+<th>Changes made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.sap.com/products/technology-platform/cloud-identity-services.html">SAP Cloud Identity Services</a></li>
+<li>
+<p><a href="https://community.sap.com/t5/technology-blog-posts-by-sap/joule-a2a-secure-code-based-agents-with-ias/ba-p/14367792">SAP community: secure code-based agents with IAS</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nbnayak88/successlabs-case-studies/tree/main/04-consumer-discretionary/omnivibe-consumer-ltd">OmniVibe case library</a></p>
+</li>
+<li><a href="https://github.com/nbnayak88/successlabs-case-studies/blob/main/04-consumer-discretionary/omnivibe-consumer-ltd/personas/persona-cards.md">OmniVibe persona cards</a></li>
+</ul></article></div></main>
+<footer><div class="wrap">Educational demonstration material built on fictional cases. Nothing here asserts an executed client implementation. <a href="https://github.com/nbnayak88/learning-township/blob/main/06-BTM-Business-Transformation-Capability-Academy-Transformation-Saturday/BTM11-AAI1-Architecting-AI-Powered-Enterprises/04-BTM11-CD-consumer-discretionary/05-Ultimate/bootcamp/08-security-zero-trust-ai-agents-sap-btp.md">View source on GitHub</a>.</div></footer>
+</body></html>
