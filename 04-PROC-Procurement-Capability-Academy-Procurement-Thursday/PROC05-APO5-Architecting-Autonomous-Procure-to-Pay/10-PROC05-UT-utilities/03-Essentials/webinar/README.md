@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Webinar mode for Utilities.
+Implement a requisition-to-purchase-order-to-receipt workflow with approvals and matching rules, using automation or AI assistance only where it adds clear value. Applied via Webinar mode for Utilities.
 
 ## Student output
-Strategic orientation dossier & next steps for PROC05
+Strategic orientation dossier & next steps for procure-to-pay
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

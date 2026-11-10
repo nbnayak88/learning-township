@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Challenge (21-Day) mode for Industrials.
+Deliver a capstone supply-resilience blueprint with triggers, fallback paths and a risk view, with a simulation or digital-twin view of the design where useful. Applied via Challenge (21-Day) mode for Industrials.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for PROC06
+Daily behavioral capability habit & portfolio artifact for supply resilience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

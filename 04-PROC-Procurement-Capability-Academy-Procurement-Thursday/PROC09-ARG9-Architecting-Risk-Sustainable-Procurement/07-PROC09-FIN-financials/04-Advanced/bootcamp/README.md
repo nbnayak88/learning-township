@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Bootcamp mode for Financials.
+Orchestrate risk and ESG governance, due-diligence controls and remediation across the supply base, including where agents and automation should and should not act. Applied via Bootcamp mode for Financials.
 
 ## Student output
-Multi-milestone production-grade capability build for PROC09
+Multi-milestone production-grade capability build for supplier risk and sustainability
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

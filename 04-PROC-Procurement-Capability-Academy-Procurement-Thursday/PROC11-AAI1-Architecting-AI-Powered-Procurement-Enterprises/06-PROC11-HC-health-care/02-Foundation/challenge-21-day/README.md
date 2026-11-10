@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Challenge (21-Day) mode for Health Care.
+Master the core principles, APQC-aligned baseline processes and data contracts for AI-assisted procurement operations. Applied via Challenge (21-Day) mode for Health Care.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for PROC11
+Daily behavioral capability habit & portfolio artifact for AI-assisted procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

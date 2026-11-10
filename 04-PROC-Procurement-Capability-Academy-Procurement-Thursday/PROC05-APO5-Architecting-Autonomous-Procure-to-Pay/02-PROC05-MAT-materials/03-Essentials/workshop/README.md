@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Workshop mode for Materials.
+Implement a requisition-to-purchase-order-to-receipt workflow with approvals and matching rules, using automation or AI assistance only where it adds clear value. Applied via Workshop mode for Materials.
 
 ## Student output
-Live hands-on APQC artifact & template for PROC05
+Live hands-on APQC artifact & template for procure-to-pay
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

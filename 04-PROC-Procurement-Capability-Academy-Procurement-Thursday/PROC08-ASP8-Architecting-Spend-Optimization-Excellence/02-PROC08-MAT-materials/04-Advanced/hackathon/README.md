@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Materials.
+Orchestrate spend-data governance, savings-validation rules and benefit-attribution controls, including where agents and automation should and should not act. Applied via Hackathon mode for Materials.
 
 ## Student output
-Functional autonomous prototype under competition constraints for PROC08
+Working prototype under competition constraints for spend optimization
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

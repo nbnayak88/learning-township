@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Sprint mode for Information Technology.
+Master the core principles, APQC-aligned baseline processes and data contracts for procurement analytics and reporting. Applied via Sprint mode for Information Technology.
 
 ## Student output
-End-to-end focused problem solving deliverable for PROC10
+End-to-end focused problem solving deliverable for procurement analytics
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

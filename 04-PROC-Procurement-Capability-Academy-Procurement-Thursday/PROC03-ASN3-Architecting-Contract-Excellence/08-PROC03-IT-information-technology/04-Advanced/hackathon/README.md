@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Hackathon mode for Information Technology.
+Orchestrate contract governance, clause and obligation controls and renewal-risk oversight, including where agents and automation should and should not act. Applied via Hackathon mode for Information Technology.
 
 ## Student output
-Functional autonomous prototype under competition constraints for PROC03
+Working prototype under competition constraints for contract management
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

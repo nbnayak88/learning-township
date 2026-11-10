@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Sprint mode for Utilities.
+Implement a supply-continuity and disruption-response workflow with clear triggers and owners, using automation or AI assistance only where it adds clear value. Applied via Sprint mode for Utilities.
 
 ## Student output
-End-to-end focused problem solving deliverable for PROC06
+End-to-end focused problem solving deliverable for supply resilience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

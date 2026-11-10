@@ -12,10 +12,10 @@
 **Township Occupancy:** Occupied
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Hackathon mode for Energy.
+Deliver a capstone procure-to-pay blueprint with approval limits, matching rules and measures, with a simulation or digital-twin view of the design where useful. Applied via Hackathon mode for Energy.
 
 ## Student output
-Functional autonomous prototype under competition constraints for PROC05
+Working prototype under competition constraints for procure-to-pay
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

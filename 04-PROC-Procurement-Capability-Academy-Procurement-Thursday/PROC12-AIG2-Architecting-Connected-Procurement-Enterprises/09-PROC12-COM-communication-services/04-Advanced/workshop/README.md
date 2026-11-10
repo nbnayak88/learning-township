@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via Workshop mode for Communication Services.
+Orchestrate integration architecture, access propagation and exception recovery across procurement and supplier platforms, including where agents and automation should and should not act. Applied via Workshop mode for Communication Services.
 
 ## Student output
-Live hands-on APQC artifact & template for PROC12
+Live hands-on APQC artifact & template for connected procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

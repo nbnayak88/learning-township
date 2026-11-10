@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Challenge (21-Day) mode for Energy.
+Deliver a capstone sustainable-procurement blueprint with risk criteria, evidence rules and measures, with a simulation or digital-twin view of the design where useful. Applied via Challenge (21-Day) mode for Energy.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for PROC09
+Daily behavioral capability habit & portfolio artifact for supplier risk and sustainability
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

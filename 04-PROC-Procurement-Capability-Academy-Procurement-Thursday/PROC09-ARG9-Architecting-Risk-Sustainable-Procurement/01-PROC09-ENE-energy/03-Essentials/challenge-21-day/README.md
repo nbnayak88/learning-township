@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Energy.
+Implement a supplier risk and sustainability-assessment workflow with evidence, owners and escalation, using automation or AI assistance only where it adds clear value. Applied via Challenge (21-Day) mode for Energy.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for PROC09
+Daily behavioral capability habit & portfolio artifact for supplier risk and sustainability
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

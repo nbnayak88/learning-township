@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Bootcamp mode for Financials.
+Deliver a capstone contract-excellence blueprint with clause rules, obligations and measures, with a simulation or digital-twin view of the design where useful. Applied via Bootcamp mode for Financials.
 
 ## Student output
-Multi-milestone production-grade capability build for PROC03
+Multi-milestone production-grade capability build for contract management
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

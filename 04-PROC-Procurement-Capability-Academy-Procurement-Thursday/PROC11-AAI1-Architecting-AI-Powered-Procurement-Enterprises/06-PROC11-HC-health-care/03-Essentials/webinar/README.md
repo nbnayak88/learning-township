@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Webinar mode for Health Care.
+Implement a governed AI-assisted procurement workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Webinar mode for Health Care.
 
 ## Student output
-Strategic orientation dossier & next steps for PROC11
+Strategic orientation dossier & next steps for AI-assisted procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

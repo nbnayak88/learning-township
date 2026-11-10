@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via SuperClass mode for Utilities.
+Master the core principles, APQC-aligned baseline processes and data contracts for procurement strategy and category management. Applied via SuperClass mode for Utilities.
 
 ## Student output
-Holistic executive capability immersion for PROC01
+Holistic executive capability immersion for procurement strategy
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

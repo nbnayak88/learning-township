@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Webinar mode for Health Care.
+Master the core principles, APQC-aligned baseline processes and data contracts for AI-assisted procurement operations. Applied via Webinar mode for Health Care.
 
 ## Student output
-Strategic orientation dossier & next steps for PROC11
+Strategic orientation dossier & next steps for AI-assisted procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

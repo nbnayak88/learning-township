@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Hackathon mode for Real Estate.
+Master the core principles, APQC-aligned baseline processes and data contracts for resilient supply operations and continuity. Applied via Hackathon mode for Real Estate.
 
 ## Student output
-Functional autonomous prototype under competition constraints for PROC06
+Working prototype under competition constraints for supply resilience
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

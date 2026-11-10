@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via SuperClass mode for Communication Services.
+Orchestrate spend-data governance, savings-validation rules and benefit-attribution controls, including where agents and automation should and should not act. Applied via SuperClass mode for Communication Services.
 
 ## Student output
-Holistic executive capability immersion for PROC08
+Holistic executive capability immersion for spend optimization
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Sprint mode for Financials.
+Master the core principles, APQC-aligned baseline processes and data contracts for spend analysis and optimization. Applied via Sprint mode for Financials.
 
 ## Student output
-End-to-end focused problem solving deliverable for PROC08
+End-to-end focused problem solving deliverable for spend optimization
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

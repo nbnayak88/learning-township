@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via SuperClass mode for Communication Services.
+Deliver a capstone supplier-quality blueprint with scorecard rules, corrective actions and measures, with a simulation or digital-twin view of the design where useful. Applied via SuperClass mode for Communication Services.
 
 ## Student output
-Holistic executive capability immersion for PROC07
+Holistic executive capability immersion for supplier quality and performance
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

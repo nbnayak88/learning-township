@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via MasterClass mode for Consumer Discretionary.
+Master the core principles, APQC-aligned baseline processes and data contracts for AI-assisted procurement operations. Applied via MasterClass mode for Consumer Discretionary.
 
 ## Student output
-Expert decision framework & architecture checklist for PROC11
+Expert decision framework & architecture checklist for AI-assisted procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

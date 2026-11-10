@@ -14,6 +14,8 @@ ACADEMIES = [
          q_hub="Twelve series, one question: what must the HR system promise?", q_sector="Every sector hires, develops and protects people differently, so listen before you automate."),
     dict(key="fi", dir="03-FI-Finance-Capability-Academy-Finance-Wednesday", prefix="FI", name="Finance", day="Finance Wednesday", hub="Finance · Finance Wednesday Series", h1="Architect the finance enterprise, series by series",
          q_hub="Twelve series, one question: what must the finance function be able to prove?", q_sector="Every sector closes, pays and reports differently, so listen before you automate."),
+    dict(key="proc", dir="04-PROC-Procurement-Capability-Academy-Procurement-Thursday", prefix="PROC", name="Procurement", day="Procurement Thursday", hub="Procurement · Procurement Thursday Series", h1="Architect the procurement enterprise, series by series",
+         q_hub="Twelve series, one question: what must procurement be able to prove?", q_sector="Every sector buys, contracts and depends on suppliers differently, so listen before you automate."),
     dict(key="crm", dir="02-CRM-Customer-Experience-Capability-Academy-Revenue-Tuesday", prefix="CRM", name="Customer Experience", day="Revenue Tuesday", hub="Customer Experience · Revenue Tuesday Series", h1="Architect the customer enterprise, series by series",
          q_hub="Twelve series, one question: what must the customer experience promise?", q_sector="Every sector earns customer trust differently, so listen before you automate."),
 ]
@@ -50,6 +52,18 @@ QUOTES = {
  "FI10": "A finance number is useful when its definition and lineage travel with it.",
  "FI11": "Responsible finance AI starts with a decision, an owner and evidence.",
  "FI12": "Connected finance is only as reliable as the weakest handoff between systems.",
+ "PROC01": "Strategy is the decision about what to buy, from whom and why, made before the first purchase order.",
+ "PROC02": "A fair sourcing decision can be explained to the supplier who lost.",
+ "PROC03": "A contract is a promise that someone must still remember to keep.",
+ "PROC04": "Suppliers perform best when someone owns the relationship, not only the invoice.",
+ "PROC05": "A purchase is complete when what was ordered, received and paid all agree.",
+ "PROC06": "Resilience is decided in the quiet weeks before the disruption.",
+ "PROC07": "Quality is what the supplier delivers on the day nobody is watching.",
+ "PROC08": "A saving counts when finance can see it and the business can keep it.",
+ "PROC09": "Risk in the supply chain is only visible to those who ask the supplier's supplier.",
+ "PROC10": "Spend data is useful when everyone agrees what a category means.",
+ "PROC11": "Responsible procurement AI starts with a decision, an owner and evidence.",
+ "PROC12": "Connected procurement is only as reliable as the weakest handoff to a supplier.",
  "CRM01": "A customer is one person, however many systems know a different version of them.",
  "CRM02": "Engagement earns its place when it is relevant, consented and easy to stop.",
  "CRM03": "Revenue is a promise kept in sequence, from first interest to final invoice.",
@@ -157,7 +171,7 @@ def load_series(sdir, A):
     b = os.path.basename(sdir)
     m = re.match(r"([A-Z]+\d\d)-([A-Z0-9]+)-(.+)$", b)
     code, short, title = m.group(1), m.group(2), m.group(3).replace("-", " ").replace(" And ", " and ")
-    title = title.replace("AI Powered", "AI-Powered").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
+    title = title.replace("AI Powered", "AI-Powered").replace("Procure to Pay", "Procure-to-Pay").replace("Cost Profitability", "Cost & Profitability").replace("Governance Risk", "Governance & Risk").replace("Quality Performance", "Quality & Performance").replace("Risk Sustainable", "Risk & Sustainable").replace("Rewards Performance", "Rewards & Performance").replace("Learning Mobility", "Learning & Mobility")
     sectors = []
     for d in sorted(glob.glob(sdir + "/[0-9][0-9]-[A-Z]*-*")):
         sb = os.path.basename(d)

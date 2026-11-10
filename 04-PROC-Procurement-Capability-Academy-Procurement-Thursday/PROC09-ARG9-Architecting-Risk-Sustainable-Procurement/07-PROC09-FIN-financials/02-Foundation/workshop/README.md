@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Master core principles, APQC baseline processes, and data contracts. Applied via Workshop mode for Financials.
+Master the core principles, APQC-aligned baseline processes and data contracts for supplier risk and sustainable procurement. Applied via Workshop mode for Financials.
 
 ## Student output
-Live hands-on APQC artifact & template for PROC09
+Live hands-on APQC artifact & template for supplier risk and sustainability
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

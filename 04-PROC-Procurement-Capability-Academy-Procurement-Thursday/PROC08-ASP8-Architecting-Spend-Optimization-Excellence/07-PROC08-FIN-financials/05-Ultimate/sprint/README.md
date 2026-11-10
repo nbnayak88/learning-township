@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Deliver capstone architectural digital twin and executive product ownership blueprint. Applied via Sprint mode for Financials.
+Deliver a capstone spend-optimization blueprint with classification rules, savings validation and measures, with a simulation or digital-twin view of the design where useful. Applied via Sprint mode for Financials.
 
 ## Student output
-End-to-end focused problem solving deliverable for PROC08
+End-to-end focused problem solving deliverable for spend optimization
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

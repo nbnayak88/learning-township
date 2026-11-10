@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Orchestrate enterprise governance, multi-agent pipelines, and cross-functional scaling. Applied via MasterClass mode for Consumer Discretionary.
+Orchestrate AI governance for procurement: agent identity, access limits, monitoring and recovery. Applied via MasterClass mode for Consumer Discretionary.
 
 ## Student output
-Expert decision framework & architecture checklist for PROC11
+Expert decision framework & architecture checklist for AI-assisted procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

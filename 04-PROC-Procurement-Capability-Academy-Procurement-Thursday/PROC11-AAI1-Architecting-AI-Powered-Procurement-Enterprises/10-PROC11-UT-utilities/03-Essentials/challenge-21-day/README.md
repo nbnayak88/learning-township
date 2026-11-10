@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Challenge (21-Day) mode for Utilities.
+Implement a governed AI-assisted procurement workflow with a named decision, owner, evidence and human review, with AI assistance bounded by human review. Applied via Challenge (21-Day) mode for Utilities.
 
 ## Student output
-Daily behavioral capability habit & portfolio artifact for PROC11
+Daily behavioral capability habit & portfolio artifact for AI-assisted procurement
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.

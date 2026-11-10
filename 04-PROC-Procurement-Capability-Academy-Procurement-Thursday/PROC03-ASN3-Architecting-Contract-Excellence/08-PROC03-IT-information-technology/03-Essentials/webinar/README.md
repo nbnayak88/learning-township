@@ -12,10 +12,10 @@
 **Township Occupancy:** Available
 
 ## Learning objective
-Implement high-velocity workflows, automated agents, and execution routines. Applied via Webinar mode for Information Technology.
+Implement a contract-authoring, approval and obligation-tracking workflow with clear owners, using automation or AI assistance only where it adds clear value. Applied via Webinar mode for Information Technology.
 
 ## Student output
-Strategic orientation dossier & next steps for PROC03
+Strategic orientation dossier & next steps for contract management
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.
