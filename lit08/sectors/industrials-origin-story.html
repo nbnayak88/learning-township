@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>They talked every day and had not listened in months · LIT08 · Architecting Meaningful Relationships</title><meta name="description" content="They talked every day and had not listened in months">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:hsl(150 55% 97%);--bg2:hsl(200 70% 97%);--bg3:hsl(335 75% 97%);--card:hsl(0 0% 100% / .86);--ink:hsl(205 40% 14%);--muted:hsl(205 15% 38%);--line:hsl(205 30% 88%);--accent:hsl(210 62% 34%);--chip:hsl(195 45% 95%);--warn:hsl(45 100% 95%);--warnline:hsl(42 80% 62%);--deep:hsl(205 55% 20%);--lime:hsl(95 55% 46%);--pink:hsl(343 82% 62%);--sla-reading-progress-color:var(--deep)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3)) fixed;font:400 16px/1.7 Comfortaa,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea,dialog{font-family:Comfortaa,system-ui,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,hsl(95 65% 94%),hsl(190 65% 95%) 50%,hsl(335 80% 95%));border-bottom:1px solid var(--line);box-shadow:0 6px 18px hsl(205 40% 40% / .08)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hdr{display:grid;grid-template-columns:1fr minmax(0,1.6fr) auto;gap:16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.hl a.brand{font-weight:700;text-decoration:none;color:var(--deep);font-size:15px;line-height:1.3;display:block}
+.hl .meta{display:block;margin-top:2px}
+.hq{margin:0;text-align:center;font-weight:600;font-size:15px;line-height:1.5;color:var(--deep);padding:8px 14px;border-radius:16px;background:hsl(0 0% 100% / .55);border:1px solid hsl(0 0% 100% / .8)}
+.hq::before{content:"“";color:var(--pink);font-weight:700;margin-right:4px}
+.hq::after{content:"”";color:var(--pink);font-weight:700;margin-left:2px}
+.hr{display:flex;flex-direction:column;align-items:flex-end;text-align:right;max-width:210px}
+.hr img{display:block;width:64px;height:auto;border-radius:14px}
+.hr .tag{margin:4px 0 0;font-size:11px;line-height:1.35;font-weight:600;color:var(--deep)}
+main{padding:24px 0 56px}
+article{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:22px 26px;box-shadow:0 10px 30px hsl(205 40% 40% / .10);backdrop-filter:blur(6px)}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+h2{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);font-size:22px;font-weight:700;color:var(--deep)}
+h3{font-size:18px;font-weight:700}
+blockquote{margin:16px 0;padding:10px 16px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:12px}
+blockquote p{margin:6px 0}
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:hsl(0 0% 100% / .7)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:linear-gradient(90deg,hsl(95 55% 93%),hsl(190 55% 94%));white-space:nowrap;font-weight:700}
+tr:last-child td{border-bottom:0}
+code{background:var(--chip);padding:1px 6px;border-radius:6px;font-size:.88em}
+.meta{color:var(--muted);font-size:12px}
+.chips a{display:inline-block;margin:3px 5px 3px 0;padding:4px 12px;min-height:30px;border:1px solid var(--line);border-radius:999px;background:hsl(0 0% 100% / .8);text-decoration:none;font-size:12px;font-weight:600;color:var(--deep)}
+.chips a:hover{border-color:var(--lime);background:hsl(95 65% 95%)}
+.done{font-weight:700}
+.na{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;padding:0 0 32px}
+.cta{display:inline-block;padding:11px 22px;border-radius:999px;background:linear-gradient(100deg,hsl(95 60% 42%),hsl(165 60% 38%) 55%,hsl(205 65% 40%));color:hsl(0 0% 100%)!important;font-weight:700;text-decoration:none;box-shadow:0 8px 22px hsl(165 55% 35% / .30);transition:transform .15s,box-shadow .15s;min-height:44px;line-height:1.4}
+.cta:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 28px hsl(165 55% 35% / .42)}
+.cta.sm{padding:5px 14px;font-size:12px;min-height:32px;margin-top:6px}
+.cta.ghost{background:hsl(0 0% 100% / .85);color:var(--deep)!important;border:1px solid var(--line);box-shadow:none}
+.hero{padding:30px 0 10px;text-align:left}
+.pre{display:inline-block;padding:4px 12px;border-radius:999px;background:hsl(95 65% 92%);color:var(--deep);font-size:12px;font-weight:700;letter-spacing:.02em}
+.hero h1{font-size:clamp(30px,5.2vw,50px);line-height:1.15;margin:14px 0 12px;letter-spacing:-.02em}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:var(--muted);max-width:720px;margin:0 0 14px}
+.ticks{list-style:none;padding:0;margin:0 0 20px}.ticks li{padding:4px 0 4px 28px;position:relative}.ticks li::before{content:"✓";position:absolute;left:0;color:hsl(95 55% 36%);font-weight:700}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+section.blk{margin-top:34px}
+section.blk>h2{border-top:0;margin-top:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:22px;padding:20px 22px;box-shadow:0 10px 30px hsl(205 40% 40% / .09)}
+.card h3{margin:6px 0 8px;color:var(--deep)}
+.num{font-weight:700;font-size:13px;color:hsl(343 70% 50%)}
+.vs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.vs .card.a{border-top:5px solid hsl(95 55% 50%)}.vs .card.b{border-top:5px solid hsl(205 65% 50%)}
+.pills a{display:inline-block;min-width:34px;text-align:center;margin:2px 3px 2px 0;padding:3px 9px;border:1px solid var(--line);border-radius:10px;background:hsl(0 0% 100% / .85);font-size:12px;font-weight:700;text-decoration:none;color:var(--deep)}
+.pills a:hover{background:hsl(95 65% 93%);border-color:hsl(95 55% 50%)}
+details{background:var(--card);border:1px solid hsl(0 0% 100% / .9);border-radius:16px;padding:12px 18px;margin:10px 0;box-shadow:0 6px 18px hsl(205 40% 40% / .07)}
+summary{cursor:pointer;font-weight:700;color:var(--deep);min-height:28px}
+.close{margin-top:38px;text-align:center;padding:34px 20px;border-radius:26px;background:linear-gradient(120deg,hsl(95 65% 92%),hsl(190 65% 93%) 50%,hsl(335 80% 94%));border:1px solid hsl(0 0% 100% / .9)}
+.close h2{border:0;margin:0 0 8px}
+.legend{columns:2 300px;font-size:14px}.legend div{break-inside:avoid;padding:2px 0}
+@media (max-width:720px){.hdr{grid-template-columns:1fr auto;grid-template-areas:"l r" "q q"}.hl{grid-area:l}.hr{grid-area:r}.hq{grid-area:q;font-size:14px}article{padding:16px}.hr img{width:56px}}
+</style></head><body>
+<header class="top"><div class="wrap hdr"><div class="hl"><a class="brand" href="../index.html">LIT08 · Architecting Meaningful Relationships</a><span class="meta">SuccessLabs Academy · aspirational case studies</span><a class="cta sm" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Join the free webinar</a></div><p class="hq">A story earns its place when it changes the decision you make next.</p><div class="hr"><a href="../index.html"><img src="../assets/successlabs-academy-logo.png" alt="SuccessLabs Academy logo: a flask with a globe wearing a graduation cap" width="64" height="64"></a><p class="tag">Architecting experiences for a better world.</p></div></div></header>
+<style id="sla-reading-progress-style">
+:root{--sla-reading-progress-color:var(--deep,hsl(195 45% 17%))}
+#sla-reading-progress{position:fixed;inset:var(--sla-reading-progress-top,0px) 0 auto;height:6px;z-index:2147483647;pointer-events:none;background:hsl(205 25% 80% / .55)}
+#sla-reading-progress-fill{display:block;width:100%;height:100%;background:var(--sla-reading-progress-color);transform:scaleX(0);transform-origin:left center}
+@media print{#sla-reading-progress{display:none}}
+</style>
+<div id="sla-reading-progress" aria-hidden="true"><span id="sla-reading-progress-fill"></span></div>
+<script id="sla-reading-progress-script">
+(()=>{'use strict';
+const fill=document.getElementById('sla-reading-progress-fill');const readingHeader=document.querySelector('body > header');let pending=false;
+function update(){pending=false;if(readingHeader)document.documentElement.style.setProperty('--sla-reading-progress-top',Math.max(0,readingHeader.getBoundingClientRect().bottom)+'px');const doc=document.scrollingElement||document.documentElement;
+const range=doc.scrollHeight-doc.clientHeight;
+const value=range>0?Math.min(1,Math.max(0,doc.scrollTop/range)):0;
+fill.style.transform='scaleX('+value+')';}
+function schedule(){if(!pending){pending=true;requestAnimationFrame(update);}}
+window.addEventListener('scroll',schedule,{passive:true});
+window.addEventListener('resize',schedule,{passive:true});
+window.addEventListener('pageshow',schedule);window.addEventListener('hashchange',schedule);
+if(window.ResizeObserver){const observer=new ResizeObserver(schedule);observer.observe(document.body);if(readingHeader)observer.observe(readingHeader);}
+update();})();
+</script>
+
+<main><div class="wrap"><p class="meta"><a href="../index.html">All sectors</a> · <a href="industrials.html">Industrials</a></p><article><h1 id="they-talked-every-day-and-had-not-listened-in-months">They talked every day and had not listened in months</h1>
+<h2 id="lit08-architecting-meaningful-relationships">LIT08 — Architecting Meaningful Relationships</h2>
+<p><strong>SuccessLabs Academy · OmniWorks Industrial Systems Ltd. · Level 0 → Pre-Foundation</strong><br>
+<strong>IIL — Industry Immersion Lab · Version 1.0 · 10 November 2026</strong><br>
+<strong>Format:</strong> Origin Story Sprint · 120 minutes · Free — Community/Citizen Edition<br>
+<strong>Status:</strong> Published learning content; not an enrolled course or certification.</p>
+<blockquote>
+<p><strong>Your promise:</strong> In two hours, design one relationship practice built on listening, repair and clear boundaries.</p>
+</blockquote>
+<p><strong>One story · One practice card · Three real-life tests</strong></p>
+<h2 id="1-start-with-the-story">1. Start with the story</h2>
+<p>Chen Wei works with a close colleague in an industrial service organisation with constant fault calls; they exchange messages all day, yet a disagreement keeps returning.</p>
+<p><strong>The person facing the choice:</strong> Chen Wei — Chief Supply Chain &amp; Procurement Officer (OW-P08).<br>
+<strong>A trusted colleague:</strong> Ravi Deshpande — VP Manufacturing, Pune Operations (OW-P10).<br>
+<strong>Someone affected:</strong> Elena Brooks — VP Asset Reliability, Transport Customer (OW-P13).</p>
+<p>Chen Wei asks what matters most before choosing. Ravi Deshpande asks what evidence and which support would help. Elena Brooks asks how the choice will feel to the people around them.</p>
+<p><strong>What they notice:</strong> Retelling the conversation shows each assumed the other's view and neither asked a question.</p>
+<p><strong>Pause:</strong> What would you want to be true before you decide? Ask the colleague one curious question before choosing.</p>
+<p><strong>Case boundary:</strong> OmniWorks Industrial Systems Ltd. is an aspirational case study (USD 48B revenue; 74,000 employees; 36 countries; 61 plants and facilities; 320 service depots; 7,200 suppliers). This story, its people and its dialogue are proposed learning scenarios, not corporate history, real individuals or achieved results. Preserve the persona IDs above. Reflection is voluntary and personal; share only what you choose to.</p>
+<h2 id="2-trace-the-origin-19702026">2. Trace the origin: 1970–2026</h2>
+<p>These overlapping periods are teaching lenses, not invention dates or a universal sequence. Earlier practices can coexist with newer ones.</p>
+<ul>
+<li><strong>1970s–1980s:</strong> Relationships are learned from family and community; workplaces avoid personal topics.</li>
+<li><strong>1980s–1990s:</strong> Communication-skills training spreads; listening is taught as a technique.</li>
+<li><strong>2000s–2010s:</strong> Digital messaging multiplies contact; misunderstandings multiply too.</li>
+<li><strong>2020s–2026:</strong> Assisted writing and translation help communication; trust still depends on listening.</li>
+</ul>
+<p><strong>Mindset shift:</strong> Listen to understand before you try to be understood.</p>
+<p><strong>Pause:</strong> Which old habit survives in a newer tool? Who bears its cost?</p>
+<h2 id="3-explore-possible-futures-20302050">3. Explore possible futures: 2030–2050</h2>
+<p><strong>2030 experiment:</strong> Try restating the other person's view once a day before answering.</p>
+<p><strong>2040 question:</strong> Ask how relationships stay close when so much talk is written and fast.</p>
+<p><strong>2050 scene:</strong> Imagine communities where repair is a normal part of working together.</p>
+<p><strong>Competing view:</strong> Some people prefer direct, brief exchanges; clear and short may suit them better than long conversations.</p>
+<p>All future passages are design hypotheses, not forecasts. Test a small useful part today rather than assume the future will arrive as described.</p>
+<h2 id="4-draw-the-smallest-useful-map">4. Draw the smallest useful map</h2>
+<p><strong>Practice — OW-LIT08-OS-CAP01:</strong> relationship practice. A practice is something you do repeatedly; it is not a one-time insight.</p>
+<p><strong>Steps — OW-LIT08-OS-VS01:</strong> Listen → restate → share → repair → set boundaries → follow up.</p>
+<p><strong>Things to keep distinct:</strong> conversation, assumption, repair, boundary and follow-up.</p>
+<p><strong>Five life areas:</strong> spiritual, social, academic, professional and personal. Note which areas this practice touches and which it leaves alone.</p>
+<p><strong>Protected boundary:</strong> A communication practice does not fix an unsafe relationship; safety comes first.</p>
+<h2 id="5-build-one-practice-card">5. Build one Practice Card</h2>
+<p>Use synthetic case <strong>OW-LIT08-OS-SYN001</strong>. Synthetic person IND-LP300, colleague IND-LP301, conversation notes IND-NT300. Keep everything on one card.</p>
+<ol>
+<li><strong>Need:</strong> the situation, who is affected and one missing fact.</li>
+<li><strong>Values:</strong> two or three values at stake, in your own words.</li>
+<li><strong>Commitment:</strong> one small action you can keep within a week, and who will know.</li>
+<li><strong>Evidence:</strong> what you will notice, record or ask to see whether it helps.</li>
+<li><strong>Alternative:</strong> Compare explaining your view first with restating theirs first.</li>
+<li><strong>When to get support:</strong> one sign that means you should talk to a trusted person or a qualified professional. </li>
+<li><strong>Review:</strong> the date you will look again and what would make you stop or change course.</li>
+</ol>
+<p><strong>Requirement — OW-LIT08-OS-REQ01:</strong> link one relationship practice hypothesis to a small action and an observed follow-up, including evidence that it did not help.</p>
+<p><strong>Decision — OW-LIT08-OS-ADR01:</strong> record your chosen option and the alternative from item 5, one trade-off, and what would change your mind.</p>
+<h2 id="6-run-three-real-life-tests">6. Run three real-life tests</h2>
+<h3 id="t01-a-disagreement-becomes-personal">T01 — A disagreement becomes personal</h3>
+<p><strong>Expected response:</strong> Pause, restate the other view, then share your own.</p>
+<h3 id="t02-an-apology-is-overdue">T02 — An apology is overdue</h3>
+<p><strong>Expected response:</strong> Name the harm plainly and offer repair without conditions.</p>
+<h3 id="t03-a-boundary-is-crossed-again">T03 — A boundary is crossed again</h3>
+<p><strong>Expected response:</strong> Restate the boundary calmly and decide the consequence in advance.</p>
+<p>For each, record <strong>situation → what you would do → what you notice → revision → retry</strong>. These are sprint-local tests OW-LIT08-OS-T01/T02/T03, supporting OW-LIT08-OS-REQ01. Completing the lesson is not a measured change in your life.</p>
+<p><strong>Signal — OW-LIT08-OS-KPI01:</strong> Notice how often a difficult conversation included a restatement of the other view, noted privately; no outcome is promised. Choose your own baseline and review date. No improvement is promised.</p>
+<p><strong>Acceptance:</strong> the card names your values, keeps the boundary above, handles all three tests after revision and can be explained in 60 seconds. Anything unknown stays visible.</p>
+<h2 id="7-use-your-120-minutes">7. Use your 120 minutes</h2>
+<ul>
+<li><strong>0–20:</strong> read the origin timeline; explain what changed and what did not.</li>
+<li><strong>20–45:</strong> role-play the story; ask the person, colleague and affected person one useful question each.</li>
+<li><strong>45–65:</strong> map your own situation across the five life areas.</li>
+<li><strong>65–100:</strong> complete the single Practice Card and compare the alternative.</li>
+<li><strong>100–115:</strong> run the three tests and revise.</li>
+<li><strong>115–120:</strong> explain your choice in 60 seconds and choose a first small action.</li>
+</ul>
+<h2 id="8-read-with-a-question">8. Read with a question</h2>
+<ul>
+<li><a href="https://www.nist.gov/privacy-framework/privacy-framework">NIST Privacy Framework</a>: who should see your reflections, and how will you keep them private?</li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">W3C WCAG overview</a>: can everyone you invite perceive, operate and understand how to take part?</li>
+</ul>
+<p>Official reference pages checked 10 November 2026; access and versions can vary. The historical periods and future stories are educational synthesis, not claims established by these pages.</p>
+<h2 id="9-reflect-and-continue">9. Reflect and continue</h2>
+<p>What did you assume? What did you learn by asking? If this brings up strong feelings, pause and talk to someone you trust or a qualified professional.</p>
+<p><strong>Next Pre-Foundation experiment:</strong> Write one conversation to have, one question to ask and one boundary to state.</p>
+<p><strong>SuccessLabs mission:</strong> Architecting Experiences for a Better World.</p>
+<h2 id="source-traceability">Source traceability</h2>
+<ul>
+<li><strong>New material:</strong> OW-LIT08-OS is a new sprint-local namespace. The scenario, practice card, tests and signal are proposed learning designs, not an approved programme or a measured result.</li>
+</ul>
+<p><strong>Trace:</strong> source case → OW-LIT08-OS-CAP01 → OW-LIT08-OS-VS01 → OW-LIT08-OS-REQ01 → OW-LIT08-OS-ADR01 → OW-LIT08-OS-EXP01 (this practice experiment) → OW-LIT08-OS-T01/T02/T03 → OW-LIT08-OS-KPI01. OW-LIT08-OS-EV01 is an empty evidence slot until a learner records their own notes.</p>
+<p><strong>Educational alignment:</strong> reflective practice, values-based decision-making and activity-first learning. This lesson is not therapy, counselling or professional advice, and the mapping does not establish compliance or certification.</p>
+<p><strong>Publication:</strong> Published learning content. No outcome or live programme is claimed.</p></article><section class="close"><h2>Build the decision before the tool</h2><p>Join the free webinar and learn to architect decisions you can explain, govern and recover.</p><a class="cta" href="https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3" target="_blank" rel="noopener">Reserve My Free Seat</a><p class="note">Free webinar · opens the registration page</p></section></div></main>
+<footer><div class="wrap">Educational demonstration material built on aspirational case studies. Nothing here asserts an executed client implementation. Fonts load from Google Fonts and need network access to render as Comfortaa.</div></footer>
+</body></html>
