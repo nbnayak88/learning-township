@@ -334,3 +334,21 @@ if __name__ == "__main__":
             n = build_series(S, A, peers)
             print(S["code"], S["title"], len(S["sectors"]), "sectors", n, "records")
         build_hub(all_s, A)
+
+    # Academies landing page (Monday to Saturday)
+    order = ["hr", "crm", "fi", "proc", "scm", "btm"]
+    byk = {A["key"]: A for A in ACADEMIES}
+    cards = ""
+    for k in order:
+        A = byk[k]
+        cards += (f'<div class="card"><span class="num">{A["day"]}</span><h3>{html.escape(A["name"])} Academy</h3>'
+                  f'<p class="meta">12 series · 11 sectors each</p><p>{html.escape(A["q_hub"])}</p>'
+                  f'<p><a href="../{k}/index.html">Open the {html.escape(A["name"])} series</a></p></div>')
+    body = f"""<section class="hero"><span class="pre">Free live webinar · Six capability academies</span>
+<h1>Architect the enterprise, one capability at a time</h1>
+<p class="sub">Six academies, twelve series each, eleven sectors per series. Every page updates automatically when the source content changes.</p>
+<div class="row"><a class="cta" href="{WEBINAR}" target="_blank" rel="noopener">Reserve My Free Seat</a><a class="cta ghost" href="#academies">Choose an academy</a></div></section>
+<section class="blk" id="academies"><h2>Choose an academy</h2><div class="grid">{cards}</div></section>""" + cta("")
+    write(f"{OUT}/academies/index.html", page("Capability Academies", "Capability Academies", "SuccessLabs Academy capability academies", "../academies/", "Six academies, one question: what must the enterprise be able to prove?", "", body, ""))
+    os.makedirs(OUT + "/academies/assets", exist_ok=True)
+    shutil.copy(HERE + "/assets/successlabs-academy-logo.png", OUT + "/academies/assets/successlabs-academy-logo.png")

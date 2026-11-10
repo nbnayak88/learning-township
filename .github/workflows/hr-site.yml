@@ -46,8 +46,8 @@ jobs:
       - name: Publish to gh-pages (only HR folders are touched)
         run: |
           cd pages
-          rm -rf hr hr[0-9][0-9] crm crm[0-9][0-9] fi fi[0-9][0-9] proc proc[0-9][0-9] scm scm[0-9][0-9] btm btm[0-9][0-9]
-          cp -r ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] ../_site/fi ../_site/fi[0-9][0-9] ../_site/proc ../_site/proc[0-9][0-9] ../_site/scm ../_site/scm[0-9][0-9] ../_site/btm ../_site/btm[0-9][0-9] .
+          rm -rf academies hr hr[0-9][0-9] crm crm[0-9][0-9] fi fi[0-9][0-9] proc proc[0-9][0-9] scm scm[0-9][0-9] btm btm[0-9][0-9]
+          cp -r ../_site/academies ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] ../_site/fi ../_site/fi[0-9][0-9] ../_site/proc ../_site/proc[0-9][0-9] ../_site/scm ../_site/scm[0-9][0-9] ../_site/btm ../_site/btm[0-9][0-9] .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
