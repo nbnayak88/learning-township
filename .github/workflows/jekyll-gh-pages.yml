@@ -35,8 +35,19 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Ensure Qualtrics EX demo is included in published site
+        run: |
+          mkdir -p _site/qualtrics-ex-demo
+          cp -a qualtrics-ex-demo/. _site/qualtrics-ex-demo/
+          test -s _site/qualtrics-ex-demo/index.html
+          test -s _site/qualtrics-ex-demo/scoping.html
+          test -s _site/qualtrics-ex-demo/presentation.html
+          grep -q 'qualtrics_scoping_workbook_v1' _site/qualtrics-ex-demo/index.html
+          echo "Qualtrics EX Studio and interactive workbook included in Pages artifact"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   # Deployment job
   deploy:
