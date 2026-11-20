@@ -22,3 +22,12 @@ Teach sector and domain architecture through business outcomes, capabilities, va
 
 ## Publication note
 This is a HUB catalog record, **not proof that a course is live or purchasable**. Township occupancy is not publication status. Allocated member names are intentionally excluded from the public repository for privacy.
+
+## Pixaera immersive safety learning — applied integration workshop
+
+Public sector case-study references: **Shell and BP**. The Pixaera examples illustrate industry use cases, not a confirmed SAP integration deployment at these companies.
+
+- [Integration architecture and configuration runbook](./PIXAERA-SF-LEARNING-INTEGRATION-RUNBOOK.md)
+- [FAQ across all 12 architecture streams](./PIXAERA-SF-LEARNING-12-ARCHITECTURE-FAQ.md)
+
+**Sector-specific learning focus:** Offshore and refinery safety, high-risk operations, permit-to-work, contractor induction, competency assurance and recurring HSE training.
