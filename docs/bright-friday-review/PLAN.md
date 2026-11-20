@@ -108,6 +108,6 @@ All seven domain matrices use the existing catalog. Seat buttons embed the suppl
 
 ## Domain and stream navigation update
 
-The review now has a seven-domain selector and a dependent selector containing only the chosen domain’s 12 workstreams. One selected stream displays its 20 lab seats. Domain changes reset the stream to that domain’s first workstream. Domain/stream query parameters preserve shareable views.
+Selecting one of the seven domains shows all 12 workstreams and all 240 lab seats by default. The optional dependent workstream selector contains “All 12 streams” plus that domain’s 12 individual streams. Choosing one shows its 20 seats. Changing domains resets the stream filter to all. Existing deep links to a stream still work.
 
-Seven matching PNG previews were retrieved from Canva folder FAHOZIacnAA and saved as local assets. These are 200px Canva thumbnails, explicitly labelled as previews; original images have 1536×1024 metadata but downloading originals requires signed-in Canva access unavailable in this browser. The page links to the source folder. Do not represent the previews as full-resolution readable mind maps.
+The seven full-resolution uploaded PNG images are used directly as local assets, matched to HR, CX, FI, PROC, SCM, BTM and LIT. No external design-reference links appear in the learner-facing page. Each image can be opened full-size using its direct local image link.
