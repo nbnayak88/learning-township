@@ -217,6 +217,11 @@ def rel(p):
 
 
 def page(site, title, desc, root, quote, nav, content, gh):
+    match = re.search(r"\\b(?:HR|CRM|FI|PROC|SCM|BTM|LIT)\\d{2}\\b", site, re.I)
+    if match:
+        stream_id = match.group(0).upper()
+        workspace_url = "https://nbnayak88.github.io/learning-township/superlabs/workspace/?stream=" + stream_id
+        content += '<section class="card"><h2>20 Shared SuperLabs · Coach & Learner Workspace</h2><p>Choose any of the 20 shared labs. Coaches can author and export activities; learners can fork, practice, and track evidence.</p><a class="cta" href="' + workspace_url + '">Open all 20 SuperLabs for ' + stream_id + '</a></section>'
     return TEMPLATE.format(title=html.escape(title), desc=html.escape(desc), css=CSS, root=root, site=site, quote=quote, progress=PROGRESS, nav=nav, content=content, webinar=WEBINAR, gh=gh, body="")
 
 
