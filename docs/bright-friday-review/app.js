@@ -1,19 +1,30 @@
 'use strict';
 const CHECKOUT='https://hub.successlabsacademy.com/web/checkout/694af8798dd872a219700dd3';
 const sectors=['Energy','Materials','Industrials','Consumer Discretionary','Consumer Staples','Health Care','Financials','Information Technology','Communication Services','Utilities','Real Estate'];
-const $=id=>document.getElementById(id);let data,domain='HR',selected=null,busy=false;
+const $=id=>document.getElementById(id);const requested=new URLSearchParams(location.search);let data,domain=requested.get('domain')||'HR',streamId=requested.get('stream')||'',selected=null,busy=false;
 const KEY='sla-bright-friday-review-v1';
 function readBookings(){try{const x=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(x)?x.filter(b=>b&&typeof b.seat==='string'&&typeof b.email==='string'&&typeof b.phone==='string'):[];}catch{return [];}}
 let bookings=readBookings();
 const normalizeEmail=s=>s.trim().toLowerCase();
 const normalizePhone=s=>s.trim().replace(/[\s().-]/g,'');
 async function digest(s){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(n=>n.toString(16).padStart(2,'0')).join('');}
+function changeDomain(next){domain=next;streamId=data.mappings[domain][0].id;selected=null;render();}
 function render(){
- $('domains').replaceChildren(...data.academies.map(a=>{const b=document.createElement('button');b.textContent=a.id;b.title=a.name;b.setAttribute('aria-pressed',String(domain===a.id));b.onclick=()=>{domain=a.id;render();};return b;}));
+ if(!data.mappings[domain])domain='HR';
+ const domainStreams=data.mappings[domain];if(!domainStreams.some(s=>s.id===streamId))streamId=domainStreams[0].id;
+ const academy=data.academies.find(a=>a.id===domain),stream=domainStreams.find(s=>s.id===streamId);
+ $('domain-select').replaceChildren(...data.academies.map(a=>new Option(a.name+' ('+a.id+')',a.id,false,a.id===domain)));
+ $('stream-select').replaceChildren(...domainStreams.map(s=>new Option(s.id+' · '+s.name,s.id,false,s.id===streamId)));
+ $('domain-mindmap').src='assets/'+domain.toLowerCase()+'-mindmap.png';$('domain-mindmap').alt=academy.name+' — domain mind map preview';
+ $('mindmap-title').textContent=academy.name+' · Mind map';$('mindmap-description').textContent='Explore the domain, then choose your workstream below. '+academy.theme+'.';
+ $('selection-summary').textContent=domain+' / '+stream.id+' · '+stream.name+' · 20 lab seats';
+ const route=new URL(location.href);route.searchParams.set('domain',domain);route.searchParams.set('stream',streamId);history.replaceState(null,'',route);
+
+ $('domains').replaceChildren(...data.academies.map(a=>{const b=document.createElement('button');b.textContent=a.id;b.title=a.name;b.setAttribute('aria-pressed',String(domain===a.id));b.onclick=()=>changeDomain(a.id);return b;}));
  const head=document.createElement('tr');let th=document.createElement('th');th.scope='col';th.textContent='Workstream / Lab';head.append(th);
  data.labs.forEach(l=>{th=document.createElement('th');th.scope='col';th.textContent=l.id.replace('SL','L')+' · '+l.code;th.title=l.official;const span=document.createElement('span');span.textContent=l.name;th.append(span);head.append(th);});$('head').replaceChildren(head);
- const streams=data.mappings[domain],query=$('search').value.trim().toLowerCase(),rows=[];
- for(const s of streams.filter(s=>(s.id+' '+s.name).toLowerCase().includes(query))){const row=document.createElement('tr'),label=document.createElement('th');label.scope='row';label.textContent=s.id;const span=document.createElement('span');span.textContent=s.name;label.append(span);row.append(label);
+ const streams=data.mappings[domain],rows=[];
+ for(const s of streams.filter(s=>s.id===streamId)){const row=document.createElement('tr'),label=document.createElement('th');label.scope='row';label.textContent=s.id;const span=document.createElement('span');span.textContent=s.name;label.append(span);row.append(label);
  for(const l of data.labs){const id=domain+'-'+s.id+'-'+l.id,allocated=bookings.some(b=>b.seat===id),td=document.createElement('td'),b=document.createElement('button');b.innerHTML='<svg class="flight-seat" viewBox="0 0 56 64" aria-hidden="true" focusable="false"><defs><linearGradient id="upholstery-'+id+'" x1="0" y1="0" x2="1" y2="1"><stop class="seat-light" offset="0"/><stop class="seat-dark" offset="1"/></linearGradient></defs><path class="seat-shell" d="M12 9Q12 3 20 3H36Q44 3 44 9V44Q44 54 37 57H19Q12 54 12 44Z"/><rect class="seat-back" x="16" y="7" width="24" height="33" rx="8" fill="url(#upholstery-'+id+')"/><rect class="seat-headrest" x="20" y="10" width="16" height="8" rx="3"/><path class="seat-stitch" d="M20 22V33M36 22V33"/><rect class="seat-cushion" x="16" y="37" width="24" height="16" rx="5" fill="url(#upholstery-'+id+')"/><rect class="seat-arm" x="8" y="29" width="7" height="22" rx="3"/><rect class="seat-arm" x="41" y="29" width="7" height="22" rx="3"/><path class="seat-belt" d="M18 43L27 47L38 42"/><rect class="seat-buckle" x="26" y="44" width="5" height="4" rx="1"/><path class="seat-base" d="M21 57H35L38 61H18Z"/></svg>';const code=document.createElement('span');code.className='seat-number';code.textContent=l.id.replace('SL','L');const labCode=document.createElement('span');labCode.className='seat-lab';labCode.textContent=l.code;b.append(code,labCode);b.className=allocated?'allocated':selected?.id===id?'selected':'';b.setAttribute('aria-label',`${id}, ${l.official}, ${allocated?'demo allocated':'available'}`);b.dataset.seat=id;b.title=b.getAttribute('aria-label');b.onclick=()=>openSeat({id,stream:s,lab:l,allocated});td.append(b);row.append(td);}rows.push(row);}
  $('seats').replaceChildren(...rows);const taken=bookings.filter(b=>b.seat.startsWith(domain+'-')).length;
  $('count').textContent=`${domain}: ${240-taken} available · ${taken} demo allocated · 240 total · ${rows.length} of 12 workstreams shown`;
@@ -23,7 +34,7 @@ let trigger;
 function openSeat(seat){trigger=document.activeElement;selected=seat;$('booking-title').textContent=seat.id;$('seat-detail').textContent=seat.stream.name+' · '+seat.lab.official+(seat.allocated?' · Already demo allocated':' · Available in this demo');$('result').textContent='';$('application').reset();$('application').querySelector('button').disabled=seat.allocated;$('checkout').src=CHECKOUT;$('booking').showModal();render();}
 function closeSeat(){$('booking').close();$('checkout').removeAttribute('src');const seatButton=Array.from(document.querySelectorAll('[data-seat]')).find(b=>b.dataset.seat===selected?.id);if(seatButton)seatButton.focus();}
 $('close').onclick=closeSeat;$('booking').addEventListener('cancel',()=>{$('checkout').removeAttribute('src');});
-$('search').oninput=()=>data&&render();
+$('domain-select').onchange=e=>changeDomain(e.target.value);$('stream-select').onchange=e=>{streamId=e.target.value;selected=null;render();};
 $('reset').onclick=()=>{try{localStorage.removeItem(KEY);bookings=[];selected=null;render();}catch{$('load-error').textContent='Browser storage is unavailable. Reset could not be saved.';}};
 $('sector').replaceChildren(...sectors.map(s=>new Option(s,s)));
 $('application').onsubmit=async e=>{e.preventDefault();if(busy||!selected)return;const f=new FormData(e.target),button=e.target.querySelector('button');

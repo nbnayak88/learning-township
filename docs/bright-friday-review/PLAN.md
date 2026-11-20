@@ -105,3 +105,9 @@ Inactivity proposal: private check-in after 30 days, support and an extension op
 ## Current prototype boundary
 
 All seven domain matrices use the existing catalog. Seat buttons embed the supplied live checkout. A separate fictional-data demo checks local email OR phone hashes across domains and prevents local duplicate seats. It rejects self-declared existing members. It has no live roster, OTP provider, shared allocation database, waitlist processor, notifications or access provisioning. Browser-local checks are resettable and not sufficient for launch. Treat every inventory count as demo state, never live scarcity.
+
+## Domain and stream navigation update
+
+The review now has a seven-domain selector and a dependent selector containing only the chosen domain’s 12 workstreams. One selected stream displays its 20 lab seats. Domain changes reset the stream to that domain’s first workstream. Domain/stream query parameters preserve shareable views.
+
+Seven matching PNG previews were retrieved from Canva folder FAHOZIacnAA and saved as local assets. These are 200px Canva thumbnails, explicitly labelled as previews; original images have 1536×1024 metadata but downloading originals requires signed-in Canva access unavailable in this browser. The page links to the source folder. Do not represent the previews as full-resolution readable mind maps.
