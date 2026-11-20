@@ -1,0 +1,54 @@
+name: Audit all published Learning Township pages
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * *'
+permissions:
+  contents: read
+  issues: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Check every published HTML entry point
+        id: check
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib, urllib.request, urllib.error, time, json, os
+          base="https://nbnayak88.github.io/learning-township/"
+          paths=sorted(p.parent.as_posix() for p in pathlib.Path('.').rglob('index.html') if '.git' not in p.parts)
+          results=[]
+          for path in paths:
+              url=base+(path.strip('./')+'/' if path != '.' else '')
+              code=None
+              error=''
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'SuccessLabs-Pages-Audit/1.0'})
+                      with urllib.request.urlopen(req,timeout=20) as response:
+                          code=response.status
+                      if code==200:break
+                  except urllib.error.HTTPError as e:code=e.code;error=str(e)
+                  except Exception as e:error=str(e)
+                  if attempt<2:time.sleep(3*(attempt+1))
+              results.append({'url':url,'status':code,'error':error})
+              print(('PASS' if code==200 else 'FAIL'),code,url,error[:100],flush=True)
+          pathlib.Path('pages-audit-results.json').write_text(json.dumps(results,indent=2))
+          failed=[x for x in results if x['status']!=200]
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write(f"## Learning Township live-link audit\\n\\nChecked: **{len(results)}** · Passed: **{len(results)-len(failed)}** · Failed: **{len(failed)}**\\n\\n")
+              if failed:
+                  f.write("| HTTP | URL | Error |\\n|---|---|---|\\n")
+                  for x in failed:f.write(f"| {x['status'] or 'network'} | {x['url']} | {x['error'][:90].replace('|','/')} |\\n")
+          if failed:raise SystemExit(f'{len(failed)} URLs failed live HTTP checks')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: learning-township-pages-audit
+          path: pages-audit-results.json
+          if-no-files-found: warn
