@@ -28,12 +28,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkout generated academy pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: _published
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Assemble static HTML site without Jekyll
         run: |
           mkdir -p _site
-          rsync -a --exclude=.git --exclude=_site --exclude=.github --exclude=docs ./ _site/
+          # Preserve 84 generated workstream pages from gh-pages; main does not contain them.
+          rsync -a --exclude=.git _published/ _site/
+          # Overlay source-maintained pages without deleting generated academy routes.
+          rsync -a --exclude=.git --exclude=_site --exclude=_published --exclude=.github --exclude=docs ./ _site/
           cp -a docs/. _site/
           mkdir -p _site/docs/superlabs
           cp docs/superlabs/index.html _site/docs/superlabs/index.html
@@ -47,6 +55,12 @@ jobs:
           test -s _site/superlabs/learn/index.html
           test -s _site/superlabs/index.html
           test -s _site/docs/superlabs/index.html
+          for domain in hr crm fi proc scm btm lit; do
+            test -s "_site/$domain/index.html"
+            for n in $(seq -w 1 12); do
+              test -s "_site/${domain}${n}/index.html" || { echo "Missing: ${domain}${n}/index.html"; exit 1; }
+            done
+          done
           echo "Static site entry points present, including both SuperLabs URLs"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
