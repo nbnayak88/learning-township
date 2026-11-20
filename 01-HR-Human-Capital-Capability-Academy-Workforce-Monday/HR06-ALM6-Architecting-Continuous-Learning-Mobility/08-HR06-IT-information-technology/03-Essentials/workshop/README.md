@@ -15,7 +15,14 @@
 Implement a skills-to-learning-to-mobility workflow with clear role and skill data, using automation or AI assistance only where it adds clear value. Applied via Workshop mode for Information Technology.
 
 ## Student output
-Live hands-on APQC artifact & template for learning and mobility
+Live hands-on APQC artifact & template for learning and mobility.
+
+## Applied integration case: Pixaera → SAP SuccessFactors Learning
+
+- [Solution architect configuration runbook, mapping, SIT/UAT, security and rollout](./PIXAERA-SF-LEARNING-INTEGRATION-RUNBOOK.md)
+- [Frequently asked questions across all 12 architecture streams](./PIXAERA-SF-LEARNING-12-ARCHITECTURE-FAQ.md)
+
+**Critical learning point:** `STUD_ID` must match an existing SuccessFactors Learning User ID; an email-formatted value works only when it **is** that User ID. The Pixaera proposed `CMPL_DTE` header must be reviewed against the SAP field `COMPL_DTE`. Both are tenant-validation gates, not unqualified approvals.
 
 ## Architecture-first learning principle
 Teach sector and domain architecture through business outcomes, capabilities, value streams, information, governance, integration, and evidence. Product and vendor technologies are optional implementation examples. Reference applicable TOGAF, BIZBOK, BABOK, DAMA-DMBOK, APQC, GICS and other international frameworks.
