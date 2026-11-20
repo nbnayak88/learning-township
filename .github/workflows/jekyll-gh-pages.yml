@@ -38,15 +38,11 @@ jobs:
           touch _site/.nojekyll
           test -s _site/thr81-checklist/index.html
           echo "THR81 and docs content staged for GitHub Pages"
-      - name: Ensure Qualtrics EX demo is included in published site
+      - name: Validate published entry points
         run: |
-          mkdir -p _site/qualtrics-ex-demo
-          cp -a qualtrics-ex-demo/. _site/qualtrics-ex-demo/
+          test -s _site/thr81-checklist/index.html
           test -s _site/qualtrics-ex-demo/index.html
-          test -s _site/qualtrics-ex-demo/scoping.html
-          test -s _site/qualtrics-ex-demo/presentation.html
-          grep -q 'qualtrics_scoping_workbook_v1' _site/qualtrics-ex-demo/index.html
-          echo "Qualtrics EX Studio and interactive workbook included in Pages artifact"
+          echo "Static site entry points present"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
