@@ -11,20 +11,13 @@
 Pixaera captures approved classroom completions and sends a scheduled file to SuccessFactors Learning for learner-history credit. This is **inbound learning-history integration**, not a two-way course launch or content synchronization interface. Do not assume the document proves the endpoint is provisioned or any connector configured.
 
 ## 2. Target logical architecture
-```mermaid
-flowchart TD
- A[Pixaera classroom QR and approved completion] --> B[Daily completion extract]
- B --> C[Validate completion and map email to LMS User ID]
- C --> D[Validate items, revisions, status, timestamp and deduplication]
- D --> E[Secure SFTP landing directory]
- E --> F[Scheduled SAP Learning History Connector]
- F --> G[SuccessFactors Learning history]
- F --> H[Connector logs / rejected records]
- B --> I[Source event ledger]
- H --> J[Reconciliation and remediation]
- I --> J
- G --> J
-```
+![Target logical architecture: source, enterprise integration and SAP Learning zones with an operations control plane](target-logical-architecture.svg)
+
+[Open full-size architecture](target-logical-architecture.svg)
+
+**Viewpoint:** logical application responsibilities, integration boundaries and operational controls, organized around stakeholder concerns (ISO/IEC/IEEE 42010). Solid arrows represent data; dashed arrows represent audit evidence. Hosting and physical network topology require a separate deployment view.
+
+**Design controls:** least privilege, SSH host-key verification, managed secrets, minimized personal data, retention and separate test/production credentials. Validation can reside in Pixaera export or governed middleware; middleware is optional. History credit does not automatically authorize hazardous work or OT access.
 
 ## 3. Eleven ordered implementation work packages
 
