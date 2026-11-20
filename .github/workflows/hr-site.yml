@@ -58,6 +58,9 @@ jobs:
           cp ../src/docs/superlabs/index.html docs/superlabs/index.html
           cp ../src/docs/superlabs/index.html superlabs/index.html
           test -s docs/superlabs/index.html
+          mkdir -p superlabs/workspace
+          cp ../src/superlabs/workspace/index.html superlabs/workspace/index.html
+          test -s superlabs/workspace/index.html
           mkdir -p superlabs/learn
           cp ../src/superlabs/learn/index.html superlabs/learn/index.html
           test -s superlabs/learn/index.html
