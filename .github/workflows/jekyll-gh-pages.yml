@@ -44,6 +44,7 @@ jobs:
         run: |
           test -s _site/thr81-checklist/index.html
           test -s _site/qualtrics-ex-demo/index.html
+          test -s _site/superlabs/learn/index.html
           test -s _site/superlabs/index.html
           test -s _site/docs/superlabs/index.html
           echo "Static site entry points present, including both SuperLabs URLs"
