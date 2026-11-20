@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Energy Integration Runbook | SuccessLabs Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown-light.min.css">
+<style>
+:root{color-scheme:light;--green:#126c48;--lime:#c0ef57;--ink:#163b2d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#f1ffe4,#f6fff9 35%,#fff);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{background:linear-gradient(115deg,#d4ff83,#55d5a1);padding:24px clamp(18px,4vw,45px);border-bottom:3px solid #14935d}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand strong,.eyebrow,h1{font-family:Comfortaa,Arial,sans-serif}.brand strong{font-size:1rem}.brand span{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+header h1{font-size:clamp(1.35rem,3.4vw,2rem);line-height:1.4;margin:14px 0 9px}header p{margin:0;line-height:1.55}
+main{max-width:1160px;margin:auto;padding:24px clamp(12px,3vw,35px) 70px}
+.toolbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:14px}
+.toolbar a{color:#08623c;font-weight:700;text-decoration:none}.toolbar button{background:white;border:1px solid #8abda5;border-radius:10px;padding:10px;cursor:pointer}
+.markdown-body{font-family:Arial,Helvetica,sans-serif;background:#fff;line-height:1.65;border:1px solid #d9eedf;border-radius:16px;box-shadow:0 8px 30px #276c4215;padding:clamp(18px,3.4vw,40px);overflow-wrap:anywhere}
+.markdown-body h1,.markdown-body h2,.markdown-body h3{color:#145b3d;line-height:1.4;scroll-margin-top:14px}
+.markdown-body h1{font-size:1.65em}.markdown-body h2{font-size:1.35em;border-bottom:2px solid #e4f5ce}
+.markdown-body table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse}.markdown-body th{background:#e4f7cd}.markdown-body td,.markdown-body th{min-width:95px}
+.markdown-body pre{overflow:auto}.markdown-body code{overflow-wrap:anywhere}.markdown-body blockquote{border-left:4px solid #68ba56;background:#f3ffe7;padding:12px 16px;color:#2d5044}
+.markdown-body a{color:#0b7548}.markdown-body img{max-width:100%;height:auto}
+.mermaid{overflow:auto;text-align:center;margin:15px auto;padding:12px;background:#fbfff8;border-radius:10px}
+footer{text-align:center;font-size:.82rem;padding:16px;color:#436b56}
+#status{font-size:.9rem;color:#3e6250}@media(max-width:600px){header{padding:18px 15px}.markdown-body{border-radius:9px}.toolbar{align-items:flex-start}}
+@media print{header{background:#fff}body{background:#fff}.toolbar{display:none}main{padding:0}.markdown-body{box-shadow:none;border:0}}
+</style></head><body>
+<header><div class="brand"><strong>SuccessLabs Academy</strong><span>HR06 · ALM6 · Energy · Essentials</span></div>
+<h1>Energy Integration Runbook</h1><p>Pixaera × SAP SuccessFactors Learning · Configuration & Validation</p></header>
+<main><nav class="toolbar" aria-label="Lesson toolbar"><span id="status" role="status">Loading lesson from GitHub Markdown…</span><div><a href="https://raw.githubusercontent.com/nbnayak88/learning-township/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR06-ALM6-Architecting-Continuous-Learning-Mobility/01-HR06-ENE-energy/03-Essentials/workshop/PIXAERA-SF-LEARNING-INTEGRATION-RUNBOOK.md" target="_blank" rel="noopener">View Markdown source</a> <button type="button" onclick="window.print()">Print</button></div></nav>
+<article id="content" class="markdown-body" aria-label="Lesson content"></article></main>
+<footer>SuccessLabs Academy · Architecting Experiences for a Better World</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked@16.3.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+<script type="module">
+const source="https://raw.githubusercontent.com/nbnayak88/learning-township/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR06-ALM6-Architecting-Continuous-Learning-Mobility/01-HR06-ENE-energy/03-Essentials/workshop/PIXAERA-SF-LEARNING-INTEGRATION-RUNBOOK.md";
+const out=document.getElementById('content'),status=document.getElementById('status');
+try{
+  const response=await fetch(source,{cache:'no-store'});
+  if(!response.ok)throw new Error('GitHub Markdown fetch returned HTTP '+response.status);
+  const markdown=await response.text();
+  if(typeof window.marked==='undefined'||typeof window.DOMPurify==='undefined')throw new Error('Markdown rendering library unavailable');
+  window.marked.setOptions({gfm:true,breaks:false});
+  const html=window.DOMPurify.sanitize(window.marked.parse(markdown));
+  out.innerHTML=html;
+  const blocks=Array.from(out.querySelectorAll('pre > code.language-mermaid'));
+  if(blocks.length){
+    try{
+      const mermaid=(await import('https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs')).default;
+      mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'neutral'});
+      for(const block of blocks){const pre=block.parentElement,container=document.createElement('div');container.className='mermaid';container.textContent=block.textContent;pre.replaceWith(container)}
+      await mermaid.run({querySelector:'.mermaid'});
+    }catch(err){console.warn('Mermaid diagram rendered as code fallback',err)}
+  }
+  status.textContent='Lesson loaded · Source: GitHub Markdown';
+}catch(err){
+  console.error(err);
+  status.textContent='Unable to load lesson automatically';
+  out.innerHTML='<h2>Lesson temporarily unavailable</h2><p>The Markdown source could not be loaded. Open the source link above, or retry later.</p>';
+}
+</script></body></html>
