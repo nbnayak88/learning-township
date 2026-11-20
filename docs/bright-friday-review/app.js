@@ -53,4 +53,19 @@ $('application').onsubmit=async e=>{e.preventDefault();if(busy||!selected)return
 window.addEventListener('storage',e=>{if(e.key===KEY){bookings=readBookings();if(data)render();}});
 let scheduled=false;function progress(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{const d=document.documentElement,range=d.scrollHeight-d.clientHeight;$('progress').style.transform=`scaleX(${range>0?Math.min(1,Math.max(0,d.scrollTop/range)):0})`;scheduled=false;});}
 addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);new ResizeObserver(progress).observe(document.body);
-fetch('catalog.json').then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json();}).then(d=>{data=d;render();progress();}).catch(()=>{$('load-error').textContent='Seat catalog could not be loaded. Please reload the page.';});
+fetch('catalog.json').then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json();}).then(d=>{data=d;render();renderLabExplorer();progress();}).catch(()=>{$('load-error').textContent='Seat catalog could not be loaded. Please reload the page.';});
+
+function renderLabExplorer(){
+ $('explore-lab-cards').replaceChildren(...data.labs.map(l=>{
+  const card=document.createElement('article'),title=document.createElement('h3'),official=document.createElement('p'),purpose=document.createElement('p'),outcome=document.createElement('p'),open=document.createElement('button');
+  title.textContent=l.id.replace('SL','L')+' · '+l.code+' · '+l.name;official.className='lab-official';official.textContent=l.official;purpose.textContent=l.purpose;outcome.textContent='You create: '+l.outcome;
+  open.type='button';open.textContent='Explore '+l.code;open.dataset.exploreLab=l.id;open.onclick=()=>openLab(l,open);card.append(title,official,purpose,outcome,open);return card;
+ }));
+}
+let labTrigger=null;
+function openLab(l,trigger){
+ labTrigger=trigger;$('lab-explorer-title').textContent=l.id.replace('SL','L')+' · '+l.code+' · '+l.official;$('lab-explorer-purpose').textContent=l.purpose;$('lab-explorer-external').href=l.url;$('lab-explorer-frame').title=l.official+' app';$('lab-explorer-frame').src=l.url;$('lab-explorer').showModal();
+}
+function cleanupLab(){$('lab-explorer-frame').removeAttribute('src');if(labTrigger?.isConnected)labTrigger.focus();}
+$('lab-explorer-close').onclick=()=>$('lab-explorer').close();
+$('lab-explorer').addEventListener('close',cleanupLab);

@@ -9,3 +9,8 @@
 
 /* Original uploaded maps, displayed directly with no external design references. */
 .domain-mindmap{display:flex;flex-direction:column;align-items:stretch;gap:16px}.domain-mindmap img{display:block;width:100%;max-width:1536px;height:auto;margin:auto;border-radius:12px}.domain-mindmap>a{display:block;width:100%;min-width:0}.domain-mindmap figcaption{width:100%}.domain-mindmap figcaption h3{font-size:1.1rem}.domain-mindmap figcaption p{margin:8px 0}
+
+.page-links{margin:0 0 22px;gap:12px}.page-links a{display:inline-flex;align-items:center;padding:12px 16px;min-height:44px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--white);font-size:.875rem}.page-links a:hover{background:hsl(90 80% 90%)}
+.explore-lab-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:24px 0}.explore-lab-cards article{display:flex;flex-direction:column;min-width:0;margin:0}.explore-lab-cards h3{font-size:1.1rem;line-height:1.6;margin:0 0 10px}.explore-lab-cards p{font-size:.875rem;margin:8px 0}.explore-lab-cards .lab-official{font-weight:700}.explore-lab-cards button{margin-top:auto;background:linear-gradient(110deg,var(--lime),hsl(135 65% 79%));font-weight:700}
+#explore-labs{scroll-margin-top:180px}#lab-explorer{width:min(1400px,96vw);height:88vh;max-height:92vh;overflow:auto}#lab-explorer[open]{display:flex;flex-direction:column}#lab-explorer p{margin:8px 0}#lab-explorer-frame{flex:1;min-height:280px;width:100%;margin-top:12px}#lab-explorer-title{overflow-wrap:anywhere}
+@media(max-width:1100px){.explore-lab-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.explore-lab-cards{grid-template-columns:1fr}#lab-explorer{padding:12px}.page-links a{width:100%;justify-content:center}}
