@@ -35,6 +35,8 @@ jobs:
           mkdir -p _site
           rsync -a --exclude=.git --exclude=_site --exclude=.github --exclude=docs ./ _site/
           cp -a docs/. _site/
+          mkdir -p _site/docs/superlabs
+          cp docs/superlabs/index.html _site/docs/superlabs/index.html
           touch _site/.nojekyll
           test -s _site/thr81-checklist/index.html
           echo "THR81 and docs content staged for GitHub Pages"
@@ -42,7 +44,9 @@ jobs:
         run: |
           test -s _site/thr81-checklist/index.html
           test -s _site/qualtrics-ex-demo/index.html
-          echo "Static site entry points present"
+          test -s _site/superlabs/index.html
+          test -s _site/docs/superlabs/index.html
+          echo "Static site entry points present, including both SuperLabs URLs"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
