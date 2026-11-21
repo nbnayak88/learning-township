@@ -16,11 +16,11 @@ function saveRegistration(p){
  const sheet=SpreadsheetApp.openById(SHEET_ID).getSheetByName('Registrations');
  if(!sheet)throw Error('Registration log unavailable.');
  const count=sheet.getLastRow();
- if(count>1){const ids=sheet.getRange(2,2,count-1,1).getDisplayValues().flat();if(ids.includes(requestId))return {ok:true,reference:requestId};}
+ if(count>1){const ids=sheet.getRange(2,2,count-1,1).getDisplayValues().flat();if(ids.includes(requestId))return {ok:true,reference:requestId,tagmango:sheet.getRange(ids.indexOf(requestId)+2,16).getDisplayValue()};}
  const row=[new Date(),requestId,name,email,phone,domain,stream.id,stream.name,p.sector,lab.code,lab.official,domain+'-'+stream.id+'-'+lab.id,'Yes','New','Selection recorded; seat allocation pending review.'];
  sheet.appendRow(row.map(v=>v instanceof Date?v:safeCell(v)));
  try{syncTagMangoRow(sheet,sheet.getLastRow());}catch(e){sheet.getRange(sheet.getLastRow(),16).setValue('Needs review');}
- return {ok:true,reference:requestId};
+ return {ok:true,reference:requestId,tagmango:sheet.getRange(sheet.getLastRow(),16).getDisplayValue()};
  }finally{lock.releaseLock();}
 }
 function doPost(e){
