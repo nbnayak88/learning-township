@@ -1,4 +1,7 @@
 'use strict';
+// Remove retired checkout markup even when an older HTML response is cached.
+document.querySelector('[aria-label="TagMango registration"]')?.remove();
+document.getElementById('checkout')?.remove();
 const sectors=['Energy','Materials','Industrials','Consumer Discretionary','Consumer Staples','Health Care','Financials','Information Technology','Communication Services','Utilities','Real Estate'];
 const $=id=>document.getElementById(id);const requested=new URLSearchParams(location.search);let data,domain=requested.get('domain')||'HR',streamId=requested.get('stream')||'',selected=null,busy=false;
 let sectorContext=sectors.includes(requested.get('sector'))?requested.get('sector'):sectors[0];
@@ -33,7 +36,7 @@ function render(){
  $('caption').textContent=data.academies.find(a=>a.id===domain).name+' · 12 × 20 seat inventory';
 }
 let trigger;
-function openSeat(seat){trigger=document.activeElement;selected=seat;$('booking-title').textContent=seat.id;$('seat-detail').textContent=seat.stream.name+' · '+seat.lab.official+' · '+sectorContext+(seat.allocated?' · Already demo allocated':' · Available in this demo');$('result').textContent='';$('application').reset();$('sector').value=sectorContext;$('application').querySelector('button').disabled=seat.allocated;$('sheet-status').textContent=registrationEndpoint?'Enter your details once. We will save your selection and request your free TagMango enrollment.':'Registration is temporarily unavailable. Please try again shortly.';$('registration-context').textContent=domain+' · '+seat.stream.id+' · '+sectorContext+' · '+seat.lab.code+' · '+seat.lab.official;$('sheet-registration').hidden=false;$('sheet-submit').disabled=!registrationEndpoint;$('booking').showModal();render();}
+function openSeat(seat){trigger=document.activeElement;selected=seat;$('booking-title').textContent=seat.id;$('seat-detail').textContent=seat.stream.name+' · '+seat.lab.official+' · '+sectorContext+(seat.allocated?' · Already demo allocated':' · Available in this demo');$('result').textContent='';$('application').reset();$('sector').value=sectorContext;$('application').querySelector('button').disabled=seat.allocated;$('sheet-status').textContent=registrationEndpoint?'Enter your details once. We will save your selection and request your free TagMango enrollment.':'Registration is temporarily unavailable. Please try again shortly.';$('registration-context').textContent=domain+' · '+seat.stream.id+' · '+sectorContext+' · '+seat.lab.code+' · '+seat.lab.official;$('sheet-registration').hidden=false;$('sheet-registration').style.display='';$('sheet-submit').disabled=!registrationEndpoint;$('booking').showModal();render();}
 function closeSeat(){$('booking').close();const seatButton=Array.from(document.querySelectorAll('[data-seat]')).find(b=>b.dataset.seat===selected?.id);if(seatButton)seatButton.focus();}
 $('close').onclick=closeSeat;$('booking').addEventListener('cancel',()=>{});
 $('domain-select').onchange=e=>changeDomain(e.target.value);$('stream-select').onchange=e=>{streamId=e.target.value;selected=null;render();};
@@ -97,7 +100,7 @@ addEventListener('message',event=>{
  const confirmed=response.tagmango==='Synced';
  $('sheet-status').textContent=(confirmed?'Registration complete. Your free TagMango enrollment is confirmed. ':'Your learning selection is saved. TagMango enrollment has not been confirmed yet; please do not submit another form. ')+
  'Reference: '+response.reference+'. Lab seat allocation is pending review.';
- $('sheet-registration').hidden=true;
+ $('sheet-registration').hidden=true;$('sheet-registration').style.display='none';
  pendingRegistration=null;
  }
  else{$('sheet-status').textContent=response.error||'Registration could not be saved.';$('sheet-submit').disabled=false;}
