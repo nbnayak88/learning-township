@@ -34,7 +34,7 @@ function render(){
  $('caption').textContent=data.academies.find(a=>a.id===domain).name+' · 12 × 20 seat inventory';
 }
 let trigger;
-function openSeat(seat){trigger=document.activeElement;selected=seat;$('booking-title').textContent=seat.id;$('seat-detail').textContent=seat.stream.name+' · '+seat.lab.official+' · '+sectorContext+(seat.allocated?' · Already demo allocated':' · Available in this demo');$('result').textContent='';$('application').reset();$('sector').value=sectorContext;$('application').querySelector('button').disabled=seat.allocated;$('checkout').src=CHECKOUT;$('booking').showModal();render();}
+function openSeat(seat){trigger=document.activeElement;selected=seat;$('booking-title').textContent=seat.id;$('seat-detail').textContent=seat.stream.name+' · '+seat.lab.official+' · '+sectorContext+(seat.allocated?' · Already demo allocated':' · Available in this demo');$('result').textContent='';$('application').reset();$('sector').value=sectorContext;$('application').querySelector('button').disabled=seat.allocated;$('registration-context').textContent=domain+' · '+seat.stream.id+' · '+sectorContext+' · '+seat.lab.code+' · '+seat.lab.official;$('booking').showModal();render();}
 function closeSeat(){$('booking').close();$('checkout').removeAttribute('src');const seatButton=Array.from(document.querySelectorAll('[data-seat]')).find(b=>b.dataset.seat===selected?.id);if(seatButton)seatButton.focus();}
 $('close').onclick=closeSeat;$('booking').addEventListener('cancel',()=>{$('checkout').removeAttribute('src');});
 $('domain-select').onchange=e=>changeDomain(e.target.value);$('stream-select').onchange=e=>{streamId=e.target.value;selected=null;render();};
@@ -72,3 +72,28 @@ function openLab(l,trigger){
 function cleanupLab(){$('lab-explorer-frame').removeAttribute('src');if(labTrigger?.isConnected)labTrigger.focus();}
 $('lab-explorer-close').onclick=()=>$('lab-explorer').close();
 $('lab-explorer').addEventListener('close',cleanupLab);
+
+let registrationEndpoint='',pendingRegistration=null;
+fetch('registration-config.json').then(r=>r.json()).then(config=>{
+ if(/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(config.endpoint||'')){
+ registrationEndpoint=config.endpoint;$('sheet-submit').disabled=false;$('sheet-status').textContent='Your selections will be saved privately for review.';
+ }
+}).catch(()=>{});
+$('sheet-registration').onsubmit=e=>{
+ e.preventDefault();if(!registrationEndpoint||!selected||pendingRegistration?.waiting)return;
+ const formData=new FormData(e.target);
+ if(!pendingRegistration)pendingRegistration={requestId:crypto.randomUUID()};
+ pendingRegistration.waiting=true;
+ const payload={name:formData.get('name'),email:formData.get('email'),phone:formData.get('phone'),consent:formData.get('consent')?'yes':'',website:formData.get('website'),domain,stream:selected.stream.id,sector:sectorContext,lab:selected.lab.id,requestId:pendingRegistration.requestId};
+ const post=document.createElement('form');post.method='POST';post.action=registrationEndpoint;post.target='sheet-response';post.hidden=true;
+ for(const [name,value] of Object.entries(payload)){const field=document.createElement('input');field.type='hidden';field.name=name;field.value=value;post.append(field);}
+ document.body.append(post);$('sheet-submit').disabled=true;$('sheet-status').textContent='Saving your registration…';post.submit();post.remove();
+ pendingRegistration.timer=setTimeout(()=>{pendingRegistration.waiting=false;$('sheet-submit').disabled=false;$('sheet-status').textContent='Save confirmation has not arrived. You can retry; the same reference prevents duplicate rows.';},45000);
+};
+addEventListener('message',event=>{
+ const originOK=event.origin==='https://script.google.com'||/^https:\/\/[a-zA-Z0-9-]+\.googleusercontent\.com$/.test(event.origin);
+ const response=event.data;if(!originOK||!pendingRegistration||response?.type!=='bright-friday-registration'||response.requestId!==pendingRegistration.requestId)return;
+ clearTimeout(pendingRegistration.timer);pendingRegistration.waiting=false;
+ if(response.ok){$('sheet-status').textContent='Registration saved. Reference: '+response.reference+'. Your selection is pending review; no seat has been allocated.';$('sheet-registration').reset();pendingRegistration=null;$('sheet-submit').disabled=false;}
+ else{$('sheet-status').textContent=response.error||'Registration could not be saved.';$('sheet-submit').disabled=false;}
+});
