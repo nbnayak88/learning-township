@@ -17,9 +17,12 @@ I'm Dr. Niladri Bihari Nayak. I've built these systems for global enterprises. A
 
 If you're ready to do the work, join us. Day 1 starts now."
 
+Three bonuses follow: business case, fit-to-standard delivery, and your capstone portfolio.
+
 ## Visuals brief
 1. Black frame, 132 counts up, snaps to 12 x 11 grid
 2. Grid of 12 academy icons, ring of 11 sector icons
 3. Six concept cards fly into a single mind map
 4. Day 1 / Day 2 / Day 3 badges with 5 video dots each
-5. End card: "Architecting for a Better World" and CTA to join the Inner Circle
+5. Three bonus cards (Business Case, Fit-to-Standard, Portfolio) slide in
+6. End card: "Architecting for a Better World" and CTA to join the Inner Circle

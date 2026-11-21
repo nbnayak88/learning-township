@@ -258,3 +258,13 @@ Summary: Business AI, Joule and AI Agents bring assistance, automation and next-
 - **C4**: Sector lens: Utilities and Telecom need usage-based billing at scale; Industrials need contract-based and project billing.
 - **C5**: Sector lens: Information Technology tracks product-usage signals; Health Care tracks access, wait time and satisfaction.
 - **C6**: Sector lens: Financial Services requires explainable AI and strict consent; Energy integrates with operational and metering systems.
+
+## Bonus track: 3 bonuses x 3 videos = 9 videos
+
+After Day 3, each bonus extends the 132-course map with one tactical concept. Use it on any course ID.
+
+| Bonus | Concept | Tool | Videos |
+|---|---|---|---|
+| Bonus 1 | Build the Cx Transformation Business Case | Cx Value Case Canvas (Excel) from the Codex | B1V1 Intro, B1V2 In-Depth (20-30 min), B1V3 Outro |
+| Bonus 2 | Deliver with Fit-to-Standard and Clean Core (SAP Activate) | Fit-Gap Matrix and the SAP Activate six-phase checklist (Codex) | B2V1 Intro, B2V2 In-Depth (20-30 min), B2V3 Outro |
+| Bonus 3 | Land Adoption and Your Capstone Portfolio | Capstone Portfolio Codex and Adoption Scorecard | B3V1 Intro, B3V2 In-Depth (20-30 min), B3V3 Outro |
