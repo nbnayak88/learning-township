@@ -41,7 +41,7 @@ function doPost(e){
  const payload=JSON.stringify(result).replace(/</g,'\\u003c');
  return HtmlService.createHtmlOutput('<!doctype html><p>Registration processed. Return to Bright Friday.</p><script>window.top.postMessage('+payload+',"https://nbnayak88.github.io");</'+'script>').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
-function doGet(){return ContentService.createTextOutput('Bright Friday registration endpoint. Submit using the website form.');}
+function doGet(){return ContentService.createTextOutput('Bright Friday backend v2026-11-21.4 — single registration with duplicate checks.');}
 
 const TAGMANGO_MANGO_ID = '694af8798dd872a219700dd3';
 function splitInternationalPhone(value) {
@@ -82,7 +82,7 @@ function syncTagMangoRow(sheet,rowNumber) {
   sheet.getRange(rowNumber,16,1,4).setValues([['Synced',new Date(),safeCell(result.result.userId||''),'Free Bright Friday service enrollment confirmed.']]);
  } catch(e) {
   // Do not blindly retry an ambiguous enrollment: inspect TagMango first.
-  sheet.getRange(rowNumber,16,1,4).setValues([['Needs review','','','Check TagMango before retrying. No credentials or API response logged.']]);
+  sheet.getRange(rowNumber,16,1,4).setValues([['Needs review','','','Enrollment exception: '+(String(e.message||'').match(/permission|authorize|scope/i)?'Google permission or authorization required':String(e.message||'').includes('Unrecognized')?'TagMango returned non-JSON response':'Network or runtime error')+'. Check Apps Script connection diagnostic before retrying.']]);
  }
 }
 
@@ -138,4 +138,19 @@ function tagMangoContactExists(email,phone){
   }
  }
  return false;
+}
+
+
+// Run manually from the Apps Script editor. Read-only: no enrollment or sheet writes.
+function diagnoseTagMangoConnection(){
+ const props=PropertiesService.getScriptProperties();
+ console.log('Backend version: 2026-11-21.4');
+ console.log('Enrollment key configured: '+Boolean(props.getProperty('TAGMANGO_API_KEY')));
+ console.log('Separate read key configured: '+Boolean(props.getProperty('TAGMANGO_READ_API_KEY')));
+ try {
+  tagMangoContactExists('connection-check@example.invalid','+919000000001');
+  console.log('Read-only duplicate lookup: passed. No customer created.');
+ }catch(e){
+  console.log('Read-only connection diagnostic: '+String(e.message||'Unknown error'));
+ }
 }
