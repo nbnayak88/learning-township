@@ -62,7 +62,12 @@ function syncTagMangoRow(sheet,rowNumber) {
   });
   let result;try{result=JSON.parse(response.getContentText());}catch(e){throw Error('Unrecognized API response');}
   const ok=response.getResponseCode()>=200&&response.getResponseCode()<300&&result.type==='OK'&&result.result?.status==='Success';
-  if(!ok)throw Error('API did not confirm enrollment (HTTP '+response.getResponseCode()+')');
+  if(!ok){
+   const status=response.getResponseCode();
+   const diagnostic=status===401||status===403?'API authentication or permission rejected':status===400?'Request or service validation rejected':status===429?'TagMango rate limit':status>=500?'TagMango server error':'Unexpected TagMango response';
+   sheet.getRange(rowNumber,16,1,4).setValues([['Needs review','','','HTTP '+status+' · '+diagnostic+' · response code: '+String(result.code||'unknown').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,40)]]);
+   return;
+  }
   sheet.getRange(rowNumber,16,1,4).setValues([['Synced',new Date(),safeCell(result.result.userId||''),'Free Bright Friday service enrollment confirmed.']]);
  } catch(e) {
   // Do not blindly retry an ambiguous enrollment: inspect TagMango first.
