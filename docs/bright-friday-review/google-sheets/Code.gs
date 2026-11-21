@@ -5,8 +5,8 @@ function clean(value,max){return String(value||'').trim().slice(0,max);}
 function safeCell(value){const s=String(value);return /^[=+@-]/.test(s)?"'"+s:s;}
 function saveRegistration(p){
  if(p.website)throw Error('Submission rejected.');
- const name=clean(p.name,80),email=clean(p.email,254).toLowerCase(),phone=clean(p.phone,24).replace(/[\\s().-]/g,'');
- if(!name||!/^\\S+@\\S+\\.\\S+$/.test(email)||!/^\\+[1-9]\\d{7,14}$/.test(phone)||p.consent!=='yes')throw Error('Please complete name, email, international phone and consent.');
+ const name=clean(p.name,80),email=clean(p.email,254).toLowerCase(),phone=clean(p.phone,24).replace(/[\s().-]/g,'');
+ if(!name||!/^\S+@\S+\.\S+$/.test(email)||!/^\+[1-9]\d{7,14}$/.test(phone)||p.consent!=='yes')throw Error('Please complete name, email, international phone and consent.');
  const domain=clean(p.domain,8),stream=(CATALOG.mappings[domain]||[]).find(s=>s.id===p.stream),lab=CATALOG.labs.find(l=>l.id===p.lab);
  if(!stream||!lab||!SECTORS.includes(p.sector))throw Error('Invalid learning selection.');
  const requestId=clean(p.requestId,80);
