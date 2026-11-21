@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 700" font-family="Arial">
+<rect width="1900" height="700" fill="#FFFFFF"/>
+<path d="M950.0 350.0 C1100.0 350.0 1130.0 234.0 1280.0 234.0" stroke="#0F8B8D" stroke-width="4" fill="none"/>
+<path d="M1280.0 234.0 C1340.0 234.0 1360.0 165.0 1400.0 165.0" stroke="#0F8B8D" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="148.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#0F8B8D"/>
+<text x="1600.0" y="169.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Welcome</text>
+<path d="M1280.0 234.0 C1340.0 234.0 1360.0 211.0 1400.0 211.0" stroke="#0F8B8D" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="194.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#0F8B8D"/>
+<text x="1600.0" y="215.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Watch the previous course</text>
+<path d="M1280.0 234.0 C1340.0 234.0 1360.0 257.0 1400.0 257.0" stroke="#0F8B8D" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="240.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#0F8B8D"/>
+<text x="1600.0" y="261.0" font-size="13" text-anchor="middle" fill="#1B1B1B">What is this course all about</text>
+<path d="M1280.0 234.0 C1340.0 234.0 1360.0 303.0 1400.0 303.0" stroke="#0F8B8D" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="286.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#0F8B8D"/>
+<text x="1600.0" y="307.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Finish in one sitting</text>
+<rect x="1140.0" y="214.0" width="280" height="30" rx="14" fill="#0F8B8D"/>
+<text x="1280.0" y="236.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">B2V1: Welcome / Intro</text>
+<path d="M950.0 350.0 C1100.0 350.0 1130.0 442.0 1280.0 442.0" stroke="#6C5B7B" stroke-width="4" fill="none"/>
+<path d="M1280.0 442.0 C1340.0 442.0 1360.0 373.0 1400.0 373.0" stroke="#6C5B7B" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="356.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#6C5B7B"/>
+<text x="1600.0" y="377.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Congratulate learners</text>
+<path d="M1280.0 442.0 C1340.0 442.0 1360.0 419.0 1400.0 419.0" stroke="#6C5B7B" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="402.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#6C5B7B"/>
+<text x="1600.0" y="423.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Ask them to share their biggest learnings (pause and...</text>
+<path d="M1280.0 442.0 C1340.0 442.0 1360.0 465.0 1400.0 465.0" stroke="#6C5B7B" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="448.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#6C5B7B"/>
+<text x="1600.0" y="469.0" font-size="13" text-anchor="middle" fill="#1B1B1B">L3 certification / high-ticket coaching: link to...</text>
+<path d="M1280.0 442.0 C1340.0 442.0 1360.0 511.0 1400.0 511.0" stroke="#6C5B7B" stroke-width="1.5" fill="none"/>
+<rect x="1400.0" y="494.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#6C5B7B"/>
+<text x="1600.0" y="515.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Go to the next course: Bonus 3</text>
+<rect x="1140.0" y="422.0" width="280" height="30" rx="14" fill="#6C5B7B"/>
+<text x="1280.0" y="444.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">B2V3: Outro</text>
+<path d="M950.0 350.0 C800.0 350.0 770.0 338.0 620.0 338.0" stroke="#F2A541" stroke-width="4" fill="none"/>
+<path d="M620.0 338.0 C560.0 338.0 540.0 200.0 500.0 200.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="183.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="204.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Take notes / share towards the end</text>
+<path d="M620.0 338.0 C560.0 338.0 540.0 246.0 500.0 246.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="229.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="250.0" font-size="13" text-anchor="middle" fill="#1B1B1B">What is the concept?</text>
+<path d="M620.0 338.0 C560.0 338.0 540.0 292.0 500.0 292.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="275.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="296.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Why is it important?</text>
+<path d="M620.0 338.0 C560.0 338.0 540.0 338.0 500.0 338.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="321.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="342.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Benefits of implementing it the right way</text>
+<path d="M620.0 338.0 C560.0 338.0 540.0 384.0 500.0 384.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="367.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="388.0" font-size="13" text-anchor="middle" fill="#1B1B1B">How to do it? Tactical</text>
+<path d="M620.0 338.0 C560.0 338.0 540.0 430.0 500.0 430.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="413.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="434.0" font-size="13" text-anchor="middle" fill="#1B1B1B">Resources: Tool (Fit-Gap Matrix and the SAP Activate...</text>
+<path d="M620.0 338.0 C560.0 338.0 540.0 476.0 500.0 476.0" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+<rect x="100.0" y="459.0" width="400" height="34" rx="8" fill="#FFFFFF" stroke="#F2A541"/>
+<text x="300.0" y="480.0" font-size="13" text-anchor="middle" fill="#1B1B1B">CTA: share your notes below; next video</text>
+<rect x="480.0" y="282.0" width="280" height="70" rx="14" fill="#F2A541"/>
+<text x="620.0" y="304.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">B2V2: In-Depth Concept:</text>
+<text x="620.0" y="322.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Deliver with Fit-to-Standard</text>
+<text x="620.0" y="340.0" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">and Clean Core (SAP Activate)</text>
+<circle cx="950.0" cy="350.0" r="95" fill="#14213D"/>
+<text x="950.0" y="335.0" font-size="17" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Bonus 2: Fit-to-</text>
+<text x="950.0" y="356.0" font-size="17" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Standard</text>
+<text x="950.0" y="377.0" font-size="17" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Delivery</text>
+</svg>
