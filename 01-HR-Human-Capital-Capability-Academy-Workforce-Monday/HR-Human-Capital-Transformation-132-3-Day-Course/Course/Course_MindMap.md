@@ -35,4 +35,13 @@ mindmap
       5 videos
     Day 3 C4-6 + Journey
       5 videos
+    Bonus 1: Business Case
+      3 videos
+      Hr Value Case Canvas Excel from the Codex
+    Bonus 2: Fit-to-Standard Delivery
+      3 videos
+      Fit-Gap Matrix and the SAP Activate six-phase checklist Codex
+    Bonus 3: Adoption and Portfolio
+      3 videos
+      Capstone Portfolio Codex and Adoption Scorecard
 ```

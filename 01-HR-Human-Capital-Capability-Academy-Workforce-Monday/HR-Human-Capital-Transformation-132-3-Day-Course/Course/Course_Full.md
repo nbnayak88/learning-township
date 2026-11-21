@@ -511,3 +511,312 @@ Congratulations! You completed all three days. [pause]
 
 ---
 
+
+
+# Bonus 1: Build the Hr Transformation Business Case
+*Human Capital Transformation Capability*
+
+## Outline
+
+### B1 V1: Welcome / Intro (5-6 min)
+- Welcome
+- Watch the previous course
+- What is this course all about
+- Finish in one sitting
+
+### B1 V2: In-Depth Concept: Build the Hr Transformation Business Case (20-30 min)
+- Take notes / share towards the end
+- What is the concept?
+- Why is it important?
+- Benefits of implementing it the right way
+- How to do it? Tactical
+- Resources: Tool (Hr Value Case Canvas (Excel) from the Codex)
+- CTA: share your notes below; next video
+
+### B1 V3: Outro (5-6 min)
+- Congratulate learners
+- Ask them to share their biggest learnings (pause and share)
+- L3 certification / high-ticket coaching: link to waitlist / Zoom showcase
+- Go to the next course: Bonus 2
+
+## Coach scripts
+
+### B1 V1: Welcome / Intro
+*Duration: 5-6 min*
+
+**Hook:** One concept. Twenty to thirty minutes. Real results.
+
+Welcome to Bonus 1! I'm so glad you're still here.
+
+**Watch the previous course.** This bonus builds on the core 3-day course (Human Capital Transformation Capability). If you have not finished it, pause now and watch it first. It will make this much more powerful. [pause]
+
+**What is this course all about?** In this bonus we cover one concept: **Build the Hr Transformation Business Case**. You will leave with a tactical, step-by-step method, a tool to use today, and an assignment that proves you can do it.
+
+**Finish in one sitting.** Block 40 minutes, close other tabs and watch the next video in one go. Momentum is a learning tool.
+
+See you in the next video.
+
+**Cues:** Title card; Previous-course link
+**Closing CTA:** Watch the next video in one sitting.
+
+---
+
+### B1 V2: In-Depth Concept: Build the Hr Transformation Business Case
+*Duration: 20-30 min*
+
+**Hook:** Business Case is where theory becomes income and impact.
+
+**Take notes.** Keep a page open. Write three things as we go and share them towards the end. [pause]
+
+**1. What is the concept?** (about 3 min)
+A business case is a one-page, CHRO and CFO-ready argument that links a people change to money, risk and growth. It names the problem, the cost of doing nothing, the benefit, the investment and the proof. [show slide]
+
+**2. Why is it important?** (about 4 min)
+Good designs die in budget meetings. Leaders fund outcomes, not modules. If you can express a HR transformation idea in their language (cost, risk, revenue, speed), your design gets built. Here is what I have seen. A mid-size firm had a sound HR transformation design that stalled for a year. One page with three numbers and one owner per benefit got it approved in a single meeting.
+
+**3. Benefits of implementing it the right way** (about 3 min)
+When this is done well: Faster funding and sponsor commitment; Clear success measures from day one; Fewer scope arguments because value is agreed; A career-defining skill that moves you from consultant to advisor. [on screen: benefits]
+
+**4. How to do it? Tactical** (about 10-12 min)
+Follow these steps in order. Pause the video at each step and do it. [screen share]
+1. Pick one of the 132 courses and sector, for example Energy (AWF1-EN) or Financial Services (APE7-FS).
+2. Write the problem in one sentence with one number.
+3. Quantify the cost of doing nothing (cost, risk, lost revenue).
+4. List 3 benefits and attach a KPI and an owner to each.
+5. Estimate the investment (people, licences, change) and a range, not a point.
+6. Add risks and the simplest mitigation for each.
+7. Write the 60-second story for the CHRO and CFO: problem, impact, option, ask.
+
+**5. Resources and tool** (about 3 min)
+Your tool for this bonus: **Hr Value Case Canvas (Excel) from the Codex**. Open it from the Codex linked below. [on screen: tool walkthrough] Assignment: write a one-page HR value case for one course ID of your choice. Submit the canvas and your 60-second story.
+
+**CTA.** Share your notes below: three lines on what you learned, what surprised you and what you will do first. Next video: the outro.
+
+**Cues:** Concept slide; Tactical steps slide; Tool walkthrough
+**Closing CTA:** Share your notes below.
+
+---
+
+### B1 V3: Outro
+*Duration: 5-6 min*
+
+**Hook:** You just did something most people only talk about.
+
+Congratulations on completing Bonus 1! [pause]
+
+**Share your biggest learning.** Post it below now. [pause and share] Read two other learners' posts and reply to one.
+
+**Go further.** If you want me to guide you personally to Star level through my L3 certification and high-ticket coaching, join the waitlist or the Zoom showcase: [L3 certification waitlist / Zoom showcase link: add]
+
+**Next.** Go to the next course: Bonus 2. See you there!
+
+**Cues:** Waitlist link; Next-course card
+**Closing CTA:** Join the waitlist; go to Bonus 2.
+
+---
+
+
+# Bonus 2: Deliver with Fit-to-Standard and Clean Core (SAP Activate)
+*Human Capital Transformation Capability*
+
+## Outline
+
+### B2 V1: Welcome / Intro (5-6 min)
+- Welcome
+- Watch the previous course
+- What is this course all about
+- Finish in one sitting
+
+### B2 V2: In-Depth Concept: Deliver with Fit-to-Standard and Clean Core (SAP Activate) (20-30 min)
+- Take notes / share towards the end
+- What is the concept?
+- Why is it important?
+- Benefits of implementing it the right way
+- How to do it? Tactical
+- Resources: Tool (Fit-Gap Matrix and the SAP Activate six-phase checklist (Codex))
+- CTA: share your notes below; next video
+
+### B2 V3: Outro (5-6 min)
+- Congratulate learners
+- Ask them to share their biggest learnings (pause and share)
+- L3 certification / high-ticket coaching: link to waitlist / Zoom showcase
+- Go to the next course: Bonus 3
+
+## Coach scripts
+
+### B2 V1: Welcome / Intro
+*Duration: 5-6 min*
+
+**Hook:** One concept. Twenty to thirty minutes. Real results.
+
+Welcome to Bonus 2! I'm so glad you're still here.
+
+**Watch the previous course.** This bonus builds on Bonus 1. If you have not finished it, pause now and watch it first. It will make this much more powerful. [pause]
+
+**What is this course all about?** In this bonus we cover one concept: **Deliver with Fit-to-Standard and Clean Core (SAP Activate)**. You will leave with a tactical, step-by-step method, a tool to use today, and an assignment that proves you can do it.
+
+**Finish in one sitting.** Block 40 minutes, close other tabs and watch the next video in one go. Momentum is a learning tool.
+
+See you in the next video.
+
+**Cues:** Title card; Previous-course link
+**Closing CTA:** Watch the next video in one sitting.
+
+---
+
+### B2 V2: In-Depth Concept: Deliver with Fit-to-Standard and Clean Core (SAP Activate)
+*Duration: 20-30 min*
+
+**Hook:** Fit-to-Standard Delivery is where theory becomes income and impact.
+
+**Take notes.** Keep a page open. Write three things as we go and share them towards the end. [pause]
+
+**1. What is the concept?** (about 3 min)
+Fit-to-standard means testing business requirements against the standard solution first and only building where there is a real gap. SAP Activate organises delivery into six phases: Discover, Prepare, Explore, Realize, Deploy, Run. Clean core keeps extensions upgrade-safe. [show slide]
+
+**2. Why is it important?** (about 4 min)
+Customisation is the quiet reason projects run late and over budget. A disciplined fit-gap keeps scope honest, protects upgrades and lets you reuse one design across many sectors. Here is what I have seen. A project arrived at Realize with 140 'gaps'. A structured fit-gap showed 90 were standard behaviour that nobody had demonstrated. The build shrank by two thirds and went live on time.
+
+**3. Benefits of implementing it the right way** (about 3 min)
+When this is done well: Shorter, more predictable delivery; Lower cost of ownership and safer upgrades; Clear decisions on what to configure, extend or defer; Reusable designs across the 11 sectors. [on screen: benefits]
+
+**4. How to do it? Tactical** (about 10-12 min)
+Follow these steps in order. Pause the video at each step and do it. [screen share]
+1. List requirements as short, testable statements.
+2. Run each against standard: Fit, Configure, Gap.
+3. For every Gap choose: adopt standard, extend in a clean-core way, or defer.
+4. Record the decision, owner and effort in the Fit-Gap Matrix.
+5. Map decisions to the six Activate phases and their quality gates.
+6. Review the matrix with the business before Explore ends.
+7. Keep the matrix alive in Run as the change log.
+
+**5. Resources and tool** (about 3 min)
+Your tool for this bonus: **Fit-Gap Matrix and the SAP Activate six-phase checklist (Codex)**. Open it from the Codex linked below. [on screen: tool walkthrough] Assignment: take 10 requirements from any course in the catalog, classify each as Fit / Configure / Gap, and decide the clean-core option for every gap.
+
+**CTA.** Share your notes below: three lines on what you learned, what surprised you and what you will do first. Next video: the outro.
+
+**Cues:** Concept slide; Tactical steps slide; Tool walkthrough
+**Closing CTA:** Share your notes below.
+
+---
+
+### B2 V3: Outro
+*Duration: 5-6 min*
+
+**Hook:** You just did something most people only talk about.
+
+Congratulations on completing Bonus 2! [pause]
+
+**Share your biggest learning.** Post it below now. [pause and share] Read two other learners' posts and reply to one.
+
+**Go further.** If you want me to guide you personally to Star level through my L3 certification and high-ticket coaching, join the waitlist or the Zoom showcase: [L3 certification waitlist / Zoom showcase link: add]
+
+**Next.** Go to the next course: Bonus 3. See you there!
+
+**Cues:** Waitlist link; Next-course card
+**Closing CTA:** Join the waitlist; go to Bonus 3.
+
+---
+
+
+# Bonus 3: Land Adoption and Your Capstone Portfolio
+*Human Capital Transformation Capability*
+
+## Outline
+
+### B3 V1: Welcome / Intro (5-6 min)
+- Welcome
+- Watch the previous course
+- What is this course all about
+- Finish in one sitting
+
+### B3 V2: In-Depth Concept: Land Adoption and Your Capstone Portfolio (20-30 min)
+- Take notes / share towards the end
+- What is the concept?
+- Why is it important?
+- Benefits of implementing it the right way
+- How to do it? Tactical
+- Resources: Tool (Capstone Portfolio Codex and Adoption Scorecard)
+- CTA: share your notes below; next video
+
+### B3 V3: Outro (5-6 min)
+- Congratulate learners
+- Ask them to share their biggest learnings (pause and share)
+- L3 certification / high-ticket coaching: link to waitlist / Zoom showcase
+- Go to the next course: [next course: add]
+
+## Coach scripts
+
+### B3 V1: Welcome / Intro
+*Duration: 5-6 min*
+
+**Hook:** One concept. Twenty to thirty minutes. Real results.
+
+Welcome to Bonus 3! I'm so glad you're still here.
+
+**Watch the previous course.** This bonus builds on Bonus 2. If you have not finished it, pause now and watch it first. It will make this much more powerful. [pause]
+
+**What is this course all about?** In this bonus we cover one concept: **Land Adoption and Your Capstone Portfolio**. You will leave with a tactical, step-by-step method, a tool to use today, and an assignment that proves you can do it.
+
+**Finish in one sitting.** Block 40 minutes, close other tabs and watch the next video in one go. Momentum is a learning tool.
+
+See you in the next video.
+
+**Cues:** Title card; Previous-course link
+**Closing CTA:** Watch the next video in one sitting.
+
+---
+
+### B3 V2: In-Depth Concept: Land Adoption and Your Capstone Portfolio
+*Duration: 20-30 min*
+
+**Hook:** Adoption and Portfolio is where theory becomes income and impact.
+
+**Take notes.** Keep a page open. Write three things as we go and share them towards the end. [pause]
+
+**1. What is the concept?** (about 3 min)
+Adoption is the share of people who actually use the new way of working. A capstone portfolio is your proof: three or four artifacts (a map, a case, a fit-gap, a plan) that show you can do the work in a real sector. [show slide]
+
+**2. Why is it important?** (about 4 min)
+A HR transformation that nobody uses delivers nothing, and a learner without proof stays invisible. Adoption turns design into value; the portfolio turns learning into opportunity. Here is what I have seen. A learner posted a three-artifact portfolio for one sector and was invited to a client workshop within a week. The artifacts, not the certificate, opened the door.
+
+**3. Benefits of implementing it the right way** (about 3 min)
+When this is done well: Higher usage and faster time to value; Visible, shareable proof of skill; Stronger interviews, proposals and promotions; A natural path to Pro and Star stages. [on screen: benefits]
+
+**4. How to do it? Tactical** (about 10-12 min)
+Follow these steps in order. Pause the video at each step and do it. [screen share]
+1. Define who must change and what exactly changes for them.
+2. Pick 3 adoption measures (usage, quality, sentiment) and a target.
+3. Plan communication and training per group, in that order.
+4. Create a Champion network of one person per team.
+5. Assemble your portfolio: value case, fit-gap, process or journey map, adoption plan.
+6. Publish it (one page per artifact) and share the link in the community.
+7. Book a review with your accountability partner.
+
+**5. Resources and tool** (about 3 min)
+Your tool for this bonus: **Capstone Portfolio Codex and Adoption Scorecard**. Open it from the Codex linked below. [on screen: tool walkthrough] Assignment: assemble your 3-artifact capstone portfolio for one course ID and share the link with your accountability partner.
+
+**CTA.** Share your notes below: three lines on what you learned, what surprised you and what you will do first. Next video: the outro.
+
+**Cues:** Concept slide; Tactical steps slide; Tool walkthrough
+**Closing CTA:** Share your notes below.
+
+---
+
+### B3 V3: Outro
+*Duration: 5-6 min*
+
+**Hook:** You just did something most people only talk about.
+
+Congratulations on completing Bonus 3! [pause]
+
+**Share your biggest learning.** Post it below now. [pause and share] Read two other learners' posts and reply to one.
+
+**Go further.** If you want me to guide you personally to Star level through my L3 certification and high-ticket coaching, join the waitlist or the Zoom showcase: [L3 certification waitlist / Zoom showcase link: add]
+
+**Next.** Go to the next course: [next course: add]. See you there!
+
+**Cues:** Waitlist link; Next-course card
+**Closing CTA:** Join the waitlist; go to [next course: add].
+
+---

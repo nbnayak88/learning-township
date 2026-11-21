@@ -258,3 +258,13 @@ Summary: Business AI, Joule and AI Agents bring assistance, automation and insig
 - **C4**: Sector lens: Energy and Utilities need shift and standby pay; Real Estate and IT often need project-based and contractor time.
 - **C5**: Sector lens: Consumer Discretionary needs seasonal planning; Communication Services needs fast skill-shift planning.
 - **C6**: Sector lens: Financial Services demands strict AI explainability; Energy needs integration with operational and safety systems.
+
+## Bonus track: 3 bonuses x 3 videos = 9 videos
+
+After Day 3, each bonus extends the 132-course map with one tactical concept. Use it on any course ID.
+
+| Bonus | Concept | Tool | Videos |
+|---|---|---|---|
+| Bonus 1 | Build the Hr Transformation Business Case | Hr Value Case Canvas (Excel) from the Codex | B1V1 Intro, B1V2 In-Depth (20-30 min), B1V3 Outro |
+| Bonus 2 | Deliver with Fit-to-Standard and Clean Core (SAP Activate) | Fit-Gap Matrix and the SAP Activate six-phase checklist (Codex) | B2V1 Intro, B2V2 In-Depth (20-30 min), B2V3 Outro |
+| Bonus 3 | Land Adoption and Your Capstone Portfolio | Capstone Portfolio Codex and Adoption Scorecard | B3V1 Intro, B3V2 In-Depth (20-30 min), B3V3 Outro |
