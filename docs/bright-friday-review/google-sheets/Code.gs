@@ -16,7 +16,18 @@ function saveRegistration(p){
  const sheet=SpreadsheetApp.openById(SHEET_ID).getSheetByName('Registrations');
  if(!sheet)throw Error('Registration log unavailable.');
  const count=sheet.getLastRow();
- if(count>1){const ids=sheet.getRange(2,2,count-1,1).getDisplayValues().flat();if(ids.includes(requestId))return {ok:true,reference:requestId,tagmango:sheet.getRange(ids.indexOf(requestId)+2,16).getDisplayValue()};}
+ if(count>1){
+ const existing=sheet.getRange(2,1,count-1,19).getDisplayValues();
+ const retry=existing.find(r=>r[1]===requestId);
+ if(retry){
+  if(normalizeContactEmail(retry[3])!==email||normalizeContactPhone(retry[4])!==normalizeContactPhone(phone))throw Error('Request reference does not match.');
+  return {ok:true,reference:requestId,tagmango:retry[15]};
+ }
+ if(existing.some(r=>normalizeContactEmail(r[3])===email||normalizeContactPhone(r[4])===normalizeContactPhone(phone)))
+  throw Error('A registration already uses this email or WhatsApp number. Please contact SuccessLabs for help with your existing registration.');
+ }
+ if(tagMangoContactExists(email,phone))
+  throw Error('An existing registration uses this email or WhatsApp number. Please use your existing account or contact SuccessLabs.');
  const row=[new Date(),requestId,name,email,phone,domain,stream.id,stream.name,p.sector,lab.code,lab.official,domain+'-'+stream.id+'-'+lab.id,'Yes','New','Selection recorded; seat allocation pending review.'];
  sheet.appendRow(row.map(v=>v instanceof Date?v:safeCell(v)));
  try{syncTagMangoRow(sheet,sheet.getLastRow());}catch(e){sheet.getRange(sheet.getLastRow(),16).setValue('Needs review');}
@@ -48,7 +59,7 @@ function syncTagMangoRow(sheet,rowNumber) {
  const rows=sheet.getRange(2,1,sheet.getLastRow()-1,19).getValues();
  const row=rows[rowNumber-2],email=String(row[3]).toLowerCase();
  if(row[15]==='Synced'||row[15]==='Needs review'||row[15]==='Sending')return;
- if(rows.some((r,i)=>i!==rowNumber-2&&String(r[3]).toLowerCase()===email&&r[15]==='Synced')){
+ if(rows.some((r,i)=>i!==rowNumber-2&&(normalizeContactEmail(r[3])===email||normalizeContactPhone(r[4])===normalizeContactPhone(row[4]))&&r[15]==='Synced')){
   sheet.getRange(rowNumber,16,1,4).setValues([['Synced',new Date(),'','Already enrolled through an earlier registration.']]);return;
  }
  const contact=splitInternationalPhone(row[4]);
@@ -73,4 +84,58 @@ function syncTagMangoRow(sheet,rowNumber) {
   // Do not blindly retry an ambiguous enrollment: inspect TagMango first.
   sheet.getRange(rowNumber,16,1,4).setValues([['Needs review','','','Check TagMango before retrying. No credentials or API response logged.']]);
  }
+}
+
+function normalizeContactEmail(v){return String(v||'').replace(/^'/,'').trim().toLowerCase();}
+function normalizeContactPhone(v){return String(v||'').replace(/\D/g,'');}
+function tagMangoContactExists(email,phone){
+ const props=PropertiesService.getScriptProperties();
+ const key=props.getProperty('TAGMANGO_READ_API_KEY')||props.getProperty('TAGMANGO_API_KEY');
+ if(!key||!props.getProperty('TAGMANGO_API_KEY'))throw Error('Registration connection is not ready. Please contact SuccessLabs.');
+ const host=props.getProperty('TAGMANGO_HOST')||'hub.successlabsacademy.com';
+ const national=String(splitInternationalPhone(phone).phone),international=normalizeContactPhone(phone);
+ function matches(record){
+  const c=record.customer||record;
+  if(normalizeContactEmail(c.email)===email)return true;
+  const p=normalizeContactPhone(c.phone),dial=normalizeContactPhone(c.dialCode||record.dialCode);
+  return p===international||(p===national&&(!dial||(dial+p)===international));
+ }
+ function read(path,body){
+  const args={method:body?'post':'get',headers:{Authorization:'Bearer '+key,'x-whitelabel-host':host},muteHttpExceptions:true};
+  if(body){args.contentType='application/json';args.payload=JSON.stringify(body);}
+  const response=UrlFetchApp.fetch('https://api-prod-new.tagmango.com/api/v1/external/'+path,args);
+  let result;try{result=JSON.parse(response.getContentText());}catch(e){throw Error('TagMango duplicate check returned an unreadable response. No enrollment was created.');}
+  if(response.getResponseCode()!==200||!Array.isArray(result.data)||result.success===false)
+   throw Error('TagMango duplicate check unavailable (HTTP '+response.getResponseCode()+'). No enrollment was created. Check API read access.');
+  return result;
+ }
+ for(const term of [email,national]){
+  let publicIds=[];try{publicIds=JSON.parse(props.getProperty('TAGMANGO_PUBLIC_MANGO_IDS')||'[]');}catch(e){throw Error('Invalid TagMango public service configuration.');}
+  if(!Array.isArray(publicIds)||publicIds.some(id=>!/^[a-f0-9]{24}$/i.test(id)))throw Error('Invalid TagMango public service configuration.');
+  const scopes=[null,Array.from(new Set([TAGMANGO_MANGO_ID,...publicIds]))];
+  for(const ids of scopes){
+   let total=0,seen=0;
+   for(let page=1;page<=10;page++){
+    const body={status:'all',customerSearch:term,page,limit:100,groupBy:'subscriber'};
+    if(ids)body.mangoIds=ids;
+    const result=read('subscribers',body);
+    if(page===1){total=Number(result.total);if(!Number.isFinite(total))throw Error('Incomplete TagMango duplicate check.');}
+    if(result.data.some(matches))return true;
+    seen+=result.data.length;
+    if(seen>=total)break;
+    if(!result.data.length||page===10)throw Error('Incomplete TagMango duplicate check. Please contact SuccessLabs.');
+   }
+  }
+  const escaped=term.replace(/[.*+?^{}()|[\]\\$]/g,'\\$&');
+  let seen=0,total=0;
+  for(let page=1;page<=10;page++){
+   const result=read('subscribers/free?limit=100&page='+page+'&search='+encodeURIComponent(escaped));
+   if(page===1){total=Number(result.total);if(!Number.isFinite(total))throw Error('Incomplete TagMango lead check.');}
+   if(result.data.some(matches))return true;
+   seen+=result.data.length;
+   if(seen>=total)break;
+   if(!result.data.length||page===10)throw Error('Incomplete TagMango lead check. Please contact SuccessLabs.');
+  }
+ }
+ return false;
 }
