@@ -19,6 +19,7 @@ function saveRegistration(p){
  if(count>1){const ids=sheet.getRange(2,2,count-1,1).getDisplayValues().flat();if(ids.includes(requestId))return {ok:true,reference:requestId};}
  const row=[new Date(),requestId,name,email,phone,domain,stream.id,stream.name,p.sector,lab.code,lab.official,domain+'-'+stream.id+'-'+lab.id,'Yes','New','Selection recorded; seat allocation pending review.'];
  sheet.appendRow(row.map(v=>v instanceof Date?v:safeCell(v)));
+ try{syncTagMangoRow(sheet,sheet.getLastRow());}catch(e){sheet.getRange(sheet.getLastRow(),16).setValue('Needs review');}
  return {ok:true,reference:requestId};
  }finally{lock.releaseLock();}
 }
@@ -30,3 +31,41 @@ function doPost(e){
  return HtmlService.createHtmlOutput('<!doctype html><p>Registration processed. Return to Bright Friday.</p><script>window.top.postMessage('+payload+',"https://nbnayak88.github.io");</'+'script>').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 function doGet(){return ContentService.createTextOutput('Bright Friday registration endpoint. Submit using the website form.');}
+
+const TAGMANGO_MANGO_ID = '694af8798dd872a219700dd3';
+function splitInternationalPhone(value) {
+ const digits=String(value).replace(/^'/,'').replace(/\D/g,'');
+ const codes=('1 7 20 27 30 31 32 33 34 36 39 40 41 43 44 45 46 47 48 49 51 52 53 54 55 56 57 58 60 61 62 63 64 65 66 81 82 84 86 90 91 92 93 94 95 98 211 212 213 216 218 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 248 249 250 251 252 253 254 255 256 257 258 260 261 262 263 264 265 266 267 268 269 290 291 297 298 299 350 351 352 353 354 355 356 357 358 359 370 371 372 373 374 375 376 377 378 380 381 382 383 385 386 387 389 420 421 423 500 501 502 503 504 505 506 507 508 509 590 591 592 593 594 595 596 597 598 599 670 672 673 674 675 676 677 678 679 680 681 682 683 685 686 687 688 689 690 691 692 850 852 853 855 856 880 886 960 961 962 963 964 965 966 967 968 970 971 972 973 974 975 976 977 992 993 994 995 996 998').split(' ').sort((a,b)=>b.length-a.length);
+ const code=codes.find(c=>digits.startsWith(c));
+ if(!code || digits.length-code.length<4)throw Error('Phone needs review.');
+ return {phone:Number(digits.slice(code.length)),dialCode:'+'+code};
+}
+function syncTagMangoRow(sheet,rowNumber) {
+ const props=PropertiesService.getScriptProperties();
+ const key=props.getProperty('TAGMANGO_API_KEY');
+ sheet.getRange(1,16,1,4).setValues([['TagMango Sync','TagMango Synced At','TagMango User ID','TagMango Detail']]);
+ if(!key){sheet.getRange(rowNumber,16,1,4).setValues([['Not connected','','','Add TAGMANGO_API_KEY in Script Properties.']]);return;}
+ const rows=sheet.getRange(2,1,sheet.getLastRow()-1,19).getValues();
+ const row=rows[rowNumber-2],email=String(row[3]).toLowerCase();
+ if(row[15]==='Synced'||row[15]==='Needs review'||row[15]==='Sending')return;
+ if(rows.some((r,i)=>i!==rowNumber-2&&String(r[3]).toLowerCase()===email&&r[15]==='Synced')){
+  sheet.getRange(rowNumber,16,1,4).setValues([['Synced',new Date(),'','Already enrolled through an earlier registration.']]);return;
+ }
+ const contact=splitInternationalPhone(row[4]);
+ sheet.getRange(rowNumber,16,1,4).setValues([['Sending','','','']]);
+ SpreadsheetApp.flush();
+ try {
+  const response=UrlFetchApp.fetch('https://api-prod-new.tagmango.com/integration/action/migrate-user',{
+   method:'post',contentType:'application/json',headers:{'x-api-key':key},
+   payload:JSON.stringify({name:String(row[2]),email,phone:contact.phone,dialCode:contact.dialCode,mangoId:TAGMANGO_MANGO_ID}),
+   muteHttpExceptions:true
+  });
+  let result;try{result=JSON.parse(response.getContentText());}catch(e){throw Error('Unrecognized API response');}
+  const ok=response.getResponseCode()>=200&&response.getResponseCode()<300&&result.type==='OK'&&result.result?.status==='Success';
+  if(!ok)throw Error('API did not confirm enrollment (HTTP '+response.getResponseCode()+')');
+  sheet.getRange(rowNumber,16,1,4).setValues([['Synced',new Date(),safeCell(result.result.userId||''),'Free Bright Friday service enrollment confirmed.']]);
+ } catch(e) {
+  // Do not blindly retry an ambiguous enrollment: inspect TagMango first.
+  sheet.getRange(rowNumber,16,1,4).setValues([['Needs review','','','Check TagMango before retrying. No credentials or API response logged.']]);
+ }
+}
