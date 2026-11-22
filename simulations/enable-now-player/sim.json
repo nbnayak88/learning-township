@@ -1,0 +1,650 @@
+{
+ "title": "Create a Contract Workspace",
+ "source": "SAP Ariba demo captured from an SAP Enable Now Trainer simulation",
+ "stage": [
+  1309,
+  676
+ ],
+ "remoteBase": "https://learnsap.enable-now.cloud.sap/pub/mmcp/project/PR_36D2D72C67C4F688/macro/",
+ "remotePattern": "MAC_{mac}/dump_page{page}/img.png",
+ "steps": [
+  {
+   "t": "info",
+   "img": "2C5AF7991C6E1FB6_1",
+   "bubble": {
+    "text": "This demonstration covers creation of the Contract Workspace. Scenario: As a contract manager, you need to create a new contract workspace and contract for your supplier, JCN Technologies. You will enter relevant header data and select the appropriate template as the foundation for your Contract Workspace.",
+    "box": [
+     281,
+     235,
+     605,
+     198
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "2C5AF7991C6E1FB6_1",
+   "target": [
+    26,
+    309,
+    167,
+    12
+   ],
+   "bubble": {
+    "text": "Click Contract Workspace (Procurement).",
+    "box": [
+     188,
+     215,
+     148,
+     95
+    ]
+   }
+  },
+  {
+   "t": "input",
+   "img": "34F35E278D3C0CA4_2",
+   "target": [
+    187,
+    234,
+    317,
+    20
+   ],
+   "bubble": {
+    "text": "Enter JCN Technologies, November 6, NM in the Name box.",
+    "box": [
+     494,
+     126,
+     148,
+     110
+    ]
+   },
+   "expected": "JCN Technologies, November 6, NM"
+  },
+  {
+   "t": "input",
+   "img": "19E32C274E351B88_2",
+   "target": [
+    185,
+    262,
+    303,
+    57
+   ],
+   "bubble": {
+    "text": "Enter This is a 12 month services contract with JCN Technologies in the Description box.",
+    "box": [
+     476,
+     156,
+     200,
+     110
+    ]
+   },
+   "expected": "This is a 12 month services contract with JCN Technologies"
+  },
+  {
+   "t": "info",
+   "img": "D66D093881E1F29C_2",
+   "bubble": {
+    "text": "Test Project is set to Yes for demonstration purposes.",
+    "box": [
+     387,
+     253,
+     420,
+     164
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "D66D093881E1F29C_2",
+   "target": [
+    184,
+    395,
+    18,
+    18
+   ],
+   "bubble": {
+    "text": "Select Yes.",
+    "box": [
+     191,
+     334,
+     123,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "EF9252C623709B96_1",
+   "target": [
+    312,
+    326,
+    11,
+    11
+   ],
+   "bubble": {
+    "text": "Click the Hierarchical Type button to open a dropdown list.",
+    "box": [
+     320,
+     200,
+     148,
+     126
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "F6F476DE85A554B3_1",
+   "target": [
+    185,
+    349,
+    158,
+    25
+   ],
+   "bubble": {
+    "text": "Select the entry Stand-alone Agreement by clicking it.",
+    "box": [
+     337,
+     240,
+     154,
+     110
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "20857E107730B9A1_1",
+   "target": [
+    399,
+    353,
+    18,
+    16
+   ],
+   "bubble": {
+    "text": "Click the Supplier button to open a dropdown list.",
+    "box": [
+     413,
+     243,
+     148,
+     110
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "21F39D1BEC4396A0_1",
+   "target": [
+    185,
+    403,
+    237,
+    24
+   ],
+   "bubble": {
+    "text": "Select the entry Search more by clicking it.",
+    "box": [
+     414,
+     309,
+     154,
+     95
+    ]
+   }
+  },
+  {
+   "t": "input",
+   "img": "8AF8C28E1FCF1FB6_3",
+   "target": [
+    27,
+    283,
+    270,
+    20
+   ],
+   "bubble": {
+    "text": "Enter JCN in the Search Filter box.",
+    "box": [
+     288,
+     204,
+     167,
+     80
+    ]
+   },
+   "expected": "JCN"
+  },
+  {
+   "t": "click",
+   "img": "357A21C8EE807E94_3",
+   "target": [
+    1189,
+    324,
+    82,
+    25
+   ],
+   "bubble": {
+    "text": "Click Search.",
+    "box": [
+     1058,
+     261,
+     134,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "163FA81C325CA395_3",
+   "target": [
+    18,
+    425,
+    18,
+    18
+   ],
+   "bubble": {
+    "text": "Select JCN Technologies.",
+    "box": [
+     30,
+     347,
+     148,
+     80
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "403ECA0823550381_3",
+   "target": [
+    1100,
+    149,
+    82,
+    30
+   ],
+   "bubble": {
+    "text": "Click OK.",
+    "box": [
+     989,
+     84,
+     115,
+     66
+    ]
+   }
+  },
+  {
+   "t": "input",
+   "img": "27AE74B0DE4719A_1",
+   "target": [
+    184,
+    453,
+    109,
+    26
+   ],
+   "bubble": {
+    "text": "Enter 500000 in the Contract Amount box.",
+    "box": [
+     287,
+     360,
+     148,
+     95
+    ]
+   },
+   "expected": "500000"
+  },
+  {
+   "t": "click",
+   "img": "A51B8D10ACACE4A3_1",
+   "target": [
+    399,
+    490,
+    18,
+    16
+   ],
+   "bubble": {
+    "text": "Click the Commodity button to open a dropdown list.",
+    "box": [
+     412,
+     380,
+     162,
+     110
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "3D7BF17E25AFB786_1",
+   "target": [
+    185,
+    513,
+    237,
+    25
+   ],
+   "bubble": {
+    "text": "Select the entry Computer services 8111 by clicking it.",
+    "box": [
+     413,
+     405,
+     154,
+     110
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "4830A886D66F15B2_1",
+   "target": [
+    1072,
+    356,
+    23,
+    26
+   ],
+   "bubble": {
+    "text": "Click the calendar icon.",
+    "box": [
+     951,
+     279,
+     123,
+     79
+    ]
+   },
+   "inferred": true
+  },
+  {
+   "t": "info",
+   "img": "8234F048C3FC2BA3_1",
+   "bubble": {
+    "text": "Use the calendar to choose the Effective date.",
+    "box": [
+     456,
+     255,
+     395,
+     164
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "8234F048C3FC2BA3_1",
+   "target": [
+    986,
+    451,
+    24,
+    24
+   ],
+   "bubble": {
+    "text": "Click 6.",
+    "box": [
+     891,
+     386,
+     98,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "A15330E22ED50794_1",
+   "target": [
+    1072,
+    389,
+    23,
+    26
+   ],
+   "bubble": {
+    "text": "Click the calendar icon.",
+    "box": [
+     959,
+     313,
+     115,
+     79
+    ]
+   },
+   "inferred": true
+  },
+  {
+   "t": "info",
+   "img": "7E556C204327439D_1",
+   "bubble": {
+    "text": "Use the calendar to choose an expiration date, in this example the contract will expire in one year.",
+    "box": [
+     424,
+     259,
+     459,
+     164
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "7E556C204327439D_1",
+   "target": [
+    1108,
+    426,
+    10,
+    11
+   ],
+   "bubble": {
+    "text": "Click the highlighted arrow.",
+    "box": [
+     1005,
+     362,
+     107,
+     66
+    ]
+   },
+   "inferred": true
+  },
+  {
+   "t": "click",
+   "img": "8BC1E2112BF77D8C_1",
+   "target": [
+    984,
+    482,
+    21,
+    21
+   ],
+   "bubble": {
+    "text": "Click the highlighted date.",
+    "box": [
+     867,
+     410,
+     120,
+     74
+    ]
+   },
+   "inferred": true
+  },
+  {
+   "t": "info",
+   "img": "4855635F15E04ABF_1",
+   "bubble": {
+    "text": "Select the appropriate Template.",
+    "box": [
+     508,
+     255,
+     292,
+     164
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "4855635F15E04ABF_1",
+   "target": [
+    30,
+    491,
+    18,
+    18
+   ],
+   "bubble": {
+    "text": "Select AR211 Contract Template for Training - Do Not Deactivate.",
+    "box": [
+     42,
+     367,
+     148,
+     126
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "9B85D97F882B10AC_2",
+   "target": [
+    566,
+    502,
+    10,
+    11
+   ],
+   "bubble": {
+    "text": "Click the Does this contract use supplier paper or our Main Agreement template? button to open a dropdown list."
+   }
+  },
+  {
+   "t": "click",
+   "img": "657FC38719057B0_2",
+   "target": [
+    408,
+    549,
+    189,
+    25
+   ],
+   "bubble": {
+    "text": "Select the entry Our main agreement template by clicking it."
+   }
+  },
+  {
+   "t": "click",
+   "img": "2E08F20B88F0DABB_2",
+   "target": [
+    1092,
+    556,
+    89,
+    30
+   ],
+   "bubble": {
+    "text": "Click Create.",
+    "box": [
+     960,
+     491,
+     136,
+     66
+    ]
+   }
+  },
+  {
+   "t": "info",
+   "img": "C9B86287D21022BF_3",
+   "bubble": {
+    "text": "The Contract Workspace is now created and let's review the different tabs and information available.",
+    "box": [
+     452,
+     255,
+     403,
+     164
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "C9B86287D21022BF_3",
+   "target": [
+    345,
+    213,
+    85,
+    39
+   ],
+   "bubble": {
+    "text": "Click Documents.",
+    "box": [
+     419,
+     149,
+     167,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "87E2D419CA0DFBB1_3",
+   "target": [
+    435,
+    213,
+    59,
+    39
+   ],
+   "bubble": {
+    "text": "Click Tasks.",
+    "box": [
+     489,
+     148,
+     130,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "E6FBFF5E165DE7AA_3",
+   "target": [
+    494,
+    213,
+    58,
+    39
+   ],
+   "bubble": {
+    "text": "Click Team.",
+    "box": [
+     376,
+     150,
+     121,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "8D24F7AA3BFD7D8B_1",
+   "target": [
+    555,
+    213,
+    106,
+    39
+   ],
+   "bubble": {
+    "text": "Click Message Board.",
+    "box": [
+     379,
+     150,
+     179,
+     66
+    ]
+   }
+  },
+  {
+   "t": "click",
+   "img": "AD0BA092A4AC8189_2",
+   "target": [
+    667,
+    213,
+    65,
+    39
+   ],
+   "bubble": {
+    "text": "Click History.",
+    "box": [
+     727,
+     149,
+     130,
+     66
+    ]
+   }
+  },
+  {
+   "t": "info",
+   "img": "3C4F76C167E4C2BF_1",
+   "bubble": {
+    "text": "Creation of a Contract Workspace is now complete.",
+    "box": [
+     516,
+     255,
+     276,
+     164
+    ]
+   }
+  }
+ ]
+}

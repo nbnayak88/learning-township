@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Software Simulation</title>
+<style>
+:root{--bar:#2b2f36;--accent:#f5b800;--bubble:#ffe27a;--bubble-border:#d9a400}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#1d1f23;color:#fff;font-family:system-ui,"Segoe UI",Arial,sans-serif;overflow:hidden}
+#bar{position:absolute;top:0;left:0;right:0;height:46px;display:flex;align-items:center;gap:10px;padding:0 12px;background:var(--bar);z-index:5}
+#bar button{background:#3a3f48;color:#fff;border:0;border-radius:6px;min-width:34px;height:32px;padding:0 10px;font-size:15px;cursor:pointer}
+#bar button:hover{background:#4a505b}
+#bar button.on{background:var(--accent);color:#222}
+#title{font-weight:600;font-size:14px;white-space:nowrap;max-width:28vw;overflow:hidden;text-overflow:ellipsis}
+#dots{flex:1;display:flex;gap:3px;align-items:center;min-width:40px}
+.dot{flex:1;height:8px;background:#555;border-radius:3px;cursor:pointer;min-width:2px}
+.dot.done{background:#8ab4f8}.dot.cur{background:var(--accent)}
+#count{font-size:12px;opacity:.8;white-space:nowrap}
+#wrap{position:absolute;top:46px;left:0;right:0;bottom:0;overflow:hidden}
+#stage{position:absolute;transform-origin:top left;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.5)}
+#bg{position:absolute;left:0;top:0;width:100%;height:100%;user-select:none;-webkit-user-drag:none}
+.hl{position:absolute;border:3px solid var(--accent);border-radius:4px;pointer-events:none;animation:pulse 1.3s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,184,0,.55)}50%{box-shadow:0 0 0 8px rgba(245,184,0,0)}}
+.hit{position:absolute;cursor:pointer}
+.bubble{position:absolute;background:var(--bubble);color:#222;border:2px solid var(--bubble-border);border-radius:10px;padding:10px 12px;font-size:15px;line-height:1.35;box-shadow:0 6px 18px rgba(0,0,0,.35);z-index:3}
+.bubble b{font-weight:700}
+.bubble .row{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+.bubble button{background:#fff;border:2px solid var(--bubble-border);color:#7a5a00;border-radius:50%;width:34px;height:34px;font-size:16px;cursor:pointer}
+.bubble button.txt{border-radius:6px;width:auto;padding:0 10px;font-size:13px;height:28px}
+.bubble.info{background:#fff3b0}
+input.fill{position:absolute;border:2px solid var(--accent);background:rgba(255,255,255,.97);color:#111;font:14px system-ui,Arial,sans-serif;padding:0 6px;z-index:2;outline:none;border-radius:3px}
+textarea.fill{resize:none;padding-top:4px}
+.shake{animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+#end{position:absolute;inset:0;background:rgba(20,22,26,.92);display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;z-index:9;text-align:center;padding:20px}
+#end h2{margin:0;font-size:26px}#end p{margin:0;opacity:.8}
+#end button{background:var(--accent);border:0;border-radius:8px;padding:10px 22px;font-size:16px;cursor:pointer;font-weight:600}
+#err{position:absolute;top:60px;left:50%;transform:translateX(-50%);background:#a33;padding:8px 14px;border-radius:6px;display:none;z-index:20}
+</style>
+</head>
+<body>
+<div id="bar">
+  <button id="prev" title="Previous (←)">&#9664;</button>
+  <button id="next" title="Next (→)">&#9654;</button>
+  <span id="title"></span>
+  <div id="dots"></div>
+  <span id="count"></span>
+  <button id="mode" title="Show me: plays the steps automatically">Show me</button>
+  <button id="restart" title="Restart">&#8635;</button>
+</div>
+<div id="wrap"><div id="stage"><img id="bg" alt=""></div></div>
+<div id="end"><h2>Simulation complete</h2><p id="endTitle"></p><button id="again">Restart</button></div>
+<div id="err"></div>
+<script>
+/* Generic click-through simulation player. Everything comes from sim.json:
+   steps[]: {t:'info'|'click'|'input', img, target:[x,y,w,h], bubble:{box:[x,y,w,h],text}, expected}
+   Images: tries ./img/<img>.jpg first, falls back to the remote original (remoteBase + remotePattern). */
+(function(){
+  const $=s=>document.querySelector(s);
+  let SIM,cur=0,auto=false,token=0,done=false;
+  const stage=$('#stage'),bg=$('#bg'),wrap=$('#wrap');
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+  function fit(){
+    const [W,H]=SIM.stage,aw=wrap.clientWidth,ah=wrap.clientHeight,s=Math.min(aw/W,ah/H);
+    stage.style.width=W+'px';stage.style.height=H+'px';
+    stage.style.transform='scale('+s+')';
+    stage.style.left=((aw-W*s)/2)+'px';stage.style.top=((ah-H*s)/2)+'px';
+  }
+  function remote(img){
+    const [mac,page]=img.split('_');
+    return SIM.remoteBase+SIM.remotePattern.replace('{mac}',mac).replace('{page}',page);
+  }
+  function setBg(img){
+    bg.onerror=()=>{bg.onerror=null;bg.src=remote(img)};
+    bg.src='img/'+img+'.jpg';
+  }
+  function preload(i){const s=SIM.steps[i];if(!s)return;const im=new Image();im.onerror=()=>{im.onerror=null;im.src=remote(s.img)};im.src='img/'+s.img+'.jpg'}
+  function clearOverlay(){stage.querySelectorAll('.hl,.hit,.bubble,input.fill,textarea.fill').forEach(e=>e.remove())}
+  function pad(b,p){return [b[0]-p,b[1]-p,b[2]+2*p,b[3]+2*p]}
+  function place(el,b){el.style.left=b[0]+'px';el.style.top=b[1]+'px';el.style.width=b[2]+'px';el.style.height=b[3]+'px'}
+  function bubbleBox(s){
+    const [W,H]=SIM.stage;let b=s.bubble&&s.bubble.box;
+    if(!b){ // no recorded position: put it beside the target
+      const t=s.target||[W/2-100,H/2-40,200,80];
+      b=[Math.min(t[0]+t[2]+16,W-300),Math.max(t[1]-20,8),280,90];
+    }
+    return [Math.max(4,Math.min(b[0],W-b[2]-4)),Math.max(4,Math.min(b[1],H-60)),b[2],b[3]];
+  }
+  function richText(s){
+    let t=esc(s.bubble.text);
+    if(s.expected){const e=esc(s.expected);t=t.replace(e,'<b>'+e+'</b>')}
+    return t;
+  }
+  function dots(){
+    const d=$('#dots');d.innerHTML='';
+    SIM.steps.forEach((_,i)=>{const x=document.createElement('div');x.className='dot'+(i<cur?' done':i===cur?' cur':'');x.title='Step '+(i+1);x.onclick=()=>{stop();show(i)};d.appendChild(x)});
+    $('#count').textContent=(cur+1)+' / '+SIM.steps.length;
+  }
+  function miss(){const h=stage.querySelector('.hl');if(h){h.classList.remove('shake');void h.offsetWidth;h.classList.add('shake')}}
+
+  function show(i){
+    if(i>=SIM.steps.length){finish();return}
+    if(i<0)i=0;
+    cur=i;done=false;$('#end').style.display='none';
+    const s=SIM.steps[i];
+    clearOverlay();setBg(s.img);preload(i+1);
+    const bb=document.createElement('div');bb.className='bubble '+s.t;
+    const bx=bubbleBox(s);bb.style.left=bx[0]+'px';bb.style.top=bx[1]+'px';bb.style.minWidth=bx[2]+'px';bb.style.maxWidth=Math.max(bx[2],260)+'px';
+    bb.innerHTML='<div>'+richText(s)+'</div>';
+    const row=document.createElement('div');row.className='row';bb.appendChild(row);
+
+    if(s.t==='info'){
+      const go=document.createElement('button');go.textContent='▶';go.title='Continue';go.onclick=()=>{stop();show(i+1)};row.appendChild(go);
+    }
+    if(s.target&&s.t!=='info'){
+      const hl=document.createElement('div');hl.className='hl';place(hl,pad(s.target,3));stage.appendChild(hl);
+    }
+    if(s.t==='click'){
+      const hit=document.createElement('div');hit.className='hit';place(hit,s.target);
+      hit.onclick=e=>{e.stopPropagation();stop();show(i+1)};stage.appendChild(hit);
+    }
+    if(s.t==='input'){
+      const multi=s.target[3]>40;
+      const inp=document.createElement(multi?'textarea':'input');inp.className='fill';place(inp,s.target);
+      if(!multi)inp.type='text';inp.autocomplete='off';inp.spellcheck=false;
+      const norm=v=>v.trim().replace(/\s+/g,' ').toLowerCase();
+      const ok=()=>norm(inp.value)===norm(s.expected||'');
+      inp.addEventListener('input',()=>{if(ok()){inp.blur();setTimeout(()=>{if(cur===i){stop();show(i+1)}},250)}});
+      inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();ok()?(stop(),show(i+1)):(inp.classList.remove('shake'),void inp.offsetWidth,inp.classList.add('shake'))}e.stopPropagation()});
+      stage.appendChild(inp);setTimeout(()=>inp.focus(),50);
+      const hint=document.createElement('button');hint.className='txt';hint.textContent='Fill it in for me';hint.onclick=()=>{inp.value=s.expected;inp.dispatchEvent(new Event('input'))};row.appendChild(hint);
+    }
+    if(!row.children.length)row.remove();
+    stage.appendChild(bb);
+    stage.onclick=e=>{if(SIM.steps[cur].t!=='info')miss()};
+    dots();store.set('sim:'+SIM.title,String(i));
+  }
+  function finish(){done=true;cur=SIM.steps.length-1;dots();$('#endTitle').textContent=SIM.title;$('#end').style.display='flex';store.set('sim:'+SIM.title,'0')}
+  function stop(){auto=false;token++;$('#mode').classList.remove('on');$('#mode').textContent='Show me'}
+
+  async function play(){
+    auto=true;const my=++token;$('#mode').classList.add('on');$('#mode').textContent='Stop';
+    if(done)show(0);
+    for(let i=cur;i<SIM.steps.length&&auto&&my===token;i++){
+      show(i);const s=SIM.steps[i];
+      await sleep(s.t==='info'?Math.min(6500,2200+s.bubble.text.length*35):1700);if(my!==token)return;
+      if(s.t==='input'){const inp=stage.querySelector('.fill');for(const ch of s.expected){if(my!==token)return;inp.value+=ch;await sleep(55)}await sleep(500);if(my!==token)return}
+      if(s.t==='click'){const h=stage.querySelector('.hl');if(h){h.style.background='rgba(245,184,0,.35)'}await sleep(450);if(my!==token)return}
+    }
+    if(my===token){stop();finish()}
+  }
+
+  $('#next').onclick=()=>{stop();show(Math.min(cur+1,SIM.steps.length-1))};
+  $('#prev').onclick=()=>{stop();show(Math.max(cur-1,0))};
+  $('#mode').onclick=()=>auto?stop():play();
+  $('#restart').onclick=$('#again').onclick=()=>{stop();show(0)};
+  document.addEventListener('keydown',e=>{
+    if(e.target&&/INPUT|TEXTAREA/.test(e.target.tagName))return;
+    if(e.key==='ArrowRight'){$('#next').click()}else if(e.key==='ArrowLeft'){$('#prev').click()}
+    else if(e.key==='Enter'&&SIM.steps[cur].t==='info'){stop();show(cur+1)}
+  });
+  window.addEventListener('resize',()=>SIM&&fit());
+
+  fetch('sim.json').then(r=>{if(!r.ok)throw new Error('sim.json '+r.status);return r.json()}).then(j=>{
+    SIM=j;document.title=j.title+' – Simulation';$('#title').textContent=j.title;
+    fit();const saved=parseInt(store.get('sim:'+j.title)||'0',10);
+    show(isNaN(saved)||saved>=j.steps.length?0:saved);
+  }).catch(e=>{const x=$('#err');x.textContent='Could not load sim.json ('+e.message+'). Serve this folder over http(s), e.g. GitHub Pages or "python3 -m http.server".';x.style.display='block'});
+})();
+</script>
+</body>
+</html>
