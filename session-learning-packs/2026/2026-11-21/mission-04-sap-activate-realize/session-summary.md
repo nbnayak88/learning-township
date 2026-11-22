@@ -149,5 +149,9 @@ Case sector: Energy. Do not confuse these architecture lenses with the HR curric
 - [Google Sheets](https://docs.google.com/spreadsheets/d/1x8lBVEmhkV_xr0vHaqNSBUucpuEucu4NKhkaV9OHOmA/edit?usp=drivesdk)
 - [PowerPoint file](https://docs.google.com/presentation/d/1wMR1AzSGwkN9698N3ZamPyrFDcCSS_cX/edit?usp=drivesdk&ouid=106170788237411753508&rtpof=true&sd=true)
 - [Excel file](https://docs.google.com/spreadsheets/d/1I6rDkjo-wYQsM_wJAH5NvF0nhX1VJjJ_/edit?usp=drivesdk&ouid=106170788237411753508&rtpof=true&sd=true)
+- [GitHub summary](https://github.com/nbnayak88/learning-township/blob/main/session-learning-packs/2026/2026-11-21/mission-04-sap-activate-realize/session-summary.md)
+- [Notion learning pack](https://app.notion.com/p/420ce6de608981328f3dda213bd0262b?pvs=204)
+- [Master Google Doc](https://docs.google.com/document/d/1U62CUkksLfgg7XVOyDvodJAdFcKuwhY6R2j_nS4oNkg/edit?usp=drivesdk)
+- [YouTube chapters text](https://drive.google.com/file/d/1g_5rDHEX86yBSsGnIpbbKN26P37-5DHJ/view?usp=drivesdk)
 
 Architecting Experiences for a Better World.
