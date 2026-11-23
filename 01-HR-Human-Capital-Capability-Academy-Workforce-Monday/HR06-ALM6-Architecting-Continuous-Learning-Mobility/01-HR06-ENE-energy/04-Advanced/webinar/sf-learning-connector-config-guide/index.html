@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAP SuccessFactors Learning – Connector Configuration Guide (Beginner Edition)</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1f2937;max-width:980px;margin:0 auto;padding:24px;background:#fff}
+h1{color:#0b2a4a;border-bottom:3px solid #0a6ed1;padding-bottom:8px}
+h2{color:#0a6ed1;margin-top:2em;border-bottom:1px solid #e5e7eb;padding-bottom:4px}
+h3,h4{color:#0b2a4a}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.92rem;display:block;overflow-x:auto}
+th,td{border:1px solid #d1d5db;padding:6px 10px;text-align:left;vertical-align:top}
+th{background:#eef4fb}
+code,pre{background:#f3f4f6;border-radius:4px;font-family:ui-monospace,Menlo,Consolas,monospace}
+code{padding:1px 4px;font-size:.9em}pre{padding:12px;overflow-x:auto}
+blockquote{border-left:4px solid #f59e0b;background:#fffbeb;margin:1em 0;padding:8px 14px}
+footer{margin-top:3em;color:#6b7280;font-size:.85rem}
+</style></head><body>
+<h1>SAP SuccessFactors Learning – Connector Configuration Guide (Beginner Edition)</h1>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product</td>
+<td>SAP SuccessFactors Learning (LMS)</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>Connectors (Talent Management System data import)</td>
+</tr>
+<tr>
+<td>Country / Region</td>
+<td>Global (timezone default America/New_York, USD, English)</td>
+</tr>
+<tr>
+<td>Industry</td>
+<td>Industry-agnostic</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Last updated</td>
+<td>2026-11-23</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>To be completed</td>
+</tr>
+<tr>
+<td>Review date</td>
+<td>To be completed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>1. Solution overview</h2>
+<h3>What is a "connector"?</h3>
+<p>Think of a connector as a <strong>conveyor belt for data</strong>. Your HR system (or any source) drops a text file on a server. The LMS picks the file up, reads it line by line, and creates or updates records in Learning (users, courses, enrollments, and so on). Afterwards it sends you a <strong>report</strong> saying what worked and what failed.</p>
+<h3>What is this file?</h3>
+<p>It is the connector <strong>properties file</strong> (key=value lines). It tells the LMS:
+1. <strong>Where</strong> to find input files and where to put reports (Common settings).
+2. <strong>What the columns in each file mean</strong> (Field mappings).
+3. <strong>What to fill in when a column is blank</strong> (Default values).
+4. <strong>How to translate values</strong> (Transforms, e.g. <code>active</code> becomes <code>N</code> for NOTACTIVE).</p>
+<h3>How to read any line</h3>
+<pre><code>user.connector.defaultValue.domainID=PUBLIC
+ ^       ^           ^          ^        ^
+ |       |           |          |        value
+ |       |           |          setting name
+ |       |           &quot;default value&quot; type
+ |       &quot;connector&quot; setting
+ which connector (user)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Prefix pattern</th>
+<th>Plain meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xxx.connector.defaultValue.*</code></td>
+<td>Value used when the input file leaves it blank</td>
+</tr>
+<tr>
+<td><code>xxx.field.mapping.data.TARGET=SOURCE</code></td>
+<td>LMS field (left) = column name in your file (right)</td>
+</tr>
+<tr>
+<td><code>xxx.field.transform.data.FIELD.NEWVALUE=a,b,c</code></td>
+<td>If the file says a, b or c, store NEWVALUE</td>
+</tr>
+<tr>
+<td><code>xxx.connector.inactiveRule.*</code></td>
+<td>What to do when a record is made inactive</td>
+</tr>
+<tr>
+<td><code>xxx.connector.update.*</code></td>
+<td>Whether existing records get overwritten</td>
+</tr>
+</tbody>
+</table>
+<h3>Connectors in this file</h3>
+<p>Organization, User, Federal User, Item (plus Content Module, Item Module, Localization, Competency), Schedule Offering, Position, Domain, Learning History, Enrollment, Job Code, SF User, Person Sync, Competency, Curriculum, Organization Owner, Alternate Job Position, Admin, Skillsoft, Account Code.</p>
+<h3>Out of scope</h3>
+<p>Real passwords and keys (blank or masked here), file-naming conventions per connector, and the scheduling of connector runs (done in System Admin).</p>
+<hr />
+<h2>2. Technical environment</h2>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>URL / Instance</th>
+<th>Version</th>
+<th>Last Patched</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development</td>
+<td>To be completed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Test</td>
+<td>To be completed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Production</td>
+<td>To be completed</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>SFTP server in the file: <code>fileupload.plateau.com</code> (port 22, protocol <code>sftp</code>).</p>
+<hr />
+<h2>3. Configuration reference – by area</h2>
+<h3>3.1 Common settings (apply to ALL connectors)</h3>
+<h4>Input file format</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Beginner explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connector.input.file.escapeChar</code></td>
+<td><code>"</code></td>
+<td>Character that protects special characters. A value like <code>"Smith, John"</code> stays one value.</td>
+</tr>
+<tr>
+<td><code>connector.input.file.columnDelimiter</code></td>
+<td><code>\|</code></td>
+<td>Columns are separated by a pipe. So <code>John\|Smith\|HR</code>, not commas.</td>
+</tr>
+<tr>
+<td><code>connector.input.file.eolSymbols</code></td>
+<td><code>!##!</code></td>
+<td>Marks the end of a row (instead of a line break). Every row in your file must end with <code>!##!</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Common beginner mistake: the file is saved with commas or normal line breaks. The connector then reads the whole file as one giant column.</p>
+</blockquote>
+<h4>Where input files come from</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connector.input.file.location</code></td>
+<td><code>FTP</code></td>
+<td>Choices: <code>FTP</code>, <code>local</code>, <code>MDI</code>. Here files are picked up from an SFTP server.</td>
+</tr>
+<tr>
+<td><code>connector.input.file.fetch.retry.enable</code></td>
+<td><code>false</code></td>
+<td>If a file is not there, do not retry automatically.</td>
+</tr>
+<tr>
+<td><code>connector.ftp.input.remoteDirectory</code></td>
+<td><code>/home/connector/InputFiles</code></td>
+<td>Folder on the server where you drop files.</td>
+</tr>
+<tr>
+<td><code>connector.local.input.localDirectory</code></td>
+<td><code>c:\\connectors\\input</code></td>
+<td>Only used if location = <code>local</code>. Ignored today.</td>
+</tr>
+<tr>
+<td><code>connector.input.archive.directory</code></td>
+<td>blank</td>
+<td>Deprecated. Archiving is now in System Admin &gt; Configuration &gt; Connector Settings.</td>
+</tr>
+<tr>
+<td><code>connector.input.file.name.tenant.suffix.enable</code></td>
+<td><code>true</code></td>
+<td>SaaS only. File names carry your tenant ID, e.g. <code>user_data_ACME.txt</code>.</td>
+</tr>
+<tr>
+<td><code>connector.input.file.name.tenant.suffix.override</code></td>
+<td>blank</td>
+<td>Use only if the suffix must differ from the tenant ID.</td>
+</tr>
+<tr>
+<td><code>connector.input.file.curriculum.htmlDescription.enabled</code></td>
+<td><code>false</code></td>
+<td>Only for HTML descriptions. Copies curriculum description into the HTML description.</td>
+</tr>
+</tbody>
+</table>
+<h4>Output reports</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connector.ftp.output.report.enable</code></td>
+<td><code>true</code></td>
+<td>Put the run report on the SFTP server.</td>
+</tr>
+<tr>
+<td><code>connector.ftp.output.report.remoteDirectory</code></td>
+<td><code>/home/connector/Output</code></td>
+<td>Where reports land.</td>
+</tr>
+<tr>
+<td><code>connector.report.email.enable</code></td>
+<td><code>true</code></td>
+<td>Also email the report.</td>
+</tr>
+<tr>
+<td><code>connector.report.email.toAddresses</code></td>
+<td><code>John.Smith@company.com</code></td>
+<td>Recipients. Looks like a placeholder; replace with a real shared mailbox.</td>
+</tr>
+<tr>
+<td><code>connector.report.email.CCAddresses</code></td>
+<td>blank</td>
+<td>Optional CC.</td>
+</tr>
+<tr>
+<td><code>connector.report.email.mailSubject</code></td>
+<td><code>$interfaceId$ - Connector Results</code></td>
+<td><code>$interfaceId$</code> is replaced by the connector name.</td>
+</tr>
+<tr>
+<td><code>connector.report.email.enableDetailReportAttachments</code></td>
+<td><code>false</code></td>
+<td>Detailed report is not attached to the email.</td>
+</tr>
+<tr>
+<td><code>connector.report.detail.displayMessageTypes</code></td>
+<td><code>Exception,Warning,FATAL</code></td>
+<td>Which messages appear. <code>info</code> is left out to keep reports short.</td>
+</tr>
+<tr>
+<td><code>connector.report.detail.numberOfExceptionsDisplayed</code></td>
+<td><code>5000</code></td>
+<td>Maximum errors shown per report.</td>
+</tr>
+</tbody>
+</table>
+<h4>SFTP connection</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connector.ftp.protocol</code></td>
+<td><code>sftp</code></td>
+<td>Secure file transfer (not plain <code>ftp</code>).</td>
+</tr>
+<tr>
+<td><code>connector.ftp.server</code></td>
+<td><code>fileupload.plateau.com</code></td>
+<td>Server address.</td>
+</tr>
+<tr>
+<td><code>connector.ftp.port</code></td>
+<td><code>22</code></td>
+<td>Standard SFTP port.</td>
+</tr>
+<tr>
+<td><code>connector.ftp.userID</code> / <code>password</code></td>
+<td>blank</td>
+<td>Must be filled in before the connector can log in. Do not store real credentials in documents.</td>
+</tr>
+</tbody>
+</table>
+<h4>PGP encryption (optional)</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connector.pgp.enabled</code></td>
+<td><code>false</code></td>
+<td>Files are not encrypted. If <code>true</code>, you send files encrypted with the <strong>public key</strong> and the LMS decrypts them with the <strong>secret key</strong>.</td>
+</tr>
+<tr>
+<td><code>connector.pgp.public.keyring</code></td>
+<td>long base64 text</td>
+<td>The public key to give to whoever creates the encrypted files. Safe to share.</td>
+</tr>
+<tr>
+<td><code>connector.pgp.secret.keyring</code> / <code>passphrase</code></td>
+<td><code>*****</code></td>
+<td>Masked. Keep private.</td>
+</tr>
+<tr>
+<td><code>connector.pgp.file.extension</code></td>
+<td><code>.pgp</code></td>
+<td>Encrypted files end in <code>.pgp</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>3.2 Organisational structures</h3>
+<h4>Organization connector (departments / org units)</h4>
+<p>Defaults: <code>domainID=PUBLIC</code>, <code>finAcctDomainID=PUBLIC</code>, <code>orgTypeID</code> blank.
+<strong>Domain</strong> = a security and data partition in the LMS. <code>PUBLIC</code> is the standard shared one.
+Mappings are one-to-one (ORG_ID=ORG_ID). Notable fields: ORG_ID_PARENT (builds the hierarchy), billing/shipping address blocks, COL_NUM1..5 (custom columns).</p>
+<h4>Domain connector</h4>
+<p>Only mappings: DMN_ID, DMN_DESC, DMN_ID_PARENT (parent domain).</p>
+<h4>Position connector</h4>
+<p>Defaults: <code>domainID=PUBLIC</code>, <code>fteFactor=1.0</code> (a full-time position), <code>jobSharingEnabled=N</code>. Fields cover position number, job code, reports-to, salary range, max headcount and FTE.</p>
+<h4>Job Code connector (<code>jobposition</code>)</h4>
+<p>Maps JP_ID, JP_DESC, auto-assign/remove of qualifications and profiles, job location, grade and salary range.</p>
+<h4>Account Code connector</h4>
+<p>Defaults: <code>domainID=PUBLIC</code>, <code>acctTypeID=Cost Center</code>. Used to load cost centers. <code>REMOVE_ACCT</code> removes one.</p>
+<h4>Alternate Job Position connector</h4>
+<p><code>removeAlternateJobPositionSameAsJobPosition=N</code>: if the "alternate" job equals the main job, keep it anyway.</p>
+<hr />
+<h3>3.3 User configuration</h3>
+<h4>User connector (use when users come from a non-SuccessFactors source)</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deletedUser.reincarnate</code></td>
+<td><code>N</code></td>
+<td>If a deleted user returns, do not revive the old record.</td>
+</tr>
+<tr>
+<td><code>defaultValue.domainID</code> / <code>orgDomainID</code> / <code>finAcctDomainID</code></td>
+<td><code>PUBLIC</code></td>
+<td>Default domain.</td>
+</tr>
+<tr>
+<td><code>defaultValue.studentRoleID</code></td>
+<td><code>DEFAULT USER</code></td>
+<td>Learner role given to new users.</td>
+</tr>
+<tr>
+<td><code>defaultValue.licenseUserType</code></td>
+<td><code>ACTIVE</code></td>
+<td><code>ACTIVE</code> = full license, <code>FUNCTIONAL</code> = limited.</td>
+</tr>
+<tr>
+<td><code>defaultValue.lms-origin</code></td>
+<td>blank</td>
+<td><strong>Important.</strong> <code>Y</code> = user logs in via the LMS page (Learning-only). <code>N</code> = user logs in through the SuccessFactors platform. Once set it cannot be changed through the connector; use "Correct User Source System" in Import Data tool. If blank, the system default applies.</td>
+</tr>
+<tr>
+<td><code>jpAutoAssignQuals</code> / <code>jpAutoRemoveQuals</code></td>
+<td><code>Y</code></td>
+<td>Changing a user's job code automatically adds/removes curricula linked to that job.</td>
+</tr>
+<tr>
+<td><code>jpAutoAssignPPRF</code> / <code>jpAutoRemovePPRF</code></td>
+<td><code>Y</code></td>
+<td>Same idea for competency profiles.</td>
+</tr>
+<tr>
+<td><code>preferenceTimeZone</code> / <code>Locale</code> / <code>Currency</code></td>
+<td><code>America/New_York</code>, <code>English</code>, <code>USD</code></td>
+<td>Defaults for new users.</td>
+</tr>
+<tr>
+<td><code>update.updatePreferences</code></td>
+<td><code>N</code></td>
+<td>Does <strong>not</strong> overwrite preferences of existing users.</td>
+</tr>
+<tr>
+<td><code>supervisorReRoute…</code> (6 settings)</td>
+<td><code>N</code></td>
+<td>Approvals are NOT redirected to the supervisor's boss when the supervisor is absent.</td>
+</tr>
+<tr>
+<td><code>accessToOrgFinAcct</code></td>
+<td><code>N</code></td>
+<td>New users cannot use org finance accounts.</td>
+</tr>
+<tr>
+<td><code>fullTime</code></td>
+<td><code>Y</code></td>
+<td>New users are full-time unless stated.</td>
+</tr>
+<tr>
+<td><code>includeInGovtReporting</code></td>
+<td><code>N</code></td>
+<td>Not part of government reporting by default.</td>
+</tr>
+<tr>
+<td><code>deafultValue.nativeDeepLinkUser</code></td>
+<td><code>N</code></td>
+<td>Note the spelling <code>deafult</code>; it is a known quirk of the template. Keep it as-is unless SAP confirms otherwise.</td>
+</tr>
+<tr>
+<td><code>inactiveRule.cleanDevPlan</code></td>
+<td><code>Y</code></td>
+<td>When a user is inactivated, clean their development plan.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Field mapping.</strong> Left side = LMS field, right side = your file's column name. Examples:
+- <code>STUD_ID</code> = the unique user ID
+- <code>SUPER</code> = supervisor's ID
+- <code>NOTACTIVE</code> = <code>Y</code> means the user is inactive
+- <code>COL_NUM1_VAL...15</code> = custom columns
+- <code>LMS_ORIGIN=USER_SOURCE_SYSTEM</code>, <code>LICENSE_USER_TYPE=</code> (blank, so the column is not read).</p>
+<p><strong>Transforms.</strong> <code>LICENSE_USER_TYPE.ACTIVE=Active,active</code> and <code>LMS_ORIGIN.Y=Y,Yes,LEARNING,...</code> translate friendly words to system codes.</p>
+<p><strong>User Manager mapping.</strong> <code>ALT_SUPER=MANAGER</code> and so on, for alternate supervisors (matrix managers).</p>
+<h4>Federal User connector (US federal customers only)</h4>
+<p>Copy of the User connector with <code>federaluser.</code> prefix plus EHRI fields (SSN, DOB, salary, RNO). <strong>Leave unused unless you are a US federal customer.</strong> Contains sensitive data fields, so restrict file access.</p>
+<h4>SF User connector (the key one for integrated SuccessFactors customers)</h4>
+<p>Use when users come from <strong>Employee Central / SF core</strong>. Left side = LMS field, right side = <strong>SF export column</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>LMS field</th>
+<th>SF column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOTACTIVE</td>
+<td>STATUS</td>
+<td>Active/inactive</td>
+</tr>
+<tr>
+<td>STUD_ID</td>
+<td>USERID</td>
+<td>Login ID</td>
+</tr>
+<tr>
+<td>FNAME / LNAME</td>
+<td>FIRSTNAME / LASTNAME</td>
+<td>Names</td>
+</tr>
+<tr>
+<td>JP_ID</td>
+<td>JOBCODE</td>
+<td>Job code</td>
+</tr>
+<tr>
+<td>JOB_TITLE</td>
+<td>TITLE</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>JL_ID</td>
+<td>LOCATION</td>
+<td>Job location</td>
+</tr>
+<tr>
+<td>ORG_ID</td>
+<td>DEPARTMENT</td>
+<td>Org unit (could be DIVISION instead)</td>
+</tr>
+<tr>
+<td>REGION_ID</td>
+<td>DIVISION</td>
+<td>Region</td>
+</tr>
+<tr>
+<td>EMP_TYP_ID / EMP_STAT_ID</td>
+<td>EMPLOYEE-CLASS / EMPLSTATUS</td>
+<td>Employee type and status</td>
+</tr>
+<tr>
+<td>HIRE_DTE / TERM_DTE</td>
+<td>HIREDATE / EXIT_DATE</td>
+<td>Hire and termination dates</td>
+</tr>
+<tr>
+<td>SUPER</td>
+<td>MANAGER</td>
+<td>Supervisor</td>
+</tr>
+<tr>
+<td>COL_NUM1..15_VAL</td>
+<td>CUSTOM01..15</td>
+<td>Custom fields</td>
+</tr>
+<tr>
+<td>LOCALE</td>
+<td>DEFAULT_LOCALE</td>
+<td>Language</td>
+</tr>
+<tr>
+<td>LMS_ORIGIN</td>
+<td>USER_SOURCE_SYSTEM</td>
+<td>See lms-origin above</td>
+</tr>
+<tr>
+<td>GENERAL_DISPLAY_NAME</td>
+<td>DISPLAYNAME</td>
+<td>Display name</td>
+</tr>
+<tr>
+<td>REGULAR_TEMP_ID / FULLTIME</td>
+<td>REGULAR-TEMP / IS-FULLTIME-EMPLOYEE</td>
+<td>Employment flags</td>
+</tr>
+<tr>
+<td>PERSON_GUID / PERSON_ID_EXTERNAL</td>
+<td>same</td>
+<td>Link to the SF person</td>
+</tr>
+</tbody>
+</table>
+<p>Blank mappings (e.g. <code>ROLE_ID=</code>, <code>ACCT_ID=</code>) mean "not loaded from this feed".</p>
+<p>Helper rules in this connector:
+- <code>@ADDR1</code>, <code>@ADDR2</code> are temporary fields. <code>add.field.mappings=ADDR=@ADDR1+@ADDR2</code> joins both lines into the address.
+- <code>copy.field.mappings=JP_DESC=JP_ID, JL_DESC=JL_ID, ORG_DESC=ORG_ID</code>: since SF gives no description, reuse the ID as the description.
+- <code>additional.field.mappings=PHON_NUM1_DESC, PHON_NUM2_DESC</code> with defaults "Business Phone" / "Business Fax".
+- <code>transform.data.NOTACTIVE.N=active,active_external,...</code> and <code>.Y=inactive,...</code>: translates status words into the Y/N flag.
+- <code>TIMEZONE.America/New_York=EST</code> etc.: translates SF short codes to full timezone names.
+- <code>SUPER.@NULLIFY@=NO_MANAGER</code>: if the file says <code>NO_MANAGER</code>, clear the supervisor.
+- <code>SHOPPING_ACCT_TYPE</code> set from active/inactive: marks internal vs external users.
+- <code>actionOnInvalid.NOTACTIVE=reject</code>: a row with an unknown status is rejected instead of guessed.
+- <code>date.format.HIRE_DTE.MMM-dd-yyyy HH:mm:ss=MM/dd/yyyy</code>: converts the date format.
+- <code>sfuser.field.transform.trim.data.enable=false</code>: names are not truncated.
+- <code>defaultValue.studentRoleID=LEARNING_USER</code>: note this differs from the User connector (<code>DEFAULT USER</code>). Make sure that role really exists.
+- <code>processingRule.requiredFiles</code> blank: no file is mandatory for a run.
+- Extended user mapping brings extra fields (birth date, full-time flag, GUID).</p>
+<h4>Person Sync connector</h4>
+<p>For integrated customers who do not use the standard employee export. It syncs <strong>PERSON_GUID</strong> and <strong>PERSON_ID_EXTERNAL</strong> by matching SF user ID to LMS user ID. File must be named <code>PERSON_GUID.csv</code> (case-sensitive). Mappings are preset; do not change them.</p>
+<h4>Admin connector</h4>
+<p>Creates LMS administrators. Defaults: <code>domainID=PUBLIC</code>, <code>locked=N</code>, timezone/locale/currency defaults, <code>updatePreferences=N</code>. Fields add or remove up to three roles each (ADD_ROLE_ID1-3, REMOVE_ROLE_ID1-3).</p>
+<h4>Organization Owner connector</h4>
+<p>Defaults to <code>N</code> for including sub-orgs and for succession planning / talent search. Has four sub-files: dashboard, initiatives, training manager, succession.</p>
+<hr />
+<h3>3.4 Learning content and delivery</h3>
+<h4>Item connector (courses / items)</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>defaultValue.domainID</code></td>
+<td><code>PUBLIC</code></td>
+<td>Default domain</td>
+</tr>
+<tr>
+<td><code>item.autoCompetency</code></td>
+<td><code>N</code></td>
+<td>Do not auto-assign competencies on completion</td>
+</tr>
+<tr>
+<td><code>AICCMaxNormal</code></td>
+<td><code>99</code></td>
+<td>Default maximum "normal" score for AICC content</td>
+</tr>
+<tr>
+<td><code>scheduleCanOverrideCancelPolicy</code></td>
+<td><code>Y</code></td>
+<td>A scheduled session may change the cancellation policy</td>
+</tr>
+<tr>
+<td><code>skipContentStructurePage</code></td>
+<td><code>N</code></td>
+<td>Show the content structure page on launch</td>
+</tr>
+<tr>
+<td><code>cancellationPolicy</code></td>
+<td>blank</td>
+<td>Use the global policy</td>
+</tr>
+<tr>
+<td><code>inactiveRule.updateNotActive</code></td>
+<td><code>true</code></td>
+<td>Updating NOTACTIVE in the file really changes the item</td>
+</tr>
+<tr>
+<td><code>userRequestsEnabled</code>, <code>supervisor/selfRecordLearningEvent</code>, <code>approvalRequired</code></td>
+<td>blank</td>
+<td>Blank means "follow System Admin &gt; Configuration &gt; User Settings".</td>
+</tr>
+<tr>
+<td><code>withdrawApprovalRequired</code></td>
+<td><code>N</code></td>
+<td>No approval needed to withdraw</td>
+</tr>
+<tr>
+<td><code>priorRevisions.updateNotActive</code></td>
+<td><code>N</code></td>
+<td>Old revisions are not touched.</td>
+</tr>
+<tr>
+<td><code>defaultRevDate.currentTimestamp</code></td>
+<td><code>N</code></td>
+<td><strong>Revision date must be in the file</strong>; it is not auto-filled.</td>
+</tr>
+<tr>
+<td><code>itemModule.forceOrder</code></td>
+<td><code>N</code></td>
+<td>Modules can be taken in any order</td>
+</tr>
+<tr>
+<td><code>userCanWaitlist</code></td>
+<td><code>Y</code></td>
+<td>Waiting lists allowed</td>
+</tr>
+<tr>
+<td><code>revision.inactivatePriorRevisions</code></td>
+<td><code>Y</code></td>
+<td>New revision retires the old one</td>
+</tr>
+<tr>
+<td><code>revision.updateLearningPlans / ScheduleOfferings / Curricula</code></td>
+<td><code>Y</code></td>
+<td>New revision flows into learning plans, schedules and curricula</td>
+</tr>
+<tr>
+<td><code>revision.productionReady</code></td>
+<td><code>Y</code></td>
+<td>New revision is production ready</td>
+</tr>
+<tr>
+<td><code>revision.retainCurriculaSettingsOnItemRevision</code></td>
+<td><code>N</code></td>
+<td>Curriculum requirements follow the revised item values (set <code>Y</code> to keep existing ones)</td>
+</tr>
+</tbody>
+</table>
+<p>Sub-connectors: Content Module (launch settings and AICC wrapper), Item Module (order, mastery score), Item Localization (translated titles/descriptions), Item Competency (links skills).
+- <code>overwriteItemSkills=N</code>: add skills but keep existing ones. <code>Y</code> means the file becomes the only truth.
+- <code>removeAllItemSkills=Remove_Skills</code>: the keyword used in CPTY_ID to wipe all skills of an item (works only when overwrite = <code>Y</code>).</p>
+<h4>Schedule Offering connector (classroom / virtual sessions)</h4>
+<p>Defaults: timezone <code>America/New_York</code>, publish in all catalogs <code>N</code>, all email notifications <code>N</code>, waitlist <code>Y</code>, super enrollment <code>N</code>, approval <code>N</code>, inherit 2483 (government training) fields from item <code>Y</code>, online access <code>inherit</code>.</p>
+<h4>Curriculum connector</h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>forceIncomplete</code></td>
+<td><code>Y</code></td>
+<td>Changing a curriculum forces learners to redo it</td>
+</tr>
+<tr>
+<td><code>autoAssign/RemoveCompetencyProfile</code>, <code>autoAssign/RemoveQuals</code></td>
+<td><code>Y</code></td>
+<td>Automatic assignment follows rules</td>
+</tr>
+<tr>
+<td><code>propageToStudent</code></td>
+<td><code>N</code></td>
+<td>(sic) Changes are not pushed to learners' records</td>
+</tr>
+<tr>
+<td><code>inactiveRule.*</code> (all <code>N</code>)</td>
+<td></td>
+<td>Inactivating a curriculum does <strong>not</strong> unassign users or remove it from catalogs, parent curricula, prerequisites, job codes or assignment profiles</td>
+</tr>
+</tbody>
+</table>
+<p>Sub-files: curriculum items, parent curricula, requirements, localization.</p>
+<h4>Competency connector</h4>
+<p>Reads SF competencies from <code>sf_competency_data.zip</code>. Defaults: category <code>Base Category</code>, type <code>SF Competency</code>, prefix <code>LMS_</code> for renamed rating scales and competencies, <code>enableCategorySync=Y</code>, <code>useDefaultRatingScale.enable=false</code>, assessment history processing <code>false</code>.</p>
+<h4>Skillsoft connector</h4>
+<p>Brings in the Skillsoft course catalogue through the OLSA web service.
+- <code>skillsoftconnectors.input.file.location=SkillsoftWebservice</code>
+- <code>endpoint</code>, <code>customer_id</code>, <code>shared_secret</code> are blank: fill with the vendor-provided values.
+- Defaults: item source <code>Skillsoft</code>, delivery method <code>WBT</code> (web-based training), catalog <code>PUBLIC</code>, chargeback method <code>2</code> (buyer-authorized account), revisions not allowed (<code>N</code>).
+- Mobile: <code>mobilestatus=Phone</code> sets mobile access <code>Y</code>; <code>Tablet</code> sets <code>N</code>.
+- Subject area connector is switched off (<code>process.subjectareaconnector=N</code>).</p>
+<hr />
+<h3>3.5 Transactions (learning records)</h3>
+<h4>Learning History connector</h4>
+<p>Loads completed training. Key fields: STUD_ID, CPNT_TYP_ID, CPNT_ID, REV_DTE, CMPL_STAT_ID (status), COMPL_DTE, GRADE, hours (credit, CPE, contact). Defaults for training funding and completion timezone are blank. Includes e-signature and government-reporting (2483) fields.</p>
+<h4>Enrollment connector</h4>
+<p>Loads enrollments for scheduled offerings. <code>rule.scheduleConflicts=ignore</code>: an overlapping session is still enrolled (no warning). Options: <code>ignore</code>, <code>warn</code>, <code>error</code> (reject).</p>
+<hr />
+<h3>3.6 Security / role configuration</h3>
+<ul>
+<li>Learner role: <code>DEFAULT USER</code> (User connector) and <code>LEARNING_USER</code> (SF User connector).</li>
+<li>Admin roles added/removed via ADD_ROLE_ID1-3 / REMOVE_ROLE_ID1-3.</li>
+<li>Domain-based access: all defaults use <code>PUBLIC</code>.</li>
+<li>SFTP and PGP credentials: see Section 3.1.</li>
+</ul>
+<h3>3.7 Integration configuration</h3>
+<ul>
+<li>Source of user data: SFTP files, with Employee Central via the SF User connector.</li>
+<li>Master Data Integration (MDI) is a permitted input location.</li>
+<li>Skillsoft: OLSA web service.</li>
+<li>Identity: <code>lms-origin</code> setting (Learning vs SuccessFactors platform authentication).</li>
+</ul>
+<h3>3.8 Analytics / reporting configuration</h3>
+<p>Run report: email + SFTP, showing Exceptions, Warnings and FATAL, up to 5000 lines.</p>
+<h3>3.9 Country-specific settings</h3>
+<p>Defaults point to US: <code>America/New_York</code>, USD, English, with US timezone abbreviations (EST, CST, MST, PST, AST). Change them for other countries. Government-reporting (2483) and Federal fields are US-oriented.</p>
+<h3>3.10 Industry-specific settings</h3>
+<p>None configured.</p>
+<hr />
+<h2>4. Known issues and workarounds / things to double-check</h2>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Impact</th>
+<th>Workaround</th>
+<th>Permanent Fix ETA</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Report recipient looks like a placeholder (<code>John.Smith@company.com</code>)</td>
+<td>Results go to the wrong person</td>
+<td>Replace with a shared mailbox</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>SFTP user ID and password are blank</td>
+<td>Connector cannot log in</td>
+<td>Set via secure process</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td><code>lms-origin</code> default is blank</td>
+<td>New users get the system default, which may be wrong</td>
+<td>Decide Y or N before the first load</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>Spelling quirks: <code>deafultValue</code> (User, Federal, SF User), <code>HOURLY_RATE_CURRENY</code></td>
+<td>Setting may be silently ignored</td>
+<td>Confirm in SAP documentation before "fixing"</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td><code>USER connector LICENSE_USER_TYPE=</code> is blank</td>
+<td>License type column in file is not read; default <code>ACTIVE</code> always applies</td>
+<td>Map to a column if functional users are needed</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>Learner role differs (<code>DEFAULT USER</code> vs <code>LEARNING_USER</code>)</td>
+<td>Inconsistent roles</td>
+<td>Align with the role list in System Admin</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td><code>requiredFiles</code> blank</td>
+<td>A run can pass with a missing user file</td>
+<td>Set e.g. <code>user_data</code></td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>Federal user connector includes SSN fields</td>
+<td>Sensitive data exposure</td>
+<td>Do not enable unless required</td>
+<td>TBC</td>
+<td>TBC</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>5. Beginner tips</h2>
+<ol>
+<li><strong>Only change what you need.</strong> Most lines are factory defaults.</li>
+<li><strong>Always test in a non-production tenant first.</strong></li>
+<li><strong>The right side of a mapping must match your file's column header exactly</strong> (case-sensitive).</li>
+<li><strong>Blank value does not mean "off"</strong>; it often means "use the global System Admin setting".</li>
+<li><strong>Read the run report</strong> after every load; zero errors is the goal.</li>
+<li><strong>Keep a copy of the file before each change</strong> and record it in the change history below.</li>
+</ol>
+<hr />
+<h2>6. Change history</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Change Description</th>
+<th>Changed By</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-11-23</td>
+<td>Initial beginner-friendly guide created from properties file</td>
+<td>SuccessLabs Academy</td>
+<td>TBC</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Contacts and support</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Email</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connector report recipient</td>
+<td>John Smith (as per file)</td>
+<td>John.Smith@company.com</td>
+<td>Run reports</td>
+</tr>
+<tr>
+<td>LMS administrator</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>Configuration</td>
+</tr>
+<tr>
+<td>SAP support</td>
+<td>TBC</td>
+<td>TBC</td>
+<td>Product issues</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>v1.0 | document-solution-config-guide | SuccessLabs Academy</p>
+<footer><a href="SF_Learning_Connector_Config_Guide.md">Download Markdown</a></footer>
+</body></html>
