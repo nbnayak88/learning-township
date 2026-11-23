@@ -1,0 +1,9 @@
+Stage,Trigger / entry,Key activities,Stakeholders,Value item,Exit criterion
+1 Design the organisation,Strategy or restructure,"Model units, reporting lines and jobs; agree codes","HR leaders, Finance, EA",Agreed structure,Structure approved and published
+2 Approve and open position,Headcount budget approved,Create position; route approvals; link cost centre,"Manager, HR, Finance","Approved, funded position",Position approved and linked to a cost centre
+3 Onboard and hire record,Offer accepted or contract signed,Create employment; verify right to work; issue documents,"HR operations, hiring manager",Complete employee record,Record complete and cleared to work
+4 Enrol in benefits,Hire or life event,Check eligibility; enrol; send to carriers and funds,"Employee, Total Rewards, carriers",Correct cover from day one,Enrolment confirmed by carrier or fund
+5 Pay and time,Payroll calendar,Send pay changes and time data; reconcile results,"Payroll, Finance, employee",Correct pay on time,Reconciliation within threshold
+6 Change the record,"Transfer, promotion or change request","Approve; update position, job, pay; notify partners","Manager, HR, Finance",Accurate current record,"Change effective, partners updated"
+7 Serve and support,Employee question or request,Self-service; case handling; assistant advice,"Employee, HR agents",Fast answers,Case closed within service level
+8 Exit and retain data,Resignation or end of contract,Leaver tasks; final pay; access removal; retention,"Manager, HR, IT, Payroll",Clean exit,Data archived or deleted by rule

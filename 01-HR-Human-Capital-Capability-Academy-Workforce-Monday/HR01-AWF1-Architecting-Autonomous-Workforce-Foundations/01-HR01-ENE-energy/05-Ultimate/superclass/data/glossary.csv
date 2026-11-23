@@ -1,0 +1,37 @@
+Term,Meaning
+OmniVerse Energy,Fictional integrated energy company used as the case study; all figures are illustrative
+Capability interface,The vendor-neutral contract that lets any approved partner in a category plug into the hub
+Adapter,A small mapping component that translates one partner's format and codes to the canonical model
+Canonical model,"OmniVerse's own definition of workforce entities and codes, independent of any vendor"
+iPaaS,Integration platform as a service; the integration hub
+Webhook,"An event call from one system to another, signed and retried"
+SAP Activate,"SAP's delivery method with six phases: Discover, Prepare, Explore, Realize, Deploy, Run"
+Fit-to-standard,Workshops that test standard solution capability against requirements before any build
+Clean core,Principle of keeping standard software unmodified and extending on a separate platform
+DPIA,Data protection impact assessment
+AI register,"List of every AI feature in use with purpose, data, model and risk class"
+Human in the loop,A named person reviews and decides; the system only advises
+BRD,Business Requirements Document
+HLDD,High-Level Design Document
+TOGAF ADM,The Open Group Architecture Framework: Architecture Development Method
+ABB / SBB,Architecture building block (what) / solution building block (how)
+BACCM,"Business Analysis Core Concept Model: change, need, solution, stakeholder, value, context"
+MoSCoW,"Must, Should, Could, Won't: prioritisation scale"
+DMBOK,Data Management Body of Knowledge (DAMA International)
+Data owner,Role accountable for a data domain
+Data steward,Role that manages data quality and definitions day to day
+SLA,Service-level agreement: a time target for a stage or action
+RTO / RPO,Recovery time objective / recovery point objective
+ADR,Architecture decision record
+DoR / DoD,Definition of ready / definition of done
+SCIM,System for cross-domain identity management: a standard for user provisioning
+Paperless architecture,"Architecture artefacts created, reviewed, approved and consumed online from a versioned repository, with no file exchange"
+Core record,"The global employee, organisation and position record held in SAP SuccessFactors Employee Central"
+Position,An approved seat that carries budget and headcount and is linked to a person
+Foundation data,"Organisation, location, cost centre and job objects that other data depends on"
+Effective dating,Keeping a history of each change with its start date
+"Joiner, mover, leaver","The three life-cycle changes that trigger tasks across HR, payroll, finance and IT"
+Total Rewards,"Pay, benefits and recognition function"
+Works council,Employee representative body with consultation rights on some HR changes
+Ecosystem category,"One of the 20 groups of partner capability, such as Benefits administration or Payroll engines"
+Right to work,Legal permission of a person to take a job in a country

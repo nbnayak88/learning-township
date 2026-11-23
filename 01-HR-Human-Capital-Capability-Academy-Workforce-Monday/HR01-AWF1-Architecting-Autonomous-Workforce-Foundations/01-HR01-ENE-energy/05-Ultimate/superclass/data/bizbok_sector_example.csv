@@ -1,0 +1,35 @@
+Element,Level,Item,OmniVerse example (core HR),Template register
+Strategy,L1,Vision and mission,"Reliable, affordable energy; a trusted global people record that supports the workforce","Objectives, vision"
+Strategy,L2,Strategic objectives,"Single record, position-based headcount, faster changes, trusted data",Objectives register
+Strategy,L3,Courses of action,"Core record programme, benefits, compliance, insight",Work packages
+Capability,L1,Plan the organisation,"Organisation design, positions and headcount plan",Capabilities register
+Capability,L1,Maintain employment records,"Person, employment and assignment data",Capabilities register
+Capability,L1,Administer benefits and pay,"Benefits, carriers, funds and payroll hand-off",Capabilities register
+Capability,L1,Comply and verify,"Right to work, statutory reporting, consent and retention",Capabilities register
+Capability,L1,Govern and enable,"Data governance, partners, identity, security and analytics",Capabilities register
+Capability,L2,Global benefits administration (under Administer benefits and pay),"Plan eligibility, enrolment, life events and carrier connectivity",Capabilities register
+Capability,L3,Enrol an employee,Check eligibility; send enrolment; store confirmation,Interfaces register
+Organization,L1,Executive and governance,Executive and governance,"Stakeholders, RACI"
+Organization,L1,Operating units,"HR operations, rewards, payroll, finance, IT, privacy","Stakeholders, RACI"
+Organization,L1,External parties,"Carriers, funds, payroll engines, verification providers",Stakeholders
+Organization,L2,Roles on a hire,Roles on a change,RACI
+Value,L1,Keep the record true and people paid and covered,One trusted record from hire to retire,Value stream register
+Value,L1,Keep structure and skills current,"Organisation, job and skills catalogue stay aligned",Value stream register
+Value,L2,Hire to retire core record,Eight stages from organisation design to exit,Value stream register
+Value,L3,Stakeholder value per stage,"Employee, manager, HR, payroll and finance value at each stage",Value stream register
+Information,L1,Core business objects,"Person, employment, position, organisation, benefit",Data entities
+Information,L2,Attributes and relations,Attributes and relations,Data dictionary
+Information,L3,Quality rules,Quality rules,"Data dictionary, DMBOK"
+Initiative,L1,Programmes,Core HR programme,Work packages
+Initiative,L2,Initiative to capability impact,Initiative to capability impact,Gap analysis
+Initiative,L3,Roadmap waves,Roadmap waves,Roadmap
+Product,L1,Services offered,"Self-service, cases, benefits, documents",Capabilities (business services)
+Product,L2,Service variants,Service variants by country,Add a products register
+Stakeholder,L1,Groups,"HR, managers, employees, finance, payroll, privacy",Stakeholders register
+Stakeholder,L2,Interests and influence,Interests and influence,Stakeholders register
+Policy,L1,Policy areas,"Data, privacy, access, AI","Business rules, principles"
+Policy,L2,Rules,Rules,Business rules
+Policy,L3,Rule to capability link,Rule to capability link,Traceability
+Metrics,L1,Outcome measures,Outcome measures,KPI register
+Metrics,L2,Capability measures,Capability measures,KPI register
+Metrics,L3,Data measures,Data measures,KPI register

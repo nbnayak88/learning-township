@@ -1,0 +1,19 @@
+Area,Standard,Notes
+Hosting,Vendor-hosted cloud service in the region chosen by the data-residency map; enterprise integration hub on the enterprise cloud tenant,Regions agreed per country with privacy
+Identity,Enterprise SSO (SAML 2.0 or OIDC); MFA for all staff; SCIM for provisioning,Staff only; employees use enterprise identity
+Partner authentication,OAuth 2.0 (client credentials or authorization code); API keys only where no alternative,Credentials in vault; scoped per partner
+API style,REST/JSON with OpenAPI contract; versioned; deprecation tracked,Each category has a published capability contract
+Events,Signed webhooks; idempotency key; retry with back-off; dead-letter queue,Receiver validates signature and timestamp
+Bulk exchange,Managed file transfer (SFTP over SSH) with PGP for bulk and legacy partners,Only when no API exists
+Data at rest,AES-256 encryption with organisation-held keys where the service allows; field-level protection for identity and check data,Key custody in the vault
+Data in transit,TLS 1.2 or higher; mutual TLS for high-risk partners,Certificate monitoring
+Canonical codes,"ISO 3166 (country), ISO 4217 (currency), ISO 8601 (dates), ISCO or internal job-family codes, internal stage and source lists",Maintained by the data council
+Observability,"Central logs, metrics, traces, correlation ID on every employee event",Dashboard per partner
+Resilience,Hub availability per vendor SLA; integration hub active-active across zones; RTO [4] h; RPO [1] h,Tested annually
+Data platform,Cloud lake or warehouse; pseudonymised employee keys; role-based access,No direct personal identifiers in dashboards by default
+AI governance,"AI register, model cards, bias tests, human-in-loop logging, regional switches",Aligned to the organisation's AI policy and applicable law
+Accessibility,WCAG 2.2 AA for employee pages,Audit before each wave
+Retention automation,"Country retention table drives anonymisation and deletion jobs, propagated to partners",Reported monthly
+Environments,"Sandbox, test, production for hub and integration hub; partner sandboxes before production",Test data synthetic; no live personal data in test
+Release management,Quarterly vendor releases reviewed; regression pack for each partner category,Release calendar owned by HR operations
+Exit readiness,"Documented export format, API-based extract, deletion certificate",Tested annually for critical partners

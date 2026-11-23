@@ -1,0 +1,18 @@
+ID,Work package,Transition architecture,Phase / wave,Depends on,Deliverable
+WP-01,"Mobilise, governance and architecture vision",TA0 Baseline,Preliminary / A (Discover),None,"Charter, vision, principles, stakeholder plan"
+WP-02,Requirements baseline and fit-to-standard,TA0 Baseline,B (Explore),WP-01,"Requirement register, fit-gap, process flows"
+WP-03,"Canonical workforce model, codes and data quality baseline",TA0 Baseline,C (Explore),WP-02,"Canonical model, code maps, DQ rules"
+WP-04,"Platform foundations: tenant, SSO, integration hub, vault, logging",TA1 Core record,D (Prepare / Realize),WP-01,"Tenant, SSO, hub, vault, audit log"
+WP-05,"Core record configuration: organisation, positions, employment",TA1 Core record,Wave 1 (Realize),"WP-02, WP-04",Configured core record and workflows
+WP-06,Finance and payroll hand-off,TA1 Core record,Wave 1 (Realize),WP-05,"IF-02, IF-03, IF-06, IF-07 tested"
+WP-07,"Hire hand-off, access provisioning and documents",TA1 Core record,Wave 1 (Realize),WP-05,"IF-01, IF-19, IF-20; documents"
+WP-08,Pilot cutover: pilot country cluster,TA1 Core record,Wave 1 (Deploy),WP-05 to WP-07,Pilot live; hypercare
+WP-09,"Global benefits, carriers and pension funds",TA2 Rewards and compliance,Wave 2 (Realize),WP-08,Benefits live; IF-09 to IF-11
+WP-10,"Right-to-work, e-signature and statutory reporting",TA2 Rewards and compliance,Wave 2 (Realize),WP-08,"IF-12 to IF-15, IF-18"
+WP-11,"Time and absence, contingent workforce and mobility",TA2 Rewards and compliance,Wave 2 (Realize),WP-08,"IF-08, IF-16, IF-17"
+WP-12,Responsible-AI control register and privacy automation,TA2 Rewards and compliance,Wave 2 (Realize),WP-04,AI register; retention jobs; region map
+WP-13,Regional rollout: wave per country cluster,TA2 Rewards and compliance,Waves 2 to 4 (Deploy),WP-08,Countries live by wave
+WP-14,"Data platform, analytics and quality scorecard",TA3 Insight and scale,Wave 3 (Realize),WP-08,Dashboards; DQ scorecard
+WP-15,Headcount planning and service desk with HR assistant,TA3 Insight and scale,Wave 3 (Realize),WP-08,Planning link; cases; advisory assistant
+WP-16,Legacy retirement and archive,TA3 Insight and scale,Wave 4 (Deploy),WP-13,Read-only archive; tools decommissioned
+WP-17,"Run: release management, partner reviews, exit tests",TA3 Insight and scale,Run,WP-08,Quarterly review; yearly exit test

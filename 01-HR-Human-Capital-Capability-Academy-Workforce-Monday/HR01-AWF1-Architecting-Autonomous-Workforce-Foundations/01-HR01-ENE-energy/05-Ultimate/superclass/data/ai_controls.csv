@@ -1,0 +1,11 @@
+ID,Control,AI use,What is checked,Evidence,Owner,Frequency
+AI-01,AI register,Every AI feature in the core record and every partner,"Purpose, vendor, model, data used, regions, risk class",Register entry approved before use,AI governance lead,On change and quarterly
+AI-02,Human decision,"Any advice on pay, status or employment",Named person and reason on every decision,Decision log,Head of HR Operations,Monthly sample
+AI-03,Source and citation,HR assistant answers,Answers cite policy; own record only,Test cases and logs,HR service lead,Each release
+AI-04,Content safety,HR assistant,Test for wrong or harmful answers; policy base reviewed,Test pack; review log,HR service lead,Each release
+AI-05,Access scope,HR assistant and analytics AI,Same role limits as the user; no extra data,Access test,IT Security,Quarterly
+AI-06,Employee notice,Any AI step visible to employees,Plain-language notice; human route,Notice text,Privacy office,On change
+AI-07,Regional switch,All AI features,Off by country where law or works agreement requires,Configuration export,AI governance lead,Quarterly
+AI-08,Data minimisation and training use,Partner AI services,OmniVerse employee data not used to train shared models unless approved,Contract clause; attestation,Procurement,At contract and annual
+AI-09,Quality suggestions,Data-quality suggestions,Suggestions reviewed by the data steward before change,Review log,Person data steward,Monthly
+AI-10,Incident handling,All AI,Route for model error or complaint; stop-use switch,Runbook; drill record,AI governance lead,Annual drill

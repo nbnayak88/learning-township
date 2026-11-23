@@ -1,0 +1,14 @@
+Domain,Baseline (typical),Target,Gap,Closing work package
+Business,Different HR process in every country,One standard with local variants,Standard process and owners,WP-02
+Business,Positions tracked in spreadsheets,Position-based headcount,Position model and workflow,WP-05
+Data,Duplicate and inconsistent person data,"One person record, measured quality",Cleansing and DQ rules,WP-03
+Data,No canonical model,Canonical workforce model and ID map,Model and cross-reference,WP-03
+Application,About [30] local HR tools,One core record,Migration and retirement,WP-08
+Application,Benefits by file to carriers,"Global benefits model, connected carriers",Benefits and connectors,WP-09
+Application,Re-keying into finance and payroll,Automated hand-off,Interfaces and tests,WP-06
+Technology,Point-to-point files,Integration hub with adapters,Hub and adapters,WP-04
+Technology,Shared accounts and local credentials,"SSO, SCIM and vault",Identity and secrets,WP-04
+AI and governance,No AI register,Registered advisory AI,Control register,WP-12
+Privacy,Retention not enforced,Region and retention automation,Privacy manager,WP-12
+People,Limited self-service,Self-service and cases,Service model and training,WP-15
+Partners,No exit plans,"Exit plan per category, tested yearly",Registry and tests,WP-17

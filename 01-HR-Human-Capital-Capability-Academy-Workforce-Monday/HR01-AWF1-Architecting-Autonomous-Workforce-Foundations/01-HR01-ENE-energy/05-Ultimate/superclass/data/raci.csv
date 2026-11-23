@@ -1,0 +1,14 @@
+Activity,Business owner,Business analyst,Enterprise architect,Data steward,Security,Finance,Delivery lead
+"Approve scope, waves and ecosystem list",A,R,C,C,C,C,R
+Maintain requirements and fit-gap,A,R,C,C,I,I,R
+Approve canonical model and codes,C,R,A,R,I,I,C
+Select a partner using the scorecard,A,C,R,C,C,C,R
+Approve contract data-return and audit terms,A,I,C,C,C,C,R
+Design and test partner integration,C,C,A,C,C,I,R
+Approve AI use and tests,A,C,R,C,C,I,I
+"Approve consent, retention and region map",A,C,C,R,R,I,I
+Approve security design and credentials,C,I,R,I,A,I,R
+Approve position and organisation design,A,R,C,C,I,C,R
+Go-live readiness decision,A,C,C,C,C,C,R
+Quarterly partner and release review,A,I,R,C,C,C,R
+Annual partner exit test,C,I,A,C,C,I,R

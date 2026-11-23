@@ -1,0 +1,90 @@
+Ref,Term (chapter 4),Meaning in plain words,Where covered,Template artefact,Primary stream,Supporting streams
+4.1,Abstraction,Leaving out detail so the essential idea is clear.,Ch 1.5,Four abstraction levels,Enterprise,"Data, Application, Technology"
+4.2,Actor,"A person, team or system that takes part in a process.","Ch 10, 12",Stakeholders; context diagram,Business,"Application, UI/UX"
+4.3,Application Architecture,"The applications, their relationships and how they support the business.",Ch 12,Components; context and layered diagrams,Application,"Integration, Data"
+4.4,Application Component,"A modular, replaceable part of an application with defined interfaces.",Ch 12,Components register,Application,Integration
+4.5,Application Platform,The technology on which applications are built and run.,Ch 13,Tech standards,Technology,"Application, Infrastructure"
+4.6,Application Service,Functionality an application exposes to be used by others.,Ch 12,Components; interfaces,Application,Integration
+4.7,Architectural Style,"A family of design approaches sharing key traits, such as layered or event-driven.",Ch 1.6,Principles; ADR,Application,"Technology, Integration"
+4.8,Architecture,The fundamental structure of a system or enterprise and the rules guiding its change.,Ch 1.1,All registers,Enterprise,"Business, Data, Application, Technology"
+4.9,Architecture Building Block (ABB),"A reusable piece defined by required capability, not by product.","Ch 1.4, 12",Components (ABB column),Application,"Enterprise, Technology"
+4.10,Architecture Continuum,"The architecture side of the continuum, from foundation to organisation-specific.",Ch 1.2,Continuum table,Enterprise,Industry
+4.11,Architecture Development Method (ADM),The step-by-step method for developing and governing architecture.,"Ch 1.3, 15",Lifecycle; crosswalk,Enterprise,"Business, Data, Application, Technology"
+4.12,Architecture Domain,"A major division of architecture: business, data, application, technology.","Ch 1.3, 2",Streams register,Enterprise,"Business, Data, Application, Technology"
+4.13,Architecture Framework,A foundation of structures and methods for building architectures.,"Ch 0, 1",Crosswalk,Enterprise,Industry
+4.14,Architecture Governance,Directing and controlling architecture work and compliance.,Ch 16,RACI; gates,Enterprise,"Security, AI"
+4.15,Architecture Landscape,A view of the architecture assets in use at a point in time.,Ch 1.3,Components; capabilities,Enterprise,"Application, Technology"
+4.16,Architecture Level,"A level of detail used when scoping architecture work: strategic, segment, capability.",Ch 1.3,Scope table,Enterprise,Business
+4.17,Architecture Model,A representation of part of the architecture for analysis or communication.,Ch 1.8,Diagrams; registers,Enterprise,"Business, Data, Application"
+4.18,Architecture Partition,"A split of the landscape to keep it manageable, by ownership or scope.",Ch 1.3,Streams; domains,Enterprise,"Domain, Industry"
+4.19,Architecture Principle,"An enduring rule guiding decisions, with rationale and implications.",Ch 6,Principles register,Enterprise,"Business, Data, Application, Technology, Security, AI"
+4.20,Architecture View,A representation of the architecture for a set of stakeholder concerns.,Ch 1.8,"Document, deck, workbook views",Enterprise,UI/UX
+4.21,Architecture Viewpoint,The conventions that define how a view is constructed and read.,Ch 1.8,Viewpoint table,Enterprise,UI/UX
+4.22,Architecture Vision,A high-level picture of the target and the case for change.,Ch 6,Vision chapter; vision slide,Enterprise,"Business, Industry"
+4.23,Artifact,"A specific architectural work product: catalogue, matrix or diagram.","Ch 1.4, 17",Each register and diagram,Enterprise,"Business, Data, Application"
+4.24,Baseline,The current state used as the starting point for change.,Ch 14,Gap analysis,Business,"Enterprise, Technology"
+4.25,Boundaryless Information Flow,Information moving freely and securely across organisational boundaries.,Ch 1.7,Interfaces; exchange standards,Integration,"Data, Security, Industry"
+4.26,Building Block,"A package of functionality defined to meet a need, reusable and combinable.",Ch 1.4,Components,Application,Technology
+4.27,Business Architecture,"The business strategy, governance, organisation and key processes.",Ch 10,Capabilities; processes; rules,Business,"Domain, Industry"
+4.28,Business Capability,"What the business can do, independent of how or who.",Ch 10,Capabilities register,Business,"Enterprise, Domain"
+4.29,Business Function,A grouping of behaviour by a chosen criterion such as skill or ownership.,Ch 10,Capability map,Business,Domain
+4.30,Business Governance,"How the business is directed, controlled and held accountable.",Ch 16,RACI; policies,Business,"Enterprise, Security"
+4.31,Business Model,"How the organisation creates, delivers and captures value.","Ch 6, 10",Vision; value stream,Business,"Enterprise, Industry"
+4.32,Business Service,"A service the business offers to customers or internally, with defined outcome.",Ch 10,Value stream; capabilities,Business,"Application, Domain"
+4.33,Capability,"An ability an organisation has, made of people, process and technology.",Ch 10,Capabilities register,Enterprise,Business
+4.34,Capability Architecture,"A detailed architecture for one capability, used for planning increments.",Ch 1.3,Work packages,Enterprise,"Business, Application"
+4.35,Capability Increment,A distinct improvement step delivering part of a capability.,Ch 15,Work packages,Enterprise,Business
+4.36,Communications and Stakeholder Management,Planning how to inform and involve stakeholders.,Ch 7,Stakeholders register,Business,"Enterprise, UI/UX"
+4.37,Concern,An interest a stakeholder has that the architecture must address.,"Ch 1.8, 7",Stakeholders; viewpoints,UI/UX,"Business, Enterprise"
+4.38,Course of Action,"A directed path chosen to reach a goal, linked to strategy.",Ch 14,Gap analysis; options,Enterprise,Business
+4.39,Data Architecture,Structure of logical and physical data assets and their management.,Ch 11,Entities; dictionary; DQ rules,Data,"Domain, Security, AI"
+4.40,Deliverable,A formally reviewed work product agreed with stakeholders.,"Ch 1.4, 17",Chapters; gates,Enterprise,Business
+4.41,Digital Architecture,"Architecture of digital capabilities, platforms, data and experiences that run the enterprise.",Ch 1.9,"AI, UI/UX, integration streams",Enterprise,"AI, UI/UX, Integration"
+4.42,EA Landscape,"The enterprise architecture landscape: the architecture assets across the whole enterprise, seen together.",Ch 1.3,Components; capabilities; streams,Enterprise,"Business, Application, Technology, Industry"
+4.43,Enterprise,A collection of organisations with a common set of goals.,"Ch 1.1, 6",Scope statement,Enterprise,Industry
+4.44,Enterprise Architecture Service,A service the architecture function provides to the organisation.,Ch 1.10,Services table,Enterprise,Business
+4.45,Enterprise Continuum,The classification of architecture and solution assets from generic to specific.,Ch 1.2,Continuum table,Enterprise,Industry
+4.46,Foundation Architecture,Generic building blocks and standards usable by any organisation.,Ch 1.2,Tech standards,Enterprise,Technology
+4.47,Framework,A structure for building or organising something.,Ch 0,Crosswalk,Enterprise,Industry
+4.48,Gap,A difference between baseline and target needing action.,Ch 14,Gap analysis,Enterprise,"Business, Application"
+4.49,Governance,The system by which an organisation is directed and controlled.,Ch 16,RACI,Enterprise,Security
+4.50,Information,Data given meaning and context so it can be used.,Ch 11,Data dictionary,Data,Business
+4.51,Information Technology (IT),Computing and communications used to handle information.,Ch 13,Tech standards,Technology,Infrastructure
+4.52,Interoperability,The ability to exchange information and use it meaningfully.,Ch 1.7,Interfaces,Integration,"Data, Industry"
+4.53,Logical,A level of description independent of specific products.,Ch 1.5,Logical models,Application,"Data, Technology"
+4.54,Metadata,"Data that describes other data, including meaning, owner and quality.",Ch 11,Data dictionary,Data,"Security, AI"
+4.55,Metamodel,A model of the model: the entities and relationships allowed.,Ch 1.8,Crosswalk; column definitions,Data,Enterprise
+4.56,Method,A defined way of doing something with steps and outputs.,"Ch 7, 15",ADM; BABOK approach,Enterprise,Business
+4.57,Modeling,Creating representations to understand and communicate a subject.,Ch 1.8,Diagrams,Enterprise,"Business, Data, Application"
+4.58,Model Kind,"A category of model, such as catalogue, matrix or diagram.",Ch 1.8,Register types,Enterprise,Data
+4.59,Objective,A measurable aim that supports a goal.,Ch 6,Objectives slide; KPIs,Business,Enterprise
+4.60,Pattern,"A proven, reusable solution to a recurring design problem.",Ch 1.6,ADR; integration patterns,Application,"Integration, Technology, AI"
+4.61,Physical,A level of description tied to real products and infrastructure.,Ch 1.5,Tech standards; hosting model,Infrastructure,Technology
+4.62,Principle,A qualitative rule guiding decisions.,Ch 6,Principles register,Enterprise,"Business, Data, Application, Technology"
+4.63,Product,A packaged offering that implements building blocks.,Ch 13,Tech standards,Technology,Application
+4.64,Reference Model (RM),"A generic model describing a domain, reused to build specific architectures.",Ch 1.2,Domain and industry mapping,Industry,"Domain, Enterprise"
+4.65,Requirement,A statement of need that a solution must meet.,Ch 8,Requirements register,Business,"UI/UX, Domain"
+4.66,Roadmap,A time-sequenced plan of change toward the target.,Ch 15,Work packages,Enterprise,Business
+4.67,Role,The part an individual or group plays in a process or governance.,Ch 16,RACI,Business,"Enterprise, Security"
+4.68,Segment Architecture,A detailed architecture of a part of the enterprise.,Ch 1.3,Work packages,Enterprise,Business
+4.69,Service,A repeatable unit of function with defined interface and outcome.,Ch 1.6,Components; interfaces,Application,"Integration, Business"
+4.70,Service Orientation,An approach that designs capability as loosely coupled services.,Ch 1.6,Principles; ADR,Application,Integration
+4.71,Service-Oriented Architecture (SOA),An architecture style built on service orientation.,Ch 1.6,Interfaces; patterns,Integration,Application
+4.72,Service Portfolio,The managed set of services and their lifecycle.,Ch 1.6,Components; interfaces,Application,"Integration, Enterprise"
+4.73,Solution Architecture,The architecture of a specific solution meeting defined requirements.,Ch 12,Layered architecture,Application,"Technology, Integration"
+4.74,Solution Building Block (SBB),"A concrete, product-level building block that realises an ABB.","Ch 12, 13",Components (SBB column); tech standards,Application,Technology
+4.75,Solutions Continuum,"The solution side of the continuum, from common to implemented.",Ch 1.2,Continuum table,Application,Technology
+4.76,Stakeholder,A person or group with an interest in the architecture.,Ch 7,Stakeholders register,Business,"Enterprise, UI/UX"
+4.77,Standards Library,A catalogue of standards the architecture must or should follow.,Ch 13,Tech standards,Technology,"Security, Integration"
+4.78,Strategic Architecture,"A high-level, long-term view directing the organisation.",Ch 1.3,Vision; roadmap,Enterprise,Industry
+4.79,Target Architecture,The desired future state to be reached.,"Ch 14, 15",Gap analysis,Enterprise,"Business, Application"
+4.80,Taxonomy of Architecture Views,A classification of the kinds of architecture views.,Ch 1.8,Viewpoint table,Enterprise,UI/UX
+4.81,Technology Architecture,"Logical software, hardware and network capabilities that support applications and data.",Ch 13,Tech standards,Technology,"Infrastructure, Security"
+4.82,Technology Component,"A specific technology building block, such as a database or runtime.",Ch 13,Tech standards,Technology,Infrastructure
+4.83,Technology Service,"Technical capability needed to support applications, such as messaging or identity.",Ch 13,Tech standards,Technology,"Security, Integration"
+4.84,Transition Architecture,An intermediate state between baseline and target.,Ch 15,Work packages,Enterprise,Infrastructure
+4.85,Value Stream,An end-to-end series of steps that creates value for a stakeholder.,Ch 10,Value stream,Domain,"Business, Industry"
+4.86,View,What a given stakeholder sees of the architecture.,Ch 1.8,"Document, deck, workbook",Enterprise,UI/UX
+4.87,Viewpoint,The pattern for building a view for a set of concerns.,Ch 1.8,Viewpoint table,Enterprise,UI/UX
+4.88,Viewpoint Library,A collection of reusable viewpoints.,Ch 1.8,Viewpoint table,Enterprise,UI/UX
+4.89,Work Package,A set of actions delivering part of a capability increment.,Ch 15,Work packages,Enterprise,"Business, Application"

@@ -1,0 +1,17 @@
+ID,Risk,Likelihood (1-5),Impact (1-5),Score,Mitigation,Owner
+RK-01,Local rules in some countries do not fit the global model,4,4,16,Country variants by configuration; fit-to-standard per cluster; regional design authority,Head of HR Operations
+RK-02,Poor legacy data quality delays migration,4,4,16,Cleanse to DQ rules; dress rehearsals; data owners sign off,Workforce Data Council
+RK-03,Employee data processed in a region not allowed,3,5,15,Region map per partner; transfer assessments; monitoring,Data Protection Officer
+RK-04,Works councils object to monitoring or AI use,3,4,12,Early consultation; advisory-only AI; processing register,Legal and Works Councils
+RK-05,Payroll or benefits errors at go-live,3,5,15,Parallel run; reconciliation; hypercare with payroll,Head of Payroll
+RK-06,Partner API changes break an integration,3,4,12,Contract tests; versioning; partner notice clauses,Integration lead
+RK-07,A key partner fails or exits,2,5,10,Exit plan; second-source option; data return in contract,Procurement
+RK-08,Positions are not maintained after go-live,3,4,12,Position workflow; KPI K-20; approval rules,Head of Workforce Planning
+RK-09,Scope creep beyond the pilot slice,4,3,12,Gate reviews; wave plan; change control,Programme manager
+RK-10,Access too broad for sensitive data,3,5,15,Role-based permissions; quarterly review; masking,IT Security
+RK-11,Low adoption of self-service,3,3,9,Mobile design; training; manager champions,Head of HR Service
+RK-12,Finance and HR headcount stay misaligned,3,4,12,Joint design; cost-centre link; reconciliation KPI,Head of Finance Operations
+RK-13,Key staff unavailable in waves,3,3,9,Named roles; backfill; knowledge transfer,Programme manager
+RK-14,AI assistant gives wrong answers,3,3,9,Limited to advice; knowledge review; stop switch,AI governance lead
+RK-15,Time zones and languages slow support,3,3,9,Follow-the-sun support; language packs,Head of HR Service
+RK-16,Credentials leaked from a partner,2,5,10,Vault; rotation; scoped tokens; monitoring,IT Security

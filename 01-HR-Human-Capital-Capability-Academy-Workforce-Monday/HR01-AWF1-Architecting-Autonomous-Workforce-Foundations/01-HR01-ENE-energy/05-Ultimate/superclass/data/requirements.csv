@@ -1,0 +1,53 @@
+ID,Level,BABOK class,Requirement,MoSCoW,Acceptance criteria,Realised by,TOGAF ADM phase,DMBOK area,Source,Status
+BR-001,Business,Business,"Provide one global employee, organisation and position record for all countries, with local variants handled by configuration.",Must,One person and one employment record per employee; no parallel HR system after the final wave.,C05 C06 C07,B,Master data,OmniVerse case study,Draft
+BR-002,Business,Business,Control headcount through approved positions.,Must,100% of hires and transfers into approved positions after pilot.,C07 C23 C35,B,Master data,OmniVerse case study,Draft
+BR-003,Business,Business,"Make joiner, mover and leaver changes faster and consistent.",Must,Median time to effective change down [40]% against baseline.,C09 C10 C36,B,Integration,OmniVerse case study,Draft
+BR-004,Business,Business,Give one benefits model with local plans and carriers.,Should,One benefits data model across [50] countries; local plans by configuration.,C13 C15 C16,B,Master data,OmniVerse case study,Draft
+BR-005,Business,Business,Measure and own workforce data quality end to end.,Must,Named owners; quality scorecard published monthly.,C29 C30,B,Data quality,OmniVerse case study,Draft
+BR-006,Business,Business,"Meet privacy, retention and works-council rules in every country.",Must,Region and retention rules applied; deletion evidence available.,C33 C34,B,Privacy,OmniVerse case study,Draft
+BR-007,Business,Business,Replace any partner in a category without redesign.,Must,Exit plan tested yearly per category; adapter-only replacement.,C26 C27 C38,B,Integration,OmniVerse case study,Draft
+BR-008,Business,Business,"Deliver in waves with SAP Activate, starting with a pilot.",Must,Pilot live before waves 2 to 4; quality gates passed.,C26 C39,E,Integration,OmniVerse case study,Draft
+SR-001,Stakeholder,Stakeholder,Employees and managers can complete common changes on mobile.,Must,Top [10] requests available on mobile in the pilot.,C01 C03,B,Content,OmniVerse case study,Draft
+SR-002,Stakeholder,Stakeholder,HR agents see a role-limited record without switching systems.,Must,"Agent view from the case, field access by role.",C02 C11,C,Security,OmniVerse case study,Draft
+SR-003,Stakeholder,Stakeholder,Total Rewards and Payroll receive correct data on time.,Must,Reconciliation within [0.1]% each cycle.,C17 C13,C,Integration,OmniVerse case study,Draft
+SR-004,Stakeholder,Stakeholder,"Finance sees positions, headcount and cost aligned.",Must,Position to cost-centre link complete for 100% of active positions.,C35 C07,C,Integration,OmniVerse case study,Draft
+SR-005,Stakeholder,Stakeholder,"Legal and works councils can see what is collected, why and for how long.",Must,Processing register and retention table available.,C33,C,Privacy,OmniVerse case study,Draft
+SR-006,Stakeholder,Stakeholder,IT Security controls partner access.,Must,Scoped credentials; access review each quarter.,C31 C40,D,Security,OmniVerse case study,Draft
+SR-007,Stakeholder,Stakeholder,Procurement can compare and replace vendors fairly.,Should,Scorecard used for every selection; exit terms in contracts.,C38,E,Integration,OmniVerse case study,Draft
+SR-008,Stakeholder,Stakeholder,Regional HR leaders keep local rules and languages.,Must,Country variants by configuration; no code fork.,C14 C06,B,Master data,OmniVerse case study,Draft
+FR-001,Solution,Functional,Maintain the organisation structure with effective dating and country variants.,Must,"Create, change and publish a unit with history.",C06 C09,C,Master data,OmniVerse case study,Draft
+FR-002,Solution,Functional,"Create, approve, change and close positions with workflow.",Must,Position status and history; link to person.,C07 C09,C,Master data,OmniVerse case study,Draft
+FR-003,Solution,Functional,Maintain a job and skills catalogue mapped to country jobs.,Should,Job family and grade mapping per country.,C08,C,Reference,OmniVerse case study,Draft
+FR-004,Solution,Functional,Create the person and employment from an accepted offer.,Must,No re-keying; duplicates blocked.,C24 C05,C,Integration,OmniVerse case study,Draft
+FR-005,Solution,Functional,"Support transfers, promotions and other changes with approval rules.",Must,Rule-driven routes; changes effective-dated.,C09 C10,C,Master data,OmniVerse case study,Draft
+FR-006,Solution,Functional,Order right-to-work checks and store only outcome and date.,Must,No document images in the hub.,C19,C,Privacy,OmniVerse case study,Draft
+FR-007,Solution,Functional,Generate and sign employee documents.,Should,Template to signed file in one flow.,C12 C20,C,Content,OmniVerse case study,Draft
+FR-008,Solution,Functional,"Administer benefits with eligibility, enrolment and life events.",Must,Eligibility by rule; carrier confirmations stored.,C13 C15,C,Master data,OmniVerse case study,Draft
+FR-009,Solution,Functional,Send pay data to payroll and receive reconciliation.,Must,Cycle file or API; exceptions listed.,C17,C,Integration,OmniVerse case study,Draft
+FR-010,Solution,Functional,Exchange time and absence data.,Should,Schedules and balances shared hourly.,C18,C,Integration,OmniVerse case study,Draft
+FR-011,Solution,Functional,Manage global assignments.,Could,Assignment record linked to home and host.,C21,C,Master data,OmniVerse case study,Draft
+FR-012,Solution,Functional,Hold contingent worker records and end dates.,Should,Access ends with contract.,C22 C36,C,Master data,OmniVerse case study,Draft
+FR-013,Solution,Functional,Provision and remove access from record events.,Must,"Joiner, mover and leaver events reach IT within [1] hour.",C36 C10,C,Integration,OmniVerse case study,Draft
+FR-014,Solution,Functional,Run cases with service levels and knowledge.,Should,Case open to close within service level.,C02 C04,C,Content,OmniVerse case study,Draft
+FR-015,Solution,Functional,Run statutory reports by country.,Must,Reports reproducible and signed off.,C14,C,Reporting,OmniVerse case study,Draft
+FR-016,Solution,Functional,Delete or anonymise data by retention rule.,Must,Deletion evidence per record.,C33 C34,C,Privacy,OmniVerse case study,Draft
+FR-017,Solution,Functional,Publish headcount and quality dashboards.,Should,"Dashboards from the data platform, no direct identifiers.",C28 C30,C,Reporting,OmniVerse case study,Draft
+FR-018,Solution,Functional,"Register every AI use, with advisory-only limits.",Must,AI register complete before use.,C37 C04,C,Governance,OmniVerse case study,Draft
+NF-001,Solution,Non-functional,Availability of the core record and APIs.,Must,[99.5]% monthly.,C05 C25,D,Operations,OmniVerse case study,Draft
+NF-002,Solution,Non-functional,Performance of self-service and approvals.,Should,95% of pages under [3] seconds.,C01 C09,D,Operations,OmniVerse case study,Draft
+NF-003,Solution,Non-functional,Integration recovery.,Must,No lost events; replay within [4] hours.,C26 C39,D,Integration,OmniVerse case study,Draft
+NF-004,Solution,Non-functional,Least-privilege access.,Must,Role review each quarter; no shared accounts.,C11 C31,D,Security,OmniVerse case study,Draft
+NF-005,Solution,Non-functional,Encryption and key control.,Must,In transit and at rest; keys rotated.,C40,D,Security,OmniVerse case study,Draft
+NF-006,Solution,Non-functional,Audit of reads and changes of sensitive data.,Must,Events kept for [7] years.,C34,D,Security,OmniVerse case study,Draft
+NF-007,Solution,Non-functional,Data residency by country.,Must,Region map applied; evidence on request.,C33,D,Privacy,OmniVerse case study,Draft
+NF-008,Solution,Non-functional,Accessibility and language.,Must,WCAG 2.1 AA; languages per country.,C01,D,Content,OmniVerse case study,Draft
+NF-009,Solution,Non-functional,Partner API versioning and contract tests.,Must,Tests pass on every partner release.,C39,D,Integration,OmniVerse case study,Draft
+NF-010,Solution,Non-functional,Support and release rhythm.,Should,Quarterly release tested before production.,C26,D,Operations,OmniVerse case study,Draft
+NF-011,Solution,Non-functional,Backup and recovery.,Must,RPO [1] hour; RTO [4] hours.,C05 C28,D,Operations,OmniVerse case study,Draft
+NF-012,Solution,Non-functional,Monitoring of every partner flow.,Must,Alert within [5] minutes of failure.,C39 C32,D,Operations,OmniVerse case study,Draft
+TR-001,Transition,Transition,"Migrate employee, organisation and position data by country cluster.",Must,Reconciliation of counts and key fields; legacy frozen at cutover.,C05 C06 C07,F,Migration,OmniVerse case study,Draft
+TR-002,Transition,Transition,Cleanse data to quality rules before load.,Must,Rules DQ-01 to DQ-12 pass above threshold.,C29,F,Data quality,OmniVerse case study,Draft
+TR-003,Transition,Transition,"Train HR, managers and employees by role.",Must,Role-based curriculum delivered before go-live.,C01 C02,F,Change,OmniVerse case study,Draft
+TR-004,Transition,Transition,Run hypercare with defined exit.,Must,Exit criteria met for [4] weeks.,C02 C39,G,Operations,OmniVerse case study,Draft
+TR-005,Transition,Transition,Rehearse cutover and rollback.,Must,Dress rehearsal passed; rollback timed.,C26,G,Operations,OmniVerse case study,Draft
+TR-006,Transition,Transition,Retire legacy HR systems and local tools.,Should,Read-only archive; tools decommissioned by wave.,C28,H,Migration,OmniVerse case study,Draft

@@ -1,0 +1,14 @@
+Stakeholder,Role in change,Concern (TOGAF),Power,Interest,Engagement approach
+Chief People Officer (sponsor),Executive sponsor,One global people record and credible headcount,High,High,Monthly steering; decisions on scope and waves
+Head of HR Operations,Business owner,"One process, fewer tools, fast changes",High,High,Weekly design authority; owns process catalogue
+Regional HR leaders (50+ countries),Process owners and users,Local rules and languages kept without breaking the global model,Medium,High,Regional fit-to-standard workshops
+HR service agents and administrators,Primary users,"Less re-keying, clear cases and tasks",Low,High,Sandbox walk-throughs; super-user network
+Managers and employees,Users,"Simple, mobile self-service",Medium,Medium,Pilot groups; feedback loops
+Total Rewards and Payroll,Downstream owners,Correct pay and benefit data on time,High,High,Joint hand-off design and reconciliation
+Finance,Downstream owner,"Cost centres, positions and headcount cost aligned",High,Medium,Joint finance-HR design sessions
+"Legal, Privacy and Works Councils",Control owners,"Lawful basis, retention, employee monitoring and AI rules",High,High,Early review; agreements per country
+Enterprise Architecture Office,Design authority,"Standards, reuse, vendor neutrality, exit readiness",High,High,Architecture review board
+IT Security and Identity,Control owners,"SSO, least privilege, partner credentials, logging",High,Medium,Security reviews at each gate
+Procurement and Vendor Management,Commercial owner,Fair selection and data-exit terms,Medium,Medium,Scorecard and contract templates
+Partner vendors,Service providers,"Clear API contract, volumes and support model",Low,Medium,Partner council
+Implementation partner and SAP team,Delivery,Clear scope and fit-to-standard discipline,Medium,High,SAP Activate cadence and gates

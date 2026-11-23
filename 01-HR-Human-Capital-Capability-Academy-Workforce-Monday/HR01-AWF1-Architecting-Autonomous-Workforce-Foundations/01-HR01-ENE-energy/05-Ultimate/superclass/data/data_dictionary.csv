@@ -1,0 +1,36 @@
+Entity,Attribute,Type,Mandatory,Rule / domain,Personal data,DQ dimension
+Person,Person ID,Text,Yes,Unique key from the hub,Yes,Uniqueness
+Person,Legal name,Text,Yes,Country format rules,Yes,Validity
+Person,Date of birth,Date,Yes,Not in future; age band,Yes,Validity
+Person,Work email,Text,No,Valid format; unique,Yes,Uniqueness
+Person,National identifier,Text,No,Country rule; masked in views,Yes,Validity
+Person,Bank account,Text,No,Country rule; masked; payroll only,Yes,Validity
+Employment and assignment,Employment ID,Text,Yes,Unique key,No,Uniqueness
+Employment and assignment,Start date,Date,Yes,Not before offer date,No,Validity
+Employment and assignment,End date,Date,No,After start date,No,Consistency
+Employment and assignment,Employment status,Code,Yes,"Active, leave, terminated",No,Validity
+Employment and assignment,Manager ID,Text,Yes,Active person,No,Consistency
+Employment and assignment,Position ID,Text,Yes,Approved position,No,Consistency
+Position,Position ID,Text,Yes,Unique key,No,Uniqueness
+Position,Position status,Code,Yes,"Planned, approved, filled, frozen, closed",No,Validity
+Position,Headcount,Number,Yes,Between 0 and 1 (or FTE rule),No,Validity
+Position,Cost centre,Code,Yes,Valid cost centre,No,Consistency
+Position,Job code,Code,Yes,From catalogue,No,Validity
+Organisation unit,Unit code,Code,Yes,Unique; country rules,No,Uniqueness
+Organisation unit,Parent unit,Code,Yes,Active parent; no loops,No,Consistency
+Organisation unit,Legal entity,Code,Yes,Valid entity,No,Validity
+Job and skills,Job code,Code,Yes,Unique; family and grade,No,Uniqueness
+Job and skills,Country job map,Code,No,Maps to global job,No,Consistency
+Benefit plan and enrolment,Plan code,Code,Yes,Carrier plan code,No,Validity
+Benefit plan and enrolment,Eligibility rule,Text,Yes,Rule ID,No,Validity
+Benefit plan and enrolment,Dependant relationship,Code,No,Country list; minimum fields,Yes,Validity
+Right-to-work status,Check outcome,Code,Yes,"Cleared, not cleared, review",Yes,Validity
+Right-to-work status,Check date,Date,Yes,Valid date,No,Timeliness
+Document and signature,Document ID,Text,Yes,Unique,No,Uniqueness
+Document and signature,Signed date,Date,No,After issue date,No,Consistency
+HR case,Case ID,Text,Yes,Unique,No,Uniqueness
+HR case,Service level,Code,Yes,Per case type,No,Timeliness
+Consent record,Lawful basis,Code,Yes,From list,Yes,Validity
+Consent record,Retention class,Code,Yes,From retention table,No,Validity
+ID cross-reference,Partner ID,Text,Yes,Partner and canonical key,No,Consistency
+ID cross-reference,Mapping version,Text,Yes,Version tag,No,Consistency

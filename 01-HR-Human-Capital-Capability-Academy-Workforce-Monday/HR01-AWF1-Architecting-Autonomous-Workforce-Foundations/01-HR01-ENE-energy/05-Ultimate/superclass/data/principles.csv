@@ -1,0 +1,17 @@
+ID,Domain,Name,Statement,Rationale,Implications
+P-B1,Business,"One person, one record","Every employee, contingent worker and position has one authoritative record.",Removes conflicting headcount and duplicate entry.,Employee Central is the system of record; legacy tools are retired.
+P-B2,Business,Process before tool,"Agree the standard process first, then configure; vary only where law or business needs it.",Keeps the core clean and upgradeable.,Local variants are configuration and logged as decisions.
+P-B3,Business,Position drives headcount,Hiring and cost follow approved positions.,Gives Finance and HR one control point.,No hire without an approved position or approved exception.
+P-B4,Business,People decide,"Automation and AI advise; named people decide changes to pay, status and employment.",Fairness and accountability.,Decision and reason are logged.
+P-D1,Data,Personal data held in trust,"Collect the minimum, with notice and purpose; keep only as long as needed.",Privacy law and employee trust.,Retention by region table; deletion is tested.
+P-D2,Data,Canonical workforce model,Partners map to OmniVerse entities and codes; partner formats stay in adapters.,Makes partners replaceable.,One mapping table set per partner.
+P-D3,Data,Provider detail stays with the provider,Sensitive detail held by a provider is not copied; the hub keeps status and reference.,Smaller breach impact.,Fields are classified per entity.
+P-D4,Data,Every entity has an owner and steward,"Named roles own definitions, quality and access.",Quality needs an owner.,Workforce Data Council meets monthly.
+P-A1,Application,Hub and spokes,"One core HR hub; partners attach to the hub through the integration hub, never to each other.",Avoids a web of links.,No partner-to-partner interfaces.
+P-A2,Application,"Standard first, then configure, then extend",Use standard capability first; extend on the integration or extension layer only after fit-to-standard.,Clean core and cheaper upgrades.,Extensions need a decision record.
+P-A3,Application,"Capability interface, replaceable partner",Each category is consumed through a defined interface and adapter.,Vendor freedom.,Contract tests and exit plans per category.
+P-A4,Application,Event-driven by default,Changes flow as signed events; batch only for bulk and reporting.,Timeliness and traceability.,Replay and reconciliation are built in.
+P-T1,Technology,Open standards,"REST, OData, OAuth 2.0, SAML or OIDC, SCIM and signed events.",Interoperability.,Standards register is enforced at review.
+P-T2,Technology,Zero trust for partners,"Scoped, rotatable credentials, least privilege and full logging.",Limits damage from any one partner.,Vault and audit log are mandatory.
+P-T3,Technology,Residency by design,Data stays in approved regions; processing locations are recorded.,Legal duty and trust.,Region map drives hosting and routing.
+P-T4,Technology,Observable and exit-ready,Every integration is monitored; every partner has a tested exit.,Operational resilience.,Annual exit test.

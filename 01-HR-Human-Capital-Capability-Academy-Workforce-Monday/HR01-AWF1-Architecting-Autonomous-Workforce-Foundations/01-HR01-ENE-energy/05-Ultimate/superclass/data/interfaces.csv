@@ -1,0 +1,31 @@
+ID,Interface,From,To,Direction,Mode,Frequency,Data,Classification
+IF-01,Hire hand-off: accepted offer to person and employment,Recruiting (C24),Hub (C05),In,API via C26 / event,On event,"Person, contact, job, position, start date, pay hand-off fields",Restricted
+IF-02,"Organisation, cost centre and location sync",Finance (C35),Hub (C06),In,API via C26 / scheduled,Hourly and on change,"Cost centres, company codes, locations",Confidential
+IF-03,Position and cost-centre link to finance,Hub (C07),Finance (C35),Out,API via C26,On change,"Position, headcount, cost centre, status",Confidential
+IF-04,Headcount plan to positions,Workforce planning (C23),Hub (C07),In,API via C26,On approval,"Planned positions, budget, effective dates",Confidential
+IF-05,Job catalogue and skills sync,Skills source (C08),Hub (C08),In,API via C26 / scheduled,Daily,"Job codes, families, grades, skills",Internal
+IF-06,Person and employment to payroll,Hub (C05),Payroll engines (C17),Out,API via C26 / file,Each cycle and on change,"Person, employment, pay components, bank (masked)",Restricted
+IF-07,Payroll results and reconciliation,Payroll engines (C17),Hub (C05),In,API via C26 / file,Each cycle,"Status, totals, exceptions",Confidential
+IF-08,Time and absence exchange,Hub (C05),Time and absence (C18),Both,API via C26,Hourly,"Schedules, absence, balances",Confidential
+IF-09,Benefit eligibility to carriers,Hub (C13),Insurance carriers (C15),Out,API via C26 / secure file,Daily and on life event,"Enrolment, dependants (minimum fields), plan codes",Restricted
+IF-10,Carrier confirmation,Insurance carriers (C15),Hub (C13),In,Webhook / secure file,On event,"Confirmation status, member number",Restricted
+IF-11,Pension and fund contributions,Hub (C13),Funds (C16),Out,Secure file / API,Each cycle,"Member, contribution amounts and rates",Restricted
+IF-12,Right-to-work order,Hub (C05),Verification (C19),Out,API via C26,On hire,"Order, consent reference, document type",Restricted
+IF-13,Right-to-work result,Verification (C19),Hub (C05),In,Webhook via C25,On event,Outcome and date only,Restricted
+IF-14,Document for signature,Hub (C12),E-signature (C20),Out,API via C26,On event,"Document, signers, template",Confidential
+IF-15,Signed document and evidence,E-signature (C20),Hub (C12),In,Webhook via C25,On event,"Signed file, evidence link, time",Confidential
+IF-16,Global assignment data,Hub (C05),Mobility (C21),Out,API via C26,On change,"Assignment, host and home, allowances",Restricted
+IF-17,Contingent worker records,Contingent system (C22),Hub (C05),In,API via C26,On event and daily,"Identity, supplier, dates, cost centre",Confidential
+IF-18,Statutory reports and submissions,Hub (C14),Authorities / reporting (C14),Out,Secure file / portal,Per statute,Statutory data sets by country,Restricted
+IF-19,"Joiner, mover, leaver events to IT",Hub (C10),IT provisioning (C36),Out,Event via C25,On event,"Person key, role, dates, manager",Confidential
+IF-20,Account and email key back,IT provisioning (C36),Hub (C05),In,API via C26,On event,"User ID, work email",Internal
+IF-21,Staff sign-in and role groups,Identity provider (C31),Hub (C11),Both,SAML or OIDC / SCIM,Real time,"Identity, groups",Internal
+IF-22,Employee events to data platform,Hub (C10),Data platform (C28),Out,Event stream via C26,On event,"Pseudonymised events, codes",Confidential
+IF-23,Dashboards and extracts,Data platform (C28),Analytics (C30),Out,Query,Daily,Aggregates; no direct identifiers,Confidential
+IF-24,Case to record lookup,Service desk (C02),Hub (C05),In,API via C26,On demand,Role-limited record view,Confidential
+IF-25,Assistant retrieval,HR assistant (C04),Policy and own record,In,API via C26,On demand,Policy text; own record only,Confidential
+IF-26,Consent and retention instructions,Privacy manager (C33),Hub and partners,Out,API via C26,On event and daily,"Deletion tasks, region flags",Restricted
+IF-27,Audit events,Hub and hub components,Audit log (C34),Out,Event stream,Real time,"Who, what, when, from where",Restricted
+IF-28,Partner health and contract-test results,Partners and adapters,Monitoring (C39),In,Metrics,Continuous,"Latency, errors, volumes",Internal
+IF-29,Credentials,Vault (C40),Adapters (C26),Out,Secrets API,On start and rotation,Scoped tokens and certificates,Restricted
+IF-30,Reference data and ID cross-reference,Canonical model (C27),Adapters (C26),Out,API,On change,"Code maps, ID maps, versions",Internal

@@ -1,0 +1,12 @@
+Criterion,Weight %,What good looks like,Evidence to request,Applies to
+Functional and country fit,15,"Covers OmniVerse countries, languages and local rules",Demo with real scenarios; coverage matrix,All
+Integration maturity,14,"Certified connector or documented open API, events, sandbox and contract tests","API reference, sandbox access, listing, test results",All
+Data protection and residency,14,"Regional processing, sub-processor list, deletion and return on demand","DPA, region map, sub-processor register",All
+Security assurance,10,Independent certification and pen test; SSO; audit log,"ISO 27001 or SOC 2 report, pen-test summary",All
+Accuracy and statutory currency,10,Rules updated for law changes in time,Update calendar; references,"Payroll, benefits, statutory, verification"
+AI transparency,6,"Model cards, reasons, human control, regional switches","Documentation, test reports",AI and assistants
+Employee experience and accessibility,6,"Mobile-first, accessible, multilingual",WCAG report; usability results,Employee-facing
+Exit and portability,10,"Data return in open format, API export, termination help",Contract clauses; export sample,All
+Commercial and total cost,7,Transparent pricing; no hidden integration fees,Price book; three-year TCO,All
+Support and service levels,4,Follow-the-sun support; incident process,SLA; support model,All
+Viability and roadmap,4,Financial stability; open-standard roadmap,Financials; roadmap briefing,All

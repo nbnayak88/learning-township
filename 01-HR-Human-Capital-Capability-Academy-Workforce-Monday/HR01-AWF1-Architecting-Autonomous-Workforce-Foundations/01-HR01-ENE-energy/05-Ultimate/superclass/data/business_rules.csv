@@ -1,0 +1,15 @@
+ID,Rule,Type,Source,Enforced by
+BRL-01,A hire cannot be created without an approved position or approved exception.,Constraint,Policy,C07
+BRL-02,A position must be linked to a valid cost centre and organisation unit.,Constraint,Finance policy,"C07, C35"
+BRL-03,An employee has one active primary assignment at a time unless a concurrent employment rule applies.,Constraint,HR policy,C05
+BRL-04,Right to work must be verified before the start date; exceptions need approval.,Constraint,Law and policy,C19
+BRL-05,Changes to pay need a second approver above a set threshold.,Approval,Policy,C09
+BRL-06,Benefit eligibility follows country plan rules and employment type.,Derivation,Total Rewards,C13
+BRL-07,A change effective in the past needs payroll review before approval.,Approval,Payroll policy,"C09, C17"
+BRL-08,Restricted fields are visible only to roles with a recorded need.,Constraint,Security policy,C11
+BRL-09,Leaver access is removed on the last working day.,Constraint,Security policy,C36
+BRL-10,Records are deleted or anonymised at the retention date unless a legal hold applies.,Constraint,Privacy,C33
+BRL-11,Contingent workers must have a sponsor and an end date.,Constraint,Policy,"C05, C22"
+BRL-12,Duplicate person records are merged under data steward control.,Derivation,Data governance,C29
+BRL-13,Works-council agreements can disable a data field or report in a country.,Constraint,Law,C33
+BRL-14,Any AI-generated change proposal needs human approval before it is saved.,Approval,AI policy,C04

@@ -1,0 +1,9 @@
+Data,System of record,Flows to
+"Organisation, cost centre, location",Finance (C35) and hub (C06),Hub and data platform
+"Position and headcount plan","Hub (C07); plan from planning (C23)","Finance, data platform"
+"Person, employment, assignment",Hub (C05),"Payroll, benefits, IT provisioning, data platform"
+Pay components and results,"Payroll engines (C17); summary in hub","Hub (status), finance"
+Benefit enrolment,"Hub (C13); confirmation from carrier","Carriers, funds, data platform (summary)"
+Right-to-work outcome,"Provider (detail); hub (outcome and date only)",Data platform (outcome)
+Documents and signatures,"Hub (C12); evidence from e-signature",Archive by retention rule
+Cases and requests,Service desk (C02),Hub (role-limited lookup)

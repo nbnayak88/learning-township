@@ -1,0 +1,10 @@
+Pillar,Group,Core question,Template register or chapter,Primary streams,Typical measure
+Policy,V1 Vision,"What rules, regulations, standards, principles and strategic directives shape the transformation?","principles; business_rules; Chapters 6.7, 10.6 and 16.4","Enterprise, Security, Industry",Share of decisions traced to a principle or rule
+Portfolio,V1 Vision,"Which investments and initiatives should be prioritised, sequenced, funded or stopped?",gap_analysis; work_packages; Chapters 14.8 and 15.2,"Enterprise, Business",Benefit per unit of investment; share of initiatives with an owner
+Program,V1 Vision,How should related projects be orchestrated to achieve strategic outcomes?,Roadmap (15.3); governance (Chapter 16),"Enterprise, Business",Milestones met; dependency conflicts open
+Platform,V2 Value,What shared digital and physical capabilities enable scale?,components; interfaces; tech_standards; Chapters 12 and 13,"Application, Technology, Infrastructure, Integration",Reuse rate; platform availability
+Product,V2 Value,"What tangible product, service, capability or outcome is delivered?",capabilities (business services); requirements; Chapter 10.4,"Business, Domain, UI/UX",Adoption of each service; satisfaction
+Process,V2 Value,Which end-to-end value streams and operating processes must change?,value_stream; processes; Chapters 8.7 and 10.3,"Business, Domain, Data",Cycle time; rework rate; straight-through share
+People,V3 Victory,"Who must lead, execute, adopt, operate and benefit?",stakeholders; raci; Chapters 15.7 and 16.2,"Enterprise, Business, UI/UX",Adoption; trained share; stakeholder confidence
+Practice,V3 Victory,"What repeatable behaviours, methods, skills and ways of working must change?",ba_checklist; quality gates (Chapter 5); ways of working (4.5),"Enterprise, Data, AI",Gate pass rate; practice maturity
+Project,V3 Victory,What time-bound intervention creates or changes a capability?,"work_packages; implementation, test, cutover (15.4 to 15.6)","Application, Integration, Technology","On-time, on-budget delivery; defects at go-live"

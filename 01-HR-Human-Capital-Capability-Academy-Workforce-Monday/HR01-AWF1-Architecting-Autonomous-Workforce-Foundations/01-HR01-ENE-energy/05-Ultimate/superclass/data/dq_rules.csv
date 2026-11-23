@@ -1,0 +1,13 @@
+ID,Dimension,Rule,Applies to,Threshold,Action on failure,Owner
+DQ-01,Completeness,Mandatory person and employment fields complete before the record is active,"Person, employment",100%,Block save,Person data steward
+DQ-02,Uniqueness,"No duplicate person by name, birth date and national identifier after matching",Person,Under [0.2]% duplicates,Merge task,Person data steward
+DQ-03,Validity,"Country-specific formats valid for national identifier, bank and address",Person,99.5%,Return to HR agent,Person data steward
+DQ-04,Consistency,Every active employee has an active position and manager,Employment,100%,Daily exception list,Employment data steward
+DQ-05,Consistency,Every active position has a valid cost centre,Position,100%,Block approval,Position data steward
+DQ-06,Validity,Organisation tree has no loops and every unit has an active parent,Organisation,100%,Block publish,Organisation data steward
+DQ-07,Timeliness,Hire and change events reach payroll before cut-off,Payroll hand-off,99.5%,Escalate to payroll,Payroll data steward
+DQ-08,Consistency,Benefit enrolments match carrier confirmations,Benefits,99%,Reconcile weekly,Benefits data steward
+DQ-09,Timeliness,Right-to-work outcome present before first day,Right-to-work status,100%,Hold start,Compliance steward
+DQ-10,Validity,Retention class assigned to every record type,Retention,100%,Block release,Privacy steward
+DQ-11,Timeliness,Leaver data deleted or anonymised by due date,Retention,100%,Escalate to DPO,Privacy steward
+DQ-12,Consistency,Partner and canonical codes map one to one,Cross-reference,100%,Block adapter release,Integration steward

@@ -1,0 +1,41 @@
+ID,Component,Layer,ABB (what),SBB options (examples only),Key responsibilities
+C01,Employee and Manager Self-Service,Experience,"Mobile-first portal for records, requests and approvals",Employee Central self-service; intranet portal; digital workplace suites,"View and change own data, request documents, approve team changes"
+C02,HR Service Desk and Cases,Experience,"Case intake, routing, knowledge and service levels",HR case management tool; ITSM with HR module,"Log, route, track and close employee requests with service levels"
+C03,Mobile and Collaboration Channels,Experience,Tasks and approvals in chat and mobile,Mobile apps; Teams or Slack bots,Push approvals and tasks to where people work
+C04,HR Assistant (advisory),Experience,Conversational answers from policy and own record,Enterprise assistant; chatbot platform,Answer policy and status questions; draft text; never change records
+C05,Employment Records,Core hub,"One person, employment and assignment record",Employee Central employment information,"Person, employment, job, pay and contingent worker data"
+C06,Organisation and Foundation Data,Core hub,"Legal entity, department, location, cost centre structure",Employee Central foundation objects,"Organisation tree, codes, effective dating, country variants"
+C07,Position Management,Core hub,Approved positions as the unit of headcount,Employee Central position management,"Create, approve, change and close positions; position to person link"
+C08,Job and Skills Catalogue,Core hub,"Job families, roles, grades, skills",Employee Central job catalogue; skills library,Maintain job classification and mapping across countries
+C09,Workflows and Approvals,Core hub,Configurable approval routes,Employee Central workflow engine,"Route changes by rule, delegate, escalate, audit"
+C10,Business Rules and Events,Core hub,"Rules, defaults and change events",Employee Central rules; event notifications,"Derive values, validate input, emit events on change"
+C11,Role-Based Permissions,Core hub,Role and target-population access,Employee Central role-based permissions,"Least-privilege access by role, country and population"
+C12,Documents and Forms,Core hub,"Templates, generated letters, document store",Employee Central document generation; content services,"Generate, store and retain employee documents"
+C13,Global Benefits Administration,Core hub,"Plans, eligibility and enrolment",Employee Central global benefits; benefits administration suites,"Eligibility, enrolment, life events and carrier data"
+C14,Country Compliance and Statutory Reporting,Core hub,"Country fields, rules and statutory reports",Country packs; reporting tools,Country data models and statutory submissions
+C15,Insurance Carrier Connectivity,Ecosystem,Enrolment and change feeds to insurers,Carrier portals and file exchange; benefits networks,Send enrolments and receive confirmations by country
+C16,Pension and Fund Connectivity,Ecosystem,Pension and superannuation contributions and member data,Fund administrators; clearing houses,Member records and contribution data
+C17,Payroll Engine Connectivity,Ecosystem,Pay data hand-off and result feedback,Employee Central Payroll; local payroll engines,Send employee and pay data; reconcile results
+C18,Time and Absence Connectivity,Ecosystem,"Time, shifts and absence exchange",Time and attendance suites; shift scheduling,"Exchange schedules, absence and balances"
+C19,Right-to-Work and Identity Verification,Ecosystem,Identity and work-eligibility checks,Identity verification services; government gateways,"Order check, receive outcome and date, store outcome only"
+C20,E-Signature,Ecosystem,Legally valid signature on documents,E-signature services,Sign contracts and acknowledgements; return evidence
+C21,Global Mobility and Relocation,Ecosystem,"Assignments, tax and relocation support",Mobility management suites; relocation providers,"Assignment records, allowances, host and home data"
+C22,Contingent Workforce Management,Ecosystem,External worker records and onboarding,Vendor management systems; staffing platforms,"Contingent worker identity, access and end dates"
+C23,Position and Headcount Planning,Ecosystem,Headcount budget to position plan,Workforce planning suites,"Plan headcount, scenarios and position creation"
+C24,Recruiting Hire Hand-off,Ecosystem,Accepted offer to employee record,Recruiting suites; onboarding tools,Create the person and employment from an accepted offer
+C25,API Gateway and Event Receiver,Integration,Secured entry point for APIs and events,API management; event broker,"Authenticate, throttle, log and route calls and events"
+C26,Integration Hub (iPaaS) and Adapters,Integration,"Orchestration, mapping, retry, one adapter per partner",Integration suites; iPaaS platforms,"Run flows, map data, retry, dead-letter, reconcile"
+C27,Canonical Model and ID Cross-Reference,Integration,One workforce model and ID map,Mapping service; reference data store,Map partner codes and IDs to the canonical model
+C28,Workforce Data Platform,Data,Governed store of workforce events,Cloud data platform; data lakehouse,"Receive events, history, pseudonymised keys"
+C29,Workforce Data Governance and Quality,Data,"Owners, definitions, quality rules",Data quality tools; catalogue,Measure and fix quality; manage reference data
+C30,Analytics and KPIs,Data,Dashboards and headcount reporting,Analytics suites; people analytics,"Headcount, cost, quality and service dashboards"
+C31,Identity and Access Management,Security,"SSO, MFA and provisioning",Enterprise identity provider; SCIM,"Single sign-on, MFA and account lifecycle"
+C32,Security Monitoring,Security,Detect misuse and attacks,SIEM; cloud security monitoring,"Alert on unusual access, exports and integration errors"
+C33,"Consent, Retention and Region Map",Security,"Lawful basis, retention and storage by country",Privacy management tools,"Apply retention rules, deletions and region routing"
+C34,Audit Log,Security,Immutable record of access and change,Log platform,"Log reads of sensitive data, changes and exports"
+C35,Finance and ERP Linkage,Enterprise,"Cost centres, positions and cost postings",S/4HANA and other ERP,Receive cost centres; send position and headcount cost data
+C36,IT Provisioning and Service,Enterprise,"Accounts, equipment and access for joiners, movers and leavers",Identity governance; ITSM,"Create, change and remove access from record events"
+C37,Responsible-AI Control Register,Data,Register and tests for every AI use,Governance platform; spreadsheet register,"Purpose, data, tests and owner per AI use"
+C38,Partner Registry and Exit Plans,Integration,"Contracts, contacts, SLAs and exit plans",Vendor management tool,"Track partners, reviews and exit tests"
+C39,Integration Monitoring and Contract Tests,Integration,"Health, volumes and contract tests",Monitoring tools; test automation,Alert on failures; run contract tests per release
+C40,Secrets Vault,Security,Store and rotate partner credentials,Key and secrets management,Hold scoped OAuth clients and certificates; rotate

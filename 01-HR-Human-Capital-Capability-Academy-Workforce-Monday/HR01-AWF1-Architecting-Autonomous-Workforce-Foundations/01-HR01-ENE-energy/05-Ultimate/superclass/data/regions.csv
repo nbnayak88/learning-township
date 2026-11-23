@@ -1,0 +1,6 @@
+Region,Storage,Retention default,Notes
+Europe,EU region,Employment + [6] years; shorter for some records,Works-council and privacy rules; data subject rights
+Middle East,In-country or approved region,Employment + [5] years,Residency rules apply
+Asia Pacific,Regional,Employment + [7] years,Per-country privacy and labour law
+Americas,Regional,Employment + [7] years,State and provincial rules
+Africa,Approved region,Employment + [5] years,Per-country law

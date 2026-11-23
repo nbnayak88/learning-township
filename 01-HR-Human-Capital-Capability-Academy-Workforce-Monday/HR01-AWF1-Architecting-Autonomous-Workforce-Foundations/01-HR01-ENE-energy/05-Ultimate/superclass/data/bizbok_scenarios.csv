@@ -1,0 +1,16 @@
+Scenario (guide Part 4),Question it answers,Template support,Primary stream,Supporting streams
+Investment analysis,Which initiatives give most value for cost?,"Gap analysis, work packages, KPIs",Enterprise,Business
+Shift to customer-centric business model,How do we organise around customer value?,"Value stream, journeys, capabilities",UI/UX,Business
+Merger and acquisition analysis,How do two capability sets and organisations combine?,"Capability and organisation maps, gap analysis",Enterprise,"Business, Industry"
+New product or service rollout,Which capabilities and policies does it need?,"Capabilities, requirements, policy rules",Business,Industry
+Globalisation,What changes by country?,"Country profile, regulatory obligations",Industry,Business
+Capability outsourcing,Which capabilities can a partner run?,"Capability map, interfaces, RACI",Business,Integration
+Supply chain streamlining,Where do value stages waste time?,"Value stream, KPIs",Business,Domain
+Divestiture,What can be separated cleanly?,Capability and data ownership,Enterprise,Data
+Regulatory compliance,Which obligations apply to which capabilities?,"Policy mapping, business rules",Industry,Security
+Change management,Who and what is affected?,"Stakeholders, impact analysis",Business,Enterprise
+Operational cost reduction,Which capabilities cost most for least value?,"Capability heat map, KPIs",Business,Enterprise
+Joint venture deployment,How do partners fit the value stream?,"Stakeholders, interfaces, governance",Enterprise,Integration
+IT portfolio investment analysis,Which applications support which capabilities?,Components to capabilities map,Application,Enterprise
+Digital transformation,Which capabilities become digital and how?,"Digital streams: AI, UI/UX, integration",Enterprise,"AI, UI/UX, Integration"
+Digital twin deployment,What must be modelled to mirror the business?,"Capability, value and information models",AI,"Data, Technology"

@@ -1,0 +1,21 @@
+ID,KPI,Definition / formula,Frequency,Owner,Target
+K-01,Time to effective change,Days from approved request to effective record change (median),Weekly,Head of HR Operations,[3] days
+K-02,Position-based hires,Hires into approved positions / all hires,Monthly,Head of Workforce Planning,100%
+K-03,Headcount reconciliation,Headcount difference between HR and finance,Monthly,Head of Finance Operations,Under [0.5]%
+K-04,Duplicate person rate,Duplicate person records / all persons,Monthly,Person data steward,Under [0.2]%
+K-05,Data quality score,Share of DQ rules passing their threshold,Monthly,Workforce Data Council,[98]%
+K-06,Self-service share,Changes made through self-service / all changes,Monthly,Head of HR Service,[70]%
+K-07,Case resolution within service level,Cases closed within target / all cases,Weekly,Head of HR Service,[90]%
+K-08,Payroll hand-off accuracy,Pay data without correction / pay data sent,Each cycle,Head of Payroll,[99.9]%
+K-09,Benefit enrolment confirmation,Enrolments confirmed by carrier within [2] days,Weekly,Head of Total Rewards,[98]%
+K-10,Joiner access ready,Joiners with access ready on day one,Weekly,IT Service Owner,[98]%
+K-11,Leaver access removed,Leavers with access removed on last day,Weekly,IT Security,100%
+K-12,Right-to-work before start,Starters cleared before first day,Weekly,Head of Compliance,100%
+K-13,Retention deletion on time,Records deleted by due date,Monthly,Data Protection Officer,100%
+K-14,Integration success rate,Messages delivered first time / all messages,Daily,Integration lead,[99.5]%
+K-15,Partner exit test pass,Categories passing the yearly exit test,Annual,Enterprise Architecture Office,100%
+K-16,Legacy systems retired,Local HR tools retired / planned,Quarterly,Programme manager,100% by final wave
+K-17,Employee satisfaction with HR service,Average survey score (1-5),Quarterly,Head of HR Service,[4.2]
+K-18,AI uses registered,AI uses with approved register entry / all AI uses,Monthly,AI governance lead,100%
+K-19,Statutory report on time,Reports filed by due date,Per statute,Head of Compliance,100%
+K-20,Adoption of position workflow,Position changes through workflow / all changes,Monthly,Head of Workforce Planning,[95]%

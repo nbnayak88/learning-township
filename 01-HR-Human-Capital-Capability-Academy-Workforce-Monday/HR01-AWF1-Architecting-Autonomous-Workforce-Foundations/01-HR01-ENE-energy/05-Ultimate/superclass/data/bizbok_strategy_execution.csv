@@ -1,0 +1,35 @@
+Step,Business architecture action,Template artefact,TOGAF ADM phase,Stream
+1 Establish business strategy,Business performance assessment,KPI register baseline,"Preliminary, A",Business
+1 Establish business strategy,Strategy definition,Vision chapter,A,Enterprise
+1 Establish business strategy,Objective definition,"Business requirements, objectives",A,Business
+1 Establish business strategy,Metric definition,KPI register,A,Business
+1 Establish business strategy,Course of action definition,Gap analysis options,"A, E",Enterprise
+1 Establish business strategy,Objective and metric matching,Requirements to KPI trace,A,Business
+1 Establish business strategy,Objective and course of action matching,Requirements to work package trace,"A, E",Enterprise
+1 Establish business strategy,Objective trade-off analysis,Decision records (ADR),A,Enterprise
+1 Establish business strategy,Objective prioritisation,MoSCoW priority in requirements,A,Business
+1 Establish business strategy,Strategy dissemination,Deck and document,A,Enterprise
+2 Assess business impact,Business scenario definition,Scope statement,A,Business
+2 Assess business impact,Value stream impact analysis,Value stream register,B,Business
+2 Assess business impact,Capability impact analysis,Capabilities register,B,Business
+2 Assess business impact,Information impact analysis,Data entities,C (Data),Data
+2 Assess business impact,Business unit impact analysis,Stakeholders and RACI,B,Business
+2 Assess business impact,Product impact analysis,Capabilities and services,B,Business
+2 Assess business impact,Business and IT architecture impact analysis,Components and interfaces,"C, D",Application
+2 Assess business impact,Current state architecture visualisation,Baseline in gap analysis; context diagram,"B, C, D",Enterprise
+3 Architect business solution,Architecture change analysis,Gap analysis,"B, C, D",Enterprise
+3 Architect business solution,Target state architecture visualisation,"Layered architecture, capability map","B, C, D",Enterprise
+3 Architect business solution,Business-driven IT architecture definition,"Components, tech standards","C, D",Application
+3 Architect business solution,Target state option analysis and finalisation,Decision records,E,Enterprise
+3 Architect business solution,Case management design,Business rules and case lifecycle,B,Domain
+3 Architect business solution,Business process design,Processes register,B,Business
+3 Architect business solution,Current to target transformation analysis,Transition architectures,"E, F",Enterprise
+4 Establish initiative plans,Initiative definition,Work packages,"E, F",Enterprise
+4 Establish initiative plans,Initiative measurement criteria,KPIs and acceptance criteria,F,Business
+4 Establish initiative plans,Objective to initiative mapping,Requirements to work package trace,F,Enterprise
+4 Establish initiative plans,Initiative trade-off and decision definition,Decision records,F,Enterprise
+4 Establish initiative plans,Initiative mapping,Roadmap by wave,F,Enterprise
+5 Deploy solution,Deployment team engagement,RACI and governance,G,Enterprise
+5 Deploy solution,Deliverable deployment,Implementation governance gates,G,Enterprise
+5 Deploy solution,Transformation management,Change management gate,H,Enterprise
+5 Deploy solution,Success evaluation,Benefits review gate and KPIs,H,Business

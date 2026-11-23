@@ -1,0 +1,16 @@
+ID,Decision,Context,Options considered,Decision rationale,Status
+ADR-01,"Employee Central is the global employee, organisation and position system of record",About [30] local HR tools; on-premise HR system,Keep legacy; regional systems; one global core,One record gives one headcount and one process; local variants by configuration,Proposed
+ADR-02,All partner traffic goes through the integration hub,Many point-to-point files today,Direct partner links; hub,"One place for security, retry, monitoring and exit",Proposed
+ADR-03,Prefer standard integrations and certified connectors; build adapters on the hub where none exist,Mixed carrier and payroll landscape,Custom code in the core; hub adapters,Clean core; lower upgrade cost,Proposed
+ADR-04,Canonical workforce model with mapping tables per partner,Different codes by country and partner,Partner formats everywhere,Replacing a partner changes only the adapter,Proposed
+ADR-05,Positions drive headcount and cost,Headcount held in spreadsheets,Position-free model; position-based,Headcount is controlled and explainable,Proposed
+ADR-06,Benefits use one global model with local plans,Carrier files by country,Local tools; global benefits module,One model reduces rework,Proposed
+ADR-07,Right-to-work and identity detail stays with the provider,Privacy and data-minimisation,Store documents in the hub,Hub holds outcome and date only,Proposed
+ADR-08,Payroll engines are multi-vendor by country behind one interface,Global and local payroll,One engine; per-country,Capability interface allows local engines,Proposed
+ADR-09,Employee events stream to the data platform with pseudonymised keys,Reporting differs by region,Direct reporting from core,Safe analytics,Proposed
+ADR-10,SSO and SCIM for staff; partner credentials in a vault,Shared accounts today,Local accounts,Least privilege and rotation,Proposed
+ADR-11,Region and retention table drives data residency and deletion,50+ countries,Single region,Country rules enforced by configuration,Proposed
+ADR-12,AI is advisory only; people decide,Employment decisions are sensitive,Automatic decisions,Human decision and audit,Proposed
+ADR-13,Every ecosystem category has an exit plan tested yearly,Vendor lock-in risk,No plan,Replaceability proven,Proposed
+ADR-14,Deliver with SAP Activate; fit-to-standard first,Clean core aim,Custom build first,Fit-to-standard keeps the core clean,Proposed
+ADR-15,"Pilot one country cluster first, then waves",Risk and learning,Big bang,Lower risk,Proposed

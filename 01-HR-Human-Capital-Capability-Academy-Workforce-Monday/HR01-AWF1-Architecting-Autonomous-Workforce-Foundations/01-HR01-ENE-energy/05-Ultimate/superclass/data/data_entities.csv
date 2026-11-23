@@ -1,0 +1,17 @@
+Entity,Description,Data domain,Data owner (role),Steward (role),System of record,Classification,Retention
+Person,"An individual known to OmniVerse as an employee or contingent worker",Workforce,Head of HR Operations,Person data steward,Employee Central (C05),Restricted,Life of employment + [7] years
+Employment and assignment,"Contract, job, status, dates and manager",Workforce,Head of HR Operations,Employment data steward,Employee Central (C05),Confidential,Life of employment + [7] years
+Position,Approved seat that carries budget and headcount,Position,Head of Workforce Planning,Position data steward,Employee Central (C07),Confidential,Life of position + [7] years
+Organisation unit,"Legal entity, department, location, cost centre link",Organisation,Head of HR Operations,Organisation data steward,Employee Central (C06),Internal,Permanent history
+Job and skills,"Job family, role, grade, skill",Reference,Head of Total Rewards,Job architecture steward,Employee Central (C08),Internal,Permanent history
+Pay component and payroll hand-off,Pay elements sent to payroll,Pay,Head of Payroll,Payroll data steward,Payroll engines (C17),Restricted,[7] years
+Benefit plan and enrolment,"Plan, eligibility, dependants, enrolment",Benefits,Head of Total Rewards,Benefits data steward,Employee Central (C13),Restricted,Life of coverage + [7] years
+Document and signature,"Contract, letter, acknowledgement and evidence",Content,Head of HR Operations,Document steward,Employee Central (C12),Confidential,By document class
+Right-to-work status,Outcome and date of identity and work-eligibility check,Compliance,Head of Compliance,Compliance steward,Hub (C05); detail with provider,Restricted,Employment + [2] years
+Time and absence summary,"Schedule, absence and balance summaries",Time,Head of HR Operations,Time data steward,Time system (C18),Confidential,[7] years
+HR case,Employee request and resolution,Service,Head of HR Service,Case steward,Service desk (C02),Confidential,[3] years after close
+Mover or leaver event,"Transfer, promotion or exit event",Workforce,Head of HR Operations,Employment data steward,Employee Central (C10),Confidential,[7] years
+Consent record,"Notice, lawful basis, consent and evidence",Privacy,Data Protection Officer,Privacy steward,Privacy manager (C33),Restricted,Life of processing + [7] years
+Retention and deletion record,"Rule, due date, action, evidence",Privacy,Data Protection Officer,Privacy steward,Privacy manager (C33),Confidential,[10] years
+ID cross-reference,Map of partner IDs and codes to canonical keys,Integration,Enterprise Architecture Office,Integration steward,Canonical model (C27),Internal,Life of mapping
+Cost centre,Finance object linked to organisation and position,Finance,Head of Finance Operations,Finance steward,Finance system (C35),Internal,[10] years

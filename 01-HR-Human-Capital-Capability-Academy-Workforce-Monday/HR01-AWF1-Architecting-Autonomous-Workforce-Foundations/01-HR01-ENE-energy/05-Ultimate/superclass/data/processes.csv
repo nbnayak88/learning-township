@@ -1,0 +1,19 @@
+ID,Process,Level,Owner,Trigger,Output,Systems
+PR-01,Maintain organisation structure,L2,Head of HR Operations,Restructure or approved change,Updated organisation and codes,"C06, C29"
+PR-02,Create and approve position,L2,Hiring manager,Headcount budget,Approved position,"C07, C09, C35"
+PR-03,Change or close position,L3,Hiring manager,Business change,Updated or closed position,"C07, C09"
+PR-04,Maintain job catalogue,L2,Total Rewards,New or changed role,Updated jobs and families,C08
+PR-05,Hire into position,L2,HR operations,Accepted offer,Employment record,"C05, C24"
+PR-06,Verify right to work,L3,HR operations,Hire record created,Verified status,C19
+PR-07,Issue and sign documents,L3,HR operations,Hire or change,Signed documents on record,"C12, C20"
+PR-08,Enrol in benefits,L2,Total Rewards,Hire or life event,Confirmed enrolment,"C13, C15, C16"
+PR-09,Send pay data to payroll,L2,Payroll,Payroll calendar or change,Payroll input,"C17, C25"
+PR-10,Exchange time and absence,L3,HR operations,Calendar or request,Balances and schedules,C18
+PR-11,Transfer or promote employee,L2,Manager,Business need,Updated assignment,"C05, C09"
+PR-12,Manage global assignment,L3,Global mobility,Assignment request,Assignment record and notices,C21
+PR-13,Handle leaver,L2,HR operations,Resignation or end,Closed employment and removal tasks,"C05, C36"
+PR-14,Answer employee request,L2,HR service agent,Case or chat,Resolved case,"C01, C02, C04"
+PR-15,Run statutory report,L3,HR operations,Reporting calendar,Filed report,C14
+PR-16,Monitor data quality,L2,Data steward,Daily schedule,Exceptions and fixes,"C29, C30"
+PR-17,Review access,L3,Security,Quarterly,Certified roles,"C11, C31"
+PR-18,Delete data by retention rule,L3,Privacy,Retention date,Deletion log,C33

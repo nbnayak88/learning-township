@@ -1,0 +1,25 @@
+L1 domain,L2 capability,Description,Target maturity (1-5),Supported by
+Organisation and Position,Organisation design and structure,"Maintain legal entities, business units, departments and reporting lines",4,"C06, C29"
+Organisation and Position,Position management,"Create, approve and control positions and headcount",4,"C07, C09, C23"
+Organisation and Position,Job and skills architecture,"Maintain job families, job codes and skill sets",3,C08
+Employment Records,Employee master data,"One record per person with employment, assignment and job data",5,"C05, C27"
+Employment Records,Contingent worker records,Record external workers and their assignments,3,"C05, C22"
+Employment Records,"Joiner, mover, leaver changes","Process hires, transfers, promotions and exits",4,"C05, C09, C10"
+Employment Records,Employee documents and forms,"Generate, sign and store employment documents",3,"C12, C20"
+Compliance and Verification,Right to work and identity,Verify identity and right to work before start,4,C19
+Compliance and Verification,Statutory and regulatory reporting,Country reports and filings from the core record,3,C14
+Compliance and Verification,Works council and consultation records,Record agreements that constrain data use,3,C33
+Benefits and Pay,Global benefits administration,"Plans, eligibility, enrolment and events",4,C13
+Benefits and Pay,Carrier and fund connectivity,Exchange enrolments and changes with carriers and funds,3,"C15, C16"
+Benefits and Pay,Payroll hand-off,Send pay-relevant changes and receive results,4,C17
+Benefits and Pay,Time and absence hand-off,"Exchange schedules, absences and balances",3,C18
+People Services,Self-service and mobile,Employee and manager actions without HR help,4,"C01, C03"
+People Services,HR service delivery,"Cases, knowledge and assistance",3,"C02, C04"
+People Services,Global mobility,"Assignments, relocation and tax events",2,C21
+Insight and Control,Workforce analytics,"Headcount, turnover and cost from one source",4,"C28, C30"
+Insight and Control,Workforce data governance,"Ownership, quality rules and stewardship",4,C29
+Platform and Trust,Integration and events,"Hub, adapters, events and monitoring",4,"C25, C26, C27"
+Platform and Trust,Identity and access,"SSO, roles, provisioning and review",4,"C11, C31"
+Platform and Trust,"Privacy, consent and retention","Notice, consent, retention and deletion",4,C33
+Platform and Trust,Security monitoring and audit,"Logs, alerts and evidence",4,"C32, C34"
+Platform and Trust,Finance and IT linkage,"Cost centres, posting and joiner provisioning",4,"C35, C36"
