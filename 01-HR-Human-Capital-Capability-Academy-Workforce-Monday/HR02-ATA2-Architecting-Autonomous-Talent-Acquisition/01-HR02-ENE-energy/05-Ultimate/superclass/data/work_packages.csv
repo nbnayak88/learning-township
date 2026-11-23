@@ -1,0 +1,18 @@
+ID,Work package,Transition architecture,Phase / wave,Depends on,Deliverable
+WP-01,"Mobilise, governance and architecture vision",TA0 Baseline,Preliminary / A (Discover),None,"Charter, vision, principles, stakeholder plan"
+WP-02,Requirements baseline and fit-to-standard,TA0 Baseline,B (Explore),WP-01,Approved requirements and fit-gap list
+WP-03,"Canonical model, codes and data quality baseline",TA0 Baseline,C (Explore),WP-02,"Canonical entities, mapping rules, DQ baseline"
+WP-04,"Platform foundations: tenant, SSO, integration hub, vault, logging",TA1 Core hiring,D (Prepare / Realize),WP-03,Sandbox and production foundations
+WP-05,Core hiring configuration: requisition to offer,TA1 Core hiring,Wave 1 (Realize),WP-04,"Configured hub, templates, approvals, interviews, offers"
+WP-06,"HR core integration: org, positions, hire hand-off",TA1 Core hiring,Wave 1 (Realize),WP-04,"IF-01, IF-02, IF-25, IF-26 tested"
+WP-07,Job boards and career site,TA1 Core hiring,Wave 1 (Realize),WP-05,Career site live; first boards connected
+WP-08,Pilot cutover: pilot country and one role family,TA1 Core hiring,Wave 1 (Deploy),"WP-05, WP-06, WP-07","Go-live, hypercare exit"
+WP-09,Assessment and AI interview partners,TA2 Select and comply,Wave 2 (Realize),WP-08,IF-11 to IF-14 live for first role families
+WP-10,"Background, identity and clearance partners",TA2 Select and comply,Wave 2 (Realize),WP-08,IF-19 to IF-22 live for pilot countries
+WP-11,"E-signature, contract and pre-boarding",TA2 Select and comply,Wave 2 (Realize),WP-08,"IF-23, IF-24, IF-27, IF-29 live"
+WP-12,Responsible-AI control plane and privacy automation,TA2 Select and comply,Wave 2 (Realize),WP-08,"AI register, bias tests, consent and retention jobs"
+WP-13,Regional rollout: wave per region,TA2 Select and comply,Waves 2 to 4 (Deploy),WP-09 to WP-12,Countries live; legacy ATS retired
+WP-14,"Data platform, analytics and experience surveys",TA3 Intelligence and scale,Wave 3 (Realize),WP-08,"Dashboards, KPI pack, survey triggers"
+WP-15,"Workforce planning, labour-market and compensation feeds",TA3 Intelligence and scale,Wave 3 (Realize),WP-08,"IF-03, IF-09 live"
+WP-16,"Internal mobility, referral, DEI insight",TA3 Intelligence and scale,Wave 4 (Realize),WP-13,"IF-30, IF-33, IF-39 live"
+WP-17,"Run: release management, partner reviews, exit tests",TA3 Intelligence and scale,Run,WP-13,"Run plan, quarterly partner reviews, annual exit test"

@@ -1,0 +1,13 @@
+ID,Control,AI use,What is checked,Evidence,Owner,Frequency
+AI-01,AI register,Every AI feature in the hub and every partner,"Purpose, vendor, model, data used, regions, risk class",Register entry approved before use,AI governance lead,On change and quarterly
+AI-02,Human decision,"Match, screen and interview advice",Named person and reason on every selection decision,"Decision log (DQ-10, DQ-07)",Head of Global TA,Monthly sample
+AI-03,Explanation to the recruiter,Match advice,Reasons visible; no hidden scoring,Screenshot and test case,AI governance lead,Each release
+AI-04,Bias and adverse-impact test,"Match, assessment, interview scoring",Selection-rate ratios and score differences across groups where lawful to measure,Test report; action log,AI governance lead,Monthly and on model change
+AI-05,Validity and job-relatedness,Assessment and interview scoring,Evidence the test predicts job performance for the role family,Validation study,Head of Assessment,Annual
+AI-06,Candidate notice and consent,All AI steps visible to candidates,Plain-language notice before the step; opt-out or human route where required,Notice text; opt-out logs,Privacy office,On change
+AI-07,Human review request,Any automated step,Request logged and answered within the set period,Request log,Privacy office,Monthly
+AI-08,Regional switch,All AI features,Feature off by country where law or works agreement requires,Configuration export,AI governance lead,Quarterly
+AI-09,Data minimisation and training use,Partner AI and LLM services,OmniVerse candidate data not used to train shared models unless approved,Contract clause; vendor attestation,Procurement,At contract and annual
+AI-10,Content safety for chat,Conversational assistant,Test for harmful or wrong answers; knowledge base reviewed,Test pack; review log,TA operations lead,Each release
+AI-11,Incident handling,All AI,Defined route for model error or complaint; stop-use switch,Runbook; drill record,AI governance lead,Annual drill
+AI-12,Recording and transcript retention,AI interview,Retention limit applied and propagated to partner,Deletion report,Privacy steward,Monthly

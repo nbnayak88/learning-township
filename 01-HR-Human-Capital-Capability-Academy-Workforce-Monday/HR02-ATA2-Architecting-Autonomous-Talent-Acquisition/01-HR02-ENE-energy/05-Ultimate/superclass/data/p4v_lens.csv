@@ -1,0 +1,21 @@
+Chapter,9P4V stage,Main pillars,What it contributes
+0 About,V1,Policy,"Purpose, scope, frameworks, document control"
+1 TOGAF foundations,All,Policy,Shared vocabulary
+2 Streams,All,All nine,The lenses
+3 9P4V Framework,All,All nine,The transformation spine
+4 Paperless,V4,"Practice, Platform",Operating model for an online practice
+5 Quality,V3,Practice,"Gates, checklists, quality metrics"
+6 Vision,V1,"Policy, Portfolio","Vision, objectives, principles, value proposition"
+7 BA approach,V1 to V3,Practice,"Analysis approach, elicitation, traceability"
+8 Requirements,V2,"Product, Process",Requirement register and process catalogue
+9 Business Architecture Guild,V1 to V2,"Policy, Process, Product",Blueprints and practice guide
+10 Business,V2,"Product, Process","Capabilities, value stream, services, rules"
+11 Data,V2,"Platform, Practice","Entities, dictionary, data governance"
+12 Application,V2,"Platform, Product","Components, interfaces, design decisions"
+13 Technology,V2,Platform,"Standards, deployment, resilience, roadmap"
+14 Strategy analysis,V1,"Portfolio, Policy","Gaps, options, business case, success measures"
+15 Migration,V3,"Program, Project, People","Work packages, roadmap, testing, training"
+16 Governance,V3 to V4,"Program, People, Practice","Governance, RACI, KPIs, change"
+17 TOGAF coverage,All,Practice,Completeness evidence
+18 Template,V4,"Practice, Platform",Replication playbook
+19 Appendices,All,Practice,"Crosswalks, templates, references"

@@ -1,0 +1,13 @@
+Criterion,Weight %,What good looks like,Evidence to request,Applies to
+Functional fit to role families,15,"Covers volume, technical, graduate and safety-critical roles in OmniVerse languages",Demo with real scenarios; reference calls,All
+Integration maturity,12,"Certified connector or documented open API, webhooks, sandbox and contract tests","API reference, sandbox access, marketplace listing, test results",All
+Data protection and residency,12,"Regional processing, sub-processor list, deletion and return on demand","DPA, region map, sub-processor register, transfer assessment",All
+Security assurance,8,Independent certification and penetration test; SSO; audit log,"ISO 27001 or SOC 2 report, pen-test summary",All
+AI transparency and bias evidence,10,"Model cards, reasons, bias tests, human control, regional switches","Documentation, test reports, audit rights","AI, assessment, interview, screening"
+Country and language coverage,8,"Covers all required countries, languages and legal requirements",Coverage matrix,All
+Candidate experience and accessibility,8,"Mobile-first, accessible, quick, adjustments supported","WCAG report, usability results",Candidate-facing
+Validity and accuracy evidence,6,"Job-related validity, reliability, local norms; check accuracy and turnaround","Validation studies, accuracy and turnaround statistics","Assessment, checks"
+Commercial and total cost,7,Transparent pricing by volume; no hidden integration fees,"Price book, three-year TCO",All
+Exit and portability,8,"Data return in open format, API export, termination assistance","Contract clauses, export sample",All
+Support and service levels,3,24x7 or follow-the-sun by region; incident process,"SLA, support model",All
+Viability and roadmap,3,Financial stability; roadmap aligned with open standards,"Financials, roadmap briefing",All

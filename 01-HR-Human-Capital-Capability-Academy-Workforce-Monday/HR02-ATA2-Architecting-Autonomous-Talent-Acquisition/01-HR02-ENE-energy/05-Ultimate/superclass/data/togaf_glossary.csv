@@ -1,0 +1,45 @@
+Ref,Supplementary term (Appendix B),Meaning in plain words,Where covered,Primary stream,Supporting streams
+B.1,Application Software,Software built for a particular business purpose.,Ch 12,Application,Technology
+B.2,Availability,"The likelihood that a system can be used when needed, counting all time including repair and administration.",Ch 13,Infrastructure,"Technology, Security"
+B.3,Business System,"The mix of people, process, policy, standards, software and hardware that together deliver a business capability.",Ch 10,Business,"Application, Technology"
+B.4,Catalog,"A structured list of architecture outputs of one kind, such as a standards list or application portfolio. Each register here is a catalog.","Ch 1, 9",Enterprise,Data
+B.5,Client,A component that asks another component for a service.,Ch 12,Application,Integration
+B.6,COBIT,A governance and management framework for information and technology from ISACA.,Ch 16,Enterprise,Security
+B.7,Configuration Management,"Keeping control of what exists and how it changes: identify items, control changes, record status. Also applies to the architecture assets themselves, which is why they live in Git.",Ch 4,Enterprise,Infrastructure
+B.8,CxO,"A chief officer of a business function, for example the CEO or CIO.",Ch 6,Enterprise,Business
+B.9,Data Dictionary,"A catalogue of data elements and their meaning, format, owner and rules.",Ch 11,Data,Security
+B.10,Data Element,The smallest named unit of data that carries meaning.,Ch 11,Data,
+B.11,Database,An organised collection of data stored to be used by programs.,Ch 11,Data,Technology
+B.12,Database Management System,"Software that stores, retrieves and changes the data in a database.",Ch 13,Technology,Data
+B.13,End User,The person who finally uses the application or its output.,Ch 7,UI/UX,Business
+B.14,Enterprise Resource Planning (ERP) System,"A suite of integrated applications covering major support functions such as finance, HR, purchasing and logistics.",Ch 12,Application,"Business, Integration"
+B.15,Hardware,"The physical equipment software runs on: servers, workstations, network devices.",Ch 13,Infrastructure,Technology
+B.16,Information Domain,"A grouping of data by a criterion such as classification, ownership or location.",Ch 11,Data,Security
+B.17,Information System (IS),The computer-based part of a business system.,Ch 12,Application,Data
+B.18,Interaction,A relationship between building blocks that means they communicate or use each other.,Ch 12,Integration,Application
+B.19,Interaction Model,"A view, catalogue or matrix showing one kind of interaction, such as an integration diagram.",Ch 12,Integration,Application
+B.20,Interface,"The connection between people, systems, devices or applications.",Ch 12,Integration,"UI/UX, Application"
+B.21,Key Performance Indicator (KPI),A measure of how well the business or a project is performing.,Ch 14,Business,Enterprise
+B.22,Lifecycle,The period from a system's conception until it is no longer available.,Ch 13,Technology,Infrastructure
+B.23,Managing Successful Programs (MSP),A programme management method from the UK government.,Ch 15,Enterprise,
+B.24,Matrix,"A grid showing the relationship between two or more architecture elements, for example the stream matrix.",Ch 17,Enterprise,Data
+B.25,Metaview,"A template from which individual views are made, stating purpose, audience, notation and use.",Ch 1.8,Enterprise,UI/UX
+B.26,Open System,"A system built on enough open specifications that software is portable, interoperable and usable across environments.",Ch 13,Technology,Integration
+B.27,Operational Governance,"Managing how systems perform against agreed service levels, and setting those levels.",Ch 16,Infrastructure,Enterprise
+B.28,Packaged Services,Services bought from a vendor as off-the-shelf products instead of being built.,Ch 12,Application,Technology
+B.29,Portability,"How easily a system, component or data can move to a different environment.",Ch 13,Technology,Infrastructure
+B.30,Portfolio,"A group of programmes, projects or assets managed together, such as an application or service portfolio.","Ch 12, 15",Enterprise,Application
+B.31,PRINCE2,A standard project management method.,Ch 15,Enterprise,
+B.32,Program,A coordinated set of change projects delivering business benefit.,Ch 15,Enterprise,Business
+B.33,Project,A single change effort delivering business benefit.,Ch 15,Enterprise,Business
+B.34,Risk Management,Managing risks to the architecture practice and its goals; the register and heat map apply it.,"Ch 14, 16",Security,Enterprise
+B.35,Scalability,The ability to run on very different sizes of platform and to grow with load.,Ch 13,Infrastructure,Technology
+B.36,Security,"Services that protect data's confidentiality, integrity and availability.",Ch 13,Security,Data
+B.37,Server,A component that answers requests from clients.,Ch 13,Technology,Infrastructure
+B.38,Service Quality,A preset bundle of non-functional properties assigned to a service or contract.,Ch 8,Application,"Infrastructure, Integration"
+B.39,SMART,"A way of setting targets: specific, measurable, actionable, realistic, time-bound.",Ch 8,Business,Enterprise
+B.40,Supplier Management,"Managing the suppliers of products and services to the architecture practice, with procurement.",Ch 16,Enterprise,Industry
+B.41,System,A combination of interacting elements organised for one or more purposes.,Ch 1,Enterprise,Technology
+B.42,Time Period,The span over which a potential impact is measured.,Ch 14,Security,Business
+B.43,Use Case,A view of functionality showing capabilities in the context of the user.,Ch 8,UI/UX,Business
+B.44,User,"Any person, organisation or unit using an information system.",Ch 7,UI/UX,Business

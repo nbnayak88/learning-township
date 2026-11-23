@@ -1,0 +1,10 @@
+Term,Meaning in plain words,Where it lands in this template
+Goal,"A broad, qualitative outcome the business wants to reach.","Vision, objectives"
+Objective,"A specific, measurable target that supports a goal.","Objectives register, KPIs"
+Course of action,"A chosen way to reach objectives, such as a strategy, initiative or policy.","Work packages, decisions"
+Change,What must differ in the business for the course of action to work.,"Gap analysis, impact assessment"
+Strategy justification,"Evidence, ecosystem factors and stakeholder needs behind a strategy.",Decision records
+Strategy interpretation,Turning a strategy into objectives and actions each unit can act on.,Requirement traces
+Planning approach,"Top-down and sequential: set strategy, then cascade to units.",Programme method
+Design approach,Iterative: use blueprints to test options with the business.,Architecture sprints
+Business Model Canvas,"One-page view of value proposition, segments, channels, resources and costs.",Vision and value chapters

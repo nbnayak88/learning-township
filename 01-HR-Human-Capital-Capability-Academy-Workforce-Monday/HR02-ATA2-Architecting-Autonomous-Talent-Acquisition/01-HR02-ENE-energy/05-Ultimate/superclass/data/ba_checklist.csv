@@ -1,0 +1,21 @@
+ID,Check,Applies at,Evidence
+QA-01,"Each requirement has a unique ID, one statement, one owner",G3,Requirements table
+QA-02,"Each requirement is atomic, testable and unambiguous",G3,Review comment log
+QA-03,Each requirement has acceptance criteria (Given/When/Then or measurable),G3,Acceptance column
+QA-04,"Each requirement is classified (business, stakeholder, solution, transition) and prioritised (MoSCoW)",G3,Classification and MoSCoW columns
+QA-05,"Each requirement traces to an objective, a component, a data entity and a test","G3, G8",Traceability matrix
+QA-06,No requirement names a product unless a constraint is approved,G3,Review
+QA-07,Terms are defined once in the glossary and used consistently,G2,Glossary
+QA-08,Stakeholders are identified with concerns and engagement approach,G1,Stakeholder table
+QA-09,Business rules are separate from process steps and numbered,G3,Business rules table
+QA-10,"Every data entity has an owner, steward, classification and retention",G4,Entity catalogue
+QA-11,Every mandatory attribute has a data-quality rule,G4,Dictionary and DQ rules
+QA-12,"Every interface has an owner, direction, mode, frequency and classification",G5,Interface catalogue
+QA-13,Decisions are recorded as ADRs with options and rationale,G5,ADR register
+QA-14,"Security, privacy and residency reviewed against NFRs",G6,Security review record
+QA-15,"Risks have owner, score and mitigation","G1, G7",Risk register
+QA-16,Assumptions and dependencies listed with fall-backs,"G1, G7",Assumptions table
+QA-17,Requirements verified (peer review) and validated (stakeholder sign-off),G3,Sign-off record
+QA-18,Placeholders in [brackets] are either filled or listed as open items,"G3, G8",Open items list
+QA-19,"Change requests assessed for impact on scope, data, cost and risk",Continuous,Change log
+QA-20,"Client, vendor and personal details are absent from reference artefacts",Publication,Review

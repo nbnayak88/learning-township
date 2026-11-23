@@ -1,0 +1,21 @@
+ID,KPI,Definition / formula,Frequency,Owner,Target
+K-01,Time to hire,Days from application to accepted offer (median),Weekly,Head of Global TA,[35] days for volume roles
+K-02,Time to fill,Days from requisition approval to start date,Monthly,Head of Global TA,[55] days
+K-03,Offer acceptance rate,Accepted offers / offers made,Monthly,Head of Global TA,[85]%
+K-04,Candidate satisfaction,Average survey score (1-5) at application and after interview,Monthly,TA operations lead,[4.2]
+K-05,Application completion rate,Completed applications / started applications,Weekly,Employer brand lead,[75]% mobile
+K-06,Recruiter productivity,Hires per recruiter per month,Monthly,TA operations lead,[+20]%
+K-07,Cost per hire,Total hiring cost / hires,Quarterly,TA finance partner,[-15]%
+K-08,Source effectiveness,Hires per source / source cost,Monthly,Sourcing lead,Improve top-3 sources
+K-09,Quality of hire,Manager rating and retention at [6] months,Quarterly,HR analytics lead,[4.0]/5; [90]% retention
+K-10,Check turnaround,Days from order to outcome,Weekly,TA operations lead,[3] days average
+K-11,Pre-start clearance rate,Hires with all gates cleared before start / hires,Weekly,HSE and TA operations,100% for safety-critical
+K-12,Integration success rate,Successful partner calls / total,Daily,Integration lead,[99.5]%
+K-13,Webhook-to-record latency,Minutes from partner event to hub update (95th percentile),Daily,Integration lead,[15] minutes
+K-14,Hire hand-off accuracy,Hires created without correction / hires,Weekly,HR operations lead,[99]%
+K-15,Human-review coverage,Selection decisions with named human and reason / decisions,Monthly,AI governance lead,100%
+K-16,Adverse-impact check,Selection-rate ratio across protected groups where lawful to measure,Monthly,AI governance lead,Within agreed tolerance
+K-17,Data retention compliance,Records past retention / total records,Monthly,Privacy steward,0
+K-18,Partner exit readiness,Critical partners with tested exit in last 12 months / critical partners,Annual,Partner manager,100%
+K-19,Hiring-tool consolidation,Number of hiring tools in use,Quarterly,Enterprise architect,[5]
+K-20,Internal fill rate,Hires from internal moves / hires,Quarterly,Internal mobility lead,[25]%

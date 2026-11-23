@@ -1,0 +1,25 @@
+No.,Artefact,Where it lives in this template
+1,Executive Brief,Executive summary on the home page and Chapter 0
+2,Industry Analysis,Chapter 6.1 and 14.1; industry stream (2.12)
+3,Problem Statement,Chapter 6.2 and 14.4 root causes
+4,Stakeholder Map,stakeholders register; Chapter 6.6
+5,Vision,Chapter 6.3
+6,9P4V Assessment,Chapter 3.6 canvas and the p4v_lens register
+7,Current-State Architecture,Chapters 10.7 and 14.1
+8,Capability Assessment,capabilities register; Chapter 10.2
+9,Experience Architecture,Chapter 3.9; UI/UX stream
+10,Target Architecture,Chapters 10 to 13
+11,12-Stream Architecture,Chapter 2; stream_matrix
+12,Strategic Options,Chapter 14.5
+13,Trade-Off Analysis,Chapter 14.5 and decision register (adr)
+14,Business Case,Chapter 14.8
+15,AI and Technology Strategy,"AI and Technology streams (14.5, 14.6); Chapter 13.9"
+16,Experiment and MVP,Chapter 3.10; Chapter 15.4 pilot
+17,Transformation Roadmap,Chapter 15.3.1
+18,Risk and Governance,risks register; Chapter 16
+19,Change and Adoption Plan,Chapters 15.7 and 16.7
+20,Value Realisation Model,Chapters 14.9 and 15.8; kpis register
+21,Victory Dashboard,Workbook dashboard and kpis register
+22,Venture and Scale Model,Chapter 4.9 and Chapter 18
+23,Reflection,Chapter 16.9 continuous improvement
+24,Next-Vision Recommendation,Chapter 3.4 feedback loop

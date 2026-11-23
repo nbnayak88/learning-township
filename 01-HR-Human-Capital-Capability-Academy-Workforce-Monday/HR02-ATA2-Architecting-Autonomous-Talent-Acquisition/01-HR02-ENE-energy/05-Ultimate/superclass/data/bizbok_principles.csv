@@ -1,0 +1,7 @@
+No.,Core principle,Meaning in plain words,How this template applies it,Stream
+1,Business architecture is about the business.,"Describe capabilities, value and information in business terms; do not start from systems.",Chapters 7, 8, 10 and 14 are written in business language; technology comes later.,Business
+2,Business architecture's scope is the scope of the business.,"Include the whole ecosystem, with customers, partners and outsourced capabilities, not just internal units.",Stakeholders and value stream cover external parties.,Enterprise
+3,Business architecture is not prescriptive.,"The guide gives a framework to adapt, not a fixed method or tool.",The template is configurable; add or drop registers.,Enterprise
+4,Business architecture is iterative.,Build in passes and refine; do not wait for completeness.,"Versioned registers, definition of done, gates.",Enterprise
+5,Business architecture is reusable.,Content built once serves many scenarios and initiatives.,"One knowledgebase feeds document, deck and workbook.",Enterprise
+6,Business architecture is not about the deliverables.,"The value is shared understanding and better decisions, not the diagrams themselves.","Gates test whether decisions were made, not only whether artefacts exist.",Enterprise

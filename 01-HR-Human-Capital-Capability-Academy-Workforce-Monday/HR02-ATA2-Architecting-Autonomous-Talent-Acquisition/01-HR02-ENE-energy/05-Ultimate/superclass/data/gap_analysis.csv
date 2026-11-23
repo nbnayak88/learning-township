@@ -1,0 +1,14 @@
+Domain,Baseline (typical),Target,Gap,Closing work package
+Business,Different hiring process in each country and unit,One standard with local variants,Process standardisation and ownership,WP-02
+Business,Manual coordination of checks and clearances,"Parallel, tracked gates before day one",Gate design and status visibility,WP-10
+Data,Candidate records spread over tools; duplicates common,One candidate and requisition record with canonical codes,"Canonical model, de-duplication, migration",WP-03
+Data,No retention automation,Country retention table drives deletion,Retention jobs and partner propagation,WP-12
+Application,Three legacy ATS plus spreadsheets,One hiring hub,"Configuration, migration and decommissioning",WP-05
+Application,Point-to-point links to vendors,Integration hub with adapters,"Hub, adapters, contract tests",WP-04
+Application,Manual re-keying of hires into HR core,Automated hire hand-off,Mapped integration with reconciliation,WP-06
+Application,Ad-hoc assessments and interviews,Role-family catalogue through one interface,Assessment and interview orchestration,WP-09
+Technology,Shared mailbox and local passwords for vendor portals,SSO and vault,Identity and secrets design,WP-04
+Technology,No central view of hiring events,Event stream to data platform,Webhook and reporting pipelines,WP-14
+AI and governance,No record of AI use,AI register and bias monitoring,Control plane and processes,WP-12
+People,Recruiters trained on legacy tools,Role-based skills on the new hub,Enablement and adoption plan,WP-08
+Partners,Contracts without data-return or audit clauses,Standard clauses and exit plans,Procurement template and exit tests,WP-17

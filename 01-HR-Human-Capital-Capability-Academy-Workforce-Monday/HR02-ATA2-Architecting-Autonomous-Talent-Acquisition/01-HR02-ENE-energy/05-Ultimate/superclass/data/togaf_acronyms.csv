@@ -1,0 +1,86 @@
+Acronym (Appendix C),Expansion,Stream
+ABB,Architecture Building Block,Application
+ACMM,Architecture Capability Maturity Model,Enterprise
+ADM,Architecture Development Method,Enterprise
+ANSI,American National Standards Institute,Industry
+API,Application Platform Interface (as listed; commonly Application Programming Interface),Integration
+ARTS,Association for Retail Technology Standards,Industry
+BMM,Business Motivation Model,Business
+BPM,Business Process Management,Business
+BPMN,Business Process Model and Notation,Business
+BTEP,Canadian Government Business Transformation Enablement Program,Industry
+CMM,Capability Maturity Models,Enterprise
+CMMI,Capability Maturity Model Integration,Enterprise
+COBIT,Control Objectives for Information and related Technology,Enterprise
+COTS,Commercial Off-The-Shelf applications,Application
+CRM,Customer Relationship Management,Application
+CRUD,"Create, Read, Update, Delete",Data
+CSF,Critical Success Factor,Business
+DBA,Database Administrator,Data
+DBMS,Database Management System,Technology
+DoC,US Department of Commerce,Industry
+DoD,US Department of Defense,Industry
+DoDAF,Department of Defense Architecture Framework,Industry
+EAI,Enterprise Application Integration,Integration
+EDIFACT,"UN Electronic Data Interchange for Administration, Commerce and Transport",Integration
+ERP,Enterprise Resource Planning,Application
+ETL,"Extract, Transform, Load",Integration
+FICO,Fair Isaac Corporation,Industry
+FTE,Full-Time Equivalent,Business
+GOTS,Government Off-The-Shelf applications,Application
+HIPAA,Health Insurance Portability and Accountability Act,Industry
+ICAM,Integrated Computer Aided Manufacturing,Industry
+ICOM,"Inputs, Controls, Outputs, Mechanisms/Resources",Business
+IDEF,ICAM DEFinition,Business
+IEC,International Electrotechnical Commission,Industry
+IEEE,Institute of Electrical and Electronics Engineers,Industry
+III-RM,Integrated Information Infrastructure Reference Model,Integration
+IoT,Internet of Things,Infrastructure
+ISACA,Information Systems Audit and Control Association,Industry
+ISACF,Information Systems Audit and Control Foundation,Industry
+ISO,International Organization for Standardization,Industry
+IT,Information Technology,Technology
+ITGI,IT Governance Institute,Enterprise
+ITIL,Information Technology Infrastructure Library,Infrastructure
+ITPMF,IT Portfolio Management Facility,Enterprise
+J2EE,"Java 2 Platform, Enterprise Edition",Technology
+KPI,Key Performance Indicator,Business
+LAN,Local Area Network,Infrastructure
+MDA,Model-Driven Architecture,Application
+MSA,Microservices Architecture,Application
+MSP,Managing Successful Programs,Enterprise
+MVA,Minimum Viable Architecture,Enterprise
+NAF,NATO Architecture Framework,Industry
+NASCIO,National Association of State Chief Information Officers,Industry
+OECD,Organisation for Economic Co-operation and Development,Industry
+OGC,UK Office of Government Commerce,Industry
+OLA,Operational-Level Agreement,Infrastructure
+OMB,Office of Management and Budget,Industry
+OMG,Object Management Group,Industry
+ORB,Object Request Broker,Integration
+OSI,Open Systems Interconnection,Infrastructure
+OSOA,Open Service-Oriented Architecture,Integration
+PDF,Portable Document Format,UI/UX
+PMBOK,Project Management Body of Knowledge,Enterprise
+PRINCE,PRojects in Controlled Environments,Enterprise
+QoS,Quality of Service,Infrastructure
+RAS,Remote Access Services (as listed),Infrastructure
+RFC,Request For Change,Enterprise
+RFI,Request for Information,Business
+RFP,Request for Proposal,Business
+RM,Reference Model,Industry
+SBB,Solution Building Block,Application
+SCA,Service Component Architecture,Integration
+SDO,Service Data Objects,Integration
+SEI,Software Engineering Institute,Industry
+SGML,Standard Generalized Markup Language,Data
+SLA,Service-Level Agreement,Infrastructure
+SMART,"Specific, Measurable, Actionable, Realistic, Time-bound",Business
+SOA,Service-Oriented Architecture,Integration
+SPEM,Software Process Engineering Metamodel (as listed: Software Processing Engineering Metamodel),Data
+SysML,Systems Modeling Language,Application
+TAFIM,Technical Architecture Framework for Information Management,Industry
+TRM,Technical Reference Model,Technology
+UML,Unified Modeling Language,Application
+WAN,Wide Area Network,Infrastructure
+XML,Extensible Markup Language,Integration

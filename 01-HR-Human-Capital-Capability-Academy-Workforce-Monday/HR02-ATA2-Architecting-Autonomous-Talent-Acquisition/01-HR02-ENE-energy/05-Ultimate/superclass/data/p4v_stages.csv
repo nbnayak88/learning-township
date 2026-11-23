@@ -1,0 +1,19 @@
+Stage,Name,What happens,Deliverable,Position,Pillars used,Lead streams
+01,Industry Context,Establish the external environment.,Industry Opportunity and Threat Map,Before V1,All,Industry; Enterprise
+02,Enterprise Context,"Organisation, business model, geography, scale, stakeholders, strategy, technology landscape.",Enterprise Context Canvas,Before V1,All,Enterprise; Business
+03,Transformation Trigger,The event that creates urgency.,Transformation Trigger Statement,Before V1,Policy,Enterprise; Industry
+04,V1 Vision,Define the future ambition.,Vision Canvas,V1,"Policy, Portfolio, Program",Enterprise; Business
+05,Problem Framing,"What is happening, why, root cause, what if nothing changes, who owns it.",Problem Statement and Issue Tree,V1,Policy,Business; Enterprise
+06,Discovery and Diagnosis,Analyse the current state.,"Current-state, capability map, stakeholder map, process and value-stream, technology and data, maturity assessments",V1,"Process, People",Business; Data; Application; Technology
+07,9P4V Assessment,Map the challenge across the nine pillars and find the current V1 to V4 position.,9P4V Transformation Canvas,V1 to V4,All nine,Enterprise
+08,Experience Discovery,"Customer, employee, partner, manager, executive or citizen experience.",Experience Journey and Pain Point Map,V2,"Product, Process",UI/UX; Business
+09,12-Stream Architecture,Future-state architecture across the relevant streams.,Target architecture and one deliverable per stream,V2,"Platform, Product, Process",All twelve streams
+10,Strategic Options,"Three or four credible alternatives, each judged on fit, value, cost, risk, feasibility, experience, time, scalability.",Options evaluation,V1 to V2,Portfolio,Enterprise; Business
+11,Trade-Offs,"Explicit decisions: cost vs experience, speed vs quality, innovation vs risk, standardisation vs customisation, AI autonomy vs human control, short-term ROI vs long-term value, complexity vs flexibility.",Trade-off record,V2,"Policy, Portfolio",Enterprise; AI; Security
+12,Experiment,Test the highest-risk assumptions.,Experiment and MVP Canvas,V2 to V3,"Project, Practice",AI; Application; UI/UX
+13,Decision Room,"Simulate the executive boardroom (CEO, CFO, CIO, COO, CHRO, CISO, business leader, customer or employee representative, enterprise architect).",Executive Recommendation,V1 to V3,"Portfolio, Program",Enterprise
+14,Transformation Roadmap,"Initiatives, dependencies, milestones, waves, resources, governance, change, risks, benefits.",Roadmap,V3,"Program, Project",Enterprise; Integration
+15,Transformation Shock,An unexpected disruption forces a revised plan.,Re-Architecture Decision,V3,"Program, People",Enterprise; Security
+16,V3 Victory,"Prove measurable progress: outcomes, adoption, benefits, KPIs, milestones, stakeholder confidence.",Victory Dashboard,V3,"People, Practice, Project",Business; Data
+17,V4 Venture,Make the transformation sustainable and scalable.,"Venture and scale model, operating model, governance, replication playbook, sustainability model, innovation pipeline",V4,All nine,Enterprise; Industry
+18,Reflection and Next Vision,"What worked, failed, changed, was learned, should be re-architected, and what new opportunity emerged.",Reflection and Next-Vision Canvas,V4 to V1,"Policy, Portfolio",Enterprise

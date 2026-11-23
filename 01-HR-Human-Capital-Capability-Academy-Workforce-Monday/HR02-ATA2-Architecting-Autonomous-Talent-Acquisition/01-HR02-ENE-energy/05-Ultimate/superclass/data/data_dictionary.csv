@@ -1,0 +1,59 @@
+Entity,Attribute,Type,Mandatory,Rule / domain,Personal data,DQ dimension
+Requisition,RequisitionID,Identifier,Yes,Unique; system-generated,No,Uniqueness
+Requisition,PositionID,Reference,Yes,Must exist in HR core; open headcount available,No,Validity
+Requisition,JobFamily,Code,Yes,Canonical job-family code list,No,Validity
+Requisition,Country,Code,Yes,ISO 3166-1 alpha-2,No,Validity
+Requisition,PayBandMin / PayBandMax,Amount,Yes,Within approved band for grade and country,No,Accuracy
+Requisition,HiringManagerID,Reference,Yes,Active employee,Yes,Validity
+Requisition,Status,Code,Yes,"Draft, Approval, Open, On hold, Filled, Cancelled",No,Consistency
+Candidate,CandidateID,Identifier,Yes,Unique; hub-generated; never reused,No,Uniqueness
+Candidate,FullName,Text,Yes,As in identity document for hire stage,Yes,Accuracy
+Candidate,Email,Text,Yes,Valid format; unique per person after de-duplication,Yes,Validity
+Candidate,Phone,Text,No,E.164,Yes,Validity
+Candidate,Country of residence,Code,Yes,ISO 3166-1 alpha-2; drives consent and retention,Yes,Validity
+Candidate,Source,Code,Yes,"Canonical source list (board, referral, agency, sourcing, direct)",No,Consistency
+Candidate,InternalFlag,Boolean,Yes,True if matched to an active employee ID,No,Accuracy
+Application,ApplicationID,Identifier,Yes,Unique; system-generated,No,Uniqueness
+Application,RequisitionID,Reference,Yes,Must exist and be Open,No,Validity
+Application,Stage,Code,Yes,Canonical stage list mapped from hub statuses,No,Consistency
+Application,DecisionReason,Code,Conditional,Mandatory on reject or withdraw; canonical list,No,Completeness
+Application,DecisionBy,Reference,Conditional,Named user; never a system account for selection decisions,Yes,Accuracy
+Assessment result,AssessmentOrderID,Identifier,Yes,Unique; passed to partner as correlation key,No,Uniqueness
+Assessment result,PartnerCode,Code,Yes,From partner registry,No,Validity
+Assessment result,Package,Code,Yes,Approved package per job family,No,Validity
+Assessment result,ScoreBand,Code,Conditional,Normalised band (1-5); partner raw score not stored in canonical field,No,Consistency
+Assessment result,ReportURL,URL,Conditional,Signed link; expires; access logged,Yes,Security
+AI decision-support event,EventID,Identifier,Yes,Unique; system-generated,No,Uniqueness
+AI decision-support event,ModelVersion,Text,Yes,Registered in the AI register,No,Traceability
+AI decision-support event,ReasonSummary,Text,Yes,Plain-language reasons shown to recruiter,No,Completeness
+AI decision-support event,HumanDecision,Code,Yes,"Accepted, Changed, Ignored",No,Completeness
+Background check outcome,CheckOrderID,Identifier,Yes,Unique; correlation key with provider,No,Uniqueness
+Background check outcome,Package,Code,Yes,Country and role package from catalogue,No,Validity
+Background check outcome,ConsentRef,Reference,Yes,Must exist and be in date,Yes,Validity
+Background check outcome,Outcome,Code,Yes,"Clear, Review, Not clear, Cancelled; no raw detail",No,Consistency
+Background check outcome,OutcomeDate,Date,Yes,Not before order date,No,Timeliness
+Identity and right-to-work record,VerificationOutcome,Code,Yes,"Verified, Refer, Failed",No,Accuracy
+Identity and right-to-work record,PermitExpiry,Date,Conditional,Mandatory when permit is time-limited,Yes,Completeness
+Clearance status,FitForRole,Boolean,Conditional,Set by HSE only; no clinical detail stored,Yes,Security
+Clearance status,ClearanceExpiry,Date,Conditional,Future date,No,Timeliness
+Offer,OfferID,Identifier,Yes,Unique; system-generated,No,Uniqueness
+Offer,BaseSalary,Amount,Yes,Within band; currency code present,Yes,Accuracy
+Offer,StartDate,Date,Yes,After acceptance date; working day,No,Validity
+Offer,SignatureStatus,Code,Yes,"Sent, Viewed, Signed, Declined, Expired",No,Consistency
+Hire event,HireEventID,Identifier,Yes,Unique; idempotency key,No,Uniqueness
+Hire event,EmployeeID,Reference,Conditional,Returned from HR core; stored back on candidate,No,Completeness
+Hire event,MappingStatus,Code,Yes,"Mapped, Warning, Failed",No,Accuracy
+Consent record,ConsentID,Identifier,Yes,Unique; system-generated,No,Uniqueness
+Consent record,Purpose,Code,Yes,"Application, Talent pool, Assessment, Check, Marketing",No,Validity
+Consent record,Region,Code,Yes,Processing region per partner,No,Validity
+Consent record,WithdrawnDate,Date,No,"If set, processing stops and downstream partners are notified",Yes,Timeliness
+Partner registry,PartnerCode,Identifier,Yes,Unique,No,Uniqueness
+Partner registry,Category,Code,Yes,From the 28 partner categories,No,Validity
+Partner registry,ProcessingRegions,Text,Yes,Approved list,No,Validity
+Partner registry,ExitPlanDate,Date,Yes,Reviewed annually,No,Timeliness
+Candidate ID cross-reference,CandidateID,Reference,Yes,Hub ID,No,Uniqueness
+Candidate ID cross-reference,PartnerRef,Text,Conditional,Partner correlation key,No,Consistency
+Candidate ID cross-reference,EmployeeID,Reference,Conditional,Filled after hire,No,Completeness
+Audit event,Actor,Reference,Yes,User or service account,Yes,Traceability
+Audit event,Action,Code,Yes,"Create, Read, Change, Decide, Export, Delete",No,Completeness
+Audit event,Timestamp,Datetime,Yes,UTC; synchronised clock,No,Timeliness

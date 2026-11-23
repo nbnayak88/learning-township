@@ -1,0 +1,11 @@
+Domain,Kind,Meaning in plain words,BIZBOK section,Template register,Primary stream,Supporting streams
+Capabilities,Core,"What the business can do, independent of who does it or how.",2.2,capabilities,Business,"Enterprise, Domain"
+Organization,Core,"Business units, roles, partners and locations that perform capabilities.",2.3,stakeholders; raci,Business,Enterprise
+Information,Core,"Business concepts the business needs to know about, independent of systems.",2.5,data_entities; data_dictionary,Data,Business
+Value Streams,Core,End-to-end series of stages that deliver value to a stakeholder.,2.4,value_stream,Business,Domain
+Stakeholders,Extended,"Customers, partners and internal parties who give or receive value.",2.8,stakeholders,Business,Enterprise
+Strategies,Extended,"Goals, objectives and courses of action the business pursues.",2.1,principles; requirements (business level),Enterprise,Business
+Policies,Extended,Rules and regulations that constrain or steer the business.,2.9,business_rules,Industry,"Domain, Security"
+Products,Extended,"What the business offers, with entitlements.",2.7,capabilities (add a products register),Business,Industry
+Initiatives,Extended,Change efforts that move the business toward its objectives.,2.6,work_packages; gap_analysis,Enterprise,Business
+Metrics,Extended,Measures of performance tied to objectives and capabilities.,3.7,kpis,Business,Enterprise

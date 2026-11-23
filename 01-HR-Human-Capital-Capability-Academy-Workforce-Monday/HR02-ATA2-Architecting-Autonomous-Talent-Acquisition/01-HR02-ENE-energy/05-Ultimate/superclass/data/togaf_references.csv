@@ -1,0 +1,77 @@
+Group,Referenced document (Appendix A),Open Group ID,Stream,What this template uses it for
+A.1,Applying the ADM Using Agile Sprints,G210,Enterprise,Agile delivery of architecture
+A.1,A Practitioners' Approach to Developing Enterprise Architecture Following the TOGAF ADM,G186,Enterprise,Practical ADM
+A.1,An Approach to Selecting Building Blocks,G248,Application,ABB and SBB choice
+A.1,Architecture Maturity Models,G203,Enterprise,Maturity targets
+A.1,Architecture Project Management,G188,Enterprise,Delivery control
+A.1,Architecture Roles and Skills,G249,Enterprise,RACI and skills
+A.1,Architecture Skills Framework (superseded),G198,Enterprise,Skills
+A.1,Business Capabilities,G211,Business,Capability map
+A.1,Business Capability Planning,G233,Business,Capability planning
+A.1,Business Models,G18A,Business,Business model
+A.1,Business Scenarios,G176,Business,Requirements scenarios
+A.1,Digital Technology Adoption: Readiness Assessment and Roadmap,G212,AI,Digital and AI readiness
+A.1,Enabling Enterprise Agility,G20F,Enterprise,Agility
+A.1,Environmentally Sustainable Information Systems,G242,Infrastructure,Sustainability
+A.1,Information Architecture: Business Intelligence and Analytics,G238,Data,Analytics
+A.1,Information Architecture: Customer Master Data Management,G21B,Data,Master data
+A.1,Information Architecture: Metadata Management,G234,Data,Metadata
+A.1,Information Mapping,G190,Data,Information mapping
+A.1,Integrating Risk and Security within a TOGAF Enterprise Architecture,G152,Security,Risk and security
+A.1,Organization Mapping,G206,Business,Organisation mapping
+A.1,The TOGAF Integrated Information Infrastructure Reference Model (III-RM),G179,Integration,Boundaryless information flow
+A.1,The TOGAF Leader's Guide to Establishing and Evolving an EA Capability,G184,Enterprise,Practice building
+A.1,The TOGAF Technical Reference Model (TRM),G175,Technology,Technology reference
+A.1,Using the TOGAF Framework to Define and Govern Service-Oriented Architectures,G174,Integration,SOA
+A.1,Value Streams,G178,Business,Value stream
+A.2,A Practical Approach to Application Portfolio Consolidation,G18B,Application,Application portfolio
+A.2,"Archi Banking Group case study (BIAN, ArchiMate, TOGAF)",Y201,Industry,Industry reference example
+A.2,ArchiMate 3.2 Specification,C226,Enterprise,Modelling notation
+A.2,Digital Practitioner Body of Knowledge (DPBoK),C196,AI,Digital practice
+A.2,Exploring Synergies between TOGAF and Frameworx,W114,Industry,Telecom industry
+A.2,Information Architecture: BI and Metadata Management Reference Models,G201,Data,Data reference models
+A.2,Open Risk Analysis (O-RA),C20A,Security,Risk analysis
+A.2,Open Risk Taxonomy (O-RT),C20B,Security,Risk taxonomy
+A.2,The Open Agile Architecture Standard,C208,Enterprise,Agile architecture
+A.2,IT4IT Standard,C24A,Infrastructure,IT operations value chain
+A.2,TOGAF 9 and DoDAF 2.0,W105,Industry,Defence frameworks
+A.2,TOGAF and SABSA Integration,W117,Security,Security architecture
+A.2,Architecture Compliance Review Checklists,G253,Enterprise,Compliance review
+A.3,PMBOK Guide (Project Management Institute),,Enterprise,Project management
+A.3,Process re-use opportunities to enhance the operating model (IEEM 2011),,Business,Process reuse
+A.3,"Analysis Patterns, M. Fowler",,Application,Patterns
+A.3,"ANSI/IEEE Std 1471-2000, architectural description",,Enterprise,Architecture description
+A.3,"A Pattern Language, C. Alexander",,Application,Patterns
+A.3,Business Motivation Model (OMG),,Business,Motivation
+A.3,BPMN Specification (OMG),,Business,Process notation
+A.3,Business Transformation Enablement Program (BTEP),,Industry,Government reference
+A.3,COBIT 4.0 (IT Governance Institute),,Enterprise,IT governance
+A.3,"Corporate Governance, R. Naidoo",,Enterprise,Governance
+A.3,"Design Patterns, Gamma, Helm, Johnson, Vlissides",,Application,Design patterns
+A.3,"Enterprise Architecture as Strategy, Ross, Weill, Robertson",,Enterprise,Strategy
+A.3,Enterprise Architecture Capability Maturity Model (US DoC),,Enterprise,Maturity
+A.3,Enterprise Architecture Maturity Model (NASCIO),,Enterprise,Maturity
+A.3,"Enterprise Architecture Planning, Spewak and Hill",,Enterprise,Planning
+A.3,Air Force Principles for Information Management,,Data,Information principles
+A.3,ISO/IEC 20000:2011 IT Service Management,,Infrastructure,Service management
+A.3,ISO/IEC/IEEE 15288:2015 Systems and software life cycle processes,,Technology,Life cycle
+A.3,ISO/IEC/IEEE 42010:2022 Architecture description,,Enterprise,Architecture description
+A.3,IT Portfolio Management Facility (OMG),,Enterprise,Portfolio
+A.3,Manifesto for Agile Software Development,,Enterprise,Agile
+A.3,Merriam-Webster Collegiate Dictionary,,Enterprise,Term source
+A.3,Model-Driven Architecture (OMG),,Application,Model driven
+A.3,OECD Principles of Corporate Governance,,Industry,Governance
+A.3,"Organigraphs, Mintzberg and Van der Heyden",,Business,Organisation views
+A.3,"Pattern-Oriented Software Architecture, Buschmann et al.",,Application,Patterns
+A.3,"Patterns and Software: Essential Concepts and Terminology, B. Appleton",,Application,Patterns
+A.3,Re-usable Asset Specification (OMG),,Application,Reuse
+A.3,Service Component Architecture Specification (OSOA),,Integration,SOA
+A.3,Service Data Objects Specification (OSOA),,Integration,SOA data
+A.3,Software Process Engineering Metamodel (OMG),,Data,Metamodel
+A.3,Systems Modeling Language (SysML),,Application,Systems modelling
+A.3,"The Art of Systems Architecting, Rechtin and Maier",,Enterprise,Systems architecture
+A.3,"The Oregon Experiment, C. Alexander",,Application,Patterns
+A.3,"The Timeless Way of Building, C. Alexander",,Application,Patterns
+A.3,The Zachman Framework,,Enterprise,Architecture framework
+A.3,UML Profile and Metamodel for Services (UPMS) RFP,,Integration,Services modelling
+A.3,Unified Modeling Language (UML) Specification,,Application,Modelling

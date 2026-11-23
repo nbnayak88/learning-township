@@ -1,0 +1,12 @@
+DMBOK knowledge area,What it means here,Artefacts in this repository,Maturity target
+Data Governance,"Ownership, policies, decision rights, council",Data owners and stewards (data_entities); RACI; governance page,3
+Data Architecture,Enterprise data model and flows,Entity catalogue; conceptual model; data flow,3
+Data Modeling & Design,"Conceptual, logical, physical models",Data dictionary; naming standard,3
+Data Storage & Operations,"Databases, backup, DR, retention",Technology architecture; NFRs; retention schedule,3
+Data Security,"Classification, access, audit, privacy",Classification; security architecture; audit trail,4
+Data Integration & Interoperability,"Interfaces, ETL, APIs",Interface catalogue; integration patterns,3
+Document & Content Management,Evidence and document lifecycle,Document repository; retention classes,3
+Reference & Master Data,"Code lists, assets, parties",ReferenceCode; system-of-record rules,3
+Data Warehousing & BI,Analytics and dashboards,KPI catalogue; reporting layer,3
+Metadata Management,"Business glossary, lineage",Glossary; dictionary; configuration versioning,2
+Data Quality,"Rules, measurement, remediation",DQ rules; quality KPIs,3

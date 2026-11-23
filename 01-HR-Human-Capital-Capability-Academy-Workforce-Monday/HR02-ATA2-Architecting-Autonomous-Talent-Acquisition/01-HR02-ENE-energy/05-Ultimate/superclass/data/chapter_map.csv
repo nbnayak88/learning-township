@@ -1,0 +1,25 @@
+Chapter,Title,Part,ADM phase,Primary streams,Supporting streams,9P4V stage,Frameworks
+00,About this Document,Orientation,All,All,All twelve,V1 Vision,"TOGAF, BABOK, DMBOK, BIZBOK, 9P4V"
+01,TOGAF Foundations,I Foundations,Preliminary (ADM overview),Enterprise,All other streams,V1 Vision,TOGAF
+02,The Twelve Architecture Streams,I Foundations,All phases,All twelve,(each stream leads its own lens),All,TOGAF streams
+03,The 9P4V Framework,I Foundations,All phases,Enterprise,All other streams,All,9P4V
+04,Paperless Architecture Initiative (Preliminary Phase),II Preliminary,Preliminary,Enterprise,"Technology, Security, Industry",V4 Venture,TOGAF Preliminary
+05,Quality Standards (Preliminary Phase),II Preliminary,Preliminary; Requirements Management,"Enterprise, Business",Security,V3 Victory,"BABOK, TOGAF"
+06,Architecture Vision (Phase A),III ADM cycle,A Architecture Vision,"Enterprise, Business","Industry, Security",V1 Vision,TOGAF Phase A
+07,Business Analysis Approach (Requirements Management),III ADM cycle,Requirements Management,Business,"Enterprise, UI/UX",V1 to V3,BABOK
+08,Requirements Specification (Requirements Management),III ADM cycle,Requirements Management (hub),Business,"Data, Application, UI/UX, Domain, Security",V2 Value,"BABOK, TOGAF"
+09,"Business Architecture Guild, BIZBOK® (Phase B)",III ADM cycle,B Business Architecture,Business,"Enterprise, Domain, Industry",V1 to V2,BIZBOK
+10,Business Architecture (Phase B),III ADM cycle,B Business Architecture,Business,"Enterprise, Domain, UI/UX, AI, Industry",V2 Value,TOGAF Phase B
+11,Data Architecture (Phase C),III ADM cycle,C Information Systems: Data,Data,"AI, Security, Integration",V2 Value,"TOGAF Phase C, DAMA-DMBOK"
+12,Application Architecture (Phase C),III ADM cycle,C Information Systems: Application,Application,"Integration, UI/UX, AI, Security",V2 Value,TOGAF Phase C
+13,Technology Architecture (Phase D),III ADM cycle,D Technology Architecture,"Technology, Infrastructure","Security, AI, Integration",V2 Value,TOGAF Phase D
+14,Opportunities and Solutions (Phase E),III ADM cycle,E Opportunities and Solutions,Enterprise,"Business, Application, Technology, Infrastructure",V1 Vision,"BABOK, TOGAF Phase E"
+15,Migration Planning (Phase F),III ADM cycle,F Migration Planning,Enterprise,"Integration, Infrastructure, Data",V3 Victory,TOGAF Phase F
+16,Governance and Change (Phases G and H),III ADM cycle,G Implementation Governance; H Architecture Change Management,Enterprise,"Security, AI, Infrastructure",V3 to V4,TOGAF Phases G and H
+17,TOGAF Coverage Map,IV Assurance and reuse,All phases,Enterprise,All twelve,All,TOGAF
+18,Using This as a Template,IV Assurance and reuse,Preliminary (next cycle),Enterprise,All twelve,V4 Venture,Template
+19,Appendices,IV Assurance and reuse,All phases,All,All twelve,All,All
+20,"Integration Architecture and Patterns (Phase C, D)",V Deep dives and delivery,C Application and D Technology,"Integration, Application","Technology, Security, Data",V2 Value,TOGAF Phases C and D
+21,Partner Ecosystem and Vendor-Agnostic Selection (Phases B to E),V Deep dives and delivery,B to E,"Application, Business","Integration, Security, Industry",V2 Value,"TOGAF, BIZBOK"
+22,"Responsible AI, Privacy and Compliance (Requirements Management)",V Deep dives and delivery,All phases (Requirements Management),"AI, Security, Data","Business, Domain, Industry",V3 Victory,"TOGAF, DMBOK"
+23,SAP Activate Case Study: OmniVerse Energy (Phases E to H),V Deep dives and delivery,"E Opportunities, F Migration, G Governance, H Change","Enterprise, Business",All twelve,"V3 Victory, V4 Venture","TOGAF Phases E to H, SAP Activate"

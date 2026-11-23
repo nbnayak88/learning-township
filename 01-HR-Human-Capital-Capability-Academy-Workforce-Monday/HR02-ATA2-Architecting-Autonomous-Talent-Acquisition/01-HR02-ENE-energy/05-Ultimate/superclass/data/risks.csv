@@ -1,0 +1,19 @@
+ID,Risk,Likelihood (1-5),Impact (1-5),Score,Mitigation,Owner
+RK-01,AI hiring rules change or a regulator challenges a screening or interview AI use,3,5,15,Advisory-only design; AI register; bias tests; regional switches; legal watch,AI governance lead
+RK-02,Candidate data processed in a region not allowed for a country,3,5,15,Region map per partner; regional controls; transfer assessments; monitoring,Privacy office
+RK-03,"Partner outage or API change breaks assessment, check or job posting flows",4,4,16,Contract tests; monitoring; fallback manual path; version watch,Integration lead
+RK-04,Vendor lock-in as many flows depend on one partner,3,4,12,Capability interface; canonical model; exit plan; annual exit test,Partner manager
+RK-05,Sensitive check or medical data stored in the hiring system,2,5,10,Outcome-only design; DQ-11; DLP rules; audits,Compliance steward
+RK-06,Hire hand-off creates wrong or duplicate employee records,3,4,12,Mapping tests; idempotency; reconciliation; work items for failures,HR operations lead
+RK-07,Regional TA teams resist a common process,4,4,16,Working group; local variants as decisions; champions; wave rollout,Head of Global TA
+RK-08,Candidate drop-off from long or confusing application,3,4,12,Mobile-first test; chat option; short forms; funnel monitoring,Employer brand lead
+RK-09,Works council or union objection to AI interviewing or monitoring,3,4,12,Early engagement; transparency pack; opt-out; local agreement,Legal and HR relations
+RK-10,Partner credential leak,2,5,10,Vault; rotation; scoped access; anomaly alerts,IT security
+RK-11,Legacy data quality blocks migration and creates duplicates,4,3,12,DQ baseline; de-duplication; retention filter before load,Data steward
+RK-12,Too many extensions delay delivery and upgrades,3,3,9,Fit-to-standard discipline; ADR for each gap,Enterprise architect
+RK-13,Marketplace partner missing in a country or language,3,3,9,Regional adapter pattern; selection scorecard; local partner list,Partner manager
+RK-14,Bias in assessments or screening goes unnoticed,3,5,15,Adverse-impact monitoring; validation evidence; periodic audit,AI governance lead
+RK-15,Recruiter and manager adoption stays low,3,4,12,Role-based enablement; mobile and chat; adoption KPIs; hypercare,Change lead
+RK-16,Time pressure compresses testing before go-live,3,4,12,Quality gates; test-script pack; integration tests in sandbox,Delivery lead
+RK-17,Product roadmap shift as the vendor integrates with its new parent,2,3,6,Track roadmap; keep to open APIs; contract commitments,Enterprise architect
+RK-18,Background-check delays push start dates,4,3,12,Early ordering after acceptance; provider SLAs; status alerts,TA operations lead

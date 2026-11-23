@@ -1,0 +1,15 @@
+ID,Dimension,Rule,Applies to,Threshold,Action on failure,Owner
+DQ-01,Completeness,All mandatory requisition fields complete before approval,Requisition,100%,Block approval,TA operations lead
+DQ-02,Uniqueness,No duplicate candidate by verified email and phone after matching,Candidate,Under [0.5]% duplicates,Merge task for recruiter,Candidate data steward
+DQ-03,Validity,"Country, job-family, source and stage use canonical codes","Requisition, Application",100%,Reject message with mapping hint,Integration lead
+DQ-04,Consistency,"Hub stage and partner status agree for assessment, interview and check orders","Assessment, Interview, Check",Over [99.5]%,Reconciliation work item,Integration lead
+DQ-05,Timeliness,Partner result recorded within [15] minutes of partner completion,"Assessment, Interview",95%,Alert and retry,Integration lead
+DQ-06,Accuracy,"Hire data matches signed offer for pay, start date and position",Hire event,100%,Block hire hand-off,HR data steward
+DQ-07,Completeness,Decision reason present for every reject or withdraw,Application,100%,Block status change,TA operations lead
+DQ-08,Validity,Offer pay inside band; currency present,Offer,100%,Block release,Compensation steward
+DQ-09,Timeliness,Consent withdrawal reaches all partners within [24] hours,Consent record,100%,Escalate to privacy office,Privacy steward
+DQ-10,Traceability,"Every AI event has model version, reasons and human decision",AI decision-support event,100%,Block use of the AI step,AI governance lead
+DQ-11,Security,Check records hold outcome and date only,Background check outcome,100%,Purge detail; raise incident,Compliance steward
+DQ-12,Accuracy,Employee ID returned and stored for every completed hire,Hire event,100% within [1] day,Work item to HR operations,HR data steward
+DQ-13,Completeness,Clearance flag present before start for safety-critical roles,Clearance status,100%,Block start-date confirmation,HSE data steward
+DQ-14,Timeliness,Retention job runs monthly; no record kept beyond rule,"Candidate, Application",100%,Run deletion; report exceptions,Privacy steward

@@ -1,0 +1,30 @@
+L1 domain,L2 capability,Description,Target maturity (1-5),Supported by
+Workforce Planning,Headcount and hiring-plan management,Turn the workforce plan into approved positions and a hiring forecast,4,"C14, C05"
+Workforce Planning,Labour-market and compensation intelligence,"Supply, demand and pay benchmarks per role and country",3,C13
+Attract and Brand,Employer brand and career site,"Branded, multilingual, mobile career experience",4,C01
+Attract and Brand,Job advertising and distribution,Post to the right boards and channels with budget control,4,"C11, C12"
+Attract and Brand,Recruitment marketing and campaigns,"Campaigns, events and programmatic advertising",3,"C12, C07"
+Source and Engage,Talent sourcing,Find and reach passive talent and alumni,3,"C15, C07"
+Source and Engage,Talent relationship management,"Pools, nurture journeys and consent-aware outreach",4,"C07, C10"
+Source and Engage,Conversational engagement,"Answer questions, recommend jobs and capture applications in chat",4,"C02, C10"
+Source and Engage,Employee referral,"Referral capture, tracking and recognition",3,"C31, C06"
+Source and Engage,Internal mobility,Match employees to open roles and gigs,3,C27
+Assess and Select,Application screening,"Knock-out questions, parsing, match advice for recruiters",4,"C06, C19"
+Assess and Select,Skills and behavioural assessment,Role-based tests and simulations through partner services,4,C16
+Assess and Select,Interviewing and scheduling,"Structured interviews, scorecards and self-scheduling",4,"C08, C17, C18"
+Assess and Select,Selection decision and offer,"Compare, approve, offer within pay bands",4,"C09, C13"
+Hire and Comply,Background and credential screening,"Criminal, education, employment, sanctions and licence checks by country",4,C21
+Hire and Comply,Identity and right-to-work verification,Prove identity and the right to work before start,4,C22
+Hire and Comply,Medical fitness and safety clearance,"Occupational health, site access and security clearance gates",4,C23
+Hire and Comply,"Offer, contract and e-signature","Generate, sign and archive offers and contracts",4,"C24, C25"
+Onboard and Transition,Pre-boarding and onboarding,"Tasks, documents and welcome before and after day one",4,"C26, C43"
+Onboard and Transition,Hire hand-off to employee record,Create the employee in the HR core with clean data,5,"C42, C32"
+Onboard and Transition,Crossboarding and offboarding,"Moves, exits, alumni and rehire eligibility",3,"C27, C28"
+Experience and Insight,Candidate and manager experience measurement,Pulse surveys and sentiment at key moments,3,C29
+Experience and Insight,Recruiting analytics,"Funnel, speed, quality, cost and source reporting",4,"C36, C37"
+Experience and Insight,"Diversity, equity and inclusion insight",Inclusive job language and funnel parity monitoring,3,C30
+"Governance, AI and Platform",Responsible AI governance,"Register, test, monitor and evidence every AI use",4,"C20, C19"
+"Governance, AI and Platform","Privacy, consent and retention","Lawful basis, consent, subject requests, deletion",5,C40
+"Governance, AI and Platform",Partner and integration management,"Onboard, monitor and exit partners safely",4,"C32, C33, C35"
+"Governance, AI and Platform",Identity and access,"SSO, provisioning, partner credentials",5,"C38, C39"
+"Governance, AI and Platform",Security monitoring and audit,"Logging, detection and evidence for audit",4,C41

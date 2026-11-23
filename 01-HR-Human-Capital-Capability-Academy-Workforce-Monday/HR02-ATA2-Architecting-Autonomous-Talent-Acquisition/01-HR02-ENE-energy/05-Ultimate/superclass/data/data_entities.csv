@@ -1,0 +1,22 @@
+Entity,Description,Data domain,Data owner (role),Steward (role),System of record,Classification,Retention
+Position and headcount approval,Approved seat and budget that justifies a requisition,Workforce,Head of Workforce Planning,Position data steward,HR core (C42),Confidential,Life of position + [7] years
+Requisition,"A hiring need with template, team, pay range and status",Requisition,Head of Global TA,TA operations lead,Hiring hub (C05),Confidential,[7] years after close
+Job posting,Public advertisement and its channel tracking,Requisition,Head of Global TA,Employer brand lead,"Hiring hub (C05, C11)",Public,[3] years after close
+Candidate,"Person in the funnel, internal or external",Candidate,Head of Global TA,Candidate data steward,Hiring hub (C06),Restricted,"Per country, default [12] months after last activity"
+Application,A candidate's application to one requisition,Candidate,Head of Global TA,TA operations lead,Hiring hub (C06),Restricted,"Per country, default [12] months after decision"
+Talent pool membership,Candidate's membership of a pool with consent and source,Candidate,Head of Sourcing,Sourcing lead,Hiring hub CRM (C07),Restricted,Until consent withdrawn or [24] months inactive
+Interview and scorecard,"Interview event, panel, ratings and comments",Selection,Head of Global TA,TA operations lead,Hiring hub (C08),Restricted,[12] months after decision
+Assessment order and result,"Partner assessment package, status, score band and report link",Selection,Head of Assessment,Assessment steward,Hiring hub (C06); report at partner (C16),Restricted,[12] months after decision
+AI interview record,"Invitation, recording link, transcript reference, advisory scores",Selection,Head of Assessment,AI governance lead,Interview partner (C17); summary in hub,Restricted,[6] months unless law requires longer
+AI decision-support event,"Match or screen advice, reasons, model version, human decision",Governance,AI governance lead,AI governance lead,Responsible-AI control plane (C20),Restricted,[3] years for audit
+Background check order and outcome,"Package, consent reference, status, outcome and date (no raw record detail)",Compliance,Head of TA Operations,Compliance steward,Check provider (C21); outcome in hub,Restricted,Outcome [7] years; provider retains per law
+Identity and right-to-work record,"Verification outcome, document type, date, token",Compliance,Head of HR Operations,Compliance steward,Verification provider (C22),Restricted,Per country statute
+Clearance status,"Medical fitness flag, security clearance flag and expiry",Compliance,Head of HSE,HSE data steward,HSE or provider system (C23); flag in hub,Restricted,Per HSE policy
+Offer,"Terms, band check, approvals and signature state",Offer,Head of Global TA,Compensation steward,Hiring hub (C09),Confidential,[7] years
+Signed offer and contract,Signed document and audit certificate,Offer,Head of HR Operations,Document steward,"E-signature and HR core (C24, C25)",Confidential,Employment term + [7] years
+Hire event and employee stub,Data passed to create the employee record,Hire,Head of HR Operations,HR data steward,Integration hub (C32) to HR core (C42),Restricted,Event log [13] months; employee per HR policy
+Consent record,"What the person agreed to, when, for which purpose and region",Privacy,Data Protection Officer,Privacy steward,Consent manager (C40),Restricted,[7] years or per law
+Candidate survey response,Satisfaction scores and comments,Insight,Head of TA Operations,Experience analyst,Survey platform (C29); aggregates in lake,Confidential,[24] months; comments anonymised
+Partner registry,"Approved partners, categories, regions, credentials reference, contract dates",Platform,Head of Enterprise Architecture,Partner manager,Integration hub (C32),Internal,Life of contract + [3] years
+Candidate ID cross-reference,"Links hub candidate ID, employee ID and partner references",Platform,Head of Enterprise Architecture,Master data steward,Cross-reference service (C35),Restricted,As the longest linked record
+Audit event,"Who did what, when, to which record",Platform,CISO,Security operations lead,Security monitoring (C41),Confidential,[13] months online; [7] years archive

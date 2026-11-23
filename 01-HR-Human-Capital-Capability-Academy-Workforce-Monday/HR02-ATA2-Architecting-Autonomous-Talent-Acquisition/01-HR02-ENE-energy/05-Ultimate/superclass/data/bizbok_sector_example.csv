@@ -1,0 +1,35 @@
+Element,Level,Item,OmniVerse example (energy company hiring),Template register
+Strategy,L1,Vision and mission,"Reliable, affordable, lower-carbon energy for customers; attract and grow the people who deliver it","Objectives, vision"
+Strategy,L2,Strategic objectives,Hire the scarce skills for the energy transition; hire safely; cut time to productivity,Objectives register
+Strategy,L3,Courses of action,One hiring hub; partner ecosystem behind a capability interface; responsible AI; regional waves,Work packages
+Capability,L1,Plan the workforce,Demand forecasting; headcount control; skills planning,Capabilities register
+Capability,L1,Attract and source,Employer brand; job distribution; sourcing; talent communities,Capabilities register
+Capability,L1,Assess and select,Screening; assessment; interviewing; offers,Capabilities register
+Capability,L1,Hire and comply,Checks; identity; right to work; clearance; contracts,Capabilities register
+Capability,L1,Govern and enable,Privacy; responsible AI; partner management; security,Capabilities register
+Capability,L2,Background and credential screening (under Hire and comply),Order by country package; track; adjudicate; notify,Capabilities register
+Capability,L3,Order a check,Choose package; confirm consent; send order; receive outcome,Interfaces register
+Organization,L1,Executive and governance,"CPO, steering committee, architecture board","Stakeholders, RACI"
+Organization,L1,Operating units,"Global TA, regional TA, HR operations, HSE, legal and privacy, IT","Stakeholders, RACI"
+Organization,L1,External parties,"Candidates, partners, regulators, works councils, universities",Stakeholders
+Organization,L2,Roles on a hire,"Hiring manager, recruiter, coordinator, HR business partner, HSE coordinator",RACI
+Value,L1,Bring in the right people safely,"Plan, attract, select, verify, onboard",Value stream register
+Value,L1,Keep skills current,"Internal mobility, referral, alumni",Value stream register
+Value,L2,Hire to day one,Plan; advertise; source; screen; assess; offer; verify; pre-board; start,Value stream register
+Value,L3,Stakeholder value per stage,"Manager gets a shortlist; candidate gets a fast, fair answer; HSE gets evidence",Value stream register
+Information,L1,Core business objects,"Position, requisition, candidate, application, offer, check outcome, employee",Data entities
+Information,L2,Attributes and relations,An application belongs to a candidate and a requisition; an offer belongs to an application,Data dictionary
+Information,L3,Quality rules,"Every application has a source, a stage and a consent record","Data dictionary, DMBOK"
+Initiative,L1,Programmes,"Hiring hub, partner onboarding, data and analytics",Work packages
+Initiative,L2,Initiative to capability impact,"Hiring hub raises Attract, Assess and Select maturity; partner onboarding raises Hire and comply",Gap analysis
+Initiative,L3,Roadmap waves,Wave 1 core; wave 2 select and comply; wave 3 intelligence; wave 4 scale,Roadmap
+Product,L1,Services offered,"Career site, chat assistant, recruiter workspace, manager app, offer and pre-boarding",Capabilities (business services)
+Product,L2,Service variants,"Volume hiring, specialist hiring, graduate hiring, executive hiring, contractor hiring",Add a products register
+Stakeholder,L1,Groups,"Candidates, employees, managers, regulators, partners, works councils",Stakeholders register
+Stakeholder,L2,Interests and influence,Candidates: speed and fairness; regulators: lawful AI and data; HSE: evidence,Stakeholders register
+Policy,L1,Policy areas,"Safety, equal opportunity, data protection, AI use, procurement","Business rules, principles"
+Policy,L2,Rules,No auto-reject on an AI score; checks start after an accepted offer,Business rules
+Policy,L3,Rule to capability link,The human-decision rule governs Screen and Select,Traceability
+Metrics,L1,Outcome measures,Time to hire; offer acceptance; quality of hire; cost per hire,KPI register
+Metrics,L2,Capability measures,Check turnaround; integration success; human-review coverage,KPI register
+Metrics,L3,Data measures,Share of hires created without correction,KPI register

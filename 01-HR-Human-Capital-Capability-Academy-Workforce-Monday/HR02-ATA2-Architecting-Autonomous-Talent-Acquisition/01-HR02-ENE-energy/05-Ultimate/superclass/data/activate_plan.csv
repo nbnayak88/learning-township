@@ -1,0 +1,35 @@
+Day,Phase,Task ID,Activity,Activity type,Key deliverable,Architecture link (OmniVerse)
+Day 01,1 Discover,01.01,"Define implementation strategy, scope and phasing (Phase 1 recruiting, Phase 2 onboarding)",Governance,"Scope statement, phased roadmap, effort estimate",WP-01; partner long list from PC-01 to PC-28
+Day 01,1 Discover,01.02,OCM overview for talent acquisition transformation,Change Management,"OCM approach, TA leadership briefing",Stakeholder register
+Day 02,2 Prepare,02.01-02.03,"Project kickoff, tenant access, Cloud ALM set-up",Governance,"Cloud ALM live, sandbox provisioned, authorisations confirmed","WP-04; C32, C38, C39 foundations"
+Day 02,2 Prepare,02.04-02.07,Sandbox access and team self-enablement; fit-to-standard training,Enablement,Admin access live; academy units 1-2 complete,"C03, C05"
+Day 03,2 Prepare,02.08-02.10,"Project charter, governance, standards, infrastructure",Governance,"Charter, governance model, schedule and budget","RACI; ADR-14, ADR-15"
+Day 03,2 Prepare,02.11-02.13,"Kickoff workshop, OCM concept, change plan v1",Change Management,Workshop delivered; change plan for recruiters and managers,Stakeholder engagement
+Day 04,2 Prepare,02.14-02.17,"As-is requisition-to-hire assessment, stakeholder and communications analysis",Change Management,"As-is questionnaire, stakeholder map, communication plan",Gap analysis
+Day 04,2 Prepare,02.18-02.21,"Fit-to-standard prep, candidate data migration plan, enablement strategy",Data Migration,Workshop schedule; job-board and partner integration list; migration approach,"partner_categories; TR-001, TR-002"
+Day 05,2 Prepare,02.22-02.23,Enablement tooling and Prepare sign-off,Governance,Quality gate passed; sign-off,Gate 1
+Day 05,3 Explore,03.01-03.03,"Explore kickoff, monitoring, adoption strategy",Project Management,Adoption metrics defined,KPI K-06
+Day 06,3 Explore,03.04-03.05,Fit-to-standard workshops: requisition to offer,Configuration,"Process flows, template and approval values, configuration backlog","FR-001, FR-003, FR-009"
+Day 06,3 Explore,03.06-03.08,"Integration design, recruiting analytics planning, roles design",Integration,"Job board, assessment, background check and e-signature integration design; analytics scope; role model","IF-06, IF-11, IF-19, IF-23; C37, C38"
+Day 07,3 Explore,03.09-03.12,"Learning needs, candidate data load prep, test planning, Explore sign-off",Testing,"Curriculum, extract templates, test strategy, Explore sign-off",Gate 2
+Day 08,4 Realize,04.01-04.03,"Realize kickoff, monitoring, change impact analysis",Change Management,Impact workshops and impact log,TR-003
+Day 08,4 Realize,04.04-04.06,Company administration settings baseline,Configuration,"Company, offices, departments, brands, languages, users in sandbox",C05
+Day 09,4 Realize,04.07-04.09,Users and roles for recruiting,Configuration,Default and custom system roles; access model,"IF-04, IF-05; NF-004"
+Day 09,4 Realize,04.10-04.12,"Job configuration: templates, fields, approvals",Configuration,"Job templates, custom fields, approval workflows","FR-001; BRL-01, BRL-02"
+Day 10,4 Realize,04.13-04.17,Job advertising and sourcing configuration,Integration,"Career site posting, board distribution, referral tracking","IF-06, IF-07; FR-002"
+Day 10,4 Realize,04.18-04.20,Candidate experience configuration,Governance,"Application experience, screening questions, branded journey",FR-003; NF-008
+Day 11,4 Realize,04.21.01-04,Solution configuration iteration 1: interviews,Configuration,"Interview types, scorecards, interviewers, self-scheduling","FR-008; C08, C18"
+Day 12,4 Realize,04.21.05-09,Solution configuration iteration 2: hiring process and offers,Configuration,"Hiring steps, sub-statuses, offer templates, approvals, e-signature","FR-009; IF-23, IF-24"
+Day 13,4 Realize,04.22-04.24,"Communications, notifications and release-cycle prep",Configuration,"Email templates, notification rules, delayed send, bulk settings",C10
+Day 13,4 Realize,04.25,"Data migration into sandbox: populate, execute, validate",Data Migration,Legacy extract loaded; validation report,TR-001; DQ-02
+Day 14,4 Realize,04.26-04.27,Solution walkthrough and analytics configuration,Testing,Walkthrough with TA leadership; dashboards and standard reports,C37
+Day 14,4 Realize,04.28-04.30,"AI companion enablement and guardrails (chat, match)",Configuration,Chat and match enabled; responsible-AI guardrails documented,"AI-01 to AI-08; C19, C20"
+Day 15,4 Realize,04.31-04.33,Talent CRM configuration,Configuration,"Access, pools, nurture campaigns",C07; IF-10
+Day 15,4 Realize,04.34-04.35,Global compliance configuration,Security & IAM,"Consent, retention, equal-opportunity settings","C40; BRL-03, BRL-19, BRL-20"
+Day 16,4 Realize,04.36-04.37,Test preparation and migration dress rehearsal,Testing,Test scripts and plans; dress rehearsal; final DQ assessment,validate-test-script-pack; DQ pack
+Day 17,4 Realize,04.38,"End-to-end test execution: unit, integration, UAT",Testing,"Requisition to hire scenarios; integration tests for boards, e-signature and checks; defect log","IF-06, IF-19, IF-23; contract tests"
+Day 18,4 Realize,04.39-04.41,"Enablement delivery, support hand-over plan, cutover preparation",Enablement,Role-based enablement; support processes; cutover plan including open requisition strategy,"TR-003, TR-005"
+Day 18,4 Realize,04.42-04.43,Production analytics and Realize sign-off,Analytics,Production dashboards; quality gate; sign-off,Gate 3
+Day 19,5 Deploy,05.01-05.02,"Deploy kickoff, final checks, production cutover",Project Management,Open requisitions migrated or frozen; career site live; posting redirected,WP-08; TR-005
+Day 20,5 Deploy,05.03-05.05,"Hypercare, hand-over and Deploy sign-off",Governance,Hypercare running; operations hand-over; Deploy gate,TR-004; Gate 4
+Day 21,6 Run,06.01-06.03,"Run: operations, release management, adoption",Governance,Operations active; release cycles managed; adoption tracking,WP-17; K-06

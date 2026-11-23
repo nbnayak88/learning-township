@@ -1,0 +1,12 @@
+ADM phase,Chapters,Enterprise,Business,Data,Application,Technology,AI,Security,UI/UX,Infrastructure,Integration,Domain,Industry
+Preliminary,"04, 05",P,·,·,·,·,·,S,·,·,·,·,P
+A Architecture Vision,06,P,P,·,·,·,·,S,·,·,·,·,P
+B Business Architecture,"09, 10",·,P,·,·,·,P,S,P,·,·,P,P
+C Data,11,·,·,P,·,·,P,S,P,·,P,P,·
+C Application,12,·,·,·,P,·,P,S,P,·,P,P,·
+D Technology,13,·,·,·,·,P,P,S,·,P,P,·,·
+E Opportunities and Solutions,14,P,·,·,P,P,·,S,·,P,·,·,·
+F Migration Planning,15,P,·,·,·,·,·,S,·,·,·,·,·
+G Implementation Governance,16,P,·,·,·,·,P,S,·,P,·,·,·
+H Architecture Change Management,16,P,·,·,·,·,·,S,·,·,·,·,·
+Requirements Management,"07, 08",·,P,P,·,·,·,S,P,·,·,·,·

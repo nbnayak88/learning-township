@@ -1,0 +1,122 @@
+Ref,Kind,Item,Enterprise,Business,Data,Application,Technology,AI,Security,UI/UX,Infrastructure,Integration,Domain,Industry
+3.1,Core concept,What is the TOGAF Standard?,P,S,S,S,S,,,,,,,
+3.2,Core concept,What is Architecture in the Context of the TOGAF Standard?,P,S,S,S,S,,,,,S,,
+3.3,Core concept,What Kind of Architecture Does the TOGAF Standard Deal With?,P,S,S,S,S,,,,,,,
+3.4,Core concept,Architecture Development Method,P,S,S,S,S,,,,,S,,
+3.5,Core concept,Enterprise Architecture Services,P,S,,,,,,,,,,S
+3.5.1,Core concept,Enterprise Support Services,P,,,,S,,,,,,,S
+3.5.2,Core concept,Design Support Services,,,,P,S,,,S,,S,,
+3.5.3,Core concept,Development Support Services,,,,P,S,,S,,,S,,
+3.5.4,Core concept,Requirements Elicitation and Understanding Services,,P,,,,,,S,,,S,
+3.5.5,Core concept,Architecture Planning Services,P,S,,,,,,,S,,,
+3.5.6,Core concept,Enterprise Architecture Practice Development Support Services,P,,,,,,,,,,,S
+3.6,Core concept,"Deliverables, Artifacts, and Building Blocks",P,,S,S,,,,,,,,
+3.7,Core concept,Architecture Abstraction,P,,S,S,S,,,,,,,
+3.7.1,Core concept,Contextual Abstraction Level,P,S,,,,,,,,,,S
+3.7.2,Core concept,Conceptual Abstraction Level,,P,S,,,,,,,,S,
+3.7.3,Core concept,Logical Abstraction Level,,,S,P,,,,,,S,,
+3.7.4,Core concept,Physical Abstraction Level,,,,,P,,,,S,S,,
+3.8,Core concept,Architecture Principles,P,S,S,S,S,,S,,,,,
+3.9,Core concept,Interoperability,,,S,S,,,,,,P,,S
+3.10,Core concept,Enterprise Continuum,P,,,S,,,,,,,,S
+3.11,Core concept,TOGAF Content Framework and Enterprise Metamodel,P,,S,,,,,,,,,
+3.11.1,Core concept,Overview (Content Framework and Metamodel),P,,S,,,,,,,,,
+3.11.2,Core concept,Content Framework,P,S,S,S,S,,,,,,,
+3.11.3,Core concept,Enterprise Metamodel,S,S,P,,,,,,,,,
+3.11.4,Core concept,Developing the Enterprise Metamodel,S,,P,,,,,,,,,
+3.12,Core concept,Establishing and Maintaining an Enterprise Architecture Capability,P,,,,,,,,,,,S
+3.13,Core concept,Establishing the Architecture Capability as an Operational Entity,P,,,,,,,,S,,,
+3.14,Core concept,Using the TOGAF Standard with Other Frameworks,P,S,S,,,,,,,,,
+3.15,Core concept,Using the TOGAF Framework with Different Architecture Styles,,,,P,S,,,,,S,,
+3.16,Core concept,Architecture Views and Viewpoints,P,S,,,,,,S,,,,
+3.17,Core concept,Enterprise Agility,P,,,S,,,,,S,,,
+3.18,Core concept,Risk Management,S,S,,,,S,P,,,,,
+4.1,Term,Abstraction,P,,S,S,S,,,,,,,
+4.2,Term,Actor,,P,,S,,,,S,,,,
+4.3,Term,Application Architecture,,,S,P,,,,,,S,,
+4.4,Term,Application Component,,,,P,,,,,,S,,
+4.5,Term,Application Platform,,,,S,P,,,,S,,,
+4.6,Term,Application Service,,,,P,,,,,,S,,
+4.7,Term,Architectural Style,,,,P,S,,,,,S,,
+4.8,Term,Architecture,P,S,S,S,S,,,,,,,
+4.9,Term,Architecture Building Block (ABB),S,,,P,S,,,,,,,
+4.10,Term,Architecture Continuum,P,,,,,,,,,,,S
+4.11,Term,Architecture Development Method (ADM),P,S,S,S,S,,,,,,,
+4.12,Term,Architecture Domain,P,S,S,S,S,,,,,,,
+4.13,Term,Architecture Framework,P,,,,,,,,,,,S
+4.14,Term,Architecture Governance,P,,,,,S,S,,,,,
+4.15,Term,Architecture Landscape,P,,,S,S,,,,,,,
+4.16,Term,Architecture Level,P,S,,,,,,,,,,
+4.17,Term,Architecture Model,P,S,S,S,,,,,,,,
+4.18,Term,Architecture Partition,P,,,,,,,,,,S,S
+4.19,Term,Architecture Principle,P,S,S,S,S,S,S,,,,,
+4.20,Term,Architecture View,P,,,,,,,S,,,,
+4.21,Term,Architecture Viewpoint,P,,,,,,,S,,,,
+4.22,Term,Architecture Vision,P,S,,,,,,,,,,S
+4.23,Term,Artifact,P,S,S,S,,,,,,,,
+4.24,Term,Baseline,S,P,,,S,,,,,,,
+4.25,Term,Boundaryless Information Flow,,,S,,,,S,,,P,,S
+4.26,Term,Building Block,,,,P,S,,,,,,,
+4.27,Term,Business Architecture,,P,,,,,,,,,S,S
+4.28,Term,Business Capability,S,P,,,,,,,,,S,
+4.29,Term,Business Function,,P,,,,,,,,,S,
+4.30,Term,Business Governance,S,P,,,,,S,,,,,
+4.31,Term,Business Model,S,P,,,,,,,,,,S
+4.32,Term,Business Service,,P,,S,,,,,,,S,
+4.33,Term,Capability,P,S,,,,,,,,,,
+4.34,Term,Capability Architecture,P,S,,S,,,,,,,,
+4.35,Term,Capability Increment,P,S,,,,,,,,,,
+4.36,Term,Communications and Stakeholder Management,S,P,,,,,,S,,,,
+4.37,Term,Concern,S,S,,,,,,P,,,,
+4.38,Term,Course of Action,P,S,,,,,,,,,,
+4.39,Term,Data Architecture,,,P,,,S,S,,,,S,
+4.40,Term,Deliverable,P,S,,,,,,,,,,
+4.41,Term,Digital Architecture,P,,,,,S,,S,,S,,
+4.42,Term,EA Landscape,P,S,,S,S,,,,,,,S
+4.43,Term,Enterprise,P,,,,,,,,,,,S
+4.44,Term,Enterprise Architecture Service,P,S,,,,,,,,,,
+4.45,Term,Enterprise Continuum,P,,,,,,,,,,,S
+4.46,Term,Foundation Architecture,P,,,,S,,,,,,,
+4.47,Term,Framework,P,,,,,,,,,,,S
+4.48,Term,Gap,P,S,,S,,,,,,,,
+4.49,Term,Governance,P,,,,,,S,,,,,
+4.50,Term,Information,,S,P,,,,,,,,,
+4.51,Term,Information Technology (IT),,,,,P,,,,S,,,
+4.52,Term,Interoperability,,,S,,,,,,,P,,S
+4.53,Term,Logical,,,S,P,S,,,,,,,
+4.54,Term,Metadata,,,P,,,S,S,,,,,
+4.55,Term,Metamodel,S,,P,,,,,,,,,
+4.56,Term,Method,P,S,,,,,,,,,,
+4.57,Term,Modeling,P,S,S,S,,,,,,,,
+4.58,Term,Model Kind,P,,S,,,,,,,,,
+4.59,Term,Objective,S,P,,,,,,,,,,
+4.60,Term,Pattern,,,,P,S,S,,,,S,,
+4.61,Term,Physical,,,,,S,,,,P,,,
+4.62,Term,Principle,P,S,S,S,S,,,,,,,
+4.63,Term,Product,,,,S,P,,,,,,,
+4.64,Term,Reference Model (RM),S,,,,,,,,,,S,P
+4.65,Term,Requirement,,P,,,,,,S,,,S,
+4.66,Term,Roadmap,P,S,,,,,,,,,,
+4.67,Term,Role,S,P,,,,,S,,,,,
+4.68,Term,Segment Architecture,P,S,,,,,,,,,,
+4.69,Term,Service,,S,,P,,,,,,S,,
+4.70,Term,Service Orientation,,,,P,,,,,,S,,
+4.71,Term,Service-Oriented Architecture (SOA),,,,S,,,,,,P,,
+4.72,Term,Service Portfolio,S,,,P,,,,,,S,,
+4.73,Term,Solution Architecture,,,,P,S,,,,,S,,
+4.74,Term,Solution Building Block (SBB),,,,P,S,,,,,,,
+4.75,Term,Solutions Continuum,,,,P,S,,,,,,,
+4.76,Term,Stakeholder,S,P,,,,,,S,,,,
+4.77,Term,Standards Library,,,,,P,,S,,,S,,
+4.78,Term,Strategic Architecture,P,,,,,,,,,,,S
+4.79,Term,Target Architecture,P,S,,S,,,,,,,,
+4.80,Term,Taxonomy of Architecture Views,P,,,,,,,S,,,,
+4.81,Term,Technology Architecture,,,,,P,,S,,S,,,
+4.82,Term,Technology Component,,,,,P,,,,S,,,
+4.83,Term,Technology Service,,,,,P,,S,,,S,,
+4.84,Term,Transition Architecture,P,,,,,,,,S,,,
+4.85,Term,Value Stream,,S,,,,,,,,,P,S
+4.86,Term,View,P,,,,,,,S,,,,
+4.87,Term,Viewpoint,P,,,,,,,S,,,,
+4.88,Term,Viewpoint Library,P,,,,,,,S,,,,
+4.89,Term,Work Package,P,S,,S,,,,,,,,

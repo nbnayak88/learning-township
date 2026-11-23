@@ -1,0 +1,10 @@
+Stage,Trigger / entry,Key activities,Stakeholders,Value item,Exit criterion
+1 Plan and approve,Workforce plan or backfill need,Confirm position and budget; open requisition; choose template and hiring team,"Hiring manager, finance, TA partner","Approved, funded requisition",Requisition approved and linked to a position
+2 Attract and advertise,Requisition approved,Write inclusive job ad; set pay range; post to career site and selected boards; start campaigns,"Recruiter, marketing, job-board partners",Right audience sees the job,Job live on selected channels
+3 Source and engage,Job live,"Search talent pools, alumni and referrals; chat with prospects; nurture","Sourcer, referrers, candidates",Qualified pipeline,Pipeline target met
+4 Apply and screen,Candidate applies or is added,Capture consent; parse; knock-out questions; match advice; recruiter review,"Candidate, recruiter","Fair, fast first decision",Screen decision recorded with reason
+5 Assess and interview,Candidate shortlisted,Order assessments; AI or live interviews; scorecards; calibration,"Hiring manager, interview panel, assessment and interview partners",Evidence-based comparison,All required scorecards and assessment results in
+6 Select and offer,Panel decision,Check pay band; approve; generate offer; e-sign,"Hiring manager, compensation, HR business partner",Accepted offer,Offer signed
+7 Verify and clear,Offer accepted,"Background, identity, right to work, medical fitness, clearance (by country and role)","Candidate, check providers, HSE, security",Safe and compliant hire,All mandatory checks cleared or exception approved
+8 Pre-board and hire,Checks cleared,Collect documents; create the employee record; assign tasks; provision access,"HR operations, IT, manager",Ready employee record,Employee ID issued and start date confirmed
+9 Day one and feedback,Start date,Welcome; hand over to onboarding and learning; survey; close requisition; feed analytics,"New hire, manager, TA ops",Productive start and learning loop,First-week survey done; requisition closed; data in analytics

@@ -1,0 +1,26 @@
+ID,Rule,Type,Source,Enforced by
+BRL-01,A requisition cannot be opened without an approved position or an approved exception.,Constraint,Policy,C05
+BRL-02,Pay range on a job ad and offer must sit inside the approved band for grade and country.,Validation,Policy,"C09, C13"
+BRL-03,An application is accepted only after the required privacy notice is shown and consent is recorded for the country.,Compliance,Regulation,"C01, C40"
+BRL-04,No candidate is rejected or advanced on an AI score alone; a named person records the decision and reason.,AI control,"Policy, regulation","C06, C20"
+BRL-05,"Every AI-assisted step records model, version, inputs used and the human decision.",AI control,Policy,"C19, C20"
+BRL-06,A candidate may ask for a human review of any automated step; the request is answered within [10] working days.,AI control,Regulation,"C20, C40"
+BRL-07,Assessments must be job-related and validated for the role family; unvalidated tests need written approval.,Constraint,Policy,C16
+BRL-08,Assessment and interview accommodations are offered to every candidate and logged.,Compliance,Regulation,"C16, C17"
+BRL-09,"Interview recordings and transcripts are kept [6] months unless a longer period is required by law, then deleted.",Retention,"Policy, regulation","C17, C40"
+BRL-10,"Background checks start only after an accepted offer and signed consent, unless a role-specific law requires earlier.",Workflow,"Policy, regulation","C21, C06"
+BRL-11,"The hiring system stores check outcome and date, never raw criminal-record detail.",Data minimisation,Policy,"C21, C35"
+BRL-12,Adverse decisions based on a check follow the local pre-adverse and adverse notice steps.,Compliance,Regulation,"C21, C10"
+BRL-13,Identity and right-to-work must be verified before the start date; no access is provisioned before.,Constraint,Regulation,"C22, C43"
+BRL-14,Safety-critical roles need a fit-for-role flag and safety induction booking before start.,Constraint,HSE policy,"C23, C26"
+BRL-15,Sanctions and conflict-of-interest screening applies to all senior and procurement-facing roles.,Compliance,Regulation,C21
+BRL-16,An offer is released only after all approval levels are complete and pay band is validated.,Workflow,Policy,C09
+BRL-17,Signed offers are archived with the audit certificate and linked to the candidate record.,Retention,Policy,"C24, C25"
+BRL-18,The employee record is created only when mandatory checks are cleared or an exception is approved by the named authority.,Constraint,Policy,"C42, C32"
+BRL-19,Unsuccessful candidate data is anonymised after [12] months by default; shorter or longer by country table.,Retention,Regulation,C40
+BRL-20,Candidate data is processed only in approved regions; transfers need a recorded legal basis.,Compliance,Regulation,"C40, C32"
+BRL-21,Each partner has scoped credentials; credentials rotate at least every [90] days.,Security,Policy,"C39, C38"
+BRL-22,Webhook calls are verified by signature and are idempotent; failed calls retry then go to a dead-letter queue.,Integration,Standard,"C33, C32"
+BRL-23,"Internal candidates are shown open roles at the same time as, or before, external posting where policy requires.",Workflow,Policy,"C27, C11"
+BRL-24,Job ads are checked for inclusive language before publication.,Validation,Policy,"C30, C05"
+BRL-25,"A partner cannot go live until contract tests, security review and a data-return clause are complete.",Constraint,Policy,C32

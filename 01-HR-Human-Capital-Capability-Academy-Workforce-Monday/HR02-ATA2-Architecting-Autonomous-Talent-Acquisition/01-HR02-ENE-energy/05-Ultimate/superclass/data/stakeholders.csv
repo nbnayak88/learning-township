@@ -1,0 +1,15 @@
+Stakeholder,Role in change,Concern (TOGAF),Power,Interest,Engagement approach
+Chief People Officer (sponsor),Executive sponsor,Hiring speed and quality at global scale; one talent story for the board,High,High,Steering committee; quarterly benefit review
+Head of Global Talent Acquisition,Business owner,"One process, fewer tools, measurable time-to-hire",High,High,"Co-design; approves scope, partner list and priorities"
+Regional TA leads (14 countries),Process owners and users,"Local job boards, local checks and language kept without breaking the global model",Medium,High,Working group; wave-based rollout; local variants by configuration
+Recruiters and sourcers,Primary users,"Less admin, good candidate matches, no re-keying",Low,High,Champions; sandbox practice; role-based enablement
+Hiring managers and interviewers,Users,"Simple requisition, quick shortlist, easy interview feedback",Medium,High,Short training; mobile and chat-based approvals
+Candidates (external and internal),Customers of the process,"Fast, fair, mobile-friendly, transparent application",Low,High,Candidate-experience surveys; accessibility testing
+HR Operations and Payroll,Downstream consumers,"Clean hire data in the employee system, no duplicate entry",Medium,High,Joint design of the hire hand-off; UAT
+"HSE, Security and Occupational Health",Compliance owners,"Medical fitness, safety clearance and sanctions screening done before day one",High,Medium,Gate design; evidence rules; audit sampling
+"Legal, Privacy and Works Councils",Control owners,"Lawful basis, consent, retention, AI use in hiring, works-council agreement",High,High,Early review of AI and screening design; DPIA
+Enterprise Architecture Office,Design authority,"Standards, reuse, vendor neutrality, exit readiness",High,High,Architecture board; ADR approvals
+IT Security and Identity,Control owners,"SSO, least privilege, partner credentials, logging",High,Medium,Security design review; penetration test
+Procurement and Vendor Management,Commercial owner,"Fair vendor selection, contracts with data-exit and audit rights",Medium,Medium,Selection scorecard; contract checklist
+"Partner vendors (assessment, interview, check, job board)",Service providers,"Clear API contract, volumes, support model",Low,High,Partner onboarding playbook; joint test plans
+Implementation partner and SmartRecruiters team,Delivery,"Clear scope, fit-to-standard discipline, access to sandbox",Medium,High,SAP Activate cadence; weekly governance

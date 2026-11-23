@@ -1,0 +1,97 @@
+Stream,Lens (TOGAF concept),How it applies
+Enterprise,Principle,Every change traces to a strategic objective and a capability.
+Enterprise,Building block,"Capability, work package, transition architecture."
+Enterprise,View and viewpoint,"Executive view of vision, roadmap and benefits."
+Enterprise,Deliverable,"Vision, principles catalogue, roadmap, governance model."
+Enterprise,Standard to follow,"TOGAF ADM, enterprise architecture repository rules."
+Enterprise,Governance gate,"G0 mandate, G1 vision, G8 migration, G9 benefits review."
+Enterprise,Typical risk,Architecture drifts from strategy; shelfware.
+Enterprise,Measure,Share of projects with an architecture review; benefits realised.
+Business,Principle,"Business need drives technology, never the reverse."
+Business,Building block,"Business capability, value-stream stage, process, rule."
+Business,View and viewpoint,"Business owner view: capability map, value stream, process."
+Business,Deliverable,"Business requirements, capability map, process catalogue, rules."
+Business,Standard to follow,BABOK v3 requirement classes; BPMN notation.
+Business,Governance gate,"G2 scope, G3 requirements baseline."
+Business,Typical risk,Unclear scope; unmanaged change requests.
+Business,Measure,Requirements traced and signed off; cycle-time reduction.
+Data,Principle,Data is a managed asset with an owner and a steward.
+Data,Building block,"Data entity, reference data set, quality rule."
+Data,View and viewpoint,Data steward view: dictionary and quality dashboard.
+Data,Deliverable,"Conceptual and logical model, dictionary, DQ rules, lifecycle."
+Data,Standard to follow,DAMA-DMBOK2 knowledge areas; data classification scheme.
+Data,Governance gate,G4 data model approved; DQ threshold met before go-live.
+Data,Typical risk,Poor quality data; unclear ownership.
+Data,Measure,DQ score by dimension; percentage of entities with an owner.
+Application,Principle,"Reuse before buy, buy before build."
+Application,Building block,Architecture building block and solution building block.
+Application,View and viewpoint,Developer and solution view: component and context diagrams.
+Application,Deliverable,"Component catalogue, solution design, application portfolio."
+Application,Standard to follow,Service-oriented design; API-first principle.
+Application,Governance gate,G5 design review; component compliance check.
+Application,Typical risk,Duplicate functionality; tight coupling.
+Application,Measure,Reuse rate; components with a named owner and lifecycle.
+Technology,Principle,Standard platforms over bespoke technology.
+Technology,Building block,Technology component and technology service.
+Technology,View and viewpoint,Platform engineer view: technology standards and decisions.
+Technology,Deliverable,"Technology standards, platform catalogue, decision records."
+Technology,Standard to follow,Approved technology standards list; lifecycle policy.
+Technology,Governance gate,G5 design review; exception approval by decision record.
+Technology,Typical risk,Technology lock-in; unsupported versions.
+Technology,Measure,Share of workloads on standard platforms; exceptions open.
+AI,Principle,Human accountability for AI outputs; no unexplained high-impact decisions.
+AI,Building block,"Model, feature set, prompt or evaluation set, human review step."
+AI,View and viewpoint,"Product owner and risk view: use cases, data readiness, oversight."
+AI,Deliverable,"AI use-case register, model lifecycle, evaluation report."
+AI,Standard to follow,Responsible-AI principles; model documentation; privacy law.
+AI,Governance gate,AI use-case approval before build; evaluation before release.
+AI,Typical risk,"Bias, drift, hallucination, data leakage."
+AI,Measure,Accuracy and fairness against threshold; human override rate.
+Security,Principle,Security and privacy by design; least privilege.
+Security,Building block,"Identity service, access control, encryption, audit log."
+Security,View and viewpoint,"Security officer view: classification, access matrix, controls."
+Security,Deliverable,"Classification scheme, access matrix, controls, security risks."
+Security,Standard to follow,Recognised security and privacy standards and local law.
+Security,Governance gate,Security review at design; penetration test before go-live.
+Security,Typical risk,Unauthorised access; data loss; weak audit trail.
+Security,Measure,Open findings by severity; access reviews completed on time.
+UI/UX,Principle,"People first: simple, accessible, consistent."
+UI/UX,Building block,"Design-system component, pattern, journey step."
+UI/UX,View and viewpoint,"User and service-owner view: personas, journeys, prototypes."
+UI/UX,Deliverable,"Personas, journey map, UX standards, accessibility criteria."
+UI/UX,Standard to follow,Accessibility guidelines (WCAG); design system.
+UI/UX,Governance gate,Usability test before release; accessibility check.
+UI/UX,Typical risk,Low adoption; exclusion of users; inconsistent screens.
+UI/UX,Measure,Task success rate; satisfaction score; accessibility defects.
+Infrastructure,Principle,Resilient by design; automate environments.
+Infrastructure,Building block,"Environment, network zone, compute and storage tier."
+Infrastructure,View and viewpoint,"Operations view: environments, capacity, availability, recovery."
+Infrastructure,Deliverable,"Hosting model, environment plan, capacity plan, DR plan."
+Infrastructure,Standard to follow,Availability and recovery targets; operations standards.
+Infrastructure,Governance gate,Operational readiness review before go-live.
+Infrastructure,Typical risk,Outage; capacity shortfall; unrecoverable data.
+Infrastructure,Measure,Availability; recovery time and point objectives met.
+Integration,Principle,"Integrate through governed interfaces, not point-to-point shortcuts."
+Integration,Building block,"Interface, API, event, message, adapter."
+Integration,View and viewpoint,Integration view: interface catalogue and flow diagram.
+Integration,Deliverable,"Interface catalogue, integration patterns, API standards."
+Integration,Standard to follow,API and message standards; exchange formats.
+Integration,Governance gate,G5 interface design review; contract test before release.
+Integration,Typical risk,Broken interfaces; undocumented dependencies.
+Integration,Measure,Interface availability; failed message rate; interfaces documented.
+Domain,Principle,Use the domain's own language and rules.
+Domain,Building block,"Domain rule, domain reference model, glossary term."
+Domain,View and viewpoint,"Subject-expert view: glossary, rules, domain reference."
+Domain,Deliverable,"Domain glossary, business rules, domain reference model."
+Domain,Standard to follow,"Domain standards and rules, for example network or regulatory practice."
+Domain,Governance gate,Subject-expert review of rules and vocabulary.
+Domain,Typical risk,Misread domain rules; inconsistent terms.
+Domain,Measure,Rules validated by experts; glossary coverage.
+Industry,Principle,"Comply with the sector and the country by configuration, not redesign."
+Industry,Building block,"Regulatory obligation, country profile, industry reference mapping."
+Industry,View and viewpoint,"Regulator and sector view: obligations, country configuration."
+Industry,Deliverable,"Regulatory obligations register, country profile, reference mapping."
+Industry,Standard to follow,Industry reference architectures; sector and local regulation.
+Industry,Governance gate,Compliance check before submission and before go-live.
+Industry,Typical risk,Regulatory change; local rules missed.
+Industry,Measure,Obligations mapped to controls; submissions on time.

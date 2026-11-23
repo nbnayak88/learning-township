@@ -1,0 +1,7 @@
+Phase,Purpose,TOGAF ADM link,Architecture deliverables,Partner work in this phase,Quality gate
+1 Discover,"Agree why, what and in what order","Preliminary, Phase A","Vision, principles, scope, partner category long list, business case",Confirm which of the 28 categories are in scope per wave,Scope and sponsor agreement
+2 Prepare,Mobilise the team and platforms,"Preliminary, Phase A, D","Charter, governance, tenant and sandbox, SSO, integration hub, vault, ALM",Request partner sandboxes; start security review and data-protection terms,Prepare sign-off
+3 Explore,Fit-to-standard and design,"Phases B, C, D","Process flows, requirements baseline, canonical model, interface design, role model, test strategy",Partner fit-gap against capability interface; shortlist with scorecard,Explore sign-off
+4 Realize,"Configure, build, migrate, test","Phases C, D, E, F","Configuration, adapters, mappings, migration, test packs, enablement",Build and contract-test each adapter; partner UAT; responsible-AI set-up,Realize sign-off
+5 Deploy,Cut over and stabilise,"Phases F, G","Cutover runbook, hypercare, go-live checklist, hand-over",Production credentials; monitoring; partner support contacts live,Go-live and hypercare exit
+6 Run,Operate and improve,"Phases G, H","Release management, partner reviews, exit tests, benefit tracking",Quarterly partner review; annual exit test; add or retire partners,Quarterly service and benefit review

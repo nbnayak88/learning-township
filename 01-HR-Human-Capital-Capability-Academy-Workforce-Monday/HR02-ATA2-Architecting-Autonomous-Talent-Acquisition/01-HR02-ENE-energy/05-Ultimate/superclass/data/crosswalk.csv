@@ -1,0 +1,12 @@
+Stage,TOGAF 10 ADM,BABOK v3 knowledge area,DMBOK2 area,Primary artefacts,Quality gate
+Plan,Preliminary,Business Analysis Planning and Monitoring,Data Governance,"Principles, BA approach, stakeholder plan, RACI",G0 Mobilise
+Vision,A Architecture Vision,Strategy Analysis,Data Governance,"Vision, BACCM, stakeholder map, value stream, risks",G1 Vision approved
+Elicit,B Business Architecture,Elicitation and Collaboration,Metadata,"Elicitation plan, interviews, workshops, glossary",G2 Requirements elicited
+Define,B Business Architecture,Requirements Analysis and Design Definition,Data Modeling & Design,"BRD, process model, business rules, user stories",G3 Requirements baseline
+Data,C Information Systems (Data),Requirements Analysis and Design Definition,Data Architecture; Reference & Master Data; Data Quality,"Entity catalogue, dictionary, DQ rules, classification",G4 Data design approved
+Application,C Information Systems (Application),Requirements Analysis and Design Definition,Data Integration & Interoperability,"Component and interface catalogues, HLDD",G5 HLDD approved
+Technology,D Technology Architecture,Requirements Analysis and Design Definition,Data Storage & Operations; Data Security,"Technology standards, security, resilience",G6 Security and tech approved
+Plan change,E Opportunities & Solutions; F Migration Planning,Strategy Analysis; Requirements Life Cycle Management,Data Integration,"Gap analysis, work packages, roadmap, transition requirements",G7 Roadmap approved
+Deliver,G Implementation Governance,Solution Evaluation,Data Quality; Data Security,"Compliance reviews, test results, acceptance",G8 Release readiness
+Improve,H Architecture Change Management,Solution Evaluation; Requirements Life Cycle Management,Data Governance; Metadata,"KPI reports, change requests, ADR updates",G9 Benefit review
+Control,Requirements Management,Requirements Life Cycle Management,Metadata Management,"Traceability matrix, change log",Continuous
