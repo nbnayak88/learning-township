@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lime 12 · Architecture Streams and Enterprise Domains</title>
+<style>
+@property --a1{syntax:'<color>';inherits:true;initial-value:#c8ff2e}
+@property --a2{syntax:'<color>';inherits:true;initial-value:#19e68c}
+:root{
+  --a1:#c8ff2e; --a2:#19e68c; --on:#04210f;
+  --bg:#020d07; --text:#eafff0; --muted:#9bbfa8;
+  --grad:linear-gradient(90deg,var(--a1),var(--a2));
+  --line:color-mix(in srgb,var(--a1) 24%,transparent);
+  --panel:color-mix(in srgb,var(--a2) 7%,rgba(3,14,9,.82));
+  --radius:14px; --side:272px; --rside:236px;
+  transition:--a1 .8s ease,--a2 .8s ease;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);
+  font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif}
+body{overflow:hidden}
+button{font:inherit;color:inherit}
+a{color:var(--a1)}
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;
+  background:
+   radial-gradient(900px 600px at 85% 8%,color-mix(in srgb,var(--a2) 30%,transparent),transparent 60%),
+   radial-gradient(800px 600px at 8% 100%,color-mix(in srgb,var(--a1) 18%,transparent),transparent 60%),
+   linear-gradient(160deg,color-mix(in srgb,var(--a2) 9%,#02100a) 0%,#02100a 55%,#010806 100%)}
+.shard{position:absolute;pointer-events:none}
+.s1{right:-8%;top:-10%;width:46%;height:120%;
+  background:linear-gradient(200deg,color-mix(in srgb,var(--a1) 32%,transparent),color-mix(in srgb,var(--a2) 4%,transparent) 70%);
+  clip-path:polygon(38% 0,100% 0,100% 100%,0 100%)}
+.s2{left:-10%;top:30%;width:70%;height:90%;
+  background:linear-gradient(20deg,color-mix(in srgb,var(--a1) 14%,transparent),transparent 70%);
+  clip-path:polygon(0 30%,100% 0,100% 100%,0 100%)}
+.grid{position:absolute;inset:0;opacity:.07;
+  background-image:linear-gradient(var(--a1) 1px,transparent 1px),linear-gradient(90deg,var(--a1) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(circle at 70% 20%,#000,transparent 70%)}
+
+header{position:fixed;top:0;left:0;right:0;height:72px;z-index:30;display:flex;align-items:center;gap:18px;padding:0 22px;
+  background:linear-gradient(180deg,rgba(2,13,7,.94),rgba(2,13,7,.6));backdrop-filter:blur(10px);
+  border-bottom:2px solid transparent;border-image:var(--grad) 1}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer;min-width:var(--side)}
+.brand svg{width:40px;height:40px}
+.brand b{font-size:15px;letter-spacing:.22em;text-transform:uppercase;display:block}
+.brand small{display:block;font-size:10px;letter-spacing:.16em;color:var(--a1);margin-top:3px;text-transform:uppercase}
+#crumbs{display:flex;gap:8px;flex-wrap:wrap;flex:1;min-width:0}
+.pill{font:600 12px/1 inherit;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(6,28,16,.55);cursor:pointer;transition:.25s;white-space:nowrap}
+.pill:hover{border-color:var(--a1);box-shadow:0 0 18px color-mix(in srgb,var(--a1) 30%,transparent)}
+.pill.on{background:var(--grad);color:var(--on);border-color:transparent;box-shadow:0 6px 24px color-mix(in srgb,var(--a2) 35%,transparent)}
+.hbtn{height:38px;min-width:38px;padding:0 10px;border-radius:10px;border:1px solid var(--line);background:rgba(6,28,16,.55);cursor:pointer;display:flex;gap:7px;align-items:center;justify-content:center;transition:.2s;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.hbtn:hover{border-color:var(--a1);color:var(--a1)}
+.hbtn.on{background:var(--grad);color:var(--on);border-color:transparent}
+.hbtn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#menuBtn{display:none}
+
+aside{position:fixed;top:72px;bottom:0;left:0;width:var(--side);z-index:25;overflow-y:auto;padding:18px 12px 24px;
+  background:rgba(2,13,7,.78);backdrop-filter:blur(10px);border-right:1px solid var(--line)}
+aside h6{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.16em;color:var(--muted);padding:4px 10px 10px;cursor:pointer;text-transform:uppercase}
+.sl{line-height:1.25;display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:10px 12px;border-radius:10px;border:1px solid transparent;background:none;cursor:pointer;
+  color:var(--muted);font-size:14.5px;transition:.2s;margin:1px 0}
+.sl:hover{background:color-mix(in srgb,var(--a1) 8%,transparent);color:var(--text)}
+.sl.on{background:var(--grad);color:var(--on);font-weight:700}
+.orb{width:15px;height:15px;border-radius:50%;flex:none;box-shadow:inset -3px -3px 5px rgba(0,0,0,.35),inset 2px 2px 4px rgba(255,255,255,.35)}
+.sl small{margin-left:auto;font-size:11px;opacity:.7}
+.g.collapsed{display:none}
+
+main{position:fixed;top:72px;left:var(--side);right:var(--rside);bottom:0;z-index:5;overflow-y:auto;padding:26px 34px 70px}
+#rside{left:auto;right:0;width:var(--rside);border-right:0;border-left:1px solid var(--line)}
+#rside .em{font-size:17px;width:20px;text-align:center;flex:none}
+.wow{display:none}
+.mx{display:grid;grid-template-columns:150px repeat(20,minmax(22px,1fr));gap:4px;align-items:center;min-width:760px}
+.mx i{display:block;height:26px;border-radius:6px;cursor:pointer;transition:transform .15s}
+.mx i:hover{transform:scale(1.25);position:relative;z-index:2}
+.mxl{font-size:12.5px;color:var(--muted);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6px}.mxl:hover{color:var(--a1)}
+.mxh{font-size:10px;text-align:center;color:var(--muted);font-style:normal;font-weight:700}
+.leg{display:flex;gap:14px;align-items:center;font-size:12px;color:var(--muted);margin-bottom:12px;flex-wrap:wrap}
+.leg i{display:inline-block;width:22px;height:12px;border-radius:4px;background:var(--grad);vertical-align:middle;margin-right:5px}
+body.wide{--side:0px;--rside:0px}body.wide aside{display:none}body.wide main{padding:18px 22px 24px}
+.wb{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px;font-size:13px;color:var(--muted)}
+.wb .u{flex:1;min-width:160px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:rgba(2,13,7,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame{width:100%;height:calc(100vh - 150px);min-height:480px;border:1px solid var(--a1);border-radius:var(--radius);background:#fff;display:block}
+.fnote{font-size:12px;color:var(--muted);margin-top:8px}
+main::-webkit-scrollbar{width:8px}main::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--a1) 30%,transparent);border-radius:8px}
+#view{animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 12px/1 inherit;letter-spacing:.2em;text-transform:uppercase;color:var(--a1)}
+.eyebrow::before{content:"";width:30px;height:3px;background:var(--grad);border-radius:3px}
+h1{font-size:clamp(32px,4vw,52px);line-height:1.05;margin:12px 0 8px;font-weight:800;letter-spacing:-.01em}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:17px;margin-bottom:20px}
+
+.row{display:grid;gap:18px;margin-bottom:18px}
+.r2{grid-template-columns:1fr 1fr}.r4{grid-template-columns:repeat(4,1fr)}
+.g12{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.g20{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--a1);border-radius:var(--radius);
+  padding:18px 20px;backdrop-filter:blur(8px);transition:.3s;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.card.click{cursor:pointer}
+.card:hover{transform:translateY(-3px);border-color:var(--a2);box-shadow:0 14px 44px color-mix(in srgb,var(--a2) 16%,transparent)}
+.card h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.big{font-size:clamp(30px,3.2vw,44px);font-weight:800;margin:10px 0 4px;line-height:1}
+.big small{font-size:.45em;color:var(--muted);font-weight:600}
+.big.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cap{font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;font-weight:700}
+.bar{height:7px;border-radius:7px;background:rgba(255,255,255,.08);overflow:hidden;margin:10px 0 6px}
+.bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:7px;transition:width 1.2s cubic-bezier(.2,.7,.2,1);box-shadow:0 0 12px color-mix(in srgb,var(--a2) 60%,transparent)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--a1) 8%,transparent)}
+button.chip{cursor:pointer;transition:.2s}
+button.chip:hover{border-color:var(--a1)}
+button.chip.on{background:var(--grad);color:var(--on);border-color:transparent;font-weight:700}
+.rag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.rag::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+.rag.G{color:#4ade80}.rag.A{color:#fbbf24}.rag.R{color:#fb7185}
+button.rag{background:none;border:0;cursor:default}
+.editing button.rag{cursor:pointer;padding:3px 5px;border-radius:6px;outline:1px dashed var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.panel>h3{padding:14px 22px;font-size:18px;background:linear-gradient(90deg,var(--a1),var(--a2));color:var(--on);font-weight:800;display:flex;gap:10px;align-items:center}
+.panel .body{padding:16px 22px}
+.panel h3 .r{margin-left:auto;font-size:13px;font-weight:700}
+.tabs{display:flex;gap:8px;margin:0 0 20px;flex-wrap:wrap}
+.tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(2,13,7,.6);font-weight:700;font-size:14px;cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--a1)}
+.tab.on{background:var(--grad);color:var(--on);border-color:transparent}
+.tab span{opacity:.7;margin-left:6px;font-size:12px}
+.sep{border-top:1px solid var(--line);margin:12px 0}
+ul.bul{list-style:none}
+ul.bul li{position:relative;padding:8px 0 8px 22px;line-height:1.5;font-size:15px;border-bottom:1px solid color-mix(in srgb,var(--a1) 7%,transparent);display:flex;gap:8px;align-items:flex-start}
+ul.bul li:last-child{border:0}
+ul.bul.dot li::before{content:"";position:absolute;left:2px;top:16px;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+ul.bul li .tx{flex:1}
+.editing ul.bul li{padding-left:6px}.editing ul.bul.dot li::before{display:none}
+
+/* edit mode */
+#editbar{display:none;margin-bottom:18px;padding:12px 16px;border-radius:12px;border:1px dashed var(--a1);background:color-mix(in srgb,var(--a1) 7%,rgba(3,14,9,.85));gap:10px;align-items:center;flex-wrap:wrap;font-size:13px}
+.editing #editbar{display:flex}
+#editbar b{color:var(--a1)}#editbar .sp{flex:1}
+.ebtn{background:rgba(6,28,16,.7);border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s;color:var(--text)}
+.ebtn:hover{border-color:var(--a1);color:var(--a1)}
+.ebtn.danger:hover{border-color:#fb7185;color:#fb7185}
+.add{display:none;width:100%;padding:10px;border:1px dashed var(--a1);border-radius:10px;background:none;color:var(--a1);font-weight:700;cursor:pointer;margin-top:6px}
+.add:hover{background:color-mix(in srgb,var(--a1) 10%,transparent)}
+.editing .add{display:block}
+.eo{display:none}.editing .eo{display:inline-flex;gap:6px;align-items:center}
+.editing [contenteditable]{outline:1px dashed color-mix(in srgb,var(--a1) 40%,transparent);outline-offset:2px;border-radius:4px;cursor:text;min-width:30px}
+.editing [contenteditable]:focus{outline:2px solid var(--a1);background:color-mix(in srgb,var(--a1) 8%,transparent)}
+.hint{display:none}.editing .hint{display:block}
+
+.sec{margin:26px 0 14px;font:800 13px/1 inherit;letter-spacing:.2em;text-transform:uppercase;color:var(--a1);display:flex;align-items:center;gap:10px}
+.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.sc .top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.sc .orb{width:30px;height:30px}
+.sc .n{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:700}
+.sc h5{font-size:18px;line-height:1.2}
+.sc p{font-size:13px;color:var(--muted);min-height:36px}
+.sc .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.sc .foot span{white-space:nowrap}
+
+.kan{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.col h4{font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.col h4 i{width:10px;height:10px;border-radius:50%;background:var(--grad)}
+.ri{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;cursor:pointer;transition:.25s}
+.ri:hover{border-color:var(--a1);transform:translateY(-2px)}
+.editing .ri{cursor:default}.editing .ri:hover{transform:none}
+.ri .q{font-size:11px;letter-spacing:.14em;color:var(--a1);font-weight:700}
+.ri b{display:block;margin:4px 0 6px;font-size:15px}
+.ri .det{max-height:0;overflow:hidden;transition:max-height .4s;font-size:13px;color:var(--muted);line-height:1.5}
+.ri.x .det,.editing .ri .det{max-height:200px;margin-top:8px}
+.ri input[type=range]{width:100%;accent-color:var(--a1);margin:8px 0 4px}
+.ri .ebar{display:none;gap:6px;margin-top:10px}.editing .ri .ebar{display:flex}
+
+.upd .wk{margin-left:auto}
+.lab{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:.3s;background:rgba(3,14,9,.85)}
+.lab:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.lab .hd{padding:16px 16px 14px;color:var(--lon)}
+.lab .hd .e{font-size:26px}
+.lab .hd b{display:block;font-size:20px;margin-top:6px}
+.lab .hd small{font-size:11px;letter-spacing:.12em;opacity:.85}
+.lab .bd{padding:12px 16px 14px;font-size:13px;color:var(--muted)}
+.lab .bd .nm{color:var(--text);font-size:13.5px;line-height:1.35;min-height:36px;display:block}
+.lab .bar{margin:10px 0 6px}
+.lab .st{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.lab .num{position:absolute;right:12px;top:10px;font-size:11px;font-weight:800;letter-spacing:.12em;opacity:.8}
+
+.back{display:inline-flex;gap:8px;align-items:center;cursor:pointer;color:var(--a1);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;background:none;border:0}
+.hero{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.hero .em{font-size:64px;filter:drop-shadow(0 6px 24px color-mix(in srgb,var(--a1) 60%,transparent))}
+.nav2{display:flex;gap:10px;margin-left:auto}
+.strip{display:flex;gap:7px;flex-wrap:wrap;margin:6px 0 22px}
+.strip button{width:30px;height:30px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:.2s;font-size:13px;display:grid;place-items:center}
+.strip button:hover{transform:scale(1.18)}
+.strip button.on{border-color:#fff;box-shadow:0 0 16px var(--a1);transform:scale(1.15)}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:10px 6px;border-radius:10px;cursor:pointer;transition:.2s;border-bottom:1px solid color-mix(in srgb,var(--a1) 8%,transparent)}
+.chk:hover{background:color-mix(in srgb,var(--a1) 8%,transparent)}
+.chk i{width:22px;height:22px;border-radius:7px;border:2px solid var(--a1);flex:none;display:grid;place-items:center;font-style:normal;font-size:14px;font-weight:800;color:var(--on);transition:.2s;cursor:pointer}
+.chk.d i{background:var(--grad);border-color:transparent}
+.chk.d .tx{opacity:.6;text-decoration:line-through}.chk .tx{flex:1}
+.ms{position:relative;padding-left:26px;margin-bottom:16px}
+.ms::before{content:"";position:absolute;left:5px;top:6px;bottom:-18px;width:2px;background:var(--line)}
+.ms:last-child::before{display:none}
+.ms::after{content:"";position:absolute;left:0;top:4px;width:12px;height:12px;border-radius:50%;background:var(--grad)}
+.ms b{display:block}.ms small{color:var(--a1);letter-spacing:.14em;font-weight:700;font-size:11px}
+.ms p{font-size:13px;color:var(--muted);margin-top:3px}
+
+svg text{fill:var(--muted);font:11px "Segoe UI",system-ui,sans-serif}
+.lb rect{cursor:pointer;transition:.2s}.lb rect:hover{filter:brightness(1.3)}
+.hm{overflow-x:auto;padding-bottom:6px}
+.hm-wrap{position:relative;padding-top:2px}
+.hm-days{position:absolute;left:0;display:grid;grid-template-rows:repeat(5,18px);gap:4px;font-size:11px;color:var(--muted);align-items:center}
+.hm-grid{display:grid;grid-template-rows:repeat(5,18px);grid-auto-flow:column;grid-auto-columns:18px;gap:4px;margin-left:38px}
+.cell{border-radius:4px;background:rgba(255,255,255,.05)}
+.cell:hover{outline:2px solid var(--a1);outline-offset:1px}
+.l1{background:color-mix(in srgb,var(--a2) 30%,#0a2014)}.l2{background:color-mix(in srgb,var(--a2) 65%,#0a2014)}.l3{background:var(--a2)}.l4{background:var(--a1);box-shadow:0 0 10px var(--a1)}
+.hm-mon{display:flex;margin:8px 0 0 38px;font-size:11px;color:var(--muted);position:relative;height:14px}
+.hm-mon span{position:absolute}
+.tip{position:fixed;z-index:80;pointer-events:none;background:#04210f;border:1px solid var(--a1);padding:6px 10px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .12s}
+.help{position:fixed;inset:0;z-index:90;background:rgba(1,8,4,.82);display:none;place-items:center;backdrop-filter:blur(6px)}
+.help.on{display:grid}
+.help>div,.help>form{background:var(--panel);border:1px solid var(--a1);border-radius:var(--radius);padding:26px 32px;min-width:300px}
+.help input{width:100%;margin:6px 0 4px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(2,13,7,.8);color:var(--text);font:inherit}
+.help .lr{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+#lockMsg{min-height:18px;font-size:12px;color:#fb7185}
+.help h3{margin-bottom:12px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.help p{margin:8px 0;font-size:14px;color:var(--muted)}
+.help kbd{background:color-mix(in srgb,var(--a1) 14%,transparent);border:1px solid var(--line);padding:2px 8px;border-radius:5px;color:var(--text);margin-right:6px}
+
+@media(max-width:1280px){:root{--rside:0px}#rside{display:none}.wow{display:block}}
+@media(max-width:1200px){.r4{grid-template-columns:1fr 1fr}.kan{grid-template-columns:1fr}}
+@media(max-width:860px){
+  :root{--side:0px}
+  aside{transform:translateX(-100%);width:272px;transition:transform .3s}
+  aside.open{transform:none}
+  #menuBtn{display:flex}.brand{min-width:0}.brand div{display:none}
+  main{padding:18px 16px 70px}.r2,.r4{grid-template-columns:1fr}
+  .pill{padding:8px 10px;font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="bg"><div class="grid"></div><div class="shard s1"></div><div class="shard s2"></div></div>
+<header>
+  <button class="hbtn" id="menuBtn" aria-label="Streams"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <div class="brand" id="brand">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#d8ff3a"/><stop offset="1" stop-color="#19e68c"/></linearGradient></defs>
+      <path d="M13 31c-6-5-6-14 0-14 7 0 11 14 22 14 6 0 6-14 0-14-7 0-11 14-22 14z" fill="none" stroke="url(#lg)" stroke-width="3.5" stroke-linecap="round"/></svg>
+    <div><b id="bName"></b><small id="bTag"></small></div>
+  </div>
+  <div id="crumbs"></div>
+  <button class="hbtn" id="bLock" title="Admin lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></button>
+  <button class="hbtn" id="bEdit" title="Edit tasks (E)"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13 7l4 4"/></svg><span>Edit</span></button>
+  <button class="hbtn" id="bFull" title="Present (F)"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></svg></button>
+  <button class="hbtn" id="bHelp" title="Shortcuts (?)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.7-2.5 2-2.5 3.5M12 17v.01"/></svg></button>
+</header>
+<aside id="side"></aside>
+<aside id="rside"></aside>
+<main id="main">
+  <div id="editbar"><b>✎ Admin edit mode</b><span>Click any text to rename it · ✕ delete · + add · ◀ ▶ move between roadmap columns. Changes save in this browser.</span><span class="sp"></span>
+    <button class="ebtn" id="eDl">Download JSON</button><button class="ebtn" id="eCp">Copy JSON</button><button class="ebtn" id="eIm">Import JSON</button><button class="ebtn danger" id="eRs">Reset all edits</button><span id="eMsg" style="color:var(--a1)"></span>
+    <input type="file" id="eFile" accept="application/json,.json" hidden></div>
+  <div id="view"></div>
+</main>
+<div class="tip" id="tip"></div>
+<div class="help" id="lock"><form id="lockForm" autocomplete="off"><h3>Admin lock</h3><p>Editing is limited to administrators.</p><input id="lockPw" type="password" placeholder="Admin password" autocomplete="off" aria-label="Admin password"><div id="lockMsg"></div><div class="lr"><button type="button" class="ebtn" id="lockCancel">Cancel</button><button class="ebtn" id="lockGo">Unlock</button></div></form></div>
+<div class="help" id="help"><div><h3>Shortcuts</h3>
+  <p><kbd>[</kbd><kbd>]</kbd> previous / next stream or domain</p>
+  <p><kbd>←</kbd><kbd>→</kbd> previous / next lab (inside a lab) or tab (inside a stream)</p>
+  <p><kbd>1</kbd>–<kbd>4</kbd> stream tabs · <kbd>H</kbd> home · <kbd>Esc</kbd> go up one level</p>
+  <p><kbd>E</kbd> edit mode (admin only) · <kbd>F</kbd> fullscreen · <kbd>?</kbd> this help</p></div></div>
+
+<script>
+/* ===================== CONTENT — edit here ===================== */
+const BRAND={name:"Lime 12",tag:"12 streams · 7 domains · one architecture"};
+const STREAMS=[
+ {id:"enterprise",name:"Enterprise Architect",orb:"#3b82f6",tag:"Aligning strategy, capabilities and technology",th:["capability map","target operating model","architecture repository","governance forum"]},
+ {id:"business",name:"Business Architect",orb:"#facc15",tag:"Designing how the business creates value",th:["value-stream map","business capability model","process taxonomy","operating-model canvas"]},
+ {id:"data",name:"Data Architect",orb:"#8b5cf6",tag:"Trusted, governed and usable data",th:["data catalogue","master-data domain","data-quality rule set","lineage map"]},
+ {id:"application",name:"Application Architect",orb:"#34d399",tag:"A right-sized, reusable application landscape",th:["application portfolio","reference architecture","rationalisation backlog","API standard"]},
+ {id:"technology",name:"Technology Architect",orb:"#fb923c",tag:"Platforms and standards that scale",th:["technology radar","platform standard","reuse catalogue","lifecycle roadmap"]},
+ {id:"ai",name:"AI Architect",orb:"#52525b",tag:"Responsible, production-grade AI",th:["model registry","responsible-AI checklist","agent pattern library","evaluation harness"]},
+ {id:"security",name:"Security Architect",orb:"#38bdf8",tag:"Secure by design, verified by default",th:["threat model","control baseline","zero-trust pattern","access-review cycle"]},
+ {id:"uiux",name:"UI-UX Architect",orb:"#e9d5ff",tag:"Consistent, accessible experiences",th:["design system","experience principle set","accessibility audit","journey map"]},
+ {id:"infrastructure",name:"Infrastructure Architect",orb:"#6366f1",tag:"Resilient, automated foundations",th:["landing zone","capacity model","resilience tier","infrastructure-as-code module"]},
+ {id:"integration",name:"Integration Architect",orb:"#f97316",tag:"Connected systems, governed interfaces",th:["interface catalogue","event backbone","gateway policy","integration pattern"]},
+ {id:"domain",name:"Domain Architect",orb:"#a16207",tag:"Clear boundaries and ownership",th:["domain model","bounded-context map","shared glossary","ownership matrix"]},
+ {id:"industry",name:"Industry Architect",orb:"#ef4444",tag:"Sector-specific reference models",th:["sector reference model","regulatory mapping","value-chain blueprint","benchmark library"]}
+];
+STREAMS.forEach(s=>{s.kind='stream';s.nm=s.name.replace(' Architect','')});
+const DOMAINS=[
+ {id:"hr",ic:"🎓",name:"HR Transformation",nm:"HR",orb:"#a78bfa",tag:"Hire-to-retire capabilities from talent to payroll",th:["HR process taxonomy","workforce data model","payroll and time rule set","talent journey map"]},
+ {id:"cx",ic:"🤝",name:"Customer Experience",nm:"Customer Experience",orb:"#f472b6",tag:"Marketing, sales and service around one customer view",th:["customer journey map","customer 360 data model","service-level model","consent and privacy register"]},
+ {id:"finance",ic:"💰",name:"Finance",nm:"Finance",orb:"#fbbf24",tag:"Record-to-report, order-to-cash and procure-to-pay",th:["close calendar","chart-of-accounts design","reconciliation rule set","controls matrix"]},
+ {id:"procurement",ic:"🚚",name:"Procurement",nm:"Procurement",orb:"#fb923c",tag:"Sourcing, suppliers and contract value",th:["sourcing strategy","supplier segmentation","purchase-to-pay flow","contract catalogue"]},
+ {id:"supplychain",ic:"📦",name:"Supply Chain",nm:"Supply Chain",orb:"#22d3ee",tag:"Plan, source, make, deliver and return",th:["demand plan","network design","inventory policy","logistics playbook"]},
+ {id:"bizx",ic:"🏗️",name:"Business Transformation",nm:"Business Transformation",orb:"#4ade80",tag:"Process excellence, architecture and change in one programme",th:["transformation roadmap","process model","benefits case","change-impact map"]},
+ {id:"leadership",ic:"🚀",name:"Leadership and Inner Transformation",nm:"Leadership",orb:"#e879f9",tag:"Leading others by first leading yourself",th:["leadership capability model","coaching programme","decision-quality framework","inner-work practice set"]}
+];
+DOMAINS.forEach(s=>s.kind='domain');
+const ALL=[...STREAMS,...DOMAINS];
+const SECTORS=[
+ {id:"sec_energy",ic:"🌆",name:"Energy",c:["#f59e0b","#ef4444"],tag:"Producing, moving and selling power and fuels"},
+ {id:"sec_materials",ic:"💦",name:"Materials",c:["#06b6d4","#3b82f6"],tag:"Chemicals, metals, packaging and construction inputs"},
+ {id:"sec_industrials",ic:"🏭",name:"Industrials",c:["#94a3b8","#f97316"],tag:"Machinery, aerospace, transport and engineering services"},
+ {id:"sec_discretionary",ic:"🛍️",name:"Consumer Discretionary",c:["#ec4899","#f59e0b"],tag:"Retail, automotive, travel and leisure"},
+ {id:"sec_staples",ic:"🍔",name:"Consumer Staples",c:["#84cc16","#f59e0b"],tag:"Food, beverage and everyday household goods"},
+ {id:"sec_healthcare",ic:"🏥",name:"Health Care",c:["#f43f5e","#a855f7"],tag:"Providers, pharma, biotech and medical devices"},
+ {id:"sec_financials",ic:"💸",name:"Financials",c:["#22c55e","#14b8a6"],tag:"Banking, insurance and capital markets"},
+ {id:"sec_it",ic:"💻",name:"Information Technology (IT)",c:["#3b82f6","#8b5cf6"],tag:"Software, hardware and IT services"},
+ {id:"sec_communication",ic:"📲",name:"Communication",c:["#d946ef","#6366f1"],tag:"Telecom, media and entertainment"},
+ {id:"sec_utilities",ic:"💡",name:"Utilities",c:["#eab308","#22c55e"],tag:"Electric, gas and water services"},
+ {id:"sec_realestate",ic:"🏙️",name:"Real Estate",c:["#a78bfa","#38bdf8"],tag:"Property development, REITs and facilities"}
+];
+const LABS=[
+ ["discover","Discover","🔍","Product Innovation Lab","PIL","#06B6D4","#3B82F6"],
+ ["flow","Flow","🌊","Process Excellence Lab","PEL","#84CC16","#22C55E"],
+ ["design","Design","🏗️","Strategy & Architecture Lab","SAL","#F43F5E","#EC4899"],
+ ["run","Run","🏃","Operations Optimization Lab","OOL","#DC2626","#E11D48"],
+ ["build","Build","🛠️","Implementation Intelligence Lab","IIL","#F59E0B","#F97316"],
+ ["move","Move","🚚","Migration Modernization Lab","MEL","#EA580C","#EF4444"],
+ ["connect","Connect","🔗","Integration Intelligence Lab","IEL","#4F46E5","#3B82F6"],
+ ["validate","Validate","✅","Quality Assurance Lab","QAL","#EAB308","#F59E0B"],
+ ["support","Support","🧩","Application Management Services Lab","AMS","#71717A","#6B7280"],
+ ["prove","Prove","🏅","Certification Command Lab","CCL","#0EA5E9","#38BDF8"],
+ ["scale","Scale","📈","School of Career Acceleration Lab for Excellence","SCALE","#A78BFA","#C4B5FD"],
+ ["influence","Influence","🎯","Presales Precision Lab","PSL","#D946EF","#A855F7"],
+ ["lead","Lead","🧭","Project Performance Lab","PML","#0284C7","#06B6D4"],
+ ["prototype","Prototype","🧪","Product Prototyping Lab","PDL","#14B8A6","#06B6D4"],
+ ["evolve","Evolve","⚡","Emerging Technologies Lab","ETL","#059669","#14B8A6"],
+ ["share","Share","🎬","Media & Content Lab","MCL","#FB923C","#F59E0B"],
+ ["document","Document","📚","Knowledge Keystone Lab","KAL","#64748B","#6B7280"],
+ ["engage","Engage","🤝","Experts Engagement Lab","ECL","#EC4899","#F43F5E"],
+ ["scan","Scan","🛰️","Global Industry Intelligence Lab","GIL","#10B981","#059669"],
+ ["innovate","Innovate","💡","Research & Innovation Lab","RIL","#7C3AED","#4F46E5"]
+];
+const WEEK="W47", ASOF="2026-11-23";
+const CATS=["Delivery","Standards & Governance","Capability & Labs","Risks & Dependencies"];
+const TABS=[["dashboard","Dashboard"],["roadmap","Product Roadmap"],["status","Status Updates"],["labs","20 Labs"]];
+const COLS=["Now","Next","Later"];
+/* =============================================================== */
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const root=document.documentElement, tip=$('#tip'), view=$('#view');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function rnd(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const pick=(r,a,b)=>Math.round(a+r()*(b-a));
+function lum(hex){const n=parseInt(hex.slice(1),16),f=c=>{c/=255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)};return .2126*f(n>>16)+.7152*f(n>>8&255)+.0722*f(n&255)}
+const onCol=(a,b)=>((lum(a)+lum(b))/2)>.32?'#04210f':'#ffffff';
+const showTip=(e,t)=>{tip.textContent=t;tip.style.opacity=1;tip.style.left=Math.min(e.clientX+14,innerWidth-220)+'px';tip.style.top=(e.clientY-34)+'px'};
+const hideTip=()=>tip.style.opacity=0;
+
+/* ---------- starting data (seeded, stable) ---------- */
+const LT={
+ discover:(n,t)=>[`Interview five people about their ${n} pain points`,`Map three unmet needs against the ${t[0]}`,`Score ideas on value, effort and risk`,`Write a one-page ${n} opportunity brief`,`Pitch the top idea to the lab panel`],
+ flow:(n,t)=>[`Map the current ${n} process end to end`,`Mark waits, hand-offs and rework`,`Redesign the flow around the ${t[0]}`,`Define three cycle-time measures`,`Dry-run the improved flow with a real case`],
+ design:(n,t)=>[`Frame the ${n} architecture question`,`Draw current and target views of the ${t[0]}`,`Record three design decisions with trade-offs`,`Hold an architecture review`,`Publish the ${n} blueprint`],
+ run:(n,t)=>[`List recurring ${n} operational incidents`,`Set service levels for the ${t[1]}`,`Write a run-book for the top three incidents`,`Build a simple operations dashboard`,`Hold a blameless review and log improvements`],
+ build:(n,t)=>[`Break the ${t[1]} into build tasks`,`Set up the working environment`,`Build the first ${n} increment`,`Peer-review and test the increment`,`Demo the working result`],
+ move:(n,t)=>[`Inventory what must move in ${n}`,`Choose a migration path for the ${t[0]}`,`Plan the cutover with rollback steps`,`Rehearse the move on a small slice`,`Review the rehearsal and fix the gaps`],
+ connect:(n,t)=>[`List the systems and teams around ${n}`,`Define the interface contract for the ${t[2]}`,`Build and test one connection`,`Add monitoring and error handling`,`Document the integration pattern`],
+ validate:(n,t)=>[`Write acceptance criteria for the ${t[1]}`,`Design happy-path and edge-case tests`,`Run the test cycle`,`Log and triage defects`,`Sign off quality with evidence`],
+ support:(n,t)=>[`Define support tiers for ${n}`,`Write a knowledge article for the top issue`,`Set response and resolution targets`,`Practise an escalation drill`,`Review ticket trends and agree improvements`],
+ prove:(n,t)=>[`Choose the ${n} credential path`,`Build a study plan with checkpoints`,`Take a timed practice assessment`,`Close the weakest topics`,`Submit the evidence portfolio`],
+ scale:(n,t)=>[`Assess your current ${n} skills`,`Choose a target role and list the gaps`,`Plan a 90-day growth sprint`,`Complete one stretch assignment`,`Present a before-and-after story`],
+ influence:(n,t)=>[`Identify the ${n} decision-makers`,`Frame the value of the ${t[1]} in their words`,`Build a five-slide pitch`,`Rehearse objection handling`,`Run a mock client session`],
+ lead:(n,t)=>[`Define scope and outcomes for the ${n} initiative`,`Build a plan with owners and dates`,`Set up a risk and issue log`,`Hold a weekly status rhythm`,`Run a lessons-learned review`],
+ prototype:(n,t)=>[`Sketch the ${n} idea on one page`,`Build a clickable or working prototype of the ${t[0]}`,`Test it with three users`,`Capture feedback and iterate`,`Decide: build, pivot or stop`],
+ evolve:(n,t)=>[`Scan emerging technology relevant to ${n}`,`Pick one candidate to trial`,`Run a time-boxed experiment`,`Measure results against a baseline`,`Write an adopt, watch or drop recommendation`],
+ share:(n,t)=>[`Pick one ${n} story worth telling`,`Write the script or outline`,`Produce the first cut`,`Review for clarity and accuracy`,`Publish and note the audience response`],
+ document:(n,t)=>[`Gather the ${n} source material`,`Structure the ${t[0]} page`,`Write the steps with diagrams`,`Peer-check for accuracy`,`Publish and tag it in the knowledge base`],
+ engage:(n,t)=>[`Shortlist five ${n} experts`,`Prepare questions around the ${t[3]}`,`Host an expert session`,`Summarise the key takeaways`,`Send thanks and agree a follow-up`],
+ scan:(n,t)=>[`Choose three industries or markets to watch`,`Collect signals relevant to ${n}`,`Tag each signal by impact and timing`,`Write a one-page intelligence brief`,`Brief the team and log decisions`],
+ innovate:(n,t)=>[`Frame a research question on ${n}`,`Review what is already known`,`Design a small experiment`,`Run it and record the results`,`Write findings and next questions`]
+};
+const LM={
+ discover:n=>`Find what is worth building in ${n} before anything is built.`,flow:n=>`Make ${n} work flow faster with fewer hand-offs.`,design:n=>`Turn a ${n} question into a clear, reviewed blueprint.`,
+ run:n=>`Keep ${n} operations stable, measured and improving.`,build:n=>`Deliver a working ${n} increment in one focused sprint.`,move:n=>`Move ${n} assets safely, with a rehearsed rollback.`,
+ connect:n=>`Connect ${n} systems through clean, governed interfaces.`,validate:n=>`Prove ${n} outcomes with evidence, not opinion.`,support:n=>`Give ${n} users fast, consistent help after go-live.`,
+ prove:n=>`Turn ${n} learning into a credential with evidence.`,scale:n=>`Grow ${n} careers through deliberate, visible steps.`,influence:n=>`Win ${n} decisions with a precise, client-centred pitch.`,
+ lead:n=>`Run ${n} initiatives with clear plans, owners and rhythm.`,prototype:n=>`Test a ${n} idea cheaply before committing.`,evolve:n=>`Try emerging technology on a real ${n} problem.`,
+ share:n=>`Turn ${n} knowledge into stories others can use.`,document:n=>`Keep ${n} knowledge accurate, findable and reusable.`,engage:n=>`Bring ${n} experts into the lab for real conversations.`,
+ scan:n=>`Watch the outside world for ${n} signals that matter.`,innovate:n=>`Explore new ${n} ideas through small, honest experiments.`
+};
+const LR={
+ discover:"Talk to people before proposing solutions.",flow:"Measure the current flow before changing it.",design:"Every design decision needs a recorded trade-off.",run:"Prefer a run-book over heroics.",build:"Ship something small that works.",
+ move:"No migration without a rollback step.",connect:"Agree the interface contract before writing code.",validate:"Every claim needs a test or an evidence link.",support:"Write the answer once, reuse it often.",prove:"Practise under timed conditions.",
+ scale:"Pick one stretch goal per sprint.",influence:"Lead with the client's problem, not your product.",lead:"Name an owner and a date for every action.",prototype:"Stop or pivot early; it is a win.",evolve:"Keep experiments time-boxed.",
+ share:"One clear message per piece.",document:"If it is not written down, it is not done.",engage:"Prepare questions in advance and share notes afterwards.",scan:"Tag every signal with impact and timing.",innovate:"State the hypothesis before the experiment."
+};
+const STEPS=(s,l)=>LT[l[0]](s.nm,s.th);
+const DATA=ALL.map((s,si)=>{
+  const th=s.th, r0=rnd(si*131+3);
+  const labs=LABS.map((l,li)=>{const r=rnd(si*997+li*31+7),x=r();
+    return {done0:x<.35?5:x<.78?pick(r,1,4):0,learners:pick(r,40,480)}});
+  const owners=["Lead architect","Practice lead","Platform team","Governance board","Community of practice"];
+  const mk=(q,items,lo,hi)=>items.map((t,k)=>{const o=owners[(k+si)%5];return {t,q,pct:pick(r0,lo,hi),owner:o,d:`${t}. Owner: ${o}. Success is measured by adoption and review turnaround.`}});
+  const road={
+    Now:mk("Q4 2026",[`Baseline the ${th[0]}`,`Publish ${th[1]} v1`,`Pilot ${th[2]} reviews`],40,90),
+    Next:mk("H1 2027",[`Automate ${th[3]} checks`,`Extend the ${th[0]} to more units`,`Launch ${th[1]} certification`],10,40),
+    Later:mk("H2 2027",[`Self-service ${th[2]} publishing`,`Continuous ${th[3]} scorecard`,`Share the playbook across teams`],0,10)};
+  const live=labs.filter(l=>l.done0===5).length, build=labs.filter(l=>l.done0>0&&l.done0<5).length;
+  const rag=()=>{const v=r0();return v<.55?'G':v<.85?'A':'R'};
+  const upd={
+    "Delivery":[[rag(),`${th[0]} baseline ${pick(r0,40,95)}% complete; ${pick(r0,3,12)} reviews closed this week.`],[rag(),`${th[1]} v1 draft shared with ${pick(r0,3,9)} teams for feedback.`]],
+    "Standards & Governance":[[rag(),`${th[3]} cadence agreed; ${pick(r0,2,9)} decisions logged this month.`],[rag(),`Exceptions to the ${th[1]} reduced to ${pick(r0,1,6)}.`]],
+    "Capability & Labs":[[rag(),`${live} of 20 labs live and ${build} in build.`],[rag(),`Next lab showcase scheduled for W${pick(r0,48,52)}.`]],
+    "Risks & Dependencies":[[rag(),`Waiting on source data from the platform team for the ${th[2]}.`],[rag(),`Resourcing risk on ${th[0]} workshops; mitigation agreed.`]]};
+  return {s,labs,road,upd,week:pick(r0,4,14)};
+});
+
+/* ---------- edits: stored in this browser ---------- */
+const LS='lime12-store';
+let TASKS={}, STORE={};
+function applyStore(st){STORE=st||{};TASKS=STORE.tasks||{};
+  DATA.forEach(d=>{if(STORE.road&&STORE.road[d.s.id])d.road=STORE.road[d.s.id];if(STORE.upd&&STORE.upd[d.s.id])d.upd=STORE.upd[d.s.id]})}
+try{applyStore(JSON.parse(localStorage.getItem(LS)||'{}'))}catch(e){applyStore({})}
+function snapshot(){const st={road:{},upd:{},tasks:TASKS};DATA.forEach(d=>{st.road[d.s.id]=d.road;st.upd[d.s.id]=d.upd});return st}
+function persist(){STORE=snapshot();try{localStorage.setItem(LS,JSON.stringify(STORE))}catch(e){}}
+
+/* ---------- derived values ---------- */
+const tkey=(si,k)=>ALL[si].id+'-'+LABS[k][0];
+const defTasks=(si,k)=>STEPS(ALL[si],LABS[k]).map((t,i)=>({t,d:i<DATA[si].labs[k].done0}));
+const ensure=(si,k)=>{const key=tkey(si,k);if(!TASKS[key])TASKS[key]=defTasks(si,k);return TASKS[key]};
+function info(si,k){const t=TASKS[tkey(si,k)]||defTasks(si,k),dn=t.filter(x=>x.d).length,pct=t.length?Math.round(dn/t.length*100):0;
+  return {t,dn,n:t.length,pct,status:pct>=100?'Live':pct>0?'In build':'Planned'}}
+function ST(si){let live=0,build=0;for(let k=0;k<20;k++){const s=info(si,k).status;if(s==='Live')live++;else if(s==='In build')build++}return{live,build}}
+const roadPct=d=>{const a=COLS.flatMap(c=>d.road[c]);return a.length?Math.round(a.reduce((x,y)=>x+(+y.pct||0),0)/a.length):0};
+const risks=d=>Object.values(d.upd).flat().filter(u=>u[0]==='R').length;
+
+/* ---------- helpers ---------- */
+const num=(v,o={})=>`<span class="cnt" data-to="${v}" data-dec="${o.dec||0}" data-suf="${o.suf||''}">0${o.suf||''}</span>`;
+function count(el){const to=+el.dataset.to,dec=+el.dataset.dec,suf=el.dataset.suf,t0=performance.now();
+  (function f(t){const p=Math.min(1,(t-t0)/1000),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(f)})(t0)}
+function animate(){$$('.cnt',view).forEach(count);$$('.bar i',view).forEach(b=>{b.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>b.style.width=b.dataset.w+'%'))})}
+const grad=l=>`linear-gradient(135deg,${l[5]},${l[6]})`;
+function setTheme(l){
+  if(l){root.style.setProperty('--a1',l[5]);root.style.setProperty('--a2',l[6]);root.style.setProperty('--on',onCol(l[5],l[6]))}
+  else{root.style.setProperty('--a1','#c8ff2e');root.style.setProperty('--a2','#19e68c');root.style.setProperty('--on','#04210f')}}
+const stIdx=id=>ALL.findIndex(s=>s.id===id);
+const pad=n=>String(n).padStart(2,'0');
+const go=h=>{location.hash=h};
+const splitName=n=>{const w=n.split(' ');return w.length>1?w.slice(0,-1).join(' ')+' <em>'+w[w.length-1]+'</em>':'<em>'+n+'</em>'};
+let EDIT=false,WEBV=false;
+
+/* ---------- views ---------- */
+function vHome(){
+  const N=ALL.length,TL=N*20,tl=DATA.reduce((a,_,i)=>a+ST(i).live,0),avg=Math.round(DATA.reduce((a,d)=>a+roadPct(d),0)/N);
+  const sc=(d,i)=>{const st=ST(i),rk=risks(d),rp=roadPct(d),dm=d.s.kind==='domain',n=dm?i-STREAMS.length+1:i+1;return `<div class="card click sc" data-go="${d.s.id}">
+    <div class="top"><span class="orb" style="background:radial-gradient(circle at 30% 30%,#fff8,${d.s.orb} 55%)"></span><div><div class="n">${dm?'DOMAIN':'STREAM'} ${pad(n)}</div><h5>${d.s.ic?d.s.ic+' ':''}${d.s.name}</h5></div></div>
+    <p>${d.s.tag}</p><div class="bar"><i data-w="${rp}"></i></div>
+    <div class="foot"><span>Roadmap ${rp}%</span><span>${st.live}/20 labs live</span><span class="rag ${rk>1?'R':rk?'A':'G'}">${rk} risk${rk===1?'':'s'}</span></div></div>`};
+  return `<div class="eyebrow">${BRAND.tag}</div><h1>${splitName(BRAND.name)}</h1>
+  <div class="sub">12 streams of architecture and 7 enterprise business domains. Open any one for its dashboard, product roadmap, status updates and 20 labs.</div>
+  <div class="row r4">
+    <div class="card"><h4>Streams and domains</h4><div class="big g">${num(N)}</div><div class="cap">12 architecture · 7 business</div></div>
+    <div class="card"><h4>Labs in total</h4><div class="big">${num(TL)}</div><div class="cap">20 labs × ${N}</div></div>
+    <div class="card"><h4>Labs live</h4><div class="big g">${num(tl)}</div><div class="bar"><i data-w="${tl/TL*100}"></i></div><div class="cap">${Math.round(tl/TL*100)}% of all labs</div></div>
+    <div class="card"><h4>Average roadmap progress</h4><div class="big">${num(avg,{suf:'%'})}</div><div class="bar"><i data-w="${avg}"></i></div><div class="cap">Across all ${N}</div></div></div>
+  <div class="sec">12 Streams of Architecture</div>
+  <div class="row g12">${DATA.slice(0,12).map((d,i)=>sc(d,i)).join('')}</div>
+  <div class="sec">7 Enterprise Business Domains</div>
+  <div class="row g12">${DATA.slice(12).map((d,i)=>sc(d,i+12)).join('')}</div>
+  <div class="wow"><div class="sec">World of Work (WoW)</div><div class="chips" style="margin:0 0 20px">${secChips(-1)}</div></div>
+  <div class="panel"><h3>Update momentum <span class="r">all streams and domains · ${WEEK}</span></h3><div class="body">
+   <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Each cell is one workday (Sun–Thu). Brighter = more status updates posted that day. Hover for details.</p>
+   <div class="hm"><div class="hm-wrap"><div class="hm-days"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span></div><div class="hm-grid" id="hm"></div><div class="hm-mon" id="hmm"></div></div></div></div></div>`}
+
+const secCov=(x,si,k)=>{const r=rnd(x*7919+si*131+k*17+5)();return r<.2?0:r<.5?1:r<.8?2:3};
+function secInfo(x){let tot=0;const per=[];for(let si=0;si<12;si++){let s=0;for(let k=0;k<20;k++)s+=secCov(x,si,k);per.push(Math.round(s/60*100));tot+=s}return{avg:Math.round(tot/720*100),per}}
+const secChips=si=>SECTORS.map((s,x)=>`<button class="chip" data-go="${s.id}">${s.ic} ${s.name}${si>=0&&si<12?' · '+secInfo(x).per[si]+'%':''}</button>`).join('');
+function vSector(x){
+  const S=SECTORS[x],inf=secInfo(x),best=inf.per.indexOf(Math.max(...inf.per)),LV=['No focus','Light','Core','Critical'],crit=[];
+  const rows=STREAMS.map((s,si)=>`<div class="mxl" data-go="${s.id}" title="${s.name}">${s.nm}</div>`+LABS.map((l,k)=>{const c=secCov(x,si,k);if(c===3)crit.push([s,l]);
+    return `<i data-go="${s.id}-${l[0]}" data-t="${S.name} · ${s.nm} · ${l[1]} lab · ${LV[c]}" style="background:${grad(l)};opacity:${[.1,.35,.65,1][c]}"></i>`}).join('')).join('');
+  const hdr=`<span></span>`+LABS.map((l,k)=>`<b class="mxh" data-t="${l[1]} · ${l[3]}">${k+1}</b>`).join('');
+  return `<div class="eyebrow">World of Work (WoW) · Sector ${pad(x+1)} / 11</div><h1><span style="font-size:.8em">${S.ic}</span> ${splitName(S.name)}</h1><div class="sub">${S.tag}. Every cell below links a stream and a lab to this sector.</div>
+  <div class="row r4">
+   <div class="card"><h4>Streams linked</h4><div class="big g">${num(12)}</div><div class="cap">All 12 architecture streams</div></div>
+   <div class="card"><h4>Labs cross-linked</h4><div class="big">${num(240)}</div><div class="cap">20 labs × 12 streams</div></div>
+   <div class="card"><h4>Sector coverage</h4><div class="big g">${num(inf.avg,{suf:'%'})}</div><div class="bar"><i data-w="${inf.avg}"></i></div><div class="cap">Average across the grid</div></div>
+   <div class="card"><h4>Strongest stream</h4><div class="big" style="font-size:24px;margin-top:16px">${STREAMS[best].nm}</div><div class="cap">${inf.per[best]}% coverage</div></div></div>
+  <div class="panel"><h3>Streams × labs for ${S.name} <span class="r">click a cell to open the lab</span></h3><div class="body">
+   <div class="leg"><span><i style="opacity:.1"></i>No focus</span><span><i style="opacity:.35"></i>Light</span><span><i style="opacity:.65"></i>Core</span><span><i></i>Critical</span><span>Columns 1–20 are the 20 labs in order</span></div>
+   <div class="hm"><div class="mx">${hdr}${rows}</div></div></div></div>
+  <div class="row r2" style="margin-top:18px">
+   <div class="panel"><h3>Open a stream</h3><div class="body"><div class="chips" style="margin:0">${STREAMS.map((s,si)=>`<button class="chip" data-go="${s.id}">${s.nm} · ${inf.per[si]}%</button>`).join('')}</div></div></div>
+   <div class="panel"><h3>Critical labs for this sector</h3><div class="body"><div class="chips" style="margin:0">${crit.slice(0,14).map(([s,l])=>`<button class="chip" data-go="${s.id}-${l[0]}">${l[2]} ${s.nm} › ${l[1]}</button>`).join('')||'<span class="cap">None marked</span>'}</div></div></div></div>`}
+
+function updLi(c,u,i){return `<li data-r="${u[0]}"><button class="rag ${u[0]}" data-act="rag" data-c="${esc(c)}" data-i="${i}" title="Click to change status (edit mode)"></button>
+  <span class="tx" contenteditable="${EDIT}" data-f="upd" data-c="${esc(c)}" data-i="${i}">${esc(u[1])}</span><span class="eo"><button class="ebtn danger" data-act="rm-upd" data-c="${esc(c)}" data-i="${i}">✕</button></span></li>`}
+
+function vStream(d,tab){
+  const s=d.s,i=stIdx(s.id),st=ST(i),rp=roadPct(d),rk=risks(d);
+  const head=`<div class="eyebrow">${s.kind==='domain'?'Enterprise domain '+pad(i-STREAMS.length+1)+' / 7':'Architecture stream '+pad(i+1)+' / 12'}</div>
+   <h1>${splitName(s.name)}</h1><div class="sub">${s.tag}</div>
+   <div class="tabs">${TABS.map(t=>`<button class="tab ${t[0]===tab?'on':''}" data-go="${s.id}-${t[0]}">${t[1]}${t[0]==='labs'?`<span>${st.live} live</span>`:''}</button>`).join('')}</div>`;
+  if(tab==='roadmap')return head+`<div class="kan">${COLS.map((k,ci)=>`<div class="col"><h4><i></i>${k}</h4>${d.road[k].map((it,n)=>`<div class="ri"><div class="q" contenteditable="${EDIT}" data-f="road-q" data-col="${k}" data-i="${n}">${esc(it.q)}</div>
+     <b contenteditable="${EDIT}" data-f="road-t" data-col="${k}" data-i="${n}">${esc(it.t)}</b>
+     ${EDIT?`<input type="range" min="0" max="100" value="${it.pct}" data-f="road-pct" data-col="${k}" data-i="${n}"><div class="cap"><span>${it.pct}%</span> · <span contenteditable="true" data-f="road-owner" data-col="${k}" data-i="${n}">${esc(it.owner)}</span></div>`
+       :`<div class="bar"><i data-w="${it.pct}"></i></div><div class="cap">${it.pct}% · ${esc(it.owner)}</div>`}
+     <div class="det" contenteditable="${EDIT}" data-f="road-d" data-col="${k}" data-i="${n}">${esc(it.d)}</div>
+     <div class="ebar"><button class="ebtn" data-act="mv-road" data-col="${k}" data-i="${n}" data-dir="-1" ${ci===0?'disabled style="opacity:.3"':''}>◀</button><button class="ebtn" data-act="mv-road" data-col="${k}" data-i="${n}" data-dir="1" ${ci===2?'disabled style="opacity:.3"':''}>▶</button><button class="ebtn danger" data-act="rm-road" data-col="${k}" data-i="${n}">✕ Delete</button></div></div>`).join('')}
+     <button class="add" data-act="add-road" data-col="${k}">+ Add item</button></div>`).join('')}</div>`;
+  if(tab==='status')return head+`<div class="chips" style="margin:-6px 0 14px" id="fCat"><button class="chip on" data-f="all">All categories</button>${CATS.map(c=>`<button class="chip" data-f="${c}">${c}</button>`).join('')}</div>
+   <div class="chips" style="margin:-6px 0 18px" id="fRag"><button class="chip on" data-r="all">Any status</button><button class="chip" data-r="G"><span class="rag G">Green</span></button><button class="chip" data-r="A"><span class="rag A">Amber</span></button><button class="chip" data-r="R"><span class="rag R">Red</span></button></div>
+   <div class="row r2" id="updList">${CATS.map(c=>`<div class="panel upd" data-c="${c}"><h3>${c} <span class="r">${WEEK}</span></h3><div class="body"><ul class="bul dot">${d.upd[c].map((u,n)=>updLi(c,u,n)).join('')}</ul><button class="add" data-act="add-upd" data-c="${c}">+ Add update</button></div></div>`).join('')}</div>`;
+  if(tab==='labs')return head+`<div class="chips" style="margin:-6px 0 18px" id="fLab"><button class="chip on" data-f="all">All 20</button><button class="chip" data-f="Live">Live</button><button class="chip" data-f="In build">In build</button><button class="chip" data-f="Planned">Planned</button></div>
+   <div class="row g20" id="labGrid">${LABS.map((l,k)=>labCard(i,l,k)).join('')}</div>`;
+  const W=720,H=210,bw=24,gap=(W-30-20*bw)/19;
+  const bars=LABS.map((l,k)=>{const nf=info(i,k),h=nf.pct/100*(H-50),x=15+k*(bw+gap);
+    return `<defs><linearGradient id="bg${k}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${l[5]}"/><stop offset="1" stop-color="${l[6]}"/></linearGradient></defs><rect x="${x}" y="${H-24-h}" width="${bw}" height="${Math.max(h,3)}" rx="5" fill="url(#bg${k})" data-go="${s.id}-${l[0]}" data-t="${l[1]} (${l[4]}) · ${nf.pct}% · ${nf.status}"/><text x="${x+bw/2}" y="${H-8}" text-anchor="middle">${k+1}</text>`}).join('');
+  const all=Object.values(d.upd).flat().slice(0,8);
+  return head+`<div class="row r4">
+   <div class="card"><h4>Roadmap progress</h4><div class="big g">${num(rp,{suf:'%'})}</div><div class="bar"><i data-w="${rp}"></i></div><div class="cap">${COLS.reduce((a,c)=>a+d.road[c].length,0)} items · Now / Next / Later</div></div>
+   <div class="card"><h4>Labs live</h4><div class="big">${num(st.live)} <small>/ 20</small></div><div class="bar"><i data-w="${st.live/20*100}"></i></div><div class="cap">${st.build} in build</div></div>
+   <div class="card"><h4>Updates this week</h4><div class="big">${num(d.week)}</div><div class="cap">${WEEK} · all categories</div></div>
+   <div class="card"><h4>Open risks</h4><div class="big ${rk>1?'':'g'}">${num(rk)}</div><div class="cap">Red items in status updates</div></div></div>
+  <div class="row" style="grid-template-columns:1.5fr 1fr">
+   <div class="panel"><h3>20 labs at a glance <span class="r">click a bar to enter a lab</span></h3><div class="body"><svg class="lb" viewBox="0 0 ${W} ${H}" width="100%">${bars}</svg></div></div>
+   <div class="panel"><h3>Roadmap · Now</h3><div class="body">${d.road.Now.map(it=>`<div style="margin-bottom:12px"><b>${esc(it.t)}</b><div class="bar"><i data-w="${it.pct}"></i></div><div class="cap">${it.pct}% · ${esc(it.q)}</div></div>`).join('')||'<div class="cap">No items yet</div>'}</div></div></div>
+  <div class="panel"><h3>Latest status updates</h3><div class="body"><ul class="bul dot">${all.map(u=>`<li><span class="rag ${u[0]}"></span> <span class="tx">${esc(u[1])}</span></li>`).join('')}</ul></div></div>
+  ${i<12?`<div class="panel" style="margin-top:18px"><h3>Sector lens <span class="r">coverage by sector</span></h3><div class="body"><div class="chips" style="margin:0">${secChips(i)}</div></div></div>`:''}`}
+
+function labCard(si,l,k){const nf=info(si,k),on=onCol(l[5],l[6]);
+  return `<div class="lab" data-go="${ALL[si].id}-${l[0]}" data-st="${nf.status}" style="--lon:${on}"><div class="hd" style="background:${grad(l)}"><span class="num">${String(k+1).padStart(2,'0')}</span><span class="e">${l[2]}</span><b>${l[1]}</b><small>${l[4]}</small></div>
+   <div class="bd"><span class="nm">${l[3]}</span><div class="bar"><i data-w="${nf.pct}" style="background:${grad(l)}"></i></div><div class="st"><span style="color:${l[5]}">${nf.status}</span><span>${nf.pct}%</span></div></div></div>`}
+
+function vLab(d,k){
+  const si=stIdx(d.s.id),s=d.s,l=LABS[k],x=d.labs[k],nf=info(si,k);
+  const r=rnd(k*53+si*7),pr=nf.pct/100;
+  const ms=[["Kick-off","Week 1","Intent, rules and challenge brief agreed."],["Mid-sprint review","Week 3",`Working draft of the ${s.th[k%4]} reviewed with peers.`],["Showcase","Week 5",`Outcome presented and badge decision for the ${l[4]} lab.`]];
+  const cur=ms[pr>=.8?2:pr>=.4?1:0];
+  const ups=[`${pick(r,3,14)} learners completed the ${l[1]} challenge this week.`,`${s.th[(k+1)%4][0].toUpperCase()+s.th[(k+1)%4].slice(1)} template refreshed after feedback.`,`Next ${l[4]} showcase scheduled for W${pick(r,48,52)}.`];
+  const rules=[LR[l[0]],"Bring a real scenario, not a hypothetical one.","Show your reasoning, not just the answer.","Review at least one peer submission."];
+  const prev=LABS[(k+19)%20],next=LABS[(k+1)%20];
+  const url='https://'+l[0]+'.successlabsacademy.com';
+  if(WEBV)return `<div class="wb"><button class="back" style="margin:0" data-act2="closeweb">← Back to ${l[1]} lab</button><span class="chip">${l[2]} ${l[1]} · ${l[3]}</span><span class="u">${url}</span>
+    <button class="ebtn" data-act2="reload">⟳ Reload</button><button class="ebtn" data-act2="pop">Open in large window</button><a class="ebtn" style="text-decoration:none" href="${url}" target="_blank" rel="noopener">Open in new tab ↗</a></div>
+    <iframe class="frame" id="webframe" src="${url}" title="${l[1]} lab website" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; clipboard-write"></iframe>
+    <div class="fnote">If the page stays blank, that site does not allow being shown inside another page. Use “Open in new tab”.</div>`;
+  return `<button class="back" data-go="${s.id}-labs">← ${s.name} · all labs</button>
+  <div class="hero"><span class="em">${l[2]}</span><div><div class="eyebrow">Lab ${String(k+1).padStart(2,'0')} / 20 · ${s.name}</div><h1 style="margin:10px 0 4px"><em>${l[1]}</em></h1>
+   <div class="sub" style="margin:0">${l[3]} <span class="chip" style="margin-left:8px">${l[4]}</span> <span class="chip">${nf.status}</span></div></div>
+   <div class="nav2"><button class="pill" data-act2="web">🌐 Website</button><button class="pill" data-go="${s.id}-${prev[0]}">‹ ${prev[1]}</button><button class="pill" data-go="${s.id}-${next[0]}">${next[1]} ›</button></div></div>
+  <div class="strip">${LABS.map((q,i)=>`<button class="${i===k?'on':''}" style="background:${grad(q)}" data-go="${s.id}-${q[0]}" data-t="${q[1]}">${i===k?q[2]:''}</button>`).join('')}</div>
+  ${si<12?`<div class="chips" style="margin:-8px 0 18px"><span class="cap" style="align-self:center">Sector lens</span>${SECTORS.map(q=>`<button class="chip" data-go="${q.id}">${q.ic} ${q.name}</button>`).join('')}</div>`:''}
+  <div class="row r4">
+   <div class="card"><h4>Lab progress</h4><div class="big g">${num(nf.pct,{suf:'%'})}</div><div class="bar"><i data-w="${nf.pct}"></i></div><div class="cap">${nf.dn} of ${nf.n} tasks done</div></div>
+   <div class="card"><h4>Learners</h4><div class="big">${num(x.learners)}</div><div class="cap">Enrolled this cycle</div></div>
+   <div class="card"><h4>Status</h4><div class="big" style="font-size:28px;margin-top:16px">${nf.status}</div><div class="cap">${s.name}</div></div>
+   <div class="card"><h4>Next milestone</h4><div class="big" style="font-size:26px;margin-top:16px">${cur[0]}</div><div class="cap">${cur[1]}</div></div></div>
+  <div class="row r2">
+   <div class="panel"><h3>Sprint tasks <span class="r">${EDIT?'edit text · tick box to complete':'🔒 view only'}</span></h3><div class="body" id="chk">${nf.t.map((t,i)=>`<div class="chk ${t.d?'d':''}" data-i="${i}"><i data-act="tick" data-i="${i}">${t.d?'✓':''}</i><span class="tx" contenteditable="${EDIT}" data-f="task" data-i="${i}">${esc(t.t)}</span><span class="eo"><button class="ebtn danger" data-act="rm-task" data-i="${i}">✕</button></span></div>`).join('')}
+     <button class="add" data-act="add-task">+ Add task</button></div></div>
+   <div class="panel"><h3>Lab roadmap</h3><div class="body">${ms.map(m=>`<div class="ms"><small>${m[1].toUpperCase()}</small><b>${m[0]}</b><p>${m[2]}</p></div>`).join('')}</div></div></div>
+  <div class="row r2">
+   <div class="panel"><h3>Status updates <span class="r">${WEEK}</span></h3><div class="body"><ul class="bul dot">${ups.map(u=>`<li><span class="tx">${u}</span></li>`).join('')}</ul></div></div>
+   <div class="panel"><h3>Lab mission and rules</h3><div class="body"><p style="margin-bottom:10px">${LM[l[0]](s.nm)}</p><ul class="bul dot">${rules.map(u=>`<li><span class="tx">${u}</span></li>`).join('')}</ul>
+     <div class="sep"></div><button class="ebtn" data-act2="web">🌐 View the ${l[1]} lab website inline</button> <a href="${url}" target="_blank" rel="noopener" style="margin-left:8px">Open in new tab ↗</a></div></div></div>`}
+
+function fillHeat(){
+  const r=rnd(42),asOf=new Date(ASOF+'T00:00'),start=new Date(asOf.getFullYear(),0,1);start.setDate(start.getDate()-start.getDay());
+  let html='',mon='',lastM=-1,w=0;const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  for(let d=new Date(start);d<=asOf;d.setDate(d.getDate()+1)){const dow=d.getDay();if(dow>4)continue;
+    const x=r(),n=x<.45?0:x<.72?1:x<.9?2:x<.97?3:4;
+    if(dow===0){if(d.getMonth()!==lastM&&d.getFullYear()===asOf.getFullYear()){mon+=`<span style="left:${w*22}px">${MN[d.getMonth()]}</span>`;lastM=d.getMonth()}w++}
+    html+=`<div class="cell ${n?'l'+n:''}" data-t="${d.toDateString().slice(0,10)} ${d.getFullYear()} · ${n} update${n===1?'':'s'}"></div>`}
+  $('#hm').innerHTML=html;$('#hmm').innerHTML=mon}
+
+/* ---------- chrome ---------- */
+$('#bName').textContent=BRAND.name;$('#bTag').textContent=BRAND.tag;
+const sl=(s,n)=>`<button class="sl" data-go="${s.id}"><span class="orb" style="background:radial-gradient(circle at 30% 30%,#fff8,${s.orb} 55%)"></span>${s.name}<small>${pad(n)}</small></button>`;
+$('#side').innerHTML=`<h6 data-g="g1">12 Streams of Architecture <span>⌄</span></h6><div class="g" id="g1">${STREAMS.map((s,i)=>sl(s,i+1)).join('')}</div><h6 data-g="g2">7 Enterprise Domains <span>⌄</span></h6><div class="g" id="g2">${DOMAINS.map((s,i)=>sl(s,i+1)).join('')}</div>`;
+$('#rside').innerHTML=`<h6 data-g="g3">World of Work (WoW) <span>⌄</span></h6><div class="g" id="g3">${SECTORS.map((s,i)=>`<button class="sl" data-go="${s.id}"><span class="em">${s.ic}</span>${s.name}<small>${pad(i+1)}</small></button>`).join('')}</div>`;
+$$('aside h6').forEach(h=>h.onclick=()=>$('#'+h.dataset.g).classList.toggle('collapsed'));
+$('#menuBtn').onclick=()=>$('#side').classList.toggle('open');
+$('#brand').onclick=()=>go('home');
+$('#bFull').onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():root.requestFullscreen()}catch(e){}};
+$('#bHelp').onclick=()=>$('#help').classList.add('on');$('#help').onclick=()=>$('#help').classList.remove('on');
+function setEdit(v){EDIT=v;document.body.classList.toggle('editing',v);$('#bEdit').classList.toggle('on',v);$('#bEdit span').textContent=v?'Done':'Edit';render(true)}
+/* ---------- admin lock (client-side; salted PBKDF2 hash only, no password in this file) ---------- */
+const LK={salt:"b72ce7c0c867b6d9f18a14dada2bd62c",it:210000,h:"c2218984fb6fa6be5eb9a1c0fd94d2c0409842a5b33f6105ccda4ebce306b180"};
+let ADMIN=false,fails=0,until=0,pending=null;
+const h2b=h=>new Uint8Array(h.match(/../g).map(x=>parseInt(x,16)));
+const b2h=b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+async function verify(pw){try{if(!(window.crypto&&crypto.subtle))return false;
+  const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveBits']);
+  const bits=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:h2b(LK.salt),iterations:LK.it},k,256);
+  return b2h(bits)===LK.h}catch(e){return false}}
+function syncLock(){const b=$('#bLock');b.classList.toggle('on',ADMIN);b.title=ADMIN?'Admin unlocked — click to lock':'Admin lock';
+  b.querySelector('svg').innerHTML=ADMIN?'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 017.5-1.5"/>':'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/>'}
+function requireAdmin(cb){if(ADMIN){cb&&cb();return}pending=cb;$('#lock').classList.add('on');$('#lockPw').value='';$('#lockMsg').textContent='';setTimeout(()=>$('#lockPw').focus(),30)}
+function closeLock(){$('#lock').classList.remove('on');pending=null;$('#lockPw').value=''}
+$('#lockForm').onsubmit=async e=>{e.preventDefault();const m=$('#lockMsg');
+  if(Date.now()<until){m.textContent='Too many attempts. Try again shortly.';return}
+  const ok=await verify($('#lockPw').value);$('#lockPw').value='';
+  if(ok){ADMIN=true;fails=0;const cb=pending;closeLock();syncLock();cb&&cb()}
+  else{fails++;if(fails>=5){until=Date.now()+30000;fails=0;m.textContent='Too many attempts. Wait 30 seconds.'}else m.textContent='Incorrect password.'}};
+$('#lockCancel').onclick=closeLock;$('#lock').onclick=e=>{if(e.target.id==='lock')closeLock()};
+$('#bLock').onclick=()=>{if(ADMIN){ADMIN=false;if(EDIT)setEdit(false);syncLock()}else requireAdmin(null)};
+function toggleEdit(){if(EDIT)setEdit(false);else requireAdmin(()=>setEdit(true))}
+$('#bEdit').onclick=toggleEdit;
+
+/* export / import / reset */
+const msg=t=>{$('#eMsg').textContent=t;setTimeout(()=>$('#eMsg').textContent='',3500)};
+$('#eDl').onclick=()=>{try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(snapshot(),null,2)],{type:'application/json'}));a.download='lime12-edits.json';a.click();msg('Download started (use Copy if blocked)')}catch(e){msg('Download blocked here — use Copy JSON')}};
+$('#eCp').onclick=async()=>{try{await navigator.clipboard.writeText(JSON.stringify(snapshot(),null,2));msg('Copied to clipboard')}catch(e){msg('Copy blocked by the browser')}};
+$('#eIm').onclick=()=>$('#eFile').click();
+$('#eFile').onchange=e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{applyStore(JSON.parse(rd.result));persist();render(true);msg('Imported')}catch(x){msg('That file is not valid JSON')}};rd.readAsText(f);e.target.value=''};
+let rsArm=false;$('#eRs').onclick=()=>{if(!rsArm){rsArm=true;$('#eRs').textContent='Click again to confirm';setTimeout(()=>{rsArm=false;$('#eRs').textContent='Reset all edits'},3000);return}
+  try{localStorage.removeItem(LS)}catch(e){}location.reload()};
+
+/* ---------- routing ---------- */
+let R={v:'home'};
+function parse(){
+  const h=location.hash.slice(1),[sid,sub]=h.split('-'),si=stIdx(sid);
+  const sx=SECTORS.findIndex(s=>s.id===h);if(sx>=0)return{v:'sector',x:sx};
+  if(si<0)return{v:'home'};
+  const li=LABS.findIndex(l=>l[0]===sub);
+  if(li>=0)return{v:'lab',si,li};
+  return{v:'stream',si,tab:TABS.some(t=>t[0]===sub)?sub:'dashboard'}}
+function render(keep){
+  const main=$('#main'),top=main.scrollTop;
+  R=parse();let html='',crumbs='<button class="pill '+(R.v==='home'?'on':'')+'" data-go="home">Home</button>';
+  if(R.v==='home'){html=vHome();setTheme()}
+  else if(R.v==='sector'){const S=SECTORS[R.x];html=vSector(R.x);setTheme([0,0,0,0,0,S.c[0],S.c[1]]);crumbs+=`<button class="pill on">${S.ic} ${S.name}</button>`}
+  else{const d=DATA[R.si];
+    crumbs+=`<button class="pill ${R.v==='stream'?'on':''}" data-go="${d.s.id}">${d.s.name}</button>`;
+    if(R.v==='stream'){html=vStream(d,R.tab);setTheme()}
+    else{const l=LABS[R.li];html=vLab(d,R.li);setTheme(l);crumbs+=`<button class="pill on">${l[2]} ${l[1]}</button>`}}
+  if(keep!==true){view.style.animation='none';view.offsetHeight;view.style.animation=''}
+  view.innerHTML=html;$('#crumbs').innerHTML=crumbs;main.scrollTop=keep===true?top:0;
+  $$('#side .sl').forEach((b,i)=>b.classList.toggle('on',R.si===i));$$('#rside .sl').forEach((b,i)=>b.classList.toggle('on',R.v==='sector'&&R.x===i));
+  $('#side').classList.remove('open');
+  wire();animate();
+  document.title=(R.v==='home'?BRAND.name:R.v==='sector'?SECTORS[R.x].name+' · '+BRAND.name:DATA[R.si].s.name+(R.v==='lab'?' · '+LABS[R.li][1]+' Lab':'')+' · '+BRAND.name)}
+function wire(){
+  if(R.v==='home')fillHeat();
+  $$('#hm .cell, .lb rect, .strip button, .mx i, .mxh').forEach(c=>{c.onmousemove=e=>showTip(e,c.dataset.t||'');c.onmouseleave=hideTip});
+  if(R.v==='stream'&&R.tab==='roadmap')$$('.ri',view).forEach(c=>c.onclick=e=>{if(!EDIT&&!e.target.closest('[contenteditable=true]'))c.classList.toggle('x')});
+  if(R.v==='stream'&&R.tab==='status'){let fc='all',fr='all';
+    const apply=()=>{$$('#updList .upd').forEach(p=>{let any=false;$$('li',p).forEach(li=>{const ok=fr==='all'||li.dataset.r===fr;li.style.display=ok?'':'none';any=any||ok});p.style.display=(fc==='all'||p.dataset.c===fc)&&(any||EDIT)?'':'none'})};
+    $$('#fCat .chip').forEach(b=>b.onclick=()=>{fc=b.dataset.f;$$('#fCat .chip').forEach(x=>x.classList.toggle('on',x===b));apply()});
+    $$('#fRag .chip').forEach(b=>b.onclick=()=>{fr=b.dataset.r;$$('#fRag .chip').forEach(x=>x.classList.toggle('on',x===b));apply()})}
+  if(R.v==='stream'&&R.tab==='labs')$$('#fLab .chip').forEach(b=>b.onclick=()=>{$$('#fLab .chip').forEach(x=>x.classList.toggle('on',x===b));
+    $$('#labGrid .lab').forEach(c=>c.style.display=b.dataset.f==='all'||c.dataset.st===b.dataset.f?'':'none')});
+  if(R.v==='lab')$$('#chk .chk').forEach(c=>c.onclick=e=>{if(!EDIT||!e.target.closest('[data-act=tick]'))return;
+    const arr=ensure(R.si,R.li),i=+c.dataset.i;arr[i].d=!arr[i].d;persist();render(true)})}
+
+/* ---------- edit actions ---------- */
+function act(a){if(!EDIT||!ADMIN)return;const d=DATA[R.si],c=a.dataset.col,i=+a.dataset.i,u=a.dataset.c;
+  switch(a.dataset.act){
+    case'rm-road':d.road[c].splice(i,1);break;
+    case'mv-road':{const ni=COLS.indexOf(c)+(+a.dataset.dir);if(ni<0||ni>2)return;d.road[COLS[ni]].push(d.road[c].splice(i,1)[0]);break}
+    case'add-road':d.road[c].push({t:'New item',q:c==='Now'?'Q4 2026':c==='Next'?'H1 2027':'H2 2027',pct:0,owner:'Owner',d:'Describe this item.'});break;
+    case'rag':{if(!EDIT)return;const o=['G','A','R'],x=d.upd[u][i];x[0]=o[(o.indexOf(x[0])+1)%3];break}
+    case'rm-upd':d.upd[u].splice(i,1);break;
+    case'add-upd':d.upd[u].push(['G','New update']);break;
+    case'rm-task':ensure(R.si,R.li).splice(i,1);break;
+    case'add-task':ensure(R.si,R.li).push({t:'New task',d:false});break;
+    case'tick':return;
+    default:return}
+  persist();render(true)}
+function setWeb(v){WEBV=v;document.body.classList.toggle('wide',v);render()}
+document.addEventListener('click',e=>{
+  const w=e.target.closest('[data-act2]');if(w){const a=w.dataset.act2;if(a==='web')setWeb(true);else if(a==='pop'){const u=$('.wb .u').textContent,W=Math.round(screen.availWidth*.9),H=Math.round(screen.availHeight*.9);window.open(u,'labsite','popup=yes,width='+W+',height='+H+',left='+Math.round((screen.availWidth-W)/2)+',top='+Math.round((screen.availHeight-H)/2))}else if(a==='closeweb')setWeb(false);else if(a==='reload'){const f=$('#webframe');if(f)f.src=f.src}return}
+  const a=e.target.closest('[data-act]');if(a&&a.dataset.act!=='tick'){act(a);return}
+  if(EDIT&&e.target.closest('[contenteditable=true]'))return;
+  const t=e.target.closest('[data-go]');if(t&&!(a&&a.dataset.act==='tick')){hideTip();go(t.dataset.go)}});
+document.addEventListener('input',e=>{if(!EDIT||!ADMIN)return;const t=e.target,f=t.dataset&&t.dataset.f;if(!f||!R||R.si==null)return;const d=DATA[R.si];
+  const v=t.tagName==='INPUT'?t.value:t.textContent;
+  if(f.startsWith('road-')){const it=d.road[t.dataset.col][+t.dataset.i],k=f.slice(5);it[k]=k==='pct'?+v:v;if(k==='pct'){const sp=t.nextElementSibling.firstElementChild;if(sp)sp.textContent=v+'%'}}
+  else if(f==='upd')d.upd[t.dataset.c][+t.dataset.i][1]=v;
+  else if(f==='task')ensure(R.si,R.li)[+t.dataset.i].t=v;
+  persist()});
+document.addEventListener('keydown',e=>{
+  if(e.target.closest&&e.target.closest('[contenteditable=true],input,textarea')){if(e.key==='Enter'&&e.target.isContentEditable){e.preventDefault();e.target.blur()}return}
+  const si=R.si==null?-1:R.si,rel=(a,b,n)=>(a+b+n)%n;
+  if(e.key==='['&&si>=0)go(ALL[rel(si,-1,ALL.length)].id);
+  else if(e.key===']')go(ALL[si<0?0:rel(si,1,ALL.length)].id);
+  else if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const dir=e.key==='ArrowRight'?1:-1;
+    if(R.v==='lab')go(ALL[si].id+'-'+LABS[rel(R.li,dir,20)][0]);
+    else if(R.v==='stream'){const ti=TABS.findIndex(t=>t[0]===R.tab);go(ALL[si].id+'-'+TABS[rel(ti,dir,4)][0])}}
+  else if(/^[1-4]$/.test(e.key)&&R.v==='stream')go(ALL[si].id+'-'+TABS[+e.key-1][0]);
+  else if(e.key==='h'||e.key==='H')go('home');
+  else if(e.key==='e'||e.key==='E')toggleEdit();
+  else if(e.key==='Escape'){if($('#lock').classList.contains('on'))closeLock();else if($('#help').classList.contains('on'))$('#help').classList.remove('on');else if(EDIT)setEdit(false);else if(R.v==='lab'&&WEBV)setWeb(false);else if(R.v==='lab')go(ALL[si].id+'-labs');else if(R.v==='stream'||R.v==='sector')go('home')}
+  else if(e.key==='f'||e.key==='F')$('#bFull').click();
+  else if(e.key==='?')$('#help').classList.add('on')});
+addEventListener('hashchange',()=>{if(WEBV){WEBV=false;document.body.classList.remove('wide')}render()});
+render();
+</script>
+</body>
+</html>
