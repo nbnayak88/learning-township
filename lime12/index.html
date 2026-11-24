@@ -308,7 +308,7 @@ const SECTORS=[
  {id:"sec_healthcare",ic:"🏥",name:"Health Care",c:["#f43f5e","#a855f7"],tag:"Providers, pharma, biotech and medical devices"},
  {id:"sec_financials",ic:"💸",name:"Financials",c:["#22c55e","#14b8a6"],tag:"Banking, insurance and capital markets"},
  {id:"sec_it",ic:"💻",name:"Information Technology (IT)",c:["#3b82f6","#8b5cf6"],tag:"Software, hardware and IT services"},
- {id:"sec_communication",ic:"📲",name:"Communication",c:["#d946ef","#6366f1"],tag:"Telecom, media and entertainment"},
+ {id:"sec_communication",ic:"📲",name:"Communication Services",c:["#d946ef","#6366f1"],tag:"Telecom, media and entertainment"},
  {id:"sec_utilities",ic:"💡",name:"Utilities",c:["#eab308","#22c55e"],tag:"Electric, gas and water services"},
  {id:"sec_realestate",ic:"🏙️",name:"Real Estate",c:["#a78bfa","#38bdf8"],tag:"Property development, REITs and facilities"}
 ];
@@ -410,12 +410,32 @@ const DATA=ALL.map((s,si)=>{
 });
 
 /* ---------- edits: stored in this browser ---------- */
+
+/* Independent sector plans. Proposed learning backlog; no delivery baseline verified. */
+const SECTOR_FOCUS=[["Asset reliability and energy transition","Map upstream-to-downstream capabilities","Experiment with maintenance and emissions insights"],["Traceable materials and circular operations","Map sourcing-to-production capabilities","Experiment with batch traceability and circularity"],["Connected plants and field service","Map plant-to-service capabilities","Experiment with an equipment maintenance journey"],["Omnichannel customer and retail experiences","Map demand-to-customer capabilities","Experiment with a customer fulfilment journey"],["Resilient consumer goods supply networks","Map factory-to-distributor capabilities","Experiment with seasonal workforce and distribution"],["Connected care and patient experiences","Map patient-to-care capabilities","Experiment with a care coordination journey"],["Trusted financial services experiences","Map customer-to-financial-service capabilities","Experiment with onboarding and control evidence"],["Digital product and service delivery","Map idea-to-digital-service capabilities","Experiment with a product release journey"],["Connected media and subscriber experiences","Map content-to-subscriber capabilities","Experiment with a digital engagement journey"],["Reliable utility services and field operations","Map generation-to-customer capabilities","Experiment with a field service and outage journey"],["Connected property and tenant experiences","Map property-to-tenant capabilities","Experiment with a facility service journey"]];
+const SECTOR_DATA=SECTORS.map((s,x)=>{
+ const f=SECTOR_FOCUS[x], item=(t,q,d)=>({t,q,pct:0,owner:'Unassigned',d});
+ return {s,road:{
+ Now:[item(f[1],'Proposed · Now','Discover stakeholder needs, map the value stream and define the first learning question.'),
+ item('Define the '+s.name+' learning experiment','Proposed · Now','Choose one measurable outcome and acceptance evidence across the relevant architecture streams.')],
+ Next:[item(f[2],'Proposed · Next','Build a small prototype, simulate stakeholder decisions and collect feedback.'),
+ item('Validate the sector blueprint across the 20 labs','Proposed · Next','Connect discovery, architecture, implementation and validation evidence before expanding.')],
+ Later:[item('Publish a reusable '+s.name+' learning playbook','Proposed · Later','Package validated patterns, reflection prompts and reusable evidence.'),
+ item('Expand the sector learning ecosystem','Proposed · Later','Use learner feedback and demonstrated outcomes to decide the next experiment.')]
+ },upd:{
+ Delivery:[['A','No confirmed sector delivery baseline. Validate milestones and evidence before reporting progress.']],
+ 'Standards & Governance':[['A','Proposed scope: '+f[0]+'. Sector owner and acceptance criteria await confirmation.']],
+ 'Capability & Labs':[['A','12 architecture streams × 20 labs are mapped for exploration; mapping does not establish delivery completion.']],
+ 'Risks & Dependencies':[['A','Dependencies, target dates and delivery status await owner validation.']]
+ }};
+});
+
 const LS='lime12-store';
 let TASKS={}, STORE={};
 function applyStore(st){STORE=st||{};TASKS=STORE.tasks||{};
-  DATA.forEach(d=>{if(STORE.road&&STORE.road[d.s.id])d.road=STORE.road[d.s.id];if(STORE.upd&&STORE.upd[d.s.id])d.upd=STORE.upd[d.s.id]})}
+  [...DATA,...SECTOR_DATA].forEach(d=>{if(STORE.road&&STORE.road[d.s.id])d.road=STORE.road[d.s.id];if(STORE.upd&&STORE.upd[d.s.id])d.upd=STORE.upd[d.s.id]})}
 try{applyStore(JSON.parse(localStorage.getItem(LS)||'{}'))}catch(e){applyStore({})}
-function snapshot(){const st={road:{},upd:{},tasks:TASKS};DATA.forEach(d=>{st.road[d.s.id]=d.road;st.upd[d.s.id]=d.upd});return st}
+function snapshot(){const st={road:{},upd:{},tasks:TASKS};[...DATA,...SECTOR_DATA].forEach(d=>{st.road[d.s.id]=d.road;st.upd[d.s.id]=d.upd});return st}
 function persist(){STORE=snapshot();try{localStorage.setItem(LS,JSON.stringify(STORE))}catch(e){}}
 
 /* ---------- derived values ---------- */
@@ -469,7 +489,7 @@ function vHome(){
 const secCov=(x,si,k)=>{const r=rnd(x*7919+si*131+k*17+5)();return r<.2?0:r<.5?1:r<.8?2:3};
 function secInfo(x){let tot=0;const per=[];for(let si=0;si<12;si++){let s=0;for(let k=0;k<20;k++)s+=secCov(x,si,k);per.push(Math.round(s/60*100));tot+=s}return{avg:Math.round(tot/720*100),per}}
 const secChips=si=>SECTORS.map((s,x)=>`<button class="chip" data-go="${s.id}">${s.ic} ${s.name}${si>=0&&si<12?' · '+secInfo(x).per[si]+'%':''}</button>`).join('');
-function vSector(x){
+function vSectorDashboard(x){
   const S=SECTORS[x],inf=secInfo(x),best=inf.per.indexOf(Math.max(...inf.per)),LV=['No focus','Light','Core','Critical'],crit=[];
   const rows=STREAMS.map((s,si)=>`<div class="mxl" data-go="${s.id}" title="${s.name}">${s.nm}</div>`+LABS.map((l,k)=>{const c=secCov(x,si,k);if(c===3)crit.push([s,l]);
     return `<i data-go="${s.id}-${l[0]}" data-t="${S.name} · ${s.nm} · ${l[1]} lab · ${LV[c]}" style="background:${grad(l)};opacity:${[.1,.35,.65,1][c]}"></i>`}).join('')).join('');
@@ -487,12 +507,28 @@ function vSector(x){
    <div class="panel"><h3>Open a stream</h3><div class="body"><div class="chips" style="margin:0">${STREAMS.map((s,si)=>`<button class="chip" data-go="${s.id}">${s.nm} · ${inf.per[si]}%</button>`).join('')}</div></div></div>
    <div class="panel"><h3>Critical labs for this sector</h3><div class="body"><div class="chips" style="margin:0">${crit.slice(0,14).map(([s,l])=>`<button class="chip" data-go="${s.id}-${l[0]}">${l[2]} ${s.nm} › ${l[1]}</button>`).join('')||'<span class="cap">None marked</span>'}</div></div></div></div>`}
 
+
+function sectorHead(x,tab){
+ const s=SECTORS[x];
+ return `<div class="eyebrow">World of Work · GICS sector ${pad(x+1)} / 11</div>
+ <h1>${s.ic} ${splitName(s.name)}</h1><div class="sub">${s.tag}</div>
+ <div class="tabs">${[['dashboard','Dashboard'],['roadmap','Product Roadmap'],['status','Status Updates']].map(t=>`<button class="tab ${tab===t[0]?'on':''}" data-go="${s.id}${t[0]==='dashboard'?'':'-'+t[0]}">${t[1]}</button>`).join('')}</div>
+ <div class="chips" style="margin-bottom:18px" aria-label="Choose GICS sector">${SECTORS.map((v,i)=>`<button class="chip ${i===x?'on':''}" data-go="${v.id}${tab==='dashboard'?'':'-'+tab}">${v.ic} ${esc(v.name)}</button>`).join('')}</div>`;
+}
+function vSector(x,tab='dashboard'){
+ if(tab==='dashboard'){
+  const html=vSectorDashboard(x),body=html.slice(html.indexOf('<div class="row r4">'));
+  return sectorHead(x,tab)+body;
+ }
+ return vStream(SECTOR_DATA[x],tab,x);
+}
+
 function updLi(c,u,i){return `<li data-r="${u[0]}"><button class="rag ${u[0]}" data-act="rag" data-c="${esc(c)}" data-i="${i}" title="Click to change status (edit mode)"></button>
   <span class="tx" contenteditable="${EDIT}" data-f="upd" data-c="${esc(c)}" data-i="${i}">${esc(u[1])}</span><span class="eo"><button class="ebtn danger" data-act="rm-upd" data-c="${esc(c)}" data-i="${i}">✕</button></span></li>`}
 
-function vStream(d,tab){
-  const s=d.s,i=stIdx(s.id),st=ST(i),rp=roadPct(d),rk=risks(d);
-  const head=`<div class="eyebrow">${s.kind==='domain'?'Enterprise domain '+pad(i-STREAMS.length+1)+' / 7':'Architecture stream '+pad(i+1)+' / 12'}</div>
+function vStream(d,tab,sectorIndex){
+  const s=d.s,i=stIdx(s.id),st=sectorIndex==null?ST(i):{live:0,build:0},rp=roadPct(d),rk=risks(d);
+  const head=sectorIndex!=null?sectorHead(sectorIndex,tab)+`<div class="panel" style="margin-bottom:18px"><div class="body">Proposed learning backlog · Initial items start at 0% pending validation. Status entries are an initial review baseline, not a verified delivery report. Admin edits save in this browser; export JSON to share them.</div></div>`:`<div class="eyebrow">${s.kind==='domain'?'Enterprise domain '+pad(i-STREAMS.length+1)+' / 7':'Architecture stream '+pad(i+1)+' / 12'}</div>
    <h1>${splitName(s.name)}</h1><div class="sub">${s.tag}</div>
    <div class="tabs">${TABS.map(t=>`<button class="tab ${t[0]===tab?'on':''}" data-go="${s.id}-${t[0]}">${t[1]}${t[0]==='labs'?`<span>${st.live} live</span>`:''}</button>`).join('')}</div>`;
   if(tab==='roadmap')return head+`<div class="kan">${COLS.map((k,ci)=>`<div class="col"><h4><i></i>${k}</h4>${d.road[k].map((it,n)=>`<div class="ri"><div class="q" contenteditable="${EDIT}" data-f="road-q" data-col="${k}" data-i="${n}">${esc(it.q)}</div>
@@ -504,7 +540,7 @@ function vStream(d,tab){
      <button class="add" data-act="add-road" data-col="${k}">+ Add item</button></div>`).join('')}</div>`;
   if(tab==='status')return head+`<div class="chips" style="margin:-6px 0 14px" id="fCat"><button class="chip on" data-f="all">All categories</button>${CATS.map(c=>`<button class="chip" data-f="${c}">${c}</button>`).join('')}</div>
    <div class="chips" style="margin:-6px 0 18px" id="fRag"><button class="chip on" data-r="all">Any status</button><button class="chip" data-r="G"><span class="rag G">Green</span></button><button class="chip" data-r="A"><span class="rag A">Amber</span></button><button class="chip" data-r="R"><span class="rag R">Red</span></button></div>
-   <div class="row r2" id="updList">${CATS.map(c=>`<div class="panel upd" data-c="${c}"><h3>${c} <span class="r">${WEEK}</span></h3><div class="body"><ul class="bul dot">${d.upd[c].map((u,n)=>updLi(c,u,n)).join('')}</ul><button class="add" data-act="add-upd" data-c="${c}">+ Add update</button></div></div>`).join('')}</div>`;
+   <div class="row r2" id="updList">${CATS.map(c=>`<div class="panel upd" data-c="${c}"><h3>${c} <span class="r">${sectorIndex==null?WEEK:'Baseline · 25 Nov 2026'}</span></h3><div class="body"><ul class="bul dot">${d.upd[c].map((u,n)=>updLi(c,u,n)).join('')}</ul><button class="add" data-act="add-upd" data-c="${c}">+ Add update</button></div></div>`).join('')}</div>`;
   if(tab==='labs')return head+`<div class="chips" style="margin:-6px 0 18px" id="fLab"><button class="chip on" data-f="all">All 20</button><button class="chip" data-f="Live">Live</button><button class="chip" data-f="In build">In build</button><button class="chip" data-f="Planned">Planned</button></div>
    <div class="row g20" id="labGrid">${LABS.map((l,k)=>labCard(i,l,k)).join('')}</div>`;
   const W=720,H=210,bw=24,gap=(W-30-20*bw)/19;
@@ -615,7 +651,7 @@ let rsArm=false;$('#eRs').onclick=()=>{if(!rsArm){rsArm=true;$('#eRs').textConte
 let R={v:'home'};
 function parse(){
   const h=location.hash.slice(1),[sid,sub]=h.split('-'),si=stIdx(sid);
-  const sx=SECTORS.findIndex(s=>s.id===h);if(sx>=0)return{v:'sector',x:sx};
+  const sx=SECTORS.findIndex(s=>s.id===sid);if(sx>=0)return{v:'sector',x:sx,tab:['roadmap','status'].includes(sub)?sub:'dashboard'};
   if(si<0)return{v:'home'};
   const li=LABS.findIndex(l=>l[0]===sub);
   if(li>=0)return{v:'lab',si,li};
@@ -624,7 +660,7 @@ function render(keep){
   const main=$('#main'),top=main.scrollTop;
   R=parse();let html='',crumbs='<button class="pill '+(R.v==='home'?'on':'')+'" data-go="home">Home</button>';
   if(R.v==='home'){html=vHome();setTheme()}
-  else if(R.v==='sector'){const S=SECTORS[R.x];html=vSector(R.x);setTheme([0,0,0,0,0,S.c[0],S.c[1]]);crumbs+=`<button class="pill on">${S.ic} ${S.name}</button>`}
+  else if(R.v==='sector'){const S=SECTORS[R.x];html=vSector(R.x,R.tab);setTheme([0,0,0,0,0,S.c[0],S.c[1]]);crumbs+=`<button class="pill on">${S.ic} ${S.name}</button>`}
   else{const d=DATA[R.si];
     crumbs+=`<button class="pill ${R.v==='stream'?'on':''}" data-go="${d.s.id}">${d.s.name}</button>`;
     if(R.v==='stream'){html=vStream(d,R.tab);setTheme()}
@@ -638,8 +674,8 @@ function render(keep){
 function wire(){
   if(R.v==='home')fillHeat();
   $$('#hm .cell, .lb rect, .strip button, .mx i, .mxh').forEach(c=>{c.onmousemove=e=>showTip(e,c.dataset.t||'');c.onmouseleave=hideTip});
-  if(R.v==='stream'&&R.tab==='roadmap')$$('.ri',view).forEach(c=>c.onclick=e=>{if(!EDIT&&!e.target.closest('[contenteditable=true]'))c.classList.toggle('x')});
-  if(R.v==='stream'&&R.tab==='status'){let fc='all',fr='all';
+  if((R.v==='stream'||R.v==='sector')&&R.tab==='roadmap')$$('.ri',view).forEach(c=>c.onclick=e=>{if(!EDIT&&!e.target.closest('[contenteditable=true]'))c.classList.toggle('x')});
+  if((R.v==='stream'||R.v==='sector')&&R.tab==='status'){let fc='all',fr='all';
     const apply=()=>{$$('#updList .upd').forEach(p=>{let any=false;$$('li',p).forEach(li=>{const ok=fr==='all'||li.dataset.r===fr;li.style.display=ok?'':'none';any=any||ok});p.style.display=(fc==='all'||p.dataset.c===fc)&&(any||EDIT)?'':'none'})};
     $$('#fCat .chip').forEach(b=>b.onclick=()=>{fc=b.dataset.f;$$('#fCat .chip').forEach(x=>x.classList.toggle('on',x===b));apply()});
     $$('#fRag .chip').forEach(b=>b.onclick=()=>{fr=b.dataset.r;$$('#fRag .chip').forEach(x=>x.classList.toggle('on',x===b));apply()})}
@@ -649,7 +685,7 @@ function wire(){
     const arr=ensure(R.si,R.li),i=+c.dataset.i;arr[i].d=!arr[i].d;persist();render(true)})}
 
 /* ---------- edit actions ---------- */
-function act(a){if(!EDIT||!ADMIN)return;const d=DATA[R.si],c=a.dataset.col,i=+a.dataset.i,u=a.dataset.c;
+function act(a){if(!EDIT||!ADMIN)return;const d=R.v==='sector'?SECTOR_DATA[R.x]:DATA[R.si],c=a.dataset.col,i=+a.dataset.i,u=a.dataset.c;
   switch(a.dataset.act){
     case'rm-road':d.road[c].splice(i,1);break;
     case'mv-road':{const ni=COLS.indexOf(c)+(+a.dataset.dir);if(ni<0||ni>2)return;d.road[COLS[ni]].push(d.road[c].splice(i,1)[0]);break}
@@ -668,7 +704,7 @@ document.addEventListener('click',e=>{
   const a=e.target.closest('[data-act]');if(a&&a.dataset.act!=='tick'){act(a);return}
   if(EDIT&&e.target.closest('[contenteditable=true]'))return;
   const t=e.target.closest('[data-go]');if(t&&!(a&&a.dataset.act==='tick')){hideTip();go(t.dataset.go)}});
-document.addEventListener('input',e=>{if(!EDIT||!ADMIN)return;const t=e.target,f=t.dataset&&t.dataset.f;if(!f||!R||R.si==null)return;const d=DATA[R.si];
+document.addEventListener('input',e=>{if(!EDIT||!ADMIN)return;const t=e.target,f=t.dataset&&t.dataset.f;if(!f||!R||(R.si==null&&R.v!=='sector'))return;const d=R.v==='sector'?SECTOR_DATA[R.x]:DATA[R.si];
   const v=t.tagName==='INPUT'?t.value:t.textContent;
   if(f.startsWith('road-')){const it=d.road[t.dataset.col][+t.dataset.i],k=f.slice(5);it[k]=k==='pct'?+v:v;if(k==='pct'){const sp=t.nextElementSibling.firstElementChild;if(sp)sp.textContent=v+'%'}}
   else if(f==='upd')d.upd[t.dataset.c][+t.dataset.i][1]=v;
