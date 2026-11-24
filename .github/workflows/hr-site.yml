@@ -52,6 +52,18 @@ jobs:
           cd pages
           rm -rf academies hr hr[0-9][0-9] crm crm[0-9][0-9] fi fi[0-9][0-9] proc proc[0-9][0-9] scm scm[0-9][0-9] btm btm[0-9][0-9] lit lit[0-9][0-9]
           cp -r ../_site/academies ../_site/hr ../_site/hr[0-9][0-9] ../_site/crm ../_site/crm[0-9][0-9] ../_site/fi ../_site/fi[0-9][0-9] ../_site/proc ../_site/proc[0-9][0-9] ../_site/scm ../_site/scm[0-9][0-9] ../_site/btm ../_site/btm[0-9][0-9] ../_site/lit ../_site/lit[0-9][0-9] .
+          # Publish static HR product-tour experiences from main at their canonical path.
+          TOUR_SRC="../src/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/hr-product-tours"
+          TOUR_DST="01-HR-Human-Capital-Capability-Academy-Workforce-Monday/hr-product-tours"
+          if [ -d "$TOUR_SRC" ]; then
+            mkdir -p "$TOUR_DST"
+            cp -a "$TOUR_SRC"/. "$TOUR_DST"/
+            test -s "$TOUR_DST/hr01-employee-central/index.html"
+            # Short stable alias for discovery; keep canonical Learning Township route intact.
+            mkdir -p hr-product-tours
+            cp -a "$TOUR_SRC"/. hr-product-tours/
+            test -s hr-product-tours/hr01-employee-central/index.html
+          fi
           mkdir -p pages-index
           cp ../src/pages-index/index.html pages-index/index.html
           mkdir -p docs/superlabs superlabs
