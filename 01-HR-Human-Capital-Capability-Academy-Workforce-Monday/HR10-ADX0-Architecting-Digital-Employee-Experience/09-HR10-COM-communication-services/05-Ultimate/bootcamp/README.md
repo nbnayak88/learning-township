@@ -22,3 +22,16 @@ Teach sector and domain architecture through business outcomes, capabilities, va
 
 ## Publication note
 This is a HUB catalog record, **not proof that a course is live or purchasable**. Township occupancy is not publication status. Allocated member names are intentionally excluded from the public repository for privacy.
+
+## OmniEsports Holdings Inc. — Qualtrics Employee Experience Bootcamp
+
+Fictional Communication Services capstone: **7 surveys and 157 source-derived question requirements**, including question-level What–Why–How, acceptance tests, and the interactive requirements dashboard.
+
+- [Learning experience portal](omni-esports-qualtrics/)
+- [Interactive requirements dashboard](omni-esports-qualtrics/dashboard/)
+- [Full 157-question configuration playbook](omni-esports-qualtrics/full/)
+- [Lite edition](omni-esports-qualtrics/lite/)
+- [Demo reference](omni-esports-qualtrics/demo/)
+- [Fictional enterprise business case](omni-esports-holdings-business-case.md)
+
+Proposed configuration patterns are not tenant-validated. No real client information is published.
