@@ -32,7 +32,7 @@ Two fictional cases on one shared portal template. Proposed designs, not tenant-
 
 ## SmartRecruiters for SAP SuccessFactors — all 11 sector case pages
 
-Every case carries the same standard pack, checked in the [standardization audit](../../../sectoral-case-studies/standardization-audit/): 34 personas (16 case-study, 12 recruiting roles, 6 AI-driven roles), 500 business requirements, 500 user stories, 521 test scripts, 12 AI agentic use cases, 20 templates, 55 SAP Activate deliverables with 6 gates, RAID, RACI and a 90-day Wave 0 plan, in one workbook per case. Every page is mapped to the [LIME 12 dashboard](https://nbnayak88.github.io/learning-township/lime12/). Designs are proposed, not tenant-tested. Hub: [all sectoral case studies](../../../sectoral-case-studies/).
+Every case carries the same standard pack, checked in the [standardization audit](../../../sectoral-case-studies/standardization-audit/): 34 personas (16 case-study, 12 recruiting roles, 6 AI-driven roles), 500 business requirements, 500 user stories, 521 test scripts, 12 AI agentic use cases, 20 templates, 55 SAP Activate deliverables with 6 gates, RAID, RACI and a 90-day Wave 0 plan, in one workbook per case. Each case also has six online resources with downloads: the workbook online (Excel), a slide deck (.pptx), a solution blueprint (.docx), an AI prompt library (.md and CSV), an AI skill library (.md files in a .zip) and a talent architecture (job classification, job families, skill taxonomy, competency model; .xlsx). Every page is mapped to the [LIME 12 dashboard](https://nbnayak88.github.io/learning-township/lime12/). Designs are proposed, not tenant-tested. Hub: [all sectoral case studies](../../../sectoral-case-studies/).
 
 | Sector | Case page |
 |---|---|
