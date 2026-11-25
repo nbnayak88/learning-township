@@ -32,7 +32,7 @@ Two fictional cases on one shared portal template. Proposed designs, not tenant-
 
 ## SmartRecruiters for SAP SuccessFactors — all 11 sector case pages
 
-Each page has a hire-to-readiness design, three tabletop tests and 300+ sector-specific business requirements covering every persona (CSV download on each page). Designs are proposed, not tenant-tested.
+Each page has a hire-to-readiness design, three tabletop tests and 400+ sector-specific business requirements covering the case-study personas plus recruiting roles (hiring manager, recruiter, talent acquisition head, recruiting coordinator and others) and AI-driven roles (CSV download on each page). Every page is mapped to the [LIME 12 dashboard](https://nbnayak88.github.io/learning-township/lime12/): its World of Work sector, the HR Transformation domain and the Application Architecture stream. Designs are proposed, not tenant-tested.
 
 | Sector | Case page |
 |---|---|

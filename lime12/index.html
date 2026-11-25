@@ -412,6 +412,16 @@ const DATA=ALL.map((s,si)=>{
 /* ---------- edits: stored in this browser ---------- */
 
 /* Independent sector plans. Proposed learning backlog; no delivery baseline verified. */
+/* SmartRecruiters for SAP SuccessFactors case studies (HR02 Ultimate bootcamp) */
+const SR_BASE='../01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/';
+const SR_HUB=SR_BASE+'sectoral-case-studies/';
+const SR_CASES={sec_energy:[['OmniVerse Energy','01-HR02-ENE-energy','omniverse-smartrecruiters'],],sec_materials:[['OmniForge Materials','02-HR02-MAT-materials','omniforge-smartrecruiters']],sec_industrials:[['OmniWorks Industrials','03-HR02-IND-industrials','omniworks-smartrecruiters']],sec_discretionary:[['OmniVibe Consumer Discretionary','04-HR02-CD-consumer-discretionary','omnivibe-smartrecruiters']],sec_staples:[['OmniDaily Consumer Staples','05-HR02-CS-consumer-staples','omnidaily-smartrecruiters']],sec_healthcare:[['OmniHealth Health Care','06-HR02-HC-health-care','omnihealth-smartrecruiters']],sec_financials:[['OmniCapital Financials','07-HR02-FIN-financials','omnicapital-smartrecruiters']],sec_it:[['OmniTech Information Technology','08-HR02-IT-information-technology','omnitech-smartrecruiters']],sec_communication:[['OmniConnect Communication Services','09-HR02-COM-communication-services','omniconnect-smartrecruiters'],['OmniEsports Communication Services','09-HR02-COM-communication-services','omni-esports-smartrecruiters']],sec_utilities:[['OmniGrid Utilities','10-HR02-UT-utilities','omnigrid-smartrecruiters']],sec_realestate:[['OmniSpace Real Estate','11-HR02-RE-real-estate','omnispace-smartrecruiters']]};
+const srLink=(c)=>`<a class="chip" style="text-decoration:none;display:inline-block" href="${SR_BASE}${c[1]}/05-Ultimate/bootcamp/${c[2]}/">${c[0]}</a>`;
+function srPanel(id){
+ const hub=`<a class="chip on" style="text-decoration:none;display:inline-block" href="${SR_HUB}">All sectoral case studies</a>`;
+ if(SR_CASES[id])return `<div class="panel" style="margin-top:18px"><h3>SmartRecruiters for SAP SuccessFactors <span class="r">HR02 · talent acquisition</span></h3><div class="body"><div class="chips" style="margin:0">${SR_CASES[id].map(srLink).join('')}${hub}</div><div class="cap" style="margin-top:10px">Hire-to-readiness design, tabletop tests and 400+ sector business requirements with recruiting and AI-driven personas.</div></div></div>`;
+ if(id==='hr'||id==='application')return `<div class="panel" style="margin-top:18px"><h3>SmartRecruiters for SAP SuccessFactors <span class="r">${id==='hr'?'HR Transformation domain':'Application Architecture stream'}</span></h3><div class="body"><div class="chips" style="margin:0">${Object.values(SR_CASES).flat().map(srLink).join('')}${hub}</div><div class="cap" style="margin-top:10px">Twelve case pages across the 11 World of Work sectors, each mapped back to this view.</div></div></div>`;
+ return ''}
 const SECTOR_FOCUS=[["Asset reliability and energy transition","Map upstream-to-downstream capabilities","Experiment with maintenance and emissions insights"],["Traceable materials and circular operations","Map sourcing-to-production capabilities","Experiment with batch traceability and circularity"],["Connected plants and field service","Map plant-to-service capabilities","Experiment with an equipment maintenance journey"],["Omnichannel customer and retail experiences","Map demand-to-customer capabilities","Experiment with a customer fulfilment journey"],["Resilient consumer goods supply networks","Map factory-to-distributor capabilities","Experiment with seasonal workforce and distribution"],["Connected care and patient experiences","Map patient-to-care capabilities","Experiment with a care coordination journey"],["Trusted financial services experiences","Map customer-to-financial-service capabilities","Experiment with onboarding and control evidence"],["Digital product and service delivery","Map idea-to-digital-service capabilities","Experiment with a product release journey"],["Connected media and subscriber experiences","Map content-to-subscriber capabilities","Experiment with a digital engagement journey"],["Reliable utility services and field operations","Map generation-to-customer capabilities","Experiment with a field service and outage journey"],["Connected property and tenant experiences","Map property-to-tenant capabilities","Experiment with a facility service journey"]];
 const SECTOR_DATA=SECTORS.map((s,x)=>{
  const f=SECTOR_FOCUS[x], item=(t,q,d)=>({t,q,pct:0,owner:'Unassigned',d});
@@ -518,7 +528,7 @@ function sectorHead(x,tab){
 function vSector(x,tab='dashboard'){
  if(tab==='dashboard'){
   const html=vSectorDashboard(x),body=html.slice(html.indexOf('<div class="row r4">'));
-  return sectorHead(x,tab)+body;
+  return sectorHead(x,tab)+body+srPanel(SECTORS[x].id);
  }
  return vStream(SECTOR_DATA[x],tab,x);
 }
@@ -556,7 +566,7 @@ function vStream(d,tab,sectorIndex){
    <div class="panel"><h3>20 labs at a glance <span class="r">click a bar to enter a lab</span></h3><div class="body"><svg class="lb" viewBox="0 0 ${W} ${H}" width="100%">${bars}</svg></div></div>
    <div class="panel"><h3>Roadmap · Now</h3><div class="body">${d.road.Now.map(it=>`<div style="margin-bottom:12px"><b>${esc(it.t)}</b><div class="bar"><i data-w="${it.pct}"></i></div><div class="cap">${it.pct}% · ${esc(it.q)}</div></div>`).join('')||'<div class="cap">No items yet</div>'}</div></div></div>
   <div class="panel"><h3>Latest status updates</h3><div class="body"><ul class="bul dot">${all.map(u=>`<li><span class="rag ${u[0]}"></span> <span class="tx">${esc(u[1])}</span></li>`).join('')}</ul></div></div>
-  ${i<12?`<div class="panel" style="margin-top:18px"><h3>Sector lens <span class="r">coverage by sector</span></h3><div class="body"><div class="chips" style="margin:0">${secChips(i)}</div></div></div>`:''}`}
+  ${i<12?`<div class="panel" style="margin-top:18px"><h3>Sector lens <span class="r">coverage by sector</span></h3><div class="body"><div class="chips" style="margin:0">${secChips(i)}</div></div></div>`:''}${srPanel(s.id)}`}
 
 function labCard(si,l,k){const nf=info(si,k),on=onCol(l[5],l[6]);
   return `<div class="lab" data-go="${ALL[si].id}-${l[0]}" data-st="${nf.status}" style="--lon:${on}"><div class="hd" style="background:${grad(l)}"><span class="num">${String(k+1).padStart(2,'0')}</span><span class="e">${l[2]}</span><b>${l[1]}</b><small>${l[4]}</small></div>
