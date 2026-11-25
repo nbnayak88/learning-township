@@ -22,3 +22,10 @@ Teach sector and domain architecture through business outcomes, capabilities, va
 
 ## Publication note
 This is a HUB catalog record, **not proof that a course is live or purchasable**. Township occupancy is not publication status. Allocated member names are intentionally excluded from the public repository for privacy.
+
+## SmartRecruiters for SAP SuccessFactors — Communication Services case pages
+
+Two fictional cases on one shared portal template. Proposed designs, not tenant-tested.
+
+- [OmniEsports Holdings Inc. — recruitment-listening architecture (23 questions)](omni-esports-smartrecruiters/)
+- [OmniConnect Media & Networks Ltd. — hire-to-readiness architecture (3 tabletop tests)](omniconnect-smartrecruiters/)
