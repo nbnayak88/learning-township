@@ -49,4 +49,4 @@ Each page has a hire-to-readiness design, three tabletop tests and 300+ sector-s
 | Utilities | [omnigrid-smartrecruiters](../../../10-HR02-UT-utilities/05-Ultimate/bootcamp/omnigrid-smartrecruiters/) |
 | Real Estate | [omnispace-smartrecruiters](../../../11-HR02-RE-real-estate/05-Ultimate/bootcamp/omnispace-smartrecruiters/) |
 
-All sectoral case studies: https://app.notion.com/p/niladrinayak/174ce6de608981df9195f74e4599fe9b?v=174ce6de608981c4aefd000c72c1408e&source=copy_link
+All sectoral case studies: [hub page](../../../sectoral-case-studies/)
