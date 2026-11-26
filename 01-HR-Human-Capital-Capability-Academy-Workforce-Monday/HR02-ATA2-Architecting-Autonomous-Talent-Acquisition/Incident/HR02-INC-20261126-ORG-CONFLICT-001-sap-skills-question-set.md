@@ -52,7 +52,7 @@ The dialog explicitly requires unique Org Field assignments. The existing set's 
 - [ ] Verify correct questions and associated rejection-email behavior before closing.
 - [ ] If fully distinct supported assignments still trigger a conflict, collect sanitized evidence and escalate.
 
-No tenant settings have been changed. Do not deactivate the existing Energy Sector Specific set solely to dismiss this validation.
+No tenant settings were changed by the assistant when this incident was initially logged. Do not deactivate the existing Energy Sector Specific set solely to dismiss this validation.
 
 ## Evidence
 ![SmartRecruiters Org field conflict — Energy Sector Specific, Fields All](https://raw.githubusercontent.com/nbnayak88/learning-township/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/Incident/evidence/sap-skills-org-field-conflict-20261126.png)
@@ -65,3 +65,30 @@ No tenant settings have been changed. Do not deactivate the existing Energy Sect
 - [ ] Retest evidence recorded and reporter informed.
 
 **Resolution:** Not applied or verified.
+
+
+## Follow-up evidence — 27 November 2026 (IST)
+**Reporter update:** Different Org Field assignments were attempted, but the same conflict continues. Status remains **Open — persists after attempted assignment changes**.
+
+The additional screenshot shows **Edit Set** with Active enabled and the Org field conflict dialog still identifying **Energy Sector Specific**. Unlike the original screenshot's Fields: All summary, the dialog now lists:
+
+| Org Field | Conflicting set values displayed |
+|---|---|
+| Division | Corporate Services (KR_CORP_SVCS) |
+| Country/Region | United States, Canada |
+| Business Unit | Corporate Services (BU001) |
+| Brands | All |
+| Legal Entity | BestRun Canada (4500) |
+
+Behind the dialog, the edited set visibly includes Country/Region **United States, Canada** and Business Unit **Corporate Services (BU001)**. Other assignments are obscured. These visible values coincide with values in the conflict summary, so the screenshot does not establish that the complete effective assignments are nonoverlapping, despite the reported changes.
+
+### Updated investigation
+- [x] Additional screenshot captured after attempted Org Field changes; conflict persists per reporter.
+- [ ] Compare every dimension and selected value for both sets side by side, including Brands: All.
+- [ ] Check whether changed values were saved and whether blank/All selections expand effective scope.
+- [ ] Confirm how multi-value selections and combinations across dimensions determine overlap.
+- [ ] Reproduce with demonstrably nonoverlapping supported assignments; escalate if conflict remains.
+
+The original Fields: All explanation is now historical evidence, not a verified explanation of the current state. Root cause remains unverified. No tenant changes were made by this incident update.
+
+![Additional evidence — Org field conflict persists after attempted different assignments](https://raw.githubusercontent.com/nbnayak88/learning-township/main/01-HR-Human-Capital-Capability-Academy-Workforce-Monday/HR02-ATA2-Architecting-Autonomous-Talent-Acquisition/Incident/evidence/sap-skills-org-field-conflict-retest-20261127.png)
