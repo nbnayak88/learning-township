@@ -1,0 +1,35 @@
+{
+  "status": "Proposed interfaces \u2014 not official SAP API names",
+  "agent": "AIU-OVE-01",
+  "tools": [
+    {
+      "name": "read_approved_position",
+      "mode": "read",
+      "approvalRequired": true
+    },
+    {
+      "name": "read_workforce_plan",
+      "mode": "read",
+      "mustMatch": "positionId"
+    },
+    {
+      "name": "return_requisition_draft",
+      "mode": "return-only",
+      "reviewer": "OVE-R01"
+    }
+  ],
+  "excludedTools": [
+    "publish_job",
+    "change_position",
+    "set_budget"
+  ],
+  "tenantPrerequisites": [
+    "Confirm Joule Studio entitlement and tenant access",
+    "Configure identity and least privilege",
+    "Map approved source data to supported tenant APIs",
+    "Configure model and secrets in tenant-owned runtime",
+    "Validate source lineage and output schema",
+    "Run model, fairness, failure and adverse-impact evaluations",
+    "Obtain accountable owner release approval"
+  ]
+}

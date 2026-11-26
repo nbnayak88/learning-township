@@ -1,0 +1,1 @@
+const E=require('./engine.js');const cases=E.evaluations();for(const c of cases){console.log(c.id,c.name,c.pass?'PASS':'FAIL');}if(cases.some(c=>!c.pass))process.exitCode=1;const good=E.draft(E.clone(E.sample));if(good.status!=='draft'||good.externalWrite!==false)throw Error('Baseline failed');

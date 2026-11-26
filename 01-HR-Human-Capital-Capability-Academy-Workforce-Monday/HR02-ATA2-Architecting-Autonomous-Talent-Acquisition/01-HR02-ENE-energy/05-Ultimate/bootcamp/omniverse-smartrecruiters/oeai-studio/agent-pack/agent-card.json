@@ -1,0 +1,33 @@
+{
+  "id": "AIU-OVE-01",
+  "title": "Demand and requisition drafting agent",
+  "autonomy": "L1 Assist",
+  "accountableHuman": "OVE-R01 \u2014 Hiring Manager",
+  "trigger": "Position approved",
+  "inputs": [
+    "Position data",
+    "Workforce plan"
+  ],
+  "permitted": [
+    "Draft requisition text for a person to approve"
+  ],
+  "prohibited": [
+    "Publish",
+    "Change position",
+    "Set budget"
+  ],
+  "sourceRequirements": [
+    "OVE-BR-321",
+    "OVE-BR-322",
+    "OVE-BR-441",
+    "OVE-BR-442"
+  ],
+  "sourceTests": [
+    "TS-OVE-321",
+    "TS-OVE-322",
+    "TS-OVE-441",
+    "TS-OVE-442"
+  ],
+  "status": "Proposed; not tenant-tested",
+  "prototype": "Deterministic local preview; no model or tenant connection"
+}

@@ -1,0 +1,25 @@
+{
+  "position": {
+    "id": "POS-OVE-2041",
+    "approved": true,
+    "title": "Drilling and Well Engineer",
+    "location": "Aberdeen — North Sea projects",
+    "department": "Upstream Engineering",
+    "responsibilities": [
+      "Prepare well-engineering plans",
+      "Review technical well-design evidence",
+      "Coordinate engineering handovers"
+    ],
+    "approvalReference": "APR-OVE-2041"
+  },
+  "workforcePlan": {
+    "id": "WP-OVE-2027-01",
+    "positionId": "POS-OVE-2041",
+    "headcount": 2,
+    "businessOutcome": "Support the approved North Sea well-engineering programme",
+    "startWindow": "January–March 2027"
+  },
+  "request": "Draft a requisition for human review.",
+  "purpose": "AIU-OVE-01",
+  "owner": "OVE-R01"
+}
