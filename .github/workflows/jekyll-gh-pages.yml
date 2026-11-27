@@ -48,6 +48,10 @@ jobs:
           touch _site/.nojekyll
           test -s _site/thr81-checklist/index.html
           echo "THR81 and docs content staged for GitHub Pages"
+      - name: Apply global SuccessLabs certification CTA to all HTML pages
+        run: |
+          python3 tools/cta/inject.py _site
+          python3 tools/cta/inject.py _site --check
       - name: Validate published entry points
         run: |
           test -s _site/thr81-checklist/index.html
@@ -61,7 +65,9 @@ jobs:
               test -s "_site/${domain}${n}/index.html" || { echo "Missing: ${domain}${n}/index.html"; exit 1; }
             done
           done
-          echo "Static site entry points present, including both SuperLabs URLs"
+          test -s _site/pages-index/index.html
+          grep -q 'sla-membership-cta-v1:begin' _site/pages-index/index.html
+          echo "Static site entry points present, including both SuperLabs URLs and membership CTA"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
