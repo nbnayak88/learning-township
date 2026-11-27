@@ -44,10 +44,10 @@ COMPONENT = f"""<!-- {MARKER}:begin -->
 <!-- {MARKER}:end -->"""
 RE_BODY = re.compile(r"</body\s*>", re.I)
 RE_HTML = re.compile(r"<html(?:\s|>)", re.I)
-RE_MARKER = re.compile(r"<!--\s*"+MARKER+r":begin\s*-->.*?<!--\s*"+MARKER+r":end\s*-->", re.S | re.I)
+RE_MARKER = re.compile(r"<!--\s*"+MARKER+r":begin\s*-->.*?<!--\s*"+MARKER+r":end\s*-->(?:\r?\n)?", re.S | re.I)
 
 def inject(source):
-    # Reuse the component if already present; guarantees one CTA on repeated deploys.
+    # Remove the component AND its injected trailing newline to preserve idempotency.
     source = RE_MARKER.sub("", source)
     if not RE_HTML.search(source) or not RE_BODY.search(source):
         return source, False
