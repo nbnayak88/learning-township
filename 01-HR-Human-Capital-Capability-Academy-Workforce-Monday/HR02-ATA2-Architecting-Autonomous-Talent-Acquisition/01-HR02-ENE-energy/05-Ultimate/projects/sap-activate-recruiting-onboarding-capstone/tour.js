@@ -21,7 +21,7 @@ function show(position, focus = true) {
   if (!Number.isInteger(position) || !steps[position]) return;
   current = position;
   const step = steps[position];
-  document.documentElement.style.scrollPaddingTop = (document.querySelector("header").offsetHeight + 12) + "px";
+  document.documentElement.style.scrollPaddingTop = "calc(var(--sla-top, 0px) + " + (document.querySelector("header").offsetHeight + 12) + "px)";
   byId("overview").hidden = true;
   byId("tour").hidden = false;
   byId("activity").value = String(position);
@@ -97,7 +97,7 @@ function scheduleReading() {
 addEventListener("scroll", scheduleReading, {passive:true});
 addEventListener("resize", scheduleReading);
 const sizeObserver = new ResizeObserver(() => {
-  document.documentElement.style.scrollPaddingTop = (document.querySelector("header").offsetHeight + 12) + "px";
+  document.documentElement.style.scrollPaddingTop = "calc(var(--sla-top, 0px) + " + (document.querySelector("header").offsetHeight + 12) + "px)";
   scheduleReading();
 });
 sizeObserver.observe(document.querySelector("header"));
