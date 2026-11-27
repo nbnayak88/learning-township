@@ -66,7 +66,7 @@ jobs:
             done
           done
           test -s _site/pages-index/index.html
-          grep -q 'sla-membership-cta-v1:begin' _site/pages-index/index.html
+          grep -q 'sla-membership-cta-v2:begin' _site/pages-index/index.html
           echo "Static site entry points present, including both SuperLabs URLs and membership CTA"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
