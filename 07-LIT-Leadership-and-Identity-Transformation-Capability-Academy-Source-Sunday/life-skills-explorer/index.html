@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life Skills · SuccessLabs Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script defer src="content.js"></script>
+<script defer src="explorer.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div><small>Leadership and Identity Transformation</small><h1>Life Skills for Real Life</h1></div>
+    <blockquote>“A thoughtful next step can change what happens next.”</blockquote>
+    <div class="identity"><img src="logo.png" alt="SuccessLabs Academy"><small>Architecting Experiences for a Better World.</small></div>
+  </div>
+  <div class="reading" aria-hidden="true"><div id="reading"></div></div>
+</header>
+<div class="layout">
+  <aside>
+    <details open>
+      <summary>12 life skills pathways</summary>
+      <nav id="pathways" aria-label="Life skills pathways"></nav>
+    </details>
+  </aside>
+  <main>
+    <p class="intro">Choose a situation that feels familiar. Notice what is happening, choose a response, try one small action, and review what happened.</p>
+    <div class="filters">
+      <label>Persona<select id="persona"><option value="">All personas</option></select></label>
+      <label>Search challenges<input id="search" type="search" placeholder="Try stress, anger, or boundaries"></label>
+    </div>
+    <p id="matches" aria-live="polite">Loading challenges…</p>
+    <article id="challenge" aria-labelledby="challenge-title" hidden>
+      <div class="card-heading"><p id="context"></p><h2 id="challenge-title" tabindex="-1"></h2></div>
+      <div class="practice">
+        <section><h3>1. Notice</h3><p id="situation"></p></section>
+        <section><h3>2. Choose</h3><p id="reflection"></p></section>
+        <section><h3>3. Try</h3><p id="action"></p></section>
+        <section><h3>4. Review</h3><p id="signal"></p></section>
+      </div>
+    </article>
+    <div class="controls" aria-label="Challenge walkthrough">
+      <button id="previous" type="button" disabled>Previous</button>
+      <span id="position" role="status"></span>
+      <button id="next" type="button" disabled>Next challenge</button>
+      <button id="restart" type="button" hidden>Restart</button>
+      <button id="directory-open" type="button" aria-haspopup="dialog">View all challenges</button>
+    </div>
+    <p class="support">These are learning exercises. For a situation that feels unsafe or overwhelming, reach out to a trusted adult or qualified local support. Children can try the activities with a caregiver or educator. <a href="https://www.who.int/publications/i/item/9789240003927">Practical stress skills</a></p>
+  </main>
+</div>
+<dialog id="directory" aria-labelledby="directory-title">
+  <div class="dialog-heading"><h2 id="directory-title">Challenge directory</h2><form method="dialog"><button autofocus>Close</button></form></div>
+  <ul id="directory-list"></ul>
+</dialog>
+</body>
+</html>
